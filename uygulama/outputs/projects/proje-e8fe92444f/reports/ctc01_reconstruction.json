@@ -1,0 +1,61 @@
+{
+  "source": "work\\validation\\sources\\nist_ctc_definitions\\NIST_MBE_PMI_CTC_Definitions\\nist_ctc_01_asme1_rd.stp",
+  "nominal_valid": true,
+  "solid_count": 1,
+  "reference_volume_mm3": 14642823.557384422,
+  "reconstructed_volume_mm3": 14642817.632140798,
+  "volume_relative_error": 4.0465171213810436e-07,
+  "missing_mm3": 0,
+  "extra_mm3": 0,
+  "symmetric_difference_relative": 0.0,
+  "boolean_fuzzy_tolerance_mm": 1e-06,
+  "bidirectional_vertex_surface_max_distance_mm": 1.215800011777901e-06,
+  "vertex_samples": 510,
+  "shape_match_passed": true,
+  "source_assistance": "CAD-referenced measured sketches and explicit features; not a blind drawing-to-CAD benchmark",
+  "steps": [
+    {
+      "name": "Plate_from_analytic_sketch",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 11671714.487749659
+    },
+    {
+      "name": "Four_feet",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14229015.33069005
+    },
+    {
+      "name": "Foot_root_fillets",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14243628.455453739
+    },
+    {
+      "name": "Chamfered_hex_boss_and_root_fillet",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14674355.388131656
+    },
+    {
+      "name": "Two_blind_cross_drilled_holes",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14644822.614739126
+    },
+    {
+      "name": "Measured_NIST_marking_pockets",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14642817.634484354
+    }
+  ],
+  "parameter_variant": {
+    "boss_height_mm": 55,
+    "max_z_mm": 55.00000000000001,
+    "delta_volume_mm3": 43301.27255363017,
+    "expected_delta_volume_mm3": 43301.270189221934,
+    "passed": true
+  }
+}

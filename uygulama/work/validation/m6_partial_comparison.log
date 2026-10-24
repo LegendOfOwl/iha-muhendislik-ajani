@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-10-19T08:29:58.753303+00:00",
+  "native_report": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_20261019_110436\\results.json",
+  "experiment_source": "https://www.grc.nasa.gov/www/wind/valid/m6wing/m6wing.html",
+  "experiment": "Schmitt & Charpin 1979, Test2308; NASA-hosted data, not a NASA-conducted tunnel test",
+  "experiment_points": 271,
+  "source_eta_discrepancy": "NASA main table and Study1 Fig13 specify section6 eta=0.95; its Tecplot file encodes 0.96. Main comparison follows the table; both interpretations are retained as postprocessing sensitivity, without fitting flow conditions.",
+  "eta_sensitivity": [
+    {
+      "grid": "coarse_hexa",
+      "main_eta_0p95_RMSE": 0.08699875231784629,
+      "alternative_eta_0p96_RMSE": 0.08688654277473344,
+      "section6_alternative": [
+        {
+          "section": 6,
+          "eta": 0.96,
+          "eta_in_tec_file": 0.96,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.08235566579685548,
+          "Cp_max_abs_error": 0.2694321629631341,
+          "fraction_within_measurement_0p02": 0.1935483870967742,
+          "max_geometry_distance_over_chord": 0.0006256794038483704
+        },
+        {
+          "section": 6,
+          "eta": 0.96,
+          "eta_in_tec_file": 0.96,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.027562184513744568,
+          "Cp_max_abs_error": 0.06453442171932244,
+          "fraction_within_measurement_0p02": 0.5714285714285714,
+          "max_geometry_distance_over_chord": 0.0006429967056852532
+        }
+      ]
+    }
+  ],
+  "normalization": "At y=eta*NASA nominal semispan 1.1963 m; local cut leading/trailing x define x/c, z/c uses the same chord. Cp interpolated on nearest cut segment to measured (x/c,z/c); geometry mismatch recorded. No flow angle or pressure fitted to experiment.",
+  "mesh_geometry_note": "Rounded source-grid tips extend beyond NASA nominal semispan; two grid families have small geometry differences, so this is sensitivity and experiment comparison, not formal grid independence."
+}
+[('coarse_hexa', 0.08699875231784629, 0.35793357933579334, 13.684778213500977)]

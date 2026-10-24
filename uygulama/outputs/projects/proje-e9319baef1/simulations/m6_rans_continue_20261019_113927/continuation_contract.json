@@ -1,0 +1,37 @@
+{
+  "conditions": {
+    "Mach": 0.8395,
+    "alpha_deg": 3.06,
+    "beta_deg": 0,
+    "Re": 11720000.0,
+    "Re_length_m": 0.64607,
+    "T_K": 288.15,
+    "solver": "3D compressible RANS",
+    "turbulence": "SA, fully turbulent, no transition",
+    "boundary": "adiabatic no-slip wing; symmetry root; freestream farfield"
+  },
+  "thresholds": {
+    "density_log10_max": -7,
+    "CL_last100_range_max": 0.0002,
+    "CD_last100_range_max": 2e-05,
+    "strict_max_yplus": 1,
+    "grid_CL_relative_change_max": 0.03,
+    "grid_CD_relative_change_max": 0.1,
+    "per_section_Cp_RMSE_max": 0.08,
+    "NASA_Cp_measurement_uncertainty": 0.02,
+    "note": "Numerical/engineering screens chosen before runs; NASA +/-0.02 is measurement uncertainty, not a universal CFD pass criterion."
+  },
+  "changes": {
+    "CFL_NUMBER": 20,
+    "CFL_ADAPT": "NO",
+    "LINEAR_SOLVER_ITER": 20,
+    "LINEAR_SOLVER_ERROR": 1e-06,
+    "LIMITER_ITER": 50,
+    "ITER": 500,
+    "OUTPUT_WRT_FREQ": 500,
+    "RESTART_SOL": "YES",
+    "SOLUTION_FILENAME": "restart_flow.dat"
+  },
+  "note": "Only numerical controls/restart; no experiment fitting, no mesh or physical-condition change",
+  "conditions_sha256": "5e297a49582b98dc7d00a683a30f7ad5a5e8589d3654734518c237d431bc1899"
+}

@@ -1,0 +1,71 @@
+{
+  "source_faces": 663,
+  "delivered_faces": 497,
+  "valid": true,
+  "solids": 1,
+  "bores": [
+    {
+      "diameter_mm": 16.0,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_mm": [
+        -500.0,
+        650.0,
+        -180.0
+      ]
+    },
+    {
+      "diameter_mm": 16.0,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_mm": [
+        -500.0,
+        600.0,
+        -180.0
+      ]
+    },
+    {
+      "diameter_mm": 16.0,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_mm": [
+        -500.0,
+        600.0,
+        -180.0
+      ]
+    },
+    {
+      "diameter_mm": 16.0,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_mm": [
+        -500.0,
+        650.0,
+        -180.0
+      ]
+    }
+  ],
+  "measured_removed_volume_mm3": 32478.185204289854,
+  "analytic_removed_volume_mm3": 32169.90877275948,
+  "removed_volume_relative_error": 0.009582757405622866,
+  "unrequested_added_material_mm3": 0,
+  "passed": false,
+  "acceptance_limits": {
+    "diameter_axis_coordinate_mm": 1e-05,
+    "removed_volume_relative": 0.0001,
+    "unrequested_added_material_mm3": 0.0001
+  },
+  "scope": "Source housing imported and explicitly modified; original housing was not redrawn from a PDF."
+}

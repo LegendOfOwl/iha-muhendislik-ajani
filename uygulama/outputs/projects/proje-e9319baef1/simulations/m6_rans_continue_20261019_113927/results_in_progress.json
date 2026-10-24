@@ -1,0 +1,58 @@
+[
+  {
+    "grid": "coarse_hexa",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_continue_20261019_113927\\coarse_hexa",
+    "mesh": {
+      "volume_cells": 43008,
+      "nodes": 46417,
+      "element_types": {
+        "12": 43008
+      },
+      "wing_faces": 1408,
+      "wing_points": 1453,
+      "bounds_m": [
+        [
+          0.0,
+          0.0,
+          -0.039409964175243
+        ],
+        [
+          1.1410828431,
+          1.216362730299,
+          0.039409964175243
+        ]
+      ],
+      "semispan_m": 1.216362730299,
+      "root_chord_m": 0.8058994773,
+      "tip_chord_m": 0.0,
+      "projected_semispan_area_m2": 0.7595450022233603,
+      "mesh_sha256": "08631f6bfd443fcbd3d9432f9dc3824c43cae3076bb477f6073c71e3e991bc1b"
+    },
+    "exit_code": 0,
+    "seconds": 126.52741709997645,
+    "CL": 0.2839130419,
+    "CD": 0.02156337269,
+    "log10_density_residual": -2.041595903,
+    "log10_turbulence_residual": -3.066514077,
+    "iterations": 500,
+    "CL_tail_range": 0.02991553250000001,
+    "CD_tail_range": 0.0018509324199999996,
+    "runtime_passed": true,
+    "iterative_passed": false,
+    "restart_from": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_20261019_110436\\coarse_hexa",
+    "restart_input_sha256": "3579199f89dbf5eac83c86e93b7516ac0ec4fff5a14c6947429a77e17cbd5330",
+    "numerical_changes": {
+      "CFL_NUMBER": 20,
+      "CFL_ADAPT": "NO",
+      "LINEAR_SOLVER_ITER": 20,
+      "LINEAR_SOLVER_ERROR": 1e-06,
+      "LIMITER_ITER": 50,
+      "ITER": 500,
+      "OUTPUT_WRT_FREQ": 500,
+      "RESTART_SOL": "YES",
+      "SOLUTION_FILENAME": "restart_flow.dat"
+    },
+    "total_native_seconds": 609.0835261999746,
+    "first_run_iterations": 4000
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "file": "cad/reconstructed/ctc01_reconstructed.FCStd",
+      "visible_object": "ReferenceSolid",
+      "valid": true,
+      "hidden_construction_objects": []
+    },
+    {
+      "file": "cad/modified/ctc02_native_ports.FCStd",
+      "visible_object": "CutPort2",
+      "valid": true,
+      "hidden_construction_objects": [
+        "ReferenceSolid",
+        "PortAxis1",
+        "CutPort1",
+        "PortAxis2"
+      ]
+    },
+    {
+      "file": "cad/modified/ctc05_native_grooves.FCStd",
+      "visible_object": "CutKeyway",
+      "valid": true,
+      "hidden_construction_objects": [
+        "ReferenceSolid",
+        "GrooveOuter1",
+        "GrooveRoot1",
+        "GrooveTool1",
+        "CutGroove1",
+        "GrooveOuter2",
+        "GrooveRoot2",
+        "GrooveTool2",
+        "CutGroove2",
+        "KeywayTool"
+      ]
+    }
+  ]
+}

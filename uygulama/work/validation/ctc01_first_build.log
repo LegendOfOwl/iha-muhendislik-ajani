@@ -1,0 +1,20 @@
+FOOT_JOIN_EDGES [((250.0, -137.5, -50.0), 25.0), ((325.0, -125.00000000000003, -50.0), 150.0), ((325.0, 125.0, -50.0), 150.0), ((250.00000000000009, 137.5, -50.0), 25.0), ((-250.0, 137.5, -50.0), 25.0), ((-325.0, 125.0, -50.0), 150.0), ((-325.0, -125.0, -50.0), 150.0), ((-250.00000000000009, -137.5, -50.0), 25.0)]
+Plate_from_analytic_sketch True 1 11671714.487749659
+Four_feet True 1 14229015.33069005
+Foot_root_fillets True 1 14243628.455453739
+Chamfered_hex_boss_and_root_fillet True 1 14674355.388131656
+Two_blind_cross_drilled_holes True 1 14644822.614739126
+Measured_NIST_marking_pockets True 1 14642817.634484354
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\validation\rebuild_ctc01.py", line 75, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\validation\rebuild_ctc01.py", line 72, in main
+    ref=cq.importers.importStep(str(SOURCE)).val();missing=ref.cut(s).Volume();extra=s.cut(ref).Volume();ratio=(missing+extra)/ref.Volume()
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\.venv-cad\Lib\site-packages\cadquery\occ_impl\shapes.py", line 1118, in Volume
+    return Shape.computeMass(self, tol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\.venv-cad\Lib\site-packages\cadquery\occ_impl\shapes.py", line 826, in computeMass
+    calc_function(obj.wrapped, Properties, *((tol,) if tol else ()))
+TypeError: 'NoneType' object is not callable

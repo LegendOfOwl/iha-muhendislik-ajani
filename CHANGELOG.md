@@ -21,3 +21,7 @@ Parametrik kanat, karmaşık VLM, SU2 ve Elmer araç sınamaları.
 ## v0.5.0 — Proje merkezli arayüz ve aeroelastisite
 
 EXE başlatıcı, proje kayıtları, profile CFD ve OpenAeroStruct örnekleri.
+
+## v0.6.0 — Karmaşık CAD ve ilk ONERA M6
+
+NIST kaynak parçaları ve ONERA deney verisiyle ilk 3B RANS kıyası.

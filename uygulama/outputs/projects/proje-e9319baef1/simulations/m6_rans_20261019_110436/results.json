@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-10-19T08:36:06.741111+00:00",
+  "project_id": "proje-e9319baef1",
+  "passed": true,
+  "quality_passed": false,
+  "conditions": {
+    "Mach": 0.8395,
+    "alpha_deg": 3.06,
+    "beta_deg": 0,
+    "Re": 11720000.0,
+    "Re_length_m": 0.64607,
+    "T_K": 288.15,
+    "solver": "3D compressible RANS",
+    "turbulence": "SA, fully turbulent, no transition",
+    "boundary": "adiabatic no-slip wing; symmetry root; freestream farfield"
+  },
+  "conditions_sha256": "5e297a49582b98dc7d00a683a30f7ad5a5e8589d3654734518c237d431bc1899",
+  "thresholds": {
+    "density_log10_max": -7,
+    "CL_last100_range_max": 0.0002,
+    "CD_last100_range_max": 2e-05,
+    "strict_max_yplus": 1,
+    "grid_CL_relative_change_max": 0.03,
+    "grid_CD_relative_change_max": 0.1,
+    "per_section_Cp_RMSE_max": 0.08,
+    "NASA_Cp_measurement_uncertainty": 0.02,
+    "note": "Numerical/engineering screens chosen before runs; NASA +/-0.02 is measurement uncertainty, not a universal CFD pass criterion."
+  },
+  "results": [
+    {
+      "grid": "coarse_hexa",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_20261019_110436\\coarse_hexa",
+      "mesh": {
+        "volume_cells": 43008,
+        "nodes": 46417,
+        "element_types": {
+          "12": 43008
+        },
+        "wing_faces": 1408,
+        "wing_points": 1453,
+        "bounds_m": [
+          [
+            0.0,
+            0.0,
+            -0.039409964175243
+          ],
+          [
+            1.1410828431,
+            1.216362730299,
+            0.039409964175243
+          ]
+        ],
+        "semispan_m": 1.216362730299,
+        "root_chord_m": 0.8058994773,
+        "tip_chord_m": 0.0,
+        "projected_semispan_area_m2": 0.7595450022233603,
+        "mesh_sha256": "08631f6bfd443fcbd3d9432f9dc3824c43cae3076bb477f6073c71e3e991bc1b"
+      },
+      "exit_code": 0,
+      "seconds": 482.55610909999814,
+      "CL": 0.2612658281,
+      "CD": 0.02243687832,
+      "log10_density_residual": -4.625698547,
+      "log10_turbulence_residual": -6.05233624,
+      "iterations": 4000,
+      "CL_tail_range": 6.499720000002762e-05,
+      "CD_tail_range": 1.8636259999999655e-05,
+      "runtime_passed": true,
+      "iterative_passed": false
+    },
+    {
+      "grid": "finer_hybrid",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_20261019_110436\\finer_hybrid",
+      "mesh": {
+        "volume_cells": 258969,
+        "nodes": 100592,
+        "element_types": {
+          "10": 95344,
+          "13": 163625
+        },
+        "wing_faces": 6545,
+        "wing_points": 3290,
+        "bounds_m": [
+          [
+            0.001101675937937447,
+            -0.0,
+            -0.03922125600770379
+          ],
+          [
+            1.142786007100165,
+            1.218088879515749,
+            0.03921415166113599
+          ]
+        ],
+        "semispan_m": 1.218088879515749,
+        "root_chord_m": 0.8060006627781536,
+        "tip_chord_m": 0.0,
+        "projected_semispan_area_m2": 0.7613155538973486,
+        "mesh_sha256": "d20855c5a7b97cf6c32713f4f406b9b5b158b937a97ba583855dc58afe87e9f4"
+      },
+      "exit_code": 0,
+      "seconds": 1407.411560800043,
+      "CL": 0.2857436865,
+      "CD": 0.03310654323,
+      "log10_density_residual": -5.347815966,
+      "log10_turbulence_residual": -7.440620368,
+      "iterations": 4000,
+      "CL_tail_range": 0.00022468000000003263,
+      "CD_tail_range": 0.000327580420000001,
+      "runtime_passed": true,
+      "iterative_passed": false
+    }
+  ],
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_20261019_110436",
+  "scope": "ONERA M6 Test2308 half-wing only; experiment comparison and y+ assessed separately",
+  "experimental_comparison_status": "pending postprocessing",
+  "mesh_note": "Two different source grid families; sensitivity comparison is not a systematic Richardson grid-convergence study"
+}

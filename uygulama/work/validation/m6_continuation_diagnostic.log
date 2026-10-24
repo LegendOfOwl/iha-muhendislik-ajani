@@ -1,0 +1,251 @@
+{
+  "completed": false,
+  "quality_passed": false,
+  "requested_iterations_per_grid": 500,
+  "conditions_and_thresholds_unchanged": true,
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_continue_20261019_113927",
+  "results": [
+    {
+      "grid": "coarse_hexa",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_continue_20261019_113927\\coarse_hexa",
+      "mesh": {
+        "volume_cells": 43008,
+        "nodes": 46417,
+        "element_types": {
+          "12": 43008
+        },
+        "wing_faces": 1408,
+        "wing_points": 1453,
+        "bounds_m": [
+          [
+            0.0,
+            0.0,
+            -0.039409964175243
+          ],
+          [
+            1.1410828431,
+            1.216362730299,
+            0.039409964175243
+          ]
+        ],
+        "semispan_m": 1.216362730299,
+        "root_chord_m": 0.8058994773,
+        "tip_chord_m": 0.0,
+        "projected_semispan_area_m2": 0.7595450022233603,
+        "mesh_sha256": "08631f6bfd443fcbd3d9432f9dc3824c43cae3076bb477f6073c71e3e991bc1b"
+      },
+      "exit_code": 0,
+      "seconds": 126.52741709997645,
+      "CL": 0.2839130419,
+      "CD": 0.02156337269,
+      "log10_density_residual": -2.041595903,
+      "log10_turbulence_residual": -3.066514077,
+      "iterations": 500,
+      "CL_tail_range": 0.02991553250000001,
+      "CD_tail_range": 0.0018509324199999996,
+      "runtime_passed": true,
+      "iterative_passed": false,
+      "restart_from": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_20261019_110436\\coarse_hexa",
+      "restart_input_sha256": "3579199f89dbf5eac83c86e93b7516ac0ec4fff5a14c6947429a77e17cbd5330",
+      "numerical_changes": {
+        "CFL_NUMBER": 20,
+        "CFL_ADAPT": "NO",
+        "LINEAR_SOLVER_ITER": 20,
+        "LINEAR_SOLVER_ERROR": 1e-06,
+        "LIMITER_ITER": 50,
+        "ITER": 500,
+        "OUTPUT_WRT_FREQ": 500,
+        "RESTART_SOL": "YES",
+        "SOLUTION_FILENAME": "restart_flow.dat"
+      },
+      "total_native_seconds": 609.0835261999746,
+      "first_run_iterations": 4000
+    },
+    {
+      "grid": "finer_hybrid",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_continue_20261019_113927\\finer_hybrid",
+      "iterations": 497,
+      "last_inner_iteration": 496,
+      "CL": 0.2788125675,
+      "CD": 0.02851439149,
+      "log10_density_residual": -2.558535136,
+      "CL_tail_range": 0.03389844260000002,
+      "CD_tail_range": 0.007938139900000002,
+      "runtime_passed": false,
+      "iterative_passed": false,
+      "timeout_seconds": 900,
+      "stop_reason": "subprocess.TimeoutExpired at 900 s; no final surface/volume output",
+      "mesh_sha256": "d20855c5a7b97cf6c32713f4f406b9b5b158b937a97ba583855dc58afe87e9f4",
+      "restart_input_sha256": "a09e6504ab7653e4975fd3a3a4c17b6894f0afce8866a5b5269cb749d274a2da"
+    }
+  ],
+  "coarse_Cp_metrics": {
+    "grid": "coarse_hexa",
+    "surface_points": 1453,
+    "yplus_max": 97.6692886352539,
+    "yplus_p95": 12.617656707763672,
+    "fraction_yplus_below1": 0.0013764624913971094,
+    "all_point_Cp_RMSE": 0.22855699371434987,
+    "fraction_within_NASA_measurement_uncertainty": 0.1881918819188192,
+    "all_points_within_NASA_uncertainty": false,
+    "geometry_distance_max_over_chord": 0.0011045278277346349,
+    "sections": [
+      {
+        "section": 1,
+        "eta": 0.2,
+        "eta_in_tec_file": 0.2,
+        "side": "u",
+        "points": 22,
+        "Cp_RMSE": 0.06439977825308582,
+        "Cp_max_abs_error": 0.17153377163290795,
+        "fraction_within_measurement_0p02": 0.22727272727272727,
+        "max_geometry_distance_over_chord": 0.0006301625424607324
+      },
+      {
+        "section": 1,
+        "eta": 0.2,
+        "eta_in_tec_file": 0.2,
+        "side": "l",
+        "points": 12,
+        "Cp_RMSE": 0.04871817360348127,
+        "Cp_max_abs_error": 0.12829321748385492,
+        "fraction_within_measurement_0p02": 0.5833333333333334,
+        "max_geometry_distance_over_chord": 0.000661979636639116
+      },
+      {
+        "section": 2,
+        "eta": 0.44,
+        "eta_in_tec_file": 0.44,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.08083382123566309,
+        "Cp_max_abs_error": 0.24385274888543074,
+        "fraction_within_measurement_0p02": 0.2608695652173913,
+        "max_geometry_distance_over_chord": 0.0006358063016841565
+      },
+      {
+        "section": 2,
+        "eta": 0.44,
+        "eta_in_tec_file": 0.44,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.04230861709448141,
+        "Cp_max_abs_error": 0.09723447536383109,
+        "fraction_within_measurement_0p02": 0.6363636363636364,
+        "max_geometry_distance_over_chord": 0.0006324570956042556
+      },
+      {
+        "section": 3,
+        "eta": 0.65,
+        "eta_in_tec_file": 0.65,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.06254787112292348,
+        "Cp_max_abs_error": 0.15913213494745382,
+        "fraction_within_measurement_0p02": 0.13043478260869565,
+        "max_geometry_distance_over_chord": 0.0006140546331127993
+      },
+      {
+        "section": 3,
+        "eta": 0.65,
+        "eta_in_tec_file": 0.65,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.039043141420115876,
+        "Cp_max_abs_error": 0.08424763087376476,
+        "fraction_within_measurement_0p02": 0.45454545454545453,
+        "max_geometry_distance_over_chord": 0.0007315267249661353
+      },
+      {
+        "section": 4,
+        "eta": 0.8,
+        "eta_in_tec_file": 0.8,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.08138889851437539,
+        "Cp_max_abs_error": 0.22511306797709768,
+        "fraction_within_measurement_0p02": 0.043478260869565216,
+        "max_geometry_distance_over_chord": 0.0006237636315893721
+      },
+      {
+        "section": 4,
+        "eta": 0.8,
+        "eta_in_tec_file": 0.8,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.10130598586745568,
+        "Cp_max_abs_error": 0.21902327082654965,
+        "fraction_within_measurement_0p02": 0.45454545454545453,
+        "max_geometry_distance_over_chord": 0.00065707761734079
+      },
+      {
+        "section": 5,
+        "eta": 0.9,
+        "eta_in_tec_file": 0.9,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.14736851301463455,
+        "Cp_max_abs_error": 0.6177134605314242,
+        "fraction_within_measurement_0p02": 0.0967741935483871,
+        "max_geometry_distance_over_chord": 0.0006242629724525756
+      },
+      {
+        "section": 5,
+        "eta": 0.9,
+        "eta_in_tec_file": 0.9,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.14652575290136566,
+        "Cp_max_abs_error": 0.34991115725218164,
+        "fraction_within_measurement_0p02": 0.14285714285714285,
+        "max_geometry_distance_over_chord": 0.0006439104602033285
+      },
+      {
+        "section": 6,
+        "eta": 0.95,
+        "eta_in_tec_file": 0.96,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.12740626936866806,
+        "Cp_max_abs_error": 0.38911988406316034,
+        "fraction_within_measurement_0p02": 0.12903225806451613,
+        "max_geometry_distance_over_chord": 0.0006256764215515542
+      },
+      {
+        "section": 6,
+        "eta": 0.95,
+        "eta_in_tec_file": 0.96,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.16344508697080973,
+        "Cp_max_abs_error": 0.37829572190794175,
+        "fraction_within_measurement_0p02": 0.07142857142857142,
+        "max_geometry_distance_over_chord": 0.0006429938474759612
+      },
+      {
+        "section": 7,
+        "eta": 0.99,
+        "eta_in_tec_file": 0.99,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.15057130899164672,
+        "Cp_max_abs_error": 0.3289432538451497,
+        "fraction_within_measurement_0p02": 0.06451612903225806,
+        "max_geometry_distance_over_chord": 0.0011045278277346349
+      },
+      {
+        "section": 7,
+        "eta": 0.99,
+        "eta_in_tec_file": 0.99,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.8840264713608844,
+        "Cp_max_abs_error": 3.1318407544176896,
+        "fraction_within_measurement_0p02": 0.0,
+        "max_geometry_distance_over_chord": 0.000923843146437692
+      }
+    ]
+  },
+  "fine_Cp_metrics": null,
+  "experiment_report_uses": "Two completed initial 4000-iteration solutions. No final finer continuation field exists; no mismatched Cp/y+ comparison manufactured."
+}

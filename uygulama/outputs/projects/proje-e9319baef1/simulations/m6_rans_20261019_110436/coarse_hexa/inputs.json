@@ -1,0 +1,69 @@
+{
+  "project_id": "proje-e9319baef1",
+  "conditions": {
+    "Mach": 0.8395,
+    "alpha_deg": 3.06,
+    "beta_deg": 0,
+    "Re": 11720000.0,
+    "Re_length_m": 0.64607,
+    "T_K": 288.15,
+    "solver": "3D compressible RANS",
+    "turbulence": "SA, fully turbulent, no transition",
+    "boundary": "adiabatic no-slip wing; symmetry root; freestream farfield"
+  },
+  "thresholds": {
+    "density_log10_max": -7,
+    "CL_last100_range_max": 0.0002,
+    "CD_last100_range_max": 2e-05,
+    "strict_max_yplus": 1,
+    "grid_CL_relative_change_max": 0.03,
+    "grid_CD_relative_change_max": 0.1,
+    "per_section_Cp_RMSE_max": 0.08,
+    "NASA_Cp_measurement_uncertainty": 0.02,
+    "note": "Numerical/engineering screens chosen before runs; NASA +/-0.02 is measurement uncertainty, not a universal CFD pass criterion."
+  },
+  "source_config_sha256": "ccba3ffdf008025411c4ef8fe435fbe52fbd19c1c1bdafb8c9949bd7e2229511",
+  "overrides": {
+    "MESH_FILENAME": "mesh.su2",
+    "ITER": 4000,
+    "CFL_NUMBER": 4,
+    "CFL_ADAPT": "YES",
+    "CFL_ADAPT_PARAM": "(0.5, 1.2, 1.0, 100.0)",
+    "LINEAR_SOLVER_ERROR": 1e-05,
+    "LINEAR_SOLVER_ITER": 10,
+    "CONV_RESIDUAL_MINVAL": -8,
+    "CONV_STARTITER": 100,
+    "CONV_FIELD": "(RMS_DENSITY)",
+    "OUTPUT_FILES": "(RESTART, PARAVIEW, SURFACE_PARAVIEW, SURFACE_CSV)",
+    "OUTPUT_WRT_FREQ": 4000,
+    "HISTORY_OUTPUT": "(ITER, RMS_RES, AERO_COEFF)",
+    "SCREEN_OUTPUT": "(INNER_ITER, RMS_DENSITY, RMS_NU_TILDE, LIFT, DRAG)",
+    "REF_AREA": 0.7595450022233603
+  },
+  "mesh": {
+    "volume_cells": 43008,
+    "nodes": 46417,
+    "element_types": {
+      "12": 43008
+    },
+    "wing_faces": 1408,
+    "wing_points": 1453,
+    "bounds_m": [
+      [
+        0.0,
+        0.0,
+        -0.039409964175243
+      ],
+      [
+        1.1410828431,
+        1.216362730299,
+        0.039409964175243
+      ]
+    ],
+    "semispan_m": 1.216362730299,
+    "root_chord_m": 0.8058994773,
+    "tip_chord_m": 0.0,
+    "projected_semispan_area_m2": 0.7595450022233603,
+    "mesh_sha256": "08631f6bfd443fcbd3d9432f9dc3824c43cae3076bb477f6073c71e3e991bc1b"
+  }
+}

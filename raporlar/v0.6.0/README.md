@@ -1,0 +1,25 @@
+# v0.6.0 — Karmaşık CAD ve ilk ONERA M6
+
+21 dosya. Bu bir geriye dönük kanıt grubudur; eksiksiz eski uygulama imajı değildir.
+
+- [outputs/projects/proje-e8fe92444f/reports/cad_output_readback.json](../../uygulama/outputs/projects/proje-e8fe92444f/reports/cad_output_readback.json)
+- [outputs/projects/proje-e8fe92444f/reports/cad_validation.html](../../uygulama/outputs/projects/proje-e8fe92444f/reports/cad_validation.html)
+- [outputs/projects/proje-e8fe92444f/reports/ctc01_reconstruction.json](../../uygulama/outputs/projects/proje-e8fe92444f/reports/ctc01_reconstruction.json)
+- [outputs/projects/proje-e8fe92444f/reports/ctc02_modification.json](../../uygulama/outputs/projects/proje-e8fe92444f/reports/ctc02_modification.json)
+- [outputs/projects/proje-e8fe92444f/reports/ctc05_modification.json](../../uygulama/outputs/projects/proje-e8fe92444f/reports/ctc05_modification.json)
+- [outputs/projects/proje-e8fe92444f/reports/freecad_complex_checks.json](../../uygulama/outputs/projects/proje-e8fe92444f/reports/freecad_complex_checks.json)
+- [outputs/projects/proje-e8fe92444f/reports/native_view_checks.json](../../uygulama/outputs/projects/proje-e8fe92444f/reports/native_view_checks.json)
+- [outputs/projects/proje-e9319baef1/reports/m6_additional_mesh_audit.json](../../uygulama/outputs/projects/proje-e9319baef1/reports/m6_additional_mesh_audit.json)
+- [outputs/projects/proje-e9319baef1/reports/m6_continuation_diagnostic.json](../../uygulama/outputs/projects/proje-e9319baef1/reports/m6_continuation_diagnostic.json)
+- [outputs/projects/proje-e9319baef1/reports/m6_experiment_comparison.json](../../uygulama/outputs/projects/proje-e9319baef1/reports/m6_experiment_comparison.json)
+- [outputs/projects/proje-e9319baef1/reports/m6_partial_comparison.json](../../uygulama/outputs/projects/proje-e9319baef1/reports/m6_partial_comparison.json)
+- [outputs/projects/proje-e9319baef1/reports/m6_rans_results.json](../../uygulama/outputs/projects/proje-e9319baef1/reports/m6_rans_results.json)
+- [outputs/projects/proje-e9319baef1/reports/m6_validation.html](../../uygulama/outputs/projects/proje-e9319baef1/reports/m6_validation.html)
+- [outputs/reports/karmasik_cad_ve_nasa_testleri.html](../../uygulama/outputs/reports/karmasik_cad_ve_nasa_testleri.html)
+- [outputs/reports/nist_nasa_sources.json](../../uygulama/outputs/reports/nist_nasa_sources.json)
+- [outputs/reports/nist_nasa_validation_quality.json](../../uygulama/outputs/reports/nist_nasa_validation_quality.json)
+- [outputs/reports/task_evidence/20261019-110206-b6bbf3/nist_nasa_sources.json](../../uygulama/outputs/reports/task_evidence/20261019-110206-b6bbf3/nist_nasa_sources.json)
+- [outputs/reports/task_evidence/20261019-110206-b6bbf3/nist_nasa_validation_quality.json](../../uygulama/outputs/reports/task_evidence/20261019-110206-b6bbf3/nist_nasa_validation_quality.json)
+- [outputs/reports/task_evidence/20261019-110206-eaf969/nist_nasa_sources.json](../../uygulama/outputs/reports/task_evidence/20261019-110206-eaf969/nist_nasa_sources.json)
+- [outputs/reports/task_evidence/20261019-110206-eaf969/nist_nasa_validation_quality.json](../../uygulama/outputs/reports/task_evidence/20261019-110206-eaf969/nist_nasa_validation_quality.json)
+- [outputs/reports/validation_benchmark_index.json](../../uygulama/outputs/reports/validation_benchmark_index.json)

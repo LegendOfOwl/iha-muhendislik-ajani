@@ -1,0 +1,40 @@
+{
+  "units": "mm",
+  "kind": "Explicit test modification; not part of NIST original specification",
+  "source": "work\\validation\\sources\\nist_ctc_definitions\\NIST_MBE_PMI_CTC_Definitions\\nist_ctc_02_asme1_rc.stp",
+  "source_sha256": "cd669778fbf9f11fa386a7fe8afe5a70513e3e17a5000e645d237dd4525d2775",
+  "axes": [
+    {
+      "origin": [
+        -500,
+        600,
+        -180
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "diameter": 16,
+      "length": 1000
+    },
+    {
+      "origin": [
+        -500,
+        650,
+        -180
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "diameter": 16,
+      "length": 1000
+    }
+  ],
+  "wall_normal_thickness_mm": 40,
+  "wall_draft_deg": 2,
+  "expected_parallel_wall_thickness_along_axis_mm": 80.04876354390574,
+  "analytic_removed_volume_mm3": 32189.517757245532
+}

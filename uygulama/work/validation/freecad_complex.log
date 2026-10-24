@@ -1,0 +1,126 @@
+FreeCAD 1.1.4, Libs: 1.1.4R20260928 (Git shallow)
+(C) 2001-2026 FreeCAD contributors
+FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.
+
+Recompute......
+						(100 %)									Importing project files......
+						(100 %)									Postprocessing......
+						(100 %)									Recompute......
+						(20 %)							(40 %)							(60 %)							(80 %)							(100 %)									Recompute......
+						(20 %)							(40 %)							(60 %)							(80 %)							(100 %)									Recompute......
+						(20 %)							(40 %)							(60 %)							(80 %)							(100 %)									
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:/Users/Urungu/Documents/Codex/2026-10-18/bu/outputs/projects/proje-e8fe92444f/cad/modified/ctc02_native_ports.step(19390 ents)  Write  Done
+Importing project files......
+						(14 %)							(28 %)							(42 %)							(57 %)							(71 %)							(85 %)							(100 %)									Postprocessing......
+						(100 %)									Recompute......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									Recompute......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									Recompute......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:/Users/Urungu/Documents/Codex/2026-10-18/bu/outputs/projects/proje-e8fe92444f/cad/modified/ctc05_native_grooves.step(6417 ents)  Write  Done
+{
+  "version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "results": [
+    {
+      "case": "CTC01 nominal native readback",
+      "valid": true,
+      "solids": 1,
+      "faces": 143,
+      "volume_mm3": 14642817.632140798,
+      "bbox_mm": [
+        -400.00000000000017,
+        -225.00000000000003,
+        -100.0,
+        400.0000000000002,
+        225.0,
+        50.00000000000023
+      ]
+    },
+    {
+      "case": "CTC02 native parametric ports",
+      "valid": true,
+      "solids": 1,
+      "faces": 573,
+      "volume_mm3": 47068346.15919535,
+      "bbox_mm": [
+        -340.0083582615482,
+        -40.000000000001734,
+        -360.00000000000233,
+        340.0083582615636,
+        820.0000000000018,
+        40.15948513050411
+      ],
+      "radius_change_8_to_9_removed_mm3": 4275.172281950712,
+      "analytic_expected_mm3": 4275.170327134172,
+      "radius_change_relative_error": 4.57248809038191e-07,
+      "parameter_recompute_passed": true,
+      "native_feature_types": [
+        "Part::Feature",
+        "Part::Cylinder",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::Cut"
+      ]
+    },
+    {
+      "case": "CTC05 native grooves and keyway",
+      "valid": true,
+      "solids": 1,
+      "faces": 190,
+      "volume_mm3": 12684456.500388216,
+      "bbox_mm": [
+        -263.5250000000029,
+        -279.4,
+        0.0,
+        263.52500000000543,
+        279.4,
+        482.6000000000004
+      ],
+      "groove_radius_change_removed_mm3": 741.4157130904496,
+      "analytic_expected_mm3": 741.4158662471912,
+      "radius_change_relative_error": 2.0657332622242564e-07,
+      "parameter_recompute_passed": true,
+      "native_feature_types": [
+        "Part::Feature",
+        "Part::Cylinder",
+        "Part::Cylinder",
+        "Part::Cut",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::Cylinder",
+        "Part::Cut",
+        "Part::Cut",
+        "Part::Box",
+        "Part::Cut"
+      ]
+    }
+  ],
+  "passed": true,
+  "scope": "Native CAD geometry and parameter propagation; not GD&T/manufacturing or structural acceptance"
+}
+COMPLEX_NATIVE_CAD_COMPLETE
+Importing project files......
+						(6 %)							(12 %)							(18 %)							(25 %)							(31 %)							(37 %)							(43 %)							(50 %)							(56 %)							(62 %)							(68 %)							(75 %)							(81 %)							(87 %)							(93 %)							(100 %)									Postprocessing......
+						(100 %)									

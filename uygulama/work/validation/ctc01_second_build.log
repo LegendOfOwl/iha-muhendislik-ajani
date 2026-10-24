@@ -1,0 +1,26 @@
+FOOT_JOIN_EDGES [((250.0, -137.5, -50.0), 25.0), ((325.0, -125.00000000000003, -50.0), 150.0), ((325.0, 125.0, -50.0), 150.0), ((250.00000000000009, 137.5, -50.0), 25.0), ((-250.0, 137.5, -50.0), 25.0), ((-325.0, 125.0, -50.0), 150.0), ((-325.0, -125.0, -50.0), 150.0), ((-250.00000000000009, -137.5, -50.0), 25.0)]
+Plate_from_analytic_sketch True 1 11671714.487749659
+Four_feet True 1 14229015.33069005
+Foot_root_fillets True 1 14243628.455453739
+Chamfered_hex_boss_and_root_fillet True 1 14674355.388131656
+Two_blind_cross_drilled_holes True 1 14644822.614739126
+Measured_NIST_marking_pockets True 1 14642817.634484354
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\validation\rebuild_ctc01.py", line 80, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\validation\rebuild_ctc01.py", line 72, in main
+    ref=cq.importers.importStep(str(SOURCE)).val();missing=sum(v.Volume() for v in ref.cut(s).Solids());extra=sum(v.Volume() for v in s.cut(ref).Solids());ratio=(missing+extra)/ref.Volume()
+                                                                                                                                      ^^^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\.venv-cad\Lib\site-packages\cadquery\occ_impl\shapes.py", line 4898, in cut
+    return tcast(Compound, self._bool_op(self, toCut, cut_op))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\.venv-cad\Lib\site-packages\cadquery\occ_impl\shapes.py", line 1412, in _bool_op
+    return Shape.cast(op.Shape())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\.venv-cad\Lib\site-packages\cadquery\occ_impl\shapes.py", line 477, in cast
+    t = shapetype(obj)
+        ^^^^^^^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\.venv-cad\Lib\site-packages\cadquery\occ_impl\shapes.py", line 399, in shapetype
+    raise ValueError("Null TopoDS_Shape object")
+ValueError: Null TopoDS_Shape object

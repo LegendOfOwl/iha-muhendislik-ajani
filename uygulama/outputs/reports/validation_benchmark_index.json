@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-19T09:00:29.707626+00:00",
+  "projects": {
+    "cad": "proje-e8fe92444f",
+    "cfd": "proje-e9319baef1"
+  },
+  "cad": {
+    "passed": true,
+    "cases": 3,
+    "reconstruction_cases": 1,
+    "modification_cases": 2,
+    "native_documents": 3,
+    "native_parameter_recompute_cases": 2,
+    "case_reports": [
+      "ctc01_reconstruction.json",
+      "ctc02_modification.json",
+      "ctc05_modification.json",
+      "freecad_complex_checks.json",
+      "native_view_checks.json"
+    ]
+  },
+  "cfd": {
+    "runtime_passed": true,
+    "quality_passed": false,
+    "experiment_points": 271,
+    "grids": 2,
+    "fine_Cp_RMSE": 0.1534785714096509,
+    "fine_fraction_within_0p02": 0.1992619926199262
+  },
+  "report": "outputs/reports/karmasik_cad_ve_nasa_testleri.html"
+}
