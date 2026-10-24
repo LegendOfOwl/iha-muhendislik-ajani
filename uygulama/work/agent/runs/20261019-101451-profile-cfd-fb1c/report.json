@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-10-19T07:15:37.783865+00:00",
+  "passed": true,
+  "quality_passed": false,
+  "results": [
+    {
+      "level": "medium",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_101454\\medium",
+      "mesh": {
+        "cells": 6518,
+        "nodes": 3385,
+        "min_cell_area_m2": 6.715000557954686e-06,
+        "boundary_segments": {
+          "airfoil": 172,
+          "farfield": 80
+        },
+        "h_near_m": 0.012,
+        "boundary_one_fluid_neighbor": true,
+        "unused_nodes_removed": true,
+        "mesh_sha256": "8c2d1bb9a77194f0aba661ea67e4cb78f6236942aa57185ef94efddb6158d581"
+      },
+      "seconds": 12.937606999999844,
+      "CL": 0.486686446,
+      "CD_numerical_inviscid": -0.01054648415,
+      "log10_density_residual": -8.000840754,
+      "CL_tail_range": 4.602479999998854e-05,
+      "CD_tail_range": 1.5211000000004554e-06,
+      "runtime_passed": true,
+      "iterative_passed": true
+    },
+    {
+      "level": "fine",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_101454\\fine",
+      "mesh": {
+        "cells": 13914,
+        "nodes": 7168,
+        "min_cell_area_m2": 4.459868656080079e-06,
+        "boundary_segments": {
+          "airfoil": 342,
+          "farfield": 80
+        },
+        "h_near_m": 0.006,
+        "boundary_one_fluid_neighbor": true,
+        "unused_nodes_removed": true,
+        "mesh_sha256": "23e244dfe4c432cf7e446e90460c480b8855c93649b468fd2f9e3e3f34d5b1b3"
+      },
+      "seconds": 29.338559899944812,
+      "CL": 0.4792993973,
+      "CD_numerical_inviscid": -0.003979649916,
+      "log10_density_residual": -6.812036706,
+      "CL_tail_range": 0.0007177774000000081,
+      "CD_tail_range": 1.039116100000001e-05,
+      "runtime_passed": true,
+      "iterative_passed": false
+    }
+  ],
+  "reference": {
+    "solver": "XFOIL inviscid",
+    "CL": 0.5104,
+    "Mach": 0.15,
+    "alpha_deg": 2.0,
+    "note": "Same source DAT, independent panel method; not experimental validation or identical spline representation"
+  },
+  "CL_grid_relative_change": 0.015178250310262431,
+  "CL_reference_relative_difference": 0.060933782719435725,
+  "geometry_sha256": "dce4261b15ef4177ce80563d5980891178c8ec8cbb1e270f0708a18f28d8bf56",
+  "conditions_sha256": "1cd97dd0e41eeb94df6772b2af4dfb6daed7673988e1617d4d2282c6630d1466",
+  "analysis_scope": "2D inviscid profile",
+  "conditions": {
+    "solver": "EULER",
+    "Mach": 0.15,
+    "alpha_deg": 2.0,
+    "P_Pa": 101325,
+    "T_K": 273.15,
+    "reference_area_m2": 1,
+    "reference_length_m": 1,
+    "farfield_extent_chords": 20
+  },
+  "input_case_sha256": "e5755e77fe1189b4d2b789664e65e2064add13313f5fbdbe11b0edd345e3ce33",
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_101454",
+  "scope": "New source DAT -> Gmsh fluid domain -> native 2D Euler; not viscous drag or 3D wing CFD",
+  "limits": [
+    "No boundary-layer mesh/RANS/transition qualification",
+    "Inviscid numerical CD is not physical profile drag",
+    "No stall or whole-aircraft acceptance",
+    "20-chord farfield sensitivity not independently established"
+  ]
+}

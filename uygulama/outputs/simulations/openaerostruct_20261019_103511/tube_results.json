@@ -1,0 +1,103 @@
+{
+  "example": "tube",
+  "seconds": 1.9812774999882095,
+  "optimizer_success": true,
+  "constraints": {
+    "AS_point_0.wing_perf.failure": [
+      1.0086759292399217e-10
+    ],
+    "AS_point_0.wing_perf.thickness_intersects": [
+      -0.32804744498027644,
+      -0.7252786328214934
+    ],
+    "AS_point_0.L_equals_W": [
+      1.63042912504352e-11
+    ]
+  },
+  "driver_scaled_objectives": {
+    "AS_point_0.fuelburn": [
+      0.9252396360528867
+    ]
+  },
+  "source_sha256": "fe949685cd8edbc894d7f2f477986b48935676d88ddad6b4e4239174b89debf2",
+  "failure_max": 1.0086759292399217e-10,
+  "thickness_intersects_max_m": -0.32804744498027644,
+  "L_equals_W": 1.63042912504352e-11,
+  "fuelburn_kg": 92523.96360528866,
+  "structural_mass_kg": 26383.644465082572,
+  "constraints_passed": true,
+  "nonlinear_error_on_nonconvergence": true,
+  "nonlinear_absolute_tolerance": 1e-07,
+  "derivatives": [
+    {
+      "of": "AS_point_0.L_equals_W",
+      "wrt": "alpha",
+      "relative_norm_error_with_unit_floor": 8.671906470691937e-09,
+      "analytic": [
+        [
+          -0.19310051980854107
+        ]
+      ],
+      "finite_difference": [
+        [
+          -0.1931005111366346
+        ]
+      ]
+    },
+    {
+      "of": "AS_point_0.L_equals_W",
+      "wrt": "wing.thickness_cp",
+      "relative_norm_error_with_unit_floor": 0.00031932006885038795,
+      "analytic": [
+        [
+          2.6708335471124176,
+          1.5821488761638913,
+          -0.03391563587318924
+        ]
+      ],
+      "finite_difference": [
+        [
+          2.6702489103525013,
+          1.5822570269219403,
+          -0.03312258789467392
+        ]
+      ]
+    },
+    {
+      "of": "AS_point_0.fuelburn",
+      "wrt": "alpha",
+      "relative_norm_error_with_unit_floor": 2.231631034035523e-06,
+      "analytic": [
+        [
+          -10217.041246584067
+        ]
+      ],
+      "finite_difference": [
+        [
+          -10217.018445968628
+        ]
+      ]
+    },
+    {
+      "of": "AS_point_0.fuelburn",
+      "wrt": "wing.thickness_cp",
+      "relative_norm_error_with_unit_floor": 0.00016533005912136765,
+      "analytic": [
+        [
+          219853.6976567937,
+          208600.84244776343,
+          127814.47917850348
+        ]
+      ],
+      "finite_difference": [
+        [
+          219827.5474910736,
+          208609.92017745972,
+          127861.28786277771
+        ]
+      ]
+    }
+  ],
+  "derivative_check_passed": true,
+  "passed": true
+}

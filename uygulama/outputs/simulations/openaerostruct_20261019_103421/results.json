@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-10-19T07:34:25.496274+00:00",
+  "passed": true,
+  "seconds": 3.8480316000059247,
+  "versions": {
+    "openaerostruct": "2.12.0",
+    "openmdao": "3.45.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "results": [
+    {
+      "example": "quick",
+      "seconds": 1.6160263000056148,
+      "optimizer_success": true,
+      "constraints": {
+        "aero_point_0.wing_perf.CL": [
+          0.4999999999998985
+        ]
+      },
+      "objectives": {
+        "aero_point_0.wing_perf.CD": [
+          315.7580550695561
+        ]
+      },
+      "source_sha256": "50594d52834b45eed148900c80f5f8479f77d505f05fac261ad8bbd6c51fcb31",
+      "CL": 0.4999999999998985,
+      "CD": 0.031575805506955615,
+      "constraints_passed": true,
+      "passed": true
+    },
+    {
+      "example": "tube",
+      "seconds": 1.9900378999882378,
+      "optimizer_success": true,
+      "constraints": {
+        "AS_point_0.wing_perf.failure": [
+          1.0086759292399217e-10
+        ],
+        "AS_point_0.wing_perf.thickness_intersects": [
+          -0.32804744498027644,
+          -0.7252786328214934
+        ],
+        "AS_point_0.L_equals_W": [
+          1.63042912504352e-11
+        ]
+      },
+      "objectives": {
+        "AS_point_0.fuelburn": [
+          0.9252396360528867
+        ]
+      },
+      "source_sha256": "fe949685cd8edbc894d7f2f477986b48935676d88ddad6b4e4239174b89debf2",
+      "failure_max": 1.0086759292399217e-10,
+      "thickness_intersects_max_m": -0.32804744498027644,
+      "L_equals_W": 1.63042912504352e-11,
+      "fuelburn_kg": 92523.96360528866,
+      "structural_mass_kg": 26383.644465082572,
+      "constraints_passed": true,
+      "nonlinear_error_on_nonconvergence": true,
+      "nonlinear_absolute_tolerance": 1e-07,
+      "derivatives": [
+        {
+          "of": "AS_point_0.L_equals_W",
+          "wrt": "alpha",
+          "relative_norm_error_with_unit_floor": 8.671906470691937e-09,
+          "analytic": [
+            [
+              -0.19310051980854107
+            ]
+          ],
+          "finite_difference": [
+            [
+              -0.1931005111366346
+            ]
+          ]
+        },
+        {
+          "of": "AS_point_0.L_equals_W",
+          "wrt": "wing.thickness_cp",
+          "relative_norm_error_with_unit_floor": 0.00031932006885038795,
+          "analytic": [
+            [
+              2.6708335471124176,
+              1.5821488761638913,
+              -0.03391563587318924
+            ]
+          ],
+          "finite_difference": [
+            [
+              2.6702489103525013,
+              1.5822570269219403,
+              -0.03312258789467392
+            ]
+          ]
+        },
+        {
+          "of": "AS_point_0.fuelburn",
+          "wrt": "alpha",
+          "relative_norm_error_with_unit_floor": 2.231631034035523e-06,
+          "analytic": [
+            [
+              -10217.041246584067
+            ]
+          ],
+          "finite_difference": [
+            [
+              -10217.018445968628
+            ]
+          ]
+        },
+        {
+          "of": "AS_point_0.fuelburn",
+          "wrt": "wing.thickness_cp",
+          "relative_norm_error_with_unit_floor": 0.00016533005912136765,
+          "analytic": [
+            [
+              219853.6976567937,
+              208600.84244776343,
+              127814.47917850348
+            ]
+          ],
+          "finite_difference": [
+            [
+              219827.5474910736,
+              208609.92017745972,
+              127861.28786277771
+            ]
+          ]
+        }
+      ],
+      "derivative_check_passed": true,
+      "passed": true
+    }
+  ],
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\openaerostruct_20261019_103421",
+  "scope": "Published low-fidelity CRM aerodynamic/tube aerostructural optimization examples; not a UAV, CFD, mesh-independent solution or structural certification",
+  "quality_passed": null,
+  "physical_design_acceptance": "not evaluated",
+  "thresholds": {
+    "CL_equality_absolute": 1e-06,
+    "failure_upper_with_tolerance": 1e-05,
+    "thickness_intersects_upper_m": 1e-07,
+    "L_equals_W_absolute": 1e-06,
+    "derivative_relative_norm_error_with_unit_floor": 0.005
+  },
+  "source_manifest_sha256": "b268cb95632dc5d80630fbe38041e9742038efe8659739979da71718ac8566d5"
+}

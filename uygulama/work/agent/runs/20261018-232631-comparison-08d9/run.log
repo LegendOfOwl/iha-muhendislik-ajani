@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\workflow\rank_candidates.py", line 64, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\workflow\rank_candidates.py", line 53, in main
+    result=compare(candidates,{'span_m':2.1})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\workflow\rank_candidates.py", line 19, in compare
+    if cfd.get('report'):
+       ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'

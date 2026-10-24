@@ -1,0 +1,22 @@
+PASS: FreeCAD native CAD and saved document reopen
+PASS: FreeCAD STEP units and solid topology
+Meshing and solving coarse
+PASS: C3D10 connectivity coarse
+PASS: CalculiX coarse native solve
+PASS: Load balance coarse
+Meshing and solving medium
+PASS: C3D10 connectivity medium
+PASS: CalculiX medium native solve
+PASS: Load balance medium
+Meshing and solving fine
+PASS: C3D10 connectivity fine
+PASS: CalculiX fine native solve
+PASS: Load balance fine
+PASS: Independent beam theory comparison
+PASS: Mesh convergence medium to fine
+PASS: Linear small-displacement range
+{
+  "passed": true,
+  "checks": 14,
+  "run": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\fem_20261018_173855"
+}

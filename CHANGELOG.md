@@ -17,3 +17,7 @@ K-1B, Cadmonkey ve Zero-to-CAD deneyleri; özgün başarısızlıklar ve istem d
 ## v0.4.0 — Deterministik geometri ve hafif CFD
 
 Parametrik kanat, karmaşık VLM, SU2 ve Elmer araç sınamaları.
+
+## v0.5.0 — Proje merkezli arayüz ve aeroelastisite
+
+EXE başlatıcı, proje kayıtları, profile CFD ve OpenAeroStruct örnekleri.

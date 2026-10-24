@@ -1,0 +1,111 @@
+{
+  "id": "20261018-203719-a2da02",
+  "request": "K-1B/MakeMe ailesini derin araştır; yeni sürüm ve istem ayarlarını ölçü kontrolleriyle değerlendir; projenin bugünkü yeteneklerini ve sınırlarını raporla.",
+  "kind": "research",
+  "created_utc": "2026-10-18T17:37:19.036547+00:00",
+  "status": "tamamlandı",
+  "phase": "model araştırması ve proje yetenek raporu",
+  "acceptance": [
+    "Birincil kaynaklarla K/Cadmonkey sürümlerini ve eğitim yolunu incele",
+    "Aynı ölçülerle eski/yeni modeli ve istem ayarlarını karşılaştır",
+    "Mevcut yetenekleri, gerçek kanıtları ve açık sınırları tek raporda sun"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\proje_durum_ve_k1b_arastirma.md",
+      "sha256": "e789c5685c68bc103bb0cc8abe838d2480dc0e3a023e1db69a4f0a7e81ea461c",
+      "live_path": "outputs\\reports\\proje_durum_ve_k1b_arastirma.md"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\proje_durum_ve_k1b_arastirma.html",
+      "sha256": "9565151502df29f84116340d29de6178d67ad051490f258f005218c497679068",
+      "live_path": "outputs\\reports\\proje_durum_ve_k1b_arastirma.html"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\k_family_study.json",
+      "sha256": "304dec3bc45332ea1a5c913417a542b7cda0ed6766b664e608e1e105a2f327a9",
+      "live_path": "outputs\\reports\\k_family_study.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\k_family_new_tasks.json",
+      "sha256": "71b309eb3b811e7382572be0cf08ca1bdd165cf3aa51606976a76fc92355d698",
+      "live_path": "outputs\\reports\\k_family_new_tasks.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\model_usage_audit.json",
+      "sha256": "4a4c7534e3db14835d55e57df10c055886dc2b1e1b69cc65a3a1b3dce77b1806",
+      "live_path": "outputs\\reports\\model_usage_audit.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\zero_usage_audit.json",
+      "sha256": "672a6ebe36bf51387d0428bc875ea366fe170fefe3a32a5f02aa66f63cef4d5f",
+      "live_path": "outputs\\reports\\zero_usage_audit.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\cat_budget_audit.json",
+      "sha256": "a0b0e269867198b649164066d59e6ed714557945f9957a094181fb1b6befbde9",
+      "live_path": "outputs\\reports\\cat_budget_audit.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\research_evidence.json",
+      "sha256": "f02f67c49d49488f4970b85c59a7ee921a188120018d1fecd665c2b5f13315ec",
+      "live_path": "outputs\\reports\\research_evidence.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\research_quality_check.json",
+      "sha256": "0c5b15633151a8823e3f6f87239a7622170cb146a84d4d7be5b4008725808e86",
+      "live_path": "outputs\\reports\\research_quality_check.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\tool_health.json",
+      "sha256": "8995472ef98be952707edd65fa8ae65ccf3f45b9d6d1c8bce71c7523a9ce5942",
+      "live_path": "outputs\\reports\\tool_health.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\ui_check.json",
+      "sha256": "0f614a9378558c07513e4cc2ac4c96ca578e2bfc5e4f36cb44ff18c5573cd80c",
+      "live_path": "outputs\\reports\\ui_check.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\cadmonkey32_install.json",
+      "sha256": "3e8b8b1c9ff905fb2128b02b0d5cfbd98f967d21ab26e13fdf0b085a433d229c",
+      "live_path": "work\\setup\\cadmonkey32_install.json"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "completed_utc": "2026-10-18T18:09:29.020269+00:00",
+  "acceptance_results": [
+    {
+      "criterion": "Birincil kaynak ve yeni sürüm araştırması",
+      "passed": true,
+      "evidence": "outputs/reports/research_evidence.json"
+    },
+    {
+      "criterion": "Aynı geometri ölçütleriyle eski/yeni sürüm karşılaştırması",
+      "passed": true,
+      "evidence": "outputs/reports/k_family_study.json"
+    },
+    {
+      "criterion": "İstem/şablon/örnekleme/çözünürlük ve özgün Zero görüntüsüyle kullanım denetimi",
+      "passed": true,
+      "evidence": "outputs/reports/model_usage_audit.json"
+    },
+    {
+      "criterion": "Yapılan iş, kullanılabilir yetenek ve sınırları tek raporda sun",
+      "passed": true,
+      "evidence": "outputs/reports/proje_durum_ve_k1b_arastirma.html"
+    }
+  ],
+  "scope_limits": [
+    "Real UAV design inputs remain unknown and all conceptual steps pending",
+    "Original BF16/Transformers/Unsloth model paths not reproduced",
+    "ANSYS deferred",
+    "Small model outputs not automatically accepted for engineering"
+  ],
+  "report": "outputs/reports/proje_durum_ve_k1b_arastirma.html"
+}

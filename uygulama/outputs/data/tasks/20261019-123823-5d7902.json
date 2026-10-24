@@ -1,0 +1,44 @@
+{
+  "id": "20261019-123823-5d7902",
+  "request": "M6 aynı kaynak ağ/koşulunda yalnız CFL uyarlamasını kapatarak kayıtlı çözümden kontrollü sayısal deneme; mevcut duvar/ağ kabulü açık kalır",
+  "kind": "qualification",
+  "created_utc": "2026-10-19T09:38:23.391318+00:00",
+  "status": "tamamlandı",
+  "phase": "araç doğrulama",
+  "acceptance": [
+    "Aynı geometri/ağ ve fiziksel koşullar; değişikliklerin kaydı",
+    "Gerçek native yeniden başlatma, kalıntı/kuvvet/alan kanıtı",
+    "İyileşse de yeni ağ/duvar/deney kabulü sağlanmadan M6 doğrulaması verme"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823\\results.json",
+      "sha256": "3fc989aa1610b6bdb3f456ae84e8f2faad2162e899e736ceb42887dfcbd78ec9"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+  },
+  "project_id": "proje-e9319baef1",
+  "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+  "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+  "project_output_root": "outputs/projects/proje-e9319baef1",
+  "project_snapshot": {
+    "id": "proje-e9319baef1",
+    "name": "NASA ONERA M6 CFD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e9319baef1",
+    "data_root": "outputs/projects/proje-e9319baef1/data/project",
+    "created_utc": "2026-10-19T08:02:06.291509+00:00",
+    "active_cad": null
+  },
+  "completed_utc": "2026-10-19T09:47:04.683427+00:00",
+  "completion_scope": "Controlled numerical diagnostic completed/reported; M6 physical qualification remains open",
+  "open_engineering_acceptances": [
+    "M6 wall resolution/source-grid sensitivity/experiment acceptance remains open"
+  ]
+}

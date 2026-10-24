@@ -1,0 +1,104 @@
+{
+  "id": "20261024-153804-27f425",
+  "request": "RAE2822 testlerini kapattıktan sonra ONERA M6 Test2308 için kaynaklı kontrollü gerçek3B RANS ve271 deney noktası karşılaştırması yap",
+  "kind": "qualification",
+  "created_utc": "2026-10-24T12:38:04.832829+00:00",
+  "status": "tamamlandı",
+  "phase": "araç doğrulama",
+  "acceptance": [
+    "RAE test ve kanıt kaydı kapandıktan sonra başlat",
+    "Aynı kaynak M6 ağı/koşullarla native3B RANS ve eşlenmiş checkpoint",
+    "271 deney noktasının tamamı, y+, kuvvet/kalıntı ve açık kalite kapılarıyla rapor"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_24_ekim.html",
+      "sha256": "a54edbd40ec6dcacaed5ce3bebe35f0de1fdeeb8b8c878a8d44ffc2ec1221d2d"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_followup_integrity_20261024.json",
+      "sha256": "467605f923a2e8544a6ff52a6284837ee57ad5442b44a5d47ad8088dc0a1767f"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_jst_control_results_20261024_v2.json",
+      "sha256": "75c7e9c17737d9000d34547ff650d782e86d373865edc3a73ebed84b36be4042"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_wallnormal_results_20261024_v3.json",
+      "sha256": "696738569e175ae0c9358d6d52f7aee891644257d2db3ac854d91d2cf0c19d8e"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_jst_prediction_frozen_20261024_v2.json",
+      "sha256": "206272da7f854c4d5ce9bbacfee304266aea966186f849ab863d97c2ae5f6e0f"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_wallnormal_prediction_frozen_20261024_v3.json",
+      "sha256": "b827bb66386680a41062bbd13afae4c072ea2e27fba66f134017d9e01e78d974"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_jst_force_integral_20261024_v2.json",
+      "sha256": "eba5a522aaa85c826e7f79c31a547a786c0d48d006e4bef9a4832d96d98fad69"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_wallnormal_force_integral_20261024_v3.json",
+      "sha256": "818bb2e6e13a8e49f3ad6ce9d261090389ad261be60bc999316e739dddb63958"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_reference_recheck_20261024.json",
+      "sha256": "d7396d6b6ec8283a93bba933f1b0c254685b014ae8c0688778dd2a6c6f103028"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_field_view_main_20261024_v2.json",
+      "sha256": "56945ec2d04875e1b9d85d8c4c1f459b6c84d4585b8b51d3a31e9a6393ece945"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_field_view_normal_20261024_v2.json",
+      "sha256": "d59aff21a6812ec44b3b59a2a4614207e4829f8e6a5a677d1078f0b37aef3029"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+  },
+  "project_id": "proje-e9319baef1",
+  "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+  "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+  "project_output_root": "outputs/projects/proje-e9319baef1",
+  "project_snapshot": {
+    "id": "proje-e9319baef1",
+    "name": "NASA ONERA M6 CFD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e9319baef1",
+    "data_root": "outputs/projects/proje-e9319baef1/data/project",
+    "created_utc": "2026-10-19T08:02:06.291509+00:00",
+    "active_cad": null
+  },
+  "completed_utc": "2026-10-24T13:38:39.731461+00:00",
+  "completion_scope": "RAE testlerinin kapanışından sonra istenen iki3B M6 testini çalıştırma, kaynak deneyle kıyas ve raporlama tamamlandı; genel fizik kabulü geçmedi",
+  "minimum_physical_qualification_passed": false,
+  "engineering_work_remaining": [
+    "density residual below-7",
+    "all14 section/side experimental Cp gates",
+    "systematic same-geometry mesh family",
+    "full boundary-layer profiles/normal sensitivity",
+    "farfield sensitivity"
+  ],
+  "reproduction_code_sha256": {
+    "work\\m6_followup\\build_report.py": "180eadfdb1c5a2fe18e86abcc7c18adec199784337c0a29da729177fe6519557",
+    "work\\m6_followup\\finalize_task.py": "5eed842ccb8c0508650a110e427e5bb47f63f61d2fc1764be9f233d9e936b61b",
+    "work\\m6_followup\\force_integral.py": "978c5911f6065d7f768d6ca2ac5398e0296ba49f54c7a7bb6cb32a8617eb09e3",
+    "work\\m6_followup\\recheck_reference.py": "5fd3ed99544ddcc232f4bc789b73fbf6ada365cd54a70ff26949b60d11f56d47",
+    "work\\m6_followup\\render_field.py": "9c093c19035991a865fec05fb0a859425e92e8e47f47d6c9a7b32a53aefc0120",
+    "work\\m6_followup\\render_field_v1.py": "bb9221b928a19156b45103c37bfc85d01b75c209ecaf342f95c52432d7835873",
+    "work\\m6_followup\\test_20261024.py": "05c3298782178b210c930ae1c94d269eaed8679a43ab328626c1c97ab9133d0e",
+    "work\\m6_followup\\test_20261024_v1_rejected.py": "a74ad90dbd90201899b59bd9ec510e0bd791b49d9fb0896adf9546cb52d273d7",
+    "work\\m6_followup\\test_normal_20261024.py": "d2e8d283e39130c974863e5d5e357fb9a1d1c7e810ee22f79d2a267a42ebfe51",
+    "work\\m6_followup\\verify_evidence.py": "e1c6ee43c84bdada30b40729dda8bcaad84ead731f9ed390c14a5219c1790b99",
+    "work\\m6_followup\\wallnormal_mesh.py": "1eda8677dceef57f7426492e6a32d57a8a660c994b054a93d3dc2d75daef06ca",
+    "work\\m6_followup\\wallnormal_mesh_v1_marker_parser_error.py": "777873d7cd69cb59b5cc54576db2302889e3f77d96b8d4109716e6664a63dea8",
+    "work\\m6_followup\\wallnormal_mesh_v2_reference_orientation_error.py": "a74cf6a7c11bac774b691ae9e5c584604c19cb82aa64cd36051e8bbdda8ddb61"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "20261019-110206-eaf969",
+  "request": "NIST kaynak teknik resim/modelinden karmaşık parçaları yeniden oluştur; referans STEP ile ölçü/topoloji/katı farkını ve FreeCAD geri okumasını denetle",
+  "kind": "qualification",
+  "created_utc": "2026-10-19T08:02:06.298360+00:00",
+  "status": "tamamlandı",
+  "phase": "araç doğrulama",
+  "acceptance": [
+    "Kaynak PDF ve STEP, birimler ve SHA kayıtlı",
+    "Parametrik yeniden üretim; orijinali yeniden dışa aktararak üretim iddia etme",
+    "Hacim/boyut/topoloji/katı farkı, gerçek CAD dosyaları ve geometri raporu"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\cad_output_readback.json",
+      "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\cad_output_readback.json",
+      "sha256": "50a7dc8476ffb2ebbb38c081b06ab170604bac6b5d87362746fd22d795389fa8"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\ctc01_reconstruction.json",
+      "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\ctc01_reconstruction.json",
+      "sha256": "5ba2a31a4237b9b458c265d5fa4d913dbbb9e46539ebe2b1b31fa5319e570912"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\ctc02_modification.json",
+      "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\ctc02_modification.json",
+      "sha256": "d04f9fc62bc9647ee91533e8e0ae2abaeeb08ffae727d3ae548bed060d32ed00"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\ctc05_modification.json",
+      "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\ctc05_modification.json",
+      "sha256": "94b84bcd4b8042ca429a2330bfc0db6d6ce12855ac68879d0380379432590b1c"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\freecad_complex_checks.json",
+      "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\freecad_complex_checks.json",
+      "sha256": "9a761c08bc1002837b9817a0384788c7d91cf80f7c7d058d826f5ab7f6c27e08"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\native_view_checks.json",
+      "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\native_view_checks.json",
+      "sha256": "c53fd288031f8d184f5f0f87db52e7619cbbf3d558e1140e6c1513a2d61cb5ea"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\cad_validation.html",
+      "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\cad_validation.html",
+      "sha256": "1a47f6084fc70ab7440f8b74d944e53ca03399a1cec97838449ad04734515e68"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\nist_nasa_validation_quality.json",
+      "live_path": "outputs\\reports\\nist_nasa_validation_quality.json",
+      "sha256": "e940d0246eef2008927efb67a565183c53b19540b58b5fce7cfa4e61917b6690"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\nist_nasa_sources.json",
+      "live_path": "outputs\\reports\\nist_nasa_sources.json",
+      "sha256": "a56bfb74bcd0076953640d208bdbe36ea0e4a9cab18b01dea627877b14f90aa3"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-e8fe92444f\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-e8fe92444f\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-e8fe92444f\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-e8fe92444f.json": "c5f75bdedc3086f7132a143f3aa56c219ac1694f07bfd905be0daf42b5411225"
+  },
+  "project_id": "proje-e8fe92444f",
+  "project_manifest": "outputs\\data\\projects\\proje-e8fe92444f.json",
+  "project_data_root": "outputs/projects/proje-e8fe92444f/data/project",
+  "project_output_root": "outputs/projects/proje-e8fe92444f",
+  "project_snapshot": {
+    "id": "proje-e8fe92444f",
+    "name": "NIST karmaşık CAD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e8fe92444f",
+    "data_root": "outputs/projects/proje-e8fe92444f/data/project",
+    "created_utc": "2026-10-19T08:02:06.284082+00:00",
+    "active_cad": null
+  },
+  "completed_utc": "2026-10-19T09:00:55.280342+00:00",
+  "completion_scope": "One reference-assisted reconstruction plus two source-solid modifications, geometric checks and native parameter tests completed",
+  "open_engineering_acceptances": [],
+  "completion_project_snapshot": {
+    "id": "proje-e8fe92444f",
+    "name": "NIST karmaşık CAD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e8fe92444f",
+    "data_root": "outputs/projects/proje-e8fe92444f/data/project",
+    "created_utc": "2026-10-19T08:02:06.284082+00:00",
+    "active_cad": {
+      "path": "outputs\\projects\\proje-e8fe92444f\\cad\\modified\\ctc02_native_ports.FCStd",
+      "sha256": "35205e14eae7daa475487c5c88ceb226e71dca2b7acbdb2e00b92bee9930d168",
+      "selected_utc": "2026-10-19T09:00:29.666004+00:00"
+    },
+    "cad_tool": "freecad"
+  },
+  "completion_active_cad_sha256": "35205e14eae7daa475487c5c88ceb226e71dca2b7acbdb2e00b92bee9930d168",
+  "acceptance_results": [
+    {
+      "criterion": "Kaynak PDF ve STEP, birimler ve SHA kayıtlı",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+    },
+    {
+      "criterion": "Parametrik yeniden üretim; orijinali yeniden dışa aktararak üretim iddia etme",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+    },
+    {
+      "criterion": "Hacim/boyut/topoloji/katı farkı, gerçek CAD dosyaları ve geometri raporu",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+    }
+  ]
+}

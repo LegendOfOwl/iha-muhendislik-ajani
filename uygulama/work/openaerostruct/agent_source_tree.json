@@ -1,0 +1,359 @@
+{
+  "sha": "09336bd12e5816cd212ad5b83d35c560599ea803",
+  "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/09336bd12e5816cd212ad5b83d35c560599ea803",
+  "tree": [
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2d39dbb7f9f19db6184822622ab32b8f22b91f2",
+      "size": 1290,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/a2d39dbb7f9f19db6184822622ab32b8f22b91f2"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06286faff386ee202866e314ab6058ba71187f75",
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/06286faff386ee202866e314ab6058ba71187f75"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91ce6c089c72e082a6bd4af906da6bb8818902f7",
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/91ce6c089c72e082a6bd4af906da6bb8818902f7"
+    },
+    {
+      "path": ".github/workflows/Architecture.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3adc4e68ecf729959782ff7d6e64423da538c1eb",
+      "size": 277416,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/3adc4e68ecf729959782ff7d6e64423da538c1eb"
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c6d36ed9e033de12245e29480b6974dc91f3a43",
+      "size": 4669,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/4c6d36ed9e033de12245e29480b6974dc91f3a43"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "880c45fea07436b41d393a8b57073bffa5644a5d",
+      "size": 3839,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/880c45fea07436b41d393a8b57073bffa5644a5d"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0da5f8df3af1c9a05b4da5e26ff4e67276f24f39",
+      "size": 11398,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/0da5f8df3af1c9a05b4da5e26ff4e67276f24f39"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e0bc729979447747eec5fe6e023ec93d234471a",
+      "size": 5169,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/2e0bc729979447747eec5fe6e023ec93d234471a"
+    },
+    {
+      "path": "docker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24a21b293191c79670eb5629460e5f0257db9ec0",
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/24a21b293191c79670eb5629460e5f0257db9ec0"
+    },
+    {
+      "path": "docker/sandbox.Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "104c1bcdf39fd53d881f5061e012f04b5274cf9a",
+      "size": 927,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/104c1bcdf39fd53d881f5061e012f04b5274cf9a"
+    },
+    {
+      "path": "docker/seccomp-openaerostruct.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a3fbb4c66a4801749653a35dd6f593ec6735cc3",
+      "size": 1869,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/1a3fbb4c66a4801749653a35dd6f593ec6735cc3"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "653b87fc498e00d4139189149b99cde1137d6dd8",
+      "size": 512,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/653b87fc498e00d4139189149b99cde1137d6dd8"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb789062614b90694cf2a193b9ad15d60631f56a",
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/bb789062614b90694cf2a193b9ad15d60631f56a"
+    },
+    {
+      "path": "src/agent_logic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "666e5b8d2559800fc27f713287ff268c28d9c3d0",
+      "size": 21493,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/666e5b8d2559800fc27f713287ff268c28d9c3d0"
+    },
+    {
+      "path": "src/app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69afb8812647f5aa1854c2f8529dde2be189ddb5",
+      "size": 31199,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/69afb8812647f5aa1854c2f8529dde2be189ddb5"
+    },
+    {
+      "path": "src/benchmark.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4bf8686f2b4f21859cd24ee3d5d80a571342ba2",
+      "size": 31354,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/e4bf8686f2b4f21859cd24ee3d5d80a571342ba2"
+    },
+    {
+      "path": "src/benchmark_case3.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f61f7add77933ee4a984e882e33d392b369a2bb8",
+      "size": 25551,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/f61f7add77933ee4a984e882e33d392b369a2bb8"
+    },
+    {
+      "path": "src/blueprints",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2811fd20c9ccee76aeba14adbc562cb25422d0f",
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/f2811fd20c9ccee76aeba14adbc562cb25422d0f"
+    },
+    {
+      "path": "src/blueprints/aero_analysis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d67ce71ef98b39f17f2c129d9d39cdb69600313e",
+      "size": 18191,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/d67ce71ef98b39f17f2c129d9d39cdb69600313e"
+    },
+    {
+      "path": "src/blueprints/aero_multipoint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "387b8dfb5cfa0e6f2518191e4b79769644e66408",
+      "size": 15471,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/387b8dfb5cfa0e6f2518191e4b79769644e66408"
+    },
+    {
+      "path": "src/blueprints/aero_opt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36f0230525458b385cb1812e1294d0c67c31373f",
+      "size": 15138,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/36f0230525458b385cb1812e1294d0c67c31373f"
+    },
+    {
+      "path": "src/blueprints/aerostruct_tube.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bf80b1ad3016070e495e52370eb79699e17c42a",
+      "size": 17394,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/4bf80b1ad3016070e495e52370eb79699e17c42a"
+    },
+    {
+      "path": "src/blueprints/aerostruct_wingbox.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76006f9fb7363e5af6c22cadae8fb31ca2ecc52d",
+      "size": 25288,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/76006f9fb7363e5af6c22cadae8fb31ca2ecc52d"
+    },
+    {
+      "path": "src/blueprints/struct_optimization.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e8507d030acbc75fdff5471451b2e2cbe48aa28",
+      "size": 7386,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/1e8507d030acbc75fdff5471451b2e2cbe48aa28"
+    },
+    {
+      "path": "src/llm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3714255510e5918120575399697c02fdc9f7767a",
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/3714255510e5918120575399697c02fdc9f7767a"
+    },
+    {
+      "path": "src/llm/auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d20ca5da0fd2aa9aa1df62b96fab45185bfb29e0",
+      "size": 10820,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/d20ca5da0fd2aa9aa1df62b96fab45185bfb29e0"
+    },
+    {
+      "path": "src/llm/auditor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2340a5d334ba51bb1e0f4c363c1d775efbe9ca76",
+      "size": 30624,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/2340a5d334ba51bb1e0f4c363c1d775efbe9ca76"
+    },
+    {
+      "path": "src/llm/coder.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4215b7fc9c302d32e9518a182da12f36312fdbad",
+      "size": 7709,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/4215b7fc9c302d32e9518a182da12f36312fdbad"
+    },
+    {
+      "path": "src/llm/coder.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3d2c10cb8c023a60935706a764f8f2f99cee1b2",
+      "size": 8353,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/a3d2c10cb8c023a60935706a764f8f2f99cee1b2"
+    },
+    {
+      "path": "src/llm/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "127a616f599eedee126b4bb88aff491915cf5294",
+      "size": 14401,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/127a616f599eedee126b4bb88aff491915cf5294"
+    },
+    {
+      "path": "src/llm/relaxer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87822a7a0d9da9cedfc9acf3a0aa97620ae26825",
+      "size": 3931,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/87822a7a0d9da9cedfc9acf3a0aa97620ae26825"
+    },
+    {
+      "path": "src/llm/relaxer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcd223926f1af8184d9df6995250e041d135c0fc",
+      "size": 4614,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/fcd223926f1af8184d9df6995250e041d135c0fc"
+    },
+    {
+      "path": "src/llm/router.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ca5bfb4e3b2075f39b4c3a5bb29de16ee6b0a14",
+      "size": 9219,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/3ca5bfb4e3b2075f39b4c3a5bb29de16ee6b0a14"
+    },
+    {
+      "path": "src/llm/router.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf0a7b4c312b5b8ea575afea612fac40b638017f",
+      "size": 10927,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/cf0a7b4c312b5b8ea575afea612fac40b638017f"
+    },
+    {
+      "path": "src/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0fd0c89073e424ae328e9e647bd6b7d37cbdc157",
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/0fd0c89073e424ae328e9e647bd6b7d37cbdc157"
+    },
+    {
+      "path": "src/tools/db_reader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61c5bbba7d54b590eecc605d39e0380e4a59d74f",
+      "size": 10798,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/61c5bbba7d54b590eecc605d39e0380e4a59d74f"
+    },
+    {
+      "path": "src/tools/executor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52d937df3876087c74b30520abd8a82c299529d3",
+      "size": 16913,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/52d937df3876087c74b30520abd8a82c299529d3"
+    },
+    {
+      "path": "src/tools/test_queries.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7dc7725276e6f8513ad59a0b802c94e84d9a3a5",
+      "size": 2814,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/e7dc7725276e6f8513ad59a0b802c94e84d9a3a5"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24b57656525018b1f51232aad3510f7c231b3a6f",
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/trees/24b57656525018b1f51232aad3510f7c231b3a6f"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b68060e62cf38e309072fed3637c49bb8ff1172",
+      "size": 163,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/2b68060e62cf38e309072fed3637c49bb8ff1172"
+    },
+    {
+      "path": "tests/test_benchmark_reporting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f7264b19492292aa9fa17a8c6899dbb6c00ee90",
+      "size": 7719,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/7f7264b19492292aa9fa17a8c6899dbb6c00ee90"
+    },
+    {
+      "path": "tests/test_coder_and_auditor_helpers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd7e2eb6dcfcce2847afdc1db35df3a916140d5f",
+      "size": 16284,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/bd7e2eb6dcfcce2847afdc1db35df3a916140d5f"
+    },
+    {
+      "path": "tests/test_executor_docker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0530c611e255f541fabecfdc40197f93db7835a1",
+      "size": 1520,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/0530c611e255f541fabecfdc40197f93db7835a1"
+    },
+    {
+      "path": "tests/test_router_contract.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2f372c522a379d28ac9d43a7bd7345c5478f46a",
+      "size": 2618,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/d2f372c522a379d28ac9d43a7bd7345c5478f46a"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b8761c5f026002530fae61348f8c075b4584435",
+      "size": 101089,
+      "url": "https://api.github.com/repos/ideas-um/openaerostruct-llm-agent/git/blobs/3b8761c5f026002530fae61348f8c075b4584435"
+    }
+  ],
+  "truncated": false
+}

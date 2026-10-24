@@ -1,0 +1,385 @@
+import numpy as np
+import os
+import openmdao.api as om
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from openaerostruct.meshing.mesh_generator import generate_mesh
+from openaerostruct.integration.aerostruct_groups import (
+    AerostructGeometry,
+    AerostructPoint,
+)
+from openaerostruct.utils.constants import grav_constant
+
+# ---------------------------------------------------------------------------
+# Absolute output paths — derived from __file__ so they resolve correctly
+# regardless of the CWD when this script is executed as a subprocess.
+# ---------------------------------------------------------------------------
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_SRC_DIR = os.path.dirname(_SCRIPT_DIR)
+_OUT_DIR = os.path.join(_SRC_DIR, "openaerostruct_out")
+_PLOTS_DIR = os.path.join(_OUT_DIR, "agent_plots")
+_RUN_OUT_DIR = os.path.join(_OUT_DIR, "generated_run_out")
+os.makedirs(_PLOTS_DIR, exist_ok=True)
+os.makedirs(_RUN_OUT_DIR, exist_ok=True)
+
+matplotlib.rcParams.update(
+    {
+        "font.family": "serif",
+        "axes.titlesize": 16,
+        "axes.labelsize": 16,
+        "xtick.labelsize": 14,
+        "ytick.labelsize": 14,
+        "legend.fontsize": 12,
+    }
+)
+
+
+def _isa_temperature(altitude_m):
+    return np.maximum(288.15 - 0.0065 * np.asarray(altitude_m), 216.65)
+
+
+def _isa_pressure(altitude_m):
+    altitude_m = np.asarray(altitude_m)
+    T = _isa_temperature(altitude_m)
+    p_trop = 101325.0 * (T / 288.15) ** 5.255877
+    p_11 = 101325.0 * (216.65 / 288.15) ** 5.255877
+    p_strat = p_11 * np.exp(-9.80665 * (altitude_m - 11000.0) / (287.058 * 216.65))
+    return np.where(altitude_m <= 11000.0, p_trop, p_strat)
+
+
+def _isa_density(altitude_m):
+    return _isa_pressure(altitude_m) / (287.058 * _isa_temperature(altitude_m))
+
+
+def _isa_speed_of_sound(altitude_m):
+    return np.sqrt(1.4 * 287.058 * _isa_temperature(altitude_m))
+
+
+def _sutherland_mu(altitude_m):
+    T = _isa_temperature(altitude_m)
+    return 1.716e-5 * (T / 273.15) ** 1.5 * (273.15 + 110.4) / (T + 110.4)
+
+# =============================================================================
+# 1. MESH GENERATION
+# =============================================================================
+# CRM mesh is built-in. num_twist_cp sets the number of twist control points.
+# generate_mesh returns (mesh, twist_cp) for CRM, or just mesh for rect.
+# Keep this tuple-handling pattern when switching wing_type.
+# num_y/num_x are mesh resolution assumptions. Preserve them unless the user
+# explicitly asks for mesh resolution, panel count, or discretization changes.
+# === AGENT EDITABLE SECTION START ===
+mesh_dict = {
+    "num_y": 5,
+    "num_x": 2,
+    "wing_type": "CRM",
+    "symmetry": True,
+    "num_twist_cp": 5,
+}
+
+_mesh_result = generate_mesh(mesh_dict)
+if isinstance(_mesh_result, tuple):
+    mesh, twist_cp = _mesh_result
+else:
+    mesh = _mesh_result
+    twist_cp = np.zeros(mesh_dict.get("num_twist_cp", 3))
+# === AGENT EDITABLE SECTION END ===
+
+
+# =============================================================================
+# 2. SURFACE DEFINITION
+# =============================================================================
+# CRITICAL: Any geometry or structural parameter used as a design variable MUST
+# be declared here first. twist_cp and thickness_cp are pre-included.
+# Do NOT remove twist_cp — it is initialized from the CRM geometry above.
+#
+# FULL DV CATALOG for aerostructural tube FEM:
+# -----------------------------------------------
+# GEOMETRY DVs (all require matching key here AND add_design_var() below):
+#   KEY           TYPE    DESCRIPTION
+#   twist_cp      array   Spanwise twist B-spline CPs [deg]. Required — from CRM geometry.
+#   chord_cp      array   Chord scaling B-spline CPs. Shape=(n_cp,).
+#   xshear_cp     array   x-shear CPs [m] — generalized sweep. Shape=(n_cp,).
+#   zshear_cp     array   z-shear CPs [m] — generalized dihedral. Shape=(n_cp,).
+#   taper         scalar  Taper ratio (tip_chord / root_chord).
+#   sweep         scalar  Leading-edge sweep angle [deg].
+#   dihedral      scalar  Dihedral angle [deg].
+#
+# STRUCTURAL DVs — tube FEM only (require matching key here AND add_design_var()):
+#   KEY               TYPE    DESCRIPTION
+#   thickness_cp      array   Tube wall thickness B-spline CPs [m]. Shape=(n_cp,).
+#   radius_cp         array   Tube outer radius B-spline CPs [m]. Shape=(n_cp,).
+#                             Optional — adds radial sizing as a DV alongside thickness.
+#
+# FLIGHT DVs (no surface dict entry needed):
+#   "alpha"       — angle of attack (always available via IndepVarComp)
+# === AGENT EDITABLE SECTION START ===
+surface = {
+    "name": "wing",
+    "symmetry": True,
+    "S_ref_type": "wetted",
+    "fem_model_type": "tube",
+    "mesh": mesh,
+    # Structural DVs — declared here to enable in add_design_var()
+    "thickness_cp": np.array([0.1, 0.2, 0.3]),  # Tube wall thickness CPs [m]
+    # "radius_cp": np.ones(3) * 0.05,                 # Tube radius CPs [m] — optional DV
+    # Geometry DVs — declared here to enable in add_design_var()
+    "twist_cp": twist_cp,  # Spanwise twist CPs [deg] — required
+    # Optional geometry DVs — uncomment each to activate
+    # "chord_cp": np.ones(5),                         # Chord scaling CPs
+    # "xshear_cp": np.zeros(5),                       # x-shear CPs [m]
+    # "zshear_cp": np.zeros(5),                       # z-shear CPs [m]
+    # "taper": 1.0,                                   # Taper ratio
+    # "sweep": 0.0,                                   # Sweep angle [deg]
+    # "dihedral": 0.0,                                # Dihedral angle [deg]
+    # Aerodynamic solver parameters — always keep these
+    "CL0": 0.0,
+    "CD0": 0.015,
+    "k_lam": 0.05,
+    "t_over_c_cp": np.array([0.15]),
+    "c_max_t": 0.303,
+    "with_viscous": True,
+    "with_wave": False,
+    # Structural material properties
+    "E": 70.0e9,  # Young's modulus [Pa]
+    "G": 30.0e9,  # Shear modulus [Pa]
+    "yield": 500.0e6,  # Yield stress [Pa]
+    "safety_factor": 2.5,  # Structural safety factor
+    "mrho": 3.0e3,  # Material density [kg/m^3]
+    "fem_origin": 0.35,  # Normalized chordwise position of FEM beam
+    "wing_weight_ratio": 2.0,
+    "struct_weight_relief": False,
+    "distributed_fuel_weight": False,
+    "exact_failure_constraint": False,
+}
+# === AGENT EDITABLE SECTION END ===
+
+# =============================================================================
+# 3. PROBLEM SETUP (AEROSTRUCTURAL TUBE)
+# =============================================================================
+# Geometry subsystem is named "wing". All DV paths are "wing.<var>".
+# e.g. "wing.twist_cp", "wing.thickness_cp", "wing.taper", "wing.xshear_cp".
+prob = om.Problem()
+
+# === AGENT EDITABLE SECTION START ===
+# Mission and flight condition parameters. Derive speed and Reynolds number
+# from Mach, altitude, and rho.
+# If the user gives rho, use it directly. If altitude is given and rho is
+# omitted, set rho = _isa_density(altitude).
+# CT is the fuel consumption coefficient passed to OAS in units [1/s].
+# If the user gives CT in [1/s], use that value directly.
+# Only multiply by grav_constant when the user gives a TSFC value that explicitly
+# requires conversion, not when the user already gives CT [1/s].
+#
+# CRITICAL WARNING: Never set CT to 0.0. A zero thrust-specific fuel consumption rate
+# forces fuel burn calculations to evaluate as exactly 0.0. This flattens the
+# optimization landscape, removing all gradients and causing Line Search failures.
+# Keep CT set to a realistic non-zero value.
+#
+altitude = 11000.0  # Altitude [m]
+Mach_number = 0.84
+rho = 0.38  # Explicit density [kg/m^3]; use _isa_density(altitude) only if rho is omitted.
+W0 = 0.4 * 3e5  # Aircraft weight excl. wing+fuel [kg]
+speed_of_sound = _isa_speed_of_sound(altitude)
+v = Mach_number * speed_of_sound
+re = rho * v / _sutherland_mu(altitude)
+
+indep_var_comp = om.IndepVarComp()
+indep_var_comp.add_output("v", val=v, units="m/s")
+indep_var_comp.add_output("alpha", val=5.0, units="deg")  # Keep a nonzero initial guess; 0 deg can cause numerical issues.
+indep_var_comp.add_output("Mach_number", val=Mach_number)
+indep_var_comp.add_output("re", val=re, units="1/m")
+indep_var_comp.add_output("rho", val=rho, units="kg/m**3")
+indep_var_comp.add_output("CT", val=grav_constant * 17.0e-6, units="1/s")  # Blueprint default converted from TSFC; direct user CT [1/s] should replace this expression directly.
+indep_var_comp.add_output("R", val=11.165e6, units="m")  # Range [m]
+indep_var_comp.add_output("W0", val=W0, units="kg")
+indep_var_comp.add_output("speed_of_sound", val=speed_of_sound, units="m/s")
+indep_var_comp.add_output("load_factor", val=1.0)
+indep_var_comp.add_output("empty_cg", val=np.zeros((3)), units="m")
+# === AGENT EDITABLE SECTION END ===
+
+prob.model.add_subsystem("prob_vars", indep_var_comp, promotes=["*"])
+
+name = "wing"
+aerostruct_group = AerostructGeometry(surface=surface)
+prob.model.add_subsystem(name, aerostruct_group)
+
+point_name = "AS_point_0"
+AS_point = AerostructPoint(surfaces=[surface])
+prob.model.add_subsystem(
+    point_name,
+    AS_point,
+    promotes_inputs=[
+        "v",
+        "alpha",
+        "Mach_number",
+        "re",
+        "rho",
+        "CT",
+        "R",
+        "W0",
+        "speed_of_sound",
+        "empty_cg",
+        "load_factor",
+    ],
+)
+
+com_name = point_name + "." + name + "_perf"
+prob.model.connect(name + ".local_stiff_transformed", point_name + ".coupled." + name + ".local_stiff_transformed")
+prob.model.connect(name + ".nodes", point_name + ".coupled." + name + ".nodes")
+prob.model.connect(name + ".mesh", point_name + ".coupled." + name + ".mesh")
+prob.model.connect(name + ".radius", com_name + ".radius")
+prob.model.connect(name + ".thickness", com_name + ".thickness")
+prob.model.connect(name + ".nodes", com_name + ".nodes")
+prob.model.connect(name + ".cg_location", point_name + ".total_perf." + name + "_cg_location")
+prob.model.connect(name + ".structural_mass", point_name + ".total_perf." + name + "_structural_mass")
+prob.model.connect(name + ".t_over_c", com_name + ".t_over_c")
+
+# =============================================================================
+# 4. OPTIMIZATION SETTINGS
+# =============================================================================
+prob.driver = om.ScipyOptimizeDriver()
+prob.driver.options["tol"] = 1e-9
+
+recorder = om.SqliteRecorder(os.path.join(_RUN_OUT_DIR, "aero.db"))
+prob.driver.add_recorder(recorder)
+prob.driver.recording_options["includes"] = ["*"]
+prob.options["work_dir"] = _RUN_OUT_DIR
+
+# === AGENT EDITABLE SECTION START ===
+# --- Design Variables ---
+# FULL DV PATH REFERENCE for this blueprint (subsystem = "wing"):
+#
+#   PATH                  SURFACE DICT KEY    DESCRIPTION
+#   "alpha"               (none needed)       Angle of attack [deg]
+#                                             Required if L_equals_W is a constraint
+#   "wing.twist_cp"       "twist_cp"          Spanwise twist CPs [deg]
+#   "wing.thickness_cp"   "thickness_cp"      Tube wall thickness CPs [m]
+#   "wing.radius_cp"      "radius_cp"         Tube radius CPs [m]
+#                                             Uncomment "radius_cp" in surface dict first
+#   "wing.chord_cp"       "chord_cp"          Chord scaling CPs
+#                                             Uncomment "chord_cp" in surface dict first
+#   "wing.xshear_cp"      "xshear_cp"         x-shear CPs [m] (generalized sweep)
+#                                             Uncomment "xshear_cp" in surface dict first
+#   "wing.zshear_cp"      "zshear_cp"         z-shear CPs [m] (generalized dihedral)
+#                                             Uncomment "zshear_cp" in surface dict first
+#   "wing.taper"          "taper"             Taper ratio (scalar)
+#                                             Uncomment "taper" in surface dict first
+#   "wing.sweep"          "sweep"             Sweep angle [deg] (scalar)
+#                                             Uncomment "sweep" in surface dict first
+#   "wing.dihedral"       "dihedral"          Dihedral angle [deg] (scalar)
+#                                             Uncomment "dihedral" in surface dict first
+
+prob.model.add_design_var("alpha", lower=-10.0, upper=10.0)
+prob.model.add_design_var("wing.twist_cp", lower=-10.0, upper=15.0)
+prob.model.add_design_var("wing.thickness_cp", lower=0.01, upper=0.5, scaler=1e2)
+# prob.model.add_design_var("wing.radius_cp", lower=0.01, upper=0.5, scaler=1e2)
+# prob.model.add_design_var("wing.chord_cp", lower=0.5, upper=3.0)
+# prob.model.add_design_var("wing.xshear_cp", lower=-5.0, upper=5.0)
+# prob.model.add_design_var("wing.zshear_cp", lower=-2.0, upper=2.0)
+# prob.model.add_design_var("wing.taper", lower=0.1, upper=1.5)
+# prob.model.add_design_var("wing.sweep", lower=-30.0, upper=30.0)
+# prob.model.add_design_var("wing.dihedral", lower=-10.0, upper=10.0)
+
+# --- Constraints ---
+# FULL CONSTRAINT PATH REFERENCE:
+#   "AS_point_0.wing_perf.failure"  — KS-aggregated structural failure index, upper=0
+#                                     Failure index > 0 means material has yielded.
+#   "AS_point_0.wing_perf.thickness_intersects" — tube wall thickness geometry validity
+#   "AS_point_0.L_equals_W"         — lift-equals-weight trim constraint, equals=0
+#                                     Requires alpha as a design variable.
+#   "AS_point_0.wing_perf.CL"       — lift coefficient
+#   "AS_point_0.fuelburn"           — fuel burn [kg]
+#   "AS_point_0.wing_perf.CD"       — drag coefficient
+
+prob.model.add_constraint("AS_point_0.wing_perf.failure", upper=0.0)
+prob.model.add_constraint("AS_point_0.wing_perf.thickness_intersects", upper=0.0)  # Required tube geometry validity constraint.
+prob.model.add_constraint("AS_point_0.L_equals_W", equals=0.0)
+
+# --- Objective ---
+# FULL OBJECTIVE PATH REFERENCE:
+#   "AS_point_0.fuelburn"       — fuel burn [kg] (most common for aerostructural)
+#   "AS_point_0.wing_perf.CD"   — drag coefficient
+#   "wing.structural_mass"      — structural mass [kg]
+
+# Preserve the objective reference unless a runtime scaling/conditioning error specifically requires changing it.
+# Keep the fuel-burn objective near order one as the requested aircraft mass
+# changes. A fixed CRM-scale scaler can cause premature convergence for small aircraft.
+prob.model.add_objective("AS_point_0.fuelburn", ref=max(0.1 * W0, 1.0))
+# === AGENT EDITABLE SECTION END ===
+
+# =============================================================================
+# 5. EXECUTION
+# =============================================================================
+prob.setup()
+prob.run_driver()
+
+print("\n--- Aerostructural Tube Results ---")
+print(f"Final fuel burn:      {prob.get_val('AS_point_0.fuelburn')[0]:.4f} [kg]")
+print(f"Final alpha:          {prob.get_val('alpha')[0]:.4f} [deg]")
+print(f"Final structural mass:{prob.get_val('wing.structural_mass')[0]:.4f} [kg]")
+print("\n--- Aerodynamic Bookkeeping ---")
+print("OAS reports CL = CL1 + CL0 and CD = CDi + CDv + CDw + CD0.")
+print(f"CL0={surface['CL0']:.6f}, CD0={surface['CD0']:.6f}")
+print(
+    f"with_viscous={surface['with_viscous']}, with_wave={surface['with_wave']}, "
+    f"S_ref_type='{surface['S_ref_type']}'"
+)
+
+# =============================================================================
+# 6. PLOTTING
+# =============================================================================
+try:
+    twist_cp_vals = prob.get_val("wing.twist_cp")
+    thickness_cp_vals = prob.get_val("wing.thickness_cp")
+
+    cp_idx = np.arange(len(twist_cp_vals))
+    fig_twist, ax_twist = plt.subplots(figsize=(8, 4))
+    ax_twist.plot(cp_idx, twist_cp_vals, "o-", color="green")
+    ax_twist.set_xlabel("Control Point")
+    ax_twist.set_ylabel("Twist (deg)")
+    ax_twist.set_title("Optimized Twist")
+    ax_twist.grid(True)
+    fig_twist.tight_layout()
+    fig_twist.savefig(
+        os.path.join(_PLOTS_DIR, "aerostruct_tube_twist_distribution.png"),
+        bbox_inches="tight",
+    )
+    plt.close(fig_twist)
+
+    fig_thickness, ax_thickness = plt.subplots(figsize=(8, 4))
+    ax_thickness.plot(
+        np.arange(len(thickness_cp_vals)), thickness_cp_vals * 1e3, "s-", color="purple"
+    )
+    ax_thickness.set_xlabel("Control Point")
+    ax_thickness.set_ylabel("Thickness (mm)")
+    ax_thickness.set_title("Optimized Wall Thickness")
+    ax_thickness.grid(True)
+    fig_thickness.tight_layout()
+    fig_thickness.savefig(
+        os.path.join(_PLOTS_DIR, "aerostruct_tube_thickness_distribution.png"),
+        bbox_inches="tight",
+    )
+    plt.close(fig_thickness)
+
+    _mesh_out = prob.get_val("wing.mesh", units="m")
+    fig_wing, ax_wing = plt.subplots(figsize=(8, 4))
+    for i in range(_mesh_out.shape[0]):
+        ax_wing.plot(_mesh_out[i, :, 1], _mesh_out[i, :, 0], color="black", lw=1)
+    for j in range(_mesh_out.shape[1]):
+        ax_wing.plot(_mesh_out[:, j, 1], _mesh_out[:, j, 0], color="black", lw=1)
+    ax_wing.set_aspect("equal")
+    ax_wing.set_xlabel("Spanwise y [m]")
+    ax_wing.set_ylabel("Chordwise x [m]")
+    ax_wing.set_title("Optimized Wing Planform")
+    fig_wing.tight_layout()
+    fig_wing.savefig(
+        os.path.join(_PLOTS_DIR, "aerostruct_tube_wing_planform.png"),
+        bbox_inches="tight",
+    )
+    plt.close(fig_wing)
+
+    print(f"Plot saved to {_PLOTS_DIR}")
+except Exception as e:
+    print(f"Plotting warning: {e}")

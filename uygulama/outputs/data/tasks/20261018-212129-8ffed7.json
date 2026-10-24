@@ -1,0 +1,157 @@
+{
+  "id": "20261018-212129-8ffed7",
+  "request": "Mühendislik seviyesini yükselt: deterministik parametrik CAD, Fusion/MCP araştırması, karmaşık profil/kanat doğrulaması ve gerçek CFD çıktısı",
+  "kind": "integration",
+  "created_utc": "2026-10-18T18:21:29.498528+00:00",
+  "status": "tamamlandı",
+  "phase": "araç yeterliliği ve deterministik CAD/CFD",
+  "acceptance": [
+    "Fusion MCP/API ayrımını birincil belgelerle değerlendir ve bağlantıyı hazırla",
+    "Kaynak profilinden süpürmeli/daralan/burulmalı CAD ve ölçü kabulü oluştur",
+    "Native VSPAERO/XFOIL uygulamalarını hacim-ağlı CFD ile tamamla; alan dosyaları ve yakınsama kaydet",
+    "Üniversite projesinde kullanılabilecek kapsamı ve kalan doğrulama işlerini açıkça raporla"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\muhendislik_seviyesi_ve_cfd.md",
+      "sha256": "42dabb3a3641e7b9f8aa18fae90e229a6940f5d48b6cb9c6714dc87e987fe754",
+      "live_path": "outputs\\reports\\muhendislik_seviyesi_ve_cfd.md"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\muhendislik_seviyesi_ve_cfd.html",
+      "sha256": "8d23952e3ffb17e51c857e81a3e60aad0c6dd73444dbf5cbc059ef25eaec98ef",
+      "live_path": "outputs\\reports\\muhendislik_seviyesi_ve_cfd.html"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\parametric_cad_qualification.json",
+      "sha256": "624325edf6535bfb3d5400207b6b7e9dcbaeca10bb57257303a566c5049ea3f7",
+      "live_path": "outputs\\reports\\parametric_cad_qualification.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\step_bore_measurements.json",
+      "sha256": "2163c75e8b95deda67d7df05e196cc1ff71e8d367e31eaffd0516d9d777d769f",
+      "live_path": "outputs\\reports\\step_bore_measurements.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\input_rejection_checks.json",
+      "sha256": "edac102cc9bb7090d59750976c090e64a9b2f40eb2180d68b0fd63d271f652b8",
+      "live_path": "outputs\\reports\\input_rejection_checks.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\complex_vlm_qualification.json",
+      "sha256": "48e95c3ac4afa593ca451dc0301ede9705c03841f579a81977d73cb35809b8ac",
+      "live_path": "outputs\\reports\\complex_vlm_qualification.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\complex_vlm_force_audit.json",
+      "sha256": "9749345e4f8b28f8ed6da2c431bd9810151f78391eb2003a153c483707661113",
+      "live_path": "outputs\\reports\\complex_vlm_force_audit.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\cfd_qualification.json",
+      "sha256": "c04f65b866e3e1053bfb7ad3a0ed5db45b1ee4d7bbcb06d8d10b753d128ef576",
+      "live_path": "outputs\\reports\\cfd_qualification.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\cfd_reference_comparison.json",
+      "sha256": "41727279fdfb7214a89a2ca1fbb69d59a13d1ead3051210d4fd491c87371a129",
+      "live_path": "outputs\\reports\\cfd_reference_comparison.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\engineering_extension_evidence.json",
+      "sha256": "e3e2fd833253f8081ce57e69312c164d3a209e132c7d7c0b078305b7a81137ac",
+      "live_path": "outputs\\reports\\engineering_extension_evidence.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\engineering_extension_quality.json",
+      "sha256": "51d553a5ac677b05282c71c844011d3f2f902dd9b4307899331873f573417023",
+      "live_path": "outputs\\reports\\engineering_extension_quality.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\native_shortcut_checks.json",
+      "sha256": "d7a3ec7f78cdb2922de2cadae22a1a59324b9763abb998d5bae5a7cf17e42025",
+      "live_path": "outputs\\reports\\native_shortcut_checks.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\ui_check.json",
+      "sha256": "73a1784262f0385ef0d006fc147a1e9275c86f8d4c59f0596b50ff1c3bd130b3",
+      "live_path": "outputs\\reports\\ui_check.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\tool_health.json",
+      "sha256": "85c1f0db4f8e7634cf47ae5ffa144ca066581e647e2f6191837047935b18e9be",
+      "live_path": "outputs\\reports\\tool_health.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\su2_install.json",
+      "sha256": "6846b11abd5367f147987b80d8c77860da20d95f87b27eb969bd064938d03c64",
+      "live_path": "work\\setup\\su2_install.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\fusion_mcp_install.json",
+      "sha256": "2b2e0d0df4bc683c719a2e374541b962bb72b72b3336d62aaeeda583f98b6407",
+      "live_path": "work\\setup\\fusion_mcp_install.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\fusion_connection_check.json",
+      "sha256": "a86beb90aa931ac5fce26a6f3dadb7dfb1a9910d5e31e0533b40775e78a05152",
+      "live_path": "work\\setup\\fusion_connection_check.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\freecad_install.json",
+      "sha256": "74e9f97b256c2eb07a91a850ed38e96d65dacf9218b36d208b964f5bfd60966e",
+      "live_path": "work\\setup\\freecad_install.json"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "completed_utc": "2026-10-18T20:12:05.924764+00:00",
+  "report": "outputs/reports/muhendislik_seviyesi_ve_cfd.html",
+  "acceptance_results": [
+    {
+      "criterion": "Fusion MCP/API ayrımını birincil belgelerle değerlendir ve bağlantıyı hazırla",
+      "passed": true,
+      "interpretation": "Kurulum/deney ve raporlama kabulü; bütün fiziksel sonuçların kabul edildiği anlamına gelmez"
+    },
+    {
+      "criterion": "Kaynak profilinden süpürmeli/daralan/burulmalı CAD ve ölçü kabulü oluştur",
+      "passed": true,
+      "interpretation": "Kurulum/deney ve raporlama kabulü; bütün fiziksel sonuçların kabul edildiği anlamına gelmez"
+    },
+    {
+      "criterion": "Native VSPAERO/XFOIL uygulamalarını hacim-ağlı CFD ile tamamla; alan dosyaları ve yakınsama kaydet",
+      "passed": true,
+      "interpretation": "Kurulum/deney ve raporlama kabulü; bütün fiziksel sonuçların kabul edildiği anlamına gelmez"
+    },
+    {
+      "criterion": "Üniversite projesinde kullanılabilecek kapsamı ve kalan doğrulama işlerini açıkça raporla",
+      "passed": true,
+      "interpretation": "Kurulum/deney ve raporlama kabulü; bütün fiziksel sonuçların kabul edildiği anlamına gelmez"
+    }
+  ],
+  "follow_up": [
+    {
+      "item": "Fusion motoru ve lisans/hub doğrulaması",
+      "status": "bekliyor",
+      "requires": "MCP bağlantı araçlarının bu sohbete yüklenmesi"
+    },
+    {
+      "item": "CFD sürükleme ve duvar ağı yakınsaması",
+      "status": "bekliyor"
+    },
+    {
+      "item": "Karmaşık kanatta yüzey/iz kuvvet farkı ve tam geometri eşleştirmesi",
+      "status": "bekliyor"
+    }
+  ],
+  "scope_limits": [
+    "Fusion OAuth completed; no Fusion modeling session invoked",
+    "CFD and native complex VLM have open quality gates",
+    "No general arbitrary-airfoil mesh service or arbitrary-CAD guarantee",
+    "Actual UAV design inputs remain unknown; ANSYS deferred"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "20261019-110206-b6bbf3",
+  "request": "NASA arşivli ONERA M6 Test2308 koşullarında iki kaynak ağda gerçek SU2 RANS çalıştır; yedi kesitte deney Cp verisiyle karşılaştır",
+  "kind": "qualification",
+  "created_utc": "2026-10-19T08:02:06.343892+00:00",
+  "status": "tamamlandı",
+  "phase": "araç doğrulama",
+  "acceptance": [
+    "M0.8395, alfa3.06deg, Re11.72M ve c0.64607m koşul eşleşmesi",
+    "Gerçek 3D RANS, ham alan/kuvvet/y+ ve iki ağda sayısal duyarlılık",
+    "NASA deney Cp, x/c ve y/b kesit eşlemesi; tüm hatalar ve açık kabul raporlanır"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_additional_mesh_audit.json",
+      "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_additional_mesh_audit.json",
+      "sha256": "abbe4efd98ac66c4f683d694cba2781ab07e1767df6c64dcf17be7ecda738c12"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_continuation_diagnostic.json",
+      "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_continuation_diagnostic.json",
+      "sha256": "fdfdba655da44c95fc553461d70524a5af0c2b5e1673d33a4c915a0fdf0cd214"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_experiment_comparison.json",
+      "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_experiment_comparison.json",
+      "sha256": "7f0919140f8a6dc4a2a304b8712d15ea5bbc3a3215bf0bf339396d32ef536828"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_partial_comparison.json",
+      "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_partial_comparison.json",
+      "sha256": "b24e997ffecbef61670f420b8f401d6b6979940c0b2176fc3ca274845ee404c5"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_rans_results.json",
+      "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_rans_results.json",
+      "sha256": "378eacdabbfd907f700f157bfcba9c6d1b49f7f7108fe81a1f98562e0f85a50b"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_validation.html",
+      "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_validation.html",
+      "sha256": "734926d0d4d0556ed03826fbb1cd9a33453c080dae0e1d54488c5dfe42a8616c"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\nist_nasa_validation_quality.json",
+      "live_path": "outputs\\reports\\nist_nasa_validation_quality.json",
+      "sha256": "e940d0246eef2008927efb67a565183c53b19540b58b5fce7cfa4e61917b6690"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\nist_nasa_sources.json",
+      "live_path": "outputs\\reports\\nist_nasa_sources.json",
+      "sha256": "a56bfb74bcd0076953640d208bdbe36ea0e4a9cab18b01dea627877b14f90aa3"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+  },
+  "project_id": "proje-e9319baef1",
+  "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+  "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+  "project_output_root": "outputs/projects/proje-e9319baef1",
+  "project_snapshot": {
+    "id": "proje-e9319baef1",
+    "name": "NASA ONERA M6 CFD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e9319baef1",
+    "data_root": "outputs/projects/proje-e9319baef1/data/project",
+    "created_utc": "2026-10-19T08:02:06.291509+00:00",
+    "active_cad": null
+  },
+  "completed_utc": "2026-10-19T09:00:55.280342+00:00",
+  "completion_scope": "Two completed initial tunnel comparisons; additional continuation failed/timed out and was retained, no missing fields fabricated. Physical CFD quality failed",
+  "open_engineering_acceptances": [
+    "M6 combined CFD acceptance remains open",
+    "Previous RANS/VLM aircraft quality still open"
+  ],
+  "completion_project_snapshot": {
+    "id": "proje-e9319baef1",
+    "name": "NASA ONERA M6 CFD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e9319baef1",
+    "data_root": "outputs/projects/proje-e9319baef1/data/project",
+    "created_utc": "2026-10-19T08:02:06.291509+00:00",
+    "active_cad": null
+  },
+  "acceptance_results": [
+    {
+      "criterion": "M0.8395, alfa3.06deg, Re11.72M ve c0.64607m koşul eşleşmesi",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+    },
+    {
+      "criterion": "Gerçek 3D RANS, ham alan/kuvvet/y+ ve iki ağda sayısal duyarlılık",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+    },
+    {
+      "criterion": "NASA deney Cp, x/c ve y/b kesit eşlemesi; tüm hatalar ve açık kabul raporlanır",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+    }
+  ]
+}

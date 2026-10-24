@@ -1,0 +1,107 @@
+{
+  "id": "20261018-231810-dcaa71",
+  "request": "ANSYS öncesi hafif native CFD araçlarını kur ve doğrula; basit arayüz ve kısıttan araştırma/CAD/analiz/CFD/eleme/rapora iş akışı oluştur; hazır ve eksik kapsamı kanıtla",
+  "kind": "integration",
+  "created_utc": "2026-10-18T20:18:10.866742+00:00",
+  "status": "tamamlandı",
+  "phase": "araç entegrasyonu",
+  "acceptance": [
+    "Hafif Windows CFD seçimini birincil kaynakla gerekçelendir ve gerçek çözücü testi yap",
+    "Arayüzden kısıtları birimli ve izlenebilir görev kaydına aktar; komut girişi korunmalı",
+    "Araştırma, CAD, ön analiz, CFD ve kanıtlı eleme/sıralama raporu için tek görev sözleşmesi oluştur",
+    "Hazır yetenekleri ve henüz doğrulanmayan kapsamı açıkça raporla"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\hafif_cfd_ve_is_akisi.md",
+      "sha256": "6a931e82f1a09f37ea3b80d5b3e33902eff3cdec5b653cb058c652e7e72feda5",
+      "live_path": "outputs\\reports\\hafif_cfd_ve_is_akisi.md"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\hafif_cfd_ve_is_akisi.html",
+      "sha256": "1079f12b7248f6009f6651c932813a50d6324f568fb95adbca2eb48388d089a1",
+      "live_path": "outputs\\reports\\hafif_cfd_ve_is_akisi.html"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\elmer_cfd_qualification.json",
+      "sha256": "9e75d9e8cd4a8b3832f1c1dbcae6757c86afbd9bd73c1cd96e9cf81ee7286f9b",
+      "live_path": "outputs\\reports\\elmer_cfd_qualification.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\workflow_checks.json",
+      "sha256": "70af177dde93dc234389bcc9e2bcc2bd4304528fe7f16e6ed467e9aa3455b652",
+      "live_path": "outputs\\reports\\workflow_checks.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\candidate_comparison.json",
+      "sha256": "844c127f4d0f8ff92fd74f233a2b7945b972e72c896557926a10e0aae75041fd",
+      "live_path": "outputs\\reports\\candidate_comparison.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\candidate_comparison.html",
+      "sha256": "c3173b4773f651286ef91ae06fd0af5b6fe328701d0512c80a52564d29675835",
+      "live_path": "outputs\\reports\\candidate_comparison.html"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\workflow_readiness.json",
+      "sha256": "7301d19e4396cee07bb55db976a60d3f510b461ef632e1961501a88be7a4d3d9",
+      "live_path": "outputs\\reports\\workflow_readiness.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\light_cfd_workflow_quality.json",
+      "sha256": "94e6c268eb0fc322805b6f26ef6331876a5e53707359a3083f316375d185b901",
+      "live_path": "outputs\\reports\\light_cfd_workflow_quality.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\tool_health.json",
+      "sha256": "b434195947af86053055e87ab21f573924244a0df95d0f91d6685327c851a0ba",
+      "live_path": "outputs\\reports\\tool_health.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\elmer_install.json",
+      "sha256": "8011b350fe68231e8016247c82689127642f225ea8f9604a048575a3cb333677",
+      "live_path": "work\\setup\\elmer_install.json"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "completed_utc": "2026-10-18T20:36:26.922102+00:00",
+  "report": "outputs/reports/hafif_cfd_ve_is_akisi.html",
+  "acceptance_results": [
+    {
+      "criterion": "Hafif Windows CFD seçimini birincil kaynakla gerekçelendir ve gerçek çözücü testi yap",
+      "passed": true,
+      "scope": "Bu entegrasyon/arayüz teslimi; genel uçak otomasyonu tamamlandı anlamına gelmez"
+    },
+    {
+      "criterion": "Arayüzden kısıtları birimli ve izlenebilir görev kaydına aktar; komut girişi korunmalı",
+      "passed": true,
+      "scope": "Bu entegrasyon/arayüz teslimi; genel uçak otomasyonu tamamlandı anlamına gelmez"
+    },
+    {
+      "criterion": "Araştırma, CAD, ön analiz, CFD ve kanıtlı eleme/sıralama raporu için tek görev sözleşmesi oluştur",
+      "passed": true,
+      "scope": "Bu entegrasyon/arayüz teslimi; genel uçak otomasyonu tamamlandı anlamına gelmez"
+    },
+    {
+      "criterion": "Hazır yetenekleri ve henüz doğrulanmayan kapsamı açıkça raporla",
+      "passed": true,
+      "scope": "Bu entegrasyon/arayüz teslimi; genel uçak otomasyonu tamamlandı anlamına gelmez"
+    }
+  ],
+  "follow_up": [
+    "Gerçek kısıtlarla sınırları belirli aday araştırması ve yeni analiz görevi",
+    "Yeni geometri için uygun CFD ağı ve CAD/analiz eşleştirmesi",
+    "SU2/VLM açık sürükleme kabulleri",
+    "Fusion motoru ve lisans/hub testi"
+  ],
+  "scope_limits": [
+    "Generic all-aircraft pipeline not verified",
+    "Actual UAV inputs still unknown",
+    "OpenFOAM/ANSYS not installed"
+  ]
+}

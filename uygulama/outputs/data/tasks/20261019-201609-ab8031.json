@@ -1,0 +1,60 @@
+{
+  "id": "20261019-201609-ab8031",
+  "request": "Kaynak araştırmasıyla RAE2822 bölgesel ağ duyarlılığını teşhis et; kaynak geometriyi koruyan C-grid/blok çözümünü gerçek CFD ile ve değişmeyen kabul eşikleriyle sına",
+  "kind": "qualification",
+  "created_utc": "2026-10-19T17:16:09.746366+00:00",
+  "status": "tamamlandı",
+  "phase": "araç doğrulama",
+  "acceptance": [
+    "Birincil kaynaklı hipotez ve kontrollü deney matrisi",
+    "Kaynak geometri korunarak ağ/topoloji ve gradyan kontrolleri",
+    "Gerçek native CFD, değişmeyen eşikler ve başarısızlık dahil kaynak deney kıyası"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\projects\\proje-15cce2de02\\reports\\v3_test_batch_closed.json",
+      "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+    },
+    {
+      "path": "outputs\\projects\\proje-15cce2de02\\reports\\v3_research_diagnosis.html",
+      "sha256": "ab13dee50b276154d7c549d85f3b8f15adde5350b10c48fcd28bc358ca90702d"
+    },
+    {
+      "path": "outputs\\projects\\proje-15cce2de02\\reports\\v3_evidence_integrity.json",
+      "sha256": "bbc70c4617c04d6d0b557c5b442e5826553dbbe2aeb276f8099ac5ebd3823cb9"
+    },
+    {
+      "path": "outputs\\projects\\proje-15cce2de02\\reports\\v3_firstorder_control_prediction_frozen.json",
+      "sha256": "d6378df11b23d6544920870136cd543eb9eb65ce5c7e36cb1ff2c15ed34995db"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-15cce2de02\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-15cce2de02\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-15cce2de02\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-15cce2de02.json": "5d862b4f9880d93caac624f60fa96a13a60161070389cc3f2cef64a59212884e"
+  },
+  "project_id": "proje-15cce2de02",
+  "project_manifest": "outputs\\data\\projects\\proje-15cce2de02.json",
+  "project_data_root": "outputs/projects/proje-15cce2de02/data/project",
+  "project_output_root": "outputs/projects/proje-15cce2de02",
+  "project_snapshot": {
+    "id": "proje-15cce2de02",
+    "name": "Kaynak geometriden kör CFD sınaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-15cce2de02",
+    "data_root": "outputs/projects/proje-15cce2de02/data/project",
+    "created_utc": "2026-10-19T09:21:34.698028+00:00",
+    "active_cad": null
+  },
+  "completed_utc": "2026-10-24T12:45:16.629110+00:00",
+  "completion_scope": "Sınırlı kaynak araştırması, gerçek denemeler ve başarısızlık dahil raporlama tamamlandı; fiziksel yeterlilik geçmedi",
+  "minimum_physical_qualification_passed": false,
+  "engineering_work_remaining": [
+    "converged three-grid CFD family",
+    "regional normal sensitivity and full boundary-layer resolution",
+    "controlled farfield200c/400c solve",
+    "preselected fine experiment gate"
+  ]
+}

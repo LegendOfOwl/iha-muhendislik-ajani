@@ -1,0 +1,63 @@
+{
+  "id": "20261019-122134-162b99",
+  "request": "Yayımlanmış kaynak geometriyi değiştirmeden, hedef deney sonuçlarını analiz ajanına vermeden yerel ağ ve gerçek CFD üret; sonuçları önceden kayıtlı ölçütlerle karşılaştır",
+  "kind": "qualification",
+  "created_utc": "2026-10-19T09:21:34.710159+00:00",
+  "status": "tamamlandı",
+  "phase": "araç doğrulama",
+  "acceptance": [
+    "Özgün internet geometrisi; geometri ve fiziksel koşullar kayıtlı, hedef sonuç analize verilmez",
+    "Konuma bağlı yeni viskoz ağlar; duvar/LE/TE/iz/şok, geometri/ağ/iteratif/uzak alan kontrolleri",
+    "Tahminler değerlendirmeden önce hash ile dondurulur; kaynak deneyle tüm hatalar ve açık kabul raporlanır"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    "outputs/reports/kaynak_geometri_ve_kor_cfd.html",
+    "outputs/reports/source_geometry_validation_quality.json",
+    "outputs/projects/proje-15cce2de02/reports/prediction_frozen.json",
+    "outputs/projects/proje-15cce2de02/reports/prediction_v2_frozen.json",
+    "outputs/projects/proje-15cce2de02/reports/review_v2_qualification.json",
+    "outputs/projects/proje-15cce2de02/reports/review_reference_source_audit.json"
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-15cce2de02\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-15cce2de02\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-15cce2de02\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-15cce2de02.json": "5d862b4f9880d93caac624f60fa96a13a60161070389cc3f2cef64a59212884e"
+  },
+  "project_id": "proje-15cce2de02",
+  "project_manifest": "outputs\\data\\projects\\proje-15cce2de02.json",
+  "project_data_root": "outputs/projects/proje-15cce2de02/data/project",
+  "project_output_root": "outputs/projects/proje-15cce2de02",
+  "project_snapshot": {
+    "id": "proje-15cce2de02",
+    "name": "Kaynak geometriden kör CFD sınaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-15cce2de02",
+    "data_root": "outputs/projects/proje-15cce2de02/data/project",
+    "created_utc": "2026-10-19T09:21:34.698028+00:00",
+    "active_cad": null
+  },
+  "benchmark_input_sha256": {
+    "conditions.json": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141",
+    "geom.f90": "631d2d0be0b2cb9fa87dc2bf49f4f65a658794115a5649b0f68749312f33700e",
+    "geom.txt": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736",
+    "yl.pts": "489788cbe97237ef24b3e2bdc8737209cc56daf02f613dbd324ba79a0e85e9ed",
+    "yu.pts": "810900b8646f16dbc2b93d9773529b086818e0e38276891442b7d5f498605a3b"
+  },
+  "benchmark_contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "physical_minimum_qualification_passed": false,
+  "benchmark_version_status": {
+    "v1": "frozen_and_reviewed_failed",
+    "v2": "frozen_and_reviewed_failed"
+  },
+  "open_quality_gates": [
+    "aft normal mesh/BL sensitivity",
+    "400c farfield solution not run under numerical mesh hold",
+    "experimental Cp error"
+  ],
+  "finished_utc": "2026-10-19T14:14:49.785663+00:00",
+  "completion_scope": "Test çalıştırma, başarısızlık teşhisi ve bağımsız rapor tamamlandı; asgari fiziksel yeterlilik sağlanmadı",
+  "evidence_manifest": "outputs/reports/task_evidence/20261019-122134-162b99/manifest.json",
+  "evidence_manifest_sha256": "a91a96723a53c8513a5effe8491e4fe24f28f69d74e76f6ac2d4319d66ba1d13"
+}

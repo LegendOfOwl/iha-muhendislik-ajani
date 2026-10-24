@@ -1,0 +1,141 @@
+{
+  "id": "20261019-100440-8e781b",
+  "request": "Proje merkezli arayüz ve EXE başlatıcı: proje/görev/CAD/analiz/rapor bağlamlarını ayır; hazırlanan yeni profil için gerçek ağ-CFD bağlantısını ilerlet ve sınırları ölç",
+  "kind": "integration",
+  "created_utc": "2026-10-19T07:04:40.788219+00:00",
+  "status": "tamamlandı",
+  "phase": "araç entegrasyonu",
+  "acceptance": [
+    "Proje merkezli dosya/görev/aktif CAD ve taslakları izole et; mevcut verileri koru",
+    "EXE başlatıcısını işlev kaybı olmadan üret ve gerçek başlatma/çıkışını test et",
+    "Hazır olmayan projede örnek analizi çalıştırma; proje bazlı CAD/analiz çıktısını doğrula",
+    "Kaynak DAT ile yeni ağdan gerçek CFD yap ve kalan fizik kabul sınırlarını raporla",
+    "OpenAeroStruct ve üniversite kaynaklı ajan yaklaşımını incele, yerel talimatları uyarla ve resmî hafif çözücü örneklerini test et"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\projeler_exe_ve_profil_cfd.html",
+      "sha256": "be4c6697ce3b823a145c7dcff3eb4adddf158f3dbab9b62eb5608562b8c021df",
+      "live_path": "outputs\\reports\\projeler_exe_ve_profil_cfd.html"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_ajan_yaklasimi.html",
+      "sha256": "13642628010c649c71d6e13417b6e4810f079ebb3b362fc81172dd3992163026",
+      "live_path": "outputs\\reports\\openaerostruct_ajan_yaklasimi.html"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\projeler_exe_ve_profil_cfd.md",
+      "sha256": "f49745c78ce4a28442fe487fd58d2a023ed2053ed053d8395a9ce3a3331a13aa",
+      "live_path": "outputs\\reports\\projeler_exe_ve_profil_cfd.md"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_ajan_yaklasimi.md",
+      "sha256": "7ad74e5e09afbe8631249acf28dfb7f8418fe35237204c25d99ae7d21e4da72c",
+      "live_path": "outputs\\reports\\openaerostruct_ajan_yaklasimi.md"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\project_extension_quality.json",
+      "sha256": "cd563653eb9cc4889f62ee18dee5e8f1772d35353efe7c9bdcc332a6696e30cb",
+      "live_path": "outputs\\reports\\project_extension_quality.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\project_interface_checks.json",
+      "sha256": "de9bd83014cf5f8f191312bc91009376c6fe5b5c13e5b8726b064f4f2ce387f0",
+      "live_path": "outputs\\reports\\project_interface_checks.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\workflow_checks.json",
+      "sha256": "a01c6a8c8eba07b82b005eb50fbe6dffed5c1a6859bd4d5644b65d6dcc653f18",
+      "live_path": "outputs\\reports\\workflow_checks.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\test_results.json",
+      "sha256": "f1bebaa8b4d59fcd86b2ecd0ae7c7f36fac7e38105b91e63a229d9598d76d850",
+      "live_path": "outputs\\reports\\test_results.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_examples.json",
+      "sha256": "340cdd2275ae2018f26513bcb50a4f9a6e7aad3799d7f21c11e21b922454f9f4",
+      "live_path": "outputs\\reports\\openaerostruct_examples.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\exe_normal_launch.json",
+      "sha256": "f2963bd538b2ce49a7c53b740853101ae6cb8a547fdc069644e3dc8aff5608a3",
+      "live_path": "outputs\\reports\\exe_normal_launch.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\profile_cfd_results.json",
+      "sha256": "4133d1951f095a658727b4c3d6ec81048bc09f3e608728e65e94b0ab3db912c0",
+      "live_path": "outputs\\projects\\proje-0314dcd012\\reports\\profile_cfd_results.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\profile_field_checks.json",
+      "sha256": "215f7e915ebf93987784dfa164b385ad504d5ff94cebe9fed47693a76a32acef",
+      "live_path": "outputs\\projects\\proje-0314dcd012\\reports\\profile_field_checks.json"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\profile_cfd.html",
+      "sha256": "bf6804950638dfb0ef865f6b0569b632972f1ca88b118b05031a0cd43164e898",
+      "live_path": "outputs\\projects\\proje-0314dcd012\\reports\\profile_cfd.html"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\projects_iha_0.png",
+      "sha256": "cb08d0cf90e8a8cb553e92f8e2bd5ed39571a603201fbd8c1ff8c356ed0f132f",
+      "live_path": "outputs\\plots\\projects_iha_0.png"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_deformation.png",
+      "sha256": "3e8a94a2b64cc2660bac5fe0faddcec35d88552d03d6d770966c8fad2d4f7096",
+      "live_path": "outputs\\plots\\openaerostruct_deformation.png"
+    },
+    {
+      "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_install.json",
+      "sha256": "c5f389c75ae267814d04f5286a9b4757e2d0c1dee3c96973014afa9f12b27751",
+      "live_path": "work\\setup\\openaerostruct_install.json"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "project_id": "qualification",
+  "completed_utc": "2026-10-19T07:45:54.059973+00:00",
+  "remaining_capabilities": [
+    "Arbitrary imported CAD to qualified 3D CFD",
+    "New-source viscous/RANS boundary-layer qualification",
+    "Existing RANS CD and complex VLM surface CDi quality gates",
+    "OAS mesh/physical design acceptance and OpenVSP Python bridge",
+    "Fusion engine, entitlement and STEP round-trip",
+    "Eight actual UAV conceptual steps; current mission/mass data missing"
+  ],
+  "completion_scope": "Project GUI/EXE and tool integration; physical scope acceptance is separate",
+  "acceptance_results": [
+    {
+      "criterion": "Proje merkezli dosya/görev/aktif CAD ve taslakları izole et; mevcut verileri koru",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/project_extension_quality.json"
+    },
+    {
+      "criterion": "EXE başlatıcısını işlev kaybı olmadan üret ve gerçek başlatma/çıkışını test et",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/project_extension_quality.json"
+    },
+    {
+      "criterion": "Hazır olmayan projede örnek analizi çalıştırma; proje bazlı CAD/analiz çıktısını doğrula",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/project_extension_quality.json"
+    },
+    {
+      "criterion": "Kaynak DAT ile yeni ağdan gerçek CFD yap ve kalan fizik kabul sınırlarını raporla",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/project_extension_quality.json"
+    },
+    {
+      "criterion": "OpenAeroStruct ve üniversite kaynaklı ajan yaklaşımını incele, yerel talimatları uyarla ve resmî hafif çözücü örneklerini test et",
+      "status": "sağlandı",
+      "evidence": "outputs/reports/project_extension_quality.json"
+    }
+  ]
+}

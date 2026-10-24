@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-19T07:32:42.886014+00:00",
+  "source_geometry_sha256": "dce4261b15ef4177ce80563d5980891178c8ec8cbb1e270f0708a18f28d8bf56",
+  "conditions_sha256": "1cd97dd0e41eeb94df6772b2af4dfb6daed7673988e1617d4d2282c6630d1466",
+  "checks": [
+    {
+      "level": "medium",
+      "volume_cells": 13914,
+      "wall_mapping_max_error_m": 2.9724854254466336e-08,
+      "field_finite": true
+    },
+    {
+      "level": "fine",
+      "volume_cells": 41768,
+      "wall_mapping_max_error_m": 2.9690747467332376e-08,
+      "field_finite": true
+    }
+  ],
+  "gmsh_pressure_view": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\fine\\pressure_nearfield.pos",
+  "gmsh_triangles": 38775,
+  "gmsh_readback_passed": true,
+  "scope": "2D inviscid profile"
+}
