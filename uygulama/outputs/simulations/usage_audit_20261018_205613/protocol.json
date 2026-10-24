@@ -1,0 +1,50 @@
+{
+  "started_utc": "2026-10-18T17:56:13.463992+00:00",
+  "script_sha256": "f295f3a23937c5abce876c5775ed857bee99ce0129520665813f5c7313274d90",
+  "models": {
+    "k1b": {
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\k-1b-q8_0.gguf",
+      "sha256": "8b0138e712ad33937e0657c226da510816715745adf859573333eae9a89c8b91"
+    },
+    "cadmonkey32": {
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\cadmonkey-1b-data-32-q8_0.gguf",
+      "sha256": "825d80c42cdd2779d16ead1879241acc19f73b1d14accf29c8bbde4cecb58b76"
+    }
+  },
+  "sources": [
+    "https://github.com/ThomasVuNguyen/MakeMe/blob/main/main.go",
+    "https://github.com/ThomasVuNguyen/K/blob/main/train/train.py",
+    "https://github.com/ThomasVuNguyen/K/blob/main/train/config.json"
+  ],
+  "strict_sampling_flags": [
+    "--temp",
+    ".8",
+    "--top-p",
+    ".95",
+    "--top-k",
+    "64",
+    "--min-p",
+    "0",
+    "--repeat-penalty",
+    "1.1",
+    "--repeat-last-n",
+    "4096",
+    "--samplers",
+    "penalties;temperature;top_k;top_p"
+  ],
+  "external_template_sha256": "3cb7c5da795557bca16f7dfc2c8784d575870b51b1b00f8405896498fccdea3c",
+  "rendering_flags": [
+    "-D",
+    "$fn=100",
+    "-D",
+    "$fs=0.1",
+    "-D",
+    "$fa=1"
+  ],
+  "limits": [
+    "Native Q8 runtime, not exact BF16 Hugging Face/Unsloth reproduction",
+    "Random sequences differ between llama.cpp and Transformers even with same seed",
+    "Short demo render success is not object or dimensional correctness",
+    "No generated program manually changed"
+  ]
+}

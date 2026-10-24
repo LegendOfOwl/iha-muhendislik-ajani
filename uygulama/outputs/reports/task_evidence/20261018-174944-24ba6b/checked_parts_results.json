@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-10-18T14:38:54.496816+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "box corrected OpenSCAD + independent CadQuery/STEP",
+      "passed": true,
+      "evidence": {
+        "bbox_mm": [
+          40.0,
+          30.0,
+          8.0
+        ],
+        "bbox_center_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "volume_mm3": 9600.0,
+        "max_relative_bbox_error": 0.0,
+        "relative_volume_error": 0.0,
+        "required_centering_met": true,
+        "hole_probe_expected_inside": [],
+        "hole_probe_actual_inside": [],
+        "open_or_nonmanifold_edges": 0,
+        "geometry_accepted": true,
+        "part": "box",
+        "native_OpenSCAD_exit_code": 0,
+        "STEP_valid": true,
+        "expected_volume_mm3": 9600,
+        "source": "Agent-authored correction, not specialized-model self-repair"
+      }
+    },
+    {
+      "name": "hole_plate corrected OpenSCAD + independent CadQuery/STEP",
+      "passed": true,
+      "evidence": {
+        "bbox_mm": [
+          40.0,
+          30.0,
+          8.0
+        ],
+        "bbox_center_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "volume_mm3": 8971.933752011784,
+        "max_relative_bbox_error": 0.0,
+        "relative_volume_error": 2.811989375772761e-05,
+        "required_centering_met": true,
+        "hole_probe_expected_inside": [
+          false,
+          false,
+          true,
+          true
+        ],
+        "hole_probe_actual_inside": [
+          false,
+          false,
+          true,
+          true
+        ],
+        "open_or_nonmanifold_edges": 0,
+        "geometry_accepted": true,
+        "part": "hole_plate",
+        "native_OpenSCAD_exit_code": 0,
+        "STEP_valid": true,
+        "expected_volume_mm3": 8971.68146928204,
+        "source": "Agent-authored correction, not specialized-model self-repair"
+      }
+    },
+    {
+      "name": "spacer corrected OpenSCAD + independent CadQuery/STEP",
+      "passed": true,
+      "evidence": {
+        "bbox_mm": [
+          20.0,
+          20.0,
+          12.0
+        ],
+        "bbox_center_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "volume_mm3": 3429.240673630714,
+        "max_relative_bbox_error": 0.0,
+        "relative_volume_error": 0.0004018236994337565,
+        "required_centering_met": true,
+        "hole_probe_expected_inside": [
+          false,
+          false,
+          true,
+          true,
+          false
+        ],
+        "hole_probe_actual_inside": [
+          false,
+          false,
+          true,
+          true,
+          false
+        ],
+        "open_or_nonmanifold_edges": 0,
+        "geometry_accepted": true,
+        "part": "spacer",
+        "native_OpenSCAD_exit_code": 0,
+        "STEP_valid": true,
+        "expected_volume_mm3": 3430.619177720054,
+        "source": "Agent-authored correction, not specialized-model self-repair"
+      }
+    }
+  ],
+  "scope": "Closed-loop correction example: model draft -> dimensional rejection -> explicit agent correction -> native export -> geometry recheck",
+  "limits": [
+    "All dimensions are synthetic test requirements",
+    "Not a UAV component or strength assessment",
+    "Not a claim that the 1B model corrected itself"
+  ]
+}

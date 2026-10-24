@@ -1,0 +1,55 @@
+// Coffee Mug Model
+$fn = 50;
+
+// Main mug body
+difference() {
+    // Outer cylinder
+    cylinder(h=80, r=40);
+    
+    // Inner cavity (subtracted)
+    translate([0, 0, 5])
+    cylinder(h=76, r=35);
+    
+    // Handle cutout
+    translate([45, 0, 40])
+    rotate([0, 90, 0])
+    cylinder(h=15, r=20);
+}
+
+// Handle
+translate([45, 0, 40])
+rotate([0, 90, 0])
+difference() {
+    // Outer handle shape
+    hull() {
+        cylinder(h=15, r=10);
+        translate([10, 0, 0])
+        cylinder(h=15, r=10);
+    }
+    
+    // Inner handle cutout
+    hull() {
+        cylinder(h=15, r=8);
+        translate([10, 0, 0])
+        cylinder(h=15, r=8);
+    }
+}
+
+// Base
+translate([0, 0, -5])
+difference() {
+    cylinder(h=5, r=45);
+    cylinder(h=5, r=40);
+    
+    // Add slight rim for stability
+    translate([0, 0, 1])
+    cylinder(h=3, r=40);
+}
+
+// Optional steam effect
+translate([0, 0, 80])
+rotate([0, 0, 0])
+for(i = [0:2]) {
+    translate([0, 0, i*5])
+    sphere(r=8-i*2);
+}

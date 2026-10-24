@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\geometry\parametric_wing.py", line 117, in <module>
+    if __name__=='__main__': raise SystemExit(main())
+                                              ^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\geometry\parametric_wing.py", line 44, in main
+    if np.min(numeric[:,3])<=0 or np.max(np.abs(numeric[:,4]))>15: raise ValueError('Positive chord; qualified twist range +/-15 deg required')
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Positive chord; qualified twist range +/-15 deg required

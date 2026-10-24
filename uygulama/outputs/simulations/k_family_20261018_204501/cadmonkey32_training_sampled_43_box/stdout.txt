@@ -1,0 +1,39 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11719-5aeac37a3
+model      : C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\cadmonkey-1b-data-32-q8_0.gguf
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> hey cadmonkey, create me a a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.
+// Rectangular solid box with dimensions 40 mm × 30 mm × 8 mm
+// Centered at origin (0,0,0)
+
+difference() {
+    // Main body of the box – a simple cuboid
+    cube([40, 30, 8], center = true);   // [length, width, height] → [40, 30, 8]
+}
+
+[ Prompt: 1504.8 t/s | Generation: 195.1 t/s ]
+
+
+Exiting...

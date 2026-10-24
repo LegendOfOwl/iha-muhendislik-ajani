@@ -1,0 +1,1383 @@
+[
+  {
+    "model": "k1b",
+    "mode": "baseline",
+    "seed": 42,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_baseline_42_box",
+    "prompt": "Hey cadmonkey, make me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.778,
+    "reported_generation_tok_s": 207.4,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      20.0,
+      15.0,
+      4.0
+    ],
+    "volume_mm3": 9600.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "baseline",
+    "seed": 42,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_baseline_42_hole_plate",
+    "prompt": "Hey cadmonkey, make me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 2.029,
+    "reported_generation_tok_s": 220.1,
+    "openscad_exit_code": 0,
+    "warnings": [
+      "WARNING: Ignoring unknown variable 'length' in file generated.scad, line 11",
+      "WARNING: undefined operation (undefined / number) in file generated.scad, line 11",
+      "WARNING: Ignoring unknown variable 'width' in file generated.scad, line 11",
+      "WARNING: undefined operation (undefined / number) in file generated.scad, line 11",
+      "WARNING: Unable to convert translate([undef, undef, -0.1]) parameter to a vec3 or vec2 of numbers in file generated.scad, line 11"
+    ],
+    "bbox_mm": [
+      50.0,
+      39.98027038574219,
+      10.0
+    ],
+    "bbox_center_mm": [
+      15.0,
+      10.009864807128906,
+      5.0
+    ],
+    "volume_mm3": 12106.66444714024,
+    "max_relative_bbox_error": 0.33267567952473964,
+    "relative_volume_error": 0.34943092759055294,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "baseline",
+    "seed": 42,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_baseline_42_spacer",
+    "prompt": "Hey cadmonkey, make me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.905,
+    "reported_generation_tok_s": 214.6,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      39.780799865722656,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      6.0
+    ],
+    "volume_mm3": 2844.2061150342415,
+    "max_relative_bbox_error": 1.0,
+    "relative_volume_error": 0.170935050586272,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_prefix",
+    "seed": 42,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_prefix_42_box",
+    "prompt": "hey cadmonkey, create me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.778,
+    "reported_generation_tok_s": 210.1,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      20.0,
+      15.0,
+      4.0
+    ],
+    "volume_mm3": 9600.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_prefix",
+    "seed": 42,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_prefix_42_hole_plate",
+    "prompt": "hey cadmonkey, create me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 2.024,
+    "reported_generation_tok_s": 217.4,
+    "openscad_exit_code": 0,
+    "warnings": [
+      "WARNING: Ignoring unknown variable 'length' in file generated.scad, line 11",
+      "WARNING: undefined operation (undefined / number) in file generated.scad, line 11",
+      "WARNING: Ignoring unknown variable 'width' in file generated.scad, line 11",
+      "WARNING: undefined operation (undefined / number) in file generated.scad, line 11",
+      "WARNING: Unable to convert translate([undef, undef, -0.1]) parameter to a vec3 or vec2 of numbers in file generated.scad, line 11"
+    ],
+    "bbox_mm": [
+      40.080901101231575,
+      30.095105201005936,
+      10.0
+    ],
+    "bbox_center_mm": [
+      19.959549449384212,
+      14.952447399497032,
+      5.0
+    ],
+    "volume_mm3": 9600.189204430848,
+    "max_relative_bbox_error": 0.25,
+    "relative_volume_error": 0.07005461989491524,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_prefix",
+    "seed": 42,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_prefix_42_spacer",
+    "prompt": "hey cadmonkey, create me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.922,
+    "reported_generation_tok_s": 219.1,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      20.0,
+      20.0,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      6.0
+    ],
+    "volume_mm3": 1912.9087486943067,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.4424013131164265,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_sampled",
+    "seed": 42,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_sampled_42_box",
+    "prompt": "hey cadmonkey, create me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.932,
+    "reported_generation_tok_s": 195.1,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      20.0,
+      15.0,
+      4.0
+    ],
+    "volume_mm3": 8400.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.125,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_sampled",
+    "seed": 42,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_sampled_42_hole_plate",
+    "prompt": "hey cadmonkey, create me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 1.827,
+    "reported_generation_tok_s": 188.7,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      20.0,
+      15.0,
+      4.0
+    ],
+    "volume_mm3": 8995.36360562503,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0026396541633888493,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_sampled",
+    "seed": 42,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_sampled_42_spacer",
+    "prompt": "hey cadmonkey, create me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.772,
+    "reported_generation_tok_s": 191.0,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      39.92100143432617,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      6.0
+    ],
+    "volume_mm3": 5494.604153211496,
+    "max_relative_bbox_error": 1.0,
+    "relative_volume_error": 0.6016362844631273,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_sampled",
+    "seed": 43,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_sampled_43_box",
+    "prompt": "hey cadmonkey, create me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.764,
+    "reported_generation_tok_s": 185.9,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      20.0,
+      15.0,
+      4.0
+    ],
+    "volume_mm3": 9600.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_sampled",
+    "seed": 43,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_sampled_43_hole_plate",
+    "prompt": "hey cadmonkey, create me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 1.929,
+    "reported_generation_tok_s": 188.8,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      20.0,
+      15.0,
+      4.0
+    ],
+    "volume_mm3": 8352.528390641593,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.06901193279769835,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "training_sampled",
+    "seed": 43,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_training_sampled_43_spacer",
+    "prompt": "hey cadmonkey, create me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.805,
+    "reported_generation_tok_s": 185.7,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      20.0,
+      19.890439987182617,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      6.0
+    ],
+    "volume_mm3": 3665.704031489501,
+    "max_relative_bbox_error": 0.005478000640869118,
+    "relative_volume_error": 0.06852548813817383,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "explicit_rules",
+    "seed": 42,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_explicit_rules_42_box",
+    "prompt": "hey cadmonkey, create me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code. Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 2.628,
+    "reported_generation_tok_s": 212.7,
+    "openscad_exit_code": 0,
+    "warnings": [
+      "WARNING: Ignoring unknown variable 'diameter' in file generated.scad, line 5",
+      "WARNING: undefined operation (undefined / number) in file generated.scad, line 5",
+      "WARNING: Ignoring unknown variable 'diameter' in file generated.scad, line 7",
+      "WARNING: undefined operation (undefined / number) in file generated.scad, line 7",
+      "WARNING: Ignoring unknown variable 'diameter' in file generated.scad, line 9",
+      "WARNING: undefined operation (undefined / number) in file generated.scad, line 9",
+      "WARNING: Ignoring unknown variable 'diameter' in file generated.scad, line 11",
+      "WARNING: undefined operation (undefined / number) in file generated.scad, line 11"
+    ],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      20.0,
+      15.0,
+      4.0
+    ],
+    "volume_mm3": 9600.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "explicit_rules",
+    "seed": 42,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_explicit_rules_42_hole_plate",
+    "prompt": "hey cadmonkey, create me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code. Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 1.776,
+    "reported_generation_tok_s": 205.9,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      20.0,
+      15.0,
+      4.0
+    ],
+    "volume_mm3": 9286.666944107474,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.03510885622766535,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "k1b",
+    "mode": "explicit_rules",
+    "seed": 42,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\k1b_explicit_rules_42_spacer",
+    "prompt": "hey cadmonkey, create me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code. Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.751,
+    "reported_generation_tok_s": 204.6,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      20.0,
+      19.890439987182617,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 3425.005834352388,
+    "max_relative_bbox_error": 0.005478000640869118,
+    "relative_volume_error": 0.0016362478832163685,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "baseline",
+    "seed": 42,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_baseline_42_box",
+    "prompt": "Hey cadmonkey, make me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.803,
+    "reported_generation_tok_s": 209.7,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 9600.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "baseline",
+    "seed": 42,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_baseline_42_hole_plate",
+    "prompt": "Hey cadmonkey, make me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 1.97,
+    "reported_generation_tok_s": 213.4,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 8973.334080373324,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.00018420305011290772,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "baseline",
+    "seed": 42,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_baseline_42_spacer",
+    "prompt": "Hey cadmonkey, make me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.89,
+    "reported_generation_tok_s": 210.6,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      20.0,
+      19.890439987182617,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 3425.005834352388,
+    "max_relative_bbox_error": 0.005478000640869118,
+    "relative_volume_error": 0.0016362478832163685,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_prefix",
+    "seed": 42,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_prefix_42_box",
+    "prompt": "hey cadmonkey, create me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.791,
+    "reported_generation_tok_s": 213.9,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 9600.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_prefix",
+    "seed": 42,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_prefix_42_hole_plate",
+    "prompt": "hey cadmonkey, create me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 1.964,
+    "reported_generation_tok_s": 211.5,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 8973.334080373324,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.00018420305011290772,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_prefix",
+    "seed": 42,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_prefix_42_spacer",
+    "prompt": "hey cadmonkey, create me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.987,
+    "reported_generation_tok_s": 208.3,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      20.0,
+      20.0,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 3428.3621668917194,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0006579018863395181,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_sampled",
+    "seed": 42,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_sampled_42_box",
+    "prompt": "hey cadmonkey, create me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.841,
+    "reported_generation_tok_s": 189.4,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 9600.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_sampled",
+    "seed": 42,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_sampled_42_hole_plate",
+    "prompt": "hey cadmonkey, create me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 1.932,
+    "reported_generation_tok_s": 191.1,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 8973.334080373324,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.00018420305011290772,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_sampled",
+    "seed": 42,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_sampled_42_spacer",
+    "prompt": "hey cadmonkey, create me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.944,
+    "reported_generation_tok_s": 188.0,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      20.0,
+      19.890439987182617,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 3425.005834352388,
+    "max_relative_bbox_error": 0.005478000640869118,
+    "relative_volume_error": 0.0016362478832163685,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_sampled",
+    "seed": 43,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_sampled_43_box",
+    "prompt": "hey cadmonkey, create me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.89,
+    "reported_generation_tok_s": 188.6,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 9600.0,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.0,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_sampled",
+    "seed": 43,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_sampled_43_hole_plate",
+    "prompt": "hey cadmonkey, create me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 2.011,
+    "reported_generation_tok_s": 189.9,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 7524.265255252831,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.161331654382179,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "training_sampled",
+    "seed": 43,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_training_sampled_43_spacer",
+    "prompt": "hey cadmonkey, create me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.908,
+    "reported_generation_tok_s": 195.1,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      20.0,
+      19.890439987182617,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 3425.005834352388,
+    "max_relative_bbox_error": 0.005478000640869118,
+    "relative_volume_error": 0.0016362478832163685,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "explicit_rules",
+    "seed": 42,
+    "case": "box",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_explicit_rules_42_box",
+    "prompt": "hey cadmonkey, create me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code. Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 9600,
+    "inference_exit_code": 0,
+    "seconds": 1.948,
+    "reported_generation_tok_s": 211.2,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      7.900000095367432
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      -0.04999995231628418
+    ],
+    "volume_mm3": 9480.000114440922,
+    "max_relative_bbox_error": 0.012499988079071045,
+    "relative_volume_error": 0.012499988079070712,
+    "required_centering_met": false,
+    "hole_probe_expected_inside": [],
+    "hole_probe_actual_inside": [],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": false,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "explicit_rules",
+    "seed": 42,
+    "case": "hole_plate",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_explicit_rules_42_hole_plate",
+    "prompt": "hey cadmonkey, create me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code. Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.",
+    "expected_bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "expected_volume_mm3": 8971.68146928204,
+    "inference_exit_code": 0,
+    "seconds": 1.883,
+    "reported_generation_tok_s": 206.8,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      40.0,
+      30.0,
+      8.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 8972.690273050706,
+    "max_relative_bbox_error": 0.0,
+    "relative_volume_error": 0.00011244311025970788,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  },
+  {
+    "model": "cadmonkey32",
+    "mode": "explicit_rules",
+    "seed": 42,
+    "case": "spacer",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\k_family_20261018_204629\\cadmonkey32_explicit_rules_42_spacer",
+    "prompt": "hey cadmonkey, create me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code. Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.",
+    "expected_bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "expected_volume_mm3": 3430.619177720054,
+    "inference_exit_code": 0,
+    "seconds": 1.79,
+    "reported_generation_tok_s": 209.9,
+    "openscad_exit_code": 0,
+    "warnings": [],
+    "bbox_mm": [
+      20.0,
+      19.890439987182617,
+      12.0
+    ],
+    "bbox_center_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "volume_mm3": 3425.005834352388,
+    "max_relative_bbox_error": 0.005478000640869118,
+    "relative_volume_error": 0.0016362478832163685,
+    "required_centering_met": true,
+    "hole_probe_expected_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "hole_probe_actual_inside": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "open_or_nonmanifold_edges": 0,
+    "geometry_accepted": true,
+    "CAD_created": true
+  }
+]

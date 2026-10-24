@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\models\cad_worker.py", line 36, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\models\cad_worker.py", line 28, in main
+    exec(compile(tree,'reviewed_cad_model','exec'),namespace)
+  File "reviewed_cad_model", line 5, in <module>
+TypeError: Workplane.lineTo() missing 1 required positional argument: 'y'

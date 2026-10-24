@@ -1,0 +1,47 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11719-5aeac37a3
+model      : C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\k-1b-q8_0.gguf
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> hey cadmonkey, create me a a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code. Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.
+module rectangular_box(length, width, height, center_x, center_y, center_z) {
+  difference() {
+    cube([length, width, height]);
+    translate([center_x, center_y, center_z])
+    cylinder(h=height, r=diameter/2, $fn=64);
+    translate([length - center_x, center_y, center_z])
+    cylinder(h=height, r=diameter/2, $fn=64);
+    translate([center_x, width - center_y, center_z])
+    cylinder(h=height, r=diameter/2, $fn=64);
+    translate([length - center_x, width - center_y, center_z])
+    cylinder(h=height, r=diameter/2, $fn=64);
+  }
+}
+
+rectangular_box(40, 30, 8, 10, 10, 10);
+
+[ Prompt: 2779.5 t/s | Generation: 215.7 t/s ]
+
+
+Exiting...

@@ -1,0 +1,228 @@
+{
+  "_id": "69f9dcf1e28ed31f0ec3fa7d",
+  "id": "mradermacher/Zero-To-CAD-Qwen3-VL-2B-GGUF",
+  "private": false,
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "gguf",
+    "CAD",
+    "CadQuery",
+    "image-to-CAD",
+    "vision-language-model",
+    "3D-reconstruction",
+    "code-generation",
+    "parametric-CAD",
+    "en",
+    "code",
+    "dataset:ADSKAILab/Zero-To-CAD-1m",
+    "base_model:ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+    "base_model:quantized:ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "downloads": 1267,
+  "likes": 5,
+  "modelId": "mradermacher/Zero-To-CAD-Qwen3-VL-2B-GGUF",
+  "author": "mradermacher",
+  "sha": "d6401e65c6c03f8c52db9b88d43894e32b595487",
+  "lastModified": "2026-05-05T12:09:04.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "base_model": "ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+    "datasets": [
+      "ADSKAILab/Zero-To-CAD-1m"
+    ],
+    "language": [
+      "en",
+      "code"
+    ],
+    "library_name": "transformers",
+    "license": "apache-2.0",
+    "mradermacher": {
+      "readme_rev": 1
+    },
+    "quantized_by": "mradermacher",
+    "tags": [
+      "CAD",
+      "CadQuery",
+      "image-to-CAD",
+      "vision-language-model",
+      "3D-reconstruction",
+      "code-generation",
+      "parametric-CAD"
+    ]
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModel"
+  },
+  "gguf": {
+    "total": 1720574976,
+    "architecture": "qwen3vl",
+    "context_length": 262144,
+    "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {%- if messages[0].content is string %}\n            {{- messages[0].content }}\n        {%- else %}\n            {%- for content in messages[0].content %}\n                {%- if 'text' in content %}\n                    {{- content.text }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        {{- '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' }}\n        {%- if messages[0].content is string %}\n            {{- messages[0].content }}\n        {%- else %}\n            {%- for content in messages[0].content %}\n                {%- if 'text' in content %}\n                    {{- content.text }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- for message in messages %}\n    {%- if message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- if message.content is string %}\n            {{- message.content }}\n        {%- else %}\n            {%- for content in message.content %}\n                {%- if content.type == 'image' or 'image' in content or 'image_url' in content %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                    {%- if add_vision_id %}Picture {{ image_count.value }}: {% endif -%}\n                    <|vision_start|><|image_pad|><|vision_end|>\n                {%- elif content.type == 'video' or 'video' in content %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                    {%- if add_vision_id %}Video {{ video_count.value }}: {% endif -%}\n                    <|vision_start|><|video_pad|><|vision_end|>\n                {%- elif 'text' in content %}\n                    {{- content.text }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- if message.content is string %}\n            {{- message.content }}\n        {%- else %}\n            {%- for content_item in message.content %}\n                {%- if 'text' in content_item %}\n                    {{- content_item.text }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and message.content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {%- if message.content is string %}\n            {{- message.content }}\n        {%- else %}\n            {%- for content in message.content %}\n                {%- if content.type == 'image' or 'image' in content or 'image_url' in content %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                    {%- if add_vision_id %}Picture {{ image_count.value }}: {% endif -%}\n                    <|vision_start|><|image_pad|><|vision_end|>\n                {%- elif content.type == 'video' or 'video' in content %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                    {%- if add_vision_id %}Video {{ video_count.value }}: {% endif -%}\n                    <|vision_start|><|video_pad|><|vision_end|>\n                {%- elif 'text' in content %}\n                    {{- content.text }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+    "bos_token": "<|endoftext|>",
+    "eos_token": "<|im_end|>",
+    "totalFileSize": 3447351584
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "ae64512c6998faea54a30330ceefe91e727a7fc1",
+      "size": 2527
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "0dd5b10817b6041a1716d6b294764a500b8999b7",
+      "size": 4348
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.IQ4_XS.gguf",
+      "blobId": "c27731d1a51b368c4480e9eca96bab4649f0eef7",
+      "size": 1016283424,
+      "lfs": {
+        "sha256": "cc15adbc4fdce486451198090c8d1085d3640569150167dc63ad18947b4da2ca",
+        "size": 1016283424,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q2_K.gguf",
+      "blobId": "543120b04296af3c3251335e4036d046690da549",
+      "size": 777797920,
+      "lfs": {
+        "sha256": "80e365c9565722960b6de44ec479f1ef9d98058ed67ad82b31e5f571932e0ab6",
+        "size": 777797920,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q3_K_L.gguf",
+      "blobId": "9d96e9031e56fade8aff4ab049d5e27c2edf4970",
+      "size": 1003503904,
+      "lfs": {
+        "sha256": "69b06308bcd19b74c6196fb2151aa2d3af60c3de1b73a0dcf0c1dc1b272224d9",
+        "size": 1003503904,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q3_K_M.gguf",
+      "blobId": "184d30eed7925e86f575bd5792aeacd6597fdbed",
+      "size": 939540768,
+      "lfs": {
+        "sha256": "b5608b641b4ce5261df82db549be46850ed2a13b6131a2b4a79aed694220aecf",
+        "size": 939540768,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q3_K_S.gguf",
+      "blobId": "4790bcdf7eaf84d7a16a288c4602642fe675dbda",
+      "size": 867254560,
+      "lfs": {
+        "sha256": "dfdbd5a7a7a2990c5bd38df8fd628bf9957a35f0bd9eab61aebeb84e01adf348",
+        "size": 867254560,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q4_K_M.gguf",
+      "blobId": "48b5ea92d24a805ad9219181c6b56397e493823b",
+      "size": 1107411232,
+      "lfs": {
+        "sha256": "16bc4545a97a7e7003568adab4b1ca4fadbfc61eddb41d06b92a69758e5ae534",
+        "size": 1107411232,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q4_K_S.gguf",
+      "blobId": "468046790304dd4fa11859dd1171c1b9a088febb",
+      "size": 1060192544,
+      "lfs": {
+        "sha256": "b196f5d3467b56f75ff9aa135f6ccb9b230eb3f04fbbfba8b50fd867365ae859",
+        "size": 1060192544,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q5_K_M.gguf",
+      "blobId": "2ad4e9c17181eafdc0b96f810b6e26c218a95021",
+      "size": 1257881888,
+      "lfs": {
+        "sha256": "048d2d5b133fc6f965d5c23fbf1e8de3146da2aa4fef79689b60ec743e2fdbc0",
+        "size": 1257881888,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q5_K_S.gguf",
+      "blobId": "a9561999baaf48bbc650557a8bc949867a863c0d",
+      "size": 1230586144,
+      "lfs": {
+        "sha256": "c24088f564b32e2ee1bf62ce75db88ba86dcc5504dbdee0deec973e0fa0b8b9e",
+        "size": 1230586144,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q6_K.gguf",
+      "blobId": "9a052fe76843d03ade0ffb050bd359f55b765a4e",
+      "size": 1417756960,
+      "lfs": {
+        "sha256": "459a771d25b2f388f5e8437c9427474212ffe67da4dd1c132cb593c069c3e628",
+        "size": 1417756960,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.Q8_0.gguf",
+      "blobId": "836a2e6536632d9849d341f462d3ae454193360c",
+      "size": 1834428704,
+      "lfs": {
+        "sha256": "338128648424803479575dbda33ae3e1d03a2f68d35961252b17d3e5141ff577",
+        "size": 1834428704,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.f16.gguf",
+      "blobId": "1036aa54acfaaa56954e86ce04dec9107ee0a6e0",
+      "size": 3447351584,
+      "lfs": {
+        "sha256": "d3215d1144bfba0b0262c0d32b5c4205cd705c55479e33e75c7d66e49df93fbd",
+        "size": 3447351584,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.mmproj-Q8_0.gguf",
+      "blobId": "3c366e1f198c3ddfc42864760be150114a5cea31",
+      "size": 445054016,
+      "lfs": {
+        "sha256": "f9dc4cd0b2167f208a0749787ecac5cec1f540aba3c9114c259a8eb80c996482",
+        "size": 445054016,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Zero-To-CAD-Qwen3-VL-2B.mmproj-f16.gguf",
+      "blobId": "63256bd2b6eed866df76a4931076c4c46aa1ccef",
+      "size": 819395648,
+      "lfs": {
+        "sha256": "160c11fb59b541d19d4f814e335cf27dd54b386a4cb296e66c012df1881026f2",
+        "size": 819395648,
+        "pointerSize": 134
+      }
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-05-05T12:05:05.000Z",
+  "usedStorage": 17224439296
+}

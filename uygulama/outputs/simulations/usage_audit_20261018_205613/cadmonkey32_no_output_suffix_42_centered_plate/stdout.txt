@@ -1,0 +1,40 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11719-5aeac37a3
+model      : C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\cadmonkey-1b-data-32-q8_0.gguf
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> hey cadmonkey, create me a rectangular plate exactly 60 mm along X, 40 mm along Y and 6 mm thick along Z, centered at the origin, with one 8 mm diameter cylindrical through-hole along Z at X=0, Y=0.
+// Rectangular plate with centered hole
+difference() {
+    // Main plate body
+    cube([60, 40, 6], center = true);
+    
+    // Cylindrical hole along Z axis
+    cylinder(h = 7, d = 8, center = true, $fn = 64);
+}
+
+[ Prompt: 2019.0 t/s | Generation: 222.2 t/s ]
+
+
+Exiting...

@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-18T17:59:22.337794+00:00",
+  "dataset_uuid": "4b3aaa7b-f278-fc6a-8f9f-28fd4893be76",
+  "dataset_split": "test",
+  "dataset_offset": 0,
+  "source": "https://huggingface.co/datasets/ADSKAILab/Zero-To-CAD-1m",
+  "image_size_px": [
+    256,
+    256
+  ],
+  "image_order": "image_0 to image_7 unchanged",
+  "system_prompt": "You are a CAD code assistant. Given multiple rendered views of a 3D shape, generate clean, well-structured CadQuery Python code that accurately reproduces the geometry.",
+  "user_prompt": "Generate CadQuery code for this shape.",
+  "max_new_tokens": 4096,
+  "context": 8192,
+  "sampling": "greedy: temperature=0; no penalties; extra sampling filters disabled",
+  "weights": "Previously installed third-party Q6_K + f16 mmproj; not original BF16 Transformers path",
+  "reference_program_executed": false,
+  "script_sha256": "57398189765b2bc79cd75426d38ff0f0848eb6ae3d4897f8c06d64f60fe1f02c",
+  "source_row_sha256": "16d3cf83c767fc68020ee274eb47f9b521d19e40c49ff9767526cf6b136fe86b",
+  "input_view_sha256": {
+    "view_0.png": "d596cf8c095aa6d78036e1cf25358846c32cd5ba5c392c79f3c14e3dd9501359",
+    "view_1.png": "bcbc66ccd3828667f2847f3763e1b81493d6fc69a9bf40d6c28fb9eb465728a8",
+    "view_2.png": "37690ab5c53764db77939e9335cceba7677fadb733ca4df18bead583b91e5f3e",
+    "view_3.png": "11cb1a380d0940940b98736612b9390da9038d002e8c1114d06a5d94736c2e7d",
+    "view_4.png": "75cbd74b9ced123ee28e514ec2feac8e2f898ce6504fdc44922646a0469cfc7a",
+    "view_5.png": "14bb6b6764de8572ab0429a869749436dc5add7b93117df83f87839ec1dee519",
+    "view_6.png": "e8d9b01597425b2f893d4d2a2783ee82c5aa940717e0041f99c9793b63f75f64",
+    "view_7.png": "a0287e2ed6abc22fa7783ae07c90c9a60b02e1c77d5436c172424100d1882d45"
+  }
+}

@@ -1,0 +1,40 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11719-5aeac37a3
+model      : C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\cadmonkey-1b-data-32-q8_0.gguf
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> hey cadmonkey, create me a a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.
+// Cylindrical spacer with 6 mm hole
+difference() {
+    // Main spacer body
+    cylinder(h = 12, d = 20, center = true);
+    
+    // Central 6 mm hole
+    cylinder(h = 14, d = 6, center = true);
+}
+
+[ Prompt: 1589.4 t/s | Generation: 200.1 t/s ]
+
+
+Exiting...

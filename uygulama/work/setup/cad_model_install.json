@@ -1,0 +1,49 @@
+{
+  "installed_utc": "2026-10-18T14:24:51.982430+00:00",
+  "upstream_model": "ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+  "quantized_repository": "mradermacher/Zero-To-CAD-Qwen3-VL-2B-GGUF",
+  "revision": "d6401e65c6c03f8c52db9b88d43894e32b595487",
+  "quantization": "Q6_K",
+  "vision_precision": "f16",
+  "runtime_release": "b11719",
+  "runtime_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\llama-cad",
+  "files": [
+    {
+      "path": "tools/cad-model/Zero-To-CAD-Qwen3-VL-2B.Q6_K.gguf",
+      "url": "https://huggingface.co/mradermacher/Zero-To-CAD-Qwen3-VL-2B-GGUF/resolve/d6401e65c6c03f8c52db9b88d43894e32b595487/Zero-To-CAD-Qwen3-VL-2B.Q6_K.gguf",
+      "bytes": 1417756960,
+      "sha256": "459a771d25b2f388f5e8437c9427474212ffe67da4dd1c132cb593c069c3e628",
+      "absolute_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\Zero-To-CAD-Qwen3-VL-2B.Q6_K.gguf",
+      "actual_sha256": "459a771d25b2f388f5e8437c9427474212ffe67da4dd1c132cb593c069c3e628"
+    },
+    {
+      "path": "tools/cad-model/Zero-To-CAD-Qwen3-VL-2B.mmproj-f16.gguf",
+      "url": "https://huggingface.co/mradermacher/Zero-To-CAD-Qwen3-VL-2B-GGUF/resolve/d6401e65c6c03f8c52db9b88d43894e32b595487/Zero-To-CAD-Qwen3-VL-2B.mmproj-f16.gguf",
+      "bytes": 819395648,
+      "sha256": "160c11fb59b541d19d4f814e335cf27dd54b386a4cb296e66c012df1881026f2",
+      "absolute_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\Zero-To-CAD-Qwen3-VL-2B.mmproj-f16.gguf",
+      "actual_sha256": "160c11fb59b541d19d4f814e335cf27dd54b386a4cb296e66c012df1881026f2"
+    },
+    {
+      "path": "work/setup/downloads/llama-b11719-bin-win-cuda-12.4-x64.zip",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-bin-win-cuda-12.4-x64.zip",
+      "bytes": 267483221,
+      "sha256": "3a7c399487a315cad888cd5394f1e144993ec25676148930cf2069a6c2fd6360",
+      "absolute_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\setup\\downloads\\llama-b11719-bin-win-cuda-12.4-x64.zip",
+      "actual_sha256": "3a7c399487a315cad888cd5394f1e144993ec25676148930cf2069a6c2fd6360"
+    },
+    {
+      "path": "work/setup/downloads/cudart-llama-bin-win-cuda-12.4-x64.zip",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11719/cudart-llama-bin-win-cuda-12.4-x64.zip",
+      "bytes": 391443627,
+      "sha256": "8c79a9b226de4b3cacfd1f83d24f962d0773be79f1e7b75c6af4ded7e32ae1d6",
+      "absolute_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\setup\\downloads\\cudart-llama-bin-win-cuda-12.4-x64.zip",
+      "actual_sha256": "8c79a9b226de4b3cacfd1f83d24f962d0773be79f1e7b75c6af4ded7e32ae1d6"
+    }
+  ],
+  "verified_inference": true,
+  "license": "Apache-2.0 (model); MIT (llama.cpp)",
+  "geometry_accepted_cases": 0,
+  "engineering_auto_use": false,
+  "test_report": "outputs/reports/cad_model_benchmark.json"
+}

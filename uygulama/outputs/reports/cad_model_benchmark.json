@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-10-18T14:37:41.600596+00:00",
+  "passed": true,
+  "installation_inference_passed": true,
+  "quality_passed": false,
+  "accepted_cases": 0,
+  "total_cases": 4,
+  "results": [
+    {
+      "id": "box",
+      "prompt": "Hey cadmonkey, make me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+      "bbox_mm": [
+        40.0,
+        30.0,
+        8.0
+      ],
+      "volume_mm3": 9600.0,
+      "model": "k",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\models_20261018_173012_a4e6\\k_box",
+      "exit_code": 0,
+      "seconds": 1.95,
+      "reported_generation_tok_s": 210.7,
+      "inference_completed": true,
+      "expected_bbox_mm": [
+        40,
+        30,
+        8
+      ],
+      "expected_volume_mm3": 9600,
+      "openscad_exit_code": 0,
+      "openscad_warnings": [],
+      "bbox_center_mm": [
+        20.0,
+        15.0,
+        4.0
+      ],
+      "max_relative_bbox_error": 0.0,
+      "relative_volume_error": 0.0,
+      "required_centering_met": false,
+      "hole_probe_expected_inside": [],
+      "hole_probe_actual_inside": [],
+      "open_or_nonmanifold_edges": 0,
+      "geometry_accepted": false,
+      "cad_created": true
+    },
+    {
+      "id": "hole_plate",
+      "prompt": "Hey cadmonkey, make me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+      "bbox_mm": [
+        50.0,
+        39.98027038574219,
+        10.0
+      ],
+      "volume_mm3": 12106.66444714024,
+      "model": "k",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\models_20261018_173012_a4e6\\k_hole_plate",
+      "exit_code": 0,
+      "seconds": 2.018,
+      "reported_generation_tok_s": 219.0,
+      "inference_completed": true,
+      "expected_bbox_mm": [
+        40,
+        30,
+        8
+      ],
+      "expected_volume_mm3": 8971.68146928204,
+      "openscad_exit_code": 0,
+      "openscad_warnings": [
+        "WARNING: Ignoring unknown variable 'length' in file generated.scad, line 11",
+        "WARNING: undefined operation (undefined / number) in file generated.scad, line 11",
+        "WARNING: Ignoring unknown variable 'width' in file generated.scad, line 11",
+        "WARNING: undefined operation (undefined / number) in file generated.scad, line 11",
+        "WARNING: Unable to convert translate([undef, undef, -0.1]) parameter to a vec3 or vec2 of numbers in file generated.scad, line 11"
+      ],
+      "bbox_center_mm": [
+        15.0,
+        10.009864807128906,
+        5.0
+      ],
+      "max_relative_bbox_error": 0.33267567952473964,
+      "relative_volume_error": 0.34943092759055294,
+      "required_centering_met": false,
+      "hole_probe_expected_inside": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "hole_probe_actual_inside": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "open_or_nonmanifold_edges": 0,
+      "geometry_accepted": false,
+      "cad_created": true
+    },
+    {
+      "id": "spacer",
+      "prompt": "Hey cadmonkey, make me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+      "bbox_mm": [
+        40.0,
+        39.780799865722656,
+        12.0
+      ],
+      "volume_mm3": 2844.2061150342415,
+      "model": "k",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\models_20261018_173012_a4e6\\k_spacer",
+      "exit_code": 0,
+      "seconds": 1.886,
+      "reported_generation_tok_s": 218.7,
+      "inference_completed": true,
+      "expected_bbox_mm": [
+        20,
+        20,
+        12
+      ],
+      "expected_volume_mm3": 3430.619177720054,
+      "openscad_exit_code": 0,
+      "openscad_warnings": [],
+      "bbox_center_mm": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "max_relative_bbox_error": 1.0,
+      "relative_volume_error": 0.170935050586272,
+      "required_centering_met": true,
+      "hole_probe_expected_inside": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "hole_probe_actual_inside": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "open_or_nonmanifold_edges": 0,
+      "geometry_accepted": false,
+      "cad_created": true
+    },
+    {
+      "model": "zero",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\models_20261018_173055_d8b8\\zero",
+      "exit_code": 0,
+      "seconds": 25.936,
+      "prompt": "Generate CadQuery code for this shape.",
+      "reported_generation_tok_s": 175.6,
+      "inference_completed": true,
+      "cad_created": false,
+      "geometry_accepted": false,
+      "geometry_error": "SyntaxError: '(' was never closed (<unknown>, line 137)"
+    }
+  ],
+  "checks": [
+    {
+      "name": "k box inference",
+      "passed": true
+    },
+    {
+      "name": "k hole_plate inference",
+      "passed": true
+    },
+    {
+      "name": "k spacer inference",
+      "passed": true
+    },
+    {
+      "name": "zero views inference",
+      "passed": true
+    }
+  ],
+  "hardware": "NVIDIA RTX 4080 Laptop, 12282 MiB; native Windows",
+  "scope": "Small local quantized-model probe; not vendor benchmark reproduction or broad model ranking",
+  "acceptance": "K: bbox and volume within 1%, required centering, bore probes and closed STL. Zero: executable valid solid plus shape comparison required.",
+  "limits": [
+    "Q6_K Zero-to-CAD is a third-party conversion; this does not establish original BF16 quality",
+    "K-1B Q8_0 was not corrected by the agent; generated code preserved verbatim",
+    "Reported tok/s is the runtime generation metric, excluding loading; end-to-end seconds recorded separately",
+    "Specialized-model output is an unverified draft and must pass task-specific checks"
+  ]
+}

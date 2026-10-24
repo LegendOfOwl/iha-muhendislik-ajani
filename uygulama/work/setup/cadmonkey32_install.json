@@ -1,0 +1,190 @@
+{
+  "installed_utc": "2026-10-18T17:44:01.205921+00:00",
+  "repository": "ThomasTheMaker/cadmonkey-1b-data-32-gguf",
+  "revision": "bbdf3ec07e701885716ac8b188ecd6ff3e9eabed",
+  "model_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\cadmonkey-1b-data-32-q8_0.gguf",
+  "source_url": "https://huggingface.co/ThomasTheMaker/cadmonkey-1b-data-32-gguf/resolve/bbdf3ec07e701885716ac8b188ecd6ff3e9eabed/cadmonkey-1b-data-32-q8_0.gguf",
+  "bytes": 1069305984,
+  "sha256": "825d80c42cdd2779d16ead1879241acc19f73b1d14accf29c8bbde4cecb58b76",
+  "upstream_sha256_verified": true,
+  "architecture": "gemma3",
+  "quantization": "Q8_0",
+  "engineering_auto_use": false,
+  "status": "experimental; measured on three specifications",
+  "verified_inference": true,
+  "acceptance_by_mode": [
+    {
+      "model": "cadmonkey32",
+      "mode": "baseline",
+      "trials": 3,
+      "CAD_created": 3,
+      "accepted": 3,
+      "case_results": [
+        {
+          "case": "box",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "hole_plate",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "spacer",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "model": "cadmonkey32",
+      "mode": "training_prefix",
+      "trials": 3,
+      "CAD_created": 3,
+      "accepted": 3,
+      "case_results": [
+        {
+          "case": "box",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "hole_plate",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "spacer",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "model": "cadmonkey32",
+      "mode": "training_sampled",
+      "trials": 6,
+      "CAD_created": 6,
+      "accepted": 5,
+      "case_results": [
+        {
+          "case": "box",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "hole_plate",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "spacer",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "box",
+          "seed": 43,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "hole_plate",
+          "seed": 43,
+          "geometry_accepted": false,
+          "error": null
+        },
+        {
+          "case": "spacer",
+          "seed": 43,
+          "geometry_accepted": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "model": "cadmonkey32",
+      "mode": "explicit_rules",
+      "trials": 3,
+      "CAD_created": 3,
+      "accepted": 2,
+      "case_results": [
+        {
+          "case": "box",
+          "seed": 42,
+          "geometry_accepted": false,
+          "error": null
+        },
+        {
+          "case": "hole_plate",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        },
+        {
+          "case": "spacer",
+          "seed": 42,
+          "geometry_accepted": true,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "last_test_report": "outputs/reports/k_family_study.json",
+  "new_tasks_summary": {
+    "model": "cadmonkey32",
+    "trials": 6,
+    "accepted": 4
+  },
+  "usage_audit_summary": [
+    {
+      "model": "cadmonkey32",
+      "group": "upstream_demo",
+      "trials": 3,
+      "CAD_created": 2,
+      "geometry_accepted": null
+    },
+    {
+      "model": "cadmonkey32",
+      "group": "recipe_sampling",
+      "trials": 6,
+      "CAD_created": 6,
+      "geometry_accepted": 5
+    },
+    {
+      "model": "cadmonkey32",
+      "group": "no_output_suffix",
+      "trials": 6,
+      "CAD_created": 6,
+      "geometry_accepted": 2
+    },
+    {
+      "model": "cadmonkey32",
+      "group": "external_template",
+      "trials": 1,
+      "CAD_created": 1,
+      "geometry_accepted": 1
+    }
+  ],
+  "known_failures": [
+    "Offset hole position",
+    "Two-hole axis/placement",
+    "Unrequested cuts with some prompt variants"
+  ],
+  "use_policy": "Experimental text-to-OpenSCAD draft helper; verify each generated shape and engineering assumptions independently",
+  "reports": [
+    "outputs/reports/k_family_study.json",
+    "outputs/reports/k_family_new_tasks.json",
+    "outputs/reports/model_usage_audit.json"
+  ]
+}

@@ -1,0 +1,38 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11719-5aeac37a3
+model      : C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\cadmonkey-1b-data-32-q8_0.gguf
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> hey cadmonkey, create me a a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.
+// Rectangular plate with centered hole
+difference() {
+    cube([40, 30, 8], center = true);  // Main plate body
+    rotate([90, 0, 0])                    // Align cylinder along Z axis
+        cylinder(h = 50, d = 10, center = true);  // Central hole
+}
+
+[ Prompt: 2039.0 t/s | Generation: 196.1 t/s ]
+
+
+Exiting...

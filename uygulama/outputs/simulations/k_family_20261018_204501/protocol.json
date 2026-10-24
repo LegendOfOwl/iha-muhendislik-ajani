@@ -1,0 +1,92 @@
+{
+  "started_utc": "2026-10-18T17:45:02.317557+00:00",
+  "scope": "Three synthetic geometric specifications, not broad accuracy benchmark",
+  "models": {
+    "k1b": {
+      "revision": "5f900e8c388e2bbe2fe84b11fa6ee5911611bc5a",
+      "sha256": "8b0138e712ad33937e0657c226da510816715745adf859573333eae9a89c8b91"
+    },
+    "cadmonkey32": {
+      "revision": "bbdf3ec07e701885716ac8b188ecd6ff3e9eabed",
+      "sha256": "825d80c42cdd2779d16ead1879241acc19f73b1d14accf29c8bbde4cecb58b76"
+    }
+  },
+  "cases": [
+    {
+      "id": "box",
+      "prompt": "a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+      "bbox_mm": [
+        40,
+        30,
+        8
+      ],
+      "volume_mm3": 9600
+    },
+    {
+      "id": "hole_plate",
+      "prompt": "a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+      "bbox_mm": [
+        40,
+        30,
+        8
+      ],
+      "volume_mm3": 8971.68146928204
+    },
+    {
+      "id": "spacer",
+      "prompt": "a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+      "bbox_mm": [
+        20,
+        20,
+        12
+      ],
+      "volume_mm3": 3430.619177720054
+    }
+  ],
+  "modes": [
+    [
+      "baseline",
+      0.0,
+      [
+        42
+      ]
+    ],
+    [
+      "training_prefix",
+      0.0,
+      [
+        42
+      ]
+    ],
+    [
+      "training_sampled",
+      0.8,
+      [
+        42,
+        43
+      ]
+    ],
+    [
+      "explicit_rules",
+      0.0,
+      [
+        42
+      ]
+    ]
+  ],
+  "max_new_tokens": 1024,
+  "context_tokens": 4096,
+  "temperature_sampled": 0.8,
+  "top_p": 0.95,
+  "top_k": 64,
+  "sampled_repetition_penalty": 1.1,
+  "acceptance": "Unchanged original bounding-box/volume 1%, requested centering 0.001 mm, bore point probes and closed STL",
+  "rules": "Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.",
+  "limits": [
+    "Only three small part specifications",
+    "Two seeds for sampled setting; no statistical reliability claim",
+    "No human changes to generated code",
+    "These variants are exploratory and evaluated on the same cases",
+    "Loading and file-cache state are not controlled performance variables"
+  ]
+}

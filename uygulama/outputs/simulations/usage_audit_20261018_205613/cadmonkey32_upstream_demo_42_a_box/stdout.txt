@@ -1,0 +1,48 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11719-5aeac37a3
+model      : C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\cadmonkey-1b-data-32-q8_0.gguf
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Hey cadmonkey, make me a box
+// Simple 3D box model
+// Dimensions: 60mm x 40mm x 20mm
+
+// Outer box body
+difference() {
+    // Main box volume
+    cube([60, 40, 20], center = true);
+
+    // Hollow out the inside
+    translate([0, 0, 1])
+        cube([56, 36, 20], center = true);
+}
+
+// Optional lid
+translate([0, 0, 11])
+    cube([60, 40, 2], center = true);
+
+[ Prompt: 524.5 t/s | Generation: 218.8 t/s ]
+
+
+Exiting...

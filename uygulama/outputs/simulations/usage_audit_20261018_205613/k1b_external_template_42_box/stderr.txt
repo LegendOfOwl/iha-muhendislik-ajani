@@ -1,0 +1,17 @@
+0.00.095.588 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.095.902 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.111.861 I srv    load_model: loading model 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\k-1b-q8_0.gguf'
+0.00.673.800 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.125.812 I cmn          init: llama threadpool init, n_threads = 6
+0.01.166.782 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 4096, kv_unified = 'false'
+0.01.170.415 I srv  llama_server: model loaded
+0.01.170.579 I srv  llama_server: listening on http://127.0.0.1:51941
+0.01.322.226 I slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1
+0.01.322.290 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.01.541.184 I slot print_timing: id  0 | task 0 | prompt eval time =      33.74 ms /    52 tokens (    0.65 ms per token,  1541.01 tokens per second)
+0.01.541.188 I slot print_timing: id  0 | task 0 |        eval time =     185.12 ms /    40 tokens (    4.75 ms per token,   210.67 tokens per second)
+0.01.541.189 I slot print_timing: id  0 | task 0 |       total time =     218.87 ms /    92 tokens
+0.01.541.190 I slot print_timing: id  0 | task 0 |    graphs reused =         38
+0.01.541.193 I slot print_timing: id  0 | task 0 |   graph reallocs =          0    /     0        (same size) / (changed size)
+0.01.541.206 I slot      release: id  0 | task 0 | stop processing: n_tokens = 91, truncated = 0
+0.01.541.517 I srv    operator(): operator(): cleaning up before exit...

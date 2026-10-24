@@ -1,0 +1,42 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11719-5aeac37a3
+model      : C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\cadmonkey-1b-data-32-q8_0.gguf
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> hey cadmonkey, create me a a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code. Preserve all millimeter sizes exactly. Use d for a stated diameter, not r. Use difference to subtract through-holes. Use center=true on all axes when centered at the origin is requested. Return only OpenSCAD code.
+// 40 mm long, 30 mm wide, 8 mm high rectangular solid box
+// Centered at origin, no holes, all dimensions in mm
+
+difference() {
+    // Main solid box
+    cube([40, 30, 8], center=true);
+    
+    // Optional: small cylindrical hole through the length (comment out if not needed)
+    // cylinder(h=10, d=4, center=true, $fn=32);
+}
+
+[ Prompt: 3021.3 t/s | Generation: 220.5 t/s ]
+
+
+Exiting...

@@ -1,0 +1,29 @@
+0.00.089.185 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.089.501 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.098.626 I srv    load_model: loading model 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\Zero-To-CAD-Qwen3-VL-2B.Q6_K.gguf'
+0.00.542.892 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.100.042 I cmn          init: llama threadpool init, n_threads = 6
+0.01.101.039 W load_hparams: Qwen-VL models require at minimum 1024 image tokens to function correctly on grounding tasks
+0.01.101.042 W load_hparams: if you encounter problems with accuracy, try adding --image-min-tokens 1024
+0.01.101.043 W load_hparams: more info: https://github.com/ggml-org/llama.cpp/issues/16842
+
+0.01.696.644 I srv    load_model: loaded multimodal model, 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\tools\cad-model\Zero-To-CAD-Qwen3-VL-2B.mmproj-f16.gguf'
+0.01.741.487 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 8192, kv_unified = 'false'
+0.01.746.924 I srv  llama_server: model loaded
+0.01.746.929 I srv  llama_server: listening on http://127.0.0.1:54594
+0.01.998.910 I slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1
+0.01.998.958 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.05.353.650 I slot print_timing: id  0 | task 0 | n_gen =    577, tg = 191.90 t/s, tg_3s = 192.23 t/s
+0.08.359.565 I slot print_timing: id  0 | task 0 | n_gen =   1137, tg = 189.10 t/s, tg_3s = 186.30 t/s
+0.11.361.208 I slot print_timing: id  0 | task 0 | n_gen =   1677, tg = 186.03 t/s, tg_3s = 179.90 t/s
+0.14.366.172 I slot print_timing: id  0 | task 0 | n_gen =   2202, tg = 183.20 t/s, tg_3s = 174.71 t/s
+0.17.370.627 I slot print_timing: id  0 | task 0 | n_gen =   2713, tg = 180.58 t/s, tg_3s = 170.08 t/s
+0.20.371.651 I slot print_timing: id  0 | task 0 | n_gen =   3212, tg = 178.20 t/s, tg_3s = 166.28 t/s
+0.23.372.569 I slot print_timing: id  0 | task 0 | n_gen =   3699, tg = 175.92 t/s, tg_3s = 162.28 t/s
+0.25.884.594 I slot print_timing: id  0 | task 0 | prompt eval time =     353.11 ms /   584 tokens (    0.60 ms per token,  1653.88 tokens per second)
+0.25.884.600 I slot print_timing: id  0 | task 0 |        eval time =   23532.49 ms /  4096 tokens (    5.75 ms per token,   174.01 tokens per second)
+0.25.884.601 I slot print_timing: id  0 | task 0 |       total time =   23885.60 ms /  4680 tokens
+0.25.884.614 I slot print_timing: id  0 | task 0 |    graphs reused =       4078
+0.25.884.617 I slot print_timing: id  0 | task 0 |   graph reallocs =          0    /     0        (same size) / (changed size)
+0.25.884.664 I slot      release: id  0 | task 0 | stop processing: n_tokens = 4679, truncated = 0
+0.25.885.452 I srv    operator(): operator(): cleaning up before exit...
