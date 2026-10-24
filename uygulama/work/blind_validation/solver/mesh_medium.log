@@ -1,0 +1,21 @@
+Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\Urungu\\AppData\\Local\\matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Nurb)
+Info    : [ 20%] Meshing curve 2 (Nurb)
+Info    : [ 40%] Meshing curve 3 (Line)
+Info    : [ 60%] Meshing curve 4 (Line)
+Info    : [ 70%] Meshing curve 5 (Line)
+Info    : [ 90%] Meshing curve 6 (Line)
+Info    : Done meshing 1D (Wall 0.128553s, CPU 0.109375s)
+Info    : Meshing 2D...
+Info    : Meshing surface 1 (Plane, Frontal-Delaunay)
+Error   : Edge not recovered: 103 104 444444
+Info    : :-( There are 2 intersections in the 1D mesh (curves 444444 444444)
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\blind_validation\solver\mesh.py", line 141, in <module>
+    generate(sys.argv[1],float(sys.argv[2]) if len(sys.argv)>2 else 20.,gradient)
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\blind_validation\solver\mesh.py", line 73, in generate
+    gmsh.model.mesh.generate(2)
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\.venv-cad\Lib\site-packages\gmsh.py", line 2189, in generate
+    raise Exception(logger.getLastError())
+Exception: Edge not recovered: 103 104 444444

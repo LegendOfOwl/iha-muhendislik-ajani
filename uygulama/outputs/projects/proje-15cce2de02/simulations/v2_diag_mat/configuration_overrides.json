@@ -1,0 +1,57 @@
+{
+  "base_config": "outputs\\projects\\proje-15cce2de02\\simulations\\medium_far\\case.cfg",
+  "base_config_sha256": "d86c8bf5ce07cb84b4a729c24e45c6082a9826a6e0cbf6599047fb1e483b5b1b",
+  "config_sha256": "92a725f6265194b9b682051b3c6d2b9c469acf471249f8ceed91d9c771d97e10",
+  "physical_fields_unchanged": true,
+  "mesh_sha256": "e69f3de0951b7f274f7698bdea97f747f76bad265a4489d959d9133247e932c2",
+  "seed_source": "outputs\\projects\\proje-15cce2de02\\simulations\\medium_far\\restart_flow.dat",
+  "seed_source_sha256": "7858dc15349535d7bfd05cda7b77b169781d747f97a11835681f0ece07e9793f",
+  "overrides": {
+    "RESTART_SOL": {
+      "base": "NO",
+      "new": "YES"
+    },
+    "ITER": {
+      "base": "6000",
+      "new": "3000"
+    },
+    "CONV_NUM_METHOD_FLOW": {
+      "base": "JST",
+      "new": "JST_MAT"
+    },
+    "SOLUTION_FILENAME": {
+      "base": "restart_flow",
+      "new": "seed"
+    },
+    "WRT_RESTART_OVERWRITE": {
+      "base": "YES",
+      "new": "NO"
+    },
+    "WRT_SURFACE_OVERWRITE": {
+      "base": "YES",
+      "new": "NO"
+    },
+    "WRT_VOLUME_OVERWRITE": {
+      "base": "YES",
+      "new": "NO"
+    },
+    "READ_BINARY_RESTART": {
+      "base": null,
+      "new": "YES"
+    },
+    "ENTROPY_FIX_COEFF": {
+      "base": null,
+      "new": "0.05"
+    },
+    "CENTRAL_JACOBIAN_FIX_FACTOR": {
+      "base": null,
+      "new": "4.0"
+    },
+    "EXT_ITER_OFFSET": {
+      "base": null,
+      "new": "0"
+    }
+  },
+  "method_reference": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+  "numerical_rationale": "Test matrix JST dissipation on the same own flow/restart after scalar JST grid drag differences. No expected result or experimental target is used. ENTROPY_FIX0.05 is the lower documented recommended matrix range, held identical in JST control (inactive there). Jacobian fix4 and bounded adaptive CFL1..6 are unchanged."
+}

@@ -1,0 +1,320 @@
+{
+  "original_fine": {
+    "case": "v2_r2_fine",
+    "checkpoint": {
+      "iteration": 800,
+      "surface": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine\\surface_flow_000800.vtu",
+      "volume": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine\\flow_000800.vtu",
+      "restart": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine\\restart_flow_000800.dat",
+      "sha256": {
+        "surface_flow_000800.vtu": "8c02804188ea70bb44971192fa8be0a8cecdd5b7346491d9348c2db97a64181f",
+        "flow_000800.vtu": "eb754afc7697bb825f912d6bc8c31ec09efbe06892fe7e71e5a38e6a79656e25",
+        "restart_flow_000800.dat": "2fab74a954631881e4b340d37f83cd9251943105e5a04800de26e904b73f6e5c"
+      },
+      "history_last_iteration": 824.0,
+      "method": "Exact numeric suffix intersection surface/volume/restart plus matching history row; static overwritten files ignored."
+    },
+    "highest20_absolute_nodal_density_residuals": [
+      {
+        "x_m": 0.7455620169639587,
+        "y_m": -0.016777539625763893,
+        "absolute_density_residual": 0.011522999964654446,
+        "Mach": 0.024734774604439735,
+        "residual_nu_tilde": 9.281126214788493e-13
+      },
+      {
+        "x_m": 0.748203694820404,
+        "y_m": -0.016420964151620865,
+        "absolute_density_residual": 0.011224552057683468,
+        "Mach": 0.01635615900158882,
+        "residual_nu_tilde": 6.137045624292348e-13
+      },
+      {
+        "x_m": 0.7482037544250488,
+        "y_m": -0.016421552747488022,
+        "absolute_density_residual": 0.011178949847817421,
+        "Mach": 0.024595478549599648,
+        "residual_nu_tilde": 8.927565175835539e-13
+      },
+      {
+        "x_m": 0.745561957359314,
+        "y_m": -0.016776949167251587,
+        "absolute_density_residual": 0.01092100515961647,
+        "Mach": 0.01798642799258232,
+        "residual_nu_tilde": 6.405614428640904e-13
+      },
+      {
+        "x_m": 0.750845730304718,
+        "y_m": -0.016067156568169594,
+        "absolute_density_residual": 0.010915098711848259,
+        "Mach": 0.025526951998472214,
+        "residual_nu_tilde": 8.81034069484532e-13
+      },
+      {
+        "x_m": 0.7508456110954285,
+        "y_m": -0.016066566109657288,
+        "absolute_density_residual": 0.010206871666014194,
+        "Mach": 0.01673840545117855,
+        "residual_nu_tilde": 6.349394751289927e-13
+      },
+      {
+        "x_m": 0.7429205179214478,
+        "y_m": -0.01713513396680355,
+        "absolute_density_residual": 0.009987983852624893,
+        "Mach": 0.02607620507478714,
+        "residual_nu_tilde": 9.554281194326664e-13
+      },
+      {
+        "x_m": 0.7482044696807861,
+        "y_m": -0.016426831483840942,
+        "absolute_density_residual": 0.009977292269468307,
+        "Mach": 0.01989228092133999,
+        "residual_nu_tilde": -1.1805765783370892e-12
+      },
+      {
+        "x_m": 0.753487765789032,
+        "y_m": -0.015713738277554512,
+        "absolute_density_residual": 0.009840695187449455,
+        "Mach": 0.01596791110932827,
+        "residual_nu_tilde": 5.785122272720933e-13
+      },
+      {
+        "x_m": 0.742920458316803,
+        "y_m": -0.017134545370936394,
+        "absolute_density_residual": 0.009757071733474731,
+        "Mach": 0.016550881788134575,
+        "residual_nu_tilde": 6.557394059171495e-13
+      },
+      {
+        "x_m": 0.7508464455604553,
+        "y_m": -0.016072435304522514,
+        "absolute_density_residual": 0.009733599610626698,
+        "Mach": 0.01953529380261898,
+        "residual_nu_tilde": -8.908722826279913e-13
+      },
+      {
+        "x_m": 0.750846266746521,
+        "y_m": -0.016071299090981483,
+        "absolute_density_residual": 0.009715540334582329,
+        "Mach": 0.01936870999634266,
+        "residual_nu_tilde": -6.928836302454167e-13
+      },
+      {
+        "x_m": 0.7482043504714966,
+        "y_m": -0.01642569527029991,
+        "absolute_density_residual": 0.00934838317334652,
+        "Mach": 0.02235391177237034,
+        "residual_nu_tilde": -5.227506253389913e-13
+      },
+      {
+        "x_m": 0.7534884214401245,
+        "y_m": -0.015718471258878708,
+        "absolute_density_residual": 0.009251696057617664,
+        "Mach": 0.01932200975716114,
+        "residual_nu_tilde": -4.634846651439817e-13
+      },
+      {
+        "x_m": 0.7561301589012146,
+        "y_m": -0.015362458303570747,
+        "absolute_density_residual": 0.009189758449792862,
+        "Mach": 0.011801762506365776,
+        "residual_nu_tilde": 4.84512332598469e-13
+      },
+      {
+        "x_m": 0.7534878849983215,
+        "y_m": -0.01571432687342167,
+        "absolute_density_residual": 0.009170210920274258,
+        "Mach": 0.022471938282251358,
+        "residual_nu_tilde": 8.400710140542278e-13
+      },
+      {
+        "x_m": 0.7455629110336304,
+        "y_m": -0.01678408496081829,
+        "absolute_density_residual": 0.009072314947843552,
+        "Mach": 0.022606950253248215,
+        "residual_nu_tilde": -1.5956326971516832e-12
+      },
+      {
+        "x_m": 0.7534886002540588,
+        "y_m": -0.01571960747241974,
+        "absolute_density_residual": 0.008834588341414928,
+        "Mach": 0.02023365907371044,
+        "residual_nu_tilde": -8.723048325331995e-13
+      },
+      {
+        "x_m": 0.745562732219696,
+        "y_m": -0.016782818362116814,
+        "absolute_density_residual": 0.008808070793747902,
+        "Mach": 0.021916624158620834,
+        "residual_nu_tilde": -8.275582909916812e-13
+      },
+      {
+        "x_m": 0.7482038736343384,
+        "y_m": -0.01642221212387085,
+        "absolute_density_residual": 0.008764158934354782,
+        "Mach": 0.028460988774895668,
+        "residual_nu_tilde": 9.294968223924616e-13
+      }
+    ],
+    "scope": "Own native point residual field for spatial diagnosis, not experiment error or a proof of the unique numerical cause."
+  },
+  "low_CFL_continuation": {
+    "case": "v2_r2_fine_cfl1",
+    "checkpoint": {
+      "iteration": 3400,
+      "surface": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine_cfl1\\surface_flow_003400.vtu",
+      "volume": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine_cfl1\\flow_003400.vtu",
+      "restart": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine_cfl1\\restart_flow_003400.dat",
+      "sha256": {
+        "surface_flow_003400.vtu": "b703d2407eae4115416d4f5f4c5c11ac9dac3604dfc8873e2831b8d80c53b536",
+        "flow_003400.vtu": "43fd8bd4c4e5e66104c839bde2b72c04d9645d0832b0945724c7000715fbdc22",
+        "restart_flow_003400.dat": "072698ae66720076e832a09a94de2c2e47434e6bddc8617db0ea366209ded64e"
+      },
+      "history_last_iteration": 3468.0,
+      "method": "Exact numeric suffix intersection surface/volume/restart plus matching history row; static overwritten files ignored."
+    },
+    "highest20_absolute_nodal_density_residuals": [
+      {
+        "x_m": 0.513213038444519,
+        "y_m": -0.048953890800476074,
+        "absolute_density_residual": 6.463902991526993e-06,
+        "Mach": 0.010392192751169205,
+        "residual_nu_tilde": -4.856228351439668e-15
+      },
+      {
+        "x_m": 0.5132129788398743,
+        "y_m": -0.048953231424093246,
+        "absolute_density_residual": 6.3960987972677685e-06,
+        "Mach": 0.006542089860886335,
+        "residual_nu_tilde": -3.318006990105202e-15
+      },
+      {
+        "x_m": 0.5132131576538086,
+        "y_m": -0.04895462468266487,
+        "absolute_density_residual": 6.3599386521673296e-06,
+        "Mach": 0.014689684845507145,
+        "residual_nu_tilde": -6.3900737288103814e-15
+      },
+      {
+        "x_m": 0.5105648636817932,
+        "y_m": -0.049258261919021606,
+        "absolute_density_residual": 6.1143850871303584e-06,
+        "Mach": 0.006596566643565893,
+        "residual_nu_tilde": -2.7651445620258206e-15
+      },
+      {
+        "x_m": 0.5132129192352295,
+        "y_m": -0.04895263910293579,
+        "absolute_density_residual": 5.978145509288879e-06,
+        "Mach": 0.0030926407780498266,
+        "residual_nu_tilde": -1.7152176836300798e-15
+      },
+      {
+        "x_m": 0.5317386984825134,
+        "y_m": -0.04672509804368019,
+        "absolute_density_residual": 5.863361820956925e-06,
+        "Mach": 0.009803947061300278,
+        "residual_nu_tilde": 5.683298426193079e-15
+      },
+      {
+        "x_m": 0.510564923286438,
+        "y_m": -0.049258921295404434,
+        "absolute_density_residual": 5.855126801179722e-06,
+        "Mach": 0.010479278862476349,
+        "residual_nu_tilde": -4.106044304341477e-15
+      },
+      {
+        "x_m": 0.5132133364677429,
+        "y_m": -0.048956360667943954,
+        "absolute_density_residual": 5.8370483202452306e-06,
+        "Mach": 0.02484074980020523,
+        "residual_nu_tilde": -9.278313353895933e-15
+      },
+      {
+        "x_m": 0.5317388772964478,
+        "y_m": -0.04672665148973465,
+        "absolute_density_residual": 5.754212452302454e-06,
+        "Mach": 0.018382905051112175,
+        "residual_nu_tilde": 9.573982909629256e-15
+      },
+      {
+        "x_m": 0.5105651021003723,
+        "y_m": -0.04926047846674919,
+        "absolute_density_residual": 5.701711870642612e-06,
+        "Mach": 0.01964995078742504,
+        "residual_nu_tilde": -6.85424100764216e-15
+      },
+      {
+        "x_m": 0.513213574886322,
+        "y_m": -0.04895852133631706,
+        "absolute_density_residual": 5.684416464646347e-06,
+        "Mach": 0.03748708963394165,
+        "residual_nu_tilde": -1.1983315612051383e-14
+      },
+      {
+        "x_m": 0.5132544636726379,
+        "y_m": -0.04931141063570976,
+        "absolute_density_residual": 5.622765456791967e-06,
+        "Mach": 0.4450390338897705,
+        "residual_nu_tilde": -3.4903002254886573e-13
+      },
+      {
+        "x_m": 0.5132132172584534,
+        "y_m": -0.04895544797182083,
+        "absolute_density_residual": 5.609856543742353e-06,
+        "Mach": 0.019486773759126663,
+        "residual_nu_tilde": -7.894070935669274e-15
+      },
+      {
+        "x_m": 0.5317387580871582,
+        "y_m": -0.04672583192586899,
+        "absolute_density_residual": 5.597613835561788e-06,
+        "Mach": 0.013857480138540268,
+        "residual_nu_tilde": 7.581310796159202e-15
+      },
+      {
+        "x_m": 0.5105650424957275,
+        "y_m": -0.04925965517759323,
+        "absolute_density_residual": 5.576456715061795e-06,
+        "Mach": 0.014813070185482502,
+        "residual_nu_tilde": -5.443632147833369e-15
+      },
+      {
+        "x_m": 0.5105648040771484,
+        "y_m": -0.04925766959786415,
+        "absolute_density_residual": 5.549548404815141e-06,
+        "Mach": 0.0031185310799628496,
+        "residual_nu_tilde": -1.4067308253389054e-15
+      },
+      {
+        "x_m": 0.5132236480712891,
+        "y_m": -0.049045488238334656,
+        "absolute_density_residual": 5.523358140635537e-06,
+        "Mach": 0.340948224067688,
+        "residual_nu_tilde": -9.703960962418375e-15
+      },
+      {
+        "x_m": 0.5105652213096619,
+        "y_m": -0.049261391162872314,
+        "absolute_density_residual": 5.522578248928767e-06,
+        "Mach": 0.025049272924661636,
+        "residual_nu_tilde": -8.30894767323443e-15
+      },
+      {
+        "x_m": 0.5132593512535095,
+        "y_m": -0.0493534579873085,
+        "absolute_density_residual": 5.51959419681225e-06,
+        "Mach": 0.4534938931465149,
+        "residual_nu_tilde": -4.3027124289711505e-13
+      },
+      {
+        "x_m": 0.5158607363700867,
+        "y_m": -0.048645488917827606,
+        "absolute_density_residual": 5.514120402949629e-06,
+        "Mach": 0.010295764543116093,
+        "residual_nu_tilde": -4.762651116042328e-15
+      }
+    ],
+    "scope": "Own native point residual field for spatial diagnosis, not experiment error or a proof of the unique numerical cause."
+  }
+}

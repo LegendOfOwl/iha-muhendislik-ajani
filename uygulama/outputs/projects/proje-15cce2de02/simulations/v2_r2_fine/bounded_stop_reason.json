@@ -1,0 +1,11 @@
+{
+  "reason": "Density residual floor and force oscillation persisted in the own fine run; stop at a complete checkpoint before a single-policy low-CFL trial, rather than spend the full long budget. No physical condition or acceptance threshold changed.",
+  "requested_checkpoint": 800,
+  "native_pid": 15276,
+  "preserved_checkpoint_sha256": {
+    "flow_000800.vtu": "eb754afc7697bb825f912d6bc8c31ec09efbe06892fe7e71e5a38e6a79656e25",
+    "surface_flow_000800.vtu": "8c02804188ea70bb44971192fa8be0a8cecdd5b7346491d9348c2db97a64181f",
+    "surface_flow_000800.csv": "96b12f1dd8b548fcaaf6c1697ea54d2079562e66b80a4557cf8ed82d6a347f96",
+    "restart_flow_000800.dat": "2fab74a954631881e4b340d37f83cd9251943105e5a04800de26e904b73f6e5c"
+  }
+}

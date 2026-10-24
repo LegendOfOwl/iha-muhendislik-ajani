@@ -1,0 +1,542 @@
+<HTML>
+
+<HEAD>
+<TITLE> RAE 2822 Transonic Airfoil: Study #4 </TITLE>
+<style type="text/css">
+<!--
+.style1 {color: #800000;
+         text-decoration: underline; }
+.style2 {weight: bold}
+.style3 {color: #800000;}
+.style4 {font-size: smaller;}
+-->
+</style>
+
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" 
+  VLINK="#551A8B" ALINK="#FF0000">
+
+<!---------------------------------------------------------------------->
+<!...Heading Information...>
+
+<B>NPARC Alliance Validation Archive</B><BR>
+<B><A HREF="../../homepage.html">
+ Validation Home</A></B> &nbsp; <B> &gt; </B> &nbsp; 
+<B><A HREF="../../archive.html">
+ Archive</A></B> &nbsp; <B> &gt; </B> &nbsp; 
+<B><A HREF="../raetaf.html">
+  RAE 2822 Transonic Airfoil</A></B> &nbsp; <B> &gt; </B> &nbsp; 
+<B> Study #4 </B>
+
+<HR>
+
+<!---------------------------------------------------------------------->
+<!...Title...>
+
+
+<H2 align="center" class="style3"> RAE 2822 Transonic Airfoil: Study #4 </H2>
+
+<BR>
+
+
+<!---------------------------------------------------------------------->
+<!...Image...>
+
+<P align="center">
+<IMG SRC="mach2.jpg" BORDER=1 alt="Figure 1 is described in the surrounding text"><BR>
+    <B>Figure 1. The Mach number contours for the RAE 2822 
+       transonic airfoil.</B>  
+</P>
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Introduction</H3>
+
+<P> This study is an validation study that examines the accuracy of
+WIND for computing two-dimensional turbulent, transonic flows about an
+airfoil. The pressure coefficients obtained from the computation from
+WIND are compared to the values obtained by RAE as reported in Ref. 1.
+The values obtained from the NPARC validation study are also included
+in the comparison.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Grid</H3>
+
+<P> The grid is a single-block, two-dimensional C-grid with dimensions
+of 369 x 65.   It is contained in a <A
+HREF="../../plot3d.html">PLOT3D</A> grid file named <A
+HREF="raetaf.x.fmt">raetaf.x.fmt</A> (formatted, single-zone, 2D,
+whole).  The airfoil surface and wake are located at the J1 boundary.
+The I-coordinate starts at the lower downstream boundary, intersects
+the sharp trailing edge at I33, proceeds along the bottom of the
+airfoil, around the leading edge, downstream along the top of the
+airfoil, intersects the trailing edge again at I337, and continues to
+the outflow boundary.  The JMAX grid line is the farfield boundary of
+the flow domain. The grid is non-dimensionalized by the chord length.
+Since WIND requires dimensional quantities and assumes English
+Engineering units, the airfoil grid is assumed to have a chord of 1.0
+ft.  The grid normal to the airfoil surface is clustered about the
+airfoil surface to resolve the boundary layer on the airfoil. The first
+grid point off the wall is at a distance of 1.0E-05 ft from the airfoil
+surface.</P>
+
+<P> The CFCNVT utility is used to convert the PLOT3D grid file to the 
+common grid file format (.cgd) for WIND. This is done using the command</P>
+
+<BLOCKQUOTE>
+  <B>cfcnvt &lt; <A HREF="cfcnvt.x.com">cfcnvt.x.com</A></B>
+</BLOCKQUOTE>
+
+<P> where the file <A HREF="cfcnvt.x.com">cfcnvt.x.com</A> is a command
+input file. A common grid file named <A HREF="run.cgd">run.cgd</A> is
+created.  For simulating planar flows in WIND, the three-dimensional
+flow equations are applied.  This requires that the grid plane be in
+the z = 1.0 plane.  The CFCNVT utility creates the proper
+three-dimensional grid with KMAX = 1.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Boundary Conditions</H3>
+
+<P> The boundary conditions must now be specified for the grid and this
+is done with the GMAN utility. First, the boundary condition types are
+summarized. A <B>VISCOUS WALL</B> boundary condition is applied at the
+J1 boundary at the airfoil surface, which extends from I33 to I337.
+The J1 boundary from I1 to I32 is coupled to the J1 boundary from I338
+to IMAX (I369) to form the wake region. An <B>FREESTREAM</B> boundary
+condition is applied at the JMAX boundary, which should all be subsonic
+inflow at the freestream conditions.  The I1 and IMAX boundaries are
+specified as <B>OUTFLOW</B> boundaries which allows the static pressure 
+to be directly specified and is assumed to be equal to the freestream 
+pressure.</P>
+
+<P> The boundary conditions can be set either by running GMAN in an 
+interactive mode or by creating an input data file and running GMAN 
+in batch mode.   Here the input data file <A HREF="gman.com">gman.com</A> 
+was created and GMAN was executed as</P>
+
+<BLOCKQUOTE>
+  <B>gman &lt;</B> <A HREF="gman.com">gman.com</A>
+</BLOCKQUOTE>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Computation Strategy</H3>
+
+<P> The computation is performed using the time-marching capabilities
+of WIND to march to a steady-state (time asymptotic) solution.  Local 
+time stepping is used at each iteration.  The time-marching is performed 
+until iterative convergence is achieved.  The convergence criteria was 
+the lift and drag integrated over the airfoild surface.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Input Parameters and Files</H3>
+
+<P> The input data file is read by WIND at startup to provide WIND with
+information on performing the simulation.  Two different input data
+files are available that differ by choice of turbulence models. The
+input data file <A HREF="run.sa.dat">run.sa.dat</A> uses the
+Spalart-Allmaras turbulence model. The input data file <A
+HREF="run.sst.dat">run.sst.dat</A> uses the SST turbulence model.  The
+<B>freestream</B> keyword indicates that the static freestream flow
+conditions are specified as Mach number, pressure (psia), temperature
+(R), angle-of-attack (degrees), and angle-of-sideslip (degrees) as
+listed in Table 1.  The <B>downstream pressure</B> keyword indicates
+that the freestream static pressure is to be used at the OUTFLOW
+boundaries.  The <B>turbulence model</B> keyword indicates which
+urbulence model is to be used.  The <B>implicit boundary</B> keyword
+indicates that implicit boundary conditions are applied on the viscous
+walls.  The <B>dq limiter</B> keyword indicates that changes in the
+solution over an iteration are limited in order to avoid instabilities
+due to large transients.  The <B>loads</B> keyword indicates that the
+lift on the airfoil is to be integrated every 10 iterations and
+displayed in the list file.  This will be used to evaluate the
+convergence of the solution. The <B>converge order</B> keyword
+indicates that the computation will stop if the L2 norm of the solution
+drops by 9 orders-of-magnitude.  The <B>cycles</B> keyword indicates
+that 500 cycles will be run.  The <B>iterations per cycle</B> keyword
+indicates that 10 iterations will be run per cycle and residual
+information will be written to the output list file every 5
+iterations.  The <B>cfl</B> keyword indicates that a CFL number of 5.0
+will be used.  By default, WIND uses local CFL number to determine the
+time-step size.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Initial Conditions</H3>
+
+<P> This study assumes freestream flow conditions as summarized in
+Table 1 below.  These conditions correspond to a Reynolds number of 6.5
+million based on the chord length of 1.0 ft.  The static pressure was
+computed based on the specified Reynolds number and Mach number and an
+assumed value of static temperature.</P>
+
+<TABLE BORDER CELLPADDING=7 align="center">
+<CAPTION><B>Table 1. Freestream conditions.</B></CAPTION>
+
+<TR>
+<TH scope="col">Mach number</TH>
+<TH>Static Pressure (psia)</TH>
+<TH>Temperature(R)</TH>
+<TH>Angle-of-Attack (deg)</TH>
+</TR>
+
+<TR>
+<TD scope="row"> 0.729 </TD>
+<TD> 15.80734 </TD>
+<TD> 460.0 </TD>
+<TD> 2.31 </TD>
+</TR>
+</TABLE>
+
+<P> The computational flow field is initialized with uniform flow
+corresponding to these freestream conditions.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Computation</H3>
+
+<P> The WIND solver is run by invoking the <B>wind</B> script.  Further
+details and options for the <B>wind</B> script can be found in the WIND
+documentation 
+(<A HREF="http://www.lerc.nasa.gov/WWW/winddocs/user/scripts.html">wind
+script</A>).</P>
+
+<P> As WIND runs, an output list file is created which contains the
+output from the computation and lists the residual information for both
+the flow equations and the turbulence model equations for each
+iteration.  The integrated lift is also output every 10 iterations.</P>
+
+<P> The output list files for the runs with the Spalart-Allmaras and
+SST turbulence models are <A HREF="run.sa.lis">run.sa.lis</A> and <A
+HREF="run.sst.lis">run.sst.lis</A>, respectively.</P>
+
+<P> The flow field solution at the final iteration is output to the
+flow data file.  The flow data files for the runs with the
+Spalart-Allmaras and SST turbulence models are <A
+HREF="run.sa.cfl">run.sa.cfl</A> and <A
+HREF="run.sst.cfl">run.sst.cfl</A>, respectively.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Convergence</H3>
+
+<P> There are several ways to examine the convergence of the solution.
+The RESPLT utility is used for these to read information from the
+output list file (*.lis).  First the L2 norm of the residual of the
+conservation variables (change over a time step) can be read from the
+list file,</P>
+
+<BLOCKQUOTE>
+  <B>resplt &lt;</B> <A HREF="resplt.nsl2.com">resplt.nsl2.com</A>
+</BLOCKQUOTE>
+
+<P> The file <A HREF="resplt.nsl2.com">resplt.nsl2.com</A> is a command
+file containing the inputs for RESPLT to output the GENPLOT formatted
+plot data file named <A HREF="nsl2.gen">nsl2.gen</A> of the residuals
+as a function of the iterations.  This file can be plotted using
+CFPOST,</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.nsl2.com">cfpost.nsl2.com</A>
+</BLOCKQUOTE>
+
+<P> where the file <A HREF="cfpost.nsl2.com">cfpost.nsl2.com</A> is a command
+file containing the inputs for CFPOST.  Fig. 2 shows the solution residual 
+that is displayed by CFPOST.</P>
+
+<P align="center"><IMG SRC="nsl2.jpg" BORDER=1 alt="Figure 2 is described in the surrounding text">
+<br><B>Figure 2. Plot of the L2 solution residual history.</B></p>
+
+<P> The convergence information for the Spalart-Allmaras turbulence variable can 
+be obtained from the list file using RESPLT,</P> 
+
+<BLOCKQUOTE>
+  <B>resplt &lt;</B> <A HREF="resplt.sal2.com">resplt.sal2.com</A>
+</BLOCKQUOTE>
+
+<P> The file <A HREF="resplt.sal2.com">resplt.sal2.com</A> is a command
+file containing the inputs for RESPLT to output the GENPLOT formatted
+plot data file named <A HREF="sal2.gen">sal2.gen</A> of the residuals
+as a function of the iterations.  This file can be plotted using
+CFPOST,</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.sal2.com">cfpost.sal2.com</A>
+</BLOCKQUOTE>
+
+<P> where the file <A HREF="cfpost.sal2.com">cfpost.sal2.com</A> is a
+command file containing the inputs for CFPOST.  Fig. 3 shows the
+turbulence residual that is displayed by CFPOST.</P>
+
+<P align="center"><IMG SRC="sal2.jpg" BORDER=1 alt="Figure 3 is described in the surrounding text"> 
+<br><B>Figure 3. Plot of the L2 turbulence residual history.</B></p>
+
+<P> A more significant indicator of solution convergence is to examine
+the convergence of the engineering quantity to be obtained from the
+analysis.  Here it is lift and drag on the airfoil.  The <B>loads</B>
+keyword in the input data file outputs this information into the output
+list file.  RESPLT is used to read this information and create plot
+files,</P>
+
+<BLOCKQUOTE>
+  <B>resplt &lt;</B> <A HREF="resplt.liftconv.com">resplt.liftconv.com</A>
+</BLOCKQUOTE>
+
+<P> The file <A HREF="resplt.liftconv.com">resplt.liftconv.com</A> is a
+command file containing the inputs for RESPLT to output the GENPLOT
+formatted plot data file named <A HREF="liftconv.gen">liftconv.gen</A>
+of the residuals as a function of the iterations.  This file can be
+plotted using CFPOST,</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.liftconv.com">cfpost.liftconv.com</A>
+</BLOCKQUOTE>
+
+<P> where the file <A
+HREF="cfpost.liftconv.com">cfpost.liftconv.com</A> is a command file
+containing the inputs for CFPOST. CFPOST will display in sequence the
+plots for drag, lift, and z-direction force.  Fig. 4 and 5 shows the
+convergence of the drag and lift as displayed by CFPOST.</P>
+
+<P align="center"><IMG SRC="drag.jpg" BORDER=1 alt="Figure 4 is described in the surrounding text">
+<br><B>Figure 4. Convergence of the sectional drag on the airfoil 
+with iterations.</B></p>
+
+<P align="center"><IMG SRC="lift.jpg" BORDER=1 alt="Figure 5 is described in the surrounding text">
+<br><B>Figure 5. Convergence of the sectional lift on the airfoil 
+with iterations.</B></P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Post-Processing</H3>
+
+<P> The CFPOST utility can be used to generate engineering information 
+from the the data files.</P>  
+
+<P> <B>PLOT3D Files</B>.  The PLOT3D files can be obtained using CFPOST</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.plot3d.com">cfpost.plot3d.com</A><BR>
+</BLOCKQUOTE>
+
+<P> The PLOT3D grid and solution files created are named run.x and
+run.q, respectively.  Both are unformatted, whole, 3D, and
+single-block.</P>
+
+<P> <B>Mach Number Contours</B>. A contour plot of the Mach number
+about the airfoil as shown in Fig. 6 can be generated using CFPOST</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.mach.com">cfpost.mach.com</A><BR>
+</BLOCKQUOTE>
+
+<P align="center"><IMG SRC="mach1.jpg" BORDER=1 alt="Figure 6 is described in the surrounding text">
+<br><B>Figure 6. The Mach number contours near the RAE 2822 
+transonic airfoil.</B></p>
+
+<P> <B>Static Pressure Contours</B>. A contour plot of the static
+pressure about the airfoil as shown in Fig. 7 can be generated using
+CFPOST</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.pres.com">cfpost.pres.com</A><BR>
+</BLOCKQUOTE>
+
+<P align="center"><IMG SRC="pres.jpg" BORDER=1 alt="Figure 7 is described in the surrounding text">
+<br><B>Figure 7. The static pressure contours near the RAE 2822 
+transonic airfoil.</B></p>
+
+
+<P> <B>Pressure Coefficients On the Airfoil</B>. For an airfoil
+calculation, one piece of important information is the distribution of
+pressure coefficients on the airfoil.  CFPOST can directly output and
+plot this information,</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.cp.com">cfpost.cp.com</A>
+</BLOCKQUOTE>
+
+<P> where <A HREF="cfpost.cp.com">cfpost.cp.com</A> is the command
+input file for CFPOST.  A GENPLOT file named <A
+HREF="cp.wind.gen">cp.wind.gen</A> is created and plotted.  The
+pressure coefficient is negative for pressures less than freestream,
+which occurs on the top of the airfoil.  In plots of pressure
+coefficients for airfoils, the negative of the pressure coefficient is
+usually plotted to indicate that the lower pressure region is on the
+top of the airfoil and the high pressure region is on the bottom of the
+airfoil.  This is done in the CFPOST command file <A
+HREF="cfpost.cp.com">cfpost.cp.com</A>.</P>
+
+<P> Pressure coefficient data from a wind tunnel experiment is
+available for comparison and is in the GENPLOT file <A
+HREF="cp.exp.gen">cp.exp.gen</A>. </P> 
+
+<P> Figure 8 presents the comparison between the experimental data and
+WIND.  Reference 1 indicates that the experimental error in measuring
+the static pressure coefficient was approximately 0.0026.  This small
+of error is much smaller than the circle representing the data point,
+and so, is not plotted.  The &quot;WIND&quot; results plotted are those obtained
+using the Spalart-Allmaras turbulence model.  Also plotted are the
+results from earlier computations using the NPARC code, which are
+contained in the GENPLOT file <A HREF="cp.nparc.gen">cp.nparc.gen</A>.</P>
+
+<P align="center"><IMG SRC="cp.jpg" BORDER=1 alt="Figure 8 is described in the surrounding text">
+<br><B>Figure 8. Plot of the pressure coefficients on the airfoil. 
+</B></p>
+
+
+<P> <B>Airfoil Forces</B>.  For an airfoil calculation, another piece
+of important information is the forces on the airfoil which result from
+pressure and skin-friction.  CFPOST can be used to integrate these
+forces over the surface of the airfoil,</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.forces.com">cfpost.forces.com</A>
+</BLOCKQUOTE>
+
+<P> where <A HREF="cfpost.forces.com">cfpost.forces.com</A> is the
+command input file for CFPOST.  A list file named <A
+HREF="forces.lis">forces.lis</A> is created in which the force
+information is printed.</P>
+
+
+<P> <B>Skin Friction Coefficients On the Airfoil</B>. The skin friction
+coefficients along the surface of the airfoil can be computed,</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.cf.com">cfpost.cf.com</A>
+</BLOCKQUOTE>
+
+<P> where <A HREF="cfpost.cf.com">cfpost.cf.com</A> is the
+command input file for CFPOST.  A GENPLOT file named <A
+HREF="cf.wind.gen">cf.wind.gen</A> is created in which the skin 
+friction coefficients are listed.</P>
+
+
+<P> <B>Boundary Layers</B>.  For a viscous computation, it is useful to
+examine how well the boundary layers were resolved.  One measure of
+this is the y+ values at the grid points in the boundary layers.  The
+list file <A HREF="forces.lis">forces.lis</A> does contain information
+on the y+ values throughout the grid. The analysis indicates that the
+average y+ value of the first point off the wall is less than 2.0. To
+examine the boundary layer at a certain location, CFPOST can be used.</P>
+
+<BLOCKQUOTE>
+  <B>cfpost &lt;</B> <A HREF="cfpost.blan.com">cfpost.blan.com</A>
+</BLOCKQUOTE>
+
+<P> The file <A HREF="cfpost.blan.com">cfpost.blan.com</A> is a command
+file which writes out the x and y coordinates, u-velocity, v-velocity,
+and temperature at I250, which is on the top of the airfoil just before 
+the trailing edge <A HREF="blan.gen">blan.gen</A>. </P>  
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Comparisons of the Results</H3>
+
+<P> Figure 8 shows the comparisons of the computed surface pressure
+coefficients with NPARC and experimental results.  The WIND results
+follow the trend of the NPARC results with a slight improvement in the
+capture of the shock on the upper surface.</P>
+
+<P align="center"><IMG SRC="cp2.jpg" BORDER=1 alt="Figure 9 is described in the surrounding text">
+<br><B>Figure 9. Comparison of static pressure distributions for 
+the various versions of WIND.  
+</B>
+</p>
+
+<!---------------------------------------------------------------------->
+<H3 class="style3">Sensitivity Studies</H3>
+
+<P> No sensitivity studies were performed.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style3">Performance</H3>
+
+<P>  The computations were performed on a Silicon Graphics Octane using 
+a single R12000 300 MHZ processor.  The computation of 500 cycles using 
+version 5.0 with the Spalart-Allmaras turbulence model required 7280 
+CPU seconds.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style3">Download tar File</H3>
+
+<P> Most of the smaller files of this
+validation case (this does not include the grid, output 
+list, and solution files) are available in the Unix compressed tar file
+<A HREF="raetaf04.tar.Z"> raetaf04.tar.Z</A>.
+The files can then be accessed by the commands</P>
+
+<BLOCKQUOTE> 
+<B>uncompress <A HREF="raetaf04.tar.Z"> raetaf04.tar.Z</A></B><BR>
+<B>tar -xvof raetaf04.tar</B><BR>
+</BLOCKQUOTE>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">References</H3>
+
+<P> 1. Cook, P.H., M.A. McDonald, M.C.P. Firmin, &quot;Aerofoil RAE 2822 - Pressure 
+Distributions, and Boundary Layer and Wake Measurements,&quot; <I>Experimental 
+Data Base for Computer Program Assessment</I>, AGARD Report AR 138, 1979.</P>
+
+
+<!---------------------------------------------------------------------->
+<h3 class="style1">Contact Information</h3>
+
+<P> This study was created on May 3, 2002 
+by <A HREF="mailto:John.W.Slater@grc.nasa.gov" >
+John W. Slater</A>, who may be contacted at</P>
+
+<BLOCKQUOTE>
+   NASA John H. Glenn Research Center, MS 86-7 <BR>
+   21000 Brookpark Road <BR>
+   Brook Park, Ohio  44135 <BR>
+   Phone: (216) 433-8513 <BR>
+   e-mail: <A HREF="mailto:John.W.Slater@grc.nasa.gov" > 
+      John.W.Slater@grc.nasa.gov</A>
+</BLOCKQUOTE>
+
+
+<!---------------------------------------------------------------------->
+<hr>
+<span style="font-weight: bold;">Last Updated:</span> Wednesday, 10-Feb-2021 09:38:58 EST<br>
+
+
+
+
+<div id="footer">
+
+<!-- <img src="images/nasa_logo.gif" class="right"
+      width= "50" height="40" alt="NASA meatball" />
+-->
+
+<div>
+  <span style="font-weight: bold;">Responsible NASA Official/Curator:</span> 
+      <a href="mailto:john.w.slater@nasa.gov">John W. Slater</a>
+</div>
+
+<span><span style="font-weight: bold;">Web Policies: </span>
+      <a href="http://www.grc.nasa.gov/Doc/grcwebpolicies.html">Web Privacy Policy and Important Notices</a></span><br />
+		<span style="font-weight: bold;">Adobe Reader Download: </span>  
+        <a href="http://www.adobe.com/products/acrobat/readstep2.html" title="Go to Adobe Web Site">
+        Adobe Reader</a>
+<!-- <span class="notprinted"><span style="font-weight: bold;">Adobe Reader Download: </span>  
+        <a href="http://www.adobe.com/products/acrobat/readstep2.html" title="Go to Adobe Web Site">
+        Adobe Reader</a>
+</span> -->
+
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script language="javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GRC"></script>
+
+
+</div>
+
+</BODY>
+</HTML>

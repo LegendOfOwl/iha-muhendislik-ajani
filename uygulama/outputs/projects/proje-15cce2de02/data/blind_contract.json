@@ -1,0 +1,31 @@
+{
+  "frozen_before_analysis": "2026-10-19T09:21:55.853859+00:00",
+  "geometry_sha256": {
+    "conditions.json": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141",
+    "geom.f90": "631d2d0be0b2cb9fa87dc2bf49f4f65a658794115a5649b0f68749312f33700e",
+    "geom.txt": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736",
+    "yl.pts": "489788cbe97237ef24b3e2bdc8737209cc56daf02f613dbd324ba79a0e85e9ed",
+    "yu.pts": "810900b8646f16dbc2b93d9773529b086818e0e38276891442b7d5f498605a3b"
+  },
+  "scope": "2D RAE2822 Case6 corrected computational-condition benchmark; no 3D M6 or UAV acceptance",
+  "minimum_numerical": {
+    "density_log10_max": -8,
+    "force_window_iterations": 200,
+    "CL_tail_range_max": 5e-05,
+    "CD_tail_range_max": 2e-06,
+    "max_wall_yplus": 1.0,
+    "CL_finest_grid_relative_change_max": 0.005,
+    "CD_finest_grid_relative_change_max": 0.02,
+    "Cp_finest_grid_RMSE_max": 0.01,
+    "CL_farfield_relative_change_max": 0.0025,
+    "CD_farfield_relative_change_max": 0.01
+  },
+  "experimental_Cp": {
+    "pointwise_RMSE_max": 0.03,
+    "per_side_RMSE_max": 0.04,
+    "p95_absolute_error_max": 0.06,
+    "max_absolute_error_max": 0.15,
+    "shock_location_abs_error_chords_max": 0.02
+  },
+  "note": "Local strict qualification contract, not NASA-prescribed universal thresholds. No loosening after seeing errors. Shared filesystem restrictions are procedural, not security isolation; memorization cannot be excluded."
+}

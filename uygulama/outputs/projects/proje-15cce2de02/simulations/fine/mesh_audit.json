@@ -1,0 +1,73 @@
+{
+  "name": "fine",
+  "geometry_sha256": {
+    "conditions.json": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141",
+    "geom.f90": "631d2d0be0b2cb9fa87dc2bf49f4f65a658794115a5649b0f68749312f33700e",
+    "geom.txt": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736",
+    "yl.pts": "489788cbe97237ef24b3e2bdc8737209cc56daf02f613dbd324ba79a0e85e9ed",
+    "yu.pts": "810900b8646f16dbc2b93d9773529b086818e0e38276891442b7d5f498605a3b"
+  },
+  "curve_definition": "Gmsh built-in interpolating splines through ALL signed published 65 lower and 65 upper ordinates; shared LE/TE; no analytic airfoil replacement",
+  "curve_definition_sha256": "235fcdbeaf995fa370e51cb4784ec9ac09e7299699d5908d0a1a6ea821c67d34",
+  "source_points_max_deviation_m": 1.1150912609939193e-16,
+  "chord_m": 1.0,
+  "farfield_bounds_m": [
+    -20.0,
+    20.0,
+    -20.0,
+    20.0
+  ],
+  "nodes": 94462,
+  "cells": 108705,
+  "element_counts": {
+    "Triangle 3": 29985,
+    "Quadrilateral 4": 78720
+  },
+  "wall_nodes_per_side": 406,
+  "wall_first_layer_design_m": 5.333333333333333e-07,
+  "wall_first_node_design_yplus": 0.156,
+  "BL_growth": 1.1155555555555556,
+  "BL_thickness_m": 0.01,
+  "BL_design_layers": 71,
+  "positive_signed_areas": true,
+  "area_min_m2": 1.1926042155833804e-14,
+  "min_scaled_jacobian": 0.6419400838040614,
+  "min_inverse_condition": 0.00040026750176651033,
+  "equiangle_skewness_max": 0.9575990716232677,
+  "center_face_nonorthogonality_max_deg": 85.05534503496774,
+  "regions": {
+    "LE": {
+      "cells": 14545,
+      "sqrt_area_min_m": 1.089337044303076e-05,
+      "sqrt_area_median_m": 0.00012946543787276842,
+      "sqrt_area_max_m": 0.009774878353817304
+    },
+    "TE": {
+      "cells": 18152,
+      "sqrt_area_min_m": 1.0920641993872797e-07,
+      "sqrt_area_median_m": 0.00015088909210646658,
+      "sqrt_area_max_m": 0.011318576302945948
+    },
+    "near_wall": {
+      "cells": 84121,
+      "sqrt_area_min_m": 1.089337044303076e-05,
+      "sqrt_area_median_m": 0.0002290809130992329,
+      "sqrt_area_max_m": 0.009273836919933246
+    },
+    "wake": {
+      "cells": 7183,
+      "sqrt_area_min_m": 1.0920641993872797e-07,
+      "sqrt_area_median_m": 0.010111181329611474,
+      "sqrt_area_max_m": 0.16199331941572517
+    }
+  },
+  "gradient_refinement_from_own_solution": {
+    "upper": 0.5178287625312805
+  },
+  "wall_nodes_per_source_curve": [
+    576,
+    521
+  ],
+  "boundary_linear_edge_to_same_spline_max_sample_deviation_m": 2.576302676305133e-05,
+  "boundary_deviation_sampling": "25%,50%,75% same parameter within every linear boundary edge; spline control points audited by Newton-refined inverse"
+}

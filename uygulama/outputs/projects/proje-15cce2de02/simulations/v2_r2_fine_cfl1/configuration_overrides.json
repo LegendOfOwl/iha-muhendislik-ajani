@@ -1,0 +1,33 @@
+{
+  "base_config": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine\\case.cfg",
+  "base_config_sha256": "04a9b6ddd636bc805b1bddbff9a34ccbdcc7a122839653adfa5c0d9122814d0e",
+  "config_sha256": "2d9a6b11acce72a9f651b855364b18b6913e6ff9b4d0d82b246eb8da134f6192",
+  "physical_fields_unchanged": true,
+  "mesh_sha256": "04504fb57efeae3644a80a4af4478b0465b186bb140e8495a4ca7feab00720af",
+  "seed_source": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine\\restart_flow_000800.dat",
+  "seed_source_sha256": "2fab74a954631881e4b340d37f83cd9251943105e5a04800de26e904b73f6e5c",
+  "overrides": {
+    "CFL_NUMBER": {
+      "base": "6.0",
+      "new": "1.0"
+    },
+    "CFL_ADAPT": {
+      "base": "YES",
+      "new": "NO"
+    },
+    "ITER": {
+      "base": "8000",
+      "new": "4000"
+    },
+    "SCREEN_OUTPUT": {
+      "base": "( INNER_ITER, RMS_DENSITY, RMS_NU_TILDE, LIFT, DRAG )",
+      "new": "( INNER_ITER, RMS_DENSITY, RMS_NU_TILDE, LIFT, DRAG, MIN_CFL, MAX_CFL, LINSOL_RESIDUAL )"
+    },
+    "HISTORY_OUTPUT": {
+      "base": "( ITER, RMS_RES, AERO_COEFF )",
+      "new": "( ITER, RMS_RES, AERO_COEFF, CFL_NUMBER, LINSOL )"
+    }
+  },
+  "method_reference": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+  "numerical_rationale": "Test matrix JST dissipation on the same own flow/restart after scalar JST grid drag differences. No expected result or experimental target is used. ENTROPY_FIX0.05 is the lower documented recommended matrix range, held identical in JST control (inactive there). Jacobian fix4 and bounded adaptive CFL1..6 are unchanged."
+}

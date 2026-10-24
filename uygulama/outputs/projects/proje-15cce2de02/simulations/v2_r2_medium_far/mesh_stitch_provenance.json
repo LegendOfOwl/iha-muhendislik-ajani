@@ -1,0 +1,12 @@
+{
+  "base200_mesh": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium\\mesh.su2",
+  "base200_sha256": "7f3958c21ecb78f6289afaabe9dc34279c308d2d2b00351b5b493b3f89e2b6ae",
+  "source400_unstitched_sha256": "15966174823c4e9f63012fe3655342abe8f8d50ac0463240b98b18227f810182",
+  "selected400_mesh_sha256": "a983b63aabae3bcd06b8552d1a9cef56b58b53ea3159a530eece93a1e3c4774f",
+  "inner200_cells_preserved_exactly": 50469,
+  "outer400_cells": 9158,
+  "exact_shared_interface_nodes": 100,
+  "source_coordinates_moved": false,
+  "geometry_curve_hash_unchanged": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+  "reason": "Gmsh global generation produced small internal triangulation differences despite same sizing and conformal20c interface; joining exact inner cells makes the farfield comparison independent of those interior differences. Both original generated far mesh and selected stitched solver mesh retained."
+}

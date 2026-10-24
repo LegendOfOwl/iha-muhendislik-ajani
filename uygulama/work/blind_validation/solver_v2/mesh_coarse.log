@@ -1,0 +1,103 @@
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Nurb)
+Info    : [ 20%] Meshing curve 2 (Nurb)
+Info    : [ 30%] Meshing curve 3 (Line)
+Info    : [ 40%] Meshing curve 4 (Line)
+Info    : [ 50%] Meshing curve 5 (Line)
+Info    : [ 60%] Meshing curve 6 (Line)
+Info    : [ 70%] Meshing curve 7 (Line)
+Info    : [ 80%] Meshing curve 8 (Line)
+Info    : [ 90%] Meshing curve 9 (Line)
+Info    : [100%] Meshing curve 10 (Line)
+Info    : Done meshing 1D (Wall 0.11376s, CPU 0.078125s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.485237s, CPU 0.421875s)
+Info    : 21748 nodes 26929 elements
+Info    : Writing 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\projects\proje-15cce2de02\simulations\v2_coarse\mesh.su2'...
+Info    : Writing 26170 elements and 21622 nodes
+Info    : Done writing 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\projects\proje-15cce2de02\simulations\v2_coarse\mesh.su2'
+Info    : Writing 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\projects\proje-15cce2de02\simulations\v2_coarse\mesh.msh'...
+Info    : Done writing 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\projects\proje-15cce2de02\simulations\v2_coarse\mesh.msh'
+{
+  "name": "v2_coarse",
+  "geometry_sha256": {
+    "conditions.json": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141",
+    "geom.f90": "631d2d0be0b2cb9fa87dc2bf49f4f65a658794115a5649b0f68749312f33700e",
+    "geom.txt": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736",
+    "yl.pts": "489788cbe97237ef24b3e2bdc8737209cc56daf02f613dbd324ba79a0e85e9ed",
+    "yu.pts": "810900b8646f16dbc2b93d9773529b086818e0e38276891442b7d5f498605a3b"
+  },
+  "curve_definition": "Gmsh built-in interpolating splines through ALL signed published 65 lower and 65 upper ordinates; shared LE/TE; no analytic airfoil replacement",
+  "curve_definition_sha256": "235fcdbeaf995fa370e51cb4784ec9ac09e7299699d5908d0a1a6ea821c67d34",
+  "source_points_max_deviation_m": 1.1168440202394181e-16,
+  "chord_m": 1.0,
+  "farfield_bounds_m": [
+    -200.0,
+    200.0,
+    -200.0,
+    200.0
+  ],
+  "nodes": 21748,
+  "cells": 26170,
+  "element_counts": {
+    "Triangle 3": 9651,
+    "Quadrilateral 4": 16519
+  },
+  "wall_nodes_per_side": "actual counts are wall_nodes_per_source_curve",
+  "wall_first_layer_design_m": 1.2e-06,
+  "wall_first_node_design_yplus": 0.351,
+  "BL_growth": 1.26,
+  "BL_thickness_m": 0.01,
+  "BL_design_layers": 34,
+  "positive_signed_areas": true,
+  "area_min_m2": 1.3518526882989103e-13,
+  "min_scaled_jacobian": 0.6134969322018571,
+  "min_inverse_condition": 0.0004000752747865974,
+  "equiangle_skewness_max": 0.8513551198966858,
+  "center_face_nonorthogonality_max_deg": 74.6807938369613,
+  "regions": {
+    "LE": {
+      "cells": 3145,
+      "sqrt_area_min_m": 2.45258566708841e-05,
+      "sqrt_area_median_m": 0.0003001856773763936,
+      "sqrt_area_max_m": 0.021203273301604673
+    },
+    "TE": {
+      "cells": 3922,
+      "sqrt_area_min_m": 3.67675493920782e-07,
+      "sqrt_area_median_m": 0.0003434280837153528,
+      "sqrt_area_max_m": 0.019763760358573315
+    },
+    "near_wall": {
+      "cells": 17992,
+      "sqrt_area_min_m": 2.45258566708841e-05,
+      "sqrt_area_median_m": 0.0005381731035063997,
+      "sqrt_area_max_m": 0.018979403049276745
+    },
+    "wake": {
+      "cells": 1272,
+      "sqrt_area_min_m": 3.67675493920782e-07,
+      "sqrt_area_median_m": 0.018433406543971784,
+      "sqrt_area_max_m": 0.45066993607825273
+    }
+  },
+  "gradient_refinement_from_own_solution": {
+    "upper": 0.5178287625312805
+  },
+  "wall_nodes_per_source_curve": [
+    257,
+    232
+  ],
+  "near_domain_interface_bounds_m": [
+    -20.0,
+    20.0,
+    -20.0,
+    20.0
+  ],
+  "far_outer_size_rule": "Only outer annulus: h=(2.4+0.12*max(abs(x)-20,abs(y)-20,0))/1.5^level. Near-domain original background, wall and gradient functions unchanged. The +/-20c interface is interior, not a physical boundary.",
+  "physical_surface_count": 2,
+  "boundary_linear_edge_to_same_spline_max_sample_deviation_m": 8.990219573643621e-05,
+  "boundary_deviation_sampling": "25%,50%,75% same parameter within every linear boundary edge; spline control points audited by Newton-refined inverse"
+}

@@ -1,0 +1,170 @@
+{
+  "coarse": {
+    "case": "coarse",
+    "nodes": 20049,
+    "cells": 23024,
+    "all_positive_signed_areas": true,
+    "minimum_signed_area_m2": 1.351852686181328e-13,
+    "exact_duplicate_node_coordinates": 0,
+    "unmarked_boundary_edges": 0,
+    "tagged_edges_not_single_fluid_neighbor": 0,
+    "nonmanifold_edges": 0,
+    "fluid_connected_components_cell_counts": [
+      23024
+    ],
+    "marker_closed_loops": {
+      "AIRFOIL": {
+        "edges": 487,
+        "nodes": 487,
+        "all_node_degrees_2": true,
+        "min_degree": 2,
+        "max_degree": 2
+      },
+      "FARFIELD": {
+        "edges": 68,
+        "nodes": 68,
+        "all_node_degrees_2": true,
+        "min_degree": 2,
+        "max_degree": 2
+      }
+    },
+    "max_equiangle_skewness": 0.8807593794560705,
+    "worst_skew_cell_center_m": [
+      -0.009516029950793072,
+      0.0024978428135974218
+    ],
+    "worst_skew_cell_node_ids": [
+      851,
+      818,
+      18657
+    ],
+    "method_scope": "Independent primal SU2 geometry/edge audit. High wall aspect ratio is not a failure by itself. This does not directly audit SU2 node-centered dual-volume orthogonality; no after-result skew cutoff was introduced.",
+    "topology_and_positive_area_checks_passed": true
+  },
+  "medium": {
+    "case": "medium",
+    "nodes": 43588,
+    "cells": 50319,
+    "all_positive_signed_areas": true,
+    "minimum_signed_area_m2": 3.888932326963354e-14,
+    "exact_duplicate_node_coordinates": 0,
+    "unmarked_boundary_edges": 0,
+    "tagged_edges_not_single_fluid_neighbor": 0,
+    "nonmanifold_edges": 0,
+    "fluid_connected_components_cell_counts": [
+      50319
+    ],
+    "marker_closed_loops": {
+      "AIRFOIL": {
+        "edges": 730,
+        "nodes": 730,
+        "all_node_degrees_2": true,
+        "min_degree": 2,
+        "max_degree": 2
+      },
+      "FARFIELD": {
+        "edges": 100,
+        "nodes": 100,
+        "all_node_degrees_2": true,
+        "min_degree": 2,
+        "max_degree": 2
+      }
+    },
+    "max_equiangle_skewness": 0.9319359558126266,
+    "worst_skew_cell_center_m": [
+      -0.010182280803804082,
+      0.0016783713470543353
+    ],
+    "worst_skew_cell_node_ids": [
+      1117,
+      1357,
+      38692
+    ],
+    "method_scope": "Independent primal SU2 geometry/edge audit. High wall aspect ratio is not a failure by itself. This does not directly audit SU2 node-centered dual-volume orthogonality; no after-result skew cutoff was introduced.",
+    "topology_and_positive_area_checks_passed": true
+  },
+  "fine": {
+    "case": "fine",
+    "nodes": 94336,
+    "cells": 108705,
+    "all_positive_signed_areas": true,
+    "minimum_signed_area_m2": 1.1926042076424465e-14,
+    "exact_duplicate_node_coordinates": 0,
+    "unmarked_boundary_edges": 0,
+    "tagged_edges_not_single_fluid_neighbor": 0,
+    "nonmanifold_edges": 0,
+    "fluid_connected_components_cell_counts": [
+      108705
+    ],
+    "marker_closed_loops": {
+      "AIRFOIL": {
+        "edges": 1095,
+        "nodes": 1095,
+        "all_node_degrees_2": true,
+        "min_degree": 2,
+        "max_degree": 2
+      },
+      "FARFIELD": {
+        "edges": 152,
+        "nodes": 152,
+        "all_node_degrees_2": true,
+        "min_degree": 2,
+        "max_degree": 2
+      }
+    },
+    "max_equiangle_skewness": 0.9575990716232677,
+    "worst_skew_cell_center_m": [
+      -0.009873511820270705,
+      -0.001712737689152299
+    ],
+    "worst_skew_cell_node_ids": [
+      79016,
+      79226,
+      81068
+    ],
+    "method_scope": "Independent primal SU2 geometry/edge audit. High wall aspect ratio is not a failure by itself. This does not directly audit SU2 node-centered dual-volume orthogonality; no after-result skew cutoff was introduced.",
+    "topology_and_positive_area_checks_passed": true
+  },
+  "medium_far": {
+    "case": "medium_far",
+    "nodes": 46006,
+    "cells": 55055,
+    "all_positive_signed_areas": true,
+    "minimum_signed_area_m2": 3.888932326963354e-14,
+    "exact_duplicate_node_coordinates": 0,
+    "unmarked_boundary_edges": 0,
+    "tagged_edges_not_single_fluid_neighbor": 0,
+    "nonmanifold_edges": 0,
+    "fluid_connected_components_cell_counts": [
+      55055
+    ],
+    "marker_closed_loops": {
+      "AIRFOIL": {
+        "edges": 730,
+        "nodes": 730,
+        "all_node_degrees_2": true,
+        "min_degree": 2,
+        "max_degree": 2
+      },
+      "FARFIELD": {
+        "edges": 200,
+        "nodes": 200,
+        "all_node_degrees_2": true,
+        "min_degree": 2,
+        "max_degree": 2
+      }
+    },
+    "max_equiangle_skewness": 0.9345228989761853,
+    "worst_skew_cell_center_m": [
+      -0.010069653398384332,
+      -0.0016669852470305628
+    ],
+    "worst_skew_cell_node_ids": [
+      35249,
+      35921,
+      39798
+    ],
+    "method_scope": "Independent primal SU2 geometry/edge audit. High wall aspect ratio is not a failure by itself. This does not directly audit SU2 node-centered dual-volume orthogonality; no after-result skew cutoff was introduced.",
+    "topology_and_positive_area_checks_passed": true
+  }
+}

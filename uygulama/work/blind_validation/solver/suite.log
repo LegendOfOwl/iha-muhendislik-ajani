@@ -1,0 +1,304 @@
+Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\Urungu\\AppData\\Local\\matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+{
+  "name": "coarse",
+  "iteration": 2665.0,
+  "history_rows": 2666,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 2665.0,
+    "rms[Rho]": -10.00075452,
+    "rms[RhoU]": -10.57635876,
+    "rms[RhoV]": -10.54590399,
+    "rms[RhoE]": -9.557056191,
+    "rms[nu]": -14.13377663,
+    "RefForce": 0.5,
+    "CD": 0.01509309194,
+    "CL": 0.7023033307,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.09180424563,
+    "CFx": -0.01322634051,
+    "CFy": 0.7023409668,
+    "CFz": 0.0,
+    "CEff": 46.53144189,
+    "Buffet": 0.004962713214
+  },
+  "field_checkpoint_iteration": 2665,
+  "density_log10_residual": -10.00075452,
+  "CL": 0.7023033307,
+  "CD": 0.01509309194,
+  "CL_final200_range": 6.936199999918458e-06,
+  "CD_final200_range": 1.7224999999954083e-07,
+  "max_wall_yplus": 0.5243999361991882,
+  "p99_wall_yplus": 0.47872596979141235,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791510969400406,
+  "pressure_force_coefficient_xy": [
+    -0.01945740543305874,
+    0.7020983099937439
+  ],
+  "viscous_force_coefficient_xy": [
+    0.006230690982192755,
+    0.00024266328546218574
+  ],
+  "independent_surface_force": {
+    "CL": 0.7023033394554531,
+    "CD": 0.015092718519677098,
+    "CL_pressure": 0.7023120215277486,
+    "CD_pressure": 0.008857309967750276,
+    "CL_viscous": -8.669287327547573e-06,
+    "CD_viscous": 0.006235408601619195,
+    "relative_difference_CL": 1.246676864190256e-08,
+    "relative_difference_CD": 2.4741141469597205e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5268547534942627,
+      "dCp_dx_max_abs": 21.203811645507812,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.081637904047966,
+      "dCp_dx_max_abs": 3.92769718170166,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Final field checkpoint matched to the iteration printed before the last File Writing Summary; later terminal history is kept separately."
+}
+{"status": "exited", "exit_code": 0, "wall_seconds": 892.0939999999828, "iteration_budget": 6000, "time_budget_seconds": 1200, "threads": 4, "config_sha256": "d86c8bf5ce07cb84b4a729c24e45c6082a9826a6e0cbf6599047fb1e483b5b1b", "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248", "restart": false}
+{
+  "name": "medium",
+  "iteration": 2965.0,
+  "history_rows": 2966,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 2965.0,
+    "rms[Rho]": -10.00095795,
+    "rms[RhoU]": -10.60957904,
+    "rms[RhoV]": -10.6232727,
+    "rms[RhoE]": -9.4383471,
+    "rms[nu]": -13.79518453,
+    "RefForce": 0.5,
+    "CD": 0.01364997108,
+    "CL": 0.6983823078,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08891891122,
+    "CFx": -0.01451024719,
+    "CFy": 0.6983649636,
+    "CFz": 0.0,
+    "CEff": 51.16364744,
+    "Buffet": 0.005039255364
+  },
+  "field_checkpoint_iteration": 2965,
+  "density_log10_residual": -10.00095795,
+  "CL": 0.6983823078,
+  "CD": 0.01364997108,
+  "CL_final200_range": 1.0683800000022003e-05,
+  "CD_final200_range": 2.7908000000027855e-07,
+  "max_wall_yplus": 0.3496948182582855,
+  "p99_wall_yplus": 0.32019343972206116,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791637629270554,
+  "pressure_force_coefficient_xy": [
+    -0.020517248660326004,
+    0.6981246471405029
+  ],
+  "viscous_force_coefficient_xy": [
+    0.0060068098828196526,
+    0.00024031942302826792
+  ],
+  "independent_surface_force": {
+    "CL": 0.6983823250535549,
+    "CD": 0.013649780031423888,
+    "CL_pressure": 0.6983843060063769,
+    "CD_pressure": 0.007638164807899753,
+    "CL_viscous": -1.987452242184761e-06,
+    "CD_viscous": 0.0060116149613442535,
+    "relative_difference_CL": 2.470502864320458e-08,
+    "relative_difference_CD": 1.3996262335814628e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5242674350738525,
+      "dCp_dx_max_abs": 24.214935302734375,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08318134397268295,
+      "dCp_dx_max_abs": 3.8024673461914062,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Final field checkpoint matched to the iteration printed before the last File Writing Summary; later terminal history is kept separately."
+}
+{"status": "timeout_partial_preserved", "exit_code": null, "wall_seconds": 1600.094000000041, "iteration_budget": 6000, "time_budget_seconds": 1600, "threads": 4, "config_sha256": "d86c8bf5ce07cb84b4a729c24e45c6082a9826a6e0cbf6599047fb1e483b5b1b", "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248", "restart": false}
+{
+  "name": "fine",
+  "iteration": 2400.0,
+  "history_rows": 2513,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 2512.0,
+    "rms[Rho]": -9.234341811,
+    "rms[RhoU]": -9.775003469,
+    "rms[RhoV]": -10.00568364,
+    "rms[RhoE]": -8.683576915,
+    "rms[nu]": -12.18301837,
+    "RefForce": 0.5,
+    "CD": 0.01300800019,
+    "CL": 0.6925999961,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08710865862,
+    "CFx": -0.01491863347,
+    "CFy": 0.6925614752,
+    "CFz": 0.0,
+    "CEff": 53.24415634,
+    "Buffet": 0.004959616105
+  },
+  "field_checkpoint_iteration": 2400,
+  "density_log10_residual": -8.907161247,
+  "CL": 0.6925685338,
+  "CD": 0.01300801887,
+  "CL_final200_range": 0.00023400880000001845,
+  "CD_final200_range": 8.251600000005327e-07,
+  "max_wall_yplus": 0.2352381944656372,
+  "p99_wall_yplus": 0.20938745141029358,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": false,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791692018508911,
+  "pressure_force_coefficient_xy": [
+    -0.020833276212215424,
+    0.69228595495224
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005915639456361532,
+    0.00023827367112971842
+  ],
+  "independent_surface_force": {
+    "CL": 0.692562765196041,
+    "CD": 0.013007496331497613,
+    "CL_pressure": 0.6925630963467178,
+    "CD_pressure": 0.007087058664650491,
+    "CL_viscous": -3.5680970662108264e-07,
+    "CD_viscous": 0.005920436165748418,
+    "relative_difference_CL": 8.329289705691985e-06,
+    "relative_difference_CD": 4.017049080340415e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5215799808502197,
+      "dCp_dx_max_abs": 24.7481689453125,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08084593713283539,
+      "dCp_dx_max_abs": 4.023996353149414,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Final field checkpoint matched to the iteration printed before the last File Writing Summary; later terminal history is kept separately."
+}
+{"status": "timeout_partial_preserved", "exit_code": null, "wall_seconds": 1200.0939999999828, "iteration_budget": 6000, "time_budget_seconds": 1200, "threads": 4, "config_sha256": "d86c8bf5ce07cb84b4a729c24e45c6082a9826a6e0cbf6599047fb1e483b5b1b", "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248", "restart": false}
+{
+  "name": "medium_far",
+  "iteration": 3200.0,
+  "history_rows": 3335,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 3334.0,
+    "rms[Rho]": -9.900947268,
+    "rms[RhoU]": -10.56985481,
+    "rms[RhoV]": -10.58193907,
+    "rms[RhoE]": -9.379201792,
+    "rms[nu]": -13.86069668,
+    "RefForce": 0.5,
+    "CD": 0.01323130503,
+    "CL": 0.7095182836,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08871252835,
+    "CFx": -0.01537742171,
+    "CFy": 0.7094750151,
+    "CFz": 0.0,
+    "CEff": 53.6242103,
+    "Buffet": 0.005039255364
+  },
+  "field_checkpoint_iteration": 3200,
+  "density_log10_residual": -9.786510514,
+  "CL": 0.7095119192,
+  "CD": 0.01323115497,
+  "CL_final200_range": 1.3378899999971772e-05,
+  "CD_final200_range": 2.117000000006336e-07,
+  "max_wall_yplus": 0.351637601852417,
+  "p99_wall_yplus": 0.3221736550331116,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791637629270554,
+  "pressure_force_coefficient_xy": [
+    -0.021368207409977913,
+    0.7092220187187195
+  ],
+  "viscous_force_coefficient_xy": [
+    0.0059906672686338425,
+    0.0002460469549987465
+  ],
+  "independent_surface_force": {
+    "CL": 0.7095113455799437,
+    "CD": 0.013230906632591126,
+    "CL_pressure": 0.70950695848956,
+    "CD_pressure": 0.007235190271534037,
+    "CL_viscous": 4.386072577435105e-06,
+    "CD_viscous": 0.005995716319999835,
+    "relative_difference_CL": 8.084713460347402e-07,
+    "relative_difference_CD": 1.87691406712254e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5269134640693665,
+      "dCp_dx_max_abs": 24.607757568359375,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08318134397268295,
+      "dCp_dx_max_abs": 3.8372669219970703,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Final field checkpoint matched to the iteration printed before the last File Writing Summary; later terminal history is kept separately."
+}

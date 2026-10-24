@@ -1,0 +1,674 @@
+{
+  "run": "v2_r2_coarse",
+  "field_checkpoint": {
+    "iteration": 1892,
+    "surface": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse\\surface_flow_001892.vtu",
+    "volume": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse\\flow_001892.vtu",
+    "restart": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse\\restart_flow_001892.dat",
+    "sha256": {
+      "surface_flow_001892.vtu": "b989b0e8646656dde4419f7edbd20804204c3b6d2a0abcf9b76e210864a048b0",
+      "flow_001892.vtu": "2506ae5b31e7bfa0949bb580338ce12a16b986bba087d2bffb33669339df2382",
+      "restart_flow_001892.dat": "a4f73ff066a348a1d290171550b00c49ad73057fabd34b8006ae90e19994f04d"
+    },
+    "history_last_iteration": 1892.0,
+    "method": "Exact numeric suffix intersection surface/volume/restart plus matching history row; static overwritten files ignored."
+  },
+  "data_scope": "Only own native volume and own source-defined wall; no experimental profile used",
+  "profiles": [
+    {
+      "station_x_over_c": 0.4,
+      "side": "upper",
+      "actual_mesh_wall_origin_m": [
+        0.4,
+        0.06259446420037554
+      ],
+      "source_spline_outward_normal": [
+        -0.01427937745845476,
+        0.9998980444922367
+      ],
+      "valid_samples": 426,
+      "invalid_sample_distances_c": [],
+      "edge_definitions": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.5100731055353542,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.006849577869425286,
+          "operational_delta99_c": 0.005751439242433617
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.4925109285306677,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.013608742356999262,
+          "operational_delta99_c": 0.005324232146149455
+        }
+      },
+      "at_BL_outer_boundary_0p01": {
+        "Ut_over_Ue_far_window": 1.0206685453735116,
+        "mu_t_over_mu": 0.027063408866524696,
+        "Cp": -1.10470449924469
+      },
+      "max_mu_t_over_mu": 120.1584243774414,
+      "layer0p01_covers_operational_delta99": true,
+      "normal_resolution": {
+        "first_normal_interval_m": 1.2000000032534914e-06,
+        "normal_interval_containing_layer_edge_0p01_m": 0.0034646244703339033,
+        "normal_intervals_near_0p01_m": [
+          0.0012311121027121655,
+          0.0015512012494175356,
+          0.0019545135742664614,
+          0.0034646244703339033,
+          0.0014896343464861732,
+          0.004617378036350138,
+          0.0031202836049474617,
+          0.006566849509859047
+        ],
+        "normal_cells_within_0p01": 33,
+        "normal_cell_intersections_to_0p1": [
+          0.0,
+          1.2000000032534914e-06,
+          2.7120000073722407e-06,
+          4.617120012554282e-06,
+          7.017571219084079e-06,
+          1.0042139739317345e-05,
+          1.3853096074805928e-05,
+          1.865490105751772e-05,
+          2.4705175335744138e-05,
+          3.2328520926301904e-05,
+          4.193393637040035e-05,
+          5.403675982997921e-05,
+          6.928631738903433e-05,
+          8.850075991345016e-05,
+          0.00011271095749421514,
+          0.0001432158064459878,
+          0.00018165191612520262,
+          0.0002300814143210318,
+          0.00029110258204776454,
+          0.00036798925338344665,
+          0.0004648664592664159,
+          0.0005869317386789552,
+          0.0007407339907387554,
+          0.000934524828334105,
+          0.0011787012837042622,
+          0.001486363617470657,
+          0.0018740181580163356,
+          0.0023624628791039048,
+          0.0029779032276742836,
+          0.0037533580668730137,
+          0.004730431164263502,
+          0.005961543266975668,
+          0.007512744516393203,
+          0.009467258090659665,
+          0.012931882560993568,
+          0.014421516907479741,
+          0.01903889494382988,
+          0.02215917854877734,
+          0.028726028058636388,
+          0.03236081935866096,
+          0.03913694365903503,
+          0.05022440381270605,
+          0.055612587285396226,
+          0.06226657288521064,
+          0.0747865022805811,
+          0.08738697419988324,
+          0.09917418043928723
+        ],
+        "max_normal_interval_below_operational_delta99_m": 0.0012311121027121655,
+        "normal_cells_below_operational_delta99": 30
+      },
+      "interpretation": "delta99 uses median tangential velocity in the explicitly recorded outer window, not a known experiment. Pressure gradients/potential-flow variation can make a unique Ue ambiguous; two edge-window definitions and their outer velocity ranges are retained. A y+ pass does not establish full boundary-layer coverage."
+    },
+    {
+      "station_x_over_c": 0.8,
+      "side": "upper",
+      "actual_mesh_wall_origin_m": [
+        0.8,
+        0.034831110127084924
+      ],
+      "source_spline_outward_normal": [
+        0.1420249184091734,
+        0.9898630827295599
+      ],
+      "valid_samples": 424,
+      "invalid_sample_distances_c": [
+        0.0
+      ],
+      "edge_definitions": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.0869486593851003,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.013741189193424961,
+          "operational_delta99_c": 0.020402010050251256
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.076597099603843,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0012035908553996234,
+          "operational_delta99_c": 0.018305004180517902
+        }
+      },
+      "at_BL_outer_boundary_0p01": {
+        "Ut_over_Ue_far_window": 0.8961663168237008,
+        "mu_t_over_mu": 160.04576110839844,
+        "Cp": -0.19223617017269135
+      },
+      "max_mu_t_over_mu": 365.2522888183594,
+      "layer0p01_covers_operational_delta99": false,
+      "normal_resolution": {
+        "first_normal_interval_m": 1.2000001592042908e-06,
+        "normal_interval_containing_layer_edge_0p01_m": 0.002999481067931062,
+        "normal_intervals_near_0p01_m": [
+          0.0012311122626984866,
+          0.0015512014510000848,
+          0.001954513828260093,
+          0.002999481067931062,
+          0.003170594756635888,
+          0.004053299229479383,
+          0.0033201621965552666,
+          0.0018617049411421699
+        ],
+        "normal_cells_within_0p01": 33,
+        "normal_cell_intersections_to_0p1": [
+          0.0,
+          1.2000001592042908e-06,
+          2.712000359810257e-06,
+          4.617120612572477e-06,
+          7.017572131043773e-06,
+          1.0042141044322741e-05,
+          1.3853097875068033e-05,
+          1.8654903481793196e-05,
+          2.4705178546257106e-05,
+          3.23285251275085e-05,
+          4.193394181986632e-05,
+          5.4036766852225426e-05,
+          6.928632639303023e-05,
+          8.85007714144305e-05,
+          0.00011271097214137945,
+          0.00014321582505735867,
+          0.00018165193973146966,
+          0.0002300814442208593,
+          0.00029110261987749846,
+          0.0003679893012048573,
+          0.0004648665196773334,
+          0.0005869318149526558,
+          0.0007407340869995417,
+          0.0009345249497786347,
+          0.0011787014368803024,
+          0.0014863638106283686,
+          0.0018740184015509599,
+          0.0023624631861134076,
+          0.002977903614662103,
+          0.0037533585546334477,
+          0.004730431778997336,
+          0.005961544041695822,
+          0.007512745492695907,
+          0.009467259320956,
+          0.012466740388887062,
+          0.01563733514552295,
+          0.019690634375002333,
+          0.0230107965715576,
+          0.02487250151269977,
+          0.032686803439587124,
+          0.04668108092649716,
+          0.04814657368002039,
+          0.050350041057146036,
+          0.06685157831871118,
+          0.07617624322514113,
+          0.09073693274388017
+        ],
+        "max_normal_interval_below_operational_delta99_m": 0.004053299229479383,
+        "normal_cells_below_operational_delta99": 35
+      },
+      "interpretation": "delta99 uses median tangential velocity in the explicitly recorded outer window, not a known experiment. Pressure gradients/potential-flow variation can make a unique Ue ambiguous; two edge-window definitions and their outer velocity ranges are retained. A y+ pass does not establish full boundary-layer coverage."
+    },
+    {
+      "station_x_over_c": 0.95,
+      "side": "upper",
+      "actual_mesh_wall_origin_m": [
+        0.9499999999999998,
+        0.010015743228385056
+      ],
+      "source_spline_outward_normal": [
+        0.1843922914913321,
+        0.9828527269324615
+      ],
+      "valid_samples": 425,
+      "invalid_sample_distances_c": [
+        0.0
+      ],
+      "edge_definitions": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.9596229737578279,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.042488567595910444,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.9540848630090791,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0074575159267142935,
+          "operational_delta99_c": 0.02836180904522613
+        }
+      },
+      "at_BL_outer_boundary_0p01": {
+        "Ut_over_Ue_far_window": 0.6592904874432283,
+        "mu_t_over_mu": 277.1224365234375,
+        "Cp": 0.09281406551599503
+      },
+      "max_mu_t_over_mu": 350.6744384765625,
+      "layer0p01_covers_operational_delta99": false,
+      "normal_resolution": {
+        "first_normal_interval_m": 1.2000000504933003e-06,
+        "normal_interval_containing_layer_edge_0p01_m": 0.0023562075707266525,
+        "normal_intervals_near_0p01_m": [
+          0.0012311121511401546,
+          0.0015512013104361485,
+          0.001954513651148849,
+          0.0023562075707266525,
+          0.00045421894928590265,
+          0.00029291375648678175,
+          0.005467056793010086,
+          0.0017540627644597358
+        ],
+        "normal_cells_within_0p01": 33,
+        "normal_cell_intersections_to_0p1": [
+          0.0,
+          1.2000000504933003e-06,
+          2.7120001140875983e-06,
+          4.617120194209533e-06,
+          7.0175714951781336e-06,
+          1.0042140134392644e-05,
+          1.3853096619790635e-05,
+          1.8654901791400202e-05,
+          2.4705176307632056e-05,
+          3.23285221980811e-05,
+          4.193393802004668e-05,
+          5.403676195572915e-05,
+          6.928632011467897e-05,
+          8.850076339495938e-05,
+          0.00011271096192811316,
+          0.00014321581207990333,
+          0.0001816519232711362,
+          0.00023008142337209767,
+          0.0002911025934993012,
+          0.0003679892678595915,
+          0.00046486647755353245,
+          0.0005869317617679209,
+          0.0007407340198780396,
+          0.0009345248650967596,
+          0.0011787013300723539,
+          0.0014863636759415945,
+          0.0018740182317367928,
+          0.002362462972038709,
+          0.002977903344819046,
+          0.003753358214522159,
+          0.004730431350347906,
+          0.005961543501488061,
+          0.007512744811924209,
+          0.009467258463073058,
+          0.01182346603379971,
+          0.012277684983085613,
+          0.012570598739572395,
+          0.01803765553258248,
+          0.019791718297042217,
+          0.026884905633816427,
+          0.03044533783047105,
+          0.0395035984113906,
+          0.04233055777689569,
+          0.05604077463204899,
+          0.059804845389048476,
+          0.07694535828378082,
+          0.08145776868487292
+        ],
+        "max_normal_interval_below_operational_delta99_m": 0.00709318733677421,
+        "normal_cells_below_operational_delta99": 39
+      },
+      "interpretation": "delta99 uses median tangential velocity in the explicitly recorded outer window, not a known experiment. Pressure gradients/potential-flow variation can make a unique Ue ambiguous; two edge-window definitions and their outer velocity ranges are retained. A y+ pass does not establish full boundary-layer coverage."
+    },
+    {
+      "station_x_over_c": 0.4,
+      "side": "lower",
+      "actual_mesh_wall_origin_m": [
+        0.4,
+        -0.05826879112568967
+      ],
+      "source_spline_outward_normal": [
+        0.04029642355744296,
+        -0.9991877692648562
+      ],
+      "valid_samples": 425,
+      "invalid_sample_distances_c": [
+        0.0
+      ],
+      "edge_definitions": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.1370208274423497,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.014180940283344221,
+          "operational_delta99_c": 0.003984924623115577
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.114709807847947,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.017676904963138063,
+          "operational_delta99_c": 0.003487437185929648
+        }
+      },
+      "at_BL_outer_boundary_0p01": {
+        "Ut_over_Ue_far_window": 1.038797382613565,
+        "mu_t_over_mu": 0.11736773699522018,
+        "Cp": -0.3265056014060974
+      },
+      "max_mu_t_over_mu": 90.94709777832031,
+      "layer0p01_covers_operational_delta99": true,
+      "normal_resolution": {
+        "first_normal_interval_m": 1.2000013968876271e-06,
+        "normal_interval_containing_layer_edge_0p01_m": 0.0023240881496611777,
+        "normal_intervals_near_0p01_m": [
+          0.0012311135324623666,
+          0.0015512030509036304,
+          0.001954515844140247,
+          0.0023240881496611777,
+          0.0036496388924540935,
+          0.004192272341139919,
+          0.0034035745051884843,
+          0.003143545377799345
+        ],
+        "normal_cells_within_0p01": 33,
+        "normal_cell_intersections_to_0p1": [
+          0.0,
+          1.2000013968876271e-06,
+          2.712003156949744e-06,
+          4.617125374647198e-06,
+          7.017579368925287e-06,
+          1.0042151401729871e-05,
+          1.3853112163052417e-05,
+          1.86549227223255e-05,
+          2.4705204027013937e-05,
+          3.232855847092183e-05,
+          4.193398507024261e-05,
+          5.403682258538038e-05,
+          6.928639785445838e-05,
+          8.850086269350494e-05,
+          0.00011271108839069929,
+          0.00014321597276915698,
+          0.00018165212708602337,
+          0.0002300816815252735,
+          0.00029110292011873,
+          0.00036798968074648836,
+          0.00046486699913746583,
+          0.000586932420310115,
+          0.0007407348509876429,
+          0.0009345259136413598,
+          0.001178702652585053,
+          0.001486365343654174,
+          0.0018740203344013073,
+          0.0023624656227428345,
+          0.0029779066860532895,
+          0.0037533624258247506,
+          0.004730436657937211,
+          0.0059615501903995775,
+          0.007512753241303208,
+          0.009467269085443455,
+          0.011791357235104633,
+          0.015440996127558726,
+          0.019633268468698645,
+          0.02303684297388713,
+          0.026180388351686474,
+          0.03179409260192567,
+          0.03887844986136476,
+          0.045499489376797486,
+          0.06223858757891775,
+          0.06465495944548368,
+          0.07587336645921133,
+          0.09194542323817705,
+          0.09489381940515042
+        ],
+        "max_normal_interval_below_operational_delta99_m": 0.0007754557397714611,
+        "normal_cells_below_operational_delta99": 28
+      },
+      "interpretation": "delta99 uses median tangential velocity in the explicitly recorded outer window, not a known experiment. Pressure gradients/potential-flow variation can make a unique Ue ambiguous; two edge-window definitions and their outer velocity ranges are retained. A y+ pass does not establish full boundary-layer coverage."
+    },
+    {
+      "station_x_over_c": 0.8,
+      "side": "lower",
+      "actual_mesh_wall_origin_m": [
+        0.8,
+        -0.009879297683210537
+      ],
+      "source_spline_outward_normal": [
+        0.11596716095937437,
+        -0.9932530481096056
+      ],
+      "valid_samples": 425,
+      "invalid_sample_distances_c": [],
+      "edge_definitions": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8889706350005842,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.0020109324696043983,
+          "operational_delta99_c": 0.019407035175879397
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8959567962909168,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.009233953054880941,
+          "operational_delta99_c": 0.02307429770577957
+        }
+      },
+      "at_BL_outer_boundary_0p01": {
+        "Ut_over_Ue_far_window": 0.9173667263138909,
+        "mu_t_over_mu": 83.9240951538086,
+        "Cp": 0.23094142973423004
+      },
+      "max_mu_t_over_mu": 287.2171936035156,
+      "layer0p01_covers_operational_delta99": false,
+      "normal_resolution": {
+        "first_normal_interval_m": 1.200000141419296e-06,
+        "normal_interval_containing_layer_edge_0p01_m": 0.0025117454326259673,
+        "normal_intervals_near_0p01_m": [
+          0.0012311122444516676,
+          0.0015512014280089827,
+          0.0019545137992911183,
+          0.0025117454326259673,
+          0.003267418890418301,
+          0.0049213507784748155,
+          0.0034656997501236117,
+          0.006883271435607297
+        ],
+        "normal_cells_within_0p01": 33,
+        "normal_cell_intersections_to_0p1": [
+          0.0,
+          1.200000141419296e-06,
+          2.7120003196219967e-06,
+          4.617120544136909e-06,
+          7.017572027046408e-06,
+          1.0042140895498376e-05,
+          1.385309766974256e-05,
+          1.865490320529786e-05,
+          2.4705178180102225e-05,
+          3.2328524648352424e-05,
+          4.1933941198356374e-05,
+          5.403676605135288e-05,
+          6.928632536612989e-05,
+          8.850077010274699e-05,
+          0.00011271097047088659,
+          0.00014321582293472707,
+          0.00018165193703919096,
+          0.00023008144081080142,
+          0.0002911026155630278,
+          0.0003679892957508443,
+          0.0004648665127874874,
+          0.0005869318062536487,
+          0.0007407340760210171,
+          0.0009345249359279051,
+          0.0011787014194105652,
+          0.0014863637885987235,
+          0.0018740183737757851,
+          0.002362463151098893,
+          0.002977903570525975,
+          0.0037533584990040616,
+          0.004730431708886413,
+          0.005961543953338081,
+          0.007512745381347064,
+          0.009467259180638182,
+          0.01197900461326415,
+          0.01524642350368245,
+          0.020167774282157266,
+          0.023633474032280877,
+          0.030516745467888174,
+          0.03650254740151026,
+          0.04758784500005516,
+          0.05303653596821864,
+          0.06620203717401131,
+          0.08534502484701792,
+          0.08859490733637719,
+          0.09260913516891023
+        ],
+        "max_normal_interval_below_operational_delta99_m": 0.0049213507784748155,
+        "normal_cells_below_operational_delta99": 36
+      },
+      "interpretation": "delta99 uses median tangential velocity in the explicitly recorded outer window, not a known experiment. Pressure gradients/potential-flow variation can make a unique Ue ambiguous; two edge-window definitions and their outer velocity ranges are retained. A y+ pass does not establish full boundary-layer coverage."
+    },
+    {
+      "station_x_over_c": 0.95,
+      "side": "lower",
+      "actual_mesh_wall_origin_m": [
+        0.95,
+        0.001237782992759781
+      ],
+      "source_spline_outward_normal": [
+        0.006927270222834451,
+        -0.9999760061757781
+      ],
+      "valid_samples": 427,
+      "invalid_sample_distances_c": [],
+      "edge_definitions": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8675937828000695,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.012837839934692431,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8756050915003308,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.014059695025835307,
+          "operational_delta99_c": 0.030351758793969848
+        }
+      },
+      "at_BL_outer_boundary_0p01": {
+        "Ut_over_Ue_far_window": 0.85249634710938,
+        "mu_t_over_mu": 130.65939331054688,
+        "Cp": 0.29339107871055603
+      },
+      "max_mu_t_over_mu": 272.690673828125,
+      "layer0p01_covers_operational_delta99": false,
+      "normal_resolution": {
+        "first_normal_interval_m": 1.2000013330682383e-06,
+        "normal_interval_containing_layer_edge_0p01_m": 0.002595227762188644,
+        "normal_intervals_near_0p01_m": [
+          0.0012311134670076095,
+          0.0015512029684346144,
+          0.0019545157402356215,
+          0.002595227762188644,
+          0.0008429130919996516,
+          0.0026006350996708085,
+          0.0034639974850408754,
+          0.003467383006130871
+        ],
+        "normal_cells_within_0p01": 33,
+        "normal_cell_intersections_to_0p1": [
+          0.0,
+          1.2000013330682383e-06,
+          2.7120030127342255e-06,
+          4.617125129113331e-06,
+          7.017578995751423e-06,
+          1.0042150867715686e-05,
+          1.3853111426390493e-05,
+          1.86549217303202e-05,
+          2.4705202713272104e-05,
+          3.232855675179153e-05,
+          4.193398284032616e-05,
+          5.403681971188093e-05,
+          6.928639417003937e-05,
+          8.850085798732033e-05,
+          0.00011271108239709403,
+          0.00014321596515341257,
+          0.00018165211742637716,
+          0.0002300816692903166,
+          0.00029110290463888714,
+          0.00036798966117809946,
+          0.00046486697441752614,
+          0.0005869323890992335,
+          0.0007407348115982334,
+          0.0009345258639470512,
+          0.0011787025899066832,
+          0.001486365264616015,
+          0.0018740202347500828,
+          0.0023624654971194986,
+          0.0029779065277057435,
+          0.00375336222624566,
+          0.004730436406407929,
+          0.005961549873415539,
+          0.007512752841850153,
+          0.009467268582085775,
+          0.012062496344274419,
+          0.01290540943627407,
+          0.015506044535944879,
+          0.018970042020985754,
+          0.022437425027116625,
+          0.02826229791632436,
+          0.03264695006165004,
+          0.03856083280385058,
+          0.046051126495371145,
+          0.05485071632109361,
+          0.06109315994862609,
+          0.07541357443229707,
+          0.09437684660324928,
+          0.09927459165869391
+        ],
+        "max_normal_interval_below_operational_delta99_m": 0.0058248728892077335,
+        "normal_cells_below_operational_delta99": 39
+      },
+      "interpretation": "delta99 uses median tangential velocity in the explicitly recorded outer window, not a known experiment. Pressure gradients/potential-flow variation can make a unique Ue ambiguous; two edge-window definitions and their outer velocity ranges are retained. A y+ pass does not establish full boundary-layer coverage."
+    }
+  ],
+  "coverage_warning": true,
+  "coverage_warning_meaning": "One or more operational99% velocity edges lie beyond the0.01c quad block, or were not identified. Exterior triangles also resolve fluid, but their measured normal cuts must be assessed; maxY+ alone does not close this check. This postprocess is a diagnostic, not a post-hoc tolerance relaxation."
+}

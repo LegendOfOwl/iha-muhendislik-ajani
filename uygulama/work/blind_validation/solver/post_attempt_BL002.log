@@ -1,0 +1,76 @@
+Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\Urungu\\AppData\\Local\\matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+{
+  "name": "attempt_BL002_coarse",
+  "iteration": 1000.0,
+  "history_rows": 1179,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 1178.0,
+    "rms[Rho]": -6.696194332,
+    "rms[RhoU]": -6.775668889,
+    "rms[RhoV]": -6.798043965,
+    "rms[RhoE]": -6.024316298,
+    "rms[nu]": -9.776437219,
+    "RefForce": 0.5,
+    "CD": 0.01503949705,
+    "CL": 0.6741545955,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08694264304,
+    "CFx": -0.01214532374,
+    "CFy": 0.6742129458,
+    "CFz": 0.0,
+    "CEff": 44.82560774,
+    "Buffet": 0.004962713214
+  },
+  "field_checkpoint_iteration": 1000,
+  "density_log10_residual": -6.114213465,
+  "CL": 0.6543839061,
+  "CD": 0.01484543964,
+  "CL_final200_range": 0.04711055899999994,
+  "CD_final200_range": 0.0013510081100000012,
+  "max_wall_yplus": 0.5106502771377563,
+  "p99_wall_yplus": 0.46763721108436584,
+  "checks": {
+    "density_log10_below_minus8": false,
+    "CL_final200_range_below_5e_5": false,
+    "CD_final200_range_below_2e_6": false,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791510969400406,
+  "pressure_force_coefficient_xy": [
+    -0.017151784151792526,
+    0.6542022824287415
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005610127467662096,
+    0.0002132845256710425
+  ],
+  "independent_surface_force": {
+    "CL": 0.6543489539501298,
+    "CD": 0.014844715524455012,
+    "CL_pressure": 0.65436198464837,
+    "CD_pressure": 0.009230551533402926,
+    "CL_viscous": -1.3011625871010374e-05,
+    "CD_viscous": 0.005614165226451714,
+    "relative_difference_CL": 5.341230055374804e-05,
+    "relative_difference_CD": 4.877696872218265e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5311510562896729,
+      "dCp_dx_max_abs": 27.567649841308594,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.081637904047966,
+      "dCp_dx_max_abs": 3.9733762741088867,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Final field checkpoint matched to the iteration printed before the last File Writing Summary; later terminal history is kept separately."
+}

@@ -1,0 +1,75 @@
+{
+  "name": "v2_diag_jst",
+  "iteration": 500.0,
+  "history_rows": 501,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 500.0,
+    "rms[Rho]": -10.15405497,
+    "rms[RhoU]": -10.75964833,
+    "rms[RhoV]": -10.79432711,
+    "rms[RhoE]": -9.80858841,
+    "rms[nu]": -14.45128062,
+    "RefForce": 0.5,
+    "CD": 0.01323257496,
+    "CL": 0.7095032921,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08871429051,
+    "CFx": -0.01537554856,
+    "CFy": 0.709460087,
+    "CFz": 0.0,
+    "CEff": 53.61793107,
+    "Buffet": 0.005039255364
+  },
+  "field_checkpoint_iteration": 500,
+  "density_log10_residual": -10.15405497,
+  "CL": 0.7095032921,
+  "CD": 0.01323257496,
+  "CL_final200_range": 3.76669999990753e-06,
+  "CD_final200_range": 6.601000000078239e-08,
+  "max_wall_yplus": 0.3516376316547394,
+  "p99_wall_yplus": 0.32217371463775635,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791636904201711,
+  "pressure_force_coefficient_xy": [
+    -0.021366521834627908,
+    0.7092138272829814
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005990766719343395,
+    0.000246032024355579
+  ],
+  "independent_surface_force": {
+    "CL": 0.7095030729168608,
+    "CD": 0.013232359399722348,
+    "CL_pressure": 0.7094987057712722,
+    "CD_pressure": 0.007236544311626288,
+    "CL_viscous": 4.367145588650721e-06,
+    "CD_viscous": 0.005995815088096058,
+    "relative_difference_CL": 3.089247669947511e-07,
+    "relative_difference_CD": 1.6290123298269098e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5269134640693665,
+      "dCp_dx_max_abs": 24.609403610229492,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08318134397268295,
+      "dCp_dx_max_abs": 3.8372397422790527,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Final field checkpoint matched to the iteration printed before the last File Writing Summary; later terminal history is kept separately."
+}

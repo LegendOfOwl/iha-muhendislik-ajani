@@ -1,0 +1,83 @@
+{
+  "name": "v2_r3_medium",
+  "iteration": 3434.0,
+  "history_rows": 3435,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 3434.0,
+    "rms[Rho]": -10.00084755,
+    "rms[RhoU]": -10.23481796,
+    "rms[RhoV]": -10.47164344,
+    "rms[RhoE]": -9.417937357,
+    "rms[nu]": -14.04390766,
+    "RefForce": 0.5,
+    "CD": 0.01226334171,
+    "CL": 0.7319553318,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08998490784,
+    "CFx": -0.01724895024,
+    "CFy": 0.7318548155,
+    "CFz": 0.0,
+    "CEff": 59.68644999,
+    "Buffet": 0.005745382762
+  },
+  "field_checkpoint_iteration": 3434,
+  "density_log10_residual": -10.00084755,
+  "CL": 0.7319553318,
+  "CD": 0.01226334171,
+  "CL_final200_range": 1.60650000002871e-06,
+  "CD_final200_range": 1.1430000000298146e-08,
+  "max_wall_yplus": 0.3243336081504822,
+  "p99_wall_yplus": 0.3188241124153137,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791673406681292,
+  "pressure_force_coefficient_xy": [
+    -0.023110388909237257,
+    0.7316066300081783
+  ],
+  "viscous_force_coefficient_xy": [
+    0.0058612058461748945,
+    0.0002480275539088311
+  ],
+  "independent_surface_force": {
+    "CL": 0.7319551833436204,
+    "CD": 0.012263102709747287,
+    "CL_pressure": 0.7319436001856702,
+    "CD_pressure": 0.006396662778308061,
+    "CL_viscous": 1.1583157950212006e-05,
+    "CD_viscous": 0.0058664399314392246,
+    "relative_difference_CL": 2.0282163840356207e-07,
+    "relative_difference_CD": 1.94889988687771e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5327011942863464,
+      "dCp_dx_max_abs": 28.918296813964844,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08289061486721039,
+      "dCp_dx_max_abs": 3.8927927017211914,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+  "independent_surface_moment": {
+    "CMz_pressure": 0.0900676133974113,
+    "CMz_viscous": -8.023666064665074e-05,
+    "CMz_total": 0.08998737673676466,
+    "history_CMz": 0.08998490784,
+    "absolute_difference": 2.468896764654116e-06,
+    "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+  }
+}

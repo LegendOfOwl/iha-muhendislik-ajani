@@ -1,0 +1,49 @@
+{
+  "wall_edge_spacing_m": {
+    "min": 0.00033413491009531094,
+    "median": 0.003982375572416535,
+    "max": 0.003997158353594513
+  },
+  "measured_wall_adjacent_quad_normal_height_m": {
+    "min": 7.998843083984127e-07,
+    "median": 8.000000000020693e-07,
+    "max": 8.001151174498282e-07
+  },
+  "measured_first_height_by_region_m": {
+    "LE": {
+      "min": 7.998843083984127e-07,
+      "median": 7.99999999991388e-07,
+      "max": 8.001151174498282e-07
+    },
+    "TE": {
+      "min": 7.999449496441668e-07,
+      "median": 8.000000000009386e-07,
+      "max": 8.0005477714696e-07
+    },
+    "gradient": {
+      "min": 7.999999972507976e-07,
+      "median": 8.000000000008501e-07,
+      "max": 8.000000023236033e-07
+    },
+    "other": {
+      "min": 7.999999439501215e-07,
+      "median": 8.000000000020693e-07,
+      "max": 8.000000589296241e-07
+    }
+  },
+  "gradient_refinement_region": {
+    "definition": {
+      "x_min": 0.4478287625312805,
+      "x_max": 0.5878287625312806,
+      "y_min": -0.02,
+      "y_max": 0.18
+    },
+    "cells": 5418,
+    "max_edge_length_m": {
+      "min": 0.0010748314619465024,
+      "median": 0.0027072144974163888,
+      "max": 0.017195096680053333
+    }
+  },
+  "note": "Normal full-cell height is independently computed from exported SU2 wall-edge quads; TE point-fan triangles are not represented by a two-wall-node quad height; actual Y+ screen includes all wall points."
+}

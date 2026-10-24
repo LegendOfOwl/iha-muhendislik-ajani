@@ -1,0 +1,45 @@
+{
+  "revision": "v2_geometry_r1_C1_LE",
+  "geometry_source_file": "work/blind_validation/analysis_input/geom.txt",
+  "geometry_source_sha256": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736",
+  "representation": "Two OCC C2 interpolating B-splines through all65 signed published points on each branch. Shared LE/TE vertices; LE tangent vertical from same-x nearest upper/lower source secant; distinct one-sided source-polyline TE tangent directions prevent TE rounding. This is an explicitly recorded interpolation assumption, not new published geometry.",
+  "source_point_coordinates_unchanged": true,
+  "LE_join_angle_deg": 0.0,
+  "TE_turn_angle_deg": 152.48010756905163,
+  "branches": {
+    "upper": {
+      "source_point_max_deviation_m": 2.2215299868541707e-16,
+      "LE_derivative": [
+        0.0,
+        1.0725311822552104,
+        0.0
+      ],
+      "TE_derivative": [
+        82.05335506235387,
+        -41.026677531173846,
+        0.0
+      ],
+      "x_m_min": 0.0,
+      "x_m_max": 1.008843424157544,
+      "monotonic_x": false
+    },
+    "lower": {
+      "source_point_max_deviation_m": 2.2473876566261383e-16,
+      "LE_derivative": [
+        4.163336342344337e-17,
+        60.606345161183235,
+        0.0
+      ],
+      "TE_derivative": [
+        -1.0177709193644024,
+        -0.016962848656071255,
+        0.0
+      ],
+      "x_m_min": 0.0,
+      "x_m_max": 1.0,
+      "monotonic_x": true
+    }
+  },
+  "comparison_reference_read": "Only reviewer/leading_edge_tangent_audit.json was explicitly allowed; no flow/experiment target was read.",
+  "status": "geometry representation audit only; source305-point independent shape comparison pending"
+}

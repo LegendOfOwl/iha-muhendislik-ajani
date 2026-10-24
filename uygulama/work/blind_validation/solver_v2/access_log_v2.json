@@ -1,0 +1,42 @@
+{
+  "scope": "Second procedural blinded numerical revision. Shared filesystem is not a security or training-memory isolation guarantee.",
+  "prior_exposure": "At the first run, the parent required AGENTS.md, the skill and the OLD PROJECT_STATE.md to be read. The latter contained earlier unrelated M6/NACA results. This exposure was disclosed immediately. The new evaluator-updated PROJECT_STATE.md, Proje-Ozeti.html and user/reviewer reports have NOT been reopened in V2.",
+  "v2_input_files_read": [
+    "work/blind_validation/analysis_input/geom.txt",
+    "work/blind_validation/analysis_input/geom.f90",
+    "work/blind_validation/analysis_input/yl.pts",
+    "work/blind_validation/analysis_input/yu.pts",
+    "work/blind_validation/analysis_input/conditions.json",
+    "work/setup/su2_install.json",
+    "work/blind_validation/solver/gradient_regions.json",
+    "work/blind_validation/solver/*.py and own v1 simulation config/mesh/restart/history/prediction_metrics files for numerical review and initial guesses",
+    "work/blind_validation/solver_v2/* and own simulations/v2_* files",
+    "outputs/projects/proje-15cce2de02/reports/prediction_v2_* own numerical/geometry outputs"
+  ],
+  "specifically_permitted_geometry_only_review_input": "work/blind_validation/reviewer/leading_edge_tangent_audit.json; parent explicitly authorized this ONE JSON because it contained only geometry derivatives, no aerodynamic results.",
+  "specifically_permitted_new_geometry_inputs": [
+    "work/blind_validation/geometry_reference_v2/source_surface_305.csv",
+    "work/blind_validation/geometry_reference_v2/manifest.json",
+    "work/blind_validation/geometry_reference_v2/initial_source_metadata.json"
+  ],
+  "305_geometry_use": "Independent closest-shape audit only; not fitted, substituted or used to select aerodynamic coefficients. The same original65 signed ordinates define every r2/r3 solver boundary.",
+  "parent_metadata_received_without_target_results": [
+    "Geometry derivative discontinuity at LE and own mesh topology/quality locations",
+    "Case6 transition trip at x/c0.03, roughness diameter0.254mm; recorded as a physics-comparison limitation, not imposed on the fully turbulent SA baseline",
+    "FREESTREAM_NU_FACTOR3.0 is the original v8.5.0 default; explicitly writing it does not change prior physical setup",
+    "Immutable contract SHA256 a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69; contract file itself not opened",
+    "Parent mechanically froze v1 before experiment review; v2 analyst did not read that frozen file or its review links"
+  ],
+  "official_online_numerical_sources_only": [
+    "https://su2code.github.io/docs_v7/Convective-Schemes/",
+    "https://su2code.github.io/docs_v7/Restart-File/",
+    "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/config_template.cfg",
+    "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/Common/src/CConfig.cpp",
+    "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/src/output/CFlowOutput.cpp",
+    "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/src/output/CFlowCompOutput.cpp",
+    "Gmsh API docstrings and attempted official source lookup for BoundaryLayer (no case outcome content)"
+  ],
+  "prohibited_result_access": "No reviewer aerodynamic comparison, expected Cp, experimental coefficients, shock target, reviewer/additional_sources, data/review, new PROJECT_STATE or global user report was read. No online search for this case's known CFD/experiment outcomes was performed.",
+  "no_parameter_fitting": "Mach, alpha, Reynolds, temperature, chord, wall physics and SA baseline are unchanged. No target lift trimming or optimization. Numerical mesh/method trials are separately versioned and preserved.",
+  "memory": "No memory files were opened."
+}

@@ -1,0 +1,34 @@
+{
+  "purpose": "Initial guess only; final field must independently converge on this new mesh/geometry/farfield. No expected result is used.",
+  "source_own_restart": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse\\restart_flow.dat",
+  "source_sha256": "a4f73ff066a348a1d290171550b00c49ad73057fabd34b8006ae90e19994f04d",
+  "destination_sha256": "e4967b3463592f4032adb157e3d2f69be7ccda01c95dd1401d8d8b0468d75f5c",
+  "target_mesh_sha256": "7f3958c21ecb78f6289afaabe9dc34279c308d2d2b00351b5b493b3f89e2b6ae",
+  "variable_names": [
+    "x",
+    "y",
+    "Density",
+    "Momentum_x",
+    "Momentum_y",
+    "Energy",
+    "Nu_Tilde"
+  ],
+  "stored_units": "coordinates_m; rho_inf=U_inf=1 nondimensional conservative variables and nu_tilde/(U_inf*c); same authoritative physical config",
+  "interpolation": "LinearNDInterpolator of own conservative state; exact coordinate matches copied unchanged; points outside old convex hull use freestream. Wall momentum and nu_tilde initialized to zero, no-slip SA boundary. This is neither a solution transfer acceptance nor a physical correction.",
+  "exact_coordinate_matches": 10,
+  "interpolated_points": 47171,
+  "freestream_outside_old_hull": 0,
+  "nodes": 47181,
+  "minimum_density_nondimensional": 0.525131867233995,
+  "minimum_pressure_nondimensional": 0.7290246119920522,
+  "free_stream_state": [
+    1.0,
+    0.9991873755767364,
+    0.0403061842410544,
+    3.8601364699266454,
+    4.6153846153846156e-07
+  ],
+  "SA_nu_factor": 3.0,
+  "SA_nu_factor_note": "Unchanged SU2 default verified from own v1 farfield restart and official v8.5.0 CConfig.cpp. FREESTREAM_TURB2LAMVISCRATIO10 is not the SA nu_tilde initialization factor.",
+  "seconds": 0.6560000000172295
+}

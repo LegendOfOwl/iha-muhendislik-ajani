@@ -1,0 +1,1796 @@
+{
+  "name": "v2_diag_jst",
+  "iteration": 500.0,
+  "history_rows": 501,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 500.0,
+    "rms[Rho]": -10.15405497,
+    "rms[RhoU]": -10.75964833,
+    "rms[RhoV]": -10.79432711,
+    "rms[RhoE]": -9.80858841,
+    "rms[nu]": -14.45128062,
+    "RefForce": 0.5,
+    "CD": 0.01323257496,
+    "CL": 0.7095032921,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08871429051,
+    "CFx": -0.01537554856,
+    "CFy": 0.709460087,
+    "CFz": 0.0,
+    "CEff": 53.61793107,
+    "Buffet": 0.005039255364
+  },
+  "field_checkpoint_iteration": 500,
+  "density_log10_residual": -10.15405497,
+  "CL": 0.7095032921,
+  "CD": 0.01323257496,
+  "CL_final200_range": 3.76669999990753e-06,
+  "CD_final200_range": 6.601000000078239e-08,
+  "max_wall_yplus": 0.3516376316547394,
+  "p99_wall_yplus": 0.32217371463775635,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791636904201711,
+  "pressure_force_coefficient_xy": [
+    -0.021366521834627908,
+    0.7092138272829814
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005990766719343395,
+    0.000246032024355579
+  ],
+  "independent_surface_force": {
+    "CL": 0.7095030729168608,
+    "CD": 0.013232359399722348,
+    "CL_pressure": 0.7094987057712722,
+    "CD_pressure": 0.007236544311626288,
+    "CL_viscous": 4.367145588650721e-06,
+    "CD_viscous": 0.005995815088096058,
+    "relative_difference_CL": 3.089247669947511e-07,
+    "relative_difference_CD": 1.6290123298269098e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5269134640693665,
+      "dCp_dx_max_abs": 24.609403610229492,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08318134397268295,
+      "dCp_dx_max_abs": 3.8372397422790527,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+  "independent_surface_moment": {
+    "CMz_pressure": 0.08879568411778457,
+    "CMz_viscous": -7.91912197610699e-05,
+    "CMz_total": 0.0887164928980235,
+    "history_CMz": 0.08871429051,
+    "absolute_difference": 2.202388023495039e-06,
+    "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+  }
+}
+{
+  "name": "v2_diag_mat",
+  "iteration": 2999.0,
+  "history_rows": 3000,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 2999.0,
+    "rms[Rho]": -9.485129498,
+    "rms[RhoU]": -9.613004876,
+    "rms[RhoV]": -10.0746302,
+    "rms[RhoE]": -8.868947429,
+    "rms[nu]": -13.94462631,
+    "RefForce": 0.5,
+    "CD": 0.01211783306,
+    "CL": 0.6935422566,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08460560454,
+    "CFx": -0.01584605616,
+    "CFy": 0.6934670908,
+    "CFz": 0.0,
+    "CEff": 57.2331912,
+    "Buffet": 0.005039255364
+  },
+  "field_checkpoint_iteration": 2999,
+  "density_log10_residual": -9.485129498,
+  "CL": 0.6935422566,
+  "CD": 0.01211783306,
+  "CL_final200_range": 4.8522000000161825e-06,
+  "CD_final200_range": 1.6020000000172008e-08,
+  "max_wall_yplus": 0.34916046261787415,
+  "p99_wall_yplus": 0.3177027404308319,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791636904201711,
+  "pressure_force_coefficient_xy": [
+    -0.021706067050889406,
+    0.693224584972637
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005859815045706282,
+    0.00024266238014736589
+  ],
+  "independent_surface_force": {
+    "CL": 0.6935424208837032,
+    "CD": 0.012117643683151647,
+    "CL_pressure": 0.6935361424817832,
+    "CD_pressure": 0.006252809671664722,
+    "CL_viscous": 6.278401919910869e-06,
+    "CD_viscous": 0.005864834011486925,
+    "relative_difference_CL": 2.3687627052768954e-07,
+    "relative_difference_CD": 1.56279466315959e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5183736681938171,
+      "dCp_dx_max_abs": 23.513551712036133,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08318134397268295,
+      "dCp_dx_max_abs": 3.754613161087036,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+  "independent_surface_moment": {
+    "CMz_pressure": 0.08468483778889306,
+    "CMz_viscous": -7.691111152492098e-05,
+    "CMz_total": 0.08460792667736813,
+    "history_CMz": 0.08460560454,
+    "absolute_difference": 2.3221373681298063e-06,
+    "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+  }
+}
+{
+  "name": "v2_r2_coarse",
+  "iteration": 1892.0,
+  "history_rows": 1893,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 1892.0,
+    "rms[Rho]": -10.00028463,
+    "rms[RhoU]": -10.30865739,
+    "rms[RhoV]": -10.27176994,
+    "rms[RhoE]": -9.343987887,
+    "rms[nu]": -14.27539208,
+    "RefForce": 0.5,
+    "CD": 0.0120294058,
+    "CL": 0.7029663599,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08477728618,
+    "CFx": -0.0163142612,
+    "CFy": 0.7028799717,
+    "CFz": 0.0,
+    "CEff": 58.43733027,
+    "Buffet": 0.004865313881
+  },
+  "field_checkpoint_iteration": 1892,
+  "density_log10_residual": -10.00028463,
+  "CL": 0.7029663599,
+  "CD": 0.0120294058,
+  "CL_final200_range": 4.4789999997796315e-07,
+  "CD_final200_range": 1.261999999987995e-08,
+  "max_wall_yplus": 0.483486145734787,
+  "p99_wall_yplus": 0.47580480575561523,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791549086838043,
+  "pressure_force_coefficient_xy": [
+    -0.02217406408599859,
+    0.7026308268882301
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005859474325221041,
+    0.00024904965978041253
+  ],
+  "independent_surface_force": {
+    "CL": 0.7029662780544222,
+    "CD": 0.01202907367679127,
+    "CL_pressure": 0.7029536038301861,
+    "CD_pressure": 0.006164322662042105,
+    "CL_viscous": 1.267422423618231e-05,
+    "CD_viscous": 0.005864751014749162,
+    "relative_difference_CL": 1.1642886833337248e-07,
+    "relative_difference_CD": 2.7609277985296165e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5211113095283508,
+      "dCp_dx_max_abs": 25.270954132080078,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08010431379079819,
+      "dCp_dx_max_abs": 3.96901273727417,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+  "independent_surface_moment": {
+    "CMz_pressure": 0.08485829966373498,
+    "CMz_viscous": -7.58003691334112e-05,
+    "CMz_total": 0.08478249929460158,
+    "history_CMz": 0.08477728618,
+    "absolute_difference": 5.213114601582136e-06,
+    "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+  }
+}
+{
+  "name": "v2_r2_medium",
+  "iteration": 2958.0,
+  "history_rows": 2959,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 2958.0,
+    "rms[Rho]": -10.00073206,
+    "rms[RhoU]": -10.1571317,
+    "rms[RhoV]": -10.33343389,
+    "rms[RhoE]": -9.383204141,
+    "rms[nu]": -14.68686905,
+    "RefForce": 0.5,
+    "CD": 0.01168988611,
+    "CL": 0.7028482554,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08433700213,
+    "CFx": -0.01664874466,
+    "CFy": 0.7027482784,
+    "CFz": 0.0,
+    "CEff": 60.12447419,
+    "Buffet": 0.005333736216
+  },
+  "field_checkpoint_iteration": 2958,
+  "density_log10_residual": -10.00073206,
+  "CL": 0.7028482554,
+  "CD": 0.01168988611,
+  "CL_final200_range": 1.6984999999802852e-06,
+  "CD_final200_range": 7.579999999202114e-09,
+  "max_wall_yplus": 0.3235875070095062,
+  "p99_wall_yplus": 0.31825312972068787,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791673406681292,
+  "pressure_force_coefficient_xy": [
+    -0.022494406301875075,
+    0.7025005924642586
+  ],
+  "viscous_force_coefficient_xy": [
+    0.00584543011638652,
+    0.0002476269604361749
+  ],
+  "independent_surface_force": {
+    "CL": 0.7028482057597424,
+    "CD": 0.011689652386386775,
+    "CL_pressure": 0.7028363870102615,
+    "CD_pressure": 0.005838991511386921,
+    "CL_viscous": 1.1818749480982783e-05,
+    "CD_viscous": 0.005850660874999856,
+    "relative_difference_CL": 7.0627275787855e-08,
+    "relative_difference_CD": 1.9993660419452967e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5194272994995117,
+      "dCp_dx_max_abs": 26.955753326416016,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08289061486721039,
+      "dCp_dx_max_abs": 3.8901968002319336,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+  "independent_surface_moment": {
+    "CMz_pressure": 0.08441530980854811,
+    "CMz_viscous": -7.597253478983603e-05,
+    "CMz_total": 0.08433933727375828,
+    "history_CMz": 0.08433700213,
+    "absolute_difference": 2.33514375827526e-06,
+    "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+  }
+}
+{
+  "name": "v2_r2_fine",
+  "iteration": 800.0,
+  "history_rows": 825,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 824.0,
+    "rms[Rho]": -6.197549696,
+    "rms[RhoU]": -7.137266693,
+    "rms[RhoV]": -6.560690037,
+    "rms[RhoE]": -5.492101436,
+    "rms[nu]": -9.972021272,
+    "RefForce": 0.5,
+    "CD": 0.01143813539,
+    "CL": 0.7015803445,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08416281379,
+    "CFx": -0.01684918614,
+    "CFy": 0.7014712508,
+    "CFz": 0.0,
+    "CEff": 61.33695051,
+    "Buffet": 0.005104820237
+  },
+  "field_checkpoint_iteration": 800,
+  "density_log10_residual": -6.196568981,
+  "CL": 0.7015641476,
+  "CD": 0.01143336298,
+  "CL_final200_range": 0.002009741499999995,
+  "CD_final200_range": 0.00018785111000000146,
+  "max_wall_yplus": 0.21939723193645477,
+  "p99_wall_yplus": 0.21211165189743042,
+  "checks": {
+    "density_log10_below_minus8": false,
+    "CL_final200_range_below_5e_5": false,
+    "CD_final200_range_below_2e_6": false,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791729235753231,
+  "pressure_force_coefficient_xy": [
+    -0.022599759526172294,
+    0.7007199619109981
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005811865779619244,
+    0.0002468681541632823
+  ],
+  "independent_surface_force": {
+    "CL": 0.7010738632375206,
+    "CD": 0.011479046705394815,
+    "CL_pressure": 0.7010614498273463,
+    "CD_pressure": 0.005661953476547868,
+    "CL_viscous": 1.2413410174270706e-05,
+    "CD_viscous": 0.00581709322884695,
+    "relative_difference_CL": 0.000698844666102963,
+    "relative_difference_CD": 0.003995650752515065,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.519231379032135,
+      "dCp_dx_max_abs": 26.31916046142578,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08055489510297775,
+      "dCp_dx_max_abs": 4.142916679382324,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+  "independent_surface_moment": {
+    "CMz_pressure": 0.08398567819178607,
+    "CMz_viscous": -7.671603073365342e-05,
+    "CMz_total": 0.08390896216105241,
+    "history_CMz": 0.08415037982,
+    "absolute_difference": 0.0002414176589475847,
+    "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+  }
+}
+{
+  "name": "v2_r2_fine_cfl1",
+  "iteration": 3400.0,
+  "history_rows": 3469,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 3468.0,
+    "rms[Rho]": -8.384803966,
+    "rms[RhoU]": -8.733527518,
+    "rms[RhoV]": -8.709001755,
+    "rms[RhoE]": -7.713855823,
+    "rms[nu]": -12.39145869,
+    "Linear_Solver_Iterations": 1.0,
+    "LinSolRes": -1.495187357,
+    "LinSolIterTurb": 1.0,
+    "LinSolResTurb": -1.708583264,
+    "Min DT": 6.251114736e-10,
+    "Max DT": 1.458369974,
+    "Min CFL": 1.0,
+    "Max CFL": 1.0,
+    "Avg CFL": 1.0,
+    "RefForce": 0.5,
+    "CD": 0.01152755475,
+    "CL": 0.7013527379,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08391222679,
+    "CFx": -0.0167506655,
+    "CFy": 0.7012474333,
+    "CFz": 0.0,
+    "CEff": 60.84141462,
+    "Buffet": 0.005104820237
+  },
+  "field_checkpoint_iteration": 3400,
+  "density_log10_residual": -8.331890071,
+  "CL": 0.7013489569,
+  "CD": 0.01152713183,
+  "CL_final200_range": 1.015079999999724e-05,
+  "CD_final200_range": 9.171800000006003e-07,
+  "max_wall_yplus": 0.2158922702074051,
+  "p99_wall_yplus": 0.21213114261627197,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791729235753231,
+  "pressure_force_coefficient_xy": [
+    -0.02257398112651474,
+    0.7009965286498804
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005822802789618088,
+    0.0002474018175609493
+  ],
+  "independent_surface_force": {
+    "CL": 0.70134925860318,
+    "CD": 0.011526901139080191,
+    "CL_pressure": 0.7013367527924159,
+    "CD_pressure": 0.005698858277980608,
+    "CL_viscous": 1.2505810763967278e-05,
+    "CD_viscous": 0.005828042861099581,
+    "relative_difference_CL": 4.3017555957893706e-07,
+    "relative_difference_CD": 2.0012863842607873e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.521529495716095,
+      "dCp_dx_max_abs": 24.951745986938477,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08055489510297775,
+      "dCp_dx_max_abs": 4.125801086425781,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+  "independent_surface_moment": {
+    "CMz_pressure": 0.08398733058701816,
+    "CMz_viscous": -7.569695797789085e-05,
+    "CMz_total": 0.08391163362904026,
+    "history_CMz": 0.08391050972,
+    "absolute_difference": 1.1239090402653806e-06,
+    "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+  }
+}
+{
+  "name": "v2_r3_medium",
+  "iteration": 3434.0,
+  "history_rows": 3435,
+  "history_terminal": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 3434.0,
+    "rms[Rho]": -10.00084755,
+    "rms[RhoU]": -10.23481796,
+    "rms[RhoV]": -10.47164344,
+    "rms[RhoE]": -9.417937357,
+    "rms[nu]": -14.04390766,
+    "RefForce": 0.5,
+    "CD": 0.01226334171,
+    "CL": 0.7319553318,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": 0.08998490784,
+    "CFx": -0.01724895024,
+    "CFy": 0.7318548155,
+    "CFz": 0.0,
+    "CEff": 59.68644999,
+    "Buffet": 0.005745382762
+  },
+  "field_checkpoint_iteration": 3434,
+  "density_log10_residual": -10.00084755,
+  "CL": 0.7319553318,
+  "CD": 0.01226334171,
+  "CL_final200_range": 1.60650000002871e-06,
+  "CD_final200_range": 1.1430000000298146e-08,
+  "max_wall_yplus": 0.3243336081504822,
+  "p99_wall_yplus": 0.3188241124153137,
+  "checks": {
+    "density_log10_below_minus8": true,
+    "CL_final200_range_below_5e_5": true,
+    "CD_final200_range_below_2e_6": true,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.07791673406681292,
+  "pressure_force_coefficient_xy": [
+    -0.023110388909237257,
+    0.7316066300081783
+  ],
+  "viscous_force_coefficient_xy": [
+    0.0058612058461748945,
+    0.0002480275539088311
+  ],
+  "independent_surface_force": {
+    "CL": 0.7319551833436204,
+    "CD": 0.012263102709747287,
+    "CL_pressure": 0.7319436001856702,
+    "CD_pressure": 0.006396662778308061,
+    "CL_viscous": 1.1583157950212006e-05,
+    "CD_viscous": 0.0058664399314392246,
+    "relative_difference_CL": 2.0282163840356207e-07,
+    "relative_difference_CD": 1.94889988687771e-05,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.5327011942863464,
+      "dCp_dx_max_abs": 28.918296813964844,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.08289061486721039,
+      "dCp_dx_max_abs": 3.8927927017211914,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+  "independent_surface_moment": {
+    "CMz_pressure": 0.0900676133974113,
+    "CMz_viscous": -8.023666064665074e-05,
+    "CMz_total": 0.08998737673676466,
+    "history_CMz": 0.08998490784,
+    "absolute_difference": 2.468896764654116e-06,
+    "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+  }
+}
+{
+  "run": "v2_r2_coarse",
+  "coverage_warning": true,
+  "profiles": [
+    {
+      "side": "upper",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.5100731055353542,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.006849577869425286,
+          "operational_delta99_c": 0.005751439242433617
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.4925109285306677,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.013608742356999262,
+          "operational_delta99_c": 0.005324232146149455
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0208186098582288,
+        "mu_t_over_mu": 0.027423231269825588,
+        "Cp": -1.1051152294332331,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 30
+    },
+    {
+      "side": "upper",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.0869486593851003,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.013741189193424961,
+          "operational_delta99_c": 0.020402010050251256
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.076597099603843,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0012035908553996234,
+          "operational_delta99_c": 0.018305004180517902
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8890887695353888,
+        "mu_t_over_mu": 162.6443328857422,
+        "Cp": -0.19214721024036407,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 35
+    },
+    {
+      "side": "upper",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.9596229737578279,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.042488567595910444,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.9540848630090791,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0074575159267142935,
+          "operational_delta99_c": 0.02836180904522613
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.6438270857918006,
+        "mu_t_over_mu": 282.900634765625,
+        "Cp": 0.0950745242563161,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 39
+    },
+    {
+      "side": "lower",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.1370208274423497,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.014180940283344221,
+          "operational_delta99_c": 0.003984924623115577
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.114709807847947,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.017676904963138063,
+          "operational_delta99_c": 0.003487437185929648
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0391234048899405,
+        "mu_t_over_mu": 0.1172648851167072,
+        "Cp": -0.3273416649211537,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 28
+    },
+    {
+      "side": "lower",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8889706350005842,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.0020109324696043983,
+          "operational_delta99_c": 0.019407035175879397
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8959567962909168,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.009233953054880941,
+          "operational_delta99_c": 0.02307429770577957
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.9123641877139169,
+        "mu_t_over_mu": 85.5112797130238,
+        "Cp": 0.23116882145404816,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 36
+    },
+    {
+      "side": "lower",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8675937828000695,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.012837839934692431,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8756050915003308,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.014059695025835307,
+          "operational_delta99_c": 0.030351758793969848
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8433528497608469,
+        "mu_t_over_mu": 135.88459916548294,
+        "Cp": 0.29460021311586554,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 39
+    }
+  ]
+}
+{
+  "run": "v2_r2_coarse",
+  "checkpoint_iteration": 1892,
+  "physical_freestream_from_authoritative_conditions_and_constitutive_air_assumptions": {
+    "T_K": 255.55555555555554,
+    "Mach": 0.729,
+    "alpha_deg": 2.31,
+    "Re_chord": 6500000.0,
+    "chord_m": 1.0,
+    "gamma": 1.4,
+    "R_J_kg_K": 287.058,
+    "U_m_s": 233.62485067141293,
+    "mu_Pa_s": 1.6275603778870158e-05,
+    "rho_kg_m3": 0.45282607675777103,
+    "p_Pa": 33218.98891849379,
+    "dynamic_pressure_Pa": 12357.75288288328,
+    "calculation": "Sutherland mu at source computational temperature; U=M*sqrt(gamma*R*T); rho=Re*mu/(U*c); p=rho*R*T. Pressure is derived, not fitted."
+  },
+  "stored_solution_scaling": {
+    "rho_ref_kg_m3": 0.45282607675777103,
+    "velocity_ref_m_s": 233.62485067141293,
+    "pressure_ref_Pa": 24715.50576576656,
+    "temperature_ref_K": 255.55555555555554,
+    "note": "Native restart and VTU primitive fields are nondimensional under REF_DIMENSIONALIZATION=FREESTREAM_VEL_EQ_ONE; Cp/Cf are already dimensionless."
+  },
+  "restart_vs_mesh_max_xy_error_m": 0.0,
+  "restart_vs_VTU_max_xy_error_m": 9.607239062099638e-06,
+  "Cp_recomputed_from_conservative_state_max_difference": 5.956360826786522e-08,
+  "Cp_recomputed_RMS_difference": 1.6722658697394344e-08,
+  "mass_flux_farfield_nondimensional": 0.00038918797907933067,
+  "farfield_physical_momentum_flux_quadrature": {
+    "CL": 0.7017880591314009,
+    "CD": 0.00700382751191423,
+    "relative_difference_to_native_wall_CL": 0.001676183720607581,
+    "relative_difference_to_native_wall_CD": 0.41777444136814884,
+    "method": "Trapezoid nodal physical momentum/pressure perturbation flux at outer boundary, subtracting uniform freestream analytically; far viscous traction neglected. This is not the solver discrete flux including JST dissipation and is not an automatic acceptance test."
+  },
+  "domain_area_check": {
+    "fluid_cell_area_sum_m2": 159999.92208450957,
+    "outer_polygon_area_m2": 159999.99999999997,
+    "wall_polygon_area_m2": 0.07791549095574893,
+    "balance_error_m2": 5.529727786779404e-10
+  },
+  "wall_force_dimensional_per_unit_span": {
+    "lift_N_per_m": 8687.084560624191,
+    "drag_N_per_m": 148.65642420432286,
+    "scope": "2D section per unit span; not total wing/aircraft loads"
+  }
+}
+{
+  "run": "v2_r2_medium",
+  "coverage_warning": true,
+  "profiles": [
+    {
+      "side": "upper",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.5062514651984618,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.007326631146350293,
+          "operational_delta99_c": 0.005751439242433617
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.4896588577720722,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.009909639017166714,
+          "operational_delta99_c": 0.005228374416762557
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0210423615340518,
+        "mu_t_over_mu": 0.020696632225405086,
+        "Cp": -1.0994606559926814,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 43
+    },
+    {
+      "side": "upper",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.0805445971650358,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.016833933773540668,
+          "operational_delta99_c": 0.01741708542713568
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.075128047483451,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0006842511035191466,
+          "operational_delta99_c": 0.01691959798994975
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.882154528090587,
+        "mu_t_over_mu": 193.12016573819247,
+        "Cp": -0.1899089433930137,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 51
+    },
+    {
+      "side": "upper",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.9547644360150377,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.026773064595410644,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.9514988301750694,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.011655008687312625,
+          "operational_delta99_c": 0.02686934673366834
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.6309437577205983,
+        "mu_t_over_mu": 314.7858054421165,
+        "Cp": 0.09592159431089055,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 54
+    },
+    {
+      "side": "lower",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.1373224882616513,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.013915907254582107,
+          "operational_delta99_c": 0.003984924623115577
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.1146043954685851,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.01831669804417324,
+          "operational_delta99_c": 0.003487437185929648
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0393789131814033,
+        "mu_t_over_mu": 0.11676495657725768,
+        "Cp": -0.3279408135197379,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 41
+    },
+    {
+      "side": "lower",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8870324648085193,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.004444935986829613,
+          "operational_delta99_c": 0.017914572864321607
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8958417113375026,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0089519029385215,
+          "operational_delta99_c": 0.03383417085427136
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.9097278598263813,
+        "mu_t_over_mu": 97.01020535555753,
+        "Cp": 0.232624659484083,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 56
+    },
+    {
+      "side": "lower",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8637516576596708,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.007458829778376,
+          "operational_delta99_c": 0.021894472361809046
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8763403921659856,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.014730887298175146,
+          "operational_delta99_c": 0.04676884422110553
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8369007082580976,
+        "mu_t_over_mu": 156.3391154896129,
+        "Cp": 0.2948186234994368,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 61
+    }
+  ]
+}
+{
+  "run": "v2_r2_medium",
+  "checkpoint_iteration": 2958,
+  "physical_freestream_from_authoritative_conditions_and_constitutive_air_assumptions": {
+    "T_K": 255.55555555555554,
+    "Mach": 0.729,
+    "alpha_deg": 2.31,
+    "Re_chord": 6500000.0,
+    "chord_m": 1.0,
+    "gamma": 1.4,
+    "R_J_kg_K": 287.058,
+    "U_m_s": 233.62485067141293,
+    "mu_Pa_s": 1.6275603778870158e-05,
+    "rho_kg_m3": 0.45282607675777103,
+    "p_Pa": 33218.98891849379,
+    "dynamic_pressure_Pa": 12357.75288288328,
+    "calculation": "Sutherland mu at source computational temperature; U=M*sqrt(gamma*R*T); rho=Re*mu/(U*c); p=rho*R*T. Pressure is derived, not fitted."
+  },
+  "stored_solution_scaling": {
+    "rho_ref_kg_m3": 0.45282607675777103,
+    "velocity_ref_m_s": 233.62485067141293,
+    "pressure_ref_Pa": 24715.50576576656,
+    "temperature_ref_K": 255.55555555555554,
+    "note": "Native restart and VTU primitive fields are nondimensional under REF_DIMENSIONALIZATION=FREESTREAM_VEL_EQ_ONE; Cp/Cf are already dimensionless."
+  },
+  "restart_vs_mesh_max_xy_error_m": 0.0,
+  "restart_vs_VTU_max_xy_error_m": 1.0095078813327345e-05,
+  "Cp_recomputed_from_conservative_state_max_difference": 5.9593732393281584e-08,
+  "Cp_recomputed_RMS_difference": 1.674140905240305e-08,
+  "mass_flux_farfield_nondimensional": 0.00022093000712331,
+  "farfield_physical_momentum_flux_quadrature": {
+    "CL": 0.7027931171990263,
+    "CD": 0.008978861574943157,
+    "relative_difference_to_native_wall_CL": 7.84496518986341e-05,
+    "relative_difference_to_native_wall_CD": 0.23191197155785154,
+    "method": "Trapezoid nodal physical momentum/pressure perturbation flux at outer boundary, subtracting uniform freestream analytically; far viscous traction neglected. This is not the solver discrete flux including JST dissipation and is not an automatic acceptance test."
+  },
+  "domain_area_check": {
+    "fluid_cell_area_sum_m2": 159999.9220832663,
+    "outer_polygon_area_m2": 160000.0,
+    "wall_polygon_area_m2": 0.07791673409724961,
+    "balance_error_m2": 4.0745362639427185e-10
+  },
+  "wall_force_dimensional_per_unit_span": {
+    "lift_N_per_m": 8685.625054398834,
+    "drag_N_per_m": 144.46072377642972,
+    "scope": "2D section per unit span; not total wing/aircraft loads"
+  }
+}
+{
+  "run": "v2_r2_fine",
+  "coverage_warning": true,
+  "profiles": [
+    {
+      "side": "upper",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.5066258000600043,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.007784892186291685,
+          "operational_delta99_c": 0.005633528124978795
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.4897049664915918,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.01048320873228755,
+          "operational_delta99_c": 0.005324232146149455
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0213956757977578,
+        "mu_t_over_mu": 0.019430182366208595,
+        "Cp": -1.1008557623082942,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 64
+    },
+    {
+      "side": "upper",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.079471948360284,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.009942794582093127,
+          "operational_delta99_c": 0.016422110552763818
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.0757612075426084,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0020747202183788505,
+          "operational_delta99_c": 0.015686668766555664
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8646596101244886,
+        "mu_t_over_mu": 232.71145722393388,
+        "Cp": -0.18895720713143094,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 74
+    },
+    {
+      "side": "upper",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.9505155351701864,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.015481411532944734,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.9539890305700719,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.01045442354020553,
+          "operational_delta99_c": 0.026371859296482413
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.6112834374067079,
+        "mu_t_over_mu": 374.2716248037962,
+        "Cp": 0.09567100275612456,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 81
+    },
+    {
+      "side": "lower",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.137360584128416,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.013794358844951789,
+          "operational_delta99_c": 0.003984924623115577
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.1150659045458402,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.01824318676652645,
+          "operational_delta99_c": 0.003487437185929648
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.039215674596516,
+        "mu_t_over_mu": 0.11630651490254836,
+        "Cp": -0.32807891206307843,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 60
+    },
+    {
+      "side": "lower",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8873400852593056,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.00596930405028113,
+          "operational_delta99_c": 0.016422110552763818
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8958583037833668,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.008952638882846156,
+          "operational_delta99_c": 0.033313684983207414
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8984139741964892,
+        "mu_t_over_mu": 126.50252463600852,
+        "Cp": 0.23188212649388748,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 84
+    },
+    {
+      "side": "lower",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8615702501112046,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.009200380465168946,
+          "operational_delta99_c": 0.020402010050251256
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8766280563745785,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.013917195219562405,
+          "operational_delta99_c": 0.045773869346733664
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8267013004739214,
+        "mu_t_over_mu": 171.56770185990766,
+        "Cp": 0.2926786785775965,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 88
+    }
+  ]
+}
+{
+  "run": "v2_r2_fine",
+  "checkpoint_iteration": 800,
+  "physical_freestream_from_authoritative_conditions_and_constitutive_air_assumptions": {
+    "T_K": 255.55555555555554,
+    "Mach": 0.729,
+    "alpha_deg": 2.31,
+    "Re_chord": 6500000.0,
+    "chord_m": 1.0,
+    "gamma": 1.4,
+    "R_J_kg_K": 287.058,
+    "U_m_s": 233.62485067141293,
+    "mu_Pa_s": 1.6275603778870158e-05,
+    "rho_kg_m3": 0.45282607675777103,
+    "p_Pa": 33218.98891849379,
+    "dynamic_pressure_Pa": 12357.75288288328,
+    "calculation": "Sutherland mu at source computational temperature; U=M*sqrt(gamma*R*T); rho=Re*mu/(U*c); p=rho*R*T. Pressure is derived, not fitted."
+  },
+  "stored_solution_scaling": {
+    "rho_ref_kg_m3": 0.45282607675777103,
+    "velocity_ref_m_s": 233.62485067141293,
+    "pressure_ref_Pa": 24715.50576576656,
+    "temperature_ref_K": 255.55555555555554,
+    "note": "Native restart and VTU primitive fields are nondimensional under REF_DIMENSIONALIZATION=FREESTREAM_VEL_EQ_ONE; Cp/Cf are already dimensionless."
+  },
+  "restart_vs_mesh_max_xy_error_m": 0.0,
+  "restart_vs_VTU_max_xy_error_m": 1.0502686409764708e-05,
+  "Cp_recomputed_from_conservative_state_max_difference": 5.9602985658102625e-08,
+  "Cp_recomputed_RMS_difference": 1.660145905763745e-08,
+  "mass_flux_farfield_nondimensional": 9.918614827902905e-05,
+  "farfield_physical_momentum_flux_quadrature": {
+    "CL": 0.7007509238984795,
+    "CD": 0.0104552060888847,
+    "relative_difference_to_native_wall_CL": 0.0011591580104292126,
+    "relative_difference_to_native_wall_CD": 0.08555285901675277,
+    "method": "Trapezoid nodal physical momentum/pressure perturbation flux at outer boundary, subtracting uniform freestream analytically; far viscous traction neglected. This is not the solver discrete flux including JST dissipation and is not an automatic acceptance test."
+  },
+  "domain_area_check": {
+    "fluid_cell_area_sum_m2": 159999.92208270734,
+    "outer_polygon_area_m2": 160000.0,
+    "wall_polygon_area_m2": 0.07791729263543715,
+    "balance_error_m2": -2.9103830456733704e-11
+  },
+  "wall_force_dimensional_per_unit_span": {
+    "lift_N_per_m": 8669.75636753145,
+    "drag_N_per_m": 141.29067432714598,
+    "scope": "2D section per unit span; not total wing/aircraft loads"
+  }
+}
+{
+  "run": "v2_r2_fine_cfl1",
+  "coverage_warning": true,
+  "profiles": [
+    {
+      "side": "upper",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.506856752068293,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.007801034999828535,
+          "operational_delta99_c": 0.005633528124978795
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.4899479293872706,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.010487577600218125,
+          "operational_delta99_c": 0.005324232146149455
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0213303758418562,
+        "mu_t_over_mu": 0.01939874328672886,
+        "Cp": -1.1012287573380903,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 64
+    },
+    {
+      "side": "upper",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.079550761756698,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.009725768112299613,
+          "operational_delta99_c": 0.016422110552763818
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.075548540487707,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0022770588253228576,
+          "operational_delta99_c": 0.015686668766555664
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8650038914219156,
+        "mu_t_over_mu": 231.42956140564837,
+        "Cp": -0.1887300667591087,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 74
+    },
+    {
+      "side": "upper",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.9506991500417885,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.01530116712285536,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.9539032121985132,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.009878241687572864,
+          "operational_delta99_c": 0.02587437185929648
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.6119695641777406,
+        "mu_t_over_mu": 372.84051243365764,
+        "Cp": 0.09563763507337306,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 81
+    },
+    {
+      "side": "lower",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.137584800592363,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.013890298362485396,
+          "operational_delta99_c": 0.003984924623115577
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.1151525602823458,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0183331038254578,
+          "operational_delta99_c": 0.003487437185929648
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0394347903138665,
+        "mu_t_over_mu": 0.11614074219356883,
+        "Cp": -0.32887106321074744,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 60
+    },
+    {
+      "side": "lower",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8869705365632872,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.006095921821279329,
+          "operational_delta99_c": 0.016422110552763818
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8955904387525403,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.00904011737877678,
+          "operational_delta99_c": 0.03383417085427136
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8994522394538612,
+        "mu_t_over_mu": 126.23404000022194,
+        "Cp": 0.23305415700782428,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 85
+    },
+    {
+      "side": "lower",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8613785950218451,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.00923754408246761,
+          "operational_delta99_c": 0.020402010050251256
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8764584562899187,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.013954741974293292,
+          "operational_delta99_c": 0.045773869346733664
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8281343151400978,
+        "mu_t_over_mu": 171.39924482865766,
+        "Cp": 0.29310090162537317,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 88
+    }
+  ]
+}
+{
+  "run": "v2_r2_fine_cfl1",
+  "checkpoint_iteration": 3400,
+  "physical_freestream_from_authoritative_conditions_and_constitutive_air_assumptions": {
+    "T_K": 255.55555555555554,
+    "Mach": 0.729,
+    "alpha_deg": 2.31,
+    "Re_chord": 6500000.0,
+    "chord_m": 1.0,
+    "gamma": 1.4,
+    "R_J_kg_K": 287.058,
+    "U_m_s": 233.62485067141293,
+    "mu_Pa_s": 1.6275603778870158e-05,
+    "rho_kg_m3": 0.45282607675777103,
+    "p_Pa": 33218.98891849379,
+    "dynamic_pressure_Pa": 12357.75288288328,
+    "calculation": "Sutherland mu at source computational temperature; U=M*sqrt(gamma*R*T); rho=Re*mu/(U*c); p=rho*R*T. Pressure is derived, not fitted."
+  },
+  "stored_solution_scaling": {
+    "rho_ref_kg_m3": 0.45282607675777103,
+    "velocity_ref_m_s": 233.62485067141293,
+    "pressure_ref_Pa": 24715.50576576656,
+    "temperature_ref_K": 255.55555555555554,
+    "note": "Native restart and VTU primitive fields are nondimensional under REF_DIMENSIONALIZATION=FREESTREAM_VEL_EQ_ONE; Cp/Cf are already dimensionless."
+  },
+  "restart_vs_mesh_max_xy_error_m": 0.0,
+  "restart_vs_VTU_max_xy_error_m": 1.0502686409764708e-05,
+  "Cp_recomputed_from_conservative_state_max_difference": 5.960440163654823e-08,
+  "Cp_recomputed_RMS_difference": 1.6751161870718722e-08,
+  "mass_flux_farfield_nondimensional": 8.556856491262477e-05,
+  "farfield_physical_momentum_flux_quadrature": {
+    "CL": 0.7013357644167919,
+    "CD": 0.010450318483065147,
+    "relative_difference_to_native_wall_CL": 1.8810155883586605e-05,
+    "relative_difference_to_native_wall_CD": 0.09341554888201999,
+    "method": "Trapezoid nodal physical momentum/pressure perturbation flux at outer boundary, subtracting uniform freestream analytically; far viscous traction neglected. This is not the solver discrete flux including JST dissipation and is not an automatic acceptance test."
+  },
+  "domain_area_check": {
+    "fluid_cell_area_sum_m2": 159999.92208270734,
+    "outer_polygon_area_m2": 160000.0,
+    "wall_polygon_area_m2": 0.07791729263543715,
+    "balance_error_m2": -2.9103830456733704e-11
+  },
+  "wall_force_dimensional_per_unit_span": {
+    "lift_N_per_m": 8667.097094038156,
+    "drag_N_per_m": 142.44944660355813,
+    "scope": "2D section per unit span; not total wing/aircraft loads"
+  }
+}
+{
+  "run": "v2_r3_medium",
+  "coverage_warning": true,
+  "profiles": [
+    {
+      "side": "upper",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.5163666401805813,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.00719353674254956,
+          "operational_delta99_c": 0.005751439242433617
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.4985213557338397,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.011886459517032282,
+          "operational_delta99_c": 0.005228374416762557
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0206348480861511,
+        "mu_t_over_mu": 0.01882873001423749,
+        "Cp": -1.117582689632069,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 43
+    },
+    {
+      "side": "upper",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.082631629864724,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.011662034636034027,
+          "operational_delta99_c": 0.01592462311557789
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.0766716268184389,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.00172626012879929,
+          "operational_delta99_c": 0.015686668766555664
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8585169785474732,
+        "mu_t_over_mu": 490.4152332652699,
+        "Cp": -0.20072281496091324,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 50
+    },
+    {
+      "side": "upper",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.9488603930345785,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.017248396209486944,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.9503431607446432,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.010538254083624726,
+          "operational_delta99_c": 0.026371859296482413
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.6621211335241405,
+        "mu_t_over_mu": 659.3267933238636,
+        "Cp": 0.09228107536380942,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 57
+    },
+    {
+      "side": "lower",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.1321058821436087,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.0138842650731619,
+          "operational_delta99_c": 0.003984924623115577
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.109523389590538,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.018381023072134607,
+          "operational_delta99_c": 0.003487437185929648
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.039944564592451,
+        "mu_t_over_mu": 0.10980837656693025,
+        "Cp": -0.31668522412126715,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 41
+    },
+    {
+      "side": "lower",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8833130949059982,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.006935618168573457,
+          "operational_delta99_c": 0.015686668766555664
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8919959238288009,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.008905923773385614,
+          "operational_delta99_c": 0.03433165829145728
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8923453342138086,
+        "mu_t_over_mu": 263.2289026433771,
+        "Cp": 0.23995532230897385,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 58
+    },
+    {
+      "side": "lower",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8557302861424665,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.013164272159537535,
+          "operational_delta99_c": 0.022391959798994974
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8709657795966883,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.015053524081113176,
+          "operational_delta99_c": 0.046733317129847234
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8252049055376027,
+        "mu_t_over_mu": 375.6620178222656,
+        "Cp": 0.30578970638188446,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 61
+    }
+  ]
+}
+{
+  "run": "v2_r3_medium",
+  "checkpoint_iteration": 3434,
+  "physical_freestream_from_authoritative_conditions_and_constitutive_air_assumptions": {
+    "T_K": 255.55555555555554,
+    "Mach": 0.729,
+    "alpha_deg": 2.31,
+    "Re_chord": 6500000.0,
+    "chord_m": 1.0,
+    "gamma": 1.4,
+    "R_J_kg_K": 287.058,
+    "U_m_s": 233.62485067141293,
+    "mu_Pa_s": 1.6275603778870158e-05,
+    "rho_kg_m3": 0.45282607675777103,
+    "p_Pa": 33218.98891849379,
+    "dynamic_pressure_Pa": 12357.75288288328,
+    "calculation": "Sutherland mu at source computational temperature; U=M*sqrt(gamma*R*T); rho=Re*mu/(U*c); p=rho*R*T. Pressure is derived, not fitted."
+  },
+  "stored_solution_scaling": {
+    "rho_ref_kg_m3": 0.45282607675777103,
+    "velocity_ref_m_s": 233.62485067141293,
+    "pressure_ref_Pa": 24715.50576576656,
+    "temperature_ref_K": 255.55555555555554,
+    "note": "Native restart and VTU primitive fields are nondimensional under REF_DIMENSIONALIZATION=FREESTREAM_VEL_EQ_ONE; Cp/Cf are already dimensionless."
+  },
+  "restart_vs_mesh_max_xy_error_m": 0.0,
+  "restart_vs_VTU_max_xy_error_m": 1.0095078813327345e-05,
+  "Cp_recomputed_from_conservative_state_max_difference": 5.9589535084114686e-08,
+  "Cp_recomputed_RMS_difference": 1.7405003538230705e-08,
+  "mass_flux_farfield_nondimensional": 0.00023054704270603077,
+  "farfield_physical_momentum_flux_quadrature": {
+    "CL": 0.7318981676586875,
+    "CD": 0.009439829528007093,
+    "relative_difference_to_native_wall_CL": 7.80978549222936e-05,
+    "relative_difference_to_native_wall_CD": 0.2302400315315773,
+    "method": "Trapezoid nodal physical momentum/pressure perturbation flux at outer boundary, subtracting uniform freestream analytically; far viscous traction neglected. This is not the solver discrete flux including JST dissipation and is not an automatic acceptance test."
+  },
+  "domain_area_check": {
+    "fluid_cell_area_sum_m2": 159999.9220832663,
+    "outer_polygon_area_m2": 160000.0,
+    "wall_polygon_area_m2": 0.07791673409724961,
+    "balance_error_m2": 4.0745362639427185e-10
+  },
+  "wall_force_dimensional_per_unit_span": {
+    "lift_N_per_m": 9045.323111693238,
+    "drag_N_per_m": 151.54734637053528,
+    "scope": "2D section per unit span; not total wing/aircraft loads"
+  }
+}
+FROZEN outputs/projects/proje-15cce2de02/reports/prediction_v2_frozen.json 78de97c3c1e5ed3812af9637a6a405583a2f44f176557d5cc94dfef59df62d3d

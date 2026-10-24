@@ -1,0 +1,228 @@
+{
+  "numerical_source": "work/validation/sources/turb_SA_RAE2822.cfg",
+  "official_option_reference": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/config_template.cfg",
+  "overrides": {
+    "FREESTREAM_TEMPERATURE": {
+      "template": "288.15",
+      "analysis": "255.55555555555554",
+      "reason": "authoritative physical conditions, replacing template temperature"
+    },
+    "REYNOLDS_NUMBER": {
+      "template": "6.5E6",
+      "analysis": "6500000.0",
+      "reason": "authoritative physical conditions"
+    },
+    "CFL_NUMBER": {
+      "template": "10.0",
+      "analysis": "3.0",
+      "reason": "bounded moderate CFL, protects stiff wall layers"
+    },
+    "CFL_ADAPT": {
+      "template": "NO",
+      "analysis": "YES",
+      "reason": "bounded automatic decrease/increase; upper bound stays moderate"
+    },
+    "CFL_ADAPT_PARAM": {
+      "template": "( 1.5, 0.5, 1.0, 100.0 )",
+      "analysis": "( 0.5, 1.1, 1.0, 3.0, 0.1, 100 )",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "ITER": {
+      "template": "99999",
+      "analysis": "6000",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "LINEAR_SOLVER": {
+      "template": "BCGSTAB",
+      "analysis": "FGMRES",
+      "reason": "robust Krylov solve on anisotropic wall mesh"
+    },
+    "LINEAR_SOLVER_ERROR": {
+      "template": "1E-1",
+      "analysis": "0.05",
+      "reason": "stronger linear reduction than template"
+    },
+    "LINEAR_SOLVER_ITER": {
+      "template": "3",
+      "analysis": "15",
+      "reason": "allow stronger reduction than template 3"
+    },
+    "CONV_RESIDUAL_MINVAL": {
+      "template": "-8",
+      "analysis": "-10",
+      "reason": "-10 target to give strict force-history screens opportunity; screens remain -8/CL/CD"
+    },
+    "CONV_STARTITER": {
+      "template": "10",
+      "analysis": "500",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "CONV_CAUCHY_EPS": {
+      "template": "1E-6",
+      "analysis": "1E-12",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "MESH_FILENAME": {
+      "template": "mesh_RAE2822_turb.su2",
+      "analysis": "mesh.su2",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "SOLUTION_FILENAME": {
+      "template": "solution_flow",
+      "analysis": "restart_flow",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "OUTPUT_WRT_FREQ": {
+      "template": "250",
+      "analysis": "( 200, 200, 200, 200 )",
+      "reason": "checkpoints every 200, preserving fields on timeout"
+    },
+    "SCREEN_OUTPUT": {
+      "template": "(INNER_ITER, RMS_DENSITY, RMS_NU_TILDE, LIFT, DRAG, TOTAL_HEATFLUX)",
+      "analysis": "( INNER_ITER, RMS_DENSITY, RMS_NU_TILDE, LIFT, DRAG )",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "SA_OPTIONS": {
+      "template": null,
+      "analysis": "NONE",
+      "reason": "explicit SU2 v8.5 baseline NONE, without ft2; no transition model"
+    },
+    "KIND_TRANS_MODEL": {
+      "template": null,
+      "analysis": "NONE",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "SYSTEM_MEASUREMENTS": {
+      "template": null,
+      "analysis": "SI",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "INIT_OPTION": {
+      "template": null,
+      "analysis": "REYNOLDS",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "FREESTREAM_OPTION": {
+      "template": null,
+      "analysis": "TEMPERATURE_FS",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "FREESTREAM_TURB2LAMVISCRATIO": {
+      "template": null,
+      "analysis": "10.0",
+      "reason": "explicit source-template default closure assumption; not supplied experiment datum"
+    },
+    "GAMMA_VALUE": {
+      "template": null,
+      "analysis": "1.4",
+      "reason": "SU2 ideal-air ratio, explicit constitutive assumption"
+    },
+    "GAS_CONSTANT": {
+      "template": null,
+      "analysis": "287.058",
+      "reason": "SU2 ideal-air constant, explicit constitutive assumption"
+    },
+    "VISCOSITY_MODEL": {
+      "template": null,
+      "analysis": "SUTHERLAND",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "MU_REF": {
+      "template": null,
+      "analysis": "1.716E-5",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "MU_T_REF": {
+      "template": null,
+      "analysis": "273.15",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "SUTHERLAND_CONSTANT": {
+      "template": null,
+      "analysis": "110.4",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "REF_DIMENSIONALIZATION": {
+      "template": null,
+      "analysis": "FREESTREAM_VEL_EQ_ONE",
+      "reason": "scale equations for conditioning, does not change dimensional flow"
+    },
+    "LINEAR_SOLVER_PREC": {
+      "template": null,
+      "analysis": "ILU",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "LIMITER_ITER": {
+      "template": null,
+      "analysis": "999999",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "CONV_FIELD": {
+      "template": null,
+      "analysis": "RMS_DENSITY",
+      "reason": "residual stop rather than premature force Cauchy exit"
+    },
+    "OUTPUT_FILES": {
+      "template": null,
+      "analysis": "( RESTART, PARAVIEW, SURFACE_PARAVIEW, SURFACE_CSV )",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "WRT_RESTART_OVERWRITE": {
+      "template": null,
+      "analysis": "YES",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "WRT_SURFACE_OVERWRITE": {
+      "template": null,
+      "analysis": "YES",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "WRT_VOLUME_OVERWRITE": {
+      "template": null,
+      "analysis": "YES",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "WRT_FORCES_BREAKDOWN": {
+      "template": null,
+      "analysis": "YES",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "VOLUME_OUTPUT": {
+      "template": null,
+      "analysis": "( COORDINATES, SOLUTION, PRIMITIVE, RESIDUAL )",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "HISTORY_OUTPUT": {
+      "template": null,
+      "analysis": "( ITER, RMS_RES, AERO_COEFF )",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "SCREEN_WRT_FREQ_INNER": {
+      "template": null,
+      "analysis": "100",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    },
+    "HISTORY_WRT_FREQ_INNER": {
+      "template": null,
+      "analysis": "1",
+      "reason": "explicit direct fixed-geometry analysis/output/restart control; physical boundary conditions and reference chord/area preserved"
+    }
+  },
+  "removed_only_inactive_fields": [
+    "OBJECTIVE_FUNCTION",
+    "CONV_NUM_METHOD_ADJFLOW",
+    "ADJ_SHARP_LIMITER_COEFF",
+    "ADJ_JST_SENSOR_COEFF",
+    "CFL_REDUCTION_ADJFLOW",
+    "TIME_DISCRE_ADJFLOW",
+    "FROZEN_VISC_CONT",
+    "DV_KIND",
+    "DV_MARKER",
+    "DV_PARAM",
+    "DV_VALUE",
+    "HOLD_GRID_FIXED",
+    "HOLD_GRID_FIXED_COORD",
+    "OPT_CONSTRAINT",
+    "DEFINITION_DV"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "source_selection_manifest_sha256": "0c9767557bfe4d73c9ccf56fb38ce0791ada46f132e26193b75c559dfe2a8964",
+  "cases": [
+    {
+      "label": "coarse",
+      "folder": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse",
+      "surface_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/surface_flow_001892.vtu",
+      "surface_sha256": "b989b0e8646656dde4419f7edbd20804204c3b6d2a0abcf9b76e210864a048b0",
+      "mesh_metadata_source": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/mesh_audit.json"
+    },
+    {
+      "label": "medium",
+      "folder": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium",
+      "surface_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/surface_flow_002958.vtu",
+      "surface_sha256": "e25e1a2f237b19db278d9779bc7fe390f3bd1ba1b380adcbc9c8ea7eb9625e1d",
+      "mesh_metadata_source": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/mesh_audit.json"
+    },
+    {
+      "label": "fine",
+      "folder": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1",
+      "surface_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/surface_flow_003400.vtu",
+      "surface_sha256": "b703d2407eae4115416d4f5f4c5c11ac9dac3604dfc8873e2831b8d80c53b536",
+      "mesh_metadata_source": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine/mesh_audit.json"
+    },
+    {
+      "label": "farfield",
+      "folder": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium_far",
+      "surface_file": null,
+      "status": "not_started_numerical_mesh_hold",
+      "reason": "New long farfield run held pending fine residual-floor and aft normal-resolution diagnostic; mesh remains ready and preserved"
+    }
+  ],
+  "roles": {
+    "coarse": "coarse",
+    "medium": "medium",
+    "fine": "fine",
+    "farfield": "farfield"
+  },
+  "experimental_validation_role": "fine, prescribed before this revision unblinding",
+  "critical_regional_mesh_issue_open": true,
+  "regional_mesh_explanation": "Same physical conditions and converged medium runs: extending normal quad block0.01c to0.02c changes CL3.9766%, CD4.6762%, Cp RMSE0.034097. Three tangential/global mesh levels do not close this regional sensitivity.0.03c and0.04c attempts intersected and were rejected.400c solution not started; no field/force/Cp assigned."
+}

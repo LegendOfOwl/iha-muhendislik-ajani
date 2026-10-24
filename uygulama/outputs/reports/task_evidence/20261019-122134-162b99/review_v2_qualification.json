@@ -1,0 +1,727 @@
+{
+  "timestamp": "2026-10-19T14:08:14.127375+00:00",
+  "frozen_prediction_sha256": "78de97c3c1e5ed3812af9637a6a405583a2f44f176557d5cc94dfef59df62d3d",
+  "case_selection_manifest_sha256": "7beac527615576051610d899f490a339492ed04a8d42816feaacc94429c2db71",
+  "case_selection_before_experiment_review": true,
+  "experimental_validation_role": "fine, fixed before v2 unblinding; all other case errors remain reported",
+  "frozen_files_verified": 577,
+  "case_results": [
+    {
+      "label": "coarse",
+      "status": "available",
+      "surface_file": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse\\surface_flow_001892.vtu",
+      "surface_sha256": "b989b0e8646656dde4419f7edbd20804204c3b6d2a0abcf9b76e210864a048b0",
+      "original_downloaded_reference": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.10929796724194635,
+          "mean_bias": 0.026820804608710554,
+          "p95_abs_error": 0.12941810658056932,
+          "max_abs_error": 0.889453100440891,
+          "fraction_within_source_uncertainty_0p0026": 0.11650485436893204
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.15049740794791874,
+          "mean_bias": 0.049714221221454566,
+          "p95_abs_error": 0.20842661507881097,
+          "max_abs_error": 0.889453100440891,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.012265208887410615,
+          "mean_bias": 0.0015913250762987859,
+          "p95_abs_error": 0.01698279796772777,
+          "max_abs_error": 0.05090847099596674,
+          "fraction_within_source_uncertainty_0p0026": 0.24489795918367346
+        },
+        "wall": {
+          "points": 488,
+          "array_names": [
+            "Density",
+            "Momentum",
+            "Energy",
+            "Nu_Tilde",
+            "Pressure",
+            "Temperature",
+            "Mach",
+            "Pressure_Coefficient",
+            "Velocity",
+            "Laminar_Viscosity",
+            "Skin_Friction_Coefficient",
+            "Heat_Flux",
+            "Y_Plus",
+            "Eddy_Viscosity",
+            "Residual_Density",
+            "Residual_Momentum",
+            "Residual_Energy",
+            "Residual_Nu_Tilde"
+          ],
+          "signed_enclosed_area_m2": 0.0779154822230339,
+          "pressure_CFx_independent": -0.022174067795276642,
+          "pressure_CFy_independent": 0.7026308178901672,
+          "max_wall_yplus": 0.483486145734787,
+          "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+        },
+        "source_pressure_uncertainty": 0.0026,
+        "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+        "regions": {
+          "LE": {
+            "points": 33,
+            "RMSE": 0.16484473041477385,
+            "mean_bias": 0.021127621784352183,
+            "p95_abs_error": 0.14216826225587526,
+            "max_abs_error": 0.889453100440891,
+            "fraction_within_source_uncertainty_0p0026": 0.15151515151515152
+          },
+          "mid": {
+            "points": 58,
+            "RMSE": 0.075318323408855,
+            "mean_bias": 0.03222213367683571,
+            "p95_abs_error": 0.07179467238787167,
+            "max_abs_error": 0.41069334924940004,
+            "fraction_within_source_uncertainty_0p0026": 0.10344827586206896
+          },
+          "TE": {
+            "points": 12,
+            "RMSE": 0.01975369304009817,
+            "mean_bias": 0.016370633546424457,
+            "p95_abs_error": 0.032058138534072377,
+            "max_abs_error": 0.03250189612670394,
+            "fraction_within_source_uncertainty_0p0026": 0.08333333333333333
+          }
+        },
+        "predicted_shock": {
+          "location_x_over_c": 0.5220123529434204,
+          "bracket_x_over_c": [
+            0.5211113095283508,
+            0.5229134559631348
+          ],
+          "Cp_recovery_gradient": 27.216934204101562,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "experimental_shock": {
+          "location_x_over_c": 0.5375000000000001,
+          "bracket_x_over_c": [
+            0.525,
+            0.55
+          ],
+          "Cp_recovery_gradient": 12.25599999999999,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "shock_location_abs_error_chords": 0.015487647056579679,
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": true,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "experimental_passed": false,
+        "negative_control_wrong_Cp_sign_RMSE": 1.3525223593388955
+      },
+      "original_table_corrected_reference": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.0654632550120639,
+          "mean_bias": 0.01862857159900181,
+          "p95_abs_error": 0.11008059245851025,
+          "max_abs_error": 0.41069334924940004,
+          "fraction_within_source_uncertainty_0p0026": 0.11650485436893204
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.08965249339081176,
+          "mean_bias": 0.03408829529552864,
+          "p95_abs_error": 0.14185718839645656,
+          "max_abs_error": 0.41069334924940004,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.012265208887410615,
+          "mean_bias": 0.0015913250762987859,
+          "p95_abs_error": 0.01698279796772777,
+          "max_abs_error": 0.05090847099596674,
+          "fraction_within_source_uncertainty_0p0026": 0.24489795918367346
+        },
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": true,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "experimental_passed": false
+      },
+      "numerical_passed": true,
+      "experimental_passed": false
+    },
+    {
+      "label": "medium",
+      "status": "available",
+      "surface_file": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium\\surface_flow_002958.vtu",
+      "surface_sha256": "e25e1a2f237b19db278d9779bc7fe390f3bd1ba1b380adcbc9c8ea7eb9625e1d",
+      "original_downloaded_reference": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.10953596815885372,
+          "mean_bias": 0.0270302689866662,
+          "p95_abs_error": 0.1304518672050217,
+          "max_abs_error": 0.8872130245154541,
+          "fraction_within_source_uncertainty_0p0026": 0.0970873786407767
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.1508511068001432,
+          "mean_bias": 0.04920749520732017,
+          "p95_abs_error": 0.20872150951809432,
+          "max_abs_error": 0.8872130245154541,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.011935344679675438,
+          "mean_bias": 0.0025900604985985643,
+          "p95_abs_error": 0.016340688653069344,
+          "max_abs_error": 0.04416108188578982,
+          "fraction_within_source_uncertainty_0p0026": 0.20408163265306123
+        },
+        "wall": {
+          "points": 730,
+          "array_names": [
+            "Density",
+            "Momentum",
+            "Energy",
+            "Nu_Tilde",
+            "Pressure",
+            "Temperature",
+            "Mach",
+            "Pressure_Coefficient",
+            "Velocity",
+            "Laminar_Viscosity",
+            "Skin_Friction_Coefficient",
+            "Heat_Flux",
+            "Y_Plus",
+            "Eddy_Viscosity",
+            "Residual_Density",
+            "Residual_Momentum",
+            "Residual_Energy",
+            "Residual_Nu_Tilde"
+          ],
+          "signed_enclosed_area_m2": 0.07791672646999359,
+          "pressure_CFx_independent": -0.02249440923333168,
+          "pressure_CFy_independent": 0.702500581741333,
+          "max_wall_yplus": 0.3235875070095062,
+          "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+        },
+        "source_pressure_uncertainty": 0.0026,
+        "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+        "regions": {
+          "LE": {
+            "points": 33,
+            "RMSE": 0.164791005010266,
+            "mean_bias": 0.020001404601721114,
+            "p95_abs_error": 0.14174093867964424,
+            "max_abs_error": 0.8872130245154541,
+            "fraction_within_source_uncertainty_0p0026": 0.09090909090909091
+          },
+          "mid": {
+            "points": 58,
+            "RMSE": 0.07585866423247342,
+            "mean_bias": 0.032678518385085537,
+            "p95_abs_error": 0.07594822509625458,
+            "max_abs_error": 0.41060866141262675,
+            "fraction_within_source_uncertainty_0p0026": 0.1206896551724138
+          },
+          "TE": {
+            "points": 12,
+            "RMSE": 0.022161506747265032,
+            "mean_bias": 0.019059773952905087,
+            "p95_abs_error": 0.0342424502207595,
+            "max_abs_error": 0.034717295235432905,
+            "fraction_within_source_uncertainty_0p0026": 0.0
+          }
+        },
+        "predicted_shock": {
+          "location_x_over_c": 0.5199961066246033,
+          "bracket_x_over_c": [
+            0.5194272994995117,
+            0.5205649137496948
+          ],
+          "Cp_recovery_gradient": 27.935239791870117,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "experimental_shock": {
+          "location_x_over_c": 0.5375000000000001,
+          "bracket_x_over_c": [
+            0.525,
+            0.55
+          ],
+          "Cp_recovery_gradient": 12.25599999999999,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "shock_location_abs_error_chords": 0.017503893375396817,
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": true,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "experimental_passed": false,
+        "negative_control_wrong_Cp_sign_RMSE": 1.3537381726359725
+      },
+      "original_table_corrected_reference": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.06613790805530198,
+          "mean_bias": 0.01883803597695747,
+          "p95_abs_error": 0.10848596328154578,
+          "max_abs_error": 0.41060866141262675,
+          "fraction_within_source_uncertainty_0p0026": 0.0970873786407767
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.09063201816099055,
+          "mean_bias": 0.033581569281394254,
+          "p95_abs_error": 0.14142112663583745,
+          "max_abs_error": 0.41060866141262675,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.011935344679675438,
+          "mean_bias": 0.0025900604985985643,
+          "p95_abs_error": 0.016340688653069344,
+          "max_abs_error": 0.04416108188578982,
+          "fraction_within_source_uncertainty_0p0026": 0.20408163265306123
+        },
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": true,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "experimental_passed": false
+      },
+      "numerical_passed": true,
+      "experimental_passed": false
+    },
+    {
+      "label": "fine",
+      "status": "available",
+      "surface_file": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine_cfl1\\surface_flow_003400.vtu",
+      "surface_sha256": "b703d2407eae4115416d4f5f4c5c11ac9dac3604dfc8873e2831b8d80c53b536",
+      "original_downloaded_reference": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.11018967622669484,
+          "mean_bias": 0.02725247996307964,
+          "p95_abs_error": 0.13156682980812523,
+          "max_abs_error": 0.8887373577842328,
+          "fraction_within_source_uncertainty_0p0026": 0.10679611650485436
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.15175932192379754,
+          "mean_bias": 0.05008904252434331,
+          "p95_abs_error": 0.2103312701446245,
+          "max_abs_error": 0.8887373577842328,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.011895473529097103,
+          "mean_bias": 0.0020856559159727296,
+          "p95_abs_error": 0.016700780062913978,
+          "max_abs_error": 0.04259141677542222,
+          "fraction_within_source_uncertainty_0p0026": 0.22448979591836735
+        },
+        "wall": {
+          "points": 1095,
+          "array_names": [
+            "Density",
+            "Momentum",
+            "Energy",
+            "Nu_Tilde",
+            "Pressure",
+            "Temperature",
+            "Mach",
+            "Pressure_Coefficient",
+            "Velocity",
+            "Laminar_Viscosity",
+            "Skin_Friction_Coefficient",
+            "Heat_Flux",
+            "Y_Plus",
+            "Eddy_Viscosity",
+            "Residual_Density",
+            "Residual_Momentum",
+            "Residual_Energy",
+            "Residual_Nu_Tilde"
+          ],
+          "signed_enclosed_area_m2": 0.07791728526353836,
+          "pressure_CFx_independent": -0.022573979571461678,
+          "pressure_CFy_independent": 0.7009965181350708,
+          "max_wall_yplus": 0.2158922702074051,
+          "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+        },
+        "source_pressure_uncertainty": 0.0026,
+        "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+        "regions": {
+          "LE": {
+            "points": 33,
+            "RMSE": 0.16530228332959598,
+            "mean_bias": 0.01990009562856963,
+            "p95_abs_error": 0.14552602245489832,
+            "max_abs_error": 0.8887373577842328,
+            "fraction_within_source_uncertainty_0p0026": 0.12121212121212122
+          },
+          "mid": {
+            "points": 58,
+            "RMSE": 0.07687791903389002,
+            "mean_bias": 0.03309738415560391,
+            "p95_abs_error": 0.07882644687747495,
+            "max_abs_error": 0.4157790826482761,
+            "fraction_within_source_uncertainty_0p0026": 0.1206896551724138
+          },
+          "TE": {
+            "points": 12,
+            "RMSE": 0.022526744965747105,
+            "mean_bias": 0.019221166619114813,
+            "p95_abs_error": 0.03490564511303035,
+            "max_abs_error": 0.03528559710048136,
+            "fraction_within_source_uncertainty_0p0026": 0.0
+          }
+        },
+        "predicted_shock": {
+          "location_x_over_c": 0.5219298005104065,
+          "bracket_x_over_c": [
+            0.521529495716095,
+            0.522330105304718
+          ],
+          "Cp_recovery_gradient": 25.765262603759766,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "experimental_shock": {
+          "location_x_over_c": 0.5375000000000001,
+          "bracket_x_over_c": [
+            0.525,
+            0.55
+          ],
+          "Cp_recovery_gradient": 12.25599999999999,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "shock_location_abs_error_chords": 0.015570199489593595,
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": true,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "experimental_passed": false,
+        "negative_control_wrong_Cp_sign_RMSE": 1.3532290590583138
+      },
+      "original_table_corrected_reference": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.06702897822385058,
+          "mean_bias": 0.019060246953370896,
+          "p95_abs_error": 0.11031390265101075,
+          "max_abs_error": 0.4157790826482761,
+          "fraction_within_source_uncertainty_0p0026": 0.10679611650485436
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.0918768732945784,
+          "mean_bias": 0.03446311659841738,
+          "p95_abs_error": 0.14546854948173807,
+          "max_abs_error": 0.4157790826482761,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.011895473529097103,
+          "mean_bias": 0.0020856559159727296,
+          "p95_abs_error": 0.016700780062913978,
+          "max_abs_error": 0.04259141677542222,
+          "fraction_within_source_uncertainty_0p0026": 0.22448979591836735
+        },
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": true,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "experimental_passed": false
+      },
+      "numerical_passed": true,
+      "experimental_passed": false
+    },
+    {
+      "label": "farfield",
+      "status": "not_started_numerical_mesh_hold",
+      "reason": "New long farfield run held pending fine residual-floor and aft normal-resolution diagnostic; mesh remains ready and preserved",
+      "experimental_passed": false,
+      "numerical_passed": false
+    }
+  ],
+  "numerical_results": {
+    "coarse": {
+      "values": {
+        "field_iteration": 1892,
+        "terminal_iteration": 1892,
+        "density_log10": -10.00028463,
+        "CL": 0.7029663599,
+        "CD": 0.0120294058,
+        "CN": 0.7028799717,
+        "CL_tail200_range": 4.4789999997796315e-07,
+        "CD_tail200_range": 1.261999999987995e-08,
+        "max_yplus": 0.483486145734787
+      },
+      "checks": {
+        "density": true,
+        "200_consecutive_samples": true,
+        "CL_window": true,
+        "CD_window": true,
+        "wall_yplus": true
+      },
+      "passed": true,
+      "mesh": {
+        "cells": 26112,
+        "curve_definition_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "farfield_bounds_m": [
+          -200.0,
+          200.0,
+          -200.0,
+          200.0
+        ],
+        "BL_thickness_m": 0.01,
+        "BL_growth": 1.26,
+        "wall_first_layer_design_m": 1.2e-06
+      },
+      "folder": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse",
+      "checkpoint": {
+        "iteration": 1892,
+        "surface": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse\\surface_flow_001892.vtu",
+        "volume": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse\\flow_001892.vtu",
+        "restart": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_coarse\\restart_flow_001892.dat",
+        "sha256": {
+          "surface_flow_001892.vtu": "b989b0e8646656dde4419f7edbd20804204c3b6d2a0abcf9b76e210864a048b0",
+          "flow_001892.vtu": "2506ae5b31e7bfa0949bb580338ce12a16b986bba087d2bffb33669339df2382",
+          "restart_flow_001892.dat": "a4f73ff066a348a1d290171550b00c49ad73057fabd34b8006ae90e19994f04d"
+        },
+        "history_last_iteration": 1892.0,
+        "method": "Exact numeric suffix intersection surface/volume/restart plus matching history row; static overwritten files ignored."
+      },
+      "independent_force": {
+        "CL": 0.7029662780544222,
+        "CD": 0.01202907367679127,
+        "CL_pressure": 0.7029536038301861,
+        "CD_pressure": 0.006164322662042105,
+        "CL_viscous": 1.267422423618231e-05,
+        "CD_viscous": 0.005864751014749162,
+        "relative_difference_CL": 1.1642886833337248e-07,
+        "relative_difference_CD": 2.7609277985296165e-05,
+        "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+      }
+    },
+    "medium": {
+      "values": {
+        "field_iteration": 2958,
+        "terminal_iteration": 2958,
+        "density_log10": -10.00073206,
+        "CL": 0.7028482554,
+        "CD": 0.01168988611,
+        "CN": 0.7027482784,
+        "CL_tail200_range": 1.6984999999802852e-06,
+        "CD_tail200_range": 7.579999999202114e-09,
+        "max_yplus": 0.3235875070095062
+      },
+      "checks": {
+        "density": true,
+        "200_consecutive_samples": true,
+        "CL_window": true,
+        "CD_window": true,
+        "wall_yplus": true
+      },
+      "passed": true,
+      "mesh": {
+        "cells": 57505,
+        "curve_definition_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "farfield_bounds_m": [
+          -200.0,
+          200.0,
+          -200.0,
+          200.0
+        ],
+        "BL_thickness_m": 0.01,
+        "BL_growth": 1.1733333333333333,
+        "wall_first_layer_design_m": 8e-07
+      },
+      "folder": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium",
+      "checkpoint": {
+        "iteration": 2958,
+        "surface": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium\\surface_flow_002958.vtu",
+        "volume": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium\\flow_002958.vtu",
+        "restart": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium\\restart_flow_002958.dat",
+        "sha256": {
+          "surface_flow_002958.vtu": "e25e1a2f237b19db278d9779bc7fe390f3bd1ba1b380adcbc9c8ea7eb9625e1d",
+          "flow_002958.vtu": "0a066c711857ec3053f27a3eb51811e0a4cca0471aa2fbb05259e2e391b91145",
+          "restart_flow_002958.dat": "aced9506e9a3dccf75ddae07c37151594f7259ca4f0ae67a194d2be39d10295c"
+        },
+        "history_last_iteration": 2958.0,
+        "method": "Exact numeric suffix intersection surface/volume/restart plus matching history row; static overwritten files ignored."
+      },
+      "independent_force": {
+        "CL": 0.7028482057597424,
+        "CD": 0.011689652386386775,
+        "CL_pressure": 0.7028363870102615,
+        "CD_pressure": 0.005838991511386921,
+        "CL_viscous": 1.1818749480982783e-05,
+        "CD_viscous": 0.005850660874999856,
+        "relative_difference_CL": 7.0627275787855e-08,
+        "relative_difference_CD": 1.9993660419452967e-05,
+        "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+      }
+    },
+    "fine": {
+      "values": {
+        "field_iteration": 3400,
+        "terminal_iteration": 3468,
+        "density_log10": -8.331890071,
+        "CL": 0.7013489569,
+        "CD": 0.01152713183,
+        "CN": 0.7012436383,
+        "CL_tail200_range": 1.015079999999724e-05,
+        "CD_tail200_range": 9.171800000006003e-07,
+        "max_yplus": 0.2158922702074051
+      },
+      "checks": {
+        "density": true,
+        "200_consecutive_samples": true,
+        "CL_window": true,
+        "CD_window": true,
+        "wall_yplus": true
+      },
+      "passed": true,
+      "mesh": {
+        "cells": 128726,
+        "curve_definition_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "farfield_bounds_m": [
+          -200.0,
+          200.0,
+          -200.0,
+          200.0
+        ],
+        "BL_thickness_m": 0.01,
+        "BL_growth": 1.1155555555555556,
+        "wall_first_layer_design_m": 5.333333333333333e-07
+      },
+      "folder": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine_cfl1",
+      "checkpoint": {
+        "iteration": 3400,
+        "surface": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine_cfl1\\surface_flow_003400.vtu",
+        "volume": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine_cfl1\\flow_003400.vtu",
+        "restart": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_fine_cfl1\\restart_flow_003400.dat",
+        "sha256": {
+          "surface_flow_003400.vtu": "b703d2407eae4115416d4f5f4c5c11ac9dac3604dfc8873e2831b8d80c53b536",
+          "flow_003400.vtu": "43fd8bd4c4e5e66104c839bde2b72c04d9645d0832b0945724c7000715fbdc22",
+          "restart_flow_003400.dat": "072698ae66720076e832a09a94de2c2e47434e6bddc8617db0ea366209ded64e"
+        },
+        "history_last_iteration": 3468.0,
+        "method": "Exact numeric suffix intersection surface/volume/restart plus matching history row; static overwritten files ignored."
+      },
+      "independent_force": {
+        "CL": 0.70134925860318,
+        "CD": 0.011526901139080191,
+        "CL_pressure": 0.7013367527924159,
+        "CD_pressure": 0.005698858277980608,
+        "CL_viscous": 1.2505810763967278e-05,
+        "CD_viscous": 0.005828042861099581,
+        "relative_difference_CL": 4.3017555957893706e-07,
+        "relative_difference_CD": 2.0012863842607873e-05,
+        "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+      }
+    }
+  },
+  "family": {
+    "consistent": true,
+    "geometry_and_BL": [
+      {
+        "cells": 26112,
+        "curve_definition_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "farfield_bounds_m": [
+          -200.0,
+          200.0,
+          -200.0,
+          200.0
+        ],
+        "BL_thickness_m": 0.01,
+        "BL_growth": 1.26,
+        "wall_first_layer_design_m": 1.2e-06
+      },
+      {
+        "cells": 57505,
+        "curve_definition_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "farfield_bounds_m": [
+          -200.0,
+          200.0,
+          -200.0,
+          200.0
+        ],
+        "BL_thickness_m": 0.01,
+        "BL_growth": 1.1733333333333333,
+        "wall_first_layer_design_m": 8e-07
+      },
+      {
+        "cells": 128726,
+        "curve_definition_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "farfield_bounds_m": [
+          -200.0,
+          200.0,
+          -200.0,
+          200.0
+        ],
+        "BL_thickness_m": 0.01,
+        "BL_growth": 1.1155555555555556,
+        "wall_first_layer_design_m": 5.333333333333333e-07
+      }
+    ]
+  },
+  "grid_sensitivity": {
+    "evaluated": true,
+    "CL_relative_change": 0.002137735410097347,
+    "CD_relative_change": 0.01411923472380379,
+    "Cp_uniform_x_RMSE": 0.0028084463053359198,
+    "converged_inputs": true,
+    "checks": {
+      "CL": true,
+      "CD": true,
+      "Cp": true,
+      "converged_inputs": true
+    }
+  },
+  "farfield_sensitivity": {
+    "evaluated": false
+  },
+  "all_required_numerical_gates_passed": false,
+  "critical_regional_mesh_issue_open": true,
+  "regional_mesh_explanation": "Same physical conditions and converged medium runs: extending normal quad block0.01c to0.02c changes CL3.9766%, CD4.6762%, Cp RMSE0.034097. Three tangential/global mesh levels do not close this regional sensitivity.0.03c and0.04c attempts intersected and were rejected.400c solution not started; no field/force/Cp assigned.",
+  "minimum_qualification_passed": false,
+  "GCI": {
+    "reported": false,
+    "reason": "No independently established monotone/asymptotic regime; never present a residual-limited or missing run as a grid-error band."
+  },
+  "scope": "Only2D RAE2822 corrected-condition benchmark. Original-table one-point correction is documented separately. No3D/UAV or general RANS service acceptance."
+}

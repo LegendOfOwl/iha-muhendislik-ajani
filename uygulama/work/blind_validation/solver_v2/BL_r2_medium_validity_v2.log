@@ -1,0 +1,192 @@
+{
+  "run": "v2_r2_medium",
+  "coverage_warning": true,
+  "profiles": [
+    {
+      "side": "upper",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.5062514651984618,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.007326631146350293,
+          "operational_delta99_c": 0.005751439242433617
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.4896588577720722,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.009909639017166714,
+          "operational_delta99_c": 0.005228374416762557
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0210423615340518,
+        "mu_t_over_mu": 0.020696632225405086,
+        "Cp": -1.0994606559926814,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 43
+    },
+    {
+      "side": "upper",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.0805445971650358,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.016833933773540668,
+          "operational_delta99_c": 0.01741708542713568
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.075128047483451,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0006842511035191466,
+          "operational_delta99_c": 0.01691959798994975
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.882154528090587,
+        "mu_t_over_mu": 193.12016573819247,
+        "Cp": -0.1899089433930137,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 51
+    },
+    {
+      "side": "upper",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.9547644360150377,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.026773064595410644,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.9514988301750694,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.011655008687312625,
+          "operational_delta99_c": 0.02686934673366834
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.6309437577205983,
+        "mu_t_over_mu": 314.7858054421165,
+        "Cp": 0.09592159431089055,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 54
+    },
+    {
+      "side": "lower",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.1373224882616513,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.013915907254582107,
+          "operational_delta99_c": 0.003984924623115577
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.1146043954685851,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.01831669804417324,
+          "operational_delta99_c": 0.003487437185929648
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0393789131814033,
+        "mu_t_over_mu": 0.11676495657725768,
+        "Cp": -0.3279408135197379,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 41
+    },
+    {
+      "side": "lower",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8870324648085193,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.004444935986829613,
+          "operational_delta99_c": 0.017914572864321607
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8958417113375026,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.0089519029385215,
+          "operational_delta99_c": 0.03383417085427136
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.9097278598263813,
+        "mu_t_over_mu": 97.01020535555753,
+        "Cp": 0.232624659484083,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 56
+    },
+    {
+      "side": "lower",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8637516576596708,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.007458829778376,
+          "operational_delta99_c": 0.021894472361809046
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8763403921659856,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.014730887298175146,
+          "operational_delta99_c": 0.04676884422110553
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8369007082580976,
+        "mu_t_over_mu": 156.3391154896129,
+        "Cp": 0.2948186234994368,
+        "sampling": "interpolated from valid native-field probes only"
+      },
+      "normal_cells": 61
+    }
+  ]
+}

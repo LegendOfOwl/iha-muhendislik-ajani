@@ -1,0 +1,65 @@
+{
+  "name": "coarse",
+  "geometry_sha256": {
+    "conditions.json": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141",
+    "geom.f90": "631d2d0be0b2cb9fa87dc2bf49f4f65a658794115a5649b0f68749312f33700e",
+    "geom.txt": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736",
+    "yl.pts": "489788cbe97237ef24b3e2bdc8737209cc56daf02f613dbd324ba79a0e85e9ed",
+    "yu.pts": "810900b8646f16dbc2b93d9773529b086818e0e38276891442b7d5f498605a3b"
+  },
+  "curve_definition": "Gmsh built-in interpolating splines through ALL signed published 65 lower and 65 upper ordinates; shared LE/TE; no analytic airfoil replacement",
+  "curve_definition_sha256": "235fcdbeaf995fa370e51cb4784ec9ac09e7299699d5908d0a1a6ea821c67d34",
+  "source_points_max_deviation_m": 5.648912855087368e-07,
+  "chord_m": 1.0,
+  "farfield_bounds_m": [
+    -20.0,
+    20.0,
+    -20.0,
+    20.0
+  ],
+  "nodes": 15838,
+  "cells": 17511,
+  "element_counts": {
+    "Triangle 3": 4026,
+    "Quadrilateral 4": 13485
+  },
+  "wall_nodes_per_side": 181,
+  "wall_first_layer_design_m": 1.2e-06,
+  "wall_first_node_design_yplus": 0.351,
+  "BL_growth": 1.26,
+  "BL_thickness_m": 0.02,
+  "BL_design_layers": 37,
+  "positive_signed_areas": true,
+  "area_min_m2": 1.3361537568904887e-13,
+  "min_scaled_jacobian": 0.6134969321317636,
+  "min_inverse_condition": 0.0003178306381191947,
+  "equiangle_skewness_max": 0.8217538433862193,
+  "center_face_nonorthogonality_max_deg": 68.96765107404964,
+  "regions": {
+    "LE": {
+      "cells": 1788,
+      "sqrt_area_min_m": 3.403059807387733e-05,
+      "sqrt_area_median_m": 0.0004842657505897552,
+      "sqrt_area_max_m": 0.02214148121716736
+    },
+    "TE": {
+      "cells": 2775,
+      "sqrt_area_min_m": 3.655343700516394e-07,
+      "sqrt_area_median_m": 0.000455922881109636,
+      "sqrt_area_max_m": 0.024790710227373586
+    },
+    "near_wall": {
+      "cells": 13535,
+      "sqrt_area_min_m": 3.403059807387733e-05,
+      "sqrt_area_median_m": 0.0006706219915655803,
+      "sqrt_area_max_m": 0.022248613203099284
+    },
+    "wake": {
+      "cells": 1520,
+      "sqrt_area_min_m": 3.655343700516394e-07,
+      "sqrt_area_median_m": 0.020452907587191302,
+      "sqrt_area_max_m": 0.36893124245726105
+    }
+  },
+  "gradient_refinement_from_own_solution": null
+}

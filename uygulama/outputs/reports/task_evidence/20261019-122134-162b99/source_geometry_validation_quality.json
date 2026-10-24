@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-10-19T14:14:49.785663+00:00",
+  "scope": "Completed source-geometry agent benchmark execution, failure diagnosis and independent review; failed physical qualification is not completion of a general CFD service",
+  "test_and_review_work_completed": true,
+  "minimum_physical_qualification_passed": false,
+  "v1_frozen_case_and_script_hashes_unchanged": 73,
+  "v2_verified_hash_records": 649,
+  "v2_prediction_unchanged": true,
+  "initial_inputs_and_contract_unchanged": true,
+  "all103_experimental_points_retained": true,
+  "raw_NASA_reference_preserved": true,
+  "original_published_reference_sign_correction_documented": true,
+  "all_checked_physics_consistent": true,
+  "missing_freeze_negative_control": {
+    "missing_freeze_blocks_experimental_evaluation": true,
+    "error": "No frozen v2 prediction: experimental evaluation forbidden",
+    "no_result_created": true
+  },
+  "report_links": {
+    "outputs\\projects\\proje-15cce2de02\\reports\\blind_cfd_validation.html": {
+      "local_references": 48,
+      "missing": []
+    },
+    "outputs\\reports\\kaynak_geometri_ve_kor_cfd.html": {
+      "local_references": 1,
+      "missing": []
+    },
+    "outputs\\Proje-Ozeti.html": {
+      "local_references": 40,
+      "missing": []
+    }
+  },
+  "actual_UAV_current_hashes": {
+    "outputs/data/project/conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs/data/project/mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs/data/project/mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "actual_UAV_matching_prior_task_snapshots": [
+    "20261018-174944-24ba6b.json",
+    "20261018-203719-a2da02.json",
+    "20261018-212129-8ffed7.json",
+    "20261018-231810-dcaa71.json",
+    "20261019-100440-8e781b.json"
+  ],
+  "actual_UAV_inputs_unchanged_from_matching_snapshot": true,
+  "fine_Cp_RMSE_original_table": 0.06702897822385058,
+  "fine_Cp_RMSE_limit": 0.03,
+  "farfield_400c_solution_available": false,
+  "GCI_reported": false,
+  "next_step": "Source-preserving aft normal C-grid/block and controlled TE/wake transition; not yet built or qualified",
+  "limitations": [
+    "No security/memorization-proof blinding",
+    "No general3D/UAV qualification",
+    "Fully turbulent model does not resolve experimental trip",
+    "No verified fine normal-layer family and farfield acceptance",
+    "3D M6/VLM/RANS previous open gates remain open"
+  ]
+}

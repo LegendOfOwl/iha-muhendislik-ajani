@@ -25,3 +25,7 @@ EXE başlatıcı, proje kayıtları, profile CFD ve OpenAeroStruct örnekleri.
 ## v0.6.0 — Karmaşık CAD ve ilk ONERA M6
 
 NIST kaynak parçaları ve ONERA deney verisiyle ilk 3B RANS kıyası.
+
+## v0.7.0 — Kaynak geometri ve ayrı analiz sınaması
+
+RAE2822 v1/v2 geometri aktarımı, dondurulmuş tahminler ve deney değerlendirmesi.

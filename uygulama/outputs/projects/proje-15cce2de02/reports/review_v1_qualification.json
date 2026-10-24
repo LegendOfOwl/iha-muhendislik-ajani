@@ -1,0 +1,487 @@
+{
+  "timestamp": "2026-10-19T13:21:55.575203+00:00",
+  "version": "v1",
+  "frozen_files_verified": 68,
+  "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "cases": {
+    "coarse": {
+      "matched_field_iteration": 2665,
+      "terminal_iteration": 2665,
+      "values": {
+        "density_log10": -10.00075452,
+        "CL": 0.7023033307,
+        "CD": 0.01509309194,
+        "CL_tail200_range": 6.936199999918458e-06,
+        "CD_tail200_range": 1.7224999999954083e-07,
+        "max_yplus": 0.5243999361991882
+      },
+      "checks": {
+        "density": true,
+        "CL_window": true,
+        "CD_window": true,
+        "wall_yplus": true
+      },
+      "numerical_iteration_and_wall_passed": true,
+      "cells": 23024,
+      "run_status": {
+        "status": "exited",
+        "exit_code": 0,
+        "wall_seconds": 323.5320000000065,
+        "iteration_budget": 6000,
+        "time_budget_seconds": 1000,
+        "threads": 4,
+        "config_sha256": "d86c8bf5ce07cb84b4a729c24e45c6082a9826a6e0cbf6599047fb1e483b5b1b",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+        "restart": false
+      },
+      "mesh_measured": {
+        "positive_signed_areas": true,
+        "min_scaled_jacobian": 0.6134969322018571,
+        "equiangle_skewness_max": 0.8807593794560705,
+        "center_face_nonorthogonality_max_deg": 77.72237382537716,
+        "wall_first_layer_design_m": 1.2e-06,
+        "BL_growth": 1.26,
+        "BL_thickness_m": 0.01,
+        "BL_design_layers": 34,
+        "farfield_bounds_m": [
+          -20.0,
+          20.0,
+          -20.0,
+          20.0
+        ],
+        "curve_definition_sha256": "235fcdbeaf995fa370e51cb4784ec9ac09e7299699d5908d0a1a6ea821c67d34"
+      },
+      "regional_export_measurements": {
+        "wall_edge_spacing_m": {
+          "min": 0.0005012084424315967,
+          "median": 0.005940442029226788,
+          "max": 0.005998869518438634
+        },
+        "measured_wall_adjacent_quad_normal_height_m": {
+          "min": 1.199840840210555e-06,
+          "median": 1.1999999999965546e-06,
+          "max": 1.2001583699146916e-06
+        },
+        "measured_first_height_by_region_m": {
+          "LE": {
+            "min": 1.199840840210555e-06,
+            "median": 1.1999999999737563e-06,
+            "max": 1.2001583699146916e-06
+          },
+          "TE": {
+            "min": 1.199911631679082e-06,
+            "median": 1.1999999999928963e-06,
+            "max": 1.2000879297731874e-06
+          },
+          "gradient": {
+            "min": 1.1999999910525038e-06,
+            "median": 1.199999999994388e-06,
+            "max": 1.2000000076578152e-06
+          },
+          "other": {
+            "min": 1.1999998157529312e-06,
+            "median": 1.2000000000035376e-06,
+            "max": 1.2000001929772154e-06
+          }
+        },
+        "gradient_refinement_region": {
+          "definition": {
+            "x_min": 0.4478287625312805,
+            "x_max": 0.5878287625312806,
+            "y_min": -0.02,
+            "y_max": 0.18
+          },
+          "cells": 2472,
+          "max_edge_length_m": {
+            "min": 0.0016342063687780927,
+            "median": 0.004005890502463406,
+            "max": 0.030856993442503245
+          }
+        },
+        "note": "Normal full-cell height is independently computed from exported SU2 wall-edge quads; TE point-fan triangles are not represented by a two-wall-node quad height; actual Y+ screen includes all wall points."
+      },
+      "independent_surface_force": {
+        "CL": 0.7023033394554531,
+        "CD": 0.015092718519677098,
+        "CL_pressure": 0.7023120215277486,
+        "CD_pressure": 0.008857309967750276,
+        "CL_viscous": -8.669287327547573e-06,
+        "CD_viscous": 0.006235408601619195,
+        "relative_difference_CL": 1.246676864190256e-08,
+        "relative_difference_CD": 2.4741141469597205e-05,
+        "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+      }
+    },
+    "medium": {
+      "matched_field_iteration": 2965,
+      "terminal_iteration": 2965,
+      "values": {
+        "density_log10": -10.00095795,
+        "CL": 0.6983823078,
+        "CD": 0.01364997108,
+        "CL_tail200_range": 1.0683800000022003e-05,
+        "CD_tail200_range": 2.7908000000027855e-07,
+        "max_yplus": 0.3496948182582855
+      },
+      "checks": {
+        "density": true,
+        "CL_window": true,
+        "CD_window": true,
+        "wall_yplus": true
+      },
+      "numerical_iteration_and_wall_passed": true,
+      "cells": 50319,
+      "run_status": {
+        "status": "exited",
+        "exit_code": 0,
+        "wall_seconds": 892.0939999999828,
+        "iteration_budget": 6000,
+        "time_budget_seconds": 1200,
+        "threads": 4,
+        "config_sha256": "d86c8bf5ce07cb84b4a729c24e45c6082a9826a6e0cbf6599047fb1e483b5b1b",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+        "restart": false
+      },
+      "mesh_measured": {
+        "positive_signed_areas": true,
+        "min_scaled_jacobian": 0.6302521002032102,
+        "equiangle_skewness_max": 0.9319359558126281,
+        "center_face_nonorthogonality_max_deg": 82.2680512597655,
+        "wall_first_layer_design_m": 8e-07,
+        "BL_growth": 1.1733333333333333,
+        "BL_thickness_m": 0.01,
+        "BL_design_layers": 49,
+        "farfield_bounds_m": [
+          -20.0,
+          20.0,
+          -20.0,
+          20.0
+        ],
+        "curve_definition_sha256": "235fcdbeaf995fa370e51cb4784ec9ac09e7299699d5908d0a1a6ea821c67d34"
+      },
+      "regional_export_measurements": {
+        "wall_edge_spacing_m": {
+          "min": 0.00033413491009531094,
+          "median": 0.003982375572416535,
+          "max": 0.003997158353594513
+        },
+        "measured_wall_adjacent_quad_normal_height_m": {
+          "min": 7.998843083984127e-07,
+          "median": 8.000000000020693e-07,
+          "max": 8.001151174498282e-07
+        },
+        "measured_first_height_by_region_m": {
+          "LE": {
+            "min": 7.998843083984127e-07,
+            "median": 7.99999999991388e-07,
+            "max": 8.001151174498282e-07
+          },
+          "TE": {
+            "min": 7.999449496441668e-07,
+            "median": 8.000000000009386e-07,
+            "max": 8.0005477714696e-07
+          },
+          "gradient": {
+            "min": 7.999999972507976e-07,
+            "median": 8.000000000008501e-07,
+            "max": 8.000000023236033e-07
+          },
+          "other": {
+            "min": 7.999999439501215e-07,
+            "median": 8.000000000020693e-07,
+            "max": 8.000000589296241e-07
+          }
+        },
+        "gradient_refinement_region": {
+          "definition": {
+            "x_min": 0.4478287625312805,
+            "x_max": 0.5878287625312806,
+            "y_min": -0.02,
+            "y_max": 0.18
+          },
+          "cells": 5418,
+          "max_edge_length_m": {
+            "min": 0.0010748314619465024,
+            "median": 0.0027072144974163888,
+            "max": 0.017195096680053333
+          }
+        },
+        "note": "Normal full-cell height is independently computed from exported SU2 wall-edge quads; TE point-fan triangles are not represented by a two-wall-node quad height; actual Y+ screen includes all wall points."
+      },
+      "independent_surface_force": {
+        "CL": 0.6983823250535549,
+        "CD": 0.013649780031423888,
+        "CL_pressure": 0.6983843060063769,
+        "CD_pressure": 0.007638164807899753,
+        "CL_viscous": -1.987452242184761e-06,
+        "CD_viscous": 0.0060116149613442535,
+        "relative_difference_CL": 2.470502864320458e-08,
+        "relative_difference_CD": 1.3996262335814628e-05,
+        "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+      }
+    },
+    "fine": {
+      "matched_field_iteration": 2400,
+      "terminal_iteration": 2512,
+      "values": {
+        "density_log10": -8.907161247,
+        "CL": 0.6925685338,
+        "CD": 0.01300801887,
+        "CL_tail200_range": 0.00023400880000001845,
+        "CD_tail200_range": 8.251600000005327e-07,
+        "max_yplus": 0.2352381944656372
+      },
+      "checks": {
+        "density": true,
+        "CL_window": false,
+        "CD_window": true,
+        "wall_yplus": true
+      },
+      "numerical_iteration_and_wall_passed": false,
+      "cells": 108705,
+      "run_status": {
+        "status": "timeout_partial_preserved",
+        "exit_code": null,
+        "wall_seconds": 1600.094000000041,
+        "iteration_budget": 6000,
+        "time_budget_seconds": 1600,
+        "threads": 4,
+        "config_sha256": "d86c8bf5ce07cb84b4a729c24e45c6082a9826a6e0cbf6599047fb1e483b5b1b",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+        "restart": false
+      },
+      "mesh_measured": {
+        "positive_signed_areas": true,
+        "min_scaled_jacobian": 0.6419400838040614,
+        "equiangle_skewness_max": 0.9575990716232677,
+        "center_face_nonorthogonality_max_deg": 85.05534503496774,
+        "wall_first_layer_design_m": 5.333333333333333e-07,
+        "BL_growth": 1.1155555555555556,
+        "BL_thickness_m": 0.01,
+        "BL_design_layers": 71,
+        "farfield_bounds_m": [
+          -20.0,
+          20.0,
+          -20.0,
+          20.0
+        ],
+        "curve_definition_sha256": "235fcdbeaf995fa370e51cb4784ec9ac09e7299699d5908d0a1a6ea821c67d34"
+      },
+      "regional_export_measurements": {
+        "wall_edge_spacing_m": {
+          "min": 0.00022247047608948652,
+          "median": 0.0026523579547350256,
+          "max": 0.0026648830863369144
+        },
+        "measured_wall_adjacent_quad_normal_height_m": {
+          "min": 5.332512935436978e-07,
+          "median": 5.333333333362333e-07,
+          "max": 5.334149659776829e-07
+        },
+        "measured_first_height_by_region_m": {
+          "LE": {
+            "min": 5.332512935436978e-07,
+            "median": 5.333333333323618e-07,
+            "max": 5.334149659776829e-07
+          },
+          "TE": {
+            "min": 5.33317687573334e-07,
+            "median": 5.333333333362333e-07,
+            "max": 5.333489014849506e-07
+          },
+          "gradient": {
+            "min": 5.333333325156442e-07,
+            "median": 5.333333333360668e-07,
+            "max": 5.33333334111766e-07
+          },
+          "other": {
+            "min": 5.333333158068106e-07,
+            "median": 5.333333333345324e-07,
+            "max": 5.333333507866401e-07
+          }
+        },
+        "gradient_refinement_region": {
+          "definition": {
+            "x_min": 0.4478287625312805,
+            "x_max": 0.5878287625312806,
+            "y_min": -0.02,
+            "y_max": 0.18
+          },
+          "cells": 12097,
+          "max_edge_length_m": {
+            "min": 0.0007179035218859145,
+            "median": 0.0018226742279836416,
+            "max": 0.01210787229770826
+          }
+        },
+        "note": "Normal full-cell height is independently computed from exported SU2 wall-edge quads; TE point-fan triangles are not represented by a two-wall-node quad height; actual Y+ screen includes all wall points."
+      },
+      "independent_surface_force": {
+        "CL": 0.692562765196041,
+        "CD": 0.013007496331497613,
+        "CL_pressure": 0.6925630963467178,
+        "CD_pressure": 0.007087058664650491,
+        "CL_viscous": -3.5680970662108264e-07,
+        "CD_viscous": 0.005920436165748418,
+        "relative_difference_CL": 8.329289705691985e-06,
+        "relative_difference_CD": 4.017049080340415e-05,
+        "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+      }
+    },
+    "medium_far": {
+      "matched_field_iteration": 3200,
+      "terminal_iteration": 3334,
+      "values": {
+        "density_log10": -9.786510514,
+        "CL": 0.7095119192,
+        "CD": 0.01323115497,
+        "CL_tail200_range": 1.3378899999971772e-05,
+        "CD_tail200_range": 2.117000000006336e-07,
+        "max_yplus": 0.351637601852417
+      },
+      "checks": {
+        "density": true,
+        "CL_window": true,
+        "CD_window": true,
+        "wall_yplus": true
+      },
+      "numerical_iteration_and_wall_passed": true,
+      "cells": 55055,
+      "run_status": {
+        "status": "timeout_partial_preserved",
+        "exit_code": null,
+        "wall_seconds": 1200.0939999999828,
+        "iteration_budget": 6000,
+        "time_budget_seconds": 1200,
+        "threads": 4,
+        "config_sha256": "d86c8bf5ce07cb84b4a729c24e45c6082a9826a6e0cbf6599047fb1e483b5b1b",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+        "restart": false
+      },
+      "mesh_measured": {
+        "positive_signed_areas": true,
+        "min_scaled_jacobian": 0.6302521002032102,
+        "equiangle_skewness_max": 0.9345228989761869,
+        "center_face_nonorthogonality_max_deg": 82.68594323226696,
+        "wall_first_layer_design_m": 8e-07,
+        "BL_growth": 1.1733333333333333,
+        "BL_thickness_m": 0.01,
+        "BL_design_layers": 49,
+        "farfield_bounds_m": [
+          -40.0,
+          40.0,
+          -40.0,
+          40.0
+        ],
+        "curve_definition_sha256": "235fcdbeaf995fa370e51cb4784ec9ac09e7299699d5908d0a1a6ea821c67d34"
+      },
+      "regional_export_measurements": {
+        "wall_edge_spacing_m": {
+          "min": 0.00033413491009531094,
+          "median": 0.003982375572416535,
+          "max": 0.003997158353594513
+        },
+        "measured_wall_adjacent_quad_normal_height_m": {
+          "min": 7.998843083984127e-07,
+          "median": 8.000000000020693e-07,
+          "max": 8.001151174498282e-07
+        },
+        "measured_first_height_by_region_m": {
+          "LE": {
+            "min": 7.998843083984127e-07,
+            "median": 7.99999999991388e-07,
+            "max": 8.001151174498282e-07
+          },
+          "TE": {
+            "min": 7.999449496441668e-07,
+            "median": 8.000000000009386e-07,
+            "max": 8.0005477714696e-07
+          },
+          "gradient": {
+            "min": 7.999999972507976e-07,
+            "median": 8.000000000008501e-07,
+            "max": 8.000000023236033e-07
+          },
+          "other": {
+            "min": 7.999999439501215e-07,
+            "median": 8.000000000020693e-07,
+            "max": 8.000000589296241e-07
+          }
+        },
+        "gradient_refinement_region": {
+          "definition": {
+            "x_min": 0.4478287625312805,
+            "x_max": 0.5878287625312806,
+            "y_min": -0.02,
+            "y_max": 0.18
+          },
+          "cells": 5475,
+          "max_edge_length_m": {
+            "min": 0.0010748314619465024,
+            "median": 0.0027075889261103507,
+            "max": 0.016774963145956306
+          }
+        },
+        "note": "Normal full-cell height is independently computed from exported SU2 wall-edge quads; TE point-fan triangles are not represented by a two-wall-node quad height; actual Y+ screen includes all wall points."
+      },
+      "independent_surface_force": {
+        "CL": 0.7095113455799437,
+        "CD": 0.013230906632591126,
+        "CL_pressure": 0.70950695848956,
+        "CD_pressure": 0.007235190271534037,
+        "CL_viscous": 4.386072577435105e-06,
+        "CD_viscous": 0.005995716319999835,
+        "relative_difference_CL": 8.084713460347402e-07,
+        "relative_difference_CD": 1.87691406712254e-05,
+        "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+      }
+    }
+  },
+  "grid_sensitivity": {
+    "CL_relative_change": 0.008394510746973729,
+    "CD_relative_change": 0.04935049805935587,
+    "Cp_uniform_x_RMSE": 0.007533591396676836,
+    "checks": {
+      "CL": false,
+      "CD": false,
+      "Cp": true
+    }
+  },
+  "farfield_sensitivity": {
+    "CL_relative_change": 0.015686292363557543,
+    "CD_relative_change": 0.031653783131526524,
+    "domains_chords": [
+      20,
+      40
+    ],
+    "checks": {
+      "CL": false,
+      "CD": false
+    }
+  },
+  "GCI": {
+    "reported": false,
+    "reason": "Fine matched field fails iterative force stability; domain sensitivity unresolved; coefficient changes cannot establish asymptotic grid-error bands."
+  },
+  "geometry_representation_audit": {
+    "upper_LE_tangent": [
+      0.03839997521921586,
+      0.20672000081919947,
+      0.0
+    ],
+    "lower_LE_tangent": [
+      -0.038399975397784836,
+      0.20287999605056448,
+      0.0
+    ],
+    "LE_tangent_join_angle_deg": 21.2410598273213,
+    "scope": "Same original point controls and Gmsh addSpline construction as frozen analyst mesh; no flow/expected Cp used"
+  },
+  "geometry_qualification_passed": false,
+  "geometry_reason": "Two endpoint splines introduce artificial C0 leading-edge corner. Source point interpolation alone did not verify smooth source shape. New representation must be a separate revision.",
+  "all_required_numerical_gates_passed": false,
+  "original_NASA_reference_experiment_passed": false,
+  "original_table_corrected_experiment_passed": false,
+  "minimum_qualification_passed": false,
+  "scope": "2D fully turbulent RANS/SA, one corrected-condition RAE2822 benchmark. No 3D M6/UAV acceptance."
+}

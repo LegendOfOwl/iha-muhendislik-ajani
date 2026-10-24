@@ -1,0 +1,30 @@
+{
+  "source_rows": 65,
+  "source_full_chord_m": 1.0,
+  "maximum_thickness_m": 0.12113,
+  "signed_pts_vs_geom_max_m": 2.9000000068002407e-08,
+  "source_file_hashes": {
+    "conditions.json": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141",
+    "geom.f90": "631d2d0be0b2cb9fa87dc2bf49f4f65a658794115a5649b0f68749312f33700e",
+    "geom.txt": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736",
+    "yl.pts": "489788cbe97237ef24b3e2bdc8737209cc56daf02f613dbd324ba79a0e85e9ed",
+    "yu.pts": "810900b8646f16dbc2b93d9773529b086818e0e38276891442b7d5f498605a3b"
+  },
+  "classification": "source units m; signed lower ordinate verified against published Fortran conversion and both .pts; chord normalized1m without changing coordinates",
+  "family_curve_hashes": {
+    "v2_r2_coarse": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+    "v2_r2_medium": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+    "v2_r2_fine": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+    "v2_r2_medium_far": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a"
+  },
+  "all_family_curves_identical": true,
+  "farfield_only_domain_change_inner_mesh": {
+    "base_signature_sha256": "174225192bce3e269e1086d8d979861acee453bd5c94d52644434e0446ef8560",
+    "far_signature_sha256": "174225192bce3e269e1086d8d979861acee453bd5c94d52644434e0446ef8560",
+    "inner_cells_base": 50469,
+    "inner_cells_far": 50469,
+    "identical": true,
+    "rounding_precision_m": 1e-12
+  },
+  "representation_revision": "v2 r2 C1 LE explicit arclength spline; see prediction_v2_geometry_revision.json"
+}

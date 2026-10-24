@@ -1,0 +1,53 @@
+Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\Urungu\\AppData\\Local\\matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+{
+  "name": "coarse",
+  "iteration": 1024.0,
+  "history_rows": 1025,
+  "density_log10_residual": -6.359842811,
+  "CL": 0.6718081187,
+  "CD": 0.01465191894,
+  "CL_final200_range": 0.012024195099999968,
+  "CD_final200_range": 0.0007052191199999995,
+  "max_wall_yplus": 0.4900398254394531,
+  "p99_wall_yplus": 0.4520077109336853,
+  "checks": {
+    "density_log10_below_minus8": false,
+    "CL_final200_range_below_5e_5": false,
+    "CD_final200_range_below_2e_6": false,
+    "max_wall_yplus_below1": true
+  },
+  "source_camberline_surface_classification": true,
+  "clockwise_boundary_signed_area_m2": -0.0779138132929802,
+  "pressure_force_coefficient_xy": [
+    -0.017984865233302116,
+    0.6684951782226562
+  ],
+  "viscous_force_coefficient_xy": [
+    0.005723197013139725,
+    0.00021631151321344078
+  ],
+  "independent_surface_force": {
+    "CL": 0.6686622932533393,
+    "CD": 0.014701504168098355,
+    "CL_pressure": 0.6686768440056426,
+    "CD_pressure": 0.008974239525134448,
+    "CL_viscous": -1.4544500064691548e-05,
+    "CD_viscous": 0.005727264895172741,
+    "relative_difference_CL": 0.004682624932768254,
+    "relative_difference_CD": 0.003384213924565688,
+    "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; comparison includes quadrature/output precision error"
+  },
+  "own_predicted_gradient": {
+    "upper": {
+      "x_over_c": 0.50273597240448,
+      "dCp_dx_max_abs": 8.747882843017578,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    },
+    "lower": {
+      "x_over_c": 0.0810544490814209,
+      "dCp_dx_max_abs": 4.030211448669434,
+      "selection": "argmax |dCp/dx| on own predicted surface for 0.08<x/c<0.92; no reference position accessed"
+    }
+  },
+  "field_time_note": "VTU checkpoint may predate last history on timeout; compare run_status and checkpoint iteration; complete exit outputs final field"
+}

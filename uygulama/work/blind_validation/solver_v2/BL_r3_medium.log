@@ -1,0 +1,186 @@
+{
+  "run": "v2_r3_medium",
+  "coverage_warning": true,
+  "profiles": [
+    {
+      "side": "upper",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.5163666401805813,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.00719353674254956,
+          "operational_delta99_c": 0.005751439242433617
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.4985213557338397,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.011886459517032282,
+          "operational_delta99_c": 0.005228374416762557
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.0204311970796542,
+        "mu_t_over_mu": 0.018200170248746872,
+        "Cp": -1.1170296669006348
+      },
+      "normal_cells": 43
+    },
+    {
+      "side": "upper",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.082631629864724,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.011662034636034027,
+          "operational_delta99_c": 0.01592462311557789
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.0766716268184389,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.00172626012879929,
+          "operational_delta99_c": 0.015686668766555664
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8715619036229462,
+        "mu_t_over_mu": 480.30914306640625,
+        "Cp": -0.20052628219127655
+      },
+      "normal_cells": 50
+    },
+    {
+      "side": "upper",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.9488603930345785,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.017248396209486944,
+          "operational_delta99_c": null
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.9503431607446432,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.010538254083624726,
+          "operational_delta99_c": 0.026371859296482413
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.6748028808685206,
+        "mu_t_over_mu": 664.920166015625,
+        "Cp": 0.09214385598897934
+      },
+      "normal_cells": 57
+    },
+    {
+      "side": "lower",
+      "x": 0.4,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 1.1321058821436087,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.0138842650731619,
+          "operational_delta99_c": 0.003984924623115577
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 1.109523389590538,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.018381023072134607,
+          "operational_delta99_c": 0.003487437185929648
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 1.039572550399437,
+        "mu_t_over_mu": 0.11018990725278854,
+        "Cp": -0.31584832072257996
+      },
+      "normal_cells": 41
+    },
+    {
+      "side": "lower",
+      "x": 0.8,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8833130949059982,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.006935618168573457,
+          "operational_delta99_c": 0.015686668766555664
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8919959238288009,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.008905923773385614,
+          "operational_delta99_c": 0.03433165829145728
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.9035930764347541,
+        "mu_t_over_mu": 247.8998260498047,
+        "Cp": 0.23972824215888977
+      },
+      "normal_cells": 58
+    },
+    {
+      "side": "lower",
+      "x": 0.95,
+      "edge": {
+        "near_outer": {
+          "Ue_over_Uinf": 0.8557302861424665,
+          "outer_distance_window_c": [
+            0.025,
+            0.045
+          ],
+          "outer_relative_velocity_range": 0.013164272159537535,
+          "operational_delta99_c": 0.022391959798994974
+        },
+        "far_outer": {
+          "Ue_over_Uinf": 0.8709657795966883,
+          "outer_distance_window_c": [
+            0.05,
+            0.08
+          ],
+          "outer_relative_velocity_range": 0.015053524081113176,
+          "operational_delta99_c": 0.046733317129847234
+        }
+      },
+      "at_BL_edge": {
+        "Ut_over_Ue_far_window": 0.8353901229744143,
+        "mu_t_over_mu": 368.9136657714844,
+        "Cp": 0.3053360879421234
+      },
+      "normal_cells": 61
+    }
+  ]
+}

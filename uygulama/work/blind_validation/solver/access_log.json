@@ -1,0 +1,16 @@
+{
+  "blinding_type": "Procedural separation on shared filesystem, not a security or memorization-proof barrier",
+  "task_instruction_inputs": ["Published coordinate files geom.txt, geom.f90, yl.pts, yu.pts", "conditions.json", "Parent-provided strict numerical screens and generic M6 failure lessons; no case target Cp/force/shock values"],
+  "files_read_initially": ["AGENTS.md", ".agents/skills/iha-muhendislik/SKILL.md", "PROJECT_STATE.md", "work/blind_validation/analysis_input/conditions.json", "work/blind_validation/analysis_input/geom.txt", "work/blind_validation/analysis_input/geom.f90", "work/blind_validation/analysis_input/yl.pts", "work/blind_validation/analysis_input/yu.pts", "work/setup/su2_install.json", "work/setup/freecad_install.json", "work/validation/sources/turb_SA_RAE2822.cfg"],
+  "own_created_files_read": "Only work/blind_validation/solver/* and own outputs/projects/proje-15cce2de02/{simulations,plots,reports}/*; generated mesh, solver log/history/VTU/CSV, own numerical metrics",
+  "runtime_libraries_read": "Installed gmsh API docstrings, numpy/scipy/VTK/matplotlib; no external result datasets",
+  "online_access": [
+    {"url":"https://raw.githubusercontent.com/su2code/SU2/v8.5.0/config_template.cfg", "purpose":"Official numerical options: SA baseline, Reynolds initialization, CFL bounds, limiter updates, output checkpoints, residual convergence, linear solver; no case results", "method":"web open/find; shell download attempt blocked by network restrictions and no file saved"},
+    {"url":"https://gmsh.info/doc/texinfo/gmsh.html", "purpose":"Official BoundaryLayer field numerical meshing options after self-intersection; no case results", "method":"web open/find"}
+  ],
+  "exposure_disclosure": "The parent explicitly required PROJECT_STATE.md to be read. This general state file contained numerical results from earlier unrelated M6 and NACA2412/0012 studies; I did read that text. No file with expected RAE2822 CFD, wind-tunnel Cp, shock position or aerodynamic target was read. SU2 install manifest and AGENTS also contained prior generic results. These exposures are disclosed, not claimed absent.",
+  "prohibited_paths_not_accessed": ["work/blind_validation/reviewer_only", "work/blind_validation/contract.json", "outputs/data/blind_contract", "project blind_contract.json"],
+  "no_case_outcomes_searched_online": true,
+  "no_lift_trimming_or_condition_fitting": true,
+  "memory_lookup": "Skipped to respect case input boundary; no relevant memory files opened"
+}

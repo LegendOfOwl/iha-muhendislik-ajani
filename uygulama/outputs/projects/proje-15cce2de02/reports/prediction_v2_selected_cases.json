@@ -1,0 +1,153 @@
+{
+  "family_id": "r2_C1_source65_200c_BL0p01_JST_MAT",
+  "chosen_before_experiment_comparison": true,
+  "selection_reason": "Predeclared same-geometry/same200c-domain3-level numerical family. Fine fixed-CFL1 continuation uses identical spatial mesh/physics/flux discretization after original fine residual floor. No best-match-to-experiment selection. BL0.02 medium is a diagnostic, not substituted into the family.",
+  "main_cases": [
+    {
+      "level": "coarse",
+      "case_name": "v2_r2_coarse",
+      "folder": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse",
+      "config": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/case.cfg",
+      "mesh": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/mesh.su2",
+      "surface": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/surface_flow_001892.vtu",
+      "volume": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/flow_001892.vtu",
+      "restart": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/restart_flow_001892.dat",
+      "history": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/history.csv",
+      "field_checkpoint_iteration": 1892,
+      "history_terminal_iteration": 1892.0,
+      "iterative_and_yplus_checks": {
+        "density_log10_below_minus8": true,
+        "CL_final200_range_below_5e_5": true,
+        "CD_final200_range_below_2e_6": true,
+        "max_wall_yplus_below1": true
+      },
+      "metrics_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/prediction_metrics.json",
+      "boundary_layer_profile_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/boundary_layer_profile_audit.json",
+      "mesh_metadata_source": "outputs/projects/proje-15cce2de02/simulations/v2_r2_coarse/mesh_audit.json",
+      "continuation_from": null,
+      "sha256": {
+        "config": "b89fae687a347704b7b880dd9bd27b00ed3af16f15caabfee17e7718d9cae59d",
+        "mesh": "75ae1aeb9fc28ce0e543ae281e708e56bb87831f12af1f268062d8a9d84e6df6",
+        "surface": "b989b0e8646656dde4419f7edbd20804204c3b6d2a0abcf9b76e210864a048b0",
+        "volume": "2506ae5b31e7bfa0949bb580338ce12a16b986bba087d2bffb33669339df2382",
+        "restart": "a4f73ff066a348a1d290171550b00c49ad73057fabd34b8006ae90e19994f04d",
+        "history": "c90a54bbc124cf0e1e667434b3aba295fcdf03ac9bb6d2cdaf08aa4da6848841"
+      },
+      "cells": 26112,
+      "farfield_bounds_m": [
+        -200.0,
+        200.0,
+        -200.0,
+        200.0
+      ],
+      "geometry_curve_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+      "condition_sha256": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141"
+    },
+    {
+      "level": "medium",
+      "case_name": "v2_r2_medium",
+      "folder": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium",
+      "config": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/case.cfg",
+      "mesh": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/mesh.su2",
+      "surface": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/surface_flow_002958.vtu",
+      "volume": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/flow_002958.vtu",
+      "restart": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/restart_flow_002958.dat",
+      "history": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/history.csv",
+      "field_checkpoint_iteration": 2958,
+      "history_terminal_iteration": 2958.0,
+      "iterative_and_yplus_checks": {
+        "density_log10_below_minus8": true,
+        "CL_final200_range_below_5e_5": true,
+        "CD_final200_range_below_2e_6": true,
+        "max_wall_yplus_below1": true
+      },
+      "metrics_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/prediction_metrics.json",
+      "boundary_layer_profile_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/boundary_layer_profile_audit.json",
+      "mesh_metadata_source": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/mesh_audit.json",
+      "continuation_from": null,
+      "sha256": {
+        "config": "04a9b6ddd636bc805b1bddbff9a34ccbdcc7a122839653adfa5c0d9122814d0e",
+        "mesh": "7f3958c21ecb78f6289afaabe9dc34279c308d2d2b00351b5b493b3f89e2b6ae",
+        "surface": "e25e1a2f237b19db278d9779bc7fe390f3bd1ba1b380adcbc9c8ea7eb9625e1d",
+        "volume": "0a066c711857ec3053f27a3eb51811e0a4cca0471aa2fbb05259e2e391b91145",
+        "restart": "aced9506e9a3dccf75ddae07c37151594f7259ca4f0ae67a194d2be39d10295c",
+        "history": "24e439125b935e4b5bc645682b4a1bf726ce208702971902dcafd7682fd1721b"
+      },
+      "cells": 57505,
+      "farfield_bounds_m": [
+        -200.0,
+        200.0,
+        -200.0,
+        200.0
+      ],
+      "geometry_curve_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+      "condition_sha256": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141"
+    },
+    {
+      "level": "fine",
+      "case_name": "v2_r2_fine_cfl1",
+      "folder": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1",
+      "config": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/case.cfg",
+      "mesh": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/mesh.su2",
+      "surface": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/surface_flow_003400.vtu",
+      "volume": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/flow_003400.vtu",
+      "restart": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/restart_flow_003400.dat",
+      "history": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/history.csv",
+      "field_checkpoint_iteration": 3400,
+      "history_terminal_iteration": 3468.0,
+      "iterative_and_yplus_checks": {
+        "density_log10_below_minus8": true,
+        "CL_final200_range_below_5e_5": true,
+        "CD_final200_range_below_2e_6": true,
+        "max_wall_yplus_below1": true
+      },
+      "metrics_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/prediction_metrics.json",
+      "boundary_layer_profile_file": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine_cfl1/boundary_layer_profile_audit.json",
+      "mesh_metadata_source": "outputs/projects/proje-15cce2de02/simulations/v2_r2_fine/mesh_audit.json",
+      "continuation_from": {
+        "case": "v2_r2_fine",
+        "checkpoint": 800
+      },
+      "sha256": {
+        "config": "2d9a6b11acce72a9f651b855364b18b6913e6ff9b4d0d82b246eb8da134f6192",
+        "mesh": "04504fb57efeae3644a80a4af4478b0465b186bb140e8495a4ca7feab00720af",
+        "surface": "b703d2407eae4115416d4f5f4c5c11ac9dac3604dfc8873e2831b8d80c53b536",
+        "volume": "43fd8bd4c4e5e66104c839bde2b72c04d9645d0832b0945724c7000715fbdc22",
+        "restart": "072698ae66720076e832a09a94de2c2e47434e6bddc8617db0ea366209ded64e",
+        "history": "132b5e151e2f25fda8fca0c1f98d1de11c09467db31876ce709246abb2a0959d"
+      },
+      "cells": 128726,
+      "farfield_bounds_m": [
+        -200.0,
+        200.0,
+        -200.0,
+        200.0
+      ],
+      "geometry_curve_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+      "condition_sha256": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141"
+    }
+  ],
+  "farfield_case": {
+    "level": "farfield_sensitivity",
+    "case_name": "v2_r2_medium_far",
+    "folder": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium_far",
+    "mesh": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium_far/mesh.su2",
+    "config": null,
+    "surface": null,
+    "volume": null,
+    "restart": null,
+    "history": null,
+    "CL": null,
+    "CD": null,
+    "Cp": null,
+    "max_wall_yplus": null,
+    "status": {
+      "status": "not_started_numerical_mesh_hold",
+      "started": false,
+      "reason": "New long farfield run held pending fine residual-floor and aft normal-resolution diagnostic; mesh remains ready and preserved"
+    },
+    "mesh_stitch_provenance": "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium_far/mesh_stitch_provenance.json",
+    "mesh_sha256": "a983b63aabae3bcd06b8552d1a9cef56b58b53ea3159a530eece93a1e3c4774f",
+    "cells": 59627
+  }
+}

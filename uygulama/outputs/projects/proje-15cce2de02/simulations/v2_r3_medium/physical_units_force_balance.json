@@ -1,0 +1,49 @@
+{
+  "run": "v2_r3_medium",
+  "checkpoint_iteration": 3434,
+  "physical_freestream_from_authoritative_conditions_and_constitutive_air_assumptions": {
+    "T_K": 255.55555555555554,
+    "Mach": 0.729,
+    "alpha_deg": 2.31,
+    "Re_chord": 6500000.0,
+    "chord_m": 1.0,
+    "gamma": 1.4,
+    "R_J_kg_K": 287.058,
+    "U_m_s": 233.62485067141293,
+    "mu_Pa_s": 1.6275603778870158e-05,
+    "rho_kg_m3": 0.45282607675777103,
+    "p_Pa": 33218.98891849379,
+    "dynamic_pressure_Pa": 12357.75288288328,
+    "calculation": "Sutherland mu at source computational temperature; U=M*sqrt(gamma*R*T); rho=Re*mu/(U*c); p=rho*R*T. Pressure is derived, not fitted."
+  },
+  "stored_solution_scaling": {
+    "rho_ref_kg_m3": 0.45282607675777103,
+    "velocity_ref_m_s": 233.62485067141293,
+    "pressure_ref_Pa": 24715.50576576656,
+    "temperature_ref_K": 255.55555555555554,
+    "note": "Native restart and VTU primitive fields are nondimensional under REF_DIMENSIONALIZATION=FREESTREAM_VEL_EQ_ONE; Cp/Cf are already dimensionless."
+  },
+  "restart_vs_mesh_max_xy_error_m": 0.0,
+  "restart_vs_VTU_max_xy_error_m": 1.0095078813327345e-05,
+  "Cp_recomputed_from_conservative_state_max_difference": 5.9589535084114686e-08,
+  "Cp_recomputed_RMS_difference": 1.7405003538230705e-08,
+  "mass_flux_farfield_nondimensional": 0.00023054704270603077,
+  "farfield_physical_momentum_flux_quadrature": {
+    "CL": 0.7318981676586875,
+    "CD": 0.009439829528007093,
+    "relative_difference_to_native_wall_CL": 7.80978549222936e-05,
+    "relative_difference_to_native_wall_CD": 0.2302400315315773,
+    "method": "Trapezoid nodal physical momentum/pressure perturbation flux at outer boundary, subtracting uniform freestream analytically; far viscous traction neglected. This is not the solver discrete flux including JST dissipation and is not an automatic acceptance test."
+  },
+  "domain_area_check": {
+    "fluid_cell_area_sum_m2": 159999.9220832663,
+    "outer_polygon_area_m2": 160000.0,
+    "wall_polygon_area_m2": 0.07791673409724961,
+    "balance_error_m2": 4.0745362639427185e-10
+  },
+  "wall_force_dimensional_per_unit_span": {
+    "lift_N_per_m": 9045.323111693238,
+    "drag_N_per_m": 151.54734637053528,
+    "scope": "2D section per unit span; not total wing/aircraft loads"
+  }
+}

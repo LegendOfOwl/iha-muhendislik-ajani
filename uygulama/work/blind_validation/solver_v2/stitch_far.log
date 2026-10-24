@@ -1,0 +1,12 @@
+Info    : Reading 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\projects\proje-15cce2de02\simulations\v2_r2_medium_far\mesh.su2'...
+Error   : 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\projects\proje-15cce2de02\simulations\v2_r2_medium_far\mesh.su2', line 1: syntax error (NELEM)
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\blind_validation\solver_v2\stitch_far_mesh.py", line 44, in <module>
+    if __name__=='__main__':stitch()
+                            ^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\blind_validation\solver_v2\stitch_far_mesh.py", line 35, in stitch
+    gmsh.initialize();gmsh.open(str(far/'mesh.su2'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\.venv-cad\Lib\site-packages\gmsh.py", line 346, in open
+    raise Exception(logger.getLastError())
+Exception: 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\projects\proje-15cce2de02\simulations\v2_r2_medium_far\mesh.su2', line 1: syntax error (NELEM)

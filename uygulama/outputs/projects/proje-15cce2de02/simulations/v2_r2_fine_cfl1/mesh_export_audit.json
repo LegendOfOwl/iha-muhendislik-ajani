@@ -1,0 +1,76 @@
+{
+  "wall_edge_spacing_m": {
+    "min": 0.00022195329615744616,
+    "median": 0.0026556282380314536,
+    "max": 0.0026656090085709606
+  },
+  "measured_wall_adjacent_quad_normal_height_m": {
+    "min": 5.333281819442514e-07,
+    "median": 5.333333333345586e-07,
+    "max": 5.333384591747007e-07
+  },
+  "measured_first_height_by_region_m": {
+    "LE": {
+      "min": 5.33332745659362e-07,
+      "median": 5.333333332425463e-07,
+      "max": 5.333339180908061e-07
+    },
+    "TE": {
+      "min": 5.333281819442514e-07,
+      "median": 5.333333333351088e-07,
+      "max": 5.333384591747007e-07
+    },
+    "gradient": {
+      "min": 5.333333325937151e-07,
+      "median": 5.333333333336617e-07,
+      "max": 5.333333340684922e-07
+    },
+    "other": {
+      "min": 5.333333144982924e-07,
+      "median": 5.333333333345586e-07,
+      "max": 5.333333526592465e-07
+    }
+  },
+  "gradient_refinement_region": {
+    "definition": {
+      "x_min": 0.4478287625312805,
+      "x_max": 0.5878287625312806,
+      "y_min": -0.02,
+      "y_max": 0.18
+    },
+    "cells": 12115,
+    "max_edge_length_m": {
+      "min": 0.0007171271829667223,
+      "median": 0.001826170030236261,
+      "max": 0.01420995728117332
+    }
+  },
+  "note": "Normal full-cell height is independently computed from exported SU2 wall-edge quads; TE point-fan triangles are not represented by a two-wall-node quad height; actual Y+ screen includes all wall points.",
+  "topology": {
+    "connected_fluid_components": 1,
+    "nonmanifold_edges": 0,
+    "unmarked_boundary_edges": 0,
+    "markers_not_on_boundary": 0,
+    "boundary_edge_counts": {
+      "AIRFOIL": 1095,
+      "FARFIELD": 152
+    },
+    "two_neighbor_interior_edges": 231860,
+    "positive_signed_areas": true
+  },
+  "wake_definition": {
+    "x_range_c": [
+      0.95,
+      6.0
+    ],
+    "y_range_c": [
+      -0.08,
+      0.18
+    ],
+    "box_axis_degrees": 0.0,
+    "freestream_angle_degrees": 2.31,
+    "surface_transition_thickness_c": 0.7,
+    "minimum_box_size_m": 0.015555555555555557,
+    "scope": "Axis-aligned downstream band, not an exactly streamline-following wake grid. Conservatively report this limitation; main viscous layer and shock region separately resolved."
+  }
+}
