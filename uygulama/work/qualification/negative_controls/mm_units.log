@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\geometry\parametric_wing.py", line 117, in <module>
+    if __name__=='__main__': raise SystemExit(main())
+                                              ^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\geometry\parametric_wing.py", line 41, in main
+    if cfg['units']!={'length':'m','angle':'deg'}: raise ValueError('Explicit m/deg units required')
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Explicit m/deg units required

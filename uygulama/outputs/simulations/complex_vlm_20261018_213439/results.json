@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-10-18T18:35:06.174788+00:00",
+  "passed": false,
+  "quality_passed": false,
+  "results": [
+    {
+      "level": "medium",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\complex_vlm_20261018_213439\\medium",
+      "reference": {
+        "Sref_m2": 0.405,
+        "bref_m": 1.8,
+        "cref_m": 0.23703703703703702,
+        "moment_reference_m": [
+          0.08,
+          0,
+          0
+        ]
+      },
+      "analysis_set": "3: this wing only; no fuselage, tail, ribs or propulsion",
+      "profile": "outputs/data/airfoils/naca2412.dat",
+      "exit_code": 23,
+      "seconds": 26.517,
+      "runtime_passed": false,
+      "wake_converged": false,
+      "error": "ValueError: Native analysis/configuration error"
+    }
+  ],
+  "panel_comparison": null,
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\complex_vlm_20261018_213439",
+  "scope": "New cambered-profile multi-section wing native VLM qualification; no viscous/stall/aircraft acceptance",
+  "limits": [
+    "CAD ruled-envelope and OpenVSP section interpolation are separate representations; full surface equivalence has not been established",
+    "Refs are explicit planform quantities; section dihedral affects projected geometry",
+    "No LLT implementation is claimed"
+  ]
+}

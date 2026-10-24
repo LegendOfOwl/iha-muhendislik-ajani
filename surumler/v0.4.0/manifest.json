@@ -1,0 +1,2975 @@
+{
+  "version": "v0.4.0",
+  "name": "Deterministik geometri ve hafif CFD",
+  "history_kind": "retrospective_grouped_import_not_original_git_history",
+  "files": [
+    {
+      "source_path": "outputs/cad/parametric_wing/envelope.step",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/envelope.step",
+      "bytes": 87638,
+      "sha256": "6d33f3dd8ed35e6efffbb9deddf64e4b77e1dc89836352431048942725433ddd",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:53.505098+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/envelope.stl",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/envelope.stl",
+      "bytes": 37384,
+      "sha256": "fdc5b86a46fffdb19893613b5ed1f2866a27fede5176d28388750aa3481a2223",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:53.505098+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/front.svg",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/front.svg",
+      "bytes": 63017,
+      "sha256": "8140925226ecba5410803129b3074ac5ed44d99c9a5e18a6edf5f41a75809c3f",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:55.490024+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/iso.svg",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/iso.svg",
+      "bytes": 81330,
+      "sha256": "bfff8b737c7d2aa53e24ef11d8792fbf7c995ba0a027b11116a6bd6747bd3314",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:55.302195+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/review_envelope_and_ribs.step",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/review_envelope_and_ribs.step",
+      "bytes": 1562330,
+      "sha256": "5a39231a4622bf45c4afa86fe245a6a3758e024a74293758515736873fcd7890",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:55.138832+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/rib_1.step",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/rib_1.step",
+      "bytes": 337933,
+      "sha256": "090e9a40b784e4179c728a45b9a427961195abbd41eb4c2ba298e9974f7152f1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:53.920000+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/rib_2.step",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/rib_2.step",
+      "bytes": 369323,
+      "sha256": "bf87b159045e07e50734fbf01c6d0a72a553fdfba8dea94846e935bb7362d7d6",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:54.280656+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/rib_3.step",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/rib_3.step",
+      "bytes": 364099,
+      "sha256": "3497b8b6dd278c8419dc7dc9ff4cef104d0802c22325b00eefdf47e9123396a0",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:54.598132+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/rib_4.step",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/rib_4.step",
+      "bytes": 369193,
+      "sha256": "03eadd2c10cc8342ef9376421ce9b8f41439a20f20707cc3ab54b5ab85b86886",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:54.924759+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/cad/parametric_wing/top.svg",
+      "repository_path": "uygulama/outputs/cad/parametric_wing/top.svg",
+      "bytes": 37760,
+      "sha256": "8385d79f73e05222656a710bc190e1da8dadd95dd74c7d3e17afe4bad222da39",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:55.209014+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/data/parametric_wing_case.json",
+      "repository_path": "uygulama/outputs/data/parametric_wing_case.json",
+      "bytes": 1152,
+      "sha256": "080bd8cf1da94473cc10c0ab6ab81725ce210116ad9a49f1f7636a0095b30c36",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:30:20.102119+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/plots/cfd_cp_validation.png",
+      "repository_path": "uygulama/outputs/plots/cfd_cp_validation.png",
+      "bytes": 79351,
+      "sha256": "42f60f3654ba1b55c7223e0d7766c976dd21fd3d9c75a10034aaf69f6de730b3",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:40.170093+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/plots/cfd_force_convergence.png",
+      "repository_path": "uygulama/outputs/plots/cfd_force_convergence.png",
+      "bytes": 62318,
+      "sha256": "5c29fe1b4b88d22f5279b9a3a3d3649297641caa3031cd382eb63037c397fcea",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:40.969965+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/plots/cfd_pressure_and_mesh.png",
+      "repository_path": "uygulama/outputs/plots/cfd_pressure_and_mesh.png",
+      "bytes": 873018,
+      "sha256": "c5f56d3b296a02906d065c22d8272c8b6d4c2289c17314c53889563e42fa9365",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:40.804741+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/plots/elmer_cfd_fields.png",
+      "repository_path": "uygulama/outputs/plots/elmer_cfd_fields.png",
+      "bytes": 221589,
+      "sha256": "f7838e7ed30ab983c31d295f560ae688b206d69ed42975f5f50ff22e0c87087c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:32:23.183239+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/plots/elmer_cfd_verification.png",
+      "repository_path": "uygulama/outputs/plots/elmer_cfd_verification.png",
+      "bytes": 136919,
+      "sha256": "24380e26882a320310a24b089dcf3189cad3e22ecd424b883011ac85e8b9e169",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:32:22.968123+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/plots/parametric_wing_cad.png",
+      "repository_path": "uygulama/outputs/plots/parametric_wing_cad.png",
+      "bytes": 24539,
+      "sha256": "83c07409f4cf32ea14bce2f55be91d074cd7989f8d0be3a8e77f0f7c8cf62437",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:42.797490+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/cfd_qualification.json",
+      "repository_path": "uygulama/outputs/reports/cfd_qualification.json",
+      "bytes": 4594,
+      "sha256": "c04f65b866e3e1053bfb7ad3a0ed5db45b1ee4d7bbcb06d8d10b753d128ef576",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.448825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/cfd_reference_comparison.json",
+      "repository_path": "uygulama/outputs/reports/cfd_reference_comparison.json",
+      "bytes": 3609,
+      "sha256": "41727279fdfb7214a89a2ca1fbb69d59a13d1ead3051210d4fd491c87371a129",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:42:46.169595+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/complex_vlm_force_audit.json",
+      "repository_path": "uygulama/outputs/reports/complex_vlm_force_audit.json",
+      "bytes": 4322,
+      "sha256": "9749345e4f8b28f8ed6da2c431bd9810151f78391eb2003a153c483707661113",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:43:42.367462+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/complex_vlm_qualification.json",
+      "repository_path": "uygulama/outputs/reports/complex_vlm_qualification.json",
+      "bytes": 12725,
+      "sha256": "48e95c3ac4afa593ca451dc0301ede9705c03841f579a81977d73cb35809b8ac",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:24.097800+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/elmer_cfd_qualification.json",
+      "repository_path": "uygulama/outputs/reports/elmer_cfd_qualification.json",
+      "bytes": 3600,
+      "sha256": "9e75d9e8cd4a8b3832f1c1dbcae6757c86afbd9bd73c1cd96e9cf81ee7286f9b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:32:23.249883+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/muhendislik_seviyesi_ve_cfd.html",
+      "repository_path": "uygulama/outputs/reports/muhendislik_seviyesi_ve_cfd.html",
+      "bytes": 22045,
+      "sha256": "8d23952e3ffb17e51c857e81a3e60aad0c6dd73444dbf5cbc059ef25eaec98ef",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:48:53.683980+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/muhendislik_seviyesi_ve_cfd.md",
+      "repository_path": "uygulama/outputs/reports/muhendislik_seviyesi_ve_cfd.md",
+      "bytes": 18498,
+      "sha256": "42dabb3a3641e7b9f8aa18fae90e229a6940f5d48b6cb9c6714dc87e987fe754",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:48:50.821857+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/parametric_cad_qualification.json",
+      "repository_path": "uygulama/outputs/reports/parametric_cad_qualification.json",
+      "bytes": 22824,
+      "sha256": "526f1e5134c7b3a1b5f648a5ea4772c0a60224018b6dca60b7601ab489f9c655",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:55.495198+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-212129-8ffed7/cfd_qualification.json",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-212129-8ffed7/cfd_qualification.json",
+      "bytes": 4594,
+      "sha256": "c04f65b866e3e1053bfb7ad3a0ed5db45b1ee4d7bbcb06d8d10b753d128ef576",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:06.024253+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-212129-8ffed7/cfd_reference_comparison.json",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-212129-8ffed7/cfd_reference_comparison.json",
+      "bytes": 3609,
+      "sha256": "41727279fdfb7214a89a2ca1fbb69d59a13d1ead3051210d4fd491c87371a129",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:06.026776+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-212129-8ffed7/complex_vlm_force_audit.json",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-212129-8ffed7/complex_vlm_force_audit.json",
+      "bytes": 4322,
+      "sha256": "9749345e4f8b28f8ed6da2c431bd9810151f78391eb2003a153c483707661113",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:06.021591+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-212129-8ffed7/complex_vlm_qualification.json",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-212129-8ffed7/complex_vlm_qualification.json",
+      "bytes": 12725,
+      "sha256": "48e95c3ac4afa593ca451dc0301ede9705c03841f579a81977d73cb35809b8ac",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:05.979654+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-212129-8ffed7/muhendislik_seviyesi_ve_cfd.html",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-212129-8ffed7/muhendislik_seviyesi_ve_cfd.html",
+      "bytes": 22045,
+      "sha256": "8d23952e3ffb17e51c857e81a3e60aad0c6dd73444dbf5cbc059ef25eaec98ef",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:05.947404+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-212129-8ffed7/muhendislik_seviyesi_ve_cfd.md",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-212129-8ffed7/muhendislik_seviyesi_ve_cfd.md",
+      "bytes": 18498,
+      "sha256": "42dabb3a3641e7b9f8aa18fae90e229a6940f5d48b6cb9c6714dc87e987fe754",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:05.926218+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-212129-8ffed7/parametric_cad_qualification.json",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-212129-8ffed7/parametric_cad_qualification.json",
+      "bytes": 22824,
+      "sha256": "624325edf6535bfb3d5400207b6b7e9dcbaeca10bb57257303a566c5049ea3f7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:05.970732+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-212129-8ffed7/su2_install.json",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-212129-8ffed7/su2_install.json",
+      "bytes": 1080,
+      "sha256": "6846b11abd5367f147987b80d8c77860da20d95f87b27eb969bd064938d03c64",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:06.141006+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-231810-dcaa71/elmer_cfd_qualification.json",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-231810-dcaa71/elmer_cfd_qualification.json",
+      "bytes": 3600,
+      "sha256": "9e75d9e8cd4a8b3832f1c1dbcae6757c86afbd9bd73c1cd96e9cf81ee7286f9b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:36:26.968854+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/reports/task_evidence/20261018-231810-dcaa71/elmer_install.json",
+      "repository_path": "uygulama/outputs/reports/task_evidence/20261018-231810-dcaa71/elmer_install.json",
+      "bytes": 1625,
+      "sha256": "8011b350fe68231e8016247c82689127642f225ea8f9604a048575a3cb333677",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:36:27.030722+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/case.cfg",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/case.cfg",
+      "bytes": 13390,
+      "sha256": "94b5529d39be93d347b7cfaf19a580e8009b7a748a378346e3e44af50d1fb07a",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:19.372449+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/command.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/command.json",
+      "bytes": 131,
+      "sha256": "78829fbaa8b351411fd95f19e838181894af0e366e25284673d86085f4efe128",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:19.372449+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/flow.vtu",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/flow.vtu",
+      "bytes": 489274,
+      "sha256": "7ee2683b48ae6d9212402889e5c8711665697a9951e4860cb3cfcf68005d7734",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.917739+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/history.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/history.csv",
+      "bytes": 65124,
+      "sha256": "066fb687f0278587260f8c8470069e1bd5a70168e61c9b58464a54471d509a5d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.906952+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/history_clean.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/history_clean.csv",
+      "bytes": 31180,
+      "sha256": "231a096279f713e8773926ededa707fe2e9816e4b12fa83245d7df08c80e6ef1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.938618+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/inputs.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/inputs.json",
+      "bytes": 843,
+      "sha256": "ebafe4b9997a605c9cda5c4e2aeeb859d8c762c5018a31d5171ad075d9d4c56e",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:19.389705+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/mesh_NACA0012_inv.su2",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/mesh_NACA0012_inv.su2",
+      "bytes": 485272,
+      "sha256": "9094b51c2628d3bb4c865d774b2308dbb59a213ad19c007cfcd7d57e7aaeebeb",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:31.914447+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/native.log",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/native.log",
+      "bytes": 25683,
+      "sha256": "271e7b2083b308879892b63e8f4b0a858db86e7dd66caaee36efb3bb2fe881b3",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.921228+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/restart_flow.dat",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/restart_flow.dat",
+      "bytes": 251402,
+      "sha256": "30b272847bcc55d2ebf79b954eae1d6b79fe95cbe9e18ad1bb79266ae4adbe92",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.906952+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/surface_flow.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/surface_flow.csv",
+      "bytes": 28753,
+      "sha256": "c03bb9721a4ee5fdf8ca432e4cc877480fd5f175cb25b2a9b919ffa818552213",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.917739+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/euler_shock/wall_quantities.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/euler_shock/wall_quantities.csv",
+      "bytes": 15427,
+      "sha256": "df8209280c0342658506b566bb9accd46637a2c1d394935cafb93ccce1813dd8",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:40.024735+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/case.cfg",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/case.cfg",
+      "bytes": 8696,
+      "sha256": "09b3785d414d6382493adc6411b24406674e0d553f66349febc1f2a5911f80f1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.938618+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/command.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/command.json",
+      "bytes": 131,
+      "sha256": "78829fbaa8b351411fd95f19e838181894af0e366e25284673d86085f4efe128",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.938618+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/flow.vtu",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/flow.vtu",
+      "bytes": 373809,
+      "sha256": "c536cfad1a5e674a10334e44584058728cbaf7624995aa4a2a60f3cc05f68889",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.914649+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/history.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/history.csv",
+      "bytes": 972324,
+      "sha256": "25a1669a60138e8f8ab2915b464f3bd0ae0dad24aad5a3f0a0a3b917246dd9db",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.914649+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/history_clean.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/history_clean.csv",
+      "bytes": 460644,
+      "sha256": "952c71c1c725b3eab128f28ecb83b936c629f013cc9e650ea51e82c2be626346",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.959179+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/inputs.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/inputs.json",
+      "bytes": 1134,
+      "sha256": "8d791944e1108db0b1a963ef91cc407eb94255e7317d857b7e19785f6086cd71",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:24.952445+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/n0012_113-33.su2",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/n0012_113-33.su2",
+      "bytes": 306526,
+      "sha256": "9a872a3de5a1b6b6a590ece8cae32ed8e9cbcafde3294fbab0eb67026b08a4f0",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:32.973322+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/native.log",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/native.log",
+      "bytes": 217878,
+      "sha256": "31313c894574a0fd95277487b75aaaf904fafd7ab905ef3a7620156e892c0196",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.925281+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/restart_flow.dat",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/restart_flow.dat",
+      "bytes": 178010,
+      "sha256": "4d5bba57f08c3afe9c83d850c626ca4dc8830e5b4642a409b10e5c7b60b640c4",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.914649+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/surface_flow.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/surface_flow.csv",
+      "bytes": 9234,
+      "sha256": "75649faaa8ed0905146bb1e3683a72070d86f5ea854168fac54538a274767201",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.921134+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_coarse/wall_quantities.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_coarse/wall_quantities.csv",
+      "bytes": 9817,
+      "sha256": "eb40b6892638678bae3634c41b373436bbb00600ec06c0d8b53209cb7da633ad",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:40.028091+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/case.cfg",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/case.cfg",
+      "bytes": 8697,
+      "sha256": "5b6a410f76653bac2e5a2a8bc57bf7bcca406fd9ed57f06db10bdd640aca8ca6",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.585311+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/command.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/command.json",
+      "bytes": 131,
+      "sha256": "78829fbaa8b351411fd95f19e838181894af0e366e25284673d86085f4efe128",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.585311+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/flow.vtu",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/flow.vtu",
+      "bytes": 5832387,
+      "sha256": "817a33a0d8b8f6b741891efd1151cf15bbea06bbc3e7216b4f2fd280b319e2d0",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.370026+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/history.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/history.csv",
+      "bytes": 1620324,
+      "sha256": "9fc21d89f8f7a5e2d789aae9bf8f07c6e5afce70f3c81a57eecd2390dda68212",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.328148+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/history_clean.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/history_clean.csv",
+      "bytes": 763519,
+      "sha256": "8e117e532d4b11171ec843110efbb4a6fba75ec6a3efb39213a71a306efe97ee",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.448825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/inputs.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/inputs.json",
+      "bytes": 1135,
+      "sha256": "8452c5b31f6edd3f4d384e31be9744957adc4278365de64904f7bc687c612ece",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.601425+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/n0012_449-129.su2",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/n0012_449-129.su2",
+      "bytes": 5173742,
+      "sha256": "2e7d2feeb9832d3d16ed6867a3dc16d9e1ec045cf3d4a89ebfb506bcac9571d2",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:34.542212+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/native.log",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/native.log",
+      "bytes": 353881,
+      "sha256": "1ac7b0128efb466a8a888158791d187828a317b51658cd22d020e9a46984c562",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.400335+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/pressure_nearfield.pos",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/pressure_nearfield.pos",
+      "bytes": 5789694,
+      "sha256": "1a140ff36a75d5b60e7fcfcf31361ae8defd6720619fe5663e45b137844de175",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:40.503404+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/restart_flow.dat",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/restart_flow.dat",
+      "bytes": 2775770,
+      "sha256": "04717c0f11d359cd9745ea7b073193a0215abdcb50f8b74e1b1ce27a87dff342",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.352307+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/surface_flow.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/surface_flow.csv",
+      "bytes": 36927,
+      "sha256": "076cd8cca52f1c7dfbdc7fe566da71cbe90b437c6af19e6c95cfdc9823650b5d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.382171+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_fine/wall_quantities.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_fine/wall_quantities.csv",
+      "bytes": 39068,
+      "sha256": "cca8cb91f7ecfdf8ffe318f8c30d2c4f2c688216efe360f5526da550a88e5b79",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:40.051995+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/case.cfg",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/case.cfg",
+      "bytes": 8696,
+      "sha256": "3b78fcbd4d24d8f6df3f6f2282d437fcafdd80b24121ee711eb240323ebc79eb",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.963480+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/command.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/command.json",
+      "bytes": 131,
+      "sha256": "78829fbaa8b351411fd95f19e838181894af0e366e25284673d86085f4efe128",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.963480+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/flow.vtu",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/flow.vtu",
+      "bytes": 1469370,
+      "sha256": "3b1336350a41efe9ee505161828bf4cde6085a46d4312ff877373bff4c566531",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.525512+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/history.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/history.csv",
+      "bytes": 806760,
+      "sha256": "e86a150488bc27328a6d499ec1aeec4ce8c4dda8d394b51348f4eaac1a6a7a1c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.509223+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/history_clean.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/history_clean.csv",
+      "bytes": 379695,
+      "sha256": "c24ff7947e00cb292b759481253b4d9a2a421e62187bf8b9dbd752e61de78b87",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.574714+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/inputs.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/inputs.json",
+      "bytes": 1134,
+      "sha256": "87862b9daa8725c157466c8d99c38c8be8b27fd51e4535eb2761a7e9e270da8d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:51.972502+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/n0012_225-65.su2",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/n0012_225-65.su2",
+      "bytes": 1253807,
+      "sha256": "20dfc96875b1d1a8377c2e64248b6ee42a1ecf525c50d822fb5f539d06d68d15",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:33.702141+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/native.log",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/native.log",
+      "bytes": 183097,
+      "sha256": "3ca6608ecdf6a2d9a7b8b8d2a1d181d42f929f2ab8962791306177eb3b225796",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.525512+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/restart_flow.dat",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/restart_flow.dat",
+      "bytes": 699866,
+      "sha256": "ee1daa50e56d0a0730af27b04b7193dd8ca90555692df59735465568f2f3418f",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.525512+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/surface_flow.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/surface_flow.csv",
+      "bytes": 18446,
+      "sha256": "715c4daa4485253eb01056963415c3ddf3af45ccc033e2f58d5bf842934e97ab",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:27:43.525512+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/rans_medium/wall_quantities.csv",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/rans_medium/wall_quantities.csv",
+      "bytes": 19547,
+      "sha256": "244256ed5c8739806d9a7019d334f54277c0f61405a2ce41e2e9752001668ca9",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:40.034168+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/results.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/results.json",
+      "bytes": 4594,
+      "sha256": "c04f65b866e3e1053bfb7ad3a0ed5db45b1ee4d7bbcb06d8d10b753d128ef576",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.448825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/cfd_20261018_212619/results_in_progress.json",
+      "repository_path": "uygulama/outputs/simulations/cfd_20261018_212619/results_in_progress.json",
+      "bytes": 3748,
+      "sha256": "d752b922800c45eecb313badad0f1d44d7188aa1e48f03c051e1e4a0b0488d74",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:54.448825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/case.vspscript",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/case.vspscript",
+      "bytes": 5831,
+      "sha256": "ce3c110c6f5b8781eed56c642a1ffb8b88adcd3c59244eb2bc21096127a5af3f",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:39.635580+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.adb",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.adb",
+      "bytes": 754752,
+      "sha256": "fc7cfbfd98d320ae3a7fc4d3dc05ab6ef4a191456bf138d7fe15dd2e86ffd7aa",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.560179+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.adb.cases",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.adb.cases",
+      "bytes": 717,
+      "sha256": "8496cc24fe076781677be69df74d12992556048a8ca8c94307fdbfb8efb7f426",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.561260+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.case.-3.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.case.-3.quad.1.dat",
+      "bytes": 2063,
+      "sha256": "c8436f48382403c2af82ca5fcde82345a36c3c3d742978afb83ac2af9b4c7bfe",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.558020+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.case.1.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.case.1.quad.1.dat",
+      "bytes": 2058,
+      "sha256": "7561c7bd4b00e5076c874cf257463be07d457faa995733c5f2f13944f2951147",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:50.172990+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.case.2.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.case.2.quad.1.dat",
+      "bytes": 2064,
+      "sha256": "30773de0b1556a38710225569a1c156d0de17037d14b8d75c80f891a05a225f1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:57.750340+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.csf",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.csf",
+      "bytes": 20,
+      "sha256": "bb29bf526f4379308ca9c271a8df90c39f4df4235f81f63e370f25e714bb797c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:40.203568+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.cuts",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.cuts",
+      "bytes": 15,
+      "sha256": "d56341ce2dd170a0d4d2e466fa2c16d409f82167b66bd4bddaf48bf5bd0052be",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.796401+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.group.0",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.group.0",
+      "bytes": 41741,
+      "sha256": "d446f93f735948549700ef5cfbd64fdddc42d258ced8fc64f50a256a3f702937",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.555882+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.group.1",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.group.1",
+      "bytes": 41741,
+      "sha256": "455d238c23bea743c487b6e46ef551cc6cc38c2234f1e525aa8941eb3b7713bf",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.555882+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.history",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.history",
+      "bytes": 166041,
+      "sha256": "97c94d9a49391c366459c8eae02864846c76d6221881ad7e7d598cc4f5c2d554",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.555882+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.lod",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.lod",
+      "bytes": 74121,
+      "sha256": "825a1cf1396c40abd39c65e5905f9ab31c681cbab45f3938fe85adc1b55ec599",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.560179+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.polar",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.polar",
+      "bytes": 4661,
+      "sha256": "bccfd9f4c72c780af97d01a087e08bc7ff6ff405fe6f7fb8b524215b227267e6",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.563304+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.quad.cases",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.quad.cases",
+      "bytes": 18,
+      "sha256": "82a501f9cda9e9d183b01aa3369e55a10835bad9b2e78c52edbc98279e94e937",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:41.987684+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.slc",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.slc",
+      "bytes": 14013,
+      "sha256": "53e75a3762ea29a53a53aa89390bbd916ea0824c309b8dc71972d44a5cd23906",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:04.874621+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.step",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.step",
+      "bytes": 397463,
+      "sha256": "abfb456c65b6db2a543fc80a84f4d5b665e6ec80f32667df06d830b62fb07547",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:06.145396+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.vkey",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.vkey",
+      "bytes": 362,
+      "sha256": "620e2d4d32a3034007a16c7df407adf9e53bcda00ced5d325a289a680aa0e880",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:40.203568+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.vsp3",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.vsp3",
+      "bytes": 93123,
+      "sha256": "53854805bb595b505d34687a5bb0cef1789f6ee883daa2c32c663dd5c7a2a4e3",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:40.171571+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.vspaero",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.vspaero",
+      "bytes": 947,
+      "sha256": "64dfccd63da2964d005abb71157e739d362206d00d8018869c9a29d3ecadcf42",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:40.203568+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/model.vspgeom",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/model.vspgeom",
+      "bytes": 358787,
+      "sha256": "48f8ecbcc0c3dcb3ca8730741ec22c90104db0f095820aef63b562ad445d3f83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:34:40.203568+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/native.log",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/native.log",
+      "bytes": 135046,
+      "sha256": "36fb5dd41300d63fe11f876ea85e255d623eda24016121a2ae370ef98124445e",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:06.147616+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/medium/results.csv",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/medium/results.csv",
+      "bytes": 444062,
+      "sha256": "bdedd35ae0be1e01898058143379aa02846963709d377fa27e72c5913441cc2c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:06.119533+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/results.json",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/results.json",
+      "bytes": 1392,
+      "sha256": "10f48c00d2f5d9ac5478dfa1e167e1beaca60f56824761201ec84b7fbb2c5fdf",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:06.176119+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213439/results_in_progress.json",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213439/results_in_progress.json",
+      "bytes": 663,
+      "sha256": "802c598e9dfe8827d6bbe4a8d56339258fd4598671ff37d93c7bcd09d660b6ac",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:35:06.174789+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/case.vspscript",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/case.vspscript",
+      "bytes": 6146,
+      "sha256": "bd79c9dcd2e1350c42049d747592f9785f7a127ca315fc1471caa8956f6b0c0f",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.501204+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.adb",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.adb",
+      "bytes": 3886476,
+      "sha256": "7eb0c08d98d0d66bd90605ea76b6234231f7d76184a6b6c2b32c90fe526f6dfd",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.371680+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.adb.cases",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.adb.cases",
+      "bytes": 717,
+      "sha256": "8496cc24fe076781677be69df74d12992556048a8ca8c94307fdbfb8efb7f426",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.371680+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.case.-3.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.case.-3.quad.1.dat",
+      "bytes": 2046,
+      "sha256": "c058a0d0921bb1298837f2cb868b625f9be85e319449c4cfd8766a224867867a",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.361859+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.case.1.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.case.1.quad.1.dat",
+      "bytes": 2070,
+      "sha256": "cab88d4a598d6a792b51ed2f609bf2ed9e38ccd3e7b2fef4eb30fd804255a743",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:17.580235+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.case.2.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.case.2.quad.1.dat",
+      "bytes": 2054,
+      "sha256": "8bb5c1658e5f9159365f8ffa5f3b5b48af69a2226748e8a2eb4613f8cdc80827",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:20.933287+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.csf",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.csf",
+      "bytes": 20,
+      "sha256": "bb29bf526f4379308ca9c271a8df90c39f4df4235f81f63e370f25e714bb797c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.761934+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.cuts",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.cuts",
+      "bytes": 15,
+      "sha256": "d56341ce2dd170a0d4d2e466fa2c16d409f82167b66bd4bddaf48bf5bd0052be",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.670528+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.group.0",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.group.0",
+      "bytes": 41739,
+      "sha256": "0ed07728627c0616297d3162aaedcce059bae312eaeaf969debc2dd0af55c031",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.358094+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.group.1",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.group.1",
+      "bytes": 41739,
+      "sha256": "d8f557528eda8c64cf5cd7df03241d7ca5ee740994a816f922fbc7404c6e1dc5",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.358094+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.history",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.history",
+      "bytes": 119984,
+      "sha256": "fbceaadbf4556576b145e851ad101294bcf4e3b72f71c4fc8f7c3b309dd8ef8f",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.358094+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.history.normalized.txt",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.history.normalized.txt",
+      "bytes": 119984,
+      "sha256": "a0621c0291b54722205f9d4620f2370b924ff981b0945640ad1551085e3669ff",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:43:42.334184+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.lod",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.lod",
+      "bytes": 280617,
+      "sha256": "0c0d0f1cf2263e306d8b09746febbd8bc3168e5e6a53a874ede371ffd5a49f8f",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.371680+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.polar",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.polar",
+      "bytes": 4661,
+      "sha256": "b233ff1f579fd59f971001f5657e97f1e3b6e60d33c149d25e4b2948b33cbfb3",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.378251+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.quad.cases",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.quad.cases",
+      "bytes": 18,
+      "sha256": "82a501f9cda9e9d183b01aa3369e55a10835bad9b2e78c52edbc98279e94e937",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:10.028162+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.slc",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.slc",
+      "bytes": 18429,
+      "sha256": "23d4d711d5209d80100219bc614fde266551d40934864a8d03fdbcf9da073f79",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:22.727354+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.step",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.step",
+      "bytes": 541212,
+      "sha256": "cc76dfa2c4bad8f7d1c9c518d475cb1926a8362c81689e287d787da9c8c37a8f",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:24.036720+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.vkey",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.vkey",
+      "bytes": 360,
+      "sha256": "4d3f47adfd2552d8aab64ac33372653076556bacf5d8cf539330a0e71490b2d7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.761934+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.vsp3",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.vsp3",
+      "bytes": 107869,
+      "sha256": "0ce53347506d7ad91dfbc2bbd3e4c884bc012dfea0ff04ecca889599195c8880",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.633655+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.vspaero",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.vspaero",
+      "bytes": 947,
+      "sha256": "64dfccd63da2964d005abb71157e739d362206d00d8018869c9a29d3ecadcf42",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.761934+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/model.vspgeom",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/model.vspgeom",
+      "bytes": 1955869,
+      "sha256": "258ae1602a163fd08a02411291e94716136b34b2538e8db32c08ac9b19c89d7e",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.760195+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/native.log",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/native.log",
+      "bytes": 116487,
+      "sha256": "c3a6a36c368d2684ea97f3ada72196d4edf6552d52fdc359fe7695bf0d10dd79",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:24.038303+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/polar.csv",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/polar.csv",
+      "bytes": 1787,
+      "sha256": "36c5b91ea6be2bfffc5f9616fe32f94f4078986d91da453153377af81ebe9990",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:24.064649+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/fine/results.csv",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/fine/results.csv",
+      "bytes": 991666,
+      "sha256": "edb0deb8ee8bab552e95606fc8f29907c09ab9b6f02e4bc615c8a86218ce85cd",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:24.005325+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/case.vspscript",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/case.vspscript",
+      "bytes": 6146,
+      "sha256": "dd639149d5df3b9d131caf1550a7b99429b836ef17dd333c035c60a9a45f1a67",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:10.669288+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.adb",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.adb",
+      "bytes": 1547076,
+      "sha256": "2cce852f8684e4095988ed413a7195706c79e4f73a035306bf4080870a1ccc68",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:04.820264+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.adb.cases",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.adb.cases",
+      "bytes": 717,
+      "sha256": "8496cc24fe076781677be69df74d12992556048a8ca8c94307fdbfb8efb7f426",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:04.820264+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.case.-3.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.case.-3.quad.1.dat",
+      "bytes": 2063,
+      "sha256": "f5a5b8b6b0605a190c9cb82469a9fabe8ba0cdb77f90ec8ff599b1ca145d9523",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:04.804387+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.case.1.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.case.1.quad.1.dat",
+      "bytes": 2079,
+      "sha256": "b9075b66349e1623bf27643b8a6a51acd3309ca9ef20f1ca87ed1c60b0d7f13d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:30.268585+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.case.2.quad.1.dat",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.case.2.quad.1.dat",
+      "bytes": 2042,
+      "sha256": "58d8fa82cca44ff52240e8afd3348833a8c717bcbf07b867a0929a466ade4e56",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:47.370038+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.csf",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.csf",
+      "bytes": 20,
+      "sha256": "bb29bf526f4379308ca9c271a8df90c39f4df4235f81f63e370f25e714bb797c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:10.840585+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.cuts",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.cuts",
+      "bytes": 15,
+      "sha256": "d56341ce2dd170a0d4d2e466fa2c16d409f82167b66bd4bddaf48bf5bd0052be",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:05.071057+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.group.0",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.group.0",
+      "bytes": 41741,
+      "sha256": "47a30ae0317ff399936aa8949fb7fdb991268fbdea4ec64de643c831f33003b2",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:04.804387+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.group.1",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.group.1",
+      "bytes": 41741,
+      "sha256": "274a319725aa3b9590c0be1a5c4c29de655b82dc9e88e469006a897708890cc2",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:04.804387+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.history",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.history",
+      "bytes": 166041,
+      "sha256": "9f545e341b6863bf15012882113b4635b72593a85d446ccbcb0ac71520312240",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:04.804387+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.history.normalized.txt",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.history.normalized.txt",
+      "bytes": 166041,
+      "sha256": "21ba068797e66655304d0705d03a9f7a4f2bc472db9bb675e61e939264dc1425",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:43:42.306693+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.lod",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.lod",
+      "bytes": 142953,
+      "sha256": "b6ec63c1761abf0e68dd0df611350e058dfa4a16b96e5c640bff558c72ce95ff",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:04.820264+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.polar",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.polar",
+      "bytes": 4661,
+      "sha256": "663838bc9e654df7e176c689e732a79f48b97c500008a5b43b3bed983a7155e7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:04.826022+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.quad.cases",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.quad.cases",
+      "bytes": 18,
+      "sha256": "82a501f9cda9e9d183b01aa3369e55a10835bad9b2e78c52edbc98279e94e937",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:13.040222+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.slc",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.slc",
+      "bytes": 14013,
+      "sha256": "229e0f92c0b07803e7d6f7194af35021e1e19291838a09e8677af5df8d58e97d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:05.099566+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.step",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.step",
+      "bytes": 541211,
+      "sha256": "e0ce441f81788ed5e072e0f71c171a36ef57f4c99e13b295a888b818aed14839",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.431560+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.vkey",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.vkey",
+      "bytes": 362,
+      "sha256": "f49154c23632545c541aff4d5f6729c627ca7463c1e14d0b01de7ade03a4c63c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:10.840585+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.vsp3",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.vsp3",
+      "bytes": 107869,
+      "sha256": "5c26b5c7e6e0882dcae94263b9d823c8ccc20a55c730024eb744fd6e5603f3b7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:10.802560+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.vspaero",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.vspaero",
+      "bytes": 947,
+      "sha256": "64dfccd63da2964d005abb71157e739d362206d00d8018869c9a29d3ecadcf42",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:10.840585+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/model.vspgeom",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/model.vspgeom",
+      "bytes": 725763,
+      "sha256": "790cfedf7b60dd62423a940e154bb1f6d1b2eb1bbbcbf7f7457c2d83662af3c4",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:37:10.840585+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/native.log",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/native.log",
+      "bytes": 151526,
+      "sha256": "c4bb87fa296ae02bf509a532053c9d604046bf3b44d1811e1e2ce3b828454ad1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.434493+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/polar.csv",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/polar.csv",
+      "bytes": 2074,
+      "sha256": "12b1f95c5512aab59c6b88bf8d87c8d194c0f32b1ecbb1222d4cba3281985f09",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.462880+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/medium/results.csv",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/medium/results.csv",
+      "bytes": 648603,
+      "sha256": "c43301637ac6d38024d54ec37ba67f42d7c45961ceb2f29cdbb8624016a9a7e0",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:38:06.400412+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/results.json",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/results.json",
+      "bytes": 12725,
+      "sha256": "48e95c3ac4afa593ca451dc0301ede9705c03841f579a81977d73cb35809b8ac",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:24.096792+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/complex_vlm_20261018_213710/results_in_progress.json",
+      "repository_path": "uygulama/outputs/simulations/complex_vlm_20261018_213710/results_in_progress.json",
+      "bytes": 10859,
+      "sha256": "198d023018a53c97bbf72008c40744017660d38a41011dbb2890035ecd10ab0d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:40:24.093067+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/case.sif",
+      "bytes": 1491,
+      "sha256": "78fc96b1e1a3979223c1f604b3fe420bbd762f0344dc0ef40c01f64b5e179008",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:45.410623+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/channel.msh",
+      "bytes": 9961,
+      "sha256": "65d34732a0e34eb32926c38df0575ee053b0fdccb0069805c06de62064801318",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:45.109735+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:45.410623+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/flow_t0001.vtu",
+      "bytes": 11095,
+      "sha256": "04df2c220fe06953f4419f3a67eb04129f6febd0be2aa7e52bbd8a94e12302fa",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:47.439449+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/mesh.boundary",
+      "bytes": 1043,
+      "sha256": "f640c1d43bb0518f08710023d87c045366f52cea089745b23de0ae7a7b8df69a",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:45.404825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/mesh.elements",
+      "bytes": 4033,
+      "sha256": "f99814b3bcb1eabe027080a4e0e81a6cce14dde4ed53a2aab48fd55b9b2c2363",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:45.404825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "d10bf84087adf004f3e60028a48507c7fc2f9e780a8ef597e82731f453ff8ff9",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:45.404825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/mesh/mesh.nodes",
+      "bytes": 2677,
+      "sha256": "61b8ff91310a16954c0a66ad2f103dfbc9667d2c05d4625acd56e108ef55acc1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:45.404825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/mesh_conversion.log",
+      "bytes": 2357,
+      "sha256": "f98f71879ed8f5d258c0e230f44a9f678f32feabb3005b0dae7630ccd6deda20",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:45.404825+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/n5/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/n5/native.log",
+      "bytes": 3125,
+      "sha256": "cf8980b740b6310d4b3aa6dd83d2f954dabfc69a3842b8abe3c0d06656f1e9e6",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:47.446461+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232645/results.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232645/results.json",
+      "bytes": 873,
+      "sha256": "c836278edd04b4d37435495b0392619a4064c67f78ce4f9becb341c8597c52a6",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:26:47.464409+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/in_progress.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/in_progress.json",
+      "bytes": 2157,
+      "sha256": "760c36db8cfa8e1060a9eee42ea0cf0ff8beb22923fd9b2fe78fee9ea17919bb",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.985406+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/case.sif",
+      "bytes": 1514,
+      "sha256": "0fe84ef83035e48251ab517f5d71ca77d9e0edc4f7f8d7f9125bc50967e2de4b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.373494+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/channel.msh",
+      "bytes": 39543,
+      "sha256": "a195e843d52c88dc8f9566e14c66e63c82f8104b03be8e8446c942ae0137aa59",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.333705+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.373494+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/flow_t0001.vtu",
+      "bytes": 55742,
+      "sha256": "1c2c0de36a5d0b9604b7e19ddcfdfd0c003fb1b09dd325ba5b0e09542d911cab",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.533764+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/mesh.boundary",
+      "bytes": 2151,
+      "sha256": "a45a3b7f69889c2dfac0ee2eca9cd79570cfbd89416e4968281de5b9dd34e810",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.373494+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/mesh.elements",
+      "bytes": 17980,
+      "sha256": "ddcdcd96c4845d78184720d052a3dc743529cc4deb852a57aa31dc519e0265d7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.373494+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "803651d3711d00d157a47b71b2639d41dcdbd3360751af88e828b865f159c0a3",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.373494+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/mesh/mesh.nodes",
+      "bytes": 10277,
+      "sha256": "7f73e4292be5881b6fe81fe4f125d3239abfb395a7ebe6ae48f014854daba6d8",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.373494+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/mesh_conversion.log",
+      "bytes": 2363,
+      "sha256": "5da8beaf0e4c490f840443df5d19b8a77000862cbde9db1d64261f31bce6f2c1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.373494+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n10/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n10/native.log",
+      "bytes": 6775,
+      "sha256": "acda681dd2de85d0eea8b2b6a335fd22225860d7fe802cd63e21ff510de1175c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.539758+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/case.sif",
+      "bytes": 1514,
+      "sha256": "0fe84ef83035e48251ab517f5d71ca77d9e0edc4f7f8d7f9125bc50967e2de4b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.607764+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/channel.msh",
+      "bytes": 162472,
+      "sha256": "49cae6a3c3dae8cd09868c25ea993e4a1a6a7331b6ef0146a5ba9c51f72fa649",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.564615+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.607764+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/flow_t0001.vtu",
+      "bytes": 219371,
+      "sha256": "32a4fa3877eca2250be18766da1eed37f1d61f802122360092b37fd62ab4aa16",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.930229+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/mesh.boundary",
+      "bytes": 4776,
+      "sha256": "69a007c97402d0cbd828caf5cf6d7e182de709b7ff842a19a39f5bcfff72626b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.607764+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/mesh.elements",
+      "bytes": 79593,
+      "sha256": "2f745e0ac960205beb0506597e79fd67f75b6f079a4f091fe8c717c3f73e0eae",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.607764+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "c2db766596a79d25de4ffa5d56a143dcc02461e356c5711b40ef084f1d884e02",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.607764+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/mesh/mesh.nodes",
+      "bytes": 42012,
+      "sha256": "2059429b11fbb3b0a849e9a1bf3740784c193cc80690141fb6b25e3354c54ecf",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.605355+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/mesh_conversion.log",
+      "bytes": 2373,
+      "sha256": "ede66f038357fd3d2d5ceea9caf30ac11365ceac1d64be4505ac47f0882d0d60",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.607764+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n20/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n20/native.log",
+      "bytes": 6183,
+      "sha256": "7ec9c6243443622b9a2bb59efe6564e4b49ddb2f9a01babb484dc24ba9663191",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.937700+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/case.sif",
+      "bytes": 1514,
+      "sha256": "0fe84ef83035e48251ab517f5d71ca77d9e0edc4f7f8d7f9125bc50967e2de4b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.167587+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/channel.msh",
+      "bytes": 9961,
+      "sha256": "65d34732a0e34eb32926c38df0575ee053b0fdccb0069805c06de62064801318",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.108180+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.168584+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/flow_t0001.vtu",
+      "bytes": 15065,
+      "sha256": "f6901fc0902f54a6cf40c3c168fc31efbc983489b6f6ccb283469223acdaf34b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.304873+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/mesh.boundary",
+      "bytes": 1043,
+      "sha256": "f640c1d43bb0518f08710023d87c045366f52cea089745b23de0ae7a7b8df69a",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.164989+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/mesh.elements",
+      "bytes": 4033,
+      "sha256": "f99814b3bcb1eabe027080a4e0e81a6cce14dde4ed53a2aab48fd55b9b2c2363",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.163634+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "d10bf84087adf004f3e60028a48507c7fc2f9e780a8ef597e82731f453ff8ff9",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.164989+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/mesh/mesh.nodes",
+      "bytes": 2677,
+      "sha256": "61b8ff91310a16954c0a66ad2f103dfbc9667d2c05d4625acd56e108ef55acc1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.163634+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/mesh_conversion.log",
+      "bytes": 2357,
+      "sha256": "f98f71879ed8f5d258c0e230f44a9f678f32feabb3005b0dae7630ccd6deda20",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.165493+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/n5/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/n5/native.log",
+      "bytes": 6774,
+      "sha256": "0ea238d155a57a72d0a761822a18de5e6651528033b5bbd5864f0e89dcb75454",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:07.313329+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232707/results.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232707/results.json",
+      "bytes": 2893,
+      "sha256": "e4983d6dcf2ea8ac4a2b750901887e19e147fd7fbf448b5823905ad3735d1d78",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:27:08.371464+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/in_progress.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/in_progress.json",
+      "bytes": 2569,
+      "sha256": "37c13f64bf05702a200e6ce5373f88b041dafe9524a035c519547173f004bb4e",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:11.034424+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/case.sif",
+      "bytes": 1566,
+      "sha256": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.453448+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/channel.msh",
+      "bytes": 39543,
+      "sha256": "a195e843d52c88dc8f9566e14c66e63c82f8104b03be8e8446c942ae0137aa59",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.403312+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.455719+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/flow_t0001.vtu",
+      "bytes": 55742,
+      "sha256": "eb7a9d914d308d8cde398472b46595b7f7905b63068836e80f2b00f321e183db",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.596489+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/mesh.boundary",
+      "bytes": 2151,
+      "sha256": "a45a3b7f69889c2dfac0ee2eca9cd79570cfbd89416e4968281de5b9dd34e810",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.440463+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/mesh.elements",
+      "bytes": 17980,
+      "sha256": "ddcdcd96c4845d78184720d052a3dc743529cc4deb852a57aa31dc519e0265d7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.440463+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "803651d3711d00d157a47b71b2639d41dcdbd3360751af88e828b865f159c0a3",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.440463+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/mesh/mesh.nodes",
+      "bytes": 10277,
+      "sha256": "7f73e4292be5881b6fe81fe4f125d3239abfb395a7ebe6ae48f014854daba6d8",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.440463+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/mesh_conversion.log",
+      "bytes": 2363,
+      "sha256": "5da8beaf0e4c490f840443df5d19b8a77000862cbde9db1d64261f31bce6f2c1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.440463+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n10/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n10/native.log",
+      "bytes": 5450,
+      "sha256": "b2be753752bba2d614e5a4a4f027397f6a90c3a15aea15bd011feb78ce974c48",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.604774+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/case.sif",
+      "bytes": 1566,
+      "sha256": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.694404+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/channel.msh",
+      "bytes": 162472,
+      "sha256": "49cae6a3c3dae8cd09868c25ea993e4a1a6a7331b6ef0146a5ba9c51f72fa649",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.637534+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.695570+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/flow_t0001.vtu",
+      "bytes": 219371,
+      "sha256": "b5438c50727a7020f1a51424c0eab1d85ce7c01b8161f65fd84b6a9cbb462b6e",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.984039+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/mesh.boundary",
+      "bytes": 4776,
+      "sha256": "69a007c97402d0cbd828caf5cf6d7e182de709b7ff842a19a39f5bcfff72626b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.692169+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/mesh.elements",
+      "bytes": 79593,
+      "sha256": "2f745e0ac960205beb0506597e79fd67f75b6f079a4f091fe8c717c3f73e0eae",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.692169+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "c2db766596a79d25de4ffa5d56a143dcc02461e356c5711b40ef084f1d884e02",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.693396+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/mesh/mesh.nodes",
+      "bytes": 42012,
+      "sha256": "2059429b11fbb3b0a849e9a1bf3740784c193cc80690141fb6b25e3354c54ecf",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.684340+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/mesh_conversion.log",
+      "bytes": 2373,
+      "sha256": "ede66f038357fd3d2d5ceea9caf30ac11365ceac1d64be4505ac47f0882d0d60",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.693396+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/native.log",
+      "bytes": 5451,
+      "sha256": "7ed75e4512e5e6023a08e784095120c1ebb9c2d2da5c53ebae568df846c0d1df",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.988042+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n20/pressure.pos",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n20/pressure.pos",
+      "bytes": 232199,
+      "sha256": "d5d5d81201f0a02c563ce65fd97ccfba509454d08ac09385f29952b631354098",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:01.535630+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/case.sif",
+      "bytes": 1566,
+      "sha256": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.241303+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/channel.msh",
+      "bytes": 9961,
+      "sha256": "65d34732a0e34eb32926c38df0575ee053b0fdccb0069805c06de62064801318",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.201154+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.241303+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/flow_t0001.vtu",
+      "bytes": 15065,
+      "sha256": "d0807f7fe858f7c2b1389483fc4f763a2dc991777269273fd674d8a1fd339065",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.369933+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/mesh.boundary",
+      "bytes": 1043,
+      "sha256": "f640c1d43bb0518f08710023d87c045366f52cea089745b23de0ae7a7b8df69a",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.241303+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/mesh.elements",
+      "bytes": 4033,
+      "sha256": "f99814b3bcb1eabe027080a4e0e81a6cce14dde4ed53a2aab48fd55b9b2c2363",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.241303+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "d10bf84087adf004f3e60028a48507c7fc2f9e780a8ef597e82731f453ff8ff9",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.241303+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/mesh/mesh.nodes",
+      "bytes": 2677,
+      "sha256": "61b8ff91310a16954c0a66ad2f103dfbc9667d2c05d4625acd56e108ef55acc1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.241303+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/mesh_conversion.log",
+      "bytes": 2357,
+      "sha256": "f98f71879ed8f5d258c0e230f44a9f678f32feabb3005b0dae7630ccd6deda20",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.241303+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/n5/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/n5/native.log",
+      "bytes": 6042,
+      "sha256": "2861690ec02663019183d01e10321e3916ae49a3a4680a4bda9db29d9cfb02ff",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:10.370898+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232810/results.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232810/results.json",
+      "bytes": 3323,
+      "sha256": "973e044c818986628eb403be6217b814f52465a6c5559a3ff9ef71d6564ad27a",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:28:11.367093+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/in_progress.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/in_progress.json",
+      "bytes": 2572,
+      "sha256": "2ff991459844201fdebca6142cbb8307a79377de5625581cc0ea910dcc8cb539",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.342500+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/case.sif",
+      "bytes": 1566,
+      "sha256": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.802436+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/channel.msh",
+      "bytes": 39543,
+      "sha256": "a195e843d52c88dc8f9566e14c66e63c82f8104b03be8e8446c942ae0137aa59",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.751088+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.802436+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/flow_t0001.vtu",
+      "bytes": 55742,
+      "sha256": "c84b12929d4c145ee09ad2dac70823cb8d75d825b0a0698df1ebdb9a4bfb2dfd",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.940925+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/mesh.boundary",
+      "bytes": 2151,
+      "sha256": "a45a3b7f69889c2dfac0ee2eca9cd79570cfbd89416e4968281de5b9dd34e810",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.801398+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/mesh.elements",
+      "bytes": 17980,
+      "sha256": "ddcdcd96c4845d78184720d052a3dc743529cc4deb852a57aa31dc519e0265d7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.800390+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "803651d3711d00d157a47b71b2639d41dcdbd3360751af88e828b865f159c0a3",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.801398+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/mesh/mesh.nodes",
+      "bytes": 10277,
+      "sha256": "7f73e4292be5881b6fe81fe4f125d3239abfb395a7ebe6ae48f014854daba6d8",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.800390+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/mesh_conversion.log",
+      "bytes": 2363,
+      "sha256": "5da8beaf0e4c490f840443df5d19b8a77000862cbde9db1d64261f31bce6f2c1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.802081+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n10/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n10/native.log",
+      "bytes": 5450,
+      "sha256": "753754c0dbaa6a625e1102a61c6588c68caa057ba454f6b17f900d32cbbb66ac",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.940925+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/case.sif",
+      "bytes": 1566,
+      "sha256": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.026333+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/channel.msh",
+      "bytes": 162472,
+      "sha256": "49cae6a3c3dae8cd09868c25ea993e4a1a6a7331b6ef0146a5ba9c51f72fa649",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.971863+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.027444+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/flow_t0001.vtu",
+      "bytes": 219371,
+      "sha256": "5dfb69a2270a38906a548bcfcbafaadc5a92533c37c749078f4762baea9dfac0",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.304944+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/mesh.boundary",
+      "bytes": 4776,
+      "sha256": "69a007c97402d0cbd828caf5cf6d7e182de709b7ff842a19a39f5bcfff72626b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.020658+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/mesh.elements",
+      "bytes": 79593,
+      "sha256": "2f745e0ac960205beb0506597e79fd67f75b6f079a4f091fe8c717c3f73e0eae",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.020658+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "c2db766596a79d25de4ffa5d56a143dcc02461e356c5711b40ef084f1d884e02",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.020658+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/mesh/mesh.nodes",
+      "bytes": 42012,
+      "sha256": "2059429b11fbb3b0a849e9a1bf3740784c193cc80690141fb6b25e3354c54ecf",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.020658+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/mesh_conversion.log",
+      "bytes": 2373,
+      "sha256": "ede66f038357fd3d2d5ceea9caf30ac11365ceac1d64be4505ac47f0882d0d60",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.020658+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/native.log",
+      "bytes": 5451,
+      "sha256": "becd2780f144aa13ecc0d5b566198e0454b9d85a3fef2f074a319ab921ec951c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.304944+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n20/pressure.pos",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n20/pressure.pos",
+      "bytes": 232199,
+      "sha256": "d5d5d81201f0a02c563ce65fd97ccfba509454d08ac09385f29952b631354098",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:32:23.204427+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/case.sif",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/case.sif",
+      "bytes": 1566,
+      "sha256": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.604292+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/channel.msh",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/channel.msh",
+      "bytes": 9961,
+      "sha256": "65d34732a0e34eb32926c38df0575ee053b0fdccb0069805c06de62064801318",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.567175+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/commands.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/commands.json",
+      "bytes": 402,
+      "sha256": "b7011b578e28d2bb9aa2e57006430d4ba91c3895a4f5034e3a17cabe58dc0d83",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.604292+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/flow_t0001.vtu",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/flow_t0001.vtu",
+      "bytes": 15065,
+      "sha256": "8f58c21e0bc43ecce4a3ada9e2fc8ec36e3d1a1732b33641dbb70f2ba416ca93",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.705248+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/mesh.boundary",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/mesh.boundary",
+      "bytes": 1043,
+      "sha256": "f640c1d43bb0518f08710023d87c045366f52cea089745b23de0ae7a7b8df69a",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.604292+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/mesh.elements",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/mesh.elements",
+      "bytes": 4033,
+      "sha256": "f99814b3bcb1eabe027080a4e0e81a6cce14dde4ed53a2aab48fd55b9b2c2363",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.604292+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/mesh.header",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/mesh.header",
+      "bytes": 60,
+      "sha256": "d10bf84087adf004f3e60028a48507c7fc2f9e780a8ef597e82731f453ff8ff9",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.604292+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/mesh.nodes",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/mesh/mesh.nodes",
+      "bytes": 2677,
+      "sha256": "61b8ff91310a16954c0a66ad2f103dfbc9667d2c05d4625acd56e108ef55acc1",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.604292+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/mesh_conversion.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/mesh_conversion.log",
+      "bytes": 2357,
+      "sha256": "f98f71879ed8f5d258c0e230f44a9f678f32feabb3005b0dae7630ccd6deda20",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.604292+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/n5/native.log",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/n5/native.log",
+      "bytes": 6042,
+      "sha256": "7f56e760efd6d43d68d21cb6028fd1196c3cc0bb72b36e8f2ec23094ee49a462",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:54.726878+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/elmer_cfd_20261018_232954/results.json",
+      "repository_path": "uygulama/outputs/simulations/elmer_cfd_20261018_232954/results.json",
+      "bytes": 3326,
+      "sha256": "99f2de4761df154a991bf1e982826555f760e29fca8f90e9306a06fa234bc5fe",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:55.670049+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261018_213142/case.json",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261018_213142/case.json",
+      "bytes": 1152,
+      "sha256": "080bd8cf1da94473cc10c0ab6ab81725ce210116ad9a49f1f7636a0095b30c36",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:30:20.102119+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261018_213142/results.json",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261018_213142/results.json",
+      "bytes": 9366,
+      "sha256": "4b91ff2d1b4bc37124e7fe3e616d6a3aabd2a17fd0e5579e0a1285ecd32e2c33",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:31:44.927219+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261018_213142/source_airfoil.dat",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261018_213142/source_airfoil.dat",
+      "bytes": 693,
+      "sha256": "dce4261b15ef4177ce80563d5980891178c8ec8cbb1e270f0708a18f28d8bf56",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:35.151162+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261018_215041/case.json",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261018_215041/case.json",
+      "bytes": 1152,
+      "sha256": "080bd8cf1da94473cc10c0ab6ab81725ce210116ad9a49f1f7636a0095b30c36",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:30:20.102119+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261018_215041/results.json",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261018_215041/results.json",
+      "bytes": 22824,
+      "sha256": "624325edf6535bfb3d5400207b6b7e9dcbaeca10bb57257303a566c5049ea3f7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:50:43.337568+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261018_215041/source_airfoil.dat",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261018_215041/source_airfoil.dat",
+      "bytes": 693,
+      "sha256": "dce4261b15ef4177ce80563d5980891178c8ec8cbb1e270f0708a18f28d8bf56",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:35.151162+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261019_095753/case.json",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261019_095753/case.json",
+      "bytes": 1152,
+      "sha256": "080bd8cf1da94473cc10c0ab6ab81725ce210116ad9a49f1f7636a0095b30c36",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:30:20.102119+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261019_095753/results.json",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261019_095753/results.json",
+      "bytes": 22824,
+      "sha256": "526f1e5134c7b3a1b5f648a5ea4772c0a60224018b6dca60b7601ab489f9c655",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T06:57:55.495198+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "outputs/simulations/parametric_cad_20261019_095753/source_airfoil.dat",
+      "repository_path": "uygulama/outputs/simulations/parametric_cad_20261019_095753/source_airfoil.dat",
+      "bytes": 693,
+      "sha256": "dce4261b15ef4177ce80563d5980891178c8ec8cbb1e270f0708a18f28d8bf56",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:35.151162+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/geometry/parametric_wing.py",
+      "repository_path": "uygulama/work/geometry/parametric_wing.py",
+      "bytes": 11475,
+      "sha256": "e652e72539f36874d313fac7f437b02946ed533d0975f9ba0973a4764a49b025",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T07:07:18.204067+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/geometry/views/envelope.stl",
+      "repository_path": "uygulama/work/geometry/views/envelope.stl",
+      "bytes": 37384,
+      "sha256": "cbc1649114414e538bcb472bebe8ab922f079bb984c2912fb8009c4a6b285623",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:42.002999+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/geometry/views/rib_1.stl",
+      "repository_path": "uygulama/work/geometry/views/rib_1.stl",
+      "bytes": 73584,
+      "sha256": "caced908c367ac397de9f839f104f04741a50047289a69baee7e22d756bc5b17",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:42.048468+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/geometry/views/rib_2.stl",
+      "repository_path": "uygulama/work/geometry/views/rib_2.stl",
+      "bytes": 73684,
+      "sha256": "eb7906d095836c2500cbf0dfb9b50bd5c77a8c6806dca2d8f686a1862087e34d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:42.097728+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/geometry/views/rib_3.stl",
+      "repository_path": "uygulama/work/geometry/views/rib_3.stl",
+      "bytes": 76784,
+      "sha256": "0d5b060a3787dff6407df235e43a2c252b0a15f78aa1cdf2047e9d8fd2b2a23b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:42.143254+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/geometry/views/rib_4.stl",
+      "repository_path": "uygulama/work/geometry/views/rib_4.stl",
+      "bytes": 76184,
+      "sha256": "2659d61f89b87f28a236ba8f9f71759644557c972821f5b05887473293c828bc",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:42.197358+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/audit_vlm.py",
+      "repository_path": "uygulama/work/qualification/audit_vlm.py",
+      "bytes": 3302,
+      "sha256": "84819dd81035e4f872cbf1601c56264e35934e3c37064c9c9e6d05187e05428b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T07:07:19.247289+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/check_native_shortcuts.ps1",
+      "repository_path": "uygulama/work/qualification/check_native_shortcuts.ps1",
+      "bytes": 1682,
+      "sha256": "d853a0354acd06f185bff91b65521269f7894cae33a027ebe4dce2b55d4fe1cf",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T19:30:10.880566+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/check_rejections.py",
+      "repository_path": "uygulama/work/qualification/check_rejections.py",
+      "bytes": 2339,
+      "sha256": "c773e2387cb245d7371059bb510f22bfbea70c50f3c86e87ef95726a54464048",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:18.826232+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/finish_profile_convergence.py",
+      "repository_path": "uygulama/work/qualification/finish_profile_convergence.py",
+      "bytes": 2997,
+      "sha256": "2bf2d5df1f0bb9b7a67ad0fcfe45ef92ccb0587e8f2e17b71379dd46dcc41685",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T07:22:03.833877+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/finish_qualification.py",
+      "repository_path": "uygulama/work/qualification/finish_qualification.py",
+      "bytes": 6159,
+      "sha256": "ab7eea7e0dad31a7dacd79ec5c9a8c780e36f7a71a22cb1de27d1d210db9fcc4",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:12:04.548301+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/gmsh_native_readback.log",
+      "repository_path": "uygulama/work/qualification/gmsh_native_readback.log",
+      "bytes": 730,
+      "sha256": "6a83d52703d7caa2e3ed14b7a49766f91f74fab2c832392efe37bf9fa0ca2376",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T19:30:12.694440+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/inspect_sources.py",
+      "repository_path": "uygulama/work/qualification/inspect_sources.py",
+      "bytes": 864,
+      "sha256": "f9e27d7e76148f84fe20b442344828c6951c8d5aa2b083c07ec0a795bce52c05",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:23:15.830064+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/measure_step_bores.py",
+      "repository_path": "uygulama/work/qualification/measure_step_bores.py",
+      "bytes": 1684,
+      "sha256": "da9d2bad475b13f4fa6788b596945b90515e10566b237528c80e8cd14a9732c3",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:48:16.413397+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/negative_controls/mm_units.json",
+      "repository_path": "uygulama/work/qualification/negative_controls/mm_units.json",
+      "bytes": 850,
+      "sha256": "313a9743c636a538bdf540819c505f5e23ea1438ce89c4eb881583e81332c7a8",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:21.007088+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/negative_controls/mm_units.log",
+      "repository_path": "uygulama/work/qualification/negative_controls/mm_units.log",
+      "bytes": 611,
+      "sha256": "c02b407809d366a2d67445c16a7c3c03f289536e8a53d54f5d0d6a1338ddd3b4",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:22.910767+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/negative_controls/nonfinite_station.json",
+      "repository_path": "uygulama/work/qualification/negative_controls/nonfinite_station.json",
+      "bytes": 849,
+      "sha256": "082d7a8b351255ff1ddcd7dda84ee60a820d3e07a1685acadd254992198dc53d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:26.636722+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/negative_controls/nonfinite_station.log",
+      "repository_path": "uygulama/work/qualification/negative_controls/nonfinite_station.log",
+      "bytes": 800,
+      "sha256": "72e6bb9e8b7651a9f38315557a1bcd049b295a24b17645d66970fdce6d952bda",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:28.488247+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/negative_controls/reversed_surface.dat",
+      "repository_path": "uygulama/work/qualification/negative_controls/reversed_surface.dat",
+      "bytes": 467,
+      "sha256": "2bc27dd8850e1a40ffee0a51994856cdbbac63ee6ae4a2bff209044cda7f4f0e",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:28.491130+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/negative_controls/station_reversal.json",
+      "repository_path": "uygulama/work/qualification/negative_controls/station_reversal.json",
+      "bytes": 849,
+      "sha256": "8e27f1a2a325fc7a667d0ef73dd32c94692961e9058a1b3d55121d4355cc858b",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:24.760812+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/negative_controls/station_reversal.log",
+      "repository_path": "uygulama/work/qualification/negative_controls/station_reversal.log",
+      "bytes": 800,
+      "sha256": "72e6bb9e8b7651a9f38315557a1bcd049b295a24b17645d66970fdce6d952bda",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:26.636722+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/negative_controls/unnormalized_profile.dat",
+      "repository_path": "uygulama/work/qualification/negative_controls/unnormalized_profile.dat",
+      "bytes": 536,
+      "sha256": "51bb24d021f83f84759f18064fc9cd06c1c8b6b4f2e18cfe79333b74e7d0399f",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:44:28.499551+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/postprocess.py",
+      "repository_path": "uygulama/work/qualification/postprocess.py",
+      "bytes": 11192,
+      "sha256": "237cc35218c6d112255976b34806add4ee892aa841b3dc6844dc0f284659d533",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:43:39.903912+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/prepare_profile_project.py",
+      "repository_path": "uygulama/work/qualification/prepare_profile_project.py",
+      "bytes": 1077,
+      "sha256": "337bbdc1805d6e400ef4c9e430a1b8d687f0481fcb90935b6b3e01c2fbd0c0d7",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T07:14:49.235199+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/render_report.py",
+      "repository_path": "uygulama/work/qualification/render_report.py",
+      "bytes": 3612,
+      "sha256": "4608b12fb3ee91bd67ff7c7aa48f450b73c795f3d468f222dd1bc6eea0f428ae",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:29:52.670151+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/run_cfd.py",
+      "repository_path": "uygulama/work/qualification/run_cfd.py",
+      "bytes": 6045,
+      "sha256": "90cb49728649c94be640a0d17dc8289a351e241fc97cd98c52bb1d7692eab352",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:26:17.412929+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/run_cfd_with_outputs.py",
+      "repository_path": "uygulama/work/qualification/run_cfd_with_outputs.py",
+      "bytes": 356,
+      "sha256": "11adb1c1f6dc37adba53572bb8ad07aac338535b2f9c925edfd6db8ba34b78f2",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:39:37.821698+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/run_complex_vlm.py",
+      "repository_path": "uygulama/work/qualification/run_complex_vlm.py",
+      "bytes": 7865,
+      "sha256": "6392f99b060059ab2d48113eacafca42186d1d14211a31ad79d6deee4e6cd8be",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-19T07:07:18.734536+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/run_elmer_cfd.py",
+      "repository_path": "uygulama/work/qualification/run_elmer_cfd.py",
+      "bytes": 8437,
+      "sha256": "070f6914f5e3b45064fc743db06d60942058c823d59b6b561e40e6c2b2571a0c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:32:20.125973+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/CLCD_Ladson_expdata.dat",
+      "repository_path": "uygulama/work/qualification/sources/CLCD_Ladson_expdata.dat",
+      "bytes": 1343,
+      "sha256": "78cd2f6aa4968e80f44cbf6c96f699bd9c6e45681d958ec528a10cf72ed23357",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:32:07.668893+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/CP_Gregory_expdata.dat",
+      "repository_path": "uygulama/work/qualification/sources/CP_Gregory_expdata.dat",
+      "bytes": 1608,
+      "sha256": "38d8474bc67661c3cef5e4cd9eeddb95d4a436d06abc1f58a8518066f510647c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:32:07.406662+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/inv_NACA0012.cfg",
+      "repository_path": "uygulama/work/qualification/sources/inv_NACA0012.cfg",
+      "bytes": 13086,
+      "sha256": "3f0568e0a78fb382e4efea92e59f038e422830ec6c84cf26c935301d63a9647d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:31.407240+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/mesh_NACA0012_inv.su2",
+      "repository_path": "uygulama/work/qualification/sources/mesh_NACA0012_inv.su2",
+      "bytes": 485272,
+      "sha256": "9094b51c2628d3bb4c865d774b2308dbb59a213ad19c007cfcd7d57e7aaeebeb",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:31.914447+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/n0012_113-33.su2",
+      "repository_path": "uygulama/work/qualification/sources/n0012_113-33.su2",
+      "bytes": 306526,
+      "sha256": "9a872a3de5a1b6b6a590ece8cae32ed8e9cbcafde3294fbab0eb67026b08a4f0",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:32.973322+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/n0012_225-65.su2",
+      "repository_path": "uygulama/work/qualification/sources/n0012_225-65.su2",
+      "bytes": 1253807,
+      "sha256": "20dfc96875b1d1a8377c2e64248b6ee42a1ecf525c50d822fb5f539d06d68d15",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:33.702141+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "work/qualification/sources/n0012_449-129.su2",
+      "repository_path": "uygulama/work/qualification/sources/n0012_449-129.su2",
+      "bytes": 5173742,
+      "sha256": "2e7d2feeb9832d3d16ed6867a3dc16d9e1ec045cf3d4a89ebfb506bcac9571d2",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:34.542212+00:00",
+      "storage": "release_asset",
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "release_tag": "v0.4.0"
+    },
+    {
+      "source_path": "work/qualification/sources/n0012clcd_cfl3d_sa.dat",
+      "repository_path": "uygulama/work/qualification/sources/n0012clcd_cfl3d_sa.dat",
+      "bytes": 354,
+      "sha256": "b07afec6ce3ae4bf2f2d1a1d53785fde0a5ca68481a0d4186aa92754d811944e",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:32:07.937350+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/n0012cp_cfl3d_sa.dat",
+      "repository_path": "uygulama/work/qualification/sources/n0012cp_cfl3d_sa.dat",
+      "bytes": 48082,
+      "sha256": "2f1231eba6a7da0e988a6954ac34f2f420ff59a5e24fca331110f980cd881dd2",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:32:08.243011+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/naca2412.dat",
+      "repository_path": "uygulama/work/qualification/sources/naca2412.dat",
+      "bytes": 693,
+      "sha256": "dce4261b15ef4177ce80563d5980891178c8ec8cbb1e270f0708a18f28d8bf56",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:35.151162+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/nasa_naca0012_validation.html",
+      "repository_path": "uygulama/work/qualification/sources/nasa_naca0012_validation.html",
+      "bytes": 261059,
+      "sha256": "00afb181da04d4e5d2612bb49215de5b3db7fa6dcf0ae08ede87a2f7b84b04f8",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:35.920661+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/source_manifest.json",
+      "repository_path": "uygulama/work/qualification/sources/source_manifest.json",
+      "bytes": 3623,
+      "sha256": "5f2b5dc926b1360ad641c853b164c71ea8a83685a7bc363b9fe571473295559d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:51:59.255867+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/sources/turb_naca0012.cfg",
+      "repository_path": "uygulama/work/qualification/sources/turb_naca0012.cfg",
+      "bytes": 8560,
+      "sha256": "01c77aa91b756fa8ba55a0eb45246773918e3cd2f8be192c5d40bcb38338831c",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:32.272211+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/su2_quickstart.json",
+      "repository_path": "uygulama/work/qualification/su2_quickstart.json",
+      "bytes": 2432,
+      "sha256": "a490d3b6bd60d4971849f706ec0866d13dbd76b2aa07a6d9c33008ac09e1e7f2",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:23:19.103752+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/su2_rans_case.json",
+      "repository_path": "uygulama/work/qualification/su2_rans_case.json",
+      "bytes": 8125,
+      "sha256": "7092b088b2dcaad8acb1d9d8999fba074fd1024d31a2e04aa261ff44ff27382d",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:23:19.441775+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/su2_release.json",
+      "repository_path": "uygulama/work/qualification/su2_release.json",
+      "bytes": 17854,
+      "sha256": "f0af3566d0d2be3ecdfcc56f3aeea142cea115b659ad4a0782758f86b89a70b4",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:22:41.571159+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/su2_tutorial_rans.json",
+      "repository_path": "uygulama/work/qualification/su2_tutorial_rans.json",
+      "bytes": 2111,
+      "sha256": "de5d05d0b490769a22f47675ba4a6680261929426e804b768bddd3ff5ade7832",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:23:19.774954+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/update_inventory.py",
+      "repository_path": "uygulama/work/qualification/update_inventory.py",
+      "bytes": 4952,
+      "sha256": "869b0b9ac62084f2834e9d02c99a79fc7024375cce38c2932acf436872da0f99",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:51:58.140238+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/qualification/view_elmer_fields.py",
+      "repository_path": "uygulama/work/qualification/view_elmer_fields.py",
+      "bytes": 3968,
+      "sha256": "5f32f32e19c2837fdebbaa63149c4d4a70d465d92a0c1ef49daec5b3609f6a19",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:32:20.498915+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/setup/elmer_install.json",
+      "repository_path": "uygulama/work/setup/elmer_install.json",
+      "bytes": 1625,
+      "sha256": "8011b350fe68231e8016247c82689127642f225ea8f9604a048575a3cb333677",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:30:29.425996+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/setup/install_elmer.py",
+      "repository_path": "uygulama/work/setup/install_elmer.py",
+      "bytes": 2294,
+      "sha256": "cf883786772c6e40244b01f62fdff3c820358f9d041878d246b492da9451f354",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T20:20:06.988972+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/setup/install_su2.py",
+      "repository_path": "uygulama/work/setup/install_su2.py",
+      "bytes": 3486,
+      "sha256": "5150756461c53ca825200c71060b017358eabd90e0a3246b0f13065940042696",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:24:26.805896+00:00",
+      "storage": "git"
+    },
+    {
+      "source_path": "work/setup/su2_install.json",
+      "repository_path": "uygulama/work/setup/su2_install.json",
+      "bytes": 1080,
+      "sha256": "6846b11abd5367f147987b80d8c77860da20d95f87b27eb969bd064938d03c64",
+      "version": "v0.4.0",
+      "source_mtime_utc": "2026-10-18T18:51:59.255867+00:00",
+      "storage": "git"
+    }
+  ],
+  "assets": [
+    {
+      "name": "analiz-arsivi-v0.4.0-part01.zip",
+      "tag": "v0.4.0",
+      "bytes": 13834762,
+      "sha256": "08e7af12ec06ba3b80a0ce400e5a8eb4cd9d5db451bc9feb820d702576803416",
+      "files": 12,
+      "download_url": "https://github.com/LegendOfOwl/iha-muhendislik-ajani/releases/download/v0.4.0/analiz-arsivi-v0.4.0-part01.zip"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-10-18T20:26:47.464409+00:00",
+  "passed": false,
+  "quality_passed": false,
+  "results": [
+    {
+      "mesh_n": 5,
+      "runtime_passed": false,
+      "error": "VTU arrays: ['flow solution']",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232645\\n5"
+    }
+  ],
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232645",
+  "scope": "2D laminar incompressible channel; Re_H=100, H=1m, L=4m, rho=1 kg/m3, mu=.01 Pa.s, Umean=1m/s; synthetic verification",
+  "exact_solution": "u=6*y*(1-y), v=0, p=0.12*(4-x); SI units",
+  "limits": [
+    "Exact-solution solver verification, not aircraft or turbulent external-flow validation",
+    "RANS/transition/3D aircraft not qualified in Elmer by this test"
+  ]
+}

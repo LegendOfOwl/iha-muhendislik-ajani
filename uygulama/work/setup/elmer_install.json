@@ -1,0 +1,23 @@
+{
+  "installed_utc": "2026-10-18T20:26:06.467079+00:00",
+  "source_url": "https://www.nic.funet.fi/pub/sci/physics/elmer/bin/windows/ElmerFEM-gui-nompi-Windows-AMD64.zip",
+  "distribution": "Official CSC portable non-MPI GUI archive, listing dated 2026-08-05; actual solver build pending native run",
+  "archive_bytes": 219035726,
+  "archive_sha256": "e029f144dca3c6d28a97465d91e7ac3a6ecc1b449cd6730b8a1d103fc255472c",
+  "upstream_sha256_verified": false,
+  "checksum_note": "Local SHA256 and ZIP CRC recorded; no upstream SHA256 was provided by the download listing",
+  "directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\elmer",
+  "executables": {
+    "ElmerSolver.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\elmer\\ElmerFEM-gui-nompi-Windows-AMD64\\bin\\ElmerSolver.exe",
+    "ElmerGrid.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\elmer\\ElmerFEM-gui-nompi-Windows-AMD64\\bin\\ElmerGrid.exe",
+    "ElmerGUI.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\elmer\\ElmerFEM-gui-nompi-Windows-AMD64\\bin\\ElmerGUI.exe"
+  },
+  "runtime_verified": true,
+  "integration": "Project-local native Windows GUI and FEM flow solver; no global PATH or registry changes",
+  "version": "26.2-unknown (Rev: Release)",
+  "build_date": "2026-08-05",
+  "quality_passed": true,
+  "verified_scope": "2D laminar incompressible channel; Re_H=100, H=1m, L=4m, rho=1 kg/m3, mu=.01 Pa.s, Umean=1m/s; synthetic verification",
+  "test_report": "outputs/reports/elmer_cfd_qualification.json",
+  "test_utc": "2026-10-18T20:29:55.670049+00:00"
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\geometry\parametric_wing.py", line 117, in <module>
+    if __name__=='__main__': raise SystemExit(main())
+                                              ^^^^^^
+  File "C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\geometry\parametric_wing.py", line 43, in main
+    if len(stations)<2 or not np.isfinite(numeric).all() or ys[0]!=0 or not np.all(np.diff(ys)>0): raise ValueError('Root at y=0 and strictly increasing finite stations required')
+                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Root at y=0 and strictly increasing finite stations required

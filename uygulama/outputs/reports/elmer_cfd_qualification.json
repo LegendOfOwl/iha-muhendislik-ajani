@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-10-18T20:29:55.670049+00:00",
+  "passed": true,
+  "quality_passed": true,
+  "results": [
+    {
+      "mesh_n": 5,
+      "nodes": 126,
+      "cells": 250,
+      "fluid_cells": 200,
+      "seconds": 0.11580129998037592,
+      "final_nonlinear_relative_change": 9.131299591685359e-11,
+      "native_nonlinear_convergence_passed": true,
+      "VTU": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232954\\n5\\mesh\\flow_t0001.vtu",
+      "velocity_relative_L2_error": 0.013148993001566599,
+      "pressure_relative_L2_error": 0.03419224947884732,
+      "max_transverse_velocity": 0.0045602754,
+      "volume_flux_m2_s": [
+        0.96,
+        0.9471197400000001,
+        0.9519125519999999
+      ],
+      "relative_in_out_imbalance": 0.008424425000000055,
+      "runtime_passed": true,
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232954\\n5"
+    },
+    {
+      "mesh_n": 10,
+      "nodes": 451,
+      "cells": 900,
+      "fluid_cells": 800,
+      "seconds": 0.1472831999999471,
+      "final_nonlinear_relative_change": 3.4427781598379597e-12,
+      "native_nonlinear_convergence_passed": true,
+      "VTU": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232954\\n10\\mesh\\flow_t0001.vtu",
+      "velocity_relative_L2_error": 0.0046278247756572554,
+      "pressure_relative_L2_error": 0.01384008532251027,
+      "max_transverse_velocity": 0.0017154056,
+      "volume_flux_m2_s": [
+        0.9900000000000001,
+        0.985314218,
+        0.9872946210000001
+      ],
+      "relative_in_out_imbalance": 0.002732706060606068,
+      "runtime_passed": true,
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232954\\n10"
+    },
+    {
+      "mesh_n": 20,
+      "nodes": 1701,
+      "cells": 3400,
+      "fluid_cells": 3200,
+      "seconds": 0.2885532000218518,
+      "final_nonlinear_relative_change": 2.229189003107294e-13,
+      "native_nonlinear_convergence_passed": true,
+      "VTU": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232954\\n20\\mesh\\flow_t0001.vtu",
+      "velocity_relative_L2_error": 0.0012254666469395682,
+      "pressure_relative_L2_error": 0.003764765203925304,
+      "max_transverse_velocity": 0.00050192056,
+      "volume_flux_m2_s": [
+        0.9975,
+        0.9962518035,
+        0.9967039059999999
+      ],
+      "relative_in_out_imbalance": 0.0007980892230577803,
+      "runtime_passed": true,
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232954\\n20"
+    }
+  ],
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232954",
+  "scope": "2D laminar incompressible channel; Re_H=100, H=1m, L=4m, rho=1 kg/m3, mu=.01 Pa.s, Umean=1m/s; synthetic verification",
+  "exact_solution": "u=6*y*(1-y), v=0, p=0.12*(4-x); SI units",
+  "limits": [
+    "Exact-solution solver verification, not aircraft or turbulent external-flow validation",
+    "RANS/transition/3D aircraft not qualified in Elmer by this test"
+  ],
+  "field_view": {
+    "gmsh_pressure": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\elmer_cfd_20261018_232954\\n20\\pressure.pos",
+    "readback_passed": true,
+    "triangles": 3200,
+    "plot": "outputs/plots/elmer_cfd_fields.png"
+  }
+}

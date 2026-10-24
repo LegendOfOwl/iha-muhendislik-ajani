@@ -1,0 +1,140 @@
+ELMER SOLVER (v 26.2) STARTED AT: 2026/10/18 23:28:10
+ Started inside library code
+ Going parallel initialization
+ParCommInit: Initialize #PEs: 1
+ Back from parallel initialization
+MAIN: 
+MAIN: =============================================================
+MAIN: ElmerSolver finite element software, Welcome!
+MAIN: This program is free software licensed under (L)GPL
+MAIN: Copyright 1st April 1995 - , CSC - IT Center for Science Ltd.
+MAIN: Webpage http://www.csc.fi/elmer, Email elmeradm@csc.fi
+MAIN: Version: 26.2-unknown (Rev: Release, Compiled: 2026-08-05)
+MAIN:  Running one task without MPI parallelization.
+MAIN:  Running with just one thread per task.
+MAIN:  Lua interpreter linked in.
+MAIN: =============================================================
+MAIN: 
+MAIN: 
+MAIN: -------------------------------------
+MAIN: Reading Model: case.sif
+LoadInputFile: Scanning input file: case.sif
+LoadInputFile: Scanning only size info
+LoadInputFile: First time visiting
+LoadInputFile: Reading base load of sif file
+LoadInputFile: Loading input file: case.sif
+LoadInputFile: Reading base load of sif file
+LoadInputFile: Number of BCs: 3
+LoadInputFile: Number of Body Forces: 0
+LoadInputFile: Number of Initial Conditions: 0
+LoadInputFile: Number of Materials: 1
+LoadInputFile: Number of Equations: 1
+LoadInputFile: Number of Solvers: 2
+LoadInputFile: Number of Bodies: 1
+ElmerMeshReader: Base mesh name: ./mesh
+PrepareMesh: Preparing mesh for the future
+MAIN: -------------------------------------
+OptimizeBandwidth: Initial bandwidth for navier-stokes: 122
+OptimizeBandwidth: Optimized bandwidth for navier-stokes: 8
+MAIN: Number of timesteps to be saved: 1
+MAIN: 
+MAIN: -------------------------------------
+MAIN:  Steady state iteration:            1
+MAIN: -------------------------------------
+MAIN: 
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           1
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly done
+FlowSolve: Dirichlet conditions done
+ComputeChange: NS (ITER=1) (NRM,RELC): ( 0.69313187      2.0000000     ) :: navier-stokes
+FlowSolve: iter:    1 Assembly: (s)    0.00    0.00
+FlowSolve: iter:    1 Solve:    (s)    0.00    0.00
+FlowSolve:  Result Norm     :   0.69313186565416296
+FlowSolve:  Relative Change :    2.0000000000000000
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           2
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly done
+FlowSolve: Dirichlet conditions done
+ComputeChange: NS (ITER=2) (NRM,RELC): ( 0.69806012     0.70849411E-02 ) :: navier-stokes
+FlowSolve: iter:    2 Assembly: (s)    0.00    0.00
+FlowSolve: iter:    2 Solve:    (s)    0.00    0.00
+FlowSolve:  Result Norm     :   0.69806012233196513
+FlowSolve:  Relative Change :    7.0849411445162930E-003
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           3
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly done
+FlowSolve: Dirichlet conditions done
+ComputeChange: NS (ITER=3) (NRM,RELC): ( 0.69809917     0.55936475E-04 ) :: navier-stokes
+FlowSolve: iter:    3 Assembly: (s)    0.00    0.01
+FlowSolve: iter:    3 Solve:    (s)    0.00    0.00
+FlowSolve:  Result Norm     :   0.69809917044692826
+FlowSolve:  Relative Change :    5.5936475393742988E-005
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           4
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly done
+FlowSolve: Dirichlet conditions done
+ComputeChange: NS (ITER=4) (NRM,RELC): ( 0.69809958     0.58081402E-06 ) :: navier-stokes
+FlowSolve: iter:    4 Assembly: (s)    0.00    0.01
+FlowSolve: iter:    4 Solve:    (s)    0.00    0.00
+FlowSolve:  Result Norm     :   0.69809957591283023
+FlowSolve:  Relative Change :    5.8081401809294846E-007
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           5
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly done
+FlowSolve: Dirichlet conditions done
+ComputeChange: NS (ITER=5) (NRM,RELC): ( 0.69809958     0.10272154E-07 ) :: navier-stokes
+FlowSolve: iter:    5 Assembly: (s)    0.00    0.01
+FlowSolve: iter:    5 Solve:    (s)    0.00    0.00
+FlowSolve:  Result Norm     :   0.69809958308381670
+FlowSolve:  Relative Change :    1.0272154119398876E-008
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           6
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly done
+FlowSolve: Dirichlet conditions done
+ComputeChange: NS (ITER=6) (NRM,RELC): ( 0.69809958     0.91312996E-10 ) :: navier-stokes
+FlowSolve: iter:    6 Assembly: (s)    0.00    0.01
+FlowSolve: iter:    6 Solve:    (s)    0.00    0.00
+FlowSolve:  Result Norm     :   0.69809958314756226
+FlowSolve:  Relative Change :    9.1312995916853592E-011
+ComputeChange: SS (ITER=1) (NRM,RELC): ( 0.69809958      2.0000000     ) :: navier-stokes
+ResultOutputSolver: -------------------------------------
+ResultOutputSolver: Saving with prefix: flow
+CreateListForSaving: Field Variables for Saving
+ResultOutputSolver: Saving in unstructured VTK XML (.vtu) format
+VtuOutputSolver: Saving results in VTK XML format with prefix: flow
+VtuOutputSolver: Saving number of partitions: 1
+ResultOutputSolver: -------------------------------------
+MAIN: *** Elmer Solver: ALL DONE ***
+MAIN: The end
+SOLVER TOTAL TIME(CPU,REAL):         0.10        0.10
+ELMER SOLVER FINISHED AT: 2026/10/18 23:28:10

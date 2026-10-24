@@ -1,0 +1,136 @@
+void SetI( const string &in analysis, const string &in key, int value )
+{
+    array<int> data(1); data[0] = value;
+    SetIntAnalysisInput( analysis, key, data );
+}
+void SetD( const string &in analysis, const string &in key, double value )
+{
+    array<double> data(1); data[0] = value;
+    SetDoubleAnalysisInput( analysis, key, data );
+}
+string MakeWing( const string &in name, double halfspan, double root, double tip,
+                 double x, double z, bool vertical, int nu, int nw )
+{
+    string id = AddGeom( "WING", "" );
+    SetGeomName( id, name );
+    SetDriverGroup( id, 1, SPAN_WSECT_DRIVER, ROOTC_WSECT_DRIVER, TIPC_WSECT_DRIVER );
+    SetParmVal( id, "Span", "XSec_1", halfspan );
+    SetParmVal( id, "Root_Chord", "XSec_1", root );
+    SetParmVal( id, "Tip_Chord", "XSec_1", tip );
+    SetParmVal( id, "Sweep", "XSec_1", 0.0 );
+    SetParmVal( id, "Dihedral", "XSec_1", 0.0 );
+    SetParmVal( id, "Twist", "XSec_1", 0.0 );
+    SetParmVal( id, "X_Rel_Location", "XForm", x );
+    SetParmVal( id, "Z_Rel_Location", "XForm", z );
+    if ( vertical )
+    {
+        SetParmVal( id, "Sym_Planar_Flag", "Sym", 0 );
+        SetParmVal( id, "X_Rel_Rotation", "XForm", 90.0 );
+    }
+    SetParmVal( id, "Tess_W", "Shape", nw );
+    SetParmVal( id, "SectTess_U", "XSec_1", nu );
+    string surf = GetXSecSurf( id, 0 );
+    for ( int n = 0; n < GetNumXSec( surf ); n++ )
+    {
+        string xs = GetXSec( surf, n );
+        SetParmVal( GetXSecParm( xs, "Camber" ), 0.0 );
+        SetParmVal( GetXSecParm( xs, "ThickChord" ), 0.12 );
+    }
+    SetSetFlag( id, 3, true );
+    Update();
+    return id;
+}
+int main()
+{
+    ClearVSPModel();
+    Print( GetVSPVersion() );
+    string wing=MakeWing("Kinked_NACA2412",0.9,0.32,0.14,0,0,false,33,65);
+InsertXSec(wing,1,XS_FOUR_SERIES);
+SetParmVal(wing,"RelativeDihedralFlag","WingGeom",0);
+SetParmVal(wing,"RelativeTwistFlag","WingGeom",0);
+SetParmVal(wing,"RotateAirfoilMatchDideralFlag","WingGeom",0);
+SetParmVal(wing,"TwistAllInXZPlaneFlag","WingGeom",1);
+string xs=GetXSecSurf(wing,0);
+ChangeXSecShape(xs,0,XS_FILE_AIRFOIL);
+ReadFileAirfoil(GetXSec(xs,0),"C:/Users/Urungu/Documents/Codex/2026-10-18/bu/outputs/data/airfoils/naca2412.dat");
+ChangeXSecShape(xs,1,XS_FILE_AIRFOIL);
+ReadFileAirfoil(GetXSec(xs,1),"C:/Users/Urungu/Documents/Codex/2026-10-18/bu/outputs/data/airfoils/naca2412.dat");
+ChangeXSecShape(xs,2,XS_FILE_AIRFOIL);
+ReadFileAirfoil(GetXSec(xs,2),"C:/Users/Urungu/Documents/Codex/2026-10-18/bu/outputs/data/airfoils/naca2412.dat");
+Update();
+SetDriverGroup(wing,1,SPAN_WSECT_DRIVER,ROOTC_WSECT_DRIVER,TIPC_WSECT_DRIVER);
+SetParmVal(wing,"Span","XSec_1",0.45);
+SetParmVal(wing,"Root_Chord","XSec_1",0.32);
+SetParmVal(wing,"Tip_Chord","XSec_1",0.22);
+SetParmVal(wing,"Sweep_Location","XSec_1",0);
+SetParmVal(wing,"Sweep","XSec_1",12.5288077092);
+SetParmVal(wing,"Dihedral","XSec_1",3.81407483429);
+SetParmVal(wing,"Twist","XSec_1",-0.5);
+SetParmVal(wing,"Twist_Location","XSec_1",0.25);
+SetParmVal(wing,"SectTess_U","XSec_1",33);
+SetDriverGroup(wing,2,SPAN_WSECT_DRIVER,ROOTC_WSECT_DRIVER,TIPC_WSECT_DRIVER);
+SetParmVal(wing,"Span","XSec_2",0.45);
+SetParmVal(wing,"Root_Chord","XSec_2",0.22);
+SetParmVal(wing,"Tip_Chord","XSec_2",0.14);
+SetParmVal(wing,"Sweep_Location","XSec_2",0);
+SetParmVal(wing,"Sweep","XSec_2",18.4349488229);
+SetParmVal(wing,"Dihedral","XSec_2",5.07960786001);
+SetParmVal(wing,"Twist","XSec_2",-3);
+SetParmVal(wing,"Twist_Location","XSec_2",0.25);
+SetParmVal(wing,"SectTess_U","XSec_2",33);
+SetParmVal(wing,"Twist","XSec_0",2);
+Update();
+Print("COMPUTED_SREF"); Print(GetParmVal(wing,"TotalArea","WingGeom"));
+Print("COMPUTED_SPAN"); Print(GetParmVal(wing,"TotalSpan","WingGeom"));
+Print("COMPUTED_PROJECTED_SPAN"); Print(GetParmVal(wing,"TotalProjectedSpan","WingGeom"));
+if(GetNumTotalErrors()>0) { while(GetNumTotalErrors()>0) { ErrorObj e=PopLastError(); Print(e.GetErrorString()); } return 1; }
+if(GetNumXSec(xs)!=3) { Print("GEOMETRY_SECTION_COUNT_REJECTED"); return 2; }
+if(abs(GetParmVal(wing,"TotalArea","WingGeom")-0.405)>1e-5) { Print("GEOMETRY_SREF_REJECTED"); return 3; }
+    Update();
+    string vehicle = FindContainer( "Vehicle", 0 );
+    SetParmVal( FindParm( vehicle, "LenUnit", "STEPSettings" ), LEN_M );
+    WriteVSPFile( "model.vsp3", SET_ALL );
+    string geom = "VSPAEROComputeGeometry";
+    SetAnalysisInputDefaults( geom );
+    SetI( geom, "GeomSet", SET_NONE );
+    SetI( geom, "ThinGeomSet", 3 );
+    // Tested single mesh. NRef=1 generated a multi-mesh file not solved in our first run.
+    SetI( geom, "NRef", 0 );
+    string geometry_results = ExecAnalysis( geom );
+    PrintResults( geometry_results );
+    string analysis = "VSPAEROSweep";
+    SetAnalysisInputDefaults( analysis );
+    SetI( analysis, "GeomSet", SET_NONE );
+    SetI( analysis, "ThinGeomSet", 3 );
+    SetI( analysis, "NCPU", 2 );
+    SetI( analysis, "RefFlag", 0 );
+    SetD( analysis, "Sref", 0.405 );
+    SetD( analysis, "bref", 1.8 );
+    SetD( analysis, "cref", 0.237037037037 );
+    SetD( analysis, "Xcg", 0.08 );
+    SetD( analysis, "Vinf", 30.0 );
+    SetD( analysis, "Rho", 1.225 );
+    SetD( analysis, "MachStart", 0.08816 );
+    SetD( analysis, "MachEnd", 0.08816 );
+    SetI( analysis, "MachNpts", 1 );
+    SetD( analysis, "ReCref", 500000.0 );
+    SetD( analysis, "ReCrefEnd", 500000.0 );
+    SetI( analysis, "ReCrefNpts", 1 );
+    SetD( analysis, "AlphaStart", 0 );
+    SetD( analysis, "AlphaEnd", 6 );
+    SetI( analysis, "AlphaNpts", 3 );
+    SetI( analysis, "StallModel", 0 );
+    SetI( analysis, "WakeNumIter", 60 );
+    string results = ExecAnalysis( analysis );
+    WriteResultsCSVFile( results, "results.csv" );
+    // Exports follow the solver. Do not feed a visualization mesh back into the analysis set.
+    ExportFile("model.step",SET_ALL,EXPORT_STEP);
+    int errors = GetNumTotalErrors();
+    while ( GetNumTotalErrors() > 0 )
+    {
+        ErrorObj err = PopLastError();
+        Print( err.GetErrorString() );
+    }
+    if ( errors == 0 ) Print( "NATIVE_ANALYSIS_COMPLETE" );
+    return errors;
+}

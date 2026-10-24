@@ -13,3 +13,7 @@ OpenVSP/VSPAERO, XFOIL, FreeCAD, CalculiX ve kanat karşılaştırmaları.
 ## v0.3.0 — CAD modelleri ve kullanım denetimi
 
 K-1B, Cadmonkey ve Zero-to-CAD deneyleri; özgün başarısızlıklar ve istem denetimleri.
+
+## v0.4.0 — Deterministik geometri ve hafif CFD
+
+Parametrik kanat, karmaşık VLM, SU2 ve Elmer araç sınamaları.

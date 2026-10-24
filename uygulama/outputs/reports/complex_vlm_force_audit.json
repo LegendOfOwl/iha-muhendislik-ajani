@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-10-18T18:43:42.366437+00:00",
+  "rows": [
+    {
+      "alpha_deg": 0.0,
+      "medium_CL": 0.17439068227,
+      "fine_CL": 0.175069759336,
+      "medium_surface_CDi": 0.001964640802,
+      "fine_surface_CDi": 0.002327295261,
+      "medium_wake_CDiw": 0.001821287034,
+      "fine_wake_CDiw": 0.001860966866,
+      "surface_CDi_relative_change": 0.18459071939807958,
+      "wake_CDiw_relative_change": 0.021786698779078906,
+      "fine_surface_wake_disagreement_relative_to_wake": 0.25058393221279407
+    },
+    {
+      "alpha_deg": 3.0,
+      "medium_CL": 0.416605278865,
+      "fine_CL": 0.414906817008,
+      "medium_surface_CDi": 0.008168871212,
+      "fine_surface_CDi": 0.009627021711,
+      "medium_wake_CDiw": 0.00795976487,
+      "fine_wake_CDiw": 0.008102647797,
+      "surface_CDi_relative_change": 0.17850085540068128,
+      "wake_CDiw_relative_change": 0.017950646700447104,
+      "fine_surface_wake_disagreement_relative_to_wake": 0.18813281191419895
+    },
+    {
+      "alpha_deg": 6.0,
+      "medium_CL": 0.658023756275,
+      "fine_CL": 0.653857335999,
+      "medium_surface_CDi": 0.019343846926,
+      "fine_surface_CDi": 0.022637386998,
+      "medium_wake_CDiw": 0.019208340598,
+      "fine_wake_CDiw": 0.019551345558,
+      "surface_CDi_relative_change": 0.1702629308740633,
+      "wake_CDiw_relative_change": 0.017857084439439452,
+      "fine_surface_wake_disagreement_relative_to_wake": 0.15784291832217434
+    }
+  ],
+  "wake_tail_checks": [
+    {
+      "level": "medium",
+      "alpha_deg": 0.0,
+      "delta_CLiw_last2": 1.3275982999993996e-05,
+      "delta_CDiw_last2": 1.7290579999999951e-06
+    },
+    {
+      "level": "medium",
+      "alpha_deg": 3.0,
+      "delta_CLiw_last2": 4.252510100000162e-05,
+      "delta_CDiw_last2": 2.197510999999916e-06
+    },
+    {
+      "level": "medium",
+      "alpha_deg": 6.0,
+      "delta_CLiw_last2": 1.3627895000034584e-05,
+      "delta_CDiw_last2": 1.0368559999994476e-06
+    },
+    {
+      "level": "fine",
+      "alpha_deg": 0.0,
+      "delta_CLiw_last2": 1.1242399999833452e-07,
+      "delta_CDiw_last2": 1.0267000000174775e-08
+    },
+    {
+      "level": "fine",
+      "alpha_deg": 3.0,
+      "delta_CLiw_last2": 2.0051648000007916e-05,
+      "delta_CDiw_last2": 1.5025469999995628e-06
+    },
+    {
+      "level": "fine",
+      "alpha_deg": 6.0,
+      "delta_CLiw_last2": 0.00012010487300007089,
+      "delta_CDiw_last2": 2.455417299999929e-05
+    }
+  ],
+  "wake_CDiw_panel_screen_passed": true,
+  "surface_CDi_panel_screen_passed": false,
+  "wake_tail_screen_passed": true,
+  "overall_quality_passed": false,
+  "interpretation": "CDi and CDiw are separate surface and wake induced-force estimates. Wake estimates are more stable in this run. The predeclared surface gate remains failed; neither result is a validated total aircraft drag.",
+  "source": "https://github.com/OpenVSP/OpenVSP/blob/OpenVSP_3.55.0/src/vsp_aero/Solver/VSP_Solver.C",
+  "developer_clarification": "https://groups.google.com/g/openvsp/c/7Bl7y1nGl1Q/m/J4QOlpNJBQAJ",
+  "evidence_sha256": {
+    "outputs\\simulations\\complex_vlm_20261018_213710\\medium\\model.polar": "663838bc9e654df7e176c689e732a79f48b97c500008a5b43b3bed983a7155e7",
+    "outputs\\simulations\\complex_vlm_20261018_213710\\medium\\model.history": "9f545e341b6863bf15012882113b4635b72593a85d446ccbcb0ac71520312240",
+    "outputs\\simulations\\complex_vlm_20261018_213710\\medium\\case.vspscript": "dd639149d5df3b9d131caf1550a7b99429b836ef17dd333c035c60a9a45f1a67",
+    "outputs\\simulations\\complex_vlm_20261018_213710\\medium\\native.log": "c4bb87fa296ae02bf509a532053c9d604046bf3b44d1811e1e2ce3b828454ad1",
+    "outputs\\simulations\\complex_vlm_20261018_213710\\fine\\model.polar": "b233ff1f579fd59f971001f5657e97f1e3b6e60d33c149d25e4b2948b33cbfb3",
+    "outputs\\simulations\\complex_vlm_20261018_213710\\fine\\model.history": "fbceaadbf4556576b145e851ad101294bcf4e3b72f71c4fc8f7c3b309dd8ef8f",
+    "outputs\\simulations\\complex_vlm_20261018_213710\\fine\\case.vspscript": "bd79c9dcd2e1350c42049d747592f9785f7a127ca315fc1471caa8956f6b0c0f",
+    "outputs\\simulations\\complex_vlm_20261018_213710\\fine\\native.log": "c3a6a36c368d2684ea97f3ada72196d4edf6552d52fdc359fe7695bf0d10dd79"
+  }
+}

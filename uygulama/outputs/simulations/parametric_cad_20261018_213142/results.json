@@ -1,0 +1,301 @@
+{
+  "timestamp": "2026-10-18T18:31:44.924715+00:00",
+  "passed": true,
+  "passed_checks": 9,
+  "total_checks": 9,
+  "checks": [
+    {
+      "name": "Multi-section swept/tapered/twisted envelope",
+      "passed": true,
+      "measurement": {
+        "solids": 1,
+        "volume_mm3": 7897538.0026933495
+      },
+      "criterion": "One valid closed solid"
+    },
+    {
+      "name": "STEP volume and topology",
+      "passed": true,
+      "measurement": {
+        "relative_volume_change": 7.51620987671231e-14
+      },
+      "criterion": "Valid one-solid STEP; volume relative error <1e-6"
+    },
+    {
+      "name": "Volume vs independent source-polygon integration",
+      "passed": true,
+      "measurement": {
+        "CAD_mm3": 7897538.0026933495,
+        "source_polygon_estimate_mm3": 7856039.999999998,
+        "relative_difference": 0.005282305422751321
+      },
+      "criterion": "Source-polygon area times integral of chord squared; allows small spline/ruled-twist differences <3%"
+    },
+    {
+      "name": "Station profile points after STEP",
+      "passed": true,
+      "measurement": {
+        "max_distance_mm": 1.1445908394182544e-11,
+        "stations": 5,
+        "sampled_points": 60
+      },
+      "criterion": "Source-profile transformed sample points lie on exported surface within 0.03 mm; not full shape equivalence"
+    },
+    {
+      "name": "SI-to-CAD span",
+      "passed": true,
+      "measurement": {
+        "span_mm": 1800.0000002,
+        "expected_span_mm": 1800.0
+      },
+      "criterion": "Full span within 0.001 mm"
+    },
+    {
+      "name": "Rib 1: clipped profile and two located bores",
+      "passed": true,
+      "measurement": {
+        "volume_mm3": 13191.855202970439,
+        "probes": [
+          {
+            "diameter_mm": 6.0,
+            "center_mm": [
+              105.10068399552435,
+              151.0,
+              14.943974892032246
+            ],
+            "through_depth_samples_empty": true,
+            "adjacent_material_exists": true
+          },
+          {
+            "diameter_mm": 8.0,
+            "center_mm": [
+              205.4175956017811,
+              151.0,
+              13.116066644815284
+            ],
+            "through_depth_samples_empty": true,
+            "adjacent_material_exists": true
+          }
+        ]
+      },
+      "criterion": "One valid rib; both bores empty at 3 depths with neighboring material"
+    },
+    {
+      "name": "Rib 2: clipped profile and two located bores",
+      "passed": true,
+      "measurement": {
+        "volume_mm3": 10250.94399562228,
+        "probes": [
+          {
+            "diameter_mm": 6.0,
+            "center_mm": [
+              130.02542348602134,
+              301.0,
+              24.369926045868343
+            ],
+            "through_depth_samples_empty": true,
+            "adjacent_material_exists": true
+          },
+          {
+            "diameter_mm": 8.0,
+            "center_mm": [
+              218.6916950030321,
+              301.0,
+              24.04408398366186
+            ],
+            "through_depth_samples_empty": true,
+            "adjacent_material_exists": true
+          }
+        ]
+      },
+      "criterion": "One valid rib; both bores empty at 3 depths with neighboring material"
+    },
+    {
+      "name": "Rib 3: clipped profile and two located bores",
+      "passed": true,
+      "measurement": {
+        "volume_mm3": 5904.585611658309,
+        "probes": [
+          {
+            "diameter_mm": 6.0,
+            "center_mm": [
+              198.25573136382584,
+              601.0,
+              46.66743035266684
+            ],
+            "through_depth_samples_empty": true,
+            "adjacent_material_exists": true
+          },
+          {
+            "diameter_mm": 8.0,
+            "center_mm": [
+              265.90070268496186,
+              601.0,
+              48.38692380728234
+            ],
+            "through_depth_samples_empty": true,
+            "adjacent_material_exists": true
+          }
+        ]
+      },
+      "criterion": "One valid rib; both bores empty at 3 depths with neighboring material"
+    },
+    {
+      "name": "Rib 4: clipped profile and two located bores",
+      "passed": true,
+      "measurement": {
+        "volume_mm3": 4337.4681337218235,
+        "probes": [
+          {
+            "diameter_mm": 6.0,
+            "center_mm": [
+              241.55797310847157,
+              751.0,
+              59.539611272886376
+            ],
+            "through_depth_samples_empty": true,
+            "adjacent_material_exists": true
+          },
+          {
+            "diameter_mm": 8.0,
+            "center_mm": [
+              299.84487699300774,
+              751.0,
+              61.869898451028874
+            ],
+            "through_depth_samples_empty": true,
+            "adjacent_material_exists": true
+          }
+        ]
+      },
+      "criterion": "One valid rib; both bores empty at 3 depths with neighboring material"
+    }
+  ],
+  "ribs": [
+    {
+      "station_y_m": 0.15,
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\cad\\parametric_wing\\rib_1.step",
+      "volume_mm3": 13191.855202970439,
+      "probes": [
+        {
+          "diameter_mm": 6.0,
+          "center_mm": [
+            105.10068399552435,
+            151.0,
+            14.943974892032246
+          ],
+          "through_depth_samples_empty": true,
+          "adjacent_material_exists": true
+        },
+        {
+          "diameter_mm": 8.0,
+          "center_mm": [
+            205.4175956017811,
+            151.0,
+            13.116066644815284
+          ],
+          "through_depth_samples_empty": true,
+          "adjacent_material_exists": true
+        }
+      ]
+    },
+    {
+      "station_y_m": 0.3,
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\cad\\parametric_wing\\rib_2.step",
+      "volume_mm3": 10250.94399562228,
+      "probes": [
+        {
+          "diameter_mm": 6.0,
+          "center_mm": [
+            130.02542348602134,
+            301.0,
+            24.369926045868343
+          ],
+          "through_depth_samples_empty": true,
+          "adjacent_material_exists": true
+        },
+        {
+          "diameter_mm": 8.0,
+          "center_mm": [
+            218.6916950030321,
+            301.0,
+            24.04408398366186
+          ],
+          "through_depth_samples_empty": true,
+          "adjacent_material_exists": true
+        }
+      ]
+    },
+    {
+      "station_y_m": 0.6,
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\cad\\parametric_wing\\rib_3.step",
+      "volume_mm3": 5904.585611658309,
+      "probes": [
+        {
+          "diameter_mm": 6.0,
+          "center_mm": [
+            198.25573136382584,
+            601.0,
+            46.66743035266684
+          ],
+          "through_depth_samples_empty": true,
+          "adjacent_material_exists": true
+        },
+        {
+          "diameter_mm": 8.0,
+          "center_mm": [
+            265.90070268496186,
+            601.0,
+            48.38692380728234
+          ],
+          "through_depth_samples_empty": true,
+          "adjacent_material_exists": true
+        }
+      ]
+    },
+    {
+      "station_y_m": 0.75,
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\cad\\parametric_wing\\rib_4.step",
+      "volume_mm3": 4337.4681337218235,
+      "probes": [
+        {
+          "diameter_mm": 6.0,
+          "center_mm": [
+            241.55797310847157,
+            751.0,
+            59.539611272886376
+          ],
+          "through_depth_samples_empty": true,
+          "adjacent_material_exists": true
+        },
+        {
+          "diameter_mm": 8.0,
+          "center_mm": [
+            299.84487699300774,
+            751.0,
+            61.869898451028874
+          ],
+          "through_depth_samples_empty": true,
+          "adjacent_material_exists": true
+        }
+      ]
+    }
+  ],
+  "profile_file": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\data\\airfoils\\naca2412.dat",
+  "profile_sha256": "dce4261b15ef4177ce80563d5980891178c8ec8cbb1e270f0708a18f28d8bf56",
+  "case_sha256": "080bd8cf1da94473cc10c0ab6ab81725ce210116ad9a49f1f7636a0095b30c36",
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\parametric_cad_20261018_213142",
+  "envelope_bbox_mm": [
+    389.81689265478786,
+    1800.0000002,
+    95.89422880067059
+  ],
+  "envelope_volume_mm3": 7897538.0026933495,
+  "geometry_generation": "Fixed CadQuery kernel operations from JSON and source coordinates; no local CAD-model inference",
+  "coordinate_convention": "x_le/z_le are untwisted reference LE; twist is about 25% chord, positive nose-up; cross-sections in constant-y planes",
+  "limits": [
+    "Qualified single-element normalized Selig profile and ruled symmetric wing family only",
+    "Envelope and ribs overlap in review compound; no material mass or structural assembly claim",
+    "Not a manufacturing release, strength validation or proof of arbitrary-CAD correctness"
+  ]
+}

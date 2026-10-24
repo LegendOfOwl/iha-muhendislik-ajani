@@ -1,0 +1,32 @@
+{
+  "solver": "INC_RANS",
+  "settings_overrides": {
+    "ITER": 3000,
+    "MESH_FILENAME": "n0012_113-33.su2",
+    "OUTPUT_FILES": "(RESTART, PARAVIEW, SURFACE_CSV)",
+    "OUTPUT_WRT_FREQ": 3000,
+    "CONV_RESIDUAL_MINVAL": -9,
+    "CONV_STARTITER": 50,
+    "HISTORY_OUTPUT": "(ITER, RMS_RES, AERO_COEFF)",
+    "SCREEN_OUTPUT": "(INNER_ITER, RMS_PRESSURE, RMS_NU_TILDE, LIFT, DRAG)",
+    "FREESTREAM_NU_FACTOR": 3.0,
+    "LINEAR_SOLVER_ERROR": 1e-06
+  },
+  "mesh_sha256": "9a872a3de5a1b6b6a590ece8cae32ed8e9cbcafde3294fbab0eb67026b08a4f0",
+  "base_config_sha256": "01c77aa91b756fa8ba55a0eb45246773918e3cd2f8be192c5d40bcb38338831c",
+  "script_sha256": "90cb49728649c94be640a0d17dc8289a351e241fc97cd98c52bb1d7692eab352",
+  "classification": "source-based verification/validation case; not actual UAV conditions",
+  "physical_conditions": {
+    "rho_kg_m3": 2.13163,
+    "velocity_m_s": [
+      51.36481493540834,
+      9.05700273220962,
+      0
+    ],
+    "mu_Pa_s": 1.853e-05,
+    "chord_m": 1.0,
+    "alpha_deg": 10.0,
+    "turbulence_model": "SA; fully turbulent",
+    "freestream_nu_factor": 3.0
+  }
+}

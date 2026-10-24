@@ -1,0 +1,22 @@
+{
+  "solver": "EULER",
+  "settings_overrides": {
+    "ITER": 600,
+    "MESH_FILENAME": "mesh_NACA0012_inv.su2",
+    "OUTPUT_FILES": "(RESTART, PARAVIEW, SURFACE_CSV)",
+    "OUTPUT_WRT_FREQ": 600,
+    "CONV_RESIDUAL_MINVAL": -9,
+    "CONV_STARTITER": 50,
+    "HISTORY_OUTPUT": "(ITER, RMS_RES, AERO_COEFF)",
+    "SCREEN_OUTPUT": "(INNER_ITER, RMS_DENSITY, LIFT, DRAG)"
+  },
+  "mesh_sha256": "9094b51c2628d3bb4c865d774b2308dbb59a213ad19c007cfcd7d57e7aaeebeb",
+  "base_config_sha256": "3f0568e0a78fb382e4efea92e59f038e422830ec6c84cf26c935301d63a9647d",
+  "script_sha256": "90cb49728649c94be640a0d17dc8289a351e241fc97cd98c52bb1d7692eab352",
+  "classification": "source-based verification/validation case; not actual UAV conditions",
+  "physical_conditions": {
+    "Mach": 0.8,
+    "alpha_deg": 1.25,
+    "viscous": false
+  }
+}

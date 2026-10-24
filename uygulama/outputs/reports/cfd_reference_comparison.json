@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-10-18T18:39:40.969964+00:00",
+  "volume_surface_metrics": [
+    {
+      "case": "euler_shock",
+      "points": 5233,
+      "cells": 10216,
+      "wall_points": 200,
+      "mapping_error_m": 1.820327411769608e-09
+    },
+    {
+      "case": "rans_coarse",
+      "points": 3704,
+      "cells": 3584,
+      "wall_points": 64,
+      "mapping_error_m": 2.3850063763362148e-08,
+      "y_plus_max": 9.268033027648926,
+      "y_plus_p95": 7.9760637283325195,
+      "wall_yplus_below1_fraction": 0.125
+    },
+    {
+      "case": "rans_medium",
+      "points": 14576,
+      "cells": 14336,
+      "wall_points": 128,
+      "mapping_error_m": 2.9058415414289464e-08,
+      "y_plus_max": 4.902284622192383,
+      "y_plus_p95": 4.224025726318359,
+      "wall_yplus_below1_fraction": 0.6328125
+    },
+    {
+      "case": "rans_fine",
+      "points": 57824,
+      "cells": 57344,
+      "wall_points": 256,
+      "mapping_error_m": 2.9058415414289464e-08,
+      "y_plus_max": 1.7439266443252563,
+      "y_plus_p95": 1.5649142265319824,
+      "wall_yplus_below1_fraction": 0.80078125
+    }
+  ],
+  "force_comparison": {
+    "CFL3D_SA_reference": {
+      "CL": 1.0909146672,
+      "CD": 0.012310544747,
+      "Mach": 0.15,
+      "Re": 6000000.0,
+      "grid": "897x257",
+      "source": "https://tmbwg.github.io/turbmodels/naca0012_val_sa.html"
+    },
+    "fine_relative_CL_error": 0.0011262862595419199,
+    "fine_relative_CD_error": 0.09207096162630934,
+    "medium_to_fine_CL_relative_change": 0.014555779794994672,
+    "medium_to_fine_CD_relative_change": 0.22836755508185047,
+    "limitations": "Our INC_RANS SA-noft2 is incompressible on a coarser grid without the cited farfield point-vortex correction; this is representative agreement, not bit-identical replication."
+  },
+  "Ladson_tripped_Re6M_M015_interpolated": {
+    "80 grit": {
+      "CL_at_10_interpolated": 1.0586076923076924,
+      "CD_at_10_interpolated": 0.011910439560439561,
+      "relative_CL_difference": 0.02935770533138582,
+      "relative_CD_difference": 0.12875669884209073
+    },
+    "120 grit": {
+      "CL_at_10_interpolated": 1.0672326732673267,
+      "CD_at_10_interpolated": 0.01166089108910891,
+      "relative_CL_difference": 0.021038815897505003,
+      "relative_CD_difference": 0.15291261510507326
+    },
+    "180 grit": {
+      "CL_at_10_interpolated": 1.0626416267942584,
+      "CD_at_10_interpolated": 0.011494976076555025,
+      "relative_CL_difference": 0.025450121210975007,
+      "relative_CD_difference": 0.16955340754646286
+    }
+  },
+  "Gregory_upper_Cp_RMSE_0p005_to_0p95": 0.08081833551201692,
+  "Gregory_limit": "Different Reynolds number 2.88M; digitized upper-surface data; indicative Cp check only",
+  "fine_wall_resolution_passed": true,
+  "strict_max_yplus1_passed": false,
+  "wall_screen_note": "max y+ <2 is a provisional screen; stricter max y+ <1 target is evaluated separately",
+  "gmsh_pressure_view": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\cfd_20261018_212619\\rans_fine\\pressure_nearfield.pos",
+  "gmsh_view_triangles": 42488,
+  "grid_acceptance_passed": false,
+  "grid_thresholds": {
+    "CL": 0.03,
+    "CD": 0.1
+  },
+  "note": "Failure is retained: do not call a mesh-independent airfoil service ready on this evidence alone.",
+  "gmsh_readback": {
+    "passed": true,
+    "views": [
+      {
+        "tag": 1,
+        "types": [
+          "ST"
+        ],
+        "elements": [
+          42488
+        ]
+      }
+    ],
+    "version": "4.15.2"
+  }
+}
