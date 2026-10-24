@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "name": "OpenVSP -> CAD referans birim kontrolü",
+      "passed": true,
+      "evidence": {
+        "reference_wing_bounding_box_mm": [
+          250.0000002000015,
+          2000.0000002,
+          30.00859945377088
+        ]
+      },
+      "criterion": "OpenVSP metre -> STEP -> CAD milimetre: açıklık 2000, veter 250 mm, hata<.1mm"
+    },
+    {
+      "name": "OpenVSP uçak yüzeylerinin CAD aktarımı",
+      "passed": true,
+      "evidence": {
+        "bbox_mm": [
+          1200.0000002000002,
+          2000.0000002,
+          300.0000002
+        ],
+        "faces": 38,
+        "solids": 0,
+        "valid": true
+      },
+      "criterion": "Geçerli CAD geometrisi; >10 yüzey ve 2000mm açıklık. Yüzey geometrisi imalata hazır katı anlamına gelmez"
+    },
+    {
+      "name": "CadQuery gerçek NACA kanat katısı",
+      "passed": true,
+      "evidence": {
+        "solid_valid": true,
+        "volume_mm3": 10207333.97111005,
+        "analytic_envelope_volume_mm3": 10213249.999999994
+      },
+      "criterion": "Geçerli kapalı kanat zarfı; analitik NACA kesit integraline göre hacim farkı<%1"
+    },
+    {
+      "name": "Kanat katısının STEP turu",
+      "passed": true,
+      "evidence": {
+        "volume_relative_change": 4.1933123640092163e-13
+      },
+      "criterion": "STEP tekrar okuma hacim değişimi<1e-6"
+    },
+    {
+      "name": "TOP / Z: gerçek CAD çizgi projeksiyonu",
+      "passed": true,
+      "evidence": {
+        "DXF_entities": 56
+      },
+      "criterion": "OpenCascade gizli çizgi hesabından boş olmayan DXF"
+    },
+    {
+      "name": "SIDE / -Y: gerçek CAD çizgi projeksiyonu",
+      "passed": true,
+      "evidence": {
+        "DXF_entities": 40
+      },
+      "criterion": "OpenCascade gizli çizgi hesabından boş olmayan DXF"
+    },
+    {
+      "name": "FRONT / X: gerçek CAD çizgi projeksiyonu",
+      "passed": true,
+      "evidence": {
+        "DXF_entities": 56
+      },
+      "criterion": "OpenCascade gizli çizgi hesabından boş olmayan DXF"
+    }
+  ],
+  "passed": true,
+  "bbox_mm": [
+    1200.0000002000002,
+    2000.0000002,
+    300.0000002
+  ],
+  "geometry_source": "outputs/cad/aircraft_demo.step exported by native OpenVSP",
+  "model_scope": "synthetic integration test; surface CAD and separate closed wing envelope",
+  "no_manufacturing_release": true
+}

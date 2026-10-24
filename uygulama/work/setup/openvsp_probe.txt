@@ -1,0 +1,538 @@
+ NATIVE_OPENVSP_VERSION 
+ OpenVSP 3.55.0 
+VSPAEROComputeGeometry
+Prepare a polygon mesh for VSPAERO analysis.
+   [input_name]                  [type]       	[doc]
+   CullFrac                      double       	Area fraction of thin orphan regions to cull.
+   CullFracFlag                  integer      	Flag to enable orphan culling.
+   FindBodyWakesFlag             integer      	Flag to control whether body wakes are detected.
+   GeomSet                       integer      	Thick surface geometry Set for analysis.
+   ModeID                        string       	ID for Mode to use for analysis.
+   NRef                          integer      	Number of mesh refinements to generate.
+   SingleGeomID                  string       	ID for single lifting surface to use for analysis.
+   Symmetry                      integer      	Symmetry mode enum.
+   ThinGeomSet                   integer      	Thin surface geometry Set for analysis.
+   UseModeFlag                   integer      	Flag to control whether Modes are used instead of Sets.
+VSPAEROSweep
+Perform VSPAERO calculation while sweeping flow condition.
+   [input_name]                  [type]       	[doc]
+   2DFEMFlag                     integer      	Flag to write 2D FEM file.
+   AdjointGMRESConvergenceFactor double       	User Adjoint GMRES residual reduction factor... this scales the default residual reduction
+   AlphaEnd                      double       	Alpha sweep end point.
+   AlphaNpts                     integer      	Number of points in alpha sweep.
+   AlphaStart                    double       	Alpha sweep starting point.
+   AutoTimeNumRevs               integer      	Number of desired revolutions for computing automatic time step.
+   AutoTimeStepFlag              integer      	Flag to automatically determine time step.
+   BetaEnd                       double       	Beta sweep end point.
+   BetaNpts                      integer      	Number of points in Beta sweep.
+   BetaStart                     double       	Beta sweep starting point.
+   CGDegenSet                    integer      	Geometry degen set for center of gravity computation.
+   CGGeomSet                     integer      	Geometry set for center of gravity computation.
+   CGModeID                      string       	ID for Mode to use for analysis.
+   CGUseModeFlag                 integer      	Flag to control whether Modes are used instead of Sets for mass properties.
+   CLMax2D                       double       	2D maximum lift coefficient.
+   Clo2D                         double       	Zero alpha cl for airfoil.
+   CoreSizeFactor                double       	Adjust the wake core size model up or down, default value is 1.
+   FarAway                       double       	Set the multipole far away value
+   FarDist                       double       	Far field distance.
+   FarDistToggle                 integer      	Far field distance toggle.
+   FixedWakeFlag                 integer      	Flag to use fixed wake with no relaxation.
+   ForwardGMRESConvergenceFactor double       	User Forward GMRES residual reduction factor... this scales the default residual reduction
+   FreezeMultiPoleAtIteration    integer      	Freeze the multipole expansion update
+   FreezeWakeAtIteration         integer      	Freeze the wake after this number of iterations
+   FreezeWakeRootVortices        integer      	Freeze the root wake vortices
+   FromSteadyState               integer      	Start unsteady solution from steady state.
+   GeomSet                       integer      	Thick surface geometry Set for analysis.
+   GroundEffect                  double       	Height aboe ground.
+   GroundEffectToggle            integer      	Flag to enable ground effect model.
+   HoverRamp                     double       	Hover ramp value.
+   HoverRampFlag                 integer      	Flag to enable hover ramp.
+   ImplicitWake                  integer      	Turn on implicit wake
+   ImplicitWakeStartIteration    integer      	Iteration at which to start implicit wake solve
+   MACFlag                       integer      	Flag to use MAC instead of Cave for cref.
+   MachEnd                       double       	Mach number sweep end point.
+   MachNpts                      integer      	Number of points in Mach number sweep.
+   MachStart                     double       	Mach number sweep starting point.
+   Machref                       double       	Reference Mach number.
+   ManualVrefFlag                integer      	Flag to enable setting Vref different from Vinf.
+   MassSliceDir                  integer      	Slicing direction for mass properties.
+   ModeID                        string       	ID for Mode to use for analysis.
+   NCPU                          integer      	Number of processors to use for computation.
+   NoiseCalcFlag                 integer      	Flag to enable noise calculations.
+   NoiseCalcType                 integer      	Noise calculation type enum.
+   NoiseUnits                    integer      	Units ot use for noise calculations.
+   NonLinearConvergenceFactor    double       	User non-linear residual reduction factor on solution of overall nonlinear system... this scales the default residual reduction
+   NumMassSlice                  integer      	Number of slices for CG computation.
+   NumTimeSteps                  integer      	Number of time steps in unsteady simulation.
+   NumWakeNodes                  integer      	Number of wake nodes.
+   PropBladesMode                integer      	Mode to use for representing propeller blades.
+   QuadTreeBufferLevels          integer      	Set number of buffer levels for quad tree... the higher the level, the more cells
+   ReCref                        double       	Reynolds number sweep starting point.
+   ReCrefEnd                     double       	Reynolds number sweep end point.
+   ReCrefNpts                    integer      	Number of points in Reynolds number sweep.
+   RedirectFile                  string       	File to redirect output ('stdout' to console,  '' to suppress).
+   RefFlag                       integer      	Flag to control how reference quantities are set.
+   Rho                           double       	Freestream density.
+   SCurveFlag                    integer      	Flag to use Scurve instead of Stot for Sref.
+   Sref                          double       	Reference area.
+   StallModel                    integer      	Flag to enable stall model.
+   StartAveragingTimeStep        integer      	Set the time step to start averaging time accurate forces.
+   StopBeforeRun                 integer      	Flag to stop after writing files, but before running VSPAERO.
+   Symmetry                      integer      	Symmetry mode enum.
+   TecplotFlag                   integer      	Flag to write Tecplot file.
+   ThinGeomSet                   integer      	Thin surface geometry Set for analysis.
+   TimeStepSize                  double       	Unsteady time step.
+   UnsteadyType                  integer      	Stability and control mode enum.
+   UpdateMatrixPreconditioner    integer      	Force update of matrix preconditioners every newton iteration
+   UseModeFlag                   integer      	Flag to control whether Modes are used instead of Sets.
+   UseWakeNodeMatrixPreconditionerinteger      	Turn on the wake matrix preconditioner
+   Vinf                          double       	Freestream airspeed.
+   Vref                          double       	Reference airspeed.
+   WakeNumIter                   integer      	Number of wake iterations.
+   WakeRelax                     double       	Wake relaxation factor
+   WingID                        string       	Reference wing GeomID.
+   Xcg                           double       	X moment reference point.
+   Ycg                           double       	Y moment reference point.
+   Zcg                           double       	Z moment reference point.
+   bref                          double       	Reference span.
+   cref                          double       	Reference chord.
+   [input_name]                  [type]       	[#]	[current values-->]
+   2DFEMFlag                     integer      	1	0 
+   AdjointGMRESConvergenceFactor double       	1	1.000000 
+   AlphaEnd                      double       	1	10.000000 
+   AlphaNpts                     integer      	1	3 
+   AlphaStart                    double       	1	0.000000 
+   AutoTimeNumRevs               integer      	1	5 
+   AutoTimeStepFlag              integer      	1	1 
+   BetaEnd                       double       	1	0.000000 
+   BetaNpts                      integer      	1	1 
+   BetaStart                     double       	1	0.000000 
+   CGDegenSet                    integer      	1	-1 
+   CGGeomSet                     integer      	1	1 
+   CGModeID                      string       	1	 
+   CGUseModeFlag                 integer      	1	0 
+   CLMax2D                       double       	1	1.000000 
+   Clo2D                         double       	1	0.000000 
+   CoreSizeFactor                double       	1	1.000000 
+   FarAway                       double       	1	5.000000 
+   FarDist                       double       	1	-1.000000 
+   FarDistToggle                 integer      	1	0 
+   FixedWakeFlag                 integer      	1	0 
+   ForwardGMRESConvergenceFactor double       	1	1.000000 
+   FreezeMultiPoleAtIteration    integer      	1	10000 
+   FreezeWakeAtIteration         integer      	1	10000 
+   FreezeWakeRootVortices        integer      	1	0 
+   FromSteadyState               integer      	1	0 
+   GeomSet                       integer      	1	-1 
+   GroundEffect                  double       	1	-1.000000 
+   GroundEffectToggle            integer      	1	0 
+   HoverRamp                     double       	1	0.000000 
+   HoverRampFlag                 integer      	1	0 
+   ImplicitWake                  integer      	1	0 
+   ImplicitWakeStartIteration    integer      	1	0 
+   MACFlag                       integer      	1	0 
+   MachEnd                       double       	1	0.000000 
+   MachNpts                      integer      	1	1 
+   MachStart                     double       	1	0.000000 
+   Machref                       double       	1	0.300000 
+   ManualVrefFlag                integer      	1	0 
+   MassSliceDir                  integer      	1	0 
+   ModeID                        string       	1	 
+   NCPU                          integer      	1	4 
+   NoiseCalcFlag                 integer      	1	0 
+   NoiseCalcType                 integer      	1	0 
+   NoiseUnits                    integer      	1	0 
+   NonLinearConvergenceFactor    double       	1	1.000000 
+   NumMassSlice                  integer      	1	10 
+   NumTimeSteps                  integer      	1	25 
+   NumWakeNodes                  integer      	1	8 
+   PropBladesMode                integer      	1	0 
+   QuadTreeBufferLevels          integer      	1	0 
+   ReCref                        double       	1	10000000.000000 
+   ReCrefEnd                     double       	1	20000000.000000 
+   ReCrefNpts                    integer      	1	1 
+   RedirectFile                  string       	1	stdout 
+   RefFlag                       integer      	1	0 
+   Rho                           double       	1	0.002377 
+   SCurveFlag                    integer      	1	0 
+   Sref                          double       	1	100.000000 
+   StallModel                    integer      	1	0 
+   StartAveragingTimeStep        integer      	1	1 
+   StopBeforeRun                 integer      	1	0 
+   Symmetry                      integer      	1	0 
+   TecplotFlag                   integer      	1	0 
+   ThinGeomSet                   integer      	1	1 
+   TimeStepSize                  double       	1	0.001000 
+   UnsteadyType                  integer      	1	0 
+   UpdateMatrixPreconditioner    integer      	1	0 
+   UseModeFlag                   integer      	1	0 
+   UseWakeNodeMatrixPreconditionerinteger      	1	0 
+   Vinf                          double       	1	100.000000 
+   Vref                          double       	1	100.000000 
+   WakeNumIter                   integer      	1	5 
+   WakeRelax                     double       	1	1.000000 
+   WingID                        string       	1	 
+   Xcg                           double       	1	0.000000 
+   Ycg                           double       	1	0.000000 
+   Zcg                           double       	1	0.000000 
+   bref                          double       	1	1.000000 
+   cref                          double       	1	1.000000 
+ XForm::X_Location 
+ XForm::Y_Location 
+ XForm::Z_Location 
+ XForm::X_Rotation 
+ XForm::Y_Rotation 
+ XForm::Z_Rotation 
+ XForm::Origin 
+ XForm::X_Rel_Location 
+ XForm::Y_Rel_Location 
+ XForm::Z_Rel_Location 
+ XForm::X_Rel_Rotation 
+ XForm::Y_Rel_Rotation 
+ XForm::Z_Rel_Rotation 
+ XForm::Abs_Or_Relitive_flag 
+ Attach::Trans_Attach_Flag 
+ Attach::Rots_Attach_Flag 
+ Attach::U_Attach_Location 
+ Attach::U_01 
+ Attach::U_Attach_Location0N 
+ Attach::V_Attach_Location 
+ Attach::R_Attach_Location 
+ Attach::R_01 
+ Attach::R_Attach_Location0N 
+ Attach::S_Attach_Location 
+ Attach::T_Attach_Location 
+ Attach::L_Attach_Location 
+ Attach::L_01 
+ Attach::L_Attach_Location0Len 
+ Attach::M_Attach_Location 
+ Attach::N_Attach_Location 
+ Attach::Eta_Attach_Location 
+ XForm::Scale 
+ XForm::Last_Scale 
+ Shape::Tess_U 
+ Shape::Tess_W 
+ Shape::Wake 
+ WakeSettings::WakeScale 
+ WakeSettings::WakeAngle 
+ BBox::X_Len 
+ BBox::Y_Len 
+ BBox::Z_Len 
+ BBox::X_Min 
+ BBox::Y_Min 
+ BBox::Z_Min 
+ Sym::Sym_Ancestor 
+ Sym::Sym_Ancestor_Origin_Flag 
+ Sym::Sym_Planar_Flag 
+ Sym::Sym_Axial_Flag 
+ Sym::Sym_Rot_N 
+ Sym::Flip_Flag 
+ Mass_Props::Density 
+ Mass_Props::Mass_Area 
+ Mass_Props::Mass_Prior 
+ Mass_Props::Shell_Flag 
+ Mass_Props::PointMass 
+ Mass_Props::CGx 
+ Mass_Props::CGy 
+ Mass_Props::CGz 
+ Mass_Props::Ixx 
+ Mass_Props::Iyy 
+ Mass_Props::Izz 
+ Mass_Props::Ixy 
+ Mass_Props::Ixz 
+ Mass_Props::Iyz 
+ Negative_Volume_Props::Negative_Volume_Flag 
+ EndCap::CapUMinOption 
+ EndCap::CapUMinLength 
+ EndCap::CapUMinOffset 
+ EndCap::CapUMinStrength 
+ EndCap::CapUMinSweepFlag 
+ EndCap::CapUMinTess 
+ EndCap::CapUMaxOption 
+ EndCap::CapUMaxLength 
+ EndCap::CapUMaxOffset 
+ EndCap::CapUMaxStrength 
+ EndCap::CapUMaxSweepFlag 
+ ParasiteDragProps::PercLam 
+ ParasiteDragProps::FFBodyEqnType 
+ ParasiteDragProps::FFWingEqnType 
+ ParasiteDragProps::FFUser 
+ ParasiteDragProps::Q 
+ ParasiteDragProps::Roughness 
+ ParasiteDragProps::TeTwRatio 
+ ParasiteDragProps::TawTwRatio 
+ ParasiteDragProps::IncorporatedGen 
+ ParasiteDragProps::ExpandedList 
+ Index::ActiveXSec 
+ Skinning::ShowSkinningTanFlag 
+ Skinning::ShowSkinningCurveFlag 
+ WingGeom::RelativeDihedralFlag 
+ WingGeom::RelativeTwistFlag 
+ WingGeom::RotateAirfoilMatchDideralFlag 
+ WingGeom::CorrectAirfoilthicknessFlag 
+ WingGeom::TwistAllInXZPlaneFlag 
+ WingGeom::TotalSpan 
+ WingGeom::TotalProjectedSpan 
+ WingGeom::TotalChord 
+ WingGeom::TotalArea 
+ WingGeom::TotalAR 
+ WingGeom::MAC 
+ WingGeom::CurvedArea 
+ WingGeom::LECluster 
+ WingGeom::TECluster 
+ WingGeom::SmallPanelW 
+ WingGeom::MaxGrowth 
+ Index::ActiveAirfoil 
+ Blending::ShowBlendingFlag 
+ XSec::SectTess_U 
+ XSec::InLESweep 
+ XSec::InTESweep 
+ XSec::InLEDihedral 
+ XSec::InTEDihedral 
+ XSec::InLEStrength 
+ XSec::InTEStrength 
+ XSec::OutLESweep 
+ XSec::OutTESweep 
+ XSec::OutLEDihedral 
+ XSec::OutTEDihedral 
+ XSec::OutLEStrength 
+ XSec::OutTEStrength 
+ XSec::InLEMode 
+ XSec::OutLEMode 
+ XSec::InTEMode 
+ XSec::OutTEMode 
+ XSec::ProjectedSpan 
+ XSec::Aspect 
+ XSec::Taper 
+ XSec::Area 
+ XSec::Span 
+ XSec::Avg_Chord 
+ XSec::Tip_Chord 
+ XSec::Root_Chord 
+ XSec::Sec_Sweep 
+ XSec::Sweep 
+ XSec::Sweep_Location 
+ XSec::Sec_Sweep_Location 
+ XSec::Twist 
+ XSec::Twist_Location 
+ XSec::Dihedral 
+ XSec::RotateMatchDideralFlag 
+ XSec::TwistInXZPlaneFlag 
+ XSec::InCluster 
+ XSec::OutCluster 
+ Close::TE_Close_Type 
+ Close::TE_Close_AbsRel 
+ Close::TE_Close_Thick 
+ Close::TE_Close_Thick_Chord 
+ Close::LE_Close_Type 
+ Close::LE_Close_AbsRel 
+ Close::LE_Close_Thick 
+ Close::LE_Close_Thick_Chord 
+ Trim::TE_Trim_Type 
+ Trim::TE_Trim_AbsRel 
+ Trim::TE_Trim_X 
+ Trim::TE_Trim_X_Chord 
+ Trim::TE_Trim_Thick 
+ Trim::TE_Trim_Thick_Chord 
+ Trim::LE_Trim_Type 
+ Trim::LE_Trim_AbsRel 
+ Trim::LE_Trim_X 
+ Trim::LE_Trim_X_Chord 
+ Trim::LE_Trim_Thick 
+ Trim::LE_Trim_Thick_Chord 
+ Cap::TE_Cap_Type 
+ Cap::TE_Cap_Length 
+ Cap::TE_Cap_Offset 
+ Cap::TE_Cap_Strength 
+ Cap::LE_Cap_Type 
+ Cap::LE_Cap_Length 
+ Cap::LE_Cap_Offset 
+ Cap::LE_Cap_Strength 
+ Flap::TE_Flap_Type 
+ Flap::TE_Trim_AbsRel 
+ Flap::TE_Flap_X 
+ Flap::TE_Flap_X_Chord 
+ Flap::TE_Flap_Y_Frc 
+ Flap::TE_Flap_Deflection 
+ Flap::TE_Flap_Flag 
+ Flap::TE_Flap_T 
+ Flap::TE_Flap_DT 
+ XSecCurve::Theta 
+ XSecCurve::Scale 
+ XSecCurve::DeltaX 
+ XSecCurve::DeltaY 
+ XSecCurve::ShiftLE 
+ Chevron::Chevron_Type 
+ Chevron::Number 
+ Chevron::On_Duty 
+ Chevron::Off_Duty 
+ Chevron::AllSym 
+ Chevron::TBSym 
+ Chevron::RLSym 
+ Chevron::W01_Mode 
+ Chevron::W01_Start_Guide 
+ Chevron::W01_Start 
+ Chevron::W01_End_Guide 
+ Chevron::W01_End 
+ Chevron::W01_Center_Guide 
+ Chevron::W01_Center 
+ Chevron::W01_Width 
+ Chevron::TopAmplitude 
+ Chevron::BottomAmplitude 
+ Chevron::LeftAmplitude 
+ Chevron::RightAmplitude 
+ Chevron::Top_Angle 
+ Chevron::Bottom_Angle 
+ Chevron::Right_Angle 
+ Chevron::Left_Angle 
+ Chevron::Top_Slew 
+ Chevron::Bottom_Slew 
+ Chevron::Right_Slew 
+ Chevron::Left_Slew 
+ Chevron::Valley_Radius 
+ Chevron::Peak_Radius 
+ XSecCurve_Background::XSecImagePreserveAR 
+ XSecCurve_Background::XSecImageFlag 
+ XSecCurve_Background::XSecLockImageFlag 
+ XSecCurve_Background::XSecImageW 
+ XSecCurve_Background::XSecImageH 
+ XSecCurve_Background::XSecImageXOffset 
+ XSecCurve_Background::XSecImageYOffset 
+ XSecCurve_Background::XSecFlipImageFlag 
+ XSecCurve::Area 
+ XSecCurve::HWRatio 
+ XSecCurve::Invert 
+ XSecCurve::Chord 
+ XSecCurve::ThickChord 
+ XSecCurve::FitDegree 
+ XSecCurve::Camber 
+ XSecCurve::CamberLoc 
+ XSecCurve::SharpTEFlag 
+ XSecCurve::IdealCl 
+ XSecCurve::CamberInputFlag 
+ XSec::SectTess_U 
+ XSec::InLESweep 
+ XSec::InTESweep 
+ XSec::InLEDihedral 
+ XSec::InTEDihedral 
+ XSec::InLEStrength 
+ XSec::InTEStrength 
+ XSec::OutLESweep 
+ XSec::OutTESweep 
+ XSec::OutLEDihedral 
+ XSec::OutTEDihedral 
+ XSec::OutLEStrength 
+ XSec::OutTEStrength 
+ XSec::InLEMode 
+ XSec::OutLEMode 
+ XSec::InTEMode 
+ XSec::OutTEMode 
+ XSec::ProjectedSpan 
+ XSec::Aspect 
+ XSec::Taper 
+ XSec::Area 
+ XSec::Span 
+ XSec::Avg_Chord 
+ XSec::Tip_Chord 
+ XSec::Root_Chord 
+ XSec::Sec_Sweep 
+ XSec::Sweep 
+ XSec::Sweep_Location 
+ XSec::Sec_Sweep_Location 
+ XSec::Twist 
+ XSec::Twist_Location 
+ XSec::Dihedral 
+ XSec::RotateMatchDideralFlag 
+ XSec::TwistInXZPlaneFlag 
+ XSec::InCluster 
+ XSec::OutCluster 
+ Close::TE_Close_Type 
+ Close::TE_Close_AbsRel 
+ Close::TE_Close_Thick 
+ Close::TE_Close_Thick_Chord 
+ Close::LE_Close_Type 
+ Close::LE_Close_AbsRel 
+ Close::LE_Close_Thick 
+ Close::LE_Close_Thick_Chord 
+ Trim::TE_Trim_Type 
+ Trim::TE_Trim_AbsRel 
+ Trim::TE_Trim_X 
+ Trim::TE_Trim_X_Chord 
+ Trim::TE_Trim_Thick 
+ Trim::TE_Trim_Thick_Chord 
+ Trim::LE_Trim_Type 
+ Trim::LE_Trim_AbsRel 
+ Trim::LE_Trim_X 
+ Trim::LE_Trim_X_Chord 
+ Trim::LE_Trim_Thick 
+ Trim::LE_Trim_Thick_Chord 
+ Cap::TE_Cap_Type 
+ Cap::TE_Cap_Length 
+ Cap::TE_Cap_Offset 
+ Cap::TE_Cap_Strength 
+ Cap::LE_Cap_Type 
+ Cap::LE_Cap_Length 
+ Cap::LE_Cap_Offset 
+ Cap::LE_Cap_Strength 
+ Flap::TE_Flap_Type 
+ Flap::TE_Trim_AbsRel 
+ Flap::TE_Flap_X 
+ Flap::TE_Flap_X_Chord 
+ Flap::TE_Flap_Y_Frc 
+ Flap::TE_Flap_Deflection 
+ Flap::TE_Flap_Flag 
+ Flap::TE_Flap_T 
+ Flap::TE_Flap_DT 
+ XSecCurve::Theta 
+ XSecCurve::Scale 
+ XSecCurve::DeltaX 
+ XSecCurve::DeltaY 
+ XSecCurve::ShiftLE 
+ Chevron::Chevron_Type 
+ Chevron::Number 
+ Chevron::On_Duty 
+ Chevron::Off_Duty 
+ Chevron::AllSym 
+ Chevron::TBSym 
+ Chevron::RLSym 
+ Chevron::W01_Mode 
+ Chevron::W01_Start_Guide 
+ Chevron::W01_Start 
+ Chevron::W01_End_Guide 
+ Chevron::W01_End 
+ Chevron::W01_Center_Guide 
+ Chevron::W01_Center 
+ Chevron::W01_Width 
+ Chevron::TopAmplitude 
+ Chevron::BottomAmplitude 
+ Chevron::LeftAmplitude 
+ Chevron::RightAmplitude 
+ Chevron::Top_Angle 
+ Chevron::Bottom_Angle 
+ Chevron::Right_Angle 
+ Chevron::Left_Angle 
+ Chevron::Top_Slew 
+ Chevron::Bottom_Slew 
+ Chevron::Right_Slew 
+ Chevron::Left_Slew 
+ Chevron::Valley_Radius 
+ Chevron::Peak_Radius 
+ XSecCurve_Background::XSecImagePreserveAR 
+ XSecCurve_Background::XSecImageFlag 
+ XSecCurve_Background::XSecLockImageFlag 
+ XSecCurve_Background::XSecImageW 
+ XSecCurve_Background::XSecImageH 
+ XSecCurve_Background::XSecImageXOffset 
+ XSecCurve_Background::XSecImageYOffset 
+ XSecCurve_Background::XSecFlipImageFlag 
+ XSecCurve::Area 
+ XSecCurve::HWRatio 
+ XSecCurve::Invert 
+ XSecCurve::Chord 
+ XSecCurve::ThickChord 
+ XSecCurve::FitDegree 
+ XSecCurve::Camber 
+ XSecCurve::CamberLoc 
+ XSecCurve::SharpTEFlag 
+ XSecCurve::IdealCl 
+ XSecCurve::CamberInputFlag 

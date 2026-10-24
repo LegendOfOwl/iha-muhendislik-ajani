@@ -1,0 +1,42 @@
+{
+  "status": "synthetic_integration_demonstrator_not_aircraft_recommendation",
+  "units": "m, kg, s; OpenVSP STEP export explicitly metres; CAD imports millimetres",
+  "reference_wing": {
+    "span_m": 2.0,
+    "chord_m": 0.25,
+    "area_m2": 0.5,
+    "airfoil": "NACA0012",
+    "aspect_ratio": 8.0
+  },
+  "assembly": {
+    "fuselage_length_m": 1.2,
+    "fuselage_fineness": 12.0,
+    "wing_le_x_m": 0.28,
+    "horizontal_tail_span_m": 0.55,
+    "horizontal_tail_chord_m": 0.13,
+    "horizontal_tail_le_x_m": 1.0,
+    "vertical_tail_height_m": 0.2,
+    "vertical_tail_root_m": 0.18,
+    "vertical_tail_tip_m": 0.09,
+    "vertical_tail_le_x_m": 0.98,
+    "moment_reference_x_m": 0.3425
+  },
+  "flow": {
+    "velocity_m_s": 30.0,
+    "density_kg_m3": 1.225,
+    "Re_ref": 500000.0,
+    "Mach_requested": 0.0,
+    "alpha_deg": [
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8
+    ],
+    "XFOIL_Ncrit": 9
+  },
+  "analysis_scope": "3D thin lifting surfaces. Fuselage is drawn/exported but excluded from aerodynamic set. Native VSPAERO CD0 estimate is not a validated total aircraft drag.",
+  "real_project_requirements": "not inferred from previous chats or these test parameters"
+}

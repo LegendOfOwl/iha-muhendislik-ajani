@@ -1,0 +1,403 @@
+{
+  "timestamp": "2026-10-18T14:39:35.620353+00:00",
+  "passed": true,
+  "passed_checks": 27,
+  "total_checks": 27,
+  "checks": [
+    {
+      "name": "AR6 medium native solve",
+      "passed": true,
+      "evidence": {
+        "seconds": null,
+        "exit_code": null,
+        "read_completed_case": true
+      },
+      "criterion": "New native exit 0 or exact completed cached case; completion marker"
+    },
+    {
+      "name": "AR6 medium wake convergence",
+      "passed": true,
+      "evidence": [
+        [
+          7.350484999996132e-05,
+          9.775618000000194e-06
+        ]
+      ],
+      "criterion": "Final two iteration changes CL <5e-4 and CDi <5e-5 at every angle"
+    },
+    {
+      "name": "AR6 fine native solve",
+      "passed": true,
+      "evidence": {
+        "seconds": 61.396,
+        "exit_code": 0,
+        "read_completed_case": false
+      },
+      "criterion": "New native exit 0 or exact completed cached case; completion marker"
+    },
+    {
+      "name": "AR6 fine wake convergence",
+      "passed": true,
+      "evidence": [
+        [
+          8.541652999988214e-06,
+          7.843859999999599e-07
+        ],
+        [
+          2.07888980000015e-05,
+          1.2599000000397542e-08
+        ],
+        [
+          6.189818999996488e-05,
+          8.477987999999312e-06
+        ]
+      ],
+      "criterion": "Final two iteration changes CL <5e-4 and CDi <5e-5 at every angle"
+    },
+    {
+      "name": "AR6 panel convergence",
+      "passed": true,
+      "evidence": {
+        "CL_relative": 0.011066454300220352,
+        "CDi_relative": 0.07603850647075627
+      },
+      "criterion": "CL change <3%, CDi change <10%"
+    },
+    {
+      "name": "AR6 linear drag scaling range",
+      "passed": true,
+      "evidence": {
+        "K_relative_range": 0.0009550344688615819,
+        "CL_range": [
+          0.146964562201,
+          0.440114856038
+        ]
+      },
+      "criterion": "CDi/CL\u00b2 range <8%, comparison CL is bracketed"
+    },
+    {
+      "name": "AR6 viscous profile polar",
+      "passed": true,
+      "evidence": {
+        "Re": 592869.7438448293,
+        "Mach": 0.08815906245775712,
+        "Ncrit": 9,
+        "transition_xc": [
+          1,
+          1
+        ],
+        "nonconverged_alpha_deg": []
+      },
+      "criterion": "Native XFOIL: >=10 finite converged points, positive CD; omitted angles reported"
+    },
+    {
+      "name": "AR6 local/global lift consistency",
+      "passed": true,
+      "evidence": {
+        "integrated_CL": 0.293740758319008,
+        "global_CL": 0.293772013987
+      },
+      "criterion": "Span integration matches global CL within 2%"
+    },
+    {
+      "name": "AR6 profile interpolation domain",
+      "passed": true,
+      "evidence": {
+        "local_Cl_range": [
+          0.09874323835790451,
+          0.41367793463599906
+        ],
+        "polar_Cl_range": [
+          -0.4605,
+          0.8944
+        ]
+      },
+      "criterion": "All section lift coefficients lie inside the converged attached-branch polar; no extrapolation"
+    },
+    {
+      "name": "AR8 medium native solve",
+      "passed": true,
+      "evidence": {
+        "seconds": 8.345,
+        "exit_code": 0,
+        "read_completed_case": false
+      },
+      "criterion": "New native exit 0 or exact completed cached case; completion marker"
+    },
+    {
+      "name": "AR8 medium wake convergence",
+      "passed": true,
+      "evidence": [
+        [
+          9.439200999994402e-06,
+          1.0394185999999632e-05
+        ]
+      ],
+      "criterion": "Final two iteration changes CL <5e-4 and CDi <5e-5 at every angle"
+    },
+    {
+      "name": "AR8 fine native solve",
+      "passed": true,
+      "evidence": {
+        "seconds": 61.546,
+        "exit_code": 0,
+        "read_completed_case": false
+      },
+      "criterion": "New native exit 0 or exact completed cached case; completion marker"
+    },
+    {
+      "name": "AR8 fine wake convergence",
+      "passed": true,
+      "evidence": [
+        [
+          3.6470779999908665e-06,
+          3.1296299999998035e-07
+        ],
+        [
+          2.461254499996901e-05,
+          2.6007750000001106e-06
+        ],
+        [
+          0.00015859766700004885,
+          1.9499937000001105e-05
+        ]
+      ],
+      "criterion": "Final two iteration changes CL <5e-4 and CDi <5e-5 at every angle"
+    },
+    {
+      "name": "AR8 panel convergence",
+      "passed": true,
+      "evidence": {
+        "CL_relative": 0.008082327400201206,
+        "CDi_relative": 0.057385923489413404
+      },
+      "criterion": "CL change <3%, CDi change <10%"
+    },
+    {
+      "name": "AR8 linear drag scaling range",
+      "passed": true,
+      "evidence": {
+        "K_relative_range": 0.0008819975109306544,
+        "CL_range": [
+          0.16044134415,
+          0.480695437295
+        ]
+      },
+      "criterion": "CDi/CL\u00b2 range <8%, comparison CL is bracketed"
+    },
+    {
+      "name": "AR8 viscous profile polar",
+      "passed": true,
+      "evidence": {
+        "Re": 513440.25930479495,
+        "Mach": 0.08815906245775712,
+        "Ncrit": 9,
+        "transition_xc": [
+          1,
+          1
+        ],
+        "nonconverged_alpha_deg": [
+          2
+        ]
+      },
+      "criterion": "Native XFOIL: >=10 finite converged points, positive CD; omitted angles reported"
+    },
+    {
+      "name": "AR8 local/global lift consistency",
+      "passed": true,
+      "evidence": {
+        "integrated_CL": 0.320724375,
+        "global_CL": 0.320723578396
+      },
+      "criterion": "Span integration matches global CL within 2%"
+    },
+    {
+      "name": "AR8 profile interpolation domain",
+      "passed": true,
+      "evidence": {
+        "local_Cl_range": [
+          0.10654190181742547,
+          0.4053241132134402
+        ],
+        "polar_Cl_range": [
+          -0.4778,
+          0.8895
+        ]
+      },
+      "criterion": "All section lift coefficients lie inside the converged attached-branch polar; no extrapolation"
+    },
+    {
+      "name": "AR10 medium native solve",
+      "passed": true,
+      "evidence": {
+        "seconds": 8.574,
+        "exit_code": 0,
+        "read_completed_case": false
+      },
+      "criterion": "New native exit 0 or exact completed cached case; completion marker"
+    },
+    {
+      "name": "AR10 medium wake convergence",
+      "passed": true,
+      "evidence": [
+        [
+          5.95378269999669e-05,
+          8.909518000000186e-06
+        ]
+      ],
+      "criterion": "Final two iteration changes CL <5e-4 and CDi <5e-5 at every angle"
+    },
+    {
+      "name": "AR10 fine native solve",
+      "passed": true,
+      "evidence": {
+        "seconds": 62.981,
+        "exit_code": 0,
+        "read_completed_case": false
+      },
+      "criterion": "New native exit 0 or exact completed cached case; completion marker"
+    },
+    {
+      "name": "AR10 fine wake convergence",
+      "passed": true,
+      "evidence": [
+        [
+          5.471262000011912e-06,
+          7.491049999999895e-07
+        ],
+        [
+          5.016242700001117e-05,
+          4.2004199999993996e-07
+        ],
+        [
+          3.240454599995335e-05,
+          1.9007700000003847e-06
+        ]
+      ],
+      "criterion": "Final two iteration changes CL <5e-4 and CDi <5e-5 at every angle"
+    },
+    {
+      "name": "AR10 panel convergence",
+      "passed": true,
+      "evidence": {
+        "CL_relative": 0.00813982034815064,
+        "CDi_relative": 0.057628816091786605
+      },
+      "criterion": "CL change <3%, CDi change <10%"
+    },
+    {
+      "name": "AR10 linear drag scaling range",
+      "passed": true,
+      "evidence": {
+        "K_relative_range": 0.00087309513434497,
+        "CL_range": [
+          0.169457396235,
+          0.50761751908
+        ]
+      },
+      "criterion": "CDi/CL\u00b2 range <8%, comparison CL is bracketed"
+    },
+    {
+      "name": "AR10 viscous profile polar",
+      "passed": true,
+      "evidence": {
+        "Re": 459234.9288762562,
+        "Mach": 0.08815906245775712,
+        "Ncrit": 9,
+        "transition_xc": [
+          1,
+          1
+        ],
+        "nonconverged_alpha_deg": [
+          -2
+        ]
+      },
+      "criterion": "Native XFOIL: >=10 finite converged points, positive CD; omitted angles reported"
+    },
+    {
+      "name": "AR10 local/global lift consistency",
+      "passed": true,
+      "evidence": {
+        "integrated_CL": 0.338701288479424,
+        "global_CL": 0.338682583363
+      },
+      "criterion": "Span integration matches global CL within 2%"
+    },
+    {
+      "name": "AR10 profile interpolation domain",
+      "passed": true,
+      "evidence": {
+        "local_Cl_range": [
+          0.11333473253586085,
+          0.3987745654320961
+        ],
+        "polar_Cl_range": [
+          -0.4921,
+          0.8848
+        ]
+      },
+      "criterion": "All section lift coefficients lie inside the converged attached-branch polar; no extrapolation"
+    }
+  ],
+  "candidates": [
+    {
+      "AR": 6,
+      "span_m": 1.7320508075688772,
+      "chord_m": 0.2886751345948129,
+      "area_m2": 0.5,
+      "Re": 592869.7438448293,
+      "Mach": 0.08815906245775712,
+      "comparison_CL": 0.35,
+      "estimated_alpha_deg": 4.7684419029309915,
+      "CDi_scaled": 0.007222149199205195,
+      "CDprofile_estimated": 0.0076519907276353,
+      "CDwing_estimated": 0.014874139926840495,
+      "nonconverged_XFOIL_alpha_deg": [],
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\study_20261018_173245\\AR6"
+    },
+    {
+      "AR": 8,
+      "span_m": 2.0,
+      "chord_m": 0.25,
+      "area_m2": 0.5,
+      "Re": 513440.25930479495,
+      "Mach": 0.08815906245775712,
+      "comparison_CL": 0.35,
+      "estimated_alpha_deg": 4.36601964627396,
+      "CDi_scaled": 0.0053126412045054775,
+      "CDprofile_estimated": 0.007984479624301514,
+      "CDwing_estimated": 0.01329712082880699,
+      "nonconverged_XFOIL_alpha_deg": [
+        2
+      ],
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\study_20261018_173245\\AR8"
+    },
+    {
+      "AR": 10,
+      "span_m": 2.23606797749979,
+      "chord_m": 0.22360679774997896,
+      "area_m2": 0.5,
+      "Re": 459234.9288762562,
+      "Mach": 0.08815906245775712,
+      "comparison_CL": 0.35,
+      "estimated_alpha_deg": 4.133985508550569,
+      "CDi_scaled": 0.0042820133319078696,
+      "CDprofile_estimated": 0.008227969261610572,
+      "CDwing_estimated": 0.012509982593518442,
+      "nonconverged_XFOIL_alpha_deg": [
+        -2
+      ],
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\study_20261018_173245\\AR10"
+    }
+  ],
+  "case_sha256": "6bb9135ab4b2c6cacefe401c728f5f7f2b892f7bafc24d87bee80cb4f5c659e0",
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\study_20261018_173245",
+  "scope": "Parametreli ara\u00e7 entegrasyonu deneyi; ger\u00e7ek \u0130HA tasar\u0131m se\u00e7imi de\u011fildir.",
+  "method": "Native VSPAERO potential flow plus XFOIL strip profile-drag estimate; approximate low-angle CL\u00b2 rescaling",
+  "limits": [
+    "No aircraft feasibility or optimum claim",
+    "No fuselage, interference, stall, propulsion, energy, trim or structural assessment",
+    "Section lift is rescaled using low-angle linearity; 2D to 3D viscous coupling is approximate",
+    "Panel convergence thresholds concern CL and CDi, not all possible outputs"
+  ]
+}

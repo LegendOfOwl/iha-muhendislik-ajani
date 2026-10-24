@@ -1,0 +1,17 @@
+int main()
+{
+    Print( "NATIVE_OPENVSP_VERSION" );
+    Print( GetVSPVersion() );
+    SetAnalysisInputDefaults( "VSPAEROComputeGeometry" );
+    PrintAnalysisDocs( "VSPAEROComputeGeometry" );
+    SetAnalysisInputDefaults( "VSPAEROSweep" );
+    PrintAnalysisDocs( "VSPAEROSweep" );
+    PrintAnalysisInputs( "VSPAEROSweep" );
+    string wing = AddGeom( "WING", "" );
+    array<string>@ ids = GetGeomParmIDs( wing );
+    for ( uint i = 0; i < ids.length(); i++ )
+    {
+        Print( GetParmGroupName( ids[i] ) + "::" + GetParmName( ids[i] ) );
+    }
+    return 0;
+}

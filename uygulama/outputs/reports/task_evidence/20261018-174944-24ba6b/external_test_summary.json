@@ -1,0 +1,375 @@
+{
+  "timestamp": "2026-10-18T17:03:31.855706+03:00",
+  "passed": true,
+  "passed_checks": 26,
+  "total_checks": 26,
+  "checks": [
+    {
+      "name": "VSPAERO wing_coarse: gerçek çözücü çalışması",
+      "passed": true,
+      "evidence": {
+        "exit_code": null,
+        "seconds": null,
+        "read_completed_case": true,
+        "log": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\external_20261018_164605\\wing_coarse\\native.log"
+      },
+      "criterion": "Yeni çalıştırmada çıkış 0; tümünde API hatası yok, polar ve tamamlanma işareti var"
+    },
+    {
+      "name": "VSPAERO wing_coarse: gerekli katsayılar",
+      "passed": true,
+      "evidence": {
+        "rows": 1
+      },
+      "criterion": "İstenen tüm açılar ve sonlu CL, CDi, Cm. Sıfır kaldırmada tanımsız verim null olarak saklanır."
+    },
+    {
+      "name": "VSPAERO wing_coarse: son iterasyon kuvvet değişimi",
+      "passed": true,
+      "evidence": [
+        {
+          "alpha_deg": 4.0,
+          "CL_change": 0.00018438710399998337,
+          "CDi_change": 7.198789999992433e-07,
+          "L2_Residual_native": -2.538866871366,
+          "Max_Residual_native": -1.418872258753
+        }
+      ],
+      "criterion": "Son iki iterasyonda |delta CL|<5e-4 ve |delta CDi|<5e-5; ağ yakınsaması ayrıca incelenir"
+    },
+    {
+      "name": "VSPAERO wing_medium: gerçek çözücü çalışması",
+      "passed": true,
+      "evidence": {
+        "exit_code": null,
+        "seconds": null,
+        "read_completed_case": true,
+        "log": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\external_20261018_164605\\wing_medium\\native.log"
+      },
+      "criterion": "Yeni çalıştırmada çıkış 0; tümünde API hatası yok, polar ve tamamlanma işareti var"
+    },
+    {
+      "name": "VSPAERO wing_medium: gerekli katsayılar",
+      "passed": true,
+      "evidence": {
+        "rows": 1
+      },
+      "criterion": "İstenen tüm açılar ve sonlu CL, CDi, Cm. Sıfır kaldırmada tanımsız verim null olarak saklanır."
+    },
+    {
+      "name": "VSPAERO wing_medium: son iterasyon kuvvet değişimi",
+      "passed": true,
+      "evidence": [
+        {
+          "alpha_deg": 4.0,
+          "CL_change": 7.235406000000166e-05,
+          "CDi_change": 3.111810999999881e-06,
+          "L2_Residual_native": -2.694353099189,
+          "Max_Residual_native": -1.498988129734
+        }
+      ],
+      "criterion": "Son iki iterasyonda |delta CL|<5e-4 ve |delta CDi|<5e-5; ağ yakınsaması ayrıca incelenir"
+    },
+    {
+      "name": "VSPAERO wing_fine: gerçek çözücü çalışması",
+      "passed": true,
+      "evidence": {
+        "exit_code": null,
+        "seconds": null,
+        "read_completed_case": true,
+        "log": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\external_20261018_164605\\wing_fine\\native.log"
+      },
+      "criterion": "Yeni çalıştırmada çıkış 0; tümünde API hatası yok, polar ve tamamlanma işareti var"
+    },
+    {
+      "name": "VSPAERO wing_fine: gerekli katsayılar",
+      "passed": true,
+      "evidence": {
+        "rows": 7
+      },
+      "criterion": "İstenen tüm açılar ve sonlu CL, CDi, Cm. Sıfır kaldırmada tanımsız verim null olarak saklanır."
+    },
+    {
+      "name": "VSPAERO wing_fine: son iterasyon kuvvet değişimi",
+      "passed": true,
+      "evidence": [
+        {
+          "alpha_deg": -4.0,
+          "CL_change": 1.700647500002539e-05,
+          "CDi_change": 1.242346999999304e-06,
+          "L2_Residual_native": -3.170564477192,
+          "Max_Residual_native": -1.835081857133
+        },
+        {
+          "alpha_deg": -2.0,
+          "CL_change": 1.3848715999992267e-05,
+          "CDi_change": 1.5161100000004452e-07,
+          "L2_Residual_native": -3.111580575343,
+          "Max_Residual_native": -1.695240900212
+        },
+        {
+          "alpha_deg": 2.0,
+          "CL_change": 1.3848715999992267e-05,
+          "CDi_change": 1.5161100000004452e-07,
+          "L2_Residual_native": -3.111580575346,
+          "Max_Residual_native": -1.695240900211
+        },
+        {
+          "alpha_deg": 4.0,
+          "CL_change": 4.586501400000165e-05,
+          "CDi_change": 6.430552999999936e-06,
+          "L2_Residual_native": -2.852260490023,
+          "Max_Residual_native": -1.43187778519
+        },
+        {
+          "alpha_deg": 6.0,
+          "CL_change": 1.8995315999970064e-05,
+          "CDi_change": 2.868068999999779e-06,
+          "L2_Residual_native": -2.886953394051,
+          "Max_Residual_native": -1.719262058186
+        },
+        {
+          "alpha_deg": 8.0,
+          "CL_change": 0.0001585874070000326,
+          "CDi_change": 2.2994440000000116e-05,
+          "L2_Residual_native": -2.702062706739,
+          "Max_Residual_native": -1.326207679959
+        }
+      ],
+      "criterion": "Son iki iterasyonda |delta CL|<5e-4 ve |delta CDi|<5e-5; ağ yakınsaması ayrıca incelenir"
+    },
+    {
+      "name": "VSPAERO bağımsız ağ inceltme",
+      "passed": true,
+      "evidence": {
+        "rows": [
+          {
+            "case": "wing_coarse",
+            "spanwise_setting": 9,
+            "chordwise_setting": 33,
+            "CLtot": 0.327636696148,
+            "CDi": 0.004163441115
+          },
+          {
+            "case": "wing_medium",
+            "spanwise_setting": 17,
+            "chordwise_setting": 49,
+            "CLtot": 0.322378519644,
+            "CDi": 0.004200743023
+          },
+          {
+            "case": "wing_fine",
+            "spanwise_setting": 33,
+            "chordwise_setting": 65,
+            "CLtot": 0.319842028156,
+            "CDi": 0.004436619088
+          }
+        ],
+        "relative_CL_change": 0.007868053649483286,
+        "relative_CDi_change": 0.056151034164319436
+      },
+      "criterion": "Orta->ince ağda CL değişimi<%3; indüklenmiş sürükleme değişimi<%10"
+    },
+    {
+      "name": "VSPAERO / AeroSandbox ayrı çözücü karşılaştırması",
+      "passed": true,
+      "evidence": {
+        "VSPAERO_CL": 0.319842028156,
+        "AeroSandbox_CL": 0.3227423043007971,
+        "relative_difference": 0.008986352598183145
+      },
+      "criterion": "Aynı AR=8 kanat, alfa=4 derece, incompressible model: CL farkı<%10; deneysel doğrulama değildir"
+    },
+    {
+      "name": "VSPAERO simetrik kanat fiziksel kontrolü",
+      "passed": true,
+      "evidence": {
+        "CL_zero": 0.0,
+        "CL_plus4": 0.319842028156,
+        "CL_minus4": -0.319832145605
+      },
+      "criterion": "Sıfır açıda |CL|<.005; +/-4 derecede zıt işaret ve simetri hatası<.01"
+    },
+    {
+      "name": "VSPAERO aircraft_lifting_surfaces_refined_wake: gerçek çözücü çalışması",
+      "passed": true,
+      "evidence": {
+        "exit_code": 0,
+        "seconds": 120.516,
+        "read_completed_case": false,
+        "log": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\external_20261018_164605\\aircraft_lifting_surfaces_refined_wake\\native.log"
+      },
+      "criterion": "Yeni çalıştırmada çıkış 0; tümünde API hatası yok, polar ve tamamlanma işareti var"
+    },
+    {
+      "name": "VSPAERO aircraft_lifting_surfaces_refined_wake: gerekli katsayılar",
+      "passed": true,
+      "evidence": {
+        "rows": 7
+      },
+      "criterion": "İstenen tüm açılar ve sonlu CL, CDi, Cm. Sıfır kaldırmada tanımsız verim null olarak saklanır."
+    },
+    {
+      "name": "VSPAERO aircraft_lifting_surfaces_refined_wake: son iterasyon kuvvet değişimi",
+      "passed": true,
+      "evidence": [
+        {
+          "alpha_deg": -4.0,
+          "CL_change": 1.9144199999709954e-06,
+          "CDi_change": 5.23021399999931e-06,
+          "L2_Residual_native": -3.028833142202,
+          "Max_Residual_native": -1.610918539254
+        },
+        {
+          "alpha_deg": -2.0,
+          "CL_change": 2.270738100002001e-05,
+          "CDi_change": 2.0292200000014693e-07,
+          "L2_Residual_native": -3.213486043719,
+          "Max_Residual_native": -1.785487115403
+        },
+        {
+          "alpha_deg": 2.0,
+          "CL_change": 2.2795436999983876e-05,
+          "CDi_change": 2.0234800000005528e-07,
+          "L2_Residual_native": -3.213972996113,
+          "Max_Residual_native": -1.785146172383
+        },
+        {
+          "alpha_deg": 4.0,
+          "CL_change": 1.8083838000004793e-05,
+          "CDi_change": 5.3619479999994155e-06,
+          "L2_Residual_native": -3.024316669131,
+          "Max_Residual_native": -1.70999181111
+        },
+        {
+          "alpha_deg": 6.0,
+          "CL_change": 5.684079500001271e-05,
+          "CDi_change": 6.050006000001343e-06,
+          "L2_Residual_native": -3.045783874171,
+          "Max_Residual_native": -1.68873143827
+        },
+        {
+          "alpha_deg": 8.0,
+          "CL_change": 5.944093199994338e-05,
+          "CDi_change": 1.4785789999999244e-05,
+          "L2_Residual_native": -2.298079144466,
+          "Max_Residual_native": -0.749379101469
+        }
+      ],
+      "criterion": "Son iki iterasyonda |delta CL|<5e-4 ve |delta CDi|<5e-5; ağ yakınsaması ayrıca incelenir"
+    },
+    {
+      "name": "XFOIL NACA 0012: viskoz açı taraması",
+      "passed": true,
+      "evidence": {
+        "exit_code": null,
+        "rows": 7,
+        "seconds": null,
+        "read_completed_case": true
+      },
+      "criterion": "Re=500000, Mach=0, Ncrit=9; -4..8 derece 7 yakınsamış nokta; sonlu değerler ve CD>0"
+    },
+    {
+      "name": "XFOIL NACA 2412: viskoz açı taraması",
+      "passed": true,
+      "evidence": {
+        "exit_code": null,
+        "rows": 7,
+        "seconds": null,
+        "read_completed_case": true
+      },
+      "criterion": "Re=500000, Mach=0, Ncrit=9; -4..8 derece 7 yakınsamış nokta; sonlu değerler ve CD>0"
+    },
+    {
+      "name": "XFOIL simetrik profil kontrolü",
+      "passed": true,
+      "evidence": {
+        "CL_at_zero": 0.0
+      },
+      "criterion": "NACA0012 sıfır açı ve +/-4 derece simetrisi"
+    },
+    {
+      "name": "OpenVSP -> CAD referans birim kontrolü",
+      "passed": true,
+      "evidence": {
+        "reference_wing_bounding_box_mm": [
+          250.0000002000015,
+          2000.0000002,
+          30.00859945377088
+        ]
+      },
+      "criterion": "OpenVSP metre -> STEP -> CAD milimetre: açıklık 2000, veter 250 mm, hata<.1mm"
+    },
+    {
+      "name": "OpenVSP uçak yüzeylerinin CAD aktarımı",
+      "passed": true,
+      "evidence": {
+        "bbox_mm": [
+          1200.0000002000002,
+          2000.0000002,
+          300.0000002
+        ],
+        "faces": 38,
+        "solids": 0,
+        "valid": true
+      },
+      "criterion": "Geçerli CAD geometrisi; >10 yüzey ve 2000mm açıklık. Yüzey geometrisi imalata hazır katı anlamına gelmez"
+    },
+    {
+      "name": "CadQuery gerçek NACA kanat katısı",
+      "passed": true,
+      "evidence": {
+        "solid_valid": true,
+        "volume_mm3": 10207333.97111005,
+        "analytic_envelope_volume_mm3": 10213249.999999994
+      },
+      "criterion": "Geçerli kapalı kanat zarfı; analitik NACA kesit integraline göre hacim farkı<%1"
+    },
+    {
+      "name": "Kanat katısının STEP turu",
+      "passed": true,
+      "evidence": {
+        "volume_relative_change": 4.1933123640092163e-13
+      },
+      "criterion": "STEP tekrar okuma hacim değişimi<1e-6"
+    },
+    {
+      "name": "TOP / Z: gerçek CAD çizgi projeksiyonu",
+      "passed": true,
+      "evidence": {
+        "DXF_entities": 56
+      },
+      "criterion": "OpenCascade gizli çizgi hesabından boş olmayan DXF"
+    },
+    {
+      "name": "SIDE / -Y: gerçek CAD çizgi projeksiyonu",
+      "passed": true,
+      "evidence": {
+        "DXF_entities": 40
+      },
+      "criterion": "OpenCascade gizli çizgi hesabından boş olmayan DXF"
+    },
+    {
+      "name": "FRONT / X: gerçek CAD çizgi projeksiyonu",
+      "passed": true,
+      "evidence": {
+        "DXF_entities": 56
+      },
+      "criterion": "OpenCascade gizli çizgi hesabından boş olmayan DXF"
+    },
+    {
+      "name": "VSPAERO açıklık yükü / toplam kaldırma tutarlılığı",
+      "passed": true,
+      "criterion": "Yerel Cl*c*dy integralinden CL, toplam CL ile <%2 fark",
+      "evidence": {
+        "integrated_CL": 0.3198421875,
+        "global_CL": 0.319842028156,
+        "relative_difference": 4.981959405014891e-07,
+        "stations": 64
+      }
+    }
+  ],
+  "source_run": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\external_20261018_164605",
+  "actual_aircraft_feasibility": "not_assessed",
+  "synthetic_demonstrator": true
+}

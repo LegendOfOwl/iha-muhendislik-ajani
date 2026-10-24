@@ -1,0 +1,114 @@
+Info:  - Label 'Shapes/Open CASCADE STEP translator 7.8 1' (3D)
+Info: Meshing 1D...
+Info: Meshing curve 1 (Line)
+Info: Meshing curve 2 (Line)
+Progress: Meshing 1D...
+Info: Meshing curve 3 (Line)
+Info: Meshing curve 4 (Line)
+Info: Meshing curve 5 (Line)
+Progress: Meshing 1D...
+Info: Meshing curve 6 (Line)
+Info: Meshing curve 7 (Line)
+Progress: Meshing 1D...
+Info: Meshing curve 8 (Line)
+Info: Meshing curve 9 (Line)
+Progress: Meshing 1D...
+Info: Meshing curve 10 (Line)
+Info: Meshing curve 11 (Line)
+Progress: Meshing 1D...
+Info: Meshing curve 12 (Line)
+Progress: Meshing 1D...
+Info: Done meshing 1D (Wall 0.00159121s, CPU 0s)
+Info: Meshing 2D...
+Info: Meshing surface 2 (Plane, Frontal-Delaunay)
+Info: Meshing surface 1 (Plane, Frontal-Delaunay)
+Progress: Meshing 2D...
+Info: Meshing surface 3 (Plane, Frontal-Delaunay)
+Info: Meshing surface 4 (Plane, Frontal-Delaunay)
+Info: Meshing surface 5 (Plane, Frontal-Delaunay)
+Progress: Meshing 2D...
+Info: Meshing surface 6 (Plane, Frontal-Delaunay)
+Progress: Meshing 2D...
+Info: Done meshing 2D (Wall 0.0186441s, CPU 0.015625s)
+Info: Meshing 3D...
+Progress: Meshing 3D...
+Info: 3D Meshing 1 volume with 1 connected component
+Info: Tetrahedrizing 299 nodes...
+Info: Done tetrahedrizing 307 nodes (Wall 0.00255775s, CPU 0s)
+Info: Reconstructing mesh...
+Info:  - Creating surface mesh
+Info:  - Identifying boundary edges
+Info:  - Recovering boundary
+Info: Done reconstructing mesh (Wall 0.00644779s, CPU 0s)
+Info: Found volume 1
+Info: It. 0 - 0 nodes created - worst tet radius 0.986154 (nodes removed 0 0)
+Info: 3D refinement terminated (299 nodes total):
+Info:  - 0 Delaunay cavities modified for star shapeness
+Info:  - 0 nodes could not be inserted
+Info:  - 674 tetrahedra created in 9.05991e-06 sec. (74393707 tets/s)
+Info: 0 node relocations
+Progress: Meshing 3D...
+Info: Done meshing 3D (Wall 0.0111029s, CPU 0s)
+Info: Optimizing mesh...
+Info: Optimizing volume 1
+Info: Optimization starts (volume = 20000) with worst = 0.0237019 / average = 0.73047:
+Info: 0.00 < quality < 0.10 :         3 elements
+Info: 0.10 < quality < 0.20 :         4 elements
+Info: 0.20 < quality < 0.30 :         0 elements
+Info: 0.30 < quality < 0.40 :         0 elements
+Info: 0.40 < quality < 0.50 :         7 elements
+Info: 0.50 < quality < 0.60 :        29 elements
+Info: 0.60 < quality < 0.70 :       319 elements
+Info: 0.70 < quality < 0.80 :       163 elements
+Info: 0.80 < quality < 0.90 :        19 elements
+Info: 0.90 < quality < 1.00 :       130 elements
+Info: 7 edge swaps, 0 node relocations (volume = 20000): worst = 0.418687 / average = 0.737433 (Wall 0.000350952s, CPU 0s)
+Info: No ill-shaped tets in the mesh :-)
+Info: 0.00 < quality < 0.10 :         0 elements
+Info: 0.10 < quality < 0.20 :         0 elements
+Info: 0.20 < quality < 0.30 :         0 elements
+Info: 0.30 < quality < 0.40 :         0 elements
+Info: 0.40 < quality < 0.50 :         7 elements
+Info: 0.50 < quality < 0.60 :        29 elements
+Info: 0.60 < quality < 0.70 :       320 elements
+Info: 0.70 < quality < 0.80 :       162 elements
+Info: 0.80 < quality < 0.90 :        19 elements
+Info: 0.90 < quality < 1.00 :       130 elements
+Info: Done optimizing mesh (Wall 0.000678062s, CPU 0s)
+Info: 299 nodes 1421 elements
+Info: Meshing order 2 (curvilinear on)...
+Info: Meshing curve 1 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing curve 2 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing curve 3 order 2
+Info: Meshing curve 4 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing curve 5 order 2
+Info: Meshing curve 6 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing curve 7 order 2
+Info: Meshing curve 8 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing curve 9 order 2
+Info: Meshing curve 10 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing curve 11 order 2
+Info: Meshing curve 12 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing surface 1 order 2
+Info: Meshing surface 2 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing surface 3 order 2
+Info: Meshing surface 4 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing surface 5 order 2
+Info: Meshing surface 6 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Meshing volume 1 order 2
+Progress: Meshing order 2 (curvilinear on)...
+Info: Surface mesh: worst distortion = 1 (0 elements in ]0, 0.2]); worst gamma = 0.705915
+Info: Volume mesh: worst distortion = 1 (0 elements in ]0, 0.2])
+Info: Done meshing order 2 (Wall 0.00443697s, CPU 0s)
+Info: Writing 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\simulations\fem_20261018_173855\coarse\mesh.msh'...
+Info: Done writing 'C:\Users\Urungu\Documents\Codex\2026-10-18\bu\outputs\simulations\fem_20261018_173855\coarse\mesh.msh'

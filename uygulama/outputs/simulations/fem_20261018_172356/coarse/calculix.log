@@ -1,0 +1,2062 @@
+
+************************************************************
+
+CalculiX Version 2.22, Copyright(C) 1998-2024 Guido Dhondt
+CalculiX comes with ABSOLUTELY NO WARRANTY. This is free
+software, and you are welcome to redistribute it under
+certain conditions, see gpl.htm
+
+************************************************************
+
+You are using an executable made on Mon Aug  5 19:15:25 CEST 2024
+ Decascading the MPC's
+
+ Determining the structure of the matrix:
+ Using up to 2 cpu(s) for setting up the structure of the matrix.
+ number of equations
+ 4566
+ number of nonzero lower triangular matrix elements
+ 139890
+
+ Using up to 2 cpu(s) for the stress calculation.
+
+ Using up to 2 cpu(s) for the symmetric stiffness/mass contributions.
+
+
+  The numbers below are estimated upper bounds
+
+  number of:
+
+   nodes:         1559
+   elements:          665
+   one-dimensional elements:            0
+   two-dimensional elements:            0
+   integration points per element:            4
+   degrees of freedom per node:            3
+   layers per element:            1
+
+   distributed facial loads:            0
+   distributed volumetric loads:            0
+   concentrated loads:           25
+   single point constraints:          111
+   multiple point constraints:            1
+   terms in all multiple point constraints:            1
+   tie constraints:            0
+   dependent nodes tied by cyclic constraints:            0
+   dependent nodes in pre-tension constraints:            0
+
+   sets:            3
+   terms in all sets:         1404
+
+   materials:            1
+   constants per material and temperature:            2
+   temperature points per material:            1
+   plastic data points per material:            0
+
+   orientations:            0
+   amplitudes:            2
+   data points in all amplitudes:            2
+   print requests:            2
+   transformations:            0
+   property cards:            0
+
+
+ STEP            1
+
+ Static analysis was selected
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element           1
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         333
+        determinant in element           2
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element           3
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         334
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element           4
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         335
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element           5
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         336
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         337
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element           6
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         338
+        determinant in element           7
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element           8
+        determinant in element         339
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element           9
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         340
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          10
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         341
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          11
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         342
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          12
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         343
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          13
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         344
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          14
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         345
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          15
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         346
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          16
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         347
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element          17
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         348
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         349
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          18
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         350
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          19
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         351
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          20
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         352
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          21
+        determinant in element         353
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         354
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element          22
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         355
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          23
+        determinant in element         356
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          24
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         357
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          25
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         358
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          26
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         359
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          27
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         360
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          28
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         361
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          29
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         362
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          30
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         363
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          31
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         364
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          32
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         365
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          33
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         366
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          34
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         367
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          35
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         368
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          36
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         369
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          37
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         370
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          38
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         371
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          39
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          40
+        determinant in element         372
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          41
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         373
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element          42
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          43
+
+        determinant in element         374
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          44
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         375
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          45
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         376
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          46
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         377
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          47
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         378
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          48
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         379
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          49
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         380
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          50
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         381
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          51
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         382
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          52
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         383
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          53
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         384
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          54
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         385
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          55
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         386
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          56
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         387
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          57
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         388
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          58
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         389
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          59
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         390
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          60
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         391
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          61
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         392
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          62
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         393
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          63
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         394
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          64
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         395
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          65
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         396
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element          66
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         397
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          67
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         398
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          68
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         399
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          69
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         400
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          70
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         401
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          71
+        determinant in element         402
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          72
+        determinant in element         403
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          73
+        determinant in element         404
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          74
+
+        determinant in element         405
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          75
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         406
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          76
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         407
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          77
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         408
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          78
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         409
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          79
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         410
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          80
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         411
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          81
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         412
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          82
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         413
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          83
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         414
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          84
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         415
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          85
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         416
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          86
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         417
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          87
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         418
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          88
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         419
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          89
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         420
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element          90
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         421
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          91
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         422
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          92
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         423
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          93
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         424
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          94
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         425
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          95
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         426
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          96
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         427
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          97
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         428
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          98
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         429
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element          99
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         430
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         100
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         431
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         101
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         432
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         102
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         433
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         103
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         434
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         104
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         435
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         105
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         436
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         106
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         437
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         107
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         438
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         108
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         439
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         109
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         440
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         110
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         441
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         111
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         442
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         112
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         443
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         113
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         444
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         114
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         445
+        determinant in element         115
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         446
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         116
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         447
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         117
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         448
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         118
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         449
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         119
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         450
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         120
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         451
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         121
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         452
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         122
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         453
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         123
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         454
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         124
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         455
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         125
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         456
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         126
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         457
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         127
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         458
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         128
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         459
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         129
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         460
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         130
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         461
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         131
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         462
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         132
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         463
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         464
+        determinant in element         133
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         465
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         134
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         466
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         135
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         467
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         136
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         468
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         137
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         469
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         138
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         470
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         139
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         471
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         140
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         472
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         141
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         473
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         142
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         474
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         143
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         475
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         144
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         476
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         145
+        determinant in element         477
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         146
+        determinant in element         478
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         147
+        determinant in element         479
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         148
+        determinant in element         480
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         149
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         481
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         150
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         482
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         151
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         483
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         152
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         484
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         153
+        determinant in element         485
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         154
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         486
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         155
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         487
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         156
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         488
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         157
+        determinant in element         489
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         490
+        determinant in element         158
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         491
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         159
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         492
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         160
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         493
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         161
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         494
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         162
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         495
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         163
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         496
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         164
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         497
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         165
+        determinant in element         498
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         166
+        determinant in element         499
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         167
+        determinant in element         500
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         168
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         501
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         169
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         502
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         170
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         503
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         171
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         504
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         172
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         505
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         173
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         506
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         174
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         507
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         175
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         508
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         176
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         509
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         177
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         510
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         178
+        determinant in element         511
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         179
+        determinant in element         512
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         180
+        determinant in element         513
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         181
+        determinant in element         514
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         182
+        determinant in element         515
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         183
+        determinant in element         516
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         184
+        determinant in element         517
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         518
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         185
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         519
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         520
+
+        determinant in element         186
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         521
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         187
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         522
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         188
+        determinant in element         523
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         524
+
+        determinant in element         189
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         525
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         190
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         526
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         191
+        determinant in element         527
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         192
+        determinant in element         528
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         193
+        determinant in element         529
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         530
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         194
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         531
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         195
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         532
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         196
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         533
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         534
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         197
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         535
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         198
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         536
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         199
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         537
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         200
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         538
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         201
+        determinant in element         539
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         202
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         540
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         203
+        determinant in element         541
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         204
+        determinant in element         542
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         205
+        determinant in element         543
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         544
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         206
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         545
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         546
+        determinant in element         207
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         547
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         208
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         548
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         209
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         549
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         210
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         550
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         211
+        determinant in element         551
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         552
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         212
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         553
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         213
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         554
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         214
+        determinant in element         555
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         215
+        determinant in element         556
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         216
+        determinant in element         557
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         558
+        determinant in element         217
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         218
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         219
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         220
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         221
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         222
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         223
+        determinant in element         559
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         560
+        determinant in element         224
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         561
+        determinant in element         225
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         562
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         226
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         563
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         227
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         564
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         228
+        determinant in element         565
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         229
+        determinant in element         566
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         230
+        determinant in element         567
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         568
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         231
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         569
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         232
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         570
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         233
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         571
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         234
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         572
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         235
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         573
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         236
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         574
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         237
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         238
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         239
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         240
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         241
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         242
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         243
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         244
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         245
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         575
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         246
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         576
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         247
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         577
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         248
+        determinant in element         578
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         249
+        determinant in element         579
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         580
+        determinant in element         250
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         251
+        determinant in element         581
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         252
+        determinant in element         582
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         253
+        determinant in element         583
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         254
+        determinant in element         584
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         255
+        determinant in element         585
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         256
+        determinant in element         586
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         257
+        determinant in element         587
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         588
+        determinant in element         258
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         589
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         259
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         590
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         260
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         591
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         261
+        determinant in element         592
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         262
+        determinant in element         593
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         263
+        determinant in element         594
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         264
+        determinant in element         595
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         265
+        determinant in element         596
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         266
+        determinant in element         597
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         267
+        determinant in element         598
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         599
+        determinant in element         268
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         600
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         269
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         601
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         270
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         602
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         271
+        determinant in element         603
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         272
+        determinant in element         604
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         605
+        determinant in element         273
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         606
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         274
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         607
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         275
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         608
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         276
+        determinant in element         609
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         277
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         610
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         278
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         611
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         279
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         612
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         280
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         613
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         281
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         614
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         282
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         615
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         283
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         616
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         284
+        determinant in element         617
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         285
+        determinant in element         618
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         619
+        determinant in element         286
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         620
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         287
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         621
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         288
+        determinant in element         622
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         289
+        determinant in element         623
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         290
+        determinant in element         624
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         625
+        determinant in element         291
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         626
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         292
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         627
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         293
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         628
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         294
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         629
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         295
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         630
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         631
+        determinant in element         296
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         632
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         297
+        determinant in element         633
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         634
+        determinant in element         298
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         635
+        determinant in element         299
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         636
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         300
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         637
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         301
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         638
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         302
+        determinant in element         639
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         303
+        determinant in element         640
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         641
+        determinant in element         304
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         642
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         305
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         643
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         306
+
+        determinant in element         644
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         307
+        determinant in element         645
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         308
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         309
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         646
+        determinant in element         310
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         647
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         311
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         648
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         312
+        determinant in element         649
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         313
+        determinant in element         650
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         314
+
+        determinant in element         651
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         315
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         652
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         316
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         653
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         317
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         654
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         655
+        determinant in element         318
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         656
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         319
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         657
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         320
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         658
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         321
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         659
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         322
+        determinant in element         660
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         661
+        determinant in element         323
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         662
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         324
+ *ERROR in e_c3d: nonpositive jacobian
+
+        determinant in element         663
+
+ *ERROR in e_c3d: nonpositive jacobian
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         325
+        determinant in element         664
+
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         665
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         326
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         327
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         328
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         329
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         330
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         331
+
+ *ERROR in e_c3d: nonpositive jacobian
+        determinant in element         332
+

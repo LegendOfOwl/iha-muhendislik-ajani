@@ -1,0 +1,252 @@
+{
+  "timestamp": "2026-10-18T14:39:06.111264+00:00",
+  "passed": true,
+  "passed_checks": 14,
+  "total_checks": 14,
+  "checks": [
+    {
+      "name": "FreeCAD native CAD and saved document reopen",
+      "passed": true,
+      "evidence": {
+        "exit_code": 0,
+        "seconds": 6.243
+      },
+      "criterion": "Native process exits 0 and completion marker exists"
+    },
+    {
+      "name": "FreeCAD STEP units and solid topology",
+      "passed": true,
+      "evidence": {
+        "freecad_version": [
+          "1",
+          "1",
+          "4",
+          "20260928 (Git shallow)",
+          "Unknown",
+          "2026/09/28 13:46:34",
+          "(HEAD detached at 4fd3bf320)",
+          "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+        ],
+        "valid_solid": true,
+        "solid_count": 1,
+        "volume_mm3": 19999.999999999996,
+        "bbox_mm": [
+          200.0,
+          10.0,
+          10.0
+        ]
+      },
+      "criterion": "One valid 200 x 10 x 10 mm solid; volume 20000 mm3"
+    },
+    {
+      "name": "C3D10 connectivity coarse",
+      "passed": true,
+      "evidence": {
+        "max_midside_error_mm": 2.842170943040401e-14,
+        "min_corner_determinant_mm3": 32.7754301492233
+      },
+      "criterion": "All CalculiX edge nodes match physical midpoints and corner Jacobians are positive"
+    },
+    {
+      "name": "CalculiX coarse native solve",
+      "passed": true,
+      "evidence": {
+        "exit_code": 0,
+        "seconds": 0.752
+      },
+      "criterion": "Exit 0, Job finished, no *ERROR"
+    },
+    {
+      "name": "Load balance coarse",
+      "passed": true,
+      "evidence": {
+        "applied_N": -10.0,
+        "reaction_N": 10.000004019999995
+      },
+      "criterion": "Reaction equals applied total force within 0.001%"
+    },
+    {
+      "name": "C3D10 connectivity medium",
+      "passed": true,
+      "evidence": {
+        "max_midside_error_mm": 2.220446049250313e-16,
+        "min_corner_determinant_mm3": 15.87419666844656
+      },
+      "criterion": "All CalculiX edge nodes match physical midpoints and corner Jacobians are positive"
+    },
+    {
+      "name": "CalculiX medium native solve",
+      "passed": true,
+      "evidence": {
+        "exit_code": 0,
+        "seconds": 0.457
+      },
+      "criterion": "Exit 0, Job finished, no *ERROR"
+    },
+    {
+      "name": "Load balance medium",
+      "passed": true,
+      "evidence": {
+        "applied_N": -10.0,
+        "reaction_N": 9.999998906999998
+      },
+      "criterion": "Reaction equals applied total force within 0.001%"
+    },
+    {
+      "name": "C3D10 connectivity fine",
+      "passed": true,
+      "evidence": {
+        "max_midside_error_mm": 4.440892098500626e-16,
+        "min_corner_determinant_mm3": 4.20893048314379
+      },
+      "criterion": "All CalculiX edge nodes match physical midpoints and corner Jacobians are positive"
+    },
+    {
+      "name": "CalculiX fine native solve",
+      "passed": true,
+      "evidence": {
+        "exit_code": 0,
+        "seconds": 1.913
+      },
+      "criterion": "Exit 0, Job finished, no *ERROR"
+    },
+    {
+      "name": "Load balance fine",
+      "passed": true,
+      "evidence": {
+        "applied_N": -10.0,
+        "reaction_N": 10.00000325
+      },
+      "criterion": "Reaction equals applied total force within 0.001%"
+    },
+    {
+      "name": "Independent beam theory comparison",
+      "passed": true,
+      "evidence": {
+        "Euler_Bernoulli_mm": 0.45714285714285713,
+        "Timoshenko_mm": 0.4580342857142857,
+        "fine_FEM_mm": 0.45620377623762376,
+        "relative_difference": 0.0020542394801980057
+      },
+      "criterion": "Fine solid FE tip displacement within 3% of slender beam theory"
+    },
+    {
+      "name": "Mesh convergence medium to fine",
+      "passed": true,
+      "evidence": {
+        "relative_change": 0.0003553269765719236,
+        "levels": [
+          {
+            "size_mm": 6.0,
+            "nodes": 1561,
+            "elements": 667,
+            "root_nodes": 37,
+            "tip_nodes": 37,
+            "applied_force_N": -10.0,
+            "tip_displacement_mm": 0.455771454054054,
+            "root_reaction_N": 10.000004019999995,
+            "seconds": 0.752
+          },
+          {
+            "size_mm": 4.0,
+            "nodes": 3811,
+            "elements": 1804,
+            "root_nodes": 65,
+            "tip_nodes": 65,
+            "applied_force_N": -10.0,
+            "tip_displacement_mm": 0.45604173230769224,
+            "root_reaction_N": 9.999998906999998,
+            "seconds": 0.457
+          },
+          {
+            "size_mm": 2.5,
+            "nodes": 13208,
+            "elements": 7261,
+            "root_nodes": 101,
+            "tip_nodes": 101,
+            "applied_force_N": -10.0,
+            "tip_displacement_mm": 0.45620377623762376,
+            "root_reaction_N": 10.00000325,
+            "seconds": 1.913
+          }
+        ]
+      },
+      "criterion": "Mean loaded-end displacement change <1.5%; this quantity only"
+    },
+    {
+      "name": "Linear small-displacement range",
+      "passed": true,
+      "evidence": {
+        "displacement_over_length": 0.0022810188811881187
+      },
+      "criterion": "Displacement/length <1% for this test"
+    }
+  ],
+  "levels": [
+    {
+      "size_mm": 6.0,
+      "nodes": 1561,
+      "elements": 667,
+      "root_nodes": 37,
+      "tip_nodes": 37,
+      "applied_force_N": -10.0,
+      "tip_displacement_mm": 0.455771454054054,
+      "root_reaction_N": 10.000004019999995,
+      "seconds": 0.752
+    },
+    {
+      "size_mm": 4.0,
+      "nodes": 3811,
+      "elements": 1804,
+      "root_nodes": 65,
+      "tip_nodes": 65,
+      "applied_force_N": -10.0,
+      "tip_displacement_mm": 0.45604173230769224,
+      "root_reaction_N": 9.999998906999998,
+      "seconds": 0.457
+    },
+    {
+      "size_mm": 2.5,
+      "nodes": 13208,
+      "elements": 7261,
+      "root_nodes": 101,
+      "tip_nodes": 101,
+      "applied_force_N": -10.0,
+      "tip_displacement_mm": 0.45620377623762376,
+      "root_reaction_N": 10.00000325,
+      "seconds": 1.913
+    }
+  ],
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\fem_20261018_173855",
+  "freecad": {
+    "freecad_version": [
+      "1",
+      "1",
+      "4",
+      "20260928 (Git shallow)",
+      "Unknown",
+      "2026/09/28 13:46:34",
+      "(HEAD detached at 4fd3bf320)",
+      "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+    ],
+    "valid_solid": true,
+    "solid_count": 1,
+    "volume_mm3": 19999.999999999996,
+    "bbox_mm": [
+      200.0,
+      10.0,
+      10.0
+    ]
+  },
+  "calculix_version": "2.22 (bundled native binary)",
+  "gmsh_version": "4.15.2",
+  "units": "mm, N, MPa",
+  "geometry_status": "assumption; synthetic qualification specimen",
+  "unit_conversion": "Analytical calculation: m, N, Pa. Native CAD/FE input: mm, N, MPa (1 m=1000 mm; 1 MPa=1e6 Pa).",
+  "material_status": "assumption; isotropic E=70000 MPa nu=0.3, no material strength assumed",
+  "limitations": [
+    "Not an aircraft structural model",
+    "No composite, buckling, fatigue, joints or failure validation",
+    "Displacement convergence does not prove stress convergence; root stresses excluded from strength claims"
+  ]
+}

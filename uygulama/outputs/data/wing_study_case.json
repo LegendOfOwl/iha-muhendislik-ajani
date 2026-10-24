@@ -1,0 +1,17 @@
+{
+  "scope": "Parametreli araç entegrasyonu deneyi; gerçek İHA tasarım seçimi değildir.",
+  "status": "varsayım",
+  "source": "Bu çalışma alanı için tanımlanan karşılaştırma deneyi; atmosfer ve hedef CL test varsayımlarıdır.",
+  "area_m2": 0.5,
+  "aspect_ratios": [6, 8, 10],
+  "velocity_m_s": 30,
+  "density_kg_m3": 1.225,
+  "dynamic_viscosity_Pa_s": 0.000017894,
+  "speed_of_sound_m_s": 340.294,
+  "comparison_CL": 0.35,
+  "alpha_deg": [2, 4, 6],
+  "airfoil": "NACA0012",
+  "XFOIL_Ncrit": 9,
+  "XFOIL_transition_upper_lower_xc": [1, 1],
+  "limits": "Düz, burulmasız, dikdörtgen izole kanatlar; 2D polar eşleştirmesi yaklaşık bir viskoz düzeltmedir. Stall ve tüm uçak değerlendirmesi yapılmaz."
+}
