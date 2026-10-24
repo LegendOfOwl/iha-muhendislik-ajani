@@ -1,0 +1,62 @@
+{
+  "verified_utc": "2026-10-24T13:58:49.752633+00:00",
+  "passed": true,
+  "lesson_evidence": {
+    "records": 19,
+    "mismatches": []
+  },
+  "old_task_evidence_and_code": [
+    {
+      "task_id": "20261019-201609-ab8031",
+      "records": 8,
+      "mismatches": []
+    },
+    {
+      "task_id": "20261024-153804-27f425",
+      "records": 28,
+      "mismatches": []
+    }
+  ],
+  "M6_frozen_predictions": [
+    {
+      "manifest": "m6_jst_prediction_frozen_20261024_v2.json",
+      "records": 73,
+      "mismatches": []
+    },
+    {
+      "manifest": "m6_wallnormal_prediction_frozen_20261024_v3.json",
+      "records": 73,
+      "mismatches": []
+    }
+  ],
+  "memory_installation_matches": true,
+  "HTML_links": [
+    {
+      "path": "outputs\\reports\\ajan_talimat_gelisimi_20261024.html",
+      "local_links": 23,
+      "missing": []
+    },
+    {
+      "path": "outputs\\Proje-Ozeti.html",
+      "local_links": 44,
+      "missing": []
+    }
+  ],
+  "compiled_scripts": 7,
+  "guard_checks": 39,
+  "core_checks": 26,
+  "instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false
+  },
+  "expert_qualification_passed": false,
+  "minimum_physical_qualification_passed": false,
+  "scope": "Evidence, instructions, launcher and software checks; no new LLM/CFD engineering validation"
+}

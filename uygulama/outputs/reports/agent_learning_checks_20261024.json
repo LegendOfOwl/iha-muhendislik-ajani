@@ -1,0 +1,185 @@
+{
+  "created_utc": "2026-10-24T13:51:04.860173+00:00",
+  "scope": "Artifact/coding guard tests and launcher integration; no new LLM, CAD or CFD physical evaluation",
+  "passed": true,
+  "checks": [
+    {
+      "name": "triangle with a trailing ID that is also a valid node",
+      "passed": true
+    },
+    {
+      "name": "quad with trailing ID larger than point count",
+      "passed": true
+    },
+    {
+      "name": "triangle without trailing ID",
+      "passed": true
+    },
+    {
+      "name": "2D edge uses the dimension-specific type",
+      "passed": true
+    },
+    {
+      "name": "boundary rejects truncated",
+      "passed": true
+    },
+    {
+      "name": "boundary rejects extra",
+      "passed": true
+    },
+    {
+      "name": "boundary rejects repeated",
+      "passed": true
+    },
+    {
+      "name": "boundary rejects range",
+      "passed": true
+    },
+    {
+      "name": "boundary rejects volume-type-as-boundary",
+      "passed": true
+    },
+    {
+      "name": "archived native-rejected JST config is caught",
+      "passed": true
+    },
+    {
+      "name": "archived corrected config is covered",
+      "passed": true
+    },
+    {
+      "name": "other version is not silently certified",
+      "passed": true
+    },
+    {
+      "name": "missing MUSCL is not guessed",
+      "passed": true
+    },
+    {
+      "name": "analytic unit wedge has determinant 0.5",
+      "passed": true
+    },
+    {
+      "name": "inverted wedge remains rejected",
+      "passed": true
+    },
+    {
+      "name": "collapsed wedge remains rejected",
+      "passed": true
+    },
+    {
+      "name": "locally folded wedge remains rejected",
+      "passed": true
+    },
+    {
+      "name": "later terminal history does not replace selected complete field",
+      "passed": true
+    },
+    {
+      "name": "requested newer history without fields rejected",
+      "passed": true
+    },
+    {
+      "name": "missing volume rejected",
+      "passed": true
+    },
+    {
+      "name": "no matching history rejected",
+      "passed": true
+    },
+    {
+      "name": "cross-mesh field mix rejected",
+      "passed": true
+    },
+    {
+      "name": "changed field bytes rejected",
+      "passed": true
+    },
+    {
+      "name": "dry launch leaves task unchanged",
+      "passed": true
+    },
+    {
+      "name": "launch carries current operational prompt version",
+      "passed": true
+    },
+    {
+      "name": "launch explicitly loads operational lessons",
+      "passed": true
+    },
+    {
+      "name": "actual launch branch persists the same instruction snapshot",
+      "passed": true
+    },
+    {
+      "name": "launch calls process exactly once without running a live agent",
+      "passed": true
+    },
+    {
+      "name": "archived residual near threshold still fails before rounding",
+      "passed": true
+    },
+    {
+      "name": "exact threshold does not pass strict inequality",
+      "passed": true
+    },
+    {
+      "name": "genuinely lower value passes strict inequality",
+      "passed": true
+    },
+    {
+      "name": "raw comparison rejects missing",
+      "passed": true
+    },
+    {
+      "name": "raw comparison rejects nan",
+      "passed": true
+    },
+    {
+      "name": "raw comparison rejects infinite",
+      "passed": true
+    },
+    {
+      "name": "raw comparison rejects bool",
+      "passed": true
+    },
+    {
+      "name": "missing required gate fails",
+      "passed": true
+    },
+    {
+      "name": "truthy string is not a passing gate",
+      "passed": true
+    },
+    {
+      "name": "empty contract is rejected",
+      "passed": true
+    },
+    {
+      "name": "stable forces with failed residual remain unqualified",
+      "passed": true
+    }
+  ],
+  "passed_count": 39,
+  "total": 39,
+  "fault_reproductions_caught": {
+    "all_tokens_parser": true,
+    "rounded_residual_pass": true,
+    "terminal_history_field_mix": true,
+    "any_gate_instead_of_all": true
+  },
+  "llm_behavior_improvement_measured": false,
+  "unseen_engineering_task_tested": false,
+  "expert_qualification_passed": false,
+  "instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false
+  }
+}

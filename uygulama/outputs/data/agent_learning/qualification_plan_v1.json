@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-24T13:54:26.788259+00:00",
+  "status": "planned_not_run",
+  "expert_status": "not_established",
+  "iteration_policy": "Yetkili sonraki işte başarısızlığı kaydet, bir düzeltme yap, karşı örnek ve görülmemiş vakayla yeniden değerlendir; ilerleme yoksa ayırt edici teşhise geç.",
+  "comparison_contract": {
+    "baseline_snapshot": "work/agent_learning/baseline_20261024",
+    "candidate_snapshot": {
+      "version": "2026-10-24.1",
+      "files": {
+        "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+        ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+        ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+        ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+      },
+      "expert_qualification": "not_established",
+      "blind_analysis_safe": false
+    },
+    "holdouts_not_selected_yet": true,
+    "required_before_running": [
+      "sabit model/araç sürümü",
+      "aynı girdi ve bütçe",
+      "önceden sabit vaka eşikleri",
+      "cevaba erişim kaydı",
+      "bağımsız değerlendirme"
+    ],
+    "prohibited": [
+      "Eşik gevşetme",
+      "görülen vakayı görülmemiş sayma",
+      "yalnız başarılı tekrarları seçme",
+      "deney cevabını operasyonel belleğe yazma"
+    ]
+  },
+  "competencies": [
+    {
+      "area": "Geometri/CAD",
+      "deliverable": "Önceden kullanılmamış kaynak parçada birim/eksen, katı/topoloji, ölçü ve kritik yüzey geri ölçümü; parametre değişikliğinde yeniden kontrol",
+      "status": "not_run"
+    },
+    {
+      "area": "Dosya/API ve sayısal kabul",
+      "deliverable": "Yeni dosya düzenlerinde ve geçerli/geçersiz kayıt çiftlerinde doğru davranış; araç/ayar sürüm uyumu; eksik veriyle yanlış kabul yok",
+      "status": "coding_guards_only_39_passed"
+    },
+    {
+      "area": "2B viskoz CFD",
+      "deliverable": "Görülmemiş kaynak geometri/koşulda önceden belirlenen geometri, üç ağ, konumsal BL/iz, yakınsama, uzak alan, integrasyon ve deney kapılarının birlikte kabulü",
+      "status": "not_qualified"
+    },
+    {
+      "area": "3B viskoz CFD",
+      "deliverable": "Görülmemiş kanatta 2B kapılarına ek kök/uç/açıklık kontrolleri ve kaynak deney kıyası; ayrı kabul",
+      "status": "not_qualified"
+    },
+    {
+      "area": "Yapı/aeroelastisite",
+      "deliverable": "Yetkili yeni görevde doğru malzeme/yük/mesnet ve uygun referansla ayrı doğrulama; CFD başarısından türetilmez",
+      "status": "not_evaluated_this_iteration"
+    }
+  ],
+  "next_single_step": "Mevcut M6 fizik hipotezini aynı restart ile doğrusal limit çift denemesinde ayırt et; bunu ayrı sayısal test olarak kaydet. Talimat davranışının iyileştiği iddiası için ayrıca yeni CAD/CFD görevlerinde önce/sonra kıyası gerekir."
+}

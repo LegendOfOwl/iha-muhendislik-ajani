@@ -33,3 +33,7 @@ RAE2822 v1/v2 geometri aktarımı, dondurulmuş tahminler ve deney değerlendirm
 ## v0.8.0 — C-grid araştırması ve M6 devamı
 
 Konumsal ağ düzeltmeleri, başarısız sayısal kontroller ve 24 Ekim M6 koşuları.
+
+## v0.9.0 — Hata dersleri ve ajan talimatı
+
+Kanıtlı hata defteri, operasyonel bellek, 39 kontrol ve başlatıcı talimat sürümü.

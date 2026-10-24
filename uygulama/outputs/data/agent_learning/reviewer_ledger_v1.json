@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "version": "2026-10-24.1",
+  "created_utc": "2026-10-24T13:54:26.788259+00:00",
+  "task_id": "20261024-164603-4764e5",
+  "role": "reviewer_only",
+  "scope": "Hata kanıtı ve talimat iyileştirmesi; fiziksel CFD nedeni veya uzmanlık kanıtı değildir.",
+  "counts": {
+    "confirmed_error": 6,
+    "prevented_failure": 2,
+    "hypothesis": 1
+  },
+  "lessons": [
+    {
+      "id": "L01",
+      "knowledge_status": "confirmed_error",
+      "observed": "Sınır satırının son eleman kimliği düğüm olarak okunmuş; ilk kaynak-topoloji teşhisi geçersiz.",
+      "possible_enabling_behavior": "Dosya şemasını doğrulamadan satırın tamamını bağlantı kabul etme olası davranışıdır; modelin iç düşüncesi ölçülmedi.",
+      "behavior_causation_established": false,
+      "scope": "SU2 sınır elemanı tipleri ve kurulu biçimin düğüm sayıları",
+      "correction": "Satırı eleman tipine göre oku; sonda eleman kimliği varsa düğüm sayma. Düğüm aralığı, benzersizlik ve sınır komşuluğunu kontrol et. Geçerli düğüm aralığına düşen sonda kimlik ile karşı örnek kur.",
+      "evidence": [
+        {
+          "path": "outputs/projects/proje-e9319baef1/simulations/m6_wallnormal_mesh_20261024/correction.json",
+          "sha256": "0e2d54ff0ac8770fab4bde219b5aa54302cc00be99055b5f1bd112683db3e3ed"
+        },
+        {
+          "path": "work/m6_followup/wallnormal_mesh_v1_marker_parser_error.py",
+          "sha256": "777873d7cd69cb59b5cc54576db2302889e3f77d96b8d4109716e6664a63dea8"
+        }
+      ],
+      "verification": "Düğüm aralığında kalan sonda ID, sonda büyük ID, eksik/fazla/tekrarlı kayıtlar ile guard geçti.",
+      "promotion_state": "guard_verified",
+      "llm_behavior_validated_on_unseen_case": false,
+      "disproven_diagnosis": {
+        "claim": "Kaynakta prizma sütunu bulunmadığı ilk iddia bu parser hatası nedeniyle çürütüldü.",
+        "status": "invalidated_preserved",
+        "never_reuse_as_fact": true
+      }
+    },
+    {
+      "id": "L02",
+      "knowledge_status": "confirmed_error",
+      "observed": "Yanlış referans yöneliminde kaynak ve değiştirilmiş bütün prizmalar negatif çıkmış; sabit sözleşme dönüşümüyle pozitif.",
+      "possible_enabling_behavior": "Denetçinin koordinat/düğüm sözleşmesini sınamadan işareti fiziksel bozukluk diye yorumlama olası davranışıdır.",
+      "behavior_causation_established": false,
+      "scope": "İlgili çözücünün düğüm/yüz sırası ve kullanılan referans eleman",
+      "correction": "Önce geçerli analitik hücre ve ters/katlanmış hücre ile denetçiyi doğrula. Kaynak sözleşmesine dayanan tek sabit dönüşümü tüm hücrelere uygula; hücre başına işaret değiştirme veya mutlak değer ile bozuk hücreyi gizleme.",
+      "evidence": [
+        {
+          "path": "outputs/projects/proje-e9319baef1/simulations/m6_wallnormal_mesh_20261024_v2/correction.json",
+          "sha256": "621048cb9edb4ec2751ec40e94baf7cb319cc77bcf3036d8116b24ee30769665"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/simulations/m6_wallnormal_mesh_20261024_v3/normal_mesh_audit.json",
+          "sha256": "6d57ba7c403277d792c8eb3000b1b2496260d7d08248c3027fc8f62a1fe3665d"
+        }
+      ],
+      "verification": "Gerçek dondurulmuş wedge denetçisinde analitik, ters, çökmüş ve yerel katlanmış hücre sınandı.",
+      "promotion_state": "guard_verified",
+      "llm_behavior_validated_on_unseen_case": false,
+      "disproven_diagnosis": {
+        "claim": "Kaynak ağın sırf eski determinant işaretiyle ters olduğu teşhisi çürütüldü.",
+        "status": "invalidated_preserved",
+        "never_reuse_as_fact": true
+      }
+    },
+    {
+      "id": "L03",
+      "knowledge_status": "confirmed_error",
+      "observed": "Native SU2 merkezi akı/MUSCL uyumsuzluğunda programı reddetmiş; gerekli NO ayarı sonraki native koşuda çalışmış.",
+      "possible_enabling_behavior": "Yöntem değiştirirken bağımlı seçenekleri önemsiz/etkisiz varsayma olası davranışıdır.",
+      "behavior_causation_established": false,
+      "scope": "Native SU2 8.5.0 merkezi JST/JST_MAT yapılandırması",
+      "correction": "Bu sürümde merkezi akıda MUSCL_FLOW=NO açık olmalı. Etkin limiter/MG bağımlılıklarını kaydet ve pahalı koşudan önce küçük native yapılandırma denemesi yap. Bu koşulu diğer sürümlere veya yöntemlere evrenselleştirme.",
+      "evidence": [
+        {
+          "path": "outputs/projects/proje-e9319baef1/simulations/m6_jst_control_20261024/solver.log",
+          "sha256": "34b87d32fdbe631f0dfe841d39062811cc88b0a916357887a968bfe7d24b253a"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/simulations/m6_jst_control_20261024/case.cfg",
+          "sha256": "76d2277fc9311c838474205475e298d8be0877af7f961a5057b837f7e8247848"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/simulations/m6_jst_control_20261024_v2/run_status.json",
+          "sha256": "cc4e1911f1b9e3c39bc62e83c91932632937678c05276a18a306a697e2a5fe52"
+        }
+      ],
+      "verification": "Eski reddedilmiş ve düzeltilmiş gerçek config üzerinde ön kontrol, eksik ayar ve desteklenmeyen sürüm karşı örneği geçti. Yeni native koşu yapılmadı.",
+      "promotion_state": "guard_verified",
+      "llm_behavior_validated_on_unseen_case": false
+    },
+    {
+      "id": "L04",
+      "knowledge_status": "prevented_failure",
+      "observed": "Kesilmiş koşuda history sonu ve son tam alan farklı; mevcut kayıtta başarılı çıkış/süre uydurulmamış.",
+      "possible_enabling_behavior": "Son history satırını her zaman son alanla eşleme olası hata riskidir; bu kayıtta yanlış kabul edilmiş sonuç bulunduğu söylenmiyor.",
+      "behavior_causation_established": false,
+      "scope": "Alan, yüzey, restart ve history eşlemesi",
+      "correction": "Aynı koşuya ait doğrulanmış dosyaların ortak iterasyonunu seç ve hash'le. Sürecin kaybolmasını başarılı çıkış sayma. Son history satırı başka iterasyondaysa ona eski alanın Cp/y+ değerini atama; eksik değeri açıklamalı null bırak.",
+      "evidence": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/simulations/v3_r4roe_coarse_firstorder_control/run_status.json",
+          "sha256": "852006cc52cd34d22ecd6a9081576c41bc89fad33c44258498e1a63e5691d467"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/simulations/v3_r4roe_coarse_firstorder_control/checkpoint_selection.json",
+          "sha256": "ed952689ec6d219854f9acde4ebc3cb7f9bd8cdbb88e6edc5b21664ae360e246"
+        }
+      ],
+      "verification": "Tam üçlü, eksik alan, farklı mesh kimliği, yanlış hash ve son history ile alan karışımı karşı örnekleri geçti. Guard, gerçek alan metadata çıkarımını yapmaz; çağıran doğrulamalı.",
+      "promotion_state": "guard_verified",
+      "llm_behavior_validated_on_unseen_case": false
+    },
+    {
+      "id": "L05",
+      "knowledge_status": "prevented_failure",
+      "observed": "Yuvarlanınca hedefe eşit görünen gerçek kalıntı ham değerde başarısız; M6 kuvvet ekranı geçse de kalıntı ve deney kapıları açık.",
+      "possible_enabling_behavior": "Gösterim basamağına göre karar verme veya tek başarılı ölçütü genel kabul sayma önlenen hata riskidir.",
+      "behavior_causation_established": false,
+      "scope": "Önceden kaydedilmiş zorunlu kalite kapıları",
+      "correction": "Kararı yuvarlanmamış değerlerle ver. Eksik, sonlu olmayan veya başarısız tek zorunlu kapı genel kabulü kapatır. Yazılım çıkışı ve tek ağ/y+ başarısı fiziksel doğrulama değildir. Eksik deney/mesh çalışmasını geçmiş sayma.",
+      "evidence": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/simulations/v3_r4roe_firstorder_cont4200/prediction_metrics.json",
+          "sha256": "93e95972f4137141a5c9d347387476a3a22f9b21521db35188f63a383d051b67"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/m6_wallnormal_results_20261024_v3.json",
+          "sha256": "696738569e175ae0c9358d6d52f7aee891644257d2db3ac854d91d2cf0c19d8e"
+        }
+      ],
+      "verification": "Gerçek eski ham değer, eşit/eşik altı, null/NaN/inf/bool, eksik kapı ve truthy metin karşı örnekleri geçti.",
+      "promotion_state": "guard_verified",
+      "llm_behavior_validated_on_unseen_case": false
+    },
+    {
+      "id": "L06",
+      "knowledge_status": "confirmed_error",
+      "observed": "Kaynak noktaları taşıyan eski iki spline hücum kenarında yapay teğet açısı oluşturmuş; yeni C1 temsil ayrı sürüm olarak tutulmuş.",
+      "possible_enabling_behavior": "Noktadan geçişi tam geometrik eşdeğerlik için yeterli sanma olası davranışıdır.",
+      "behavior_causation_established": false,
+      "scope": "Kaynak birimi/ekseni ve hücum-firar kenarı gibi kritik birleşimler",
+      "correction": "Nokta uzaklığına ek olarak tek taraflı teğet, uç biçimi, taşma ve eğrilik davranışını ölç. Temsil düzeltmesi yeni geometri sürümüdür; kaynak noktalar sabit olsa da eski/yeni ağları tek sistematik aile diye birleştirme.",
+      "evidence": [
+        {
+          "path": "work/blind_validation/reviewer/leading_edge_tangent_audit.json",
+          "sha256": "d386ff0053ab24c333fd4bf02a37565b513a19a342cace75bdddc4f045b3b4f6"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/review_v2_qualification.json",
+          "sha256": "1d70d7d13e5be22e75133f0207543184c1aa3a759ddc66f6a2cdcfc711f1975c"
+        }
+      ],
+      "verification": "Eski geometri denetimi kanıt olarak yeniden okundu; bu tur yeni geometri veya görülmemiş LLM CAD testi yapılmadı.",
+      "promotion_state": "instruction_added",
+      "llm_behavior_validated_on_unseen_case": false
+    },
+    {
+      "id": "L07",
+      "knowledge_status": "confirmed_error",
+      "observed": "Eski C-grid iz son segmenti kaydedilen aralık sınırını aşmış; ayrı tail-r2 temsil ve bağımsız ağ denetimi var.",
+      "possible_enabling_behavior": "Dağıtımın son noktasını sonradan değiştirirken bütün komşu oranlarını tekrar denetlememek olası davranışıdır.",
+      "behavior_causation_established": false,
+      "scope": "Duvar normal/teğetsel, uç, iz ve ara blok birleşimleri",
+      "correction": "Hücre sayısından önce konum bazında gerçek aralık/büyüme/katman ve Jacobian ölç. Son segment dahil bütün komşu oranlarını denetle. Şok bölgesini beklenen cevaptan alma. İlk y+ başarısını bütün sınır tabakasının çözülmesi sayma.",
+      "evidence": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_unapplied_tail_proposal.json",
+          "sha256": "448ef717e3af96c897c22b664831fdeec9720e13cb0f150f2611a4e47561d14a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/simulations/v3_cgrid_tailr2_coarse/independent_cgrid_audit.json",
+          "sha256": "3821aa8435fb796cda3b48dece06b8ce59f93f03b15dfde5a6db6ad2ac6744ca"
+        }
+      ],
+      "verification": "Önceki konumsal ölçümler korundu; yeni mesh duyarlılık çalışması yapılmadı. Bu hata şok/deney uyuşmazlığının kanıtlanmış kök nedeni değildir.",
+      "promotion_state": "instruction_added",
+      "llm_behavior_validated_on_unseen_case": false
+    },
+    {
+      "id": "L08",
+      "knowledge_status": "confirmed_error",
+      "observed": "Yayınlanmış WIND sayısal eğrisinin yüzey sırası ilk değerlendirmede yanlış eşlenmiş. Native alan vektörü ile history RMS semantiğinin aynı olmadığı ayrıca belgeli.",
+      "possible_enabling_behavior": "Başlık/alan adını birim, yüzey sırası ve üretim aşamasını incelemeden fiziksel anlam diye kabul etme olası davranışıdır.",
+      "behavior_causation_established": false,
+      "scope": "İlgili çözücü sürümünün alan semantiği ve bağımsız kaynak verisi",
+      "correction": "Alan adının yanı sıra yazıldığı aşama, normalizasyon, birim, işaret ve yüzey sırasını kaynakla doğrula. Örnekleme geçerlilik maskesini integrale kadar uygula. Şüpheli kaynak değerini çözüme uysun diye düzeltme; özgün tablo kanıtı ve ayrı revizyon gerekir.",
+      "evidence": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_published_WIND_diagnostic_v1_wrong_branch_order.json",
+          "sha256": "5f4a7f3d41cdbd72950ef8c4420bded0301e1c474ff64a1e5f78ff3156e8fdbb"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_published_WIND_diagnostic.json",
+          "sha256": "1658e1680c69b767c606bfbb21f39507fd50d78dbfdb89b43b9409143f0f1d3b"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_r4_warmstart_v2_diagnosis.json",
+          "sha256": "034d17f7a034772657588e01c548b4cf1a9e7d398d98b3207321818838b1e34b"
+        }
+      ],
+      "verification": "Önceki sıralama/semantik kanıtları okundu; native residual vektörünün tam aşama farkı henüz kanıtlanmadı. Yeni son işlem genel yeterliliği sınanmadı.",
+      "promotion_state": "instruction_added",
+      "llm_behavior_validated_on_unseen_case": false
+    },
+    {
+      "id": "L09",
+      "knowledge_status": "hypothesis",
+      "observed": "M6 doğrusal çözücü üst sınıra geliyor; bu gözlem tek başına yakınsama sorununun nedeni olduğunu göstermiyor.",
+      "possible_enabling_behavior": "Korelasyonu neden sayıp daha çok iterasyonu doğrudan çözüm diye hafızaya yazma riskidir; teşhis açık hipotezdir.",
+      "behavior_causation_established": false,
+      "scope": "Kontrollü sayısal/fiziksel neden araştırması",
+      "correction": "Belirtiyi nedenden ayır. Aynı girdi/başlangıçla tek değişkenli karşılaştırma tasarla; hedefe uydurmak için fiziksel koşulu veya eşiği değiştirme. Daha fazla doğrusal iterasyon ya da daha çok hücreyi henüz sınanmadan çözüm diye kaydetme.",
+      "evidence": [
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/m6_wallnormal_results_20261024_v3.json",
+          "sha256": "696738569e175ae0c9358d6d52f7aee891644257d2db3ac854d91d2cf0c19d8e"
+        }
+      ],
+      "verification": "Aynı tam restart/config/mesh ile yalnız doğrusal sınır değişen eş bütçeli iki koşu planlanmalı. Henüz yapılmadı; düzeltildi denemez.",
+      "promotion_state": "hypothesis_open",
+      "llm_behavior_validated_on_unseen_case": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2303.11366",
+      "checked_utc": "2026-10-24T13:54:26.788259+00:00",
+      "supports": "Reflexion: sonuç geri bildirimi metinsel episodik hafızada sonraki denemeleri yönlendirebilir; ağırlık güncellemesi değildir."
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.17651",
+      "checked_utc": "2026-10-24T13:54:26.788259+00:00",
+      "supports": "Self-Refine: çıktı, geri bildirim ve düzeltme döngüsü farklı görevlerde araştırılmıştır; bu CFD sisteminin uzmanlık testi değildir."
+    }
+  ],
+  "llm_before_after_comparison_run": false,
+  "expert_qualification_passed": false,
+  "instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false
+  }
+}

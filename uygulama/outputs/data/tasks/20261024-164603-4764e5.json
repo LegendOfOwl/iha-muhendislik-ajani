@@ -1,0 +1,95 @@
+{
+  "id": "20261024-164603-4764e5",
+  "request": "Kanıtlı hata derslerini ve hipotezleri ayır; ajan talimatı ve kalıcı hafızayı güncelle; karşı örneklerle sınayıp uzmanlık iddiasını ayrı tut",
+  "kind": "qualification",
+  "created_utc": "2026-10-24T13:46:03.262365+00:00",
+  "status": "tamamlandı",
+  "phase": "talimat ve araç süreci doğrulaması",
+  "acceptance": [
+    "Hata/risk/hipotez ayrımı ve çürüyen teşhislerin korunması",
+    "Sürümlü operasyonel dersler ve mevcut başlatıcı bağlantısı",
+    "Karşı örnekler ve kalıcı hafıza kopyasının doğrulanması",
+    "Eski kanıtların ve açık uzmanlık/fizik kabullerinin korunması"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs/reports/ajan_talimat_gelisimi_20261024.html",
+      "sha256": "01da44cac73cb6c51366ff9060232de528e48fdc0ec19bd1897883936e7cf66e"
+    },
+    {
+      "path": "outputs/data/agent_learning/reviewer_ledger_v1.json",
+      "sha256": "5ea141efc7369f076acea3469b000da77a5395a574527c92492e4590eac16cbb"
+    },
+    {
+      "path": "outputs/data/agent_learning/qualification_plan_v1.json",
+      "sha256": "23183d6e557f92184cf14259334cc825ad0b7a9a39f4b2e5e364283cdb7d56e9"
+    },
+    {
+      "path": "outputs/data/agent_learning/memory_installation_20261024.json",
+      "sha256": "4bb431029b35f4af07ecf610d3b63fb4e9cc4300fba7b4736479fd6cb44c4893"
+    },
+    {
+      "path": "outputs/reports/ajan_hafiza_notu_20261024.md",
+      "sha256": "100d45f573442b8a486eb5b7f38a8aa8b5183b9c3088f611eb3bb565e9900276"
+    },
+    {
+      "path": "outputs/reports/agent_learning_checks_20261024.json",
+      "sha256": "e4c7cc5d508a2988e5ac56d2e5ac3ccb7c948e88cd4d16ccdc66cd5f6fa3c47d"
+    },
+    {
+      "path": "outputs/reports/agent_learning_integrity_20261024.json",
+      "sha256": "537921f7240b81108eeaa27bb95d55addd655583fd44f07f78b776c2ce1206e2"
+    },
+    {
+      "path": "outputs/reports/test_results.json",
+      "sha256": "f3231045f66704096266a9622edd6a99eb1a57689b183cbede4feff8b5a1027d"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+  },
+  "project_id": "qualification",
+  "project_manifest": "outputs\\data\\projects\\qualification.json",
+  "project_data_root": "outputs/data/qualification",
+  "project_output_root": "outputs",
+  "project_snapshot": {
+    "id": "qualification",
+    "name": "Araç doğrulama örnekleri",
+    "kind": "qualification",
+    "artifact_root": "outputs",
+    "data_root": "outputs/data/qualification",
+    "created_utc": "2026-10-19T07:06:12.206479+00:00",
+    "active_cad": null
+  },
+  "completed_utc": "2026-10-24T13:58:49.752633+00:00",
+  "applied_lesson_ids": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09"
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false
+  },
+  "completion_scope": "İlk talimat/hafıza güncellemesi ve kod karşı örnekleri; görülmemiş LLM mühendislik kıyası yapılmadı",
+  "expert_qualification_passed": false,
+  "minimum_physical_qualification_passed": false,
+  "engineering_work_remaining": [
+    "Görülmemiş görevlerde önce/sonra LLM davranış kıyası",
+    "Açık RAE/M6 sayısal, ağ ve deney kapıları"
+  ]
+}
