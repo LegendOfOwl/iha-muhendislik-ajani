@@ -1,0 +1,147 @@
+{
+  "group": "guards",
+  "synthetic_test_only": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+  "checks": [
+    {
+      "name": "Tam girdide koşullu sonuç",
+      "passed": true,
+      "measured": "conditional_lift_screening",
+      "criterion": "Yalnız kaldırma ön hesabı"
+    },
+    {
+      "name": "Kütle ölçekleme kontrolü",
+      "passed": true,
+      "measured": 2.0,
+      "criterion": "Kütle x4 => hız x2"
+    },
+    {
+      "name": "Eksik CLmax sonucu engeller",
+      "passed": true,
+      "measured": {
+        "status": "blocked",
+        "issues": [
+          {
+            "input": "cl_max",
+            "code": "MISSING_VALUE"
+          }
+        ],
+        "results": null,
+        "aircraft_feasibility": "not_assessed"
+      },
+      "criterion": "Sayı üretmeden blocked"
+    },
+    {
+      "name": "Geçersiz girdi yapısı",
+      "passed": true,
+      "measured": [
+        {
+          "code": "INPUTS_MUST_BE_OBJECT"
+        }
+      ],
+      "criterion": "JSON nesnesi gerekli"
+    },
+    {
+      "name": "Yanlış kütle birimi",
+      "passed": true,
+      "measured": [
+        {
+          "input": "mass",
+          "code": "WRONG_OR_MISSING_UNIT",
+          "expected": "kg"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    },
+    {
+      "name": "Sıfır kanat alanı",
+      "passed": true,
+      "measured": [
+        {
+          "input": "wing_area",
+          "code": "INVALID_POSITIVE_FINITE_VALUE"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    },
+    {
+      "name": "Negatif yoğunluk",
+      "passed": true,
+      "measured": [
+        {
+          "input": "density",
+          "code": "INVALID_POSITIVE_FINITE_VALUE"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    },
+    {
+      "name": "NaN kaldırma katsayısı",
+      "passed": true,
+      "measured": [
+        {
+          "input": "cl_max",
+          "code": "INVALID_POSITIVE_FINITE_VALUE"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    },
+    {
+      "name": "Kaynağı olmayan girdi",
+      "passed": true,
+      "measured": [
+        {
+          "input": "mass",
+          "code": "MISSING_PROVENANCE"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    },
+    {
+      "name": "Bilinmiyor durumunda sayı",
+      "passed": true,
+      "measured": [
+        {
+          "input": "mass",
+          "code": "MISSING_PROVENANCE"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    },
+    {
+      "name": "Mantıksal değer sayı sayılmaz",
+      "passed": true,
+      "measured": [
+        {
+          "input": "mass",
+          "code": "INVALID_POSITIVE_FINITE_VALUE"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    },
+    {
+      "name": "Boşluk içeren kaynak",
+      "passed": true,
+      "measured": [
+        {
+          "input": "mass",
+          "code": "MISSING_PROVENANCE"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    },
+    {
+      "name": "Taşma üreten sayısal değer",
+      "passed": true,
+      "measured": [
+        {
+          "code": "NUMERIC_RANGE_ERROR"
+        }
+      ],
+      "criterion": "Geçersiz girdide sonuç yok"
+    }
+  ],
+  "versions": {},
+  "passed": true
+}

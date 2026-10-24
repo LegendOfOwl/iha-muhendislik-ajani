@@ -1,0 +1,296 @@
+{
+  "timestamp": "2026-10-19T08:29:58.753303+00:00",
+  "native_report": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-e9319baef1\\simulations\\m6_rans_20261019_110436\\results.json",
+  "experiment_source": "https://www.grc.nasa.gov/www/wind/valid/m6wing/m6wing.html",
+  "experiment": "Schmitt & Charpin 1979, Test2308; NASA-hosted data, not a NASA-conducted tunnel test",
+  "experiment_points": 271,
+  "sign_checks": [
+    {
+      "section": 1,
+      "side": "u",
+      "max_sign_normalization_error": 2.0000000058861822e-09,
+      "points": 22
+    },
+    {
+      "section": 1,
+      "side": "l",
+      "max_sign_normalization_error": 3.999999997894577e-09,
+      "points": 12
+    },
+    {
+      "section": 2,
+      "side": "u",
+      "max_sign_normalization_error": 2.0000000093556292e-10,
+      "points": 23
+    },
+    {
+      "section": 2,
+      "side": "l",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 11
+    },
+    {
+      "section": 3,
+      "side": "u",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 23
+    },
+    {
+      "section": 3,
+      "side": "l",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 11
+    },
+    {
+      "section": 4,
+      "side": "u",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 23
+    },
+    {
+      "section": 4,
+      "side": "l",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 11
+    },
+    {
+      "section": 5,
+      "side": "u",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 31
+    },
+    {
+      "section": 5,
+      "side": "l",
+      "max_sign_normalization_error": 3.999999997894577e-09,
+      "points": 14
+    },
+    {
+      "section": 6,
+      "side": "u",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 31
+    },
+    {
+      "section": 6,
+      "side": "l",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 14
+    },
+    {
+      "section": 7,
+      "side": "u",
+      "max_sign_normalization_error": 0.0,
+      "points": 31
+    },
+    {
+      "section": 7,
+      "side": "l",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 14
+    }
+  ],
+  "results": [
+    {
+      "grid": "coarse_hexa",
+      "surface_points": 1453,
+      "yplus_max": 13.684778213500977,
+      "yplus_p95": 12.39521598815918,
+      "fraction_yplus_below1": 0.0,
+      "all_point_Cp_RMSE": 0.08699875231784629,
+      "fraction_within_NASA_measurement_uncertainty": 0.35793357933579334,
+      "all_points_within_NASA_uncertainty": false,
+      "geometry_distance_max_over_chord": 0.0011045278277346349,
+      "sections": [
+        {
+          "section": 1,
+          "eta": 0.2,
+          "eta_in_tec_file": 0.2,
+          "side": "u",
+          "points": 22,
+          "Cp_RMSE": 0.06507544088862693,
+          "Cp_max_abs_error": 0.1734571244731009,
+          "fraction_within_measurement_0p02": 0.22727272727272727,
+          "max_geometry_distance_over_chord": 0.0006301625424607324
+        },
+        {
+          "section": 1,
+          "eta": 0.2,
+          "eta_in_tec_file": 0.2,
+          "side": "l",
+          "points": 12,
+          "Cp_RMSE": 0.048562325828802815,
+          "Cp_max_abs_error": 0.12900779363136128,
+          "fraction_within_measurement_0p02": 0.6666666666666666,
+          "max_geometry_distance_over_chord": 0.000661979636639116
+        },
+        {
+          "section": 2,
+          "eta": 0.44,
+          "eta_in_tec_file": 0.44,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.0805628183264717,
+          "Cp_max_abs_error": 0.24086692028040613,
+          "fraction_within_measurement_0p02": 0.21739130434782608,
+          "max_geometry_distance_over_chord": 0.0006358063016841565
+        },
+        {
+          "section": 2,
+          "eta": 0.44,
+          "eta_in_tec_file": 0.44,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.04114084625615104,
+          "Cp_max_abs_error": 0.09790747375296047,
+          "fraction_within_measurement_0p02": 0.8181818181818182,
+          "max_geometry_distance_over_chord": 0.0006324570956042556
+        },
+        {
+          "section": 3,
+          "eta": 0.65,
+          "eta_in_tec_file": 0.65,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.05577618597269206,
+          "Cp_max_abs_error": 0.15926772885858143,
+          "fraction_within_measurement_0p02": 0.30434782608695654,
+          "max_geometry_distance_over_chord": 0.0006140546331127993
+        },
+        {
+          "section": 3,
+          "eta": 0.65,
+          "eta_in_tec_file": 0.65,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.018170131973556523,
+          "Cp_max_abs_error": 0.04173507197539658,
+          "fraction_within_measurement_0p02": 0.7272727272727273,
+          "max_geometry_distance_over_chord": 0.0007315267249661353
+        },
+        {
+          "section": 4,
+          "eta": 0.8,
+          "eta_in_tec_file": 0.8,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.06856274376357115,
+          "Cp_max_abs_error": 0.19464384293657705,
+          "fraction_within_measurement_0p02": 0.391304347826087,
+          "max_geometry_distance_over_chord": 0.0006237636315893721
+        },
+        {
+          "section": 4,
+          "eta": 0.8,
+          "eta_in_tec_file": 0.8,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.01893109074120496,
+          "Cp_max_abs_error": 0.0501219929588061,
+          "fraction_within_measurement_0p02": 0.8181818181818182,
+          "max_geometry_distance_over_chord": 0.00065707761734079
+        },
+        {
+          "section": 5,
+          "eta": 0.9,
+          "eta_in_tec_file": 0.9,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.13819552456548198,
+          "Cp_max_abs_error": 0.6199142565318815,
+          "fraction_within_measurement_0p02": 0.22580645161290322,
+          "max_geometry_distance_over_chord": 0.0006242629724525756
+        },
+        {
+          "section": 5,
+          "eta": 0.9,
+          "eta_in_tec_file": 0.9,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.02980407195846629,
+          "Cp_max_abs_error": 0.06782263698807628,
+          "fraction_within_measurement_0p02": 0.7857142857142857,
+          "max_geometry_distance_over_chord": 0.0006439104602033285
+        },
+        {
+          "section": 6,
+          "eta": 0.95,
+          "eta_in_tec_file": 0.96,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.08192340813450844,
+          "Cp_max_abs_error": 0.21917300682533636,
+          "fraction_within_measurement_0p02": 0.25806451612903225,
+          "max_geometry_distance_over_chord": 0.0006256764215515542
+        },
+        {
+          "section": 6,
+          "eta": 0.95,
+          "eta_in_tec_file": 0.96,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.035980564707996585,
+          "Cp_max_abs_error": 0.0823850642274615,
+          "fraction_within_measurement_0p02": 0.6428571428571429,
+          "max_geometry_distance_over_chord": 0.0006429938474759612
+        },
+        {
+          "section": 7,
+          "eta": 0.99,
+          "eta_in_tec_file": 0.99,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.1447822783300085,
+          "Cp_max_abs_error": 0.29807900911886764,
+          "fraction_within_measurement_0p02": 0.06451612903225806,
+          "max_geometry_distance_over_chord": 0.0011045278277346349
+        },
+        {
+          "section": 7,
+          "eta": 0.99,
+          "eta_in_tec_file": 0.99,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.08196666146588645,
+          "Cp_max_abs_error": 0.17584419160821785,
+          "fraction_within_measurement_0p02": 0.0,
+          "max_geometry_distance_over_chord": 0.000923843146437692
+        }
+      ]
+    }
+  ],
+  "source_eta_discrepancy": "NASA main table and Study1 Fig13 specify section6 eta=0.95; its Tecplot file encodes 0.96. Main comparison follows the table; both interpretations are retained as postprocessing sensitivity, without fitting flow conditions.",
+  "eta_sensitivity": [
+    {
+      "grid": "coarse_hexa",
+      "main_eta_0p95_RMSE": 0.08699875231784629,
+      "alternative_eta_0p96_RMSE": 0.08688654277473344,
+      "section6_alternative": [
+        {
+          "section": 6,
+          "eta": 0.96,
+          "eta_in_tec_file": 0.96,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.08235566579685548,
+          "Cp_max_abs_error": 0.2694321629631341,
+          "fraction_within_measurement_0p02": 0.1935483870967742,
+          "max_geometry_distance_over_chord": 0.0006256794038483704
+        },
+        {
+          "section": 6,
+          "eta": 0.96,
+          "eta_in_tec_file": 0.96,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.027562184513744568,
+          "Cp_max_abs_error": 0.06453442171932244,
+          "fraction_within_measurement_0p02": 0.5714285714285714,
+          "max_geometry_distance_over_chord": 0.0006429967056852532
+        }
+      ]
+    }
+  ],
+  "normalization": "At y=eta*NASA nominal semispan 1.1963 m; local cut leading/trailing x define x/c, z/c uses the same chord. Cp interpolated on nearest cut segment to measured (x/c,z/c); geometry mismatch recorded. No flow angle or pressure fitted to experiment.",
+  "mesh_geometry_note": "Rounded source-grid tips extend beyond NASA nominal semispan; two grid families have small geometry differences, so this is sensitivity and experiment comparison, not formal grid independence."
+}

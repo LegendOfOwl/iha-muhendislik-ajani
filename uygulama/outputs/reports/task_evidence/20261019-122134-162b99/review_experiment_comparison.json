@@ -1,0 +1,493 @@
+{
+  "timestamp": "2026-10-19T13:08:30.872361+00:00",
+  "prediction_frozen_sha256": "7bf936c68e265c72b05c2bd4b0eca28edba6c81cd4ea0850b8cfffce726aa848",
+  "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "source_files_unchanged": true,
+  "all_experimental_points": 103,
+  "case_results": [
+    {
+      "all": {
+        "points": 103,
+        "RMSE": 0.11700018838853454,
+        "mean_bias": 0.03143871104681453,
+        "p95_abs_error": 0.0993887900801623,
+        "max_abs_error": 1.0439330083547622,
+        "fraction_within_source_uncertainty_0p0026": 0.10679611650485436
+      },
+      "upper": {
+        "points": 54,
+        "RMSE": 0.16088485598788904,
+        "mean_bias": 0.05868239784711426,
+        "p95_abs_error": 0.19314279705337262,
+        "max_abs_error": 1.0439330083547622,
+        "fraction_within_source_uncertainty_0p0026": 0.037037037037037035
+      },
+      "lower": {
+        "points": 49,
+        "RMSE": 0.01580425458536351,
+        "mean_bias": 0.0014150562056679096,
+        "p95_abs_error": 0.018912849209819935,
+        "max_abs_error": 0.06393885022141355,
+        "fraction_within_source_uncertainty_0p0026": 0.1836734693877551
+      },
+      "wall": {
+        "points": 487,
+        "array_names": [
+          "Density",
+          "Momentum",
+          "Energy",
+          "Nu_Tilde",
+          "Pressure",
+          "Temperature",
+          "Mach",
+          "Pressure_Coefficient",
+          "Velocity",
+          "Laminar_Viscosity",
+          "Skin_Friction_Coefficient",
+          "Heat_Flux",
+          "Y_Plus",
+          "Eddy_Viscosity",
+          "Residual_Density",
+          "Residual_Momentum",
+          "Residual_Energy",
+          "Residual_Nu_Tilde"
+        ],
+        "signed_enclosed_area_m2": 0.07791510969400406,
+        "pressure_CFx_independent": -0.01945740543305874,
+        "pressure_CFy_independent": 0.7020981311798096,
+        "max_wall_yplus": 0.5243999361991882,
+        "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+      },
+      "source_pressure_uncertainty": 0.0026,
+      "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+      "regions": {
+        "LE": {
+          "points": 33,
+          "RMSE": 0.18921606240500066,
+          "mean_bias": 0.034752140718841404,
+          "p95_abs_error": 0.1503678575422251,
+          "max_abs_error": 1.0439330083547622,
+          "fraction_within_source_uncertainty_0p0026": 0.12121212121212122
+        },
+        "mid": {
+          "points": 58,
+          "RMSE": 0.062091327138656664,
+          "mean_bias": 0.031990146199507526,
+          "p95_abs_error": 0.09445673394656895,
+          "max_abs_error": 0.2721999811495288,
+          "fraction_within_source_uncertainty_0p0026": 0.1206896551724138
+        },
+        "TE": {
+          "points": 12,
+          "RMSE": 0.02015053561666371,
+          "mean_bias": 0.019661509544057765,
+          "p95_abs_error": 0.026579452468748016,
+          "max_abs_error": 0.0267097718748614,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        }
+      },
+      "predicted_shock": {
+        "location_x_over_c": 0.5279021263122559,
+        "bracket_x_over_c": [
+          0.5268547534942627,
+          0.5289494395256042
+        ],
+        "Cp_recovery_gradient": 21.29781150817871,
+        "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+      },
+      "experimental_shock": {
+        "location_x_over_c": 0.5375000000000001,
+        "bracket_x_over_c": [
+          0.525,
+          0.55
+        ],
+        "Cp_recovery_gradient": 12.25599999999999,
+        "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+      },
+      "shock_location_abs_error_chords": 0.00959787368774423,
+      "checks": {
+        "all_RMSE": false,
+        "upper_RMSE": false,
+        "lower_RMSE": true,
+        "p95_error": false,
+        "max_error": false,
+        "shock_location": true
+      },
+      "experimental_passed": false,
+      "negative_control_wrong_Cp_sign_RMSE": 1.3440530235117667,
+      "label": "coarse",
+      "surface_file": "outputs\\projects\\proje-15cce2de02\\simulations\\coarse\\surface_flow.vtu",
+      "surface_sha256": "c2501a83f8f46ab42c99fb345bc8cea6238f807fd8190b9826a1751a97ca6485",
+      "mass_balance_diagnostic": {
+        "normalized_net_mass_imbalance": 3.344036645248466e-06,
+        "net_mass_flux_in_output_units": 0.00013877363775227636,
+        "max_coordinate_match_error_m": 3.9269740703673506e-07,
+        "method": "Nodal rho*u trapezoid on square outer boundary, positive outward normal. A diagnostic with quadrature error, not the native Riemann flux or a new acceptance threshold."
+      }
+    },
+    {
+      "all": {
+        "points": 103,
+        "RMSE": 0.11914940426976192,
+        "mean_bias": 0.031001214408732113,
+        "p95_abs_error": 0.1134378764230981,
+        "max_abs_error": 1.0436886205771367,
+        "fraction_within_source_uncertainty_0p0026": 0.038834951456310676
+      },
+      "upper": {
+        "points": 54,
+        "RMSE": 0.16386979044740618,
+        "mean_bias": 0.05968201208613663,
+        "p95_abs_error": 0.21032219823803106,
+        "max_abs_error": 1.0436886205771367,
+        "fraction_within_source_uncertainty_0p0026": 0.0
+      },
+      "lower": {
+        "points": 49,
+        "RMSE": 0.015759125279054327,
+        "mean_bias": -0.0006061952765708303,
+        "p95_abs_error": 0.022421718717402936,
+        "max_abs_error": 0.060176601835836285,
+        "fraction_within_source_uncertainty_0p0026": 0.08163265306122448
+      },
+      "wall": {
+        "points": 730,
+        "array_names": [
+          "Density",
+          "Momentum",
+          "Energy",
+          "Nu_Tilde",
+          "Pressure",
+          "Temperature",
+          "Mach",
+          "Pressure_Coefficient",
+          "Velocity",
+          "Laminar_Viscosity",
+          "Skin_Friction_Coefficient",
+          "Heat_Flux",
+          "Y_Plus",
+          "Eddy_Viscosity",
+          "Residual_Density",
+          "Residual_Momentum",
+          "Residual_Energy",
+          "Residual_Nu_Tilde"
+        ],
+        "signed_enclosed_area_m2": 0.07791637629270554,
+        "pressure_CFx_independent": -0.02051726169884205,
+        "pressure_CFy_independent": 0.6981244087219238,
+        "max_wall_yplus": 0.3496948182582855,
+        "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+      },
+      "source_pressure_uncertainty": 0.0026,
+      "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+      "regions": {
+        "LE": {
+          "points": 33,
+          "RMSE": 0.18955596125907354,
+          "mean_bias": 0.0311166128546826,
+          "p95_abs_error": 0.1512319888559277,
+          "max_abs_error": 1.0436886205771367,
+          "fraction_within_source_uncertainty_0p0026": 0.06060606060606061
+        },
+        "mid": {
+          "points": 58,
+          "RMSE": 0.06835462243109985,
+          "mean_bias": 0.03309402244459032,
+          "p95_abs_error": 0.08133870447015784,
+          "max_abs_error": 0.3238467208523388,
+          "fraction_within_source_uncertainty_0p0026": 0.034482758620689655
+        },
+        "TE": {
+          "points": 12,
+          "RMSE": 0.021433966305144853,
+          "mean_bias": 0.020568629842386967,
+          "p95_abs_error": 0.02843863780632562,
+          "max_abs_error": 0.028757192348908237,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        }
+      },
+      "predicted_shock": {
+        "location_x_over_c": 0.5249179601669312,
+        "bracket_x_over_c": [
+          0.5242674350738525,
+          0.525568425655365
+        ],
+        "Cp_recovery_gradient": 24.36244010925293,
+        "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+      },
+      "experimental_shock": {
+        "location_x_over_c": 0.5375000000000001,
+        "bracket_x_over_c": [
+          0.525,
+          0.55
+        ],
+        "Cp_recovery_gradient": 12.25599999999999,
+        "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+      },
+      "shock_location_abs_error_chords": 0.012582039833068936,
+      "checks": {
+        "all_RMSE": false,
+        "upper_RMSE": false,
+        "lower_RMSE": true,
+        "p95_error": false,
+        "max_error": false,
+        "shock_location": true
+      },
+      "experimental_passed": false,
+      "negative_control_wrong_Cp_sign_RMSE": 1.3448198625689052,
+      "label": "medium",
+      "surface_file": "outputs\\projects\\proje-15cce2de02\\simulations\\medium\\surface_flow.vtu",
+      "surface_sha256": "2e5504afe548c4140d69158d43bc144055170a4d8f7b9124312da6af5debd06a",
+      "mass_balance_diagnostic": {
+        "normalized_net_mass_imbalance": 3.34017803922339e-06,
+        "net_mass_flux_in_output_units": 0.00013861656198566052,
+        "max_coordinate_match_error_m": 7.629355138760729e-07,
+        "method": "Nodal rho*u trapezoid on square outer boundary, positive outward normal. A diagnostic with quadrature error, not the native Riemann flux or a new acceptance threshold."
+      }
+    },
+    {
+      "all": {
+        "points": 103,
+        "RMSE": 0.12252231991511975,
+        "mean_bias": 0.03158683952756784,
+        "p95_abs_error": 0.12432576231251288,
+        "max_abs_error": 1.0471259638048553,
+        "fraction_within_source_uncertainty_0p0026": 0.038834951456310676
+      },
+      "upper": {
+        "points": 54,
+        "RMSE": 0.16854353245053433,
+        "mean_bias": 0.06211212458014707,
+        "p95_abs_error": 0.21772038380783826,
+        "max_abs_error": 1.0471259638048553,
+        "fraction_within_source_uncertainty_0p0026": 0.0
+      },
+      "lower": {
+        "points": 49,
+        "RMSE": 0.015800567350709015,
+        "mean_bias": -0.0020532705303765893,
+        "p95_abs_error": 0.020673415132043946,
+        "max_abs_error": 0.0577132120926942,
+        "fraction_within_source_uncertainty_0p0026": 0.08163265306122448
+      },
+      "wall": {
+        "points": 1095,
+        "array_names": [
+          "Density",
+          "Momentum",
+          "Energy",
+          "Nu_Tilde",
+          "Pressure",
+          "Temperature",
+          "Mach",
+          "Pressure_Coefficient",
+          "Velocity",
+          "Laminar_Viscosity",
+          "Skin_Friction_Coefficient",
+          "Heat_Flux",
+          "Y_Plus",
+          "Eddy_Viscosity",
+          "Residual_Density",
+          "Residual_Momentum",
+          "Residual_Energy",
+          "Residual_Nu_Tilde"
+        ],
+        "signed_enclosed_area_m2": 0.07791692018508911,
+        "pressure_CFx_independent": -0.020833302289247513,
+        "pressure_CFy_independent": 0.6922867298126221,
+        "max_wall_yplus": 0.2352381944656372,
+        "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+      },
+      "source_pressure_uncertainty": 0.0026,
+      "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+      "regions": {
+        "LE": {
+          "points": 33,
+          "RMSE": 0.1908233320161707,
+          "mean_bias": 0.029951222995816103,
+          "p95_abs_error": 0.1528125927467362,
+          "max_abs_error": 1.0471259638048553,
+          "fraction_within_source_uncertainty_0p0026": 0.06060606060606061
+        },
+        "mid": {
+          "points": 58,
+          "RMSE": 0.07641847765859873,
+          "mean_bias": 0.034778468562060995,
+          "p95_abs_error": 0.08433045633992832,
+          "max_abs_error": 0.3979575413897968,
+          "fraction_within_source_uncertainty_0p0026": 0.034482758620689655
+        },
+        "TE": {
+          "points": 12,
+          "RMSE": 0.022084373790119693,
+          "mean_bias": 0.020658577989834923,
+          "p95_abs_error": 0.030515520874339105,
+          "max_abs_error": 0.03092551794332421,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        }
+      },
+      "predicted_shock": {
+        "location_x_over_c": 0.5219807624816895,
+        "bracket_x_over_c": [
+          0.5215799808502197,
+          0.5223815441131592
+        ],
+        "Cp_recovery_gradient": 24.767772674560547,
+        "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+      },
+      "experimental_shock": {
+        "location_x_over_c": 0.5375000000000001,
+        "bracket_x_over_c": [
+          0.525,
+          0.55
+        ],
+        "Cp_recovery_gradient": 12.25599999999999,
+        "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+      },
+      "shock_location_abs_error_chords": 0.015519237518310636,
+      "checks": {
+        "all_RMSE": false,
+        "upper_RMSE": false,
+        "lower_RMSE": true,
+        "p95_error": false,
+        "max_error": false,
+        "shock_location": true
+      },
+      "experimental_passed": false,
+      "negative_control_wrong_Cp_sign_RMSE": 1.3429680591108366,
+      "label": "fine",
+      "surface_file": "outputs\\projects\\proje-15cce2de02\\simulations\\fine\\surface_flow.vtu",
+      "surface_sha256": "4f9e80e29b8b359b9a9b409641d15bca30c53c7557790c714b72aadd3f67531b",
+      "mass_balance_diagnostic": {
+        "normalized_net_mass_imbalance": 9.401677508958243e-08,
+        "net_mass_flux_in_output_units": 3.9017515121031465e-06,
+        "max_coordinate_match_error_m": 6.023245155972745e-07,
+        "method": "Nodal rho*u trapezoid on square outer boundary, positive outward normal. A diagnostic with quadrature error, not the native Riemann flux or a new acceptance threshold."
+      }
+    },
+    {
+      "all": {
+        "points": 103,
+        "RMSE": 0.11500903123055928,
+        "mean_bias": 0.027065128973400198,
+        "p95_abs_error": 0.11871775383973725,
+        "max_abs_error": 1.022839545608476,
+        "fraction_within_source_uncertainty_0p0026": 0.11650485436893204
+      },
+      "upper": {
+        "points": 54,
+        "RMSE": 0.15818014680287268,
+        "mean_bias": 0.048343739482582686,
+        "p95_abs_error": 0.18463813040015653,
+        "max_abs_error": 1.022839545608476,
+        "fraction_within_source_uncertainty_0p0026": 0.0
+      },
+      "lower": {
+        "points": 49,
+        "RMSE": 0.015157123167969277,
+        "mean_bias": 0.0036152316775664287,
+        "p95_abs_error": 0.01841620877020215,
+        "max_abs_error": 0.06756542726578585,
+        "fraction_within_source_uncertainty_0p0026": 0.24489795918367346
+      },
+      "wall": {
+        "points": 730,
+        "array_names": [
+          "Density",
+          "Momentum",
+          "Energy",
+          "Nu_Tilde",
+          "Pressure",
+          "Temperature",
+          "Mach",
+          "Pressure_Coefficient",
+          "Velocity",
+          "Laminar_Viscosity",
+          "Skin_Friction_Coefficient",
+          "Heat_Flux",
+          "Y_Plus",
+          "Eddy_Viscosity",
+          "Residual_Density",
+          "Residual_Momentum",
+          "Residual_Energy",
+          "Residual_Nu_Tilde"
+        ],
+        "signed_enclosed_area_m2": 0.07791637629270554,
+        "pressure_CFx_independent": -0.021368203684687614,
+        "pressure_CFy_independent": 0.709222137928009,
+        "max_wall_yplus": 0.351637601852417,
+        "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+      },
+      "source_pressure_uncertainty": 0.0026,
+      "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+      "regions": {
+        "LE": {
+          "points": 33,
+          "RMSE": 0.18631014516970765,
+          "mean_bias": 0.02437814322110061,
+          "p95_abs_error": 0.1341804227308269,
+          "max_abs_error": 1.022839545608476,
+          "fraction_within_source_uncertainty_0p0026": 0.12121212121212122
+        },
+        "mid": {
+          "points": 58,
+          "RMSE": 0.06044487638976136,
+          "mean_bias": 0.030151745593419984,
+          "p95_abs_error": 0.07474624992688138,
+          "max_abs_error": 0.29540278711574264,
+          "fraction_within_source_uncertainty_0p0026": 0.13793103448275862
+        },
+        "TE": {
+          "points": 12,
+          "RMSE": 0.020417768274813824,
+          "mean_bias": 0.019535692795461707,
+          "p95_abs_error": 0.02739234880359634,
+          "max_abs_error": 0.027833646861126368,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        }
+      },
+      "predicted_shock": {
+        "location_x_over_c": 0.5262409448623657,
+        "bracket_x_over_c": [
+          0.525568425655365,
+          0.5269134640693665
+        ],
+        "Cp_recovery_gradient": 24.63848304748535,
+        "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+      },
+      "experimental_shock": {
+        "location_x_over_c": 0.5375000000000001,
+        "bracket_x_over_c": [
+          0.525,
+          0.55
+        ],
+        "Cp_recovery_gradient": 12.25599999999999,
+        "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+      },
+      "shock_location_abs_error_chords": 0.011259055137634366,
+      "checks": {
+        "all_RMSE": false,
+        "upper_RMSE": false,
+        "lower_RMSE": true,
+        "p95_error": false,
+        "max_error": false,
+        "shock_location": true
+      },
+      "experimental_passed": false,
+      "negative_control_wrong_Cp_sign_RMSE": 1.3525731521508795,
+      "label": "medium_far",
+      "surface_file": "outputs\\projects\\proje-15cce2de02\\simulations\\medium_far\\surface_flow.vtu",
+      "surface_sha256": "fac78cfb85adf266729ce10de5e61b86850fc7bb2af5093a0ca8950da054bad1",
+      "mass_balance_diagnostic": {
+        "normalized_net_mass_imbalance": 3.350510528777553e-08,
+        "net_mass_flux_in_output_units": -2.78353681437693e-06,
+        "max_coordinate_match_error_m": 1.5258808758744635e-06,
+        "method": "Nodal rho*u trapezoid on square outer boundary, positive outward normal. A diagnostic with quadrature error, not the native Riemann flux or a new acceptance threshold."
+      }
+    }
+  ],
+  "note": "Numerical acceptance must be independently audited and combined; this file alone does not assert minimum overall qualification",
+  "experimental_forces_available": false,
+  "WIND_force_file_is": "Numerical cross-code diagnostic, not tunnel CL/CD",
+  "blinding": "Procedural separate history/files; not security or memorization isolation"
+}

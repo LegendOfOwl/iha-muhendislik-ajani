@@ -1,0 +1,12 @@
+{
+  "_notes": [
+    "Bu şablon yalnız 1g kaldırma/stall ön hesabı içindir; uçak tasarım uygunluğunu belirlemez.",
+    "Bilinmeyenleri null bırakın. Kaynağı ve geçerli koşulları yazılmamış sayıları kullanmayın.",
+    "status: measured, sourced, requirement veya assumption; belirsiz girdiler unknown kalır.",
+    "cl_max bütün kanada ve ilgili Reynolds/Mach/konfigürasyona uygun olmalıdır. İki boyutlu profil değeri otomatik olarak bütün kanat değeri değildir."
+  ],
+  "mass": {"value": null, "unit": "kg", "status": "unknown", "source": ""},
+  "wing_area": {"value": null, "unit": "m2", "status": "unknown", "source": ""},
+  "density": {"value": null, "unit": "kg/m3", "status": "unknown", "source": ""},
+  "cl_max": {"value": null, "unit": "1", "status": "unknown", "source": ""}
+}

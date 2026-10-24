@@ -1,0 +1,43 @@
+{
+  "group": "cad",
+  "synthetic_test_only": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv-cad\\Scripts\\python.exe",
+  "checks": [
+    {
+      "name": "CAD katı ve analitik hacim",
+      "passed": true,
+      "measured": {
+        "volume_mm3": 39999.99999999999,
+        "expected_mm3": 40000.0
+      },
+      "criterion": "Tek geçerli katı; hacim bağıl hata<1e-9"
+    },
+    {
+      "name": "STEP dışa/içe aktarımı",
+      "passed": true,
+      "measured": {
+        "reimported_volume_mm3": 39999.99999999999,
+        "bounding_box_mm": [
+          200.0,
+          20.0,
+          10.0
+        ]
+      },
+      "criterion": "Hacim bağıl hata<1e-7; boyut hatası<1e-6 mm"
+    },
+    {
+      "name": "CAD mm3 -> SI m3 dönüşümü",
+      "passed": true,
+      "measured": {
+        "volume_m3": 3.9999999999999996e-05
+      },
+      "criterion": "Analitik SI hacmiyle mutlak hata<1e-12 m3"
+    }
+  ],
+  "versions": {
+    "cadquery": "2.8.0",
+    "cadquery-ocp": "7.9.3.1.1"
+  },
+  "passed": true
+}

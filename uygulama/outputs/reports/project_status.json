@@ -1,0 +1,1395 @@
+{
+  "timestamp": "2026-10-24T13:59:48.220200+00:00",
+  "scope": "Mühendislik araçları ve iş akışı; gerçek İHA aşamaları aşağıda ayrı izlenir.",
+  "aircraft_feasibility": "henüz değerlendirilemedi",
+  "missing_mission_inputs": [
+    "mission",
+    "target_speed",
+    "endurance",
+    "payload_mass",
+    "altitude",
+    "takeoff_landing",
+    "size_constraint"
+  ],
+  "unknown_component_masses": [
+    "yapı",
+    "motor_ve_pervane",
+    "enerji_sistemi",
+    "aviyonik_ve_servo",
+    "faydali_yuk",
+    "baglanti_kablo_diger"
+  ],
+  "conceptual_steps": [
+    {
+      "step": 1,
+      "title": "Gereksinimler ve kabul ölçütleri",
+      "status": "bekliyor",
+      "reason": "Güncel proje verisi ve bu adıma ait kanıt henüz kaydedilmedi.",
+      "evidence": []
+    },
+    {
+      "step": 2,
+      "title": "Girdi, kaynak ve belirsizlik kaydı",
+      "status": "bekliyor",
+      "reason": "Güncel proje verisi ve bu adıma ait kanıt henüz kaydedilmedi.",
+      "evidence": []
+    },
+    {
+      "step": 3,
+      "title": "Bileşen kütle bütçesi",
+      "status": "bekliyor",
+      "reason": "Güncel proje verisi ve bu adıma ait kanıt henüz kaydedilmedi.",
+      "evidence": []
+    },
+    {
+      "step": 4,
+      "title": "Kanat ve düşük hız taraması",
+      "status": "bekliyor",
+      "reason": "Güncel proje verisi ve bu adıma ait kanıt henüz kaydedilmedi.",
+      "evidence": []
+    },
+    {
+      "step": 5,
+      "title": "Sürükleme, güç, enerji ve süre",
+      "status": "bekliyor",
+      "reason": "Güncel proje verisi ve bu adıma ait kanıt henüz kaydedilmedi.",
+      "evidence": []
+    },
+    {
+      "step": 6,
+      "title": "Yerleşim, CG, trim, kararlılık ve yapı",
+      "status": "bekliyor",
+      "reason": "Güncel proje verisi ve bu adıma ait kanıt henüz kaydedilmedi.",
+      "evidence": []
+    },
+    {
+      "step": 7,
+      "title": "Tutarlılık, duyarlılık ve belirsizlik",
+      "status": "bekliyor",
+      "reason": "Güncel proje verisi ve bu adıma ait kanıt henüz kaydedilmedi.",
+      "evidence": []
+    },
+    {
+      "step": 8,
+      "title": "Aday karşılaştırması ve gereksinim kanıtları",
+      "status": "bekliyor",
+      "reason": "Güncel proje verisi ve bu adıma ait kanıt henüz kaydedilmedi.",
+      "evidence": []
+    }
+  ],
+  "tool_tests": [
+    {
+      "suite": "core",
+      "report": "outputs/reports/test_results.json",
+      "passed": true,
+      "quality_passed": null,
+      "timestamp": "2026-10-24T16:55:26.925630+03:00"
+    },
+    {
+      "suite": "native",
+      "report": "outputs/reports/external_test_summary.json",
+      "passed": true,
+      "quality_passed": null,
+      "timestamp": "2026-10-18T17:03:31.855706+03:00"
+    },
+    {
+      "suite": "fem",
+      "report": "outputs/reports/fem_results.json",
+      "passed": true,
+      "quality_passed": null,
+      "timestamp": "2026-10-19T06:58:11.139515+00:00"
+    },
+    {
+      "suite": "models",
+      "report": "outputs/reports/cad_model_benchmark.json",
+      "passed": true,
+      "quality_passed": false,
+      "timestamp": "2026-10-18T14:37:41.600596+00:00"
+    },
+    {
+      "suite": "study",
+      "report": "outputs/reports/wing_study_results.json",
+      "passed": true,
+      "quality_passed": null,
+      "timestamp": "2026-10-18T14:39:35.620353+00:00"
+    },
+    {
+      "suite": "k-family",
+      "report": "outputs/reports/k_family_study.json",
+      "passed": true,
+      "quality_passed": false,
+      "timestamp": "2026-10-18T17:47:37.603170+00:00"
+    },
+    {
+      "suite": "cad-parts",
+      "report": "outputs/reports/k_family_new_tasks.json",
+      "passed": true,
+      "quality_passed": false,
+      "timestamp": "2026-10-18T17:49:26.852014+00:00"
+    },
+    {
+      "suite": "model-usage",
+      "report": "outputs/reports/model_usage_audit.json",
+      "passed": true,
+      "quality_passed": false,
+      "timestamp": "2026-10-18T17:59:14.883756+00:00"
+    },
+    {
+      "suite": "geometry",
+      "report": "outputs/reports/parametric_cad_qualification.json",
+      "passed": true,
+      "quality_passed": null,
+      "timestamp": "2026-10-19T06:57:55.490024+00:00"
+    },
+    {
+      "suite": "complex-vlm",
+      "report": "outputs/reports/complex_vlm_qualification.json",
+      "passed": true,
+      "quality_passed": false,
+      "timestamp": "2026-10-18T18:40:24.095455+00:00"
+    },
+    {
+      "suite": "cfd",
+      "report": "outputs/reports/cfd_qualification.json",
+      "passed": true,
+      "quality_passed": false,
+      "timestamp": "2026-10-18T18:34:54.448825+00:00"
+    },
+    {
+      "suite": "elmer-cfd",
+      "report": "outputs/reports/elmer_cfd_qualification.json",
+      "passed": true,
+      "quality_passed": true,
+      "timestamp": "2026-10-18T20:29:55.670049+00:00"
+    },
+    {
+      "suite": "comparison",
+      "report": "outputs/reports/candidate_comparison.json",
+      "passed": true,
+      "quality_passed": false,
+      "timestamp": "2026-10-18T20:29:54.020959+00:00"
+    },
+    {
+      "suite": "profile-cfd",
+      "report": "outputs/reports/profile_cfd_results.json",
+      "passed": null
+    },
+    {
+      "suite": "aerostruct",
+      "report": "outputs/reports/openaerostruct_examples.json",
+      "passed": true,
+      "quality_passed": null,
+      "timestamp": "2026-10-19T07:35:14.811633+00:00"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "20261018-174944-24ba6b",
+      "request": "Yerel mühendislik çalışma alanını proje düzeninde birleştir; CAD modellerini araştır, küçük araçları kur ve gerçek testlerle değerlendir.",
+      "kind": "tooling",
+      "created_utc": "2026-10-18T14:49:44.393354+00:00",
+      "status": "tamamlandı",
+      "phase": "araç entegrasyonu",
+      "acceptance": [
+        {
+          "criterion": "Araçları kur ve gerçek CAD/çözücü zincirinde çalıştır",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/verification_summary.json"
+        },
+        {
+          "criterion": "İki küçük CAD modelini yerelde dene ve ölçü doğruluğunu ayrıca değerlendir",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/cad_model_benchmark.json",
+          "note": "Yerel çıkarım çalışıyor; özgün geometri çıktıları kabul edilmedi."
+        },
+        {
+          "criterion": "Tek giriş, görev kaydı, proje becerisi ve birleşik rapor oluştur",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/ui_check.json"
+        },
+        {
+          "criterion": "ANSYS ağır kurulumunu sonraya bırak",
+          "status": "sağlandı",
+          "evidence": "PROJECT_STATE.md"
+        }
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "source_path": "outputs\\reports\\verification_summary.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\verification_summary.json",
+          "sha256": "a6e3030fc60e1401ceb0749ee9b2cfbd58e7aa5f4de4e5e1ca22a0420ae0a43b"
+        },
+        {
+          "source_path": "outputs\\reports\\cad_model_benchmark.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\cad_model_benchmark.json",
+          "sha256": "af5716ec69d0019d36eb0813dd7927ea505b9b47d400d769c7a0c5c3cf22aa5a"
+        },
+        {
+          "source_path": "outputs\\reports\\checked_parts_results.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\checked_parts_results.json",
+          "sha256": "86fdacd0d792385aed3461646fa868f566c195066d4fd40f148d32492ed93da0"
+        },
+        {
+          "source_path": "outputs\\reports\\ui_check.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\ui_check.json",
+          "sha256": "49014d3501a66ef9d3a6681fb0eb43739bd058d753d6f86be5f1be0e73548fd1"
+        },
+        {
+          "source_path": "outputs\\reports\\fem_results.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\fem_results.json",
+          "sha256": "ce58de400610b590f36965d2ce138bbba167daf219c2e766e99c75d24a58c2b5"
+        },
+        {
+          "source_path": "outputs\\reports\\wing_study_results.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\wing_study_results.json",
+          "sha256": "a26b95b1cbd9723b2aa83b3eb31d5f877ae3d2f4649869a0ab1c0843348c3ff5"
+        },
+        {
+          "source_path": "outputs\\reports\\test_results.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\test_results.json",
+          "sha256": "fc83ca7359973fc115ddf19c2788d1505969dfcfbae89b1b8bd6237269c98c35"
+        },
+        {
+          "source_path": "outputs\\reports\\external_test_summary.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\external_test_summary.json",
+          "sha256": "06182b2805c3b44f32b9a5142328286c812fb1f2afb3e5c6b53ba4d74a7c297c"
+        },
+        {
+          "source_path": "outputs\\reports\\freecad_portable_profile.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\freecad_portable_profile.json",
+          "sha256": "98665ffa90fab0b49fc1433da48d0da20d97fa6ce20245c07ca41e4e0290d8e4"
+        },
+        {
+          "source_path": "work/setup/tool_config.json",
+          "snapshot_path": "outputs\\reports\\task_evidence\\20261018-174944-24ba6b\\tool_config.json",
+          "sha256": "4ceb164cf02e93a532c95a5e9c5857c1c81604ae67bff37f8f2819f6d81ba19a"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+        "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+        "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+      },
+      "completed_utc": "2026-10-18T17:29:41.033338+00:00",
+      "completion_scope": "Yerel araç kurulumu, gerçek entegrasyon testleri, model kalitesinin değerlendirilmesi ve kullanılabilir proje iş akışı. Gerçek İHA tasarımı bu görevde tamamlanmış sayılmaz.",
+      "limitations": [
+        "K-1B özgün parçaları bütün kabul koşullarını geçmedi.",
+        "Zero-to-CAD Q6 denemesinde geçerli katı üretilemedi.",
+        "Bu bilgisayardaki küçük testler genel model sıralaması değildir.",
+        "Güncel gerçek İHA girdileri ve fiziksel tasarım doğrulaması bekliyor."
+      ],
+      "navigation_outputs": [
+        "outputs/Proje-Ozeti.html",
+        "outputs/Baslangic.md",
+        "outputs/reports/engineering_toolchain_report.md",
+        "outputs/reports/cad_model_research.md"
+      ],
+      "evidence_saved_utc": "2026-10-18T17:30:46.940532+00:00"
+    },
+    {
+      "id": "20261018-203719-a2da02",
+      "request": "K-1B/MakeMe ailesini derin araştır; yeni sürüm ve istem ayarlarını ölçü kontrolleriyle değerlendir; projenin bugünkü yeteneklerini ve sınırlarını raporla.",
+      "kind": "research",
+      "created_utc": "2026-10-18T17:37:19.036547+00:00",
+      "status": "tamamlandı",
+      "phase": "model araştırması ve proje yetenek raporu",
+      "acceptance": [
+        "Birincil kaynaklarla K/Cadmonkey sürümlerini ve eğitim yolunu incele",
+        "Aynı ölçülerle eski/yeni modeli ve istem ayarlarını karşılaştır",
+        "Mevcut yetenekleri, gerçek kanıtları ve açık sınırları tek raporda sun"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\proje_durum_ve_k1b_arastirma.md",
+          "sha256": "e789c5685c68bc103bb0cc8abe838d2480dc0e3a023e1db69a4f0a7e81ea461c",
+          "live_path": "outputs\\reports\\proje_durum_ve_k1b_arastirma.md"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\proje_durum_ve_k1b_arastirma.html",
+          "sha256": "9565151502df29f84116340d29de6178d67ad051490f258f005218c497679068",
+          "live_path": "outputs\\reports\\proje_durum_ve_k1b_arastirma.html"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\k_family_study.json",
+          "sha256": "304dec3bc45332ea1a5c913417a542b7cda0ed6766b664e608e1e105a2f327a9",
+          "live_path": "outputs\\reports\\k_family_study.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\k_family_new_tasks.json",
+          "sha256": "71b309eb3b811e7382572be0cf08ca1bdd165cf3aa51606976a76fc92355d698",
+          "live_path": "outputs\\reports\\k_family_new_tasks.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\model_usage_audit.json",
+          "sha256": "4a4c7534e3db14835d55e57df10c055886dc2b1e1b69cc65a3a1b3dce77b1806",
+          "live_path": "outputs\\reports\\model_usage_audit.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\zero_usage_audit.json",
+          "sha256": "672a6ebe36bf51387d0428bc875ea366fe170fefe3a32a5f02aa66f63cef4d5f",
+          "live_path": "outputs\\reports\\zero_usage_audit.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\cat_budget_audit.json",
+          "sha256": "a0b0e269867198b649164066d59e6ed714557945f9957a094181fb1b6befbde9",
+          "live_path": "outputs\\reports\\cat_budget_audit.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\research_evidence.json",
+          "sha256": "f02f67c49d49488f4970b85c59a7ee921a188120018d1fecd665c2b5f13315ec",
+          "live_path": "outputs\\reports\\research_evidence.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\research_quality_check.json",
+          "sha256": "0c5b15633151a8823e3f6f87239a7622170cb146a84d4d7be5b4008725808e86",
+          "live_path": "outputs\\reports\\research_quality_check.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\tool_health.json",
+          "sha256": "8995472ef98be952707edd65fa8ae65ccf3f45b9d6d1c8bce71c7523a9ce5942",
+          "live_path": "outputs\\reports\\tool_health.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\ui_check.json",
+          "sha256": "0f614a9378558c07513e4cc2ac4c96ca578e2bfc5e4f36cb44ff18c5573cd80c",
+          "live_path": "outputs\\reports\\ui_check.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-203719-a2da02\\cadmonkey32_install.json",
+          "sha256": "3e8b8b1c9ff905fb2128b02b0d5cfbd98f967d21ab26e13fdf0b085a433d229c",
+          "live_path": "work\\setup\\cadmonkey32_install.json"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+        "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+        "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+      },
+      "completed_utc": "2026-10-18T18:09:29.020269+00:00",
+      "acceptance_results": [
+        {
+          "criterion": "Birincil kaynak ve yeni sürüm araştırması",
+          "passed": true,
+          "evidence": "outputs/reports/research_evidence.json"
+        },
+        {
+          "criterion": "Aynı geometri ölçütleriyle eski/yeni sürüm karşılaştırması",
+          "passed": true,
+          "evidence": "outputs/reports/k_family_study.json"
+        },
+        {
+          "criterion": "İstem/şablon/örnekleme/çözünürlük ve özgün Zero görüntüsüyle kullanım denetimi",
+          "passed": true,
+          "evidence": "outputs/reports/model_usage_audit.json"
+        },
+        {
+          "criterion": "Yapılan iş, kullanılabilir yetenek ve sınırları tek raporda sun",
+          "passed": true,
+          "evidence": "outputs/reports/proje_durum_ve_k1b_arastirma.html"
+        }
+      ],
+      "scope_limits": [
+        "Real UAV design inputs remain unknown and all conceptual steps pending",
+        "Original BF16/Transformers/Unsloth model paths not reproduced",
+        "ANSYS deferred",
+        "Small model outputs not automatically accepted for engineering"
+      ],
+      "report": "outputs/reports/proje_durum_ve_k1b_arastirma.html"
+    },
+    {
+      "id": "20261018-212129-8ffed7",
+      "request": "Mühendislik seviyesini yükselt: deterministik parametrik CAD, Fusion/MCP araştırması, karmaşık profil/kanat doğrulaması ve gerçek CFD çıktısı",
+      "kind": "integration",
+      "created_utc": "2026-10-18T18:21:29.498528+00:00",
+      "status": "tamamlandı",
+      "phase": "araç yeterliliği ve deterministik CAD/CFD",
+      "acceptance": [
+        "Fusion MCP/API ayrımını birincil belgelerle değerlendir ve bağlantıyı hazırla",
+        "Kaynak profilinden süpürmeli/daralan/burulmalı CAD ve ölçü kabulü oluştur",
+        "Native VSPAERO/XFOIL uygulamalarını hacim-ağlı CFD ile tamamla; alan dosyaları ve yakınsama kaydet",
+        "Üniversite projesinde kullanılabilecek kapsamı ve kalan doğrulama işlerini açıkça raporla"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\muhendislik_seviyesi_ve_cfd.md",
+          "sha256": "42dabb3a3641e7b9f8aa18fae90e229a6940f5d48b6cb9c6714dc87e987fe754",
+          "live_path": "outputs\\reports\\muhendislik_seviyesi_ve_cfd.md"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\muhendislik_seviyesi_ve_cfd.html",
+          "sha256": "8d23952e3ffb17e51c857e81a3e60aad0c6dd73444dbf5cbc059ef25eaec98ef",
+          "live_path": "outputs\\reports\\muhendislik_seviyesi_ve_cfd.html"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\parametric_cad_qualification.json",
+          "sha256": "624325edf6535bfb3d5400207b6b7e9dcbaeca10bb57257303a566c5049ea3f7",
+          "live_path": "outputs\\reports\\parametric_cad_qualification.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\step_bore_measurements.json",
+          "sha256": "2163c75e8b95deda67d7df05e196cc1ff71e8d367e31eaffd0516d9d777d769f",
+          "live_path": "outputs\\reports\\step_bore_measurements.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\input_rejection_checks.json",
+          "sha256": "edac102cc9bb7090d59750976c090e64a9b2f40eb2180d68b0fd63d271f652b8",
+          "live_path": "outputs\\reports\\input_rejection_checks.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\complex_vlm_qualification.json",
+          "sha256": "48e95c3ac4afa593ca451dc0301ede9705c03841f579a81977d73cb35809b8ac",
+          "live_path": "outputs\\reports\\complex_vlm_qualification.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\complex_vlm_force_audit.json",
+          "sha256": "9749345e4f8b28f8ed6da2c431bd9810151f78391eb2003a153c483707661113",
+          "live_path": "outputs\\reports\\complex_vlm_force_audit.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\cfd_qualification.json",
+          "sha256": "c04f65b866e3e1053bfb7ad3a0ed5db45b1ee4d7bbcb06d8d10b753d128ef576",
+          "live_path": "outputs\\reports\\cfd_qualification.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\cfd_reference_comparison.json",
+          "sha256": "41727279fdfb7214a89a2ca1fbb69d59a13d1ead3051210d4fd491c87371a129",
+          "live_path": "outputs\\reports\\cfd_reference_comparison.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\engineering_extension_evidence.json",
+          "sha256": "e3e2fd833253f8081ce57e69312c164d3a209e132c7d7c0b078305b7a81137ac",
+          "live_path": "outputs\\reports\\engineering_extension_evidence.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\engineering_extension_quality.json",
+          "sha256": "51d553a5ac677b05282c71c844011d3f2f902dd9b4307899331873f573417023",
+          "live_path": "outputs\\reports\\engineering_extension_quality.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\native_shortcut_checks.json",
+          "sha256": "d7a3ec7f78cdb2922de2cadae22a1a59324b9763abb998d5bae5a7cf17e42025",
+          "live_path": "outputs\\reports\\native_shortcut_checks.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\ui_check.json",
+          "sha256": "73a1784262f0385ef0d006fc147a1e9275c86f8d4c59f0596b50ff1c3bd130b3",
+          "live_path": "outputs\\reports\\ui_check.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\tool_health.json",
+          "sha256": "85c1f0db4f8e7634cf47ae5ffa144ca066581e647e2f6191837047935b18e9be",
+          "live_path": "outputs\\reports\\tool_health.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\su2_install.json",
+          "sha256": "6846b11abd5367f147987b80d8c77860da20d95f87b27eb969bd064938d03c64",
+          "live_path": "work\\setup\\su2_install.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\fusion_mcp_install.json",
+          "sha256": "2b2e0d0df4bc683c719a2e374541b962bb72b72b3336d62aaeeda583f98b6407",
+          "live_path": "work\\setup\\fusion_mcp_install.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\fusion_connection_check.json",
+          "sha256": "a86beb90aa931ac5fce26a6f3dadb7dfb1a9910d5e31e0533b40775e78a05152",
+          "live_path": "work\\setup\\fusion_connection_check.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-212129-8ffed7\\freecad_install.json",
+          "sha256": "74e9f97b256c2eb07a91a850ed38e96d65dacf9218b36d208b964f5bfd60966e",
+          "live_path": "work\\setup\\freecad_install.json"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+        "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+        "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+      },
+      "completed_utc": "2026-10-18T20:12:05.924764+00:00",
+      "report": "outputs/reports/muhendislik_seviyesi_ve_cfd.html",
+      "acceptance_results": [
+        {
+          "criterion": "Fusion MCP/API ayrımını birincil belgelerle değerlendir ve bağlantıyı hazırla",
+          "passed": true,
+          "interpretation": "Kurulum/deney ve raporlama kabulü; bütün fiziksel sonuçların kabul edildiği anlamına gelmez"
+        },
+        {
+          "criterion": "Kaynak profilinden süpürmeli/daralan/burulmalı CAD ve ölçü kabulü oluştur",
+          "passed": true,
+          "interpretation": "Kurulum/deney ve raporlama kabulü; bütün fiziksel sonuçların kabul edildiği anlamına gelmez"
+        },
+        {
+          "criterion": "Native VSPAERO/XFOIL uygulamalarını hacim-ağlı CFD ile tamamla; alan dosyaları ve yakınsama kaydet",
+          "passed": true,
+          "interpretation": "Kurulum/deney ve raporlama kabulü; bütün fiziksel sonuçların kabul edildiği anlamına gelmez"
+        },
+        {
+          "criterion": "Üniversite projesinde kullanılabilecek kapsamı ve kalan doğrulama işlerini açıkça raporla",
+          "passed": true,
+          "interpretation": "Kurulum/deney ve raporlama kabulü; bütün fiziksel sonuçların kabul edildiği anlamına gelmez"
+        }
+      ],
+      "follow_up": [
+        {
+          "item": "Fusion motoru ve lisans/hub doğrulaması",
+          "status": "bekliyor",
+          "requires": "MCP bağlantı araçlarının bu sohbete yüklenmesi"
+        },
+        {
+          "item": "CFD sürükleme ve duvar ağı yakınsaması",
+          "status": "bekliyor"
+        },
+        {
+          "item": "Karmaşık kanatta yüzey/iz kuvvet farkı ve tam geometri eşleştirmesi",
+          "status": "bekliyor"
+        }
+      ],
+      "scope_limits": [
+        "Fusion OAuth completed; no Fusion modeling session invoked",
+        "CFD and native complex VLM have open quality gates",
+        "No general arbitrary-airfoil mesh service or arbitrary-CAD guarantee",
+        "Actual UAV design inputs remain unknown; ANSYS deferred"
+      ]
+    },
+    {
+      "id": "20261018-231810-dcaa71",
+      "request": "ANSYS öncesi hafif native CFD araçlarını kur ve doğrula; basit arayüz ve kısıttan araştırma/CAD/analiz/CFD/eleme/rapora iş akışı oluştur; hazır ve eksik kapsamı kanıtla",
+      "kind": "integration",
+      "created_utc": "2026-10-18T20:18:10.866742+00:00",
+      "status": "tamamlandı",
+      "phase": "araç entegrasyonu",
+      "acceptance": [
+        "Hafif Windows CFD seçimini birincil kaynakla gerekçelendir ve gerçek çözücü testi yap",
+        "Arayüzden kısıtları birimli ve izlenebilir görev kaydına aktar; komut girişi korunmalı",
+        "Araştırma, CAD, ön analiz, CFD ve kanıtlı eleme/sıralama raporu için tek görev sözleşmesi oluştur",
+        "Hazır yetenekleri ve henüz doğrulanmayan kapsamı açıkça raporla"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\hafif_cfd_ve_is_akisi.md",
+          "sha256": "6a931e82f1a09f37ea3b80d5b3e33902eff3cdec5b653cb058c652e7e72feda5",
+          "live_path": "outputs\\reports\\hafif_cfd_ve_is_akisi.md"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\hafif_cfd_ve_is_akisi.html",
+          "sha256": "1079f12b7248f6009f6651c932813a50d6324f568fb95adbca2eb48388d089a1",
+          "live_path": "outputs\\reports\\hafif_cfd_ve_is_akisi.html"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\elmer_cfd_qualification.json",
+          "sha256": "9e75d9e8cd4a8b3832f1c1dbcae6757c86afbd9bd73c1cd96e9cf81ee7286f9b",
+          "live_path": "outputs\\reports\\elmer_cfd_qualification.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\workflow_checks.json",
+          "sha256": "70af177dde93dc234389bcc9e2bcc2bd4304528fe7f16e6ed467e9aa3455b652",
+          "live_path": "outputs\\reports\\workflow_checks.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\candidate_comparison.json",
+          "sha256": "844c127f4d0f8ff92fd74f233a2b7945b972e72c896557926a10e0aae75041fd",
+          "live_path": "outputs\\reports\\candidate_comparison.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\candidate_comparison.html",
+          "sha256": "c3173b4773f651286ef91ae06fd0af5b6fe328701d0512c80a52564d29675835",
+          "live_path": "outputs\\reports\\candidate_comparison.html"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\workflow_readiness.json",
+          "sha256": "7301d19e4396cee07bb55db976a60d3f510b461ef632e1961501a88be7a4d3d9",
+          "live_path": "outputs\\reports\\workflow_readiness.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\light_cfd_workflow_quality.json",
+          "sha256": "94e6c268eb0fc322805b6f26ef6331876a5e53707359a3083f316375d185b901",
+          "live_path": "outputs\\reports\\light_cfd_workflow_quality.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\tool_health.json",
+          "sha256": "b434195947af86053055e87ab21f573924244a0df95d0f91d6685327c851a0ba",
+          "live_path": "outputs\\reports\\tool_health.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261018-231810-dcaa71\\elmer_install.json",
+          "sha256": "8011b350fe68231e8016247c82689127642f225ea8f9604a048575a3cb333677",
+          "live_path": "work\\setup\\elmer_install.json"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+        "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+        "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+      },
+      "completed_utc": "2026-10-18T20:36:26.922102+00:00",
+      "report": "outputs/reports/hafif_cfd_ve_is_akisi.html",
+      "acceptance_results": [
+        {
+          "criterion": "Hafif Windows CFD seçimini birincil kaynakla gerekçelendir ve gerçek çözücü testi yap",
+          "passed": true,
+          "scope": "Bu entegrasyon/arayüz teslimi; genel uçak otomasyonu tamamlandı anlamına gelmez"
+        },
+        {
+          "criterion": "Arayüzden kısıtları birimli ve izlenebilir görev kaydına aktar; komut girişi korunmalı",
+          "passed": true,
+          "scope": "Bu entegrasyon/arayüz teslimi; genel uçak otomasyonu tamamlandı anlamına gelmez"
+        },
+        {
+          "criterion": "Araştırma, CAD, ön analiz, CFD ve kanıtlı eleme/sıralama raporu için tek görev sözleşmesi oluştur",
+          "passed": true,
+          "scope": "Bu entegrasyon/arayüz teslimi; genel uçak otomasyonu tamamlandı anlamına gelmez"
+        },
+        {
+          "criterion": "Hazır yetenekleri ve henüz doğrulanmayan kapsamı açıkça raporla",
+          "passed": true,
+          "scope": "Bu entegrasyon/arayüz teslimi; genel uçak otomasyonu tamamlandı anlamına gelmez"
+        }
+      ],
+      "follow_up": [
+        "Gerçek kısıtlarla sınırları belirli aday araştırması ve yeni analiz görevi",
+        "Yeni geometri için uygun CFD ağı ve CAD/analiz eşleştirmesi",
+        "SU2/VLM açık sürükleme kabulleri",
+        "Fusion motoru ve lisans/hub testi"
+      ],
+      "scope_limits": [
+        "Generic all-aircraft pipeline not verified",
+        "Actual UAV inputs still unknown",
+        "OpenFOAM/ANSYS not installed"
+      ]
+    },
+    {
+      "id": "20261019-100440-8e781b",
+      "request": "Proje merkezli arayüz ve EXE başlatıcı: proje/görev/CAD/analiz/rapor bağlamlarını ayır; hazırlanan yeni profil için gerçek ağ-CFD bağlantısını ilerlet ve sınırları ölç",
+      "kind": "integration",
+      "created_utc": "2026-10-19T07:04:40.788219+00:00",
+      "status": "tamamlandı",
+      "phase": "araç entegrasyonu",
+      "acceptance": [
+        "Proje merkezli dosya/görev/aktif CAD ve taslakları izole et; mevcut verileri koru",
+        "EXE başlatıcısını işlev kaybı olmadan üret ve gerçek başlatma/çıkışını test et",
+        "Hazır olmayan projede örnek analizi çalıştırma; proje bazlı CAD/analiz çıktısını doğrula",
+        "Kaynak DAT ile yeni ağdan gerçek CFD yap ve kalan fizik kabul sınırlarını raporla",
+        "OpenAeroStruct ve üniversite kaynaklı ajan yaklaşımını incele, yerel talimatları uyarla ve resmî hafif çözücü örneklerini test et"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\projeler_exe_ve_profil_cfd.html",
+          "sha256": "be4c6697ce3b823a145c7dcff3eb4adddf158f3dbab9b62eb5608562b8c021df",
+          "live_path": "outputs\\reports\\projeler_exe_ve_profil_cfd.html"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_ajan_yaklasimi.html",
+          "sha256": "13642628010c649c71d6e13417b6e4810f079ebb3b362fc81172dd3992163026",
+          "live_path": "outputs\\reports\\openaerostruct_ajan_yaklasimi.html"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\projeler_exe_ve_profil_cfd.md",
+          "sha256": "f49745c78ce4a28442fe487fd58d2a023ed2053ed053d8395a9ce3a3331a13aa",
+          "live_path": "outputs\\reports\\projeler_exe_ve_profil_cfd.md"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_ajan_yaklasimi.md",
+          "sha256": "7ad74e5e09afbe8631249acf28dfb7f8418fe35237204c25d99ae7d21e4da72c",
+          "live_path": "outputs\\reports\\openaerostruct_ajan_yaklasimi.md"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\project_extension_quality.json",
+          "sha256": "cd563653eb9cc4889f62ee18dee5e8f1772d35353efe7c9bdcc332a6696e30cb",
+          "live_path": "outputs\\reports\\project_extension_quality.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\project_interface_checks.json",
+          "sha256": "de9bd83014cf5f8f191312bc91009376c6fe5b5c13e5b8726b064f4f2ce387f0",
+          "live_path": "outputs\\reports\\project_interface_checks.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\workflow_checks.json",
+          "sha256": "a01c6a8c8eba07b82b005eb50fbe6dffed5c1a6859bd4d5644b65d6dcc653f18",
+          "live_path": "outputs\\reports\\workflow_checks.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\test_results.json",
+          "sha256": "f1bebaa8b4d59fcd86b2ecd0ae7c7f36fac7e38105b91e63a229d9598d76d850",
+          "live_path": "outputs\\reports\\test_results.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_examples.json",
+          "sha256": "340cdd2275ae2018f26513bcb50a4f9a6e7aad3799d7f21c11e21b922454f9f4",
+          "live_path": "outputs\\reports\\openaerostruct_examples.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\exe_normal_launch.json",
+          "sha256": "f2963bd538b2ce49a7c53b740853101ae6cb8a547fdc069644e3dc8aff5608a3",
+          "live_path": "outputs\\reports\\exe_normal_launch.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\profile_cfd_results.json",
+          "sha256": "4133d1951f095a658727b4c3d6ec81048bc09f3e608728e65e94b0ab3db912c0",
+          "live_path": "outputs\\projects\\proje-0314dcd012\\reports\\profile_cfd_results.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\profile_field_checks.json",
+          "sha256": "215f7e915ebf93987784dfa164b385ad504d5ff94cebe9fed47693a76a32acef",
+          "live_path": "outputs\\projects\\proje-0314dcd012\\reports\\profile_field_checks.json"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\profile_cfd.html",
+          "sha256": "bf6804950638dfb0ef865f6b0569b632972f1ca88b118b05031a0cd43164e898",
+          "live_path": "outputs\\projects\\proje-0314dcd012\\reports\\profile_cfd.html"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\projects_iha_0.png",
+          "sha256": "cb08d0cf90e8a8cb553e92f8e2bd5ed39571a603201fbd8c1ff8c356ed0f132f",
+          "live_path": "outputs\\plots\\projects_iha_0.png"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_deformation.png",
+          "sha256": "3e8a94a2b64cc2660bac5fe0faddcec35d88552d03d6d770966c8fad2d4f7096",
+          "live_path": "outputs\\plots\\openaerostruct_deformation.png"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-100440-8e781b\\openaerostruct_install.json",
+          "sha256": "c5f389c75ae267814d04f5286a9b4757e2d0c1dee3c96973014afa9f12b27751",
+          "live_path": "work\\setup\\openaerostruct_install.json"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+        "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+        "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+      },
+      "project_id": "qualification",
+      "completed_utc": "2026-10-19T07:45:54.059973+00:00",
+      "remaining_capabilities": [
+        "Arbitrary imported CAD to qualified 3D CFD",
+        "New-source viscous/RANS boundary-layer qualification",
+        "Existing RANS CD and complex VLM surface CDi quality gates",
+        "OAS mesh/physical design acceptance and OpenVSP Python bridge",
+        "Fusion engine, entitlement and STEP round-trip",
+        "Eight actual UAV conceptual steps; current mission/mass data missing"
+      ],
+      "completion_scope": "Project GUI/EXE and tool integration; physical scope acceptance is separate",
+      "acceptance_results": [
+        {
+          "criterion": "Proje merkezli dosya/görev/aktif CAD ve taslakları izole et; mevcut verileri koru",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/project_extension_quality.json"
+        },
+        {
+          "criterion": "EXE başlatıcısını işlev kaybı olmadan üret ve gerçek başlatma/çıkışını test et",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/project_extension_quality.json"
+        },
+        {
+          "criterion": "Hazır olmayan projede örnek analizi çalıştırma; proje bazlı CAD/analiz çıktısını doğrula",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/project_extension_quality.json"
+        },
+        {
+          "criterion": "Kaynak DAT ile yeni ağdan gerçek CFD yap ve kalan fizik kabul sınırlarını raporla",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/project_extension_quality.json"
+        },
+        {
+          "criterion": "OpenAeroStruct ve üniversite kaynaklı ajan yaklaşımını incele, yerel talimatları uyarla ve resmî hafif çözücü örneklerini test et",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/project_extension_quality.json"
+        }
+      ]
+    },
+    {
+      "id": "20261019-110206-b6bbf3",
+      "request": "NASA arşivli ONERA M6 Test2308 koşullarında iki kaynak ağda gerçek SU2 RANS çalıştır; yedi kesitte deney Cp verisiyle karşılaştır",
+      "kind": "qualification",
+      "created_utc": "2026-10-19T08:02:06.343892+00:00",
+      "status": "tamamlandı",
+      "phase": "araç doğrulama",
+      "acceptance": [
+        "M0.8395, alfa3.06deg, Re11.72M ve c0.64607m koşul eşleşmesi",
+        "Gerçek 3D RANS, ham alan/kuvvet/y+ ve iki ağda sayısal duyarlılık",
+        "NASA deney Cp, x/c ve y/b kesit eşlemesi; tüm hatalar ve açık kabul raporlanır"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_additional_mesh_audit.json",
+          "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_additional_mesh_audit.json",
+          "sha256": "abbe4efd98ac66c4f683d694cba2781ab07e1767df6c64dcf17be7ecda738c12"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_continuation_diagnostic.json",
+          "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_continuation_diagnostic.json",
+          "sha256": "fdfdba655da44c95fc553461d70524a5af0c2b5e1673d33a4c915a0fdf0cd214"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_experiment_comparison.json",
+          "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_experiment_comparison.json",
+          "sha256": "7f0919140f8a6dc4a2a304b8712d15ea5bbc3a3215bf0bf339396d32ef536828"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_partial_comparison.json",
+          "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_partial_comparison.json",
+          "sha256": "b24e997ffecbef61670f420b8f401d6b6979940c0b2176fc3ca274845ee404c5"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_rans_results.json",
+          "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_rans_results.json",
+          "sha256": "378eacdabbfd907f700f157bfcba9c6d1b49f7f7108fe81a1f98562e0f85a50b"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\m6_validation.html",
+          "live_path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_validation.html",
+          "sha256": "734926d0d4d0556ed03826fbb1cd9a33453c080dae0e1d54488c5dfe42a8616c"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\nist_nasa_validation_quality.json",
+          "live_path": "outputs\\reports\\nist_nasa_validation_quality.json",
+          "sha256": "e940d0246eef2008927efb67a565183c53b19540b58b5fce7cfa4e61917b6690"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-b6bbf3\\nist_nasa_sources.json",
+          "live_path": "outputs\\reports\\nist_nasa_sources.json",
+          "sha256": "a56bfb74bcd0076953640d208bdbe36ea0e4a9cab18b01dea627877b14f90aa3"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+      },
+      "project_id": "proje-e9319baef1",
+      "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+      "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+      "project_output_root": "outputs/projects/proje-e9319baef1",
+      "project_snapshot": {
+        "id": "proje-e9319baef1",
+        "name": "NASA ONERA M6 CFD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e9319baef1",
+        "data_root": "outputs/projects/proje-e9319baef1/data/project",
+        "created_utc": "2026-10-19T08:02:06.291509+00:00",
+        "active_cad": null
+      },
+      "completed_utc": "2026-10-19T09:00:55.280342+00:00",
+      "completion_scope": "Two completed initial tunnel comparisons; additional continuation failed/timed out and was retained, no missing fields fabricated. Physical CFD quality failed",
+      "open_engineering_acceptances": [
+        "M6 combined CFD acceptance remains open",
+        "Previous RANS/VLM aircraft quality still open"
+      ],
+      "completion_project_snapshot": {
+        "id": "proje-e9319baef1",
+        "name": "NASA ONERA M6 CFD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e9319baef1",
+        "data_root": "outputs/projects/proje-e9319baef1/data/project",
+        "created_utc": "2026-10-19T08:02:06.291509+00:00",
+        "active_cad": null
+      },
+      "acceptance_results": [
+        {
+          "criterion": "M0.8395, alfa3.06deg, Re11.72M ve c0.64607m koşul eşleşmesi",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+        },
+        {
+          "criterion": "Gerçek 3D RANS, ham alan/kuvvet/y+ ve iki ağda sayısal duyarlılık",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+        },
+        {
+          "criterion": "NASA deney Cp, x/c ve y/b kesit eşlemesi; tüm hatalar ve açık kabul raporlanır",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+        }
+      ]
+    },
+    {
+      "id": "20261019-110206-eaf969",
+      "request": "NIST kaynak teknik resim/modelinden karmaşık parçaları yeniden oluştur; referans STEP ile ölçü/topoloji/katı farkını ve FreeCAD geri okumasını denetle",
+      "kind": "qualification",
+      "created_utc": "2026-10-19T08:02:06.298360+00:00",
+      "status": "tamamlandı",
+      "phase": "araç doğrulama",
+      "acceptance": [
+        "Kaynak PDF ve STEP, birimler ve SHA kayıtlı",
+        "Parametrik yeniden üretim; orijinali yeniden dışa aktararak üretim iddia etme",
+        "Hacim/boyut/topoloji/katı farkı, gerçek CAD dosyaları ve geometri raporu"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\cad_output_readback.json",
+          "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\cad_output_readback.json",
+          "sha256": "50a7dc8476ffb2ebbb38c081b06ab170604bac6b5d87362746fd22d795389fa8"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\ctc01_reconstruction.json",
+          "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\ctc01_reconstruction.json",
+          "sha256": "5ba2a31a4237b9b458c265d5fa4d913dbbb9e46539ebe2b1b31fa5319e570912"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\ctc02_modification.json",
+          "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\ctc02_modification.json",
+          "sha256": "d04f9fc62bc9647ee91533e8e0ae2abaeeb08ffae727d3ae548bed060d32ed00"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\ctc05_modification.json",
+          "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\ctc05_modification.json",
+          "sha256": "94b84bcd4b8042ca429a2330bfc0db6d6ce12855ac68879d0380379432590b1c"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\freecad_complex_checks.json",
+          "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\freecad_complex_checks.json",
+          "sha256": "9a761c08bc1002837b9817a0384788c7d91cf80f7c7d058d826f5ab7f6c27e08"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\native_view_checks.json",
+          "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\native_view_checks.json",
+          "sha256": "c53fd288031f8d184f5f0f87db52e7619cbbf3d558e1140e6c1513a2d61cb5ea"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\cad_validation.html",
+          "live_path": "outputs\\projects\\proje-e8fe92444f\\reports\\cad_validation.html",
+          "sha256": "1a47f6084fc70ab7440f8b74d944e53ca03399a1cec97838449ad04734515e68"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\nist_nasa_validation_quality.json",
+          "live_path": "outputs\\reports\\nist_nasa_validation_quality.json",
+          "sha256": "e940d0246eef2008927efb67a565183c53b19540b58b5fce7cfa4e61917b6690"
+        },
+        {
+          "path": "outputs\\reports\\task_evidence\\20261019-110206-eaf969\\nist_nasa_sources.json",
+          "live_path": "outputs\\reports\\nist_nasa_sources.json",
+          "sha256": "a56bfb74bcd0076953640d208bdbe36ea0e4a9cab18b01dea627877b14f90aa3"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-e8fe92444f\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-e8fe92444f\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-e8fe92444f\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-e8fe92444f.json": "c5f75bdedc3086f7132a143f3aa56c219ac1694f07bfd905be0daf42b5411225"
+      },
+      "project_id": "proje-e8fe92444f",
+      "project_manifest": "outputs\\data\\projects\\proje-e8fe92444f.json",
+      "project_data_root": "outputs/projects/proje-e8fe92444f/data/project",
+      "project_output_root": "outputs/projects/proje-e8fe92444f",
+      "project_snapshot": {
+        "id": "proje-e8fe92444f",
+        "name": "NIST karmaşık CAD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e8fe92444f",
+        "data_root": "outputs/projects/proje-e8fe92444f/data/project",
+        "created_utc": "2026-10-19T08:02:06.284082+00:00",
+        "active_cad": null
+      },
+      "completed_utc": "2026-10-19T09:00:55.280342+00:00",
+      "completion_scope": "One reference-assisted reconstruction plus two source-solid modifications, geometric checks and native parameter tests completed",
+      "open_engineering_acceptances": [],
+      "completion_project_snapshot": {
+        "id": "proje-e8fe92444f",
+        "name": "NIST karmaşık CAD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e8fe92444f",
+        "data_root": "outputs/projects/proje-e8fe92444f/data/project",
+        "created_utc": "2026-10-19T08:02:06.284082+00:00",
+        "active_cad": {
+          "path": "outputs\\projects\\proje-e8fe92444f\\cad\\modified\\ctc02_native_ports.FCStd",
+          "sha256": "35205e14eae7daa475487c5c88ceb226e71dca2b7acbdb2e00b92bee9930d168",
+          "selected_utc": "2026-10-19T09:00:29.666004+00:00"
+        },
+        "cad_tool": "freecad"
+      },
+      "completion_active_cad_sha256": "35205e14eae7daa475487c5c88ceb226e71dca2b7acbdb2e00b92bee9930d168",
+      "acceptance_results": [
+        {
+          "criterion": "Kaynak PDF ve STEP, birimler ve SHA kayıtlı",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+        },
+        {
+          "criterion": "Parametrik yeniden üretim; orijinali yeniden dışa aktararak üretim iddia etme",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+        },
+        {
+          "criterion": "Hacim/boyut/topoloji/katı farkı, gerçek CAD dosyaları ve geometri raporu",
+          "status": "sağlandı",
+          "evidence": "outputs/reports/nist_nasa_validation_quality.json"
+        }
+      ]
+    },
+    {
+      "id": "20261019-122134-162b99",
+      "request": "Yayımlanmış kaynak geometriyi değiştirmeden, hedef deney sonuçlarını analiz ajanına vermeden yerel ağ ve gerçek CFD üret; sonuçları önceden kayıtlı ölçütlerle karşılaştır",
+      "kind": "qualification",
+      "created_utc": "2026-10-19T09:21:34.710159+00:00",
+      "status": "tamamlandı",
+      "phase": "araç doğrulama",
+      "acceptance": [
+        "Özgün internet geometrisi; geometri ve fiziksel koşullar kayıtlı, hedef sonuç analize verilmez",
+        "Konuma bağlı yeni viskoz ağlar; duvar/LE/TE/iz/şok, geometri/ağ/iteratif/uzak alan kontrolleri",
+        "Tahminler değerlendirmeden önce hash ile dondurulur; kaynak deneyle tüm hatalar ve açık kabul raporlanır"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        "outputs/reports/kaynak_geometri_ve_kor_cfd.html",
+        "outputs/reports/source_geometry_validation_quality.json",
+        "outputs/projects/proje-15cce2de02/reports/prediction_frozen.json",
+        "outputs/projects/proje-15cce2de02/reports/prediction_v2_frozen.json",
+        "outputs/projects/proje-15cce2de02/reports/review_v2_qualification.json",
+        "outputs/projects/proje-15cce2de02/reports/review_reference_source_audit.json"
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-15cce2de02\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-15cce2de02\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-15cce2de02\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-15cce2de02.json": "5d862b4f9880d93caac624f60fa96a13a60161070389cc3f2cef64a59212884e"
+      },
+      "project_id": "proje-15cce2de02",
+      "project_manifest": "outputs\\data\\projects\\proje-15cce2de02.json",
+      "project_data_root": "outputs/projects/proje-15cce2de02/data/project",
+      "project_output_root": "outputs/projects/proje-15cce2de02",
+      "project_snapshot": {
+        "id": "proje-15cce2de02",
+        "name": "Kaynak geometriden kör CFD sınaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-15cce2de02",
+        "data_root": "outputs/projects/proje-15cce2de02/data/project",
+        "created_utc": "2026-10-19T09:21:34.698028+00:00",
+        "active_cad": null
+      },
+      "benchmark_input_sha256": {
+        "conditions.json": "83549595296fa61565b3fbb83de655c469301d99923fde5aa96514cc1df34141",
+        "geom.f90": "631d2d0be0b2cb9fa87dc2bf49f4f65a658794115a5649b0f68749312f33700e",
+        "geom.txt": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736",
+        "yl.pts": "489788cbe97237ef24b3e2bdc8737209cc56daf02f613dbd324ba79a0e85e9ed",
+        "yu.pts": "810900b8646f16dbc2b93d9773529b086818e0e38276891442b7d5f498605a3b"
+      },
+      "benchmark_contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+      "physical_minimum_qualification_passed": false,
+      "benchmark_version_status": {
+        "v1": "frozen_and_reviewed_failed",
+        "v2": "frozen_and_reviewed_failed"
+      },
+      "open_quality_gates": [
+        "aft normal mesh/BL sensitivity",
+        "400c farfield solution not run under numerical mesh hold",
+        "experimental Cp error"
+      ],
+      "finished_utc": "2026-10-19T14:14:49.785663+00:00",
+      "completion_scope": "Test çalıştırma, başarısızlık teşhisi ve bağımsız rapor tamamlandı; asgari fiziksel yeterlilik sağlanmadı",
+      "evidence_manifest": "outputs/reports/task_evidence/20261019-122134-162b99/manifest.json",
+      "evidence_manifest_sha256": "a91a96723a53c8513a5effe8491e4fe24f28f69d74e76f6ac2d4319d66ba1d13"
+    },
+    {
+      "id": "20261019-123823-5d7902",
+      "request": "M6 aynı kaynak ağ/koşulunda yalnız CFL uyarlamasını kapatarak kayıtlı çözümden kontrollü sayısal deneme; mevcut duvar/ağ kabulü açık kalır",
+      "kind": "qualification",
+      "created_utc": "2026-10-19T09:38:23.391318+00:00",
+      "status": "tamamlandı",
+      "phase": "araç doğrulama",
+      "acceptance": [
+        "Aynı geometri/ağ ve fiziksel koşullar; değişikliklerin kaydı",
+        "Gerçek native yeniden başlatma, kalıntı/kuvvet/alan kanıtı",
+        "İyileşse de yeni ağ/duvar/deney kabulü sağlanmadan M6 doğrulaması verme"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823\\results.json",
+          "sha256": "3fc989aa1610b6bdb3f456ae84e8f2faad2162e899e736ceb42887dfcbd78ec9"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+      },
+      "project_id": "proje-e9319baef1",
+      "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+      "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+      "project_output_root": "outputs/projects/proje-e9319baef1",
+      "project_snapshot": {
+        "id": "proje-e9319baef1",
+        "name": "NASA ONERA M6 CFD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e9319baef1",
+        "data_root": "outputs/projects/proje-e9319baef1/data/project",
+        "created_utc": "2026-10-19T08:02:06.291509+00:00",
+        "active_cad": null
+      },
+      "completed_utc": "2026-10-19T09:47:04.683427+00:00",
+      "completion_scope": "Controlled numerical diagnostic completed/reported; M6 physical qualification remains open",
+      "open_engineering_acceptances": [
+        "M6 wall resolution/source-grid sensitivity/experiment acceptance remains open"
+      ]
+    },
+    {
+      "id": "20261019-201609-ab8031",
+      "request": "Kaynak araştırmasıyla RAE2822 bölgesel ağ duyarlılığını teşhis et; kaynak geometriyi koruyan C-grid/blok çözümünü gerçek CFD ile ve değişmeyen kabul eşikleriyle sına",
+      "kind": "qualification",
+      "created_utc": "2026-10-19T17:16:09.746366+00:00",
+      "status": "tamamlandı",
+      "phase": "araç doğrulama",
+      "acceptance": [
+        "Birincil kaynaklı hipotez ve kontrollü deney matrisi",
+        "Kaynak geometri korunarak ağ/topoloji ve gradyan kontrolleri",
+        "Gerçek native CFD, değişmeyen eşikler ve başarısızlık dahil kaynak deney kıyası"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\projects\\proje-15cce2de02\\reports\\v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs\\projects\\proje-15cce2de02\\reports\\v3_research_diagnosis.html",
+          "sha256": "ab13dee50b276154d7c549d85f3b8f15adde5350b10c48fcd28bc358ca90702d"
+        },
+        {
+          "path": "outputs\\projects\\proje-15cce2de02\\reports\\v3_evidence_integrity.json",
+          "sha256": "bbc70c4617c04d6d0b557c5b442e5826553dbbe2aeb276f8099ac5ebd3823cb9"
+        },
+        {
+          "path": "outputs\\projects\\proje-15cce2de02\\reports\\v3_firstorder_control_prediction_frozen.json",
+          "sha256": "d6378df11b23d6544920870136cd543eb9eb65ce5c7e36cb1ff2c15ed34995db"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-15cce2de02\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-15cce2de02\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-15cce2de02\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-15cce2de02.json": "5d862b4f9880d93caac624f60fa96a13a60161070389cc3f2cef64a59212884e"
+      },
+      "project_id": "proje-15cce2de02",
+      "project_manifest": "outputs\\data\\projects\\proje-15cce2de02.json",
+      "project_data_root": "outputs/projects/proje-15cce2de02/data/project",
+      "project_output_root": "outputs/projects/proje-15cce2de02",
+      "project_snapshot": {
+        "id": "proje-15cce2de02",
+        "name": "Kaynak geometriden kör CFD sınaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-15cce2de02",
+        "data_root": "outputs/projects/proje-15cce2de02/data/project",
+        "created_utc": "2026-10-19T09:21:34.698028+00:00",
+        "active_cad": null
+      },
+      "completed_utc": "2026-10-24T12:45:16.629110+00:00",
+      "completion_scope": "Sınırlı kaynak araştırması, gerçek denemeler ve başarısızlık dahil raporlama tamamlandı; fiziksel yeterlilik geçmedi",
+      "minimum_physical_qualification_passed": false,
+      "engineering_work_remaining": [
+        "converged three-grid CFD family",
+        "regional normal sensitivity and full boundary-layer resolution",
+        "controlled farfield200c/400c solve",
+        "preselected fine experiment gate"
+      ]
+    },
+    {
+      "id": "20261024-153804-27f425",
+      "request": "RAE2822 testlerini kapattıktan sonra ONERA M6 Test2308 için kaynaklı kontrollü gerçek3B RANS ve271 deney noktası karşılaştırması yap",
+      "kind": "qualification",
+      "created_utc": "2026-10-24T12:38:04.832829+00:00",
+      "status": "tamamlandı",
+      "phase": "araç doğrulama",
+      "acceptance": [
+        "RAE test ve kanıt kaydı kapandıktan sonra başlat",
+        "Aynı kaynak M6 ağı/koşullarla native3B RANS ve eşlenmiş checkpoint",
+        "271 deney noktasının tamamı, y+, kuvvet/kalıntı ve açık kalite kapılarıyla rapor"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_24_ekim.html",
+          "sha256": "a54edbd40ec6dcacaed5ce3bebe35f0de1fdeeb8b8c878a8d44ffc2ec1221d2d"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_followup_integrity_20261024.json",
+          "sha256": "467605f923a2e8544a6ff52a6284837ee57ad5442b44a5d47ad8088dc0a1767f"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_jst_control_results_20261024_v2.json",
+          "sha256": "75c7e9c17737d9000d34547ff650d782e86d373865edc3a73ebed84b36be4042"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_wallnormal_results_20261024_v3.json",
+          "sha256": "696738569e175ae0c9358d6d52f7aee891644257d2db3ac854d91d2cf0c19d8e"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_jst_prediction_frozen_20261024_v2.json",
+          "sha256": "206272da7f854c4d5ce9bbacfee304266aea966186f849ab863d97c2ae5f6e0f"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_wallnormal_prediction_frozen_20261024_v3.json",
+          "sha256": "b827bb66386680a41062bbd13afae4c072ea2e27fba66f134017d9e01e78d974"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_jst_force_integral_20261024_v2.json",
+          "sha256": "eba5a522aaa85c826e7f79c31a547a786c0d48d006e4bef9a4832d96d98fad69"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_wallnormal_force_integral_20261024_v3.json",
+          "sha256": "818bb2e6e13a8e49f3ad6ce9d261090389ad261be60bc999316e739dddb63958"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_reference_recheck_20261024.json",
+          "sha256": "d7396d6b6ec8283a93bba933f1b0c254685b014ae8c0688778dd2a6c6f103028"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_field_view_main_20261024_v2.json",
+          "sha256": "56945ec2d04875e1b9d85d8c4c1f459b6c84d4585b8b51d3a31e9a6393ece945"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_field_view_normal_20261024_v2.json",
+          "sha256": "d59aff21a6812ec44b3b59a2a4614207e4829f8e6a5a677d1078f0b37aef3029"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+      },
+      "project_id": "proje-e9319baef1",
+      "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+      "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+      "project_output_root": "outputs/projects/proje-e9319baef1",
+      "project_snapshot": {
+        "id": "proje-e9319baef1",
+        "name": "NASA ONERA M6 CFD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e9319baef1",
+        "data_root": "outputs/projects/proje-e9319baef1/data/project",
+        "created_utc": "2026-10-19T08:02:06.291509+00:00",
+        "active_cad": null
+      },
+      "completed_utc": "2026-10-24T13:38:39.731461+00:00",
+      "completion_scope": "RAE testlerinin kapanışından sonra istenen iki3B M6 testini çalıştırma, kaynak deneyle kıyas ve raporlama tamamlandı; genel fizik kabulü geçmedi",
+      "minimum_physical_qualification_passed": false,
+      "engineering_work_remaining": [
+        "density residual below-7",
+        "all14 section/side experimental Cp gates",
+        "systematic same-geometry mesh family",
+        "full boundary-layer profiles/normal sensitivity",
+        "farfield sensitivity"
+      ],
+      "reproduction_code_sha256": {
+        "work\\m6_followup\\build_report.py": "180eadfdb1c5a2fe18e86abcc7c18adec199784337c0a29da729177fe6519557",
+        "work\\m6_followup\\finalize_task.py": "5eed842ccb8c0508650a110e427e5bb47f63f61d2fc1764be9f233d9e936b61b",
+        "work\\m6_followup\\force_integral.py": "978c5911f6065d7f768d6ca2ac5398e0296ba49f54c7a7bb6cb32a8617eb09e3",
+        "work\\m6_followup\\recheck_reference.py": "5fd3ed99544ddcc232f4bc789b73fbf6ada365cd54a70ff26949b60d11f56d47",
+        "work\\m6_followup\\render_field.py": "9c093c19035991a865fec05fb0a859425e92e8e47f47d6c9a7b32a53aefc0120",
+        "work\\m6_followup\\render_field_v1.py": "bb9221b928a19156b45103c37bfc85d01b75c209ecaf342f95c52432d7835873",
+        "work\\m6_followup\\test_20261024.py": "05c3298782178b210c930ae1c94d269eaed8679a43ab328626c1c97ab9133d0e",
+        "work\\m6_followup\\test_20261024_v1_rejected.py": "a74ad90dbd90201899b59bd9ec510e0bd791b49d9fb0896adf9546cb52d273d7",
+        "work\\m6_followup\\test_normal_20261024.py": "d2e8d283e39130c974863e5d5e357fb9a1d1c7e810ee22f79d2a267a42ebfe51",
+        "work\\m6_followup\\verify_evidence.py": "e1c6ee43c84bdada30b40729dda8bcaad84ead731f9ed390c14a5219c1790b99",
+        "work\\m6_followup\\wallnormal_mesh.py": "1eda8677dceef57f7426492e6a32d57a8a660c994b054a93d3dc2d75daef06ca",
+        "work\\m6_followup\\wallnormal_mesh_v1_marker_parser_error.py": "777873d7cd69cb59b5cc54576db2302889e3f77d96b8d4109716e6664a63dea8",
+        "work\\m6_followup\\wallnormal_mesh_v2_reference_orientation_error.py": "a74cf6a7c11bac774b691ae9e5c584604c19cb82aa64cd36051e8bbdda8ddb61"
+      }
+    },
+    {
+      "id": "20261024-164603-4764e5",
+      "request": "Kanıtlı hata derslerini ve hipotezleri ayır; ajan talimatı ve kalıcı hafızayı güncelle; karşı örneklerle sınayıp uzmanlık iddiasını ayrı tut",
+      "kind": "qualification",
+      "created_utc": "2026-10-24T13:46:03.262365+00:00",
+      "status": "tamamlandı",
+      "phase": "talimat ve araç süreci doğrulaması",
+      "acceptance": [
+        "Hata/risk/hipotez ayrımı ve çürüyen teşhislerin korunması",
+        "Sürümlü operasyonel dersler ve mevcut başlatıcı bağlantısı",
+        "Karşı örnekler ve kalıcı hafıza kopyasının doğrulanması",
+        "Eski kanıtların ve açık uzmanlık/fizik kabullerinin korunması"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs/reports/ajan_talimat_gelisimi_20261024.html",
+          "sha256": "01da44cac73cb6c51366ff9060232de528e48fdc0ec19bd1897883936e7cf66e"
+        },
+        {
+          "path": "outputs/data/agent_learning/reviewer_ledger_v1.json",
+          "sha256": "5ea141efc7369f076acea3469b000da77a5395a574527c92492e4590eac16cbb"
+        },
+        {
+          "path": "outputs/data/agent_learning/qualification_plan_v1.json",
+          "sha256": "23183d6e557f92184cf14259334cc825ad0b7a9a39f4b2e5e364283cdb7d56e9"
+        },
+        {
+          "path": "outputs/data/agent_learning/memory_installation_20261024.json",
+          "sha256": "4bb431029b35f4af07ecf610d3b63fb4e9cc4300fba7b4736479fd6cb44c4893"
+        },
+        {
+          "path": "outputs/reports/ajan_hafiza_notu_20261024.md",
+          "sha256": "100d45f573442b8a486eb5b7f38a8aa8b5183b9c3088f611eb3bb565e9900276"
+        },
+        {
+          "path": "outputs/reports/agent_learning_checks_20261024.json",
+          "sha256": "e4c7cc5d508a2988e5ac56d2e5ac3ccb7c948e88cd4d16ccdc66cd5f6fa3c47d"
+        },
+        {
+          "path": "outputs/reports/agent_learning_integrity_20261024.json",
+          "sha256": "537921f7240b81108eeaa27bb95d55addd655583fd44f07f78b776c2ce1206e2"
+        },
+        {
+          "path": "outputs/reports/test_results.json",
+          "sha256": "f3231045f66704096266a9622edd6a99eb1a57689b183cbede4feff8b5a1027d"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+      },
+      "project_id": "qualification",
+      "project_manifest": "outputs\\data\\projects\\qualification.json",
+      "project_data_root": "outputs/data/qualification",
+      "project_output_root": "outputs",
+      "project_snapshot": {
+        "id": "qualification",
+        "name": "Araç doğrulama örnekleri",
+        "kind": "qualification",
+        "artifact_root": "outputs",
+        "data_root": "outputs/data/qualification",
+        "created_utc": "2026-10-19T07:06:12.206479+00:00",
+        "active_cad": null
+      },
+      "completed_utc": "2026-10-24T13:58:49.752633+00:00",
+      "applied_lesson_ids": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09"
+      ],
+      "agent_instruction_snapshot": {
+        "version": "2026-10-24.1",
+        "files": {
+          "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false
+      },
+      "completion_scope": "İlk talimat/hafıza güncellemesi ve kod karşı örnekleri; görülmemiş LLM mühendislik kıyası yapılmadı",
+      "expert_qualification_passed": false,
+      "minimum_physical_qualification_passed": false,
+      "engineering_work_remaining": [
+        "Görülmemiş görevlerde önce/sonra LLM davranış kıyası",
+        "Açık RAE/M6 sayısal, ağ ve deney kapıları"
+      ]
+    }
+  ]
+}

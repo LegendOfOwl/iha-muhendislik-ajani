@@ -1,0 +1,60 @@
+{
+  "source": "Cook et al., AGARD AR138 Table6.2, printed A6-10, PDF page191",
+  "source_values": {
+    "CN": 0.743,
+    "CD": 0.0127,
+    "CM_quarter_chord": -0.095
+  },
+  "conditions_note": "Original nominal M=.725, alpha=2.92deg; simulation uses preselected NASA corrected M=.729, alpha=2.31deg. Fully turbulent model does not explicitly resolve trip at x/c=.03. CN is chord-normal, not CL. Moment sign convention has not been mapped, so no moment error calculated.",
+  "qualification_role": "Additional diagnostic only. No force gate was predeclared; no post-result gate or tuning. WIND forces remain a separate numerical reference.",
+  "cases": [
+    {
+      "case": "coarse",
+      "field_iteration": 2665,
+      "predicted_CN_body_y": 0.7023409668,
+      "predicted_CD": 0.01509309194,
+      "published_CN": 0.743,
+      "published_CD": 0.0127,
+      "CN_abs_difference": -0.04065903319999997,
+      "CD_abs_difference": 0.0023930919399999997,
+      "CN_relative_difference": 0.05472279030955582,
+      "CD_relative_difference": 0.18843243622047243
+    },
+    {
+      "case": "medium",
+      "field_iteration": 2965,
+      "predicted_CN_body_y": 0.6983649636,
+      "predicted_CD": 0.01364997108,
+      "published_CN": 0.743,
+      "published_CD": 0.0127,
+      "CN_abs_difference": -0.044635036399999994,
+      "CD_abs_difference": 0.0009499710800000005,
+      "CN_relative_difference": 0.06007407321668909,
+      "CD_relative_difference": 0.07480087244094492
+    },
+    {
+      "case": "fine",
+      "field_iteration": 2400,
+      "predicted_CN_body_y": 0.6925300393,
+      "predicted_CD": 0.01300801887,
+      "published_CN": 0.743,
+      "published_CD": 0.0127,
+      "CN_abs_difference": -0.05046996069999998,
+      "CD_abs_difference": 0.00030801887000000104,
+      "CN_relative_difference": 0.06792726877523551,
+      "CD_relative_difference": 0.024253454330708746
+    },
+    {
+      "case": "medium_far",
+      "field_iteration": 3200,
+      "predicted_CN_body_y": 0.7094686499,
+      "predicted_CD": 0.01323115497,
+      "published_CN": 0.743,
+      "published_CD": 0.0127,
+      "CN_abs_difference": -0.03353135009999997,
+      "CD_abs_difference": 0.0005311549700000012,
+      "CN_relative_difference": 0.04512967711978461,
+      "CD_relative_difference": 0.04182322598425206
+    }
+  ]
+}

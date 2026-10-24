@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-10-18T20:29:54.020959+00:00",
+  "rows": [
+    {
+      "id": "AR6",
+      "objective": 0.014874139926840495,
+      "requirements_status": "henüz değerlendirilemedi",
+      "rejection_reasons": [],
+      "open_checks": [
+        "Bu adaya ait kabul edilmiş CFD yok"
+      ],
+      "CFD_accepted_for_candidate": false,
+      "conditional_rank": 2,
+      "final_rank": null,
+      "evidence": {
+        "report": "outputs\\reports\\wing_study_results.json",
+        "sha256": "a26b95b1cbd9723b2aa83b3eb31d5f877ae3d2f4649869a0ab1c0843348c3ff5",
+        "source_scope": "Önceki izole dikdörtgen kanat VLM/XFOIL çalışması; bu tur yeniden çözülmedi"
+      }
+    },
+    {
+      "id": "AR8",
+      "objective": 0.01329712082880699,
+      "requirements_status": "henüz değerlendirilemedi",
+      "rejection_reasons": [],
+      "open_checks": [
+        "Bu adaya ait kabul edilmiş CFD yok"
+      ],
+      "CFD_accepted_for_candidate": false,
+      "conditional_rank": 1,
+      "final_rank": null,
+      "evidence": {
+        "report": "outputs\\reports\\wing_study_results.json",
+        "sha256": "a26b95b1cbd9723b2aa83b3eb31d5f877ae3d2f4649869a0ab1c0843348c3ff5",
+        "source_scope": "Önceki izole dikdörtgen kanat VLM/XFOIL çalışması; bu tur yeniden çözülmedi"
+      }
+    },
+    {
+      "id": "AR10",
+      "objective": 0.012509982593518442,
+      "requirements_status": "sağlanmadı",
+      "rejection_reasons": [
+        "span_m: 2.23607 > 2.1"
+      ],
+      "open_checks": [
+        "Bu adaya ait kabul edilmiş CFD yok"
+      ],
+      "CFD_accepted_for_candidate": false,
+      "conditional_rank": null,
+      "final_rank": null,
+      "evidence": {
+        "report": "outputs\\reports\\wing_study_results.json",
+        "sha256": "a26b95b1cbd9723b2aa83b3eb31d5f877ae3d2f4649869a0ab1c0843348c3ff5",
+        "source_scope": "Önceki izole dikdörtgen kanat VLM/XFOIL çalışması; bu tur yeniden çözülmedi"
+      }
+    }
+  ],
+  "final_winner": null,
+  "status": "koşullu ön karşılaştırma; CFD kabulü bekleniyor",
+  "limits": {
+    "span_m": 2.1
+  },
+  "objective": "CDwing_estimated",
+  "coverage": "Only listed candidates; no exhaustive-design-space claim",
+  "scope": "Kayıtlı üç kanatla raporlama/eleme sınaması; maksimum açıklık 2.1 m test varsayımı",
+  "source_solver_rerun": false,
+  "unknown_aircraft_checks": [
+    "kütle",
+    "güç/enerji",
+    "CG/trim/kararlılık",
+    "yapısal yeterlilik"
+  ],
+  "note": "Koşullu sıra yalnız tahmini izole kanat sürüklemesine dayanır; uçak uygunluğu veya CFD onaylı seçim değildir.",
+  "passed": true,
+  "quality_passed": false
+}

@@ -1,0 +1,42 @@
+{
+  "group": "numeric",
+  "synthetic_test_only": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+  "checks": [
+    {
+      "name": "Sinüs integralinin analitik değeri",
+      "passed": true,
+      "measured": {
+        "integral": 2.0,
+        "error_estimate": 2.220446049250313e-14
+      },
+      "criterion": "|I-2| < 1e-10"
+    },
+    {
+      "name": "Sınır kısıtlı optimizasyon",
+      "passed": true,
+      "measured": {
+        "x": 2.0,
+        "success": true
+      },
+      "criterion": "0<=x<=2; optimum x=2, hata<1e-6"
+    },
+    {
+      "name": "Lineer denklem sistemi",
+      "passed": true,
+      "measured": [
+        2.0,
+        3.0
+      ],
+      "criterion": "Bilinen çözüm [2,3]"
+    }
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.6"
+  },
+  "passed": true
+}

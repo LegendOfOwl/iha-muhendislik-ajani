@@ -1,0 +1,527 @@
+{
+  "project_root": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu",
+  "recorded_at": "2026-10-18T16:19:57.087889+03:00",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python_base": "C:\\Users\\Urungu\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python",
+  "python_version": "3.12.14",
+  "numeric_python": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+  "cad_python": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv-cad\\Scripts\\python.exe",
+  "codex_cli": "C:\\Users\\Urungu\\AppData\\Local\\OpenAI\\Codex\\bin\\9614f1d9b40d9c4f\\codex.EXE",
+  "node": "C:\\Program Files\\nodejs\\node.EXE",
+  "git": "C:\\Users\\Urungu\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.EXE",
+  "system_path_changed": false,
+  "environments_isolated": true,
+  "deferred_tools": {
+    "ANSYS": "Deferred heavy installation; license not checked"
+  },
+  "cli_auth_check": "Verified: Logged in using ChatGPT; no API key required for this installed CLI session.",
+  "codex_cli_version": "0.162.0-alpha.17.2",
+  "environment_disk_usage": {
+    ".venv": {
+      "file_count": 16108,
+      "logical_size_MiB": 567.3
+    },
+    ".venv-cad": {
+      "file_count": 14131,
+      "logical_size_MiB": 1145.5
+    }
+  },
+  "package_source_hosts": [
+    "files.pythonhosted.org"
+  ],
+  "openvsp": {
+    "version": "3.55.0",
+    "verified": true,
+    "installed_utc": "2026-10-18T13:36:42.638404+00:00",
+    "source_page": "https://openvsp.org/download.php",
+    "source_url": "https://openvsp.org/download.php?file=zips/current/windows/OpenVSP-3.55.0-win64-Python3.11.zip",
+    "label": "OpenVSP 3.55.0  64-bit Python 3.11",
+    "archive_sha256": "f1fde65f9d48ae482dcad2c0b7711b81a22810871a5bebc236c4618c0131ebb9",
+    "archive_bytes": 49664844,
+    "install_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openvsp\\OpenVSP-3.55.0-win64",
+    "executables": {
+      "vsp.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openvsp\\OpenVSP-3.55.0-win64\\vsp.exe",
+      "vspaero.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openvsp\\OpenVSP-3.55.0-win64\\vspaero.exe",
+      "vspaero_opt.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openvsp\\OpenVSP-3.55.0-win64\\vspaero_opt.exe",
+      "vsploads.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openvsp\\OpenVSP-3.55.0-win64\\vsploads.exe",
+      "vspscript.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openvsp\\OpenVSP-3.55.0-win64\\vspscript.exe",
+      "vspviewer.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openvsp\\OpenVSP-3.55.0-win64\\vspviewer.exe"
+    },
+    "integration": "Native executables and AngelScript. Python binding is not installed."
+  },
+  "vspaero": {
+    "version": "7.2.2",
+    "verified": true,
+    "executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openvsp\\OpenVSP-3.55.0-win64\\vspaero.exe"
+  },
+  "xfoil": {
+    "version": "6.99",
+    "verified": true,
+    "source_page": "https://web.mit.edu/drela/Public/web/xfoil/",
+    "source_url": "https://web.mit.edu/drela/Public/web/xfoil/XFOIL6.99.zip",
+    "archive_sha256": "e13e8fe5cc38d8ac2626e9d3b17643bdcfaa63791619f042afdaa7cd103bcb08",
+    "archive_bytes": 3813300,
+    "executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\xfoil\\xfoil.exe",
+    "license": "GPL, upstream distribution retained"
+  },
+  "last_external_verification": "2026-10-18T17:03:30.769183+03:00",
+  "external_test_runner": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\native\\run_all.py",
+  "freecad": {
+    "version": "1.1.4",
+    "installed_utc": "2026-10-18T14:20:44.640977+00:00",
+    "source_url": "https://github.com/FreeCAD/FreeCAD/releases/download/1.1.4/FreeCAD_1.1.4-Windows-x86_64-py311.7z",
+    "archive_bytes": 418088341,
+    "archive_sha256": "4828741fc91ee37fafcdb97a1abacb18b04ba451ac4372d9ff7a7349b36f4d6d",
+    "upstream_sha256_verified": true,
+    "install_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\freecad",
+    "executables": {
+      "FreeCAD.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\freecad\\FreeCAD_1.1.4-Windows-x86_64-py311\\FreeCAD.exe",
+      "FreeCADCmd.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\freecad\\FreeCAD_1.1.4-Windows-x86_64-py311\\FreeCADCmd.exe",
+      "ccx.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\freecad\\FreeCAD_1.1.4-Windows-x86_64-py311\\bin\\ccx.exe",
+      "gmsh.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\freecad\\FreeCAD_1.1.4-Windows-x86_64-py311\\bin\\gmsh.exe"
+    },
+    "verified": true,
+    "last_test_utc": "2026-10-18T14:39:06.111264+00:00",
+    "test_report": "outputs/reports/fem_results.json"
+  },
+  "calculix": {
+    "version": "2.22",
+    "executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\freecad\\FreeCAD_1.1.4-Windows-x86_64-py311\\bin\\ccx.exe",
+    "verified": true,
+    "source": "Official FreeCAD 1.1.4 portable package"
+  },
+  "gmsh": {
+    "version": "4.15.2",
+    "python": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv-cad\\Scripts\\python.exe",
+    "integration": "Official pip SDK / native gmsh-4.15.dll",
+    "verified": true,
+    "FreeCAD_GUI_binary_version": "4.15.0",
+    "FreeCAD_GUI_binary": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\freecad\\FreeCAD_1.1.4-Windows-x86_64-py311\\bin\\gmsh.exe"
+  },
+  "k_model": {
+    "installed_utc": "2026-10-18T14:26:49.490351+00:00",
+    "model_repository": "ThomasTheMaker/k-1b-gguf",
+    "revision": "5f900e8c388e2bbe2fe84b11fa6ee5911611bc5a",
+    "quantization": "Q8_0",
+    "model": {
+      "url": "https://huggingface.co/ThomasTheMaker/k-1b-gguf/resolve/5f900e8c388e2bbe2fe84b11fa6ee5911611bc5a/k-1b-q8_0.gguf",
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\k-1b-q8_0.gguf",
+      "bytes": 1069305984,
+      "sha256": "8b0138e712ad33937e0657c226da510816715745adf859573333eae9a89c8b91",
+      "upstream_sha256_verified": true
+    },
+    "openscad_archive": {
+      "url": "https://github.com/openscad/openscad/releases/download/openscad-2021.01/OpenSCAD-2021.01-x86-64.zip",
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\setup\\downloads\\OpenSCAD-2021.01-x86-64.zip",
+      "bytes": 21884613,
+      "sha256": "fb0caabf5bbc89f8f2f80c10b79ae64d697aaff6efd58b2756f5d6270edb7ba7",
+      "upstream_sha256_verified": true
+    },
+    "openscad_version": "2021.01",
+    "executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openscad\\openscad-2021.01\\openscad.com",
+    "verified_inference": true,
+    "license_note": "Card declares Apache-2.0; Gemma base terms also require review before redistribution.",
+    "geometry_accepted_cases": 0,
+    "engineering_auto_use": false,
+    "test_report": "outputs/reports/cad_model_benchmark.json"
+  },
+  "cad_model": {
+    "installed_utc": "2026-10-18T14:24:51.982430+00:00",
+    "upstream_model": "ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+    "quantized_repository": "mradermacher/Zero-To-CAD-Qwen3-VL-2B-GGUF",
+    "revision": "d6401e65c6c03f8c52db9b88d43894e32b595487",
+    "quantization": "Q6_K",
+    "vision_precision": "f16",
+    "runtime_release": "b11719",
+    "runtime_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\llama-cad",
+    "files": [
+      {
+        "path": "tools/cad-model/Zero-To-CAD-Qwen3-VL-2B.Q6_K.gguf",
+        "url": "https://huggingface.co/mradermacher/Zero-To-CAD-Qwen3-VL-2B-GGUF/resolve/d6401e65c6c03f8c52db9b88d43894e32b595487/Zero-To-CAD-Qwen3-VL-2B.Q6_K.gguf",
+        "bytes": 1417756960,
+        "sha256": "459a771d25b2f388f5e8437c9427474212ffe67da4dd1c132cb593c069c3e628",
+        "absolute_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\Zero-To-CAD-Qwen3-VL-2B.Q6_K.gguf",
+        "actual_sha256": "459a771d25b2f388f5e8437c9427474212ffe67da4dd1c132cb593c069c3e628"
+      },
+      {
+        "path": "tools/cad-model/Zero-To-CAD-Qwen3-VL-2B.mmproj-f16.gguf",
+        "url": "https://huggingface.co/mradermacher/Zero-To-CAD-Qwen3-VL-2B-GGUF/resolve/d6401e65c6c03f8c52db9b88d43894e32b595487/Zero-To-CAD-Qwen3-VL-2B.mmproj-f16.gguf",
+        "bytes": 819395648,
+        "sha256": "160c11fb59b541d19d4f814e335cf27dd54b386a4cb296e66c012df1881026f2",
+        "absolute_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\Zero-To-CAD-Qwen3-VL-2B.mmproj-f16.gguf",
+        "actual_sha256": "160c11fb59b541d19d4f814e335cf27dd54b386a4cb296e66c012df1881026f2"
+      },
+      {
+        "path": "work/setup/downloads/llama-b11719-bin-win-cuda-12.4-x64.zip",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-bin-win-cuda-12.4-x64.zip",
+        "bytes": 267483221,
+        "sha256": "3a7c399487a315cad888cd5394f1e144993ec25676148930cf2069a6c2fd6360",
+        "absolute_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\setup\\downloads\\llama-b11719-bin-win-cuda-12.4-x64.zip",
+        "actual_sha256": "3a7c399487a315cad888cd5394f1e144993ec25676148930cf2069a6c2fd6360"
+      },
+      {
+        "path": "work/setup/downloads/cudart-llama-bin-win-cuda-12.4-x64.zip",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11719/cudart-llama-bin-win-cuda-12.4-x64.zip",
+        "bytes": 391443627,
+        "sha256": "8c79a9b226de4b3cacfd1f83d24f962d0773be79f1e7b75c6af4ded7e32ae1d6",
+        "absolute_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\setup\\downloads\\cudart-llama-bin-win-cuda-12.4-x64.zip",
+        "actual_sha256": "8c79a9b226de4b3cacfd1f83d24f962d0773be79f1e7b75c6af4ded7e32ae1d6"
+      }
+    ],
+    "verified_inference": true,
+    "license": "Apache-2.0 (model); MIT (llama.cpp)",
+    "geometry_accepted_cases": 0,
+    "engineering_auto_use": false,
+    "test_report": "outputs/reports/cad_model_benchmark.json"
+  },
+  "openscad": {
+    "version": "2021.01",
+    "executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\openscad\\openscad-2021.01\\openscad.com",
+    "verified": true,
+    "source": "Official portable ZIP"
+  },
+  "project_entry": "outputs/Muhendislik-Merkezi.cmd",
+  "project_runner": "work/agent/project.py",
+  "project_skill": ".agents/skills/iha-muhendislik/SKILL.md",
+  "last_extension_verification": "2026-10-18T14:53:42.762022+00:00",
+  "extension_download_bytes": 4405358394,
+  "freecad_profile_is_project_local": true,
+  "model_auto_engineering_acceptance": false,
+  "cadmonkey32": {
+    "installed_utc": "2026-10-18T17:44:01.205921+00:00",
+    "repository": "ThomasTheMaker/cadmonkey-1b-data-32-gguf",
+    "revision": "bbdf3ec07e701885716ac8b188ecd6ff3e9eabed",
+    "model_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\cadmonkey-1b-data-32-q8_0.gguf",
+    "source_url": "https://huggingface.co/ThomasTheMaker/cadmonkey-1b-data-32-gguf/resolve/bbdf3ec07e701885716ac8b188ecd6ff3e9eabed/cadmonkey-1b-data-32-q8_0.gguf",
+    "bytes": 1069305984,
+    "sha256": "825d80c42cdd2779d16ead1879241acc19f73b1d14accf29c8bbde4cecb58b76",
+    "upstream_sha256_verified": true,
+    "architecture": "gemma3",
+    "quantization": "Q8_0",
+    "engineering_auto_use": false,
+    "status": "experimental; measured on three specifications",
+    "verified_inference": true,
+    "acceptance_by_mode": [
+      {
+        "model": "cadmonkey32",
+        "mode": "baseline",
+        "trials": 3,
+        "CAD_created": 3,
+        "accepted": 3,
+        "case_results": [
+          {
+            "case": "box",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "hole_plate",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "spacer",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          }
+        ]
+      },
+      {
+        "model": "cadmonkey32",
+        "mode": "training_prefix",
+        "trials": 3,
+        "CAD_created": 3,
+        "accepted": 3,
+        "case_results": [
+          {
+            "case": "box",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "hole_plate",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "spacer",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          }
+        ]
+      },
+      {
+        "model": "cadmonkey32",
+        "mode": "training_sampled",
+        "trials": 6,
+        "CAD_created": 6,
+        "accepted": 5,
+        "case_results": [
+          {
+            "case": "box",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "hole_plate",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "spacer",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "box",
+            "seed": 43,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "hole_plate",
+            "seed": 43,
+            "geometry_accepted": false,
+            "error": null
+          },
+          {
+            "case": "spacer",
+            "seed": 43,
+            "geometry_accepted": true,
+            "error": null
+          }
+        ]
+      },
+      {
+        "model": "cadmonkey32",
+        "mode": "explicit_rules",
+        "trials": 3,
+        "CAD_created": 3,
+        "accepted": 2,
+        "case_results": [
+          {
+            "case": "box",
+            "seed": 42,
+            "geometry_accepted": false,
+            "error": null
+          },
+          {
+            "case": "hole_plate",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          },
+          {
+            "case": "spacer",
+            "seed": 42,
+            "geometry_accepted": true,
+            "error": null
+          }
+        ]
+      }
+    ],
+    "last_test_report": "outputs/reports/k_family_study.json",
+    "new_tasks_summary": {
+      "model": "cadmonkey32",
+      "trials": 6,
+      "accepted": 4
+    },
+    "usage_audit_summary": [
+      {
+        "model": "cadmonkey32",
+        "group": "upstream_demo",
+        "trials": 3,
+        "CAD_created": 2,
+        "geometry_accepted": null
+      },
+      {
+        "model": "cadmonkey32",
+        "group": "recipe_sampling",
+        "trials": 6,
+        "CAD_created": 6,
+        "geometry_accepted": 5
+      },
+      {
+        "model": "cadmonkey32",
+        "group": "no_output_suffix",
+        "trials": 6,
+        "CAD_created": 6,
+        "geometry_accepted": 2
+      },
+      {
+        "model": "cadmonkey32",
+        "group": "external_template",
+        "trials": 1,
+        "CAD_created": 1,
+        "geometry_accepted": 1
+      }
+    ],
+    "known_failures": [
+      "Offset hole position",
+      "Two-hole axis/placement",
+      "Unrequested cuts with some prompt variants"
+    ],
+    "use_policy": "Experimental text-to-OpenSCAD draft helper; verify each generated shape and engineering assumptions independently",
+    "reports": [
+      "outputs/reports/k_family_study.json",
+      "outputs/reports/k_family_new_tasks.json",
+      "outputs/reports/model_usage_audit.json"
+    ]
+  },
+  "preferred_experimental_text_cad_model": "cadmonkey32",
+  "latest_research_report": "outputs/reports/proje_durum_ve_k1b_arastirma.html",
+  "last_model_usage_audit_utc": "2026-10-18T18:07:58.953093+00:00",
+  "su2": {
+    "installed_utc": "2026-10-18T18:24:31.034075+00:00",
+    "version": "v8.5.0",
+    "source_url": "https://github.com/su2code/SU2/releases/download/v8.5.0/SU2-v8.5.0-win64-omp.zip",
+    "archive_sha256": "4466fe21aedb5e0bad57afd45f829acbdec6ec79fe8c3f8954ddea06a4b4bc11",
+    "upstream_sha256_verified": true,
+    "archive_bytes": 28043921,
+    "executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+    "integration": "Native Windows OpenMP; no global PATH change",
+    "status": "installed and native Euler/RANS run verified; full CFD acceptance incomplete",
+    "runtime_verified": true,
+    "quality_passed": false,
+    "last_test_utc": "2026-10-18T18:34:54.448825+00:00",
+    "test_report": "outputs/reports/cfd_qualification.json",
+    "reference_report": "outputs/reports/cfd_reference_comparison.json",
+    "limits": [
+      "One 2D RANS angle; no automatic arbitrary airfoil meshing service",
+      "Medium/fine drag changes 22.84%; mesh independence not established",
+      "Fine max y+ 1.744 does not meet strict max y+ <1"
+    ]
+  },
+  "fusion_compute": {
+    "registered_utc": "2026-10-18T18:30:18.940880+00:00",
+    "provider": "Official Autodesk Fusion Compute MCP (public beta)",
+    "endpoint": "https://developer.api.autodesk.com/da/v3/mcp/fusion",
+    "config_scope": "project .codex/config.toml",
+    "oauth_login_verified": true,
+    "user_reported_license": "Fusion student license; entitlement not yet checked by starting a session",
+    "available_in_current_chat": false,
+    "fusion_engine_tested": false,
+    "next_action": "Reload MCP/server connection in the app or reopen this project; list versions/sessions before starting Fusion",
+    "roles": {
+      "OpenVSP": "aircraft geometry and fast aerodynamics",
+      "Fusion_FreeCAD": "parametric parts, assemblies and drawings",
+      "SU2": "volume-mesh CFD"
+    },
+    "credentials": "Managed by Codex OAuth; no tokens or passwords copied into project files"
+  },
+  "deterministic_cad": {
+    "runner": "work/geometry/parametric_wing.py",
+    "input": "outputs/data/parametric_wing_case.json",
+    "geometry_checks_passed": true,
+    "report": "outputs/reports/parametric_cad_qualification.json",
+    "scope": "Single-element normalized Selig airfoil; symmetric ruled wing and ribs; not arbitrary CAD"
+  },
+  "complex_native_vlm": {
+    "runner": "work/qualification/run_complex_vlm.py",
+    "report": "outputs/reports/complex_vlm_qualification.json",
+    "runtime_verified": true,
+    "quality_passed": false,
+    "force_audit": "outputs/reports/complex_vlm_force_audit.json"
+  },
+  "latest_engineering_report": "outputs/reports/karmasik_cad_ve_nasa_testleri.html",
+  "last_engineering_extension_utc": "2026-10-18T18:51:59.255866+00:00",
+  "elmer": {
+    "installed_utc": "2026-10-18T20:26:06.467079+00:00",
+    "source_url": "https://www.nic.funet.fi/pub/sci/physics/elmer/bin/windows/ElmerFEM-gui-nompi-Windows-AMD64.zip",
+    "distribution": "Official CSC portable non-MPI GUI archive, listing dated 2026-08-05; actual solver build pending native run",
+    "archive_bytes": 219035726,
+    "archive_sha256": "e029f144dca3c6d28a97465d91e7ac3a6ecc1b449cd6730b8a1d103fc255472c",
+    "upstream_sha256_verified": false,
+    "checksum_note": "Local SHA256 and ZIP CRC recorded; no upstream SHA256 was provided by the download listing",
+    "directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\elmer",
+    "executables": {
+      "ElmerSolver.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\elmer\\ElmerFEM-gui-nompi-Windows-AMD64\\bin\\ElmerSolver.exe",
+      "ElmerGrid.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\elmer\\ElmerFEM-gui-nompi-Windows-AMD64\\bin\\ElmerGrid.exe",
+      "ElmerGUI.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\elmer\\ElmerFEM-gui-nompi-Windows-AMD64\\bin\\ElmerGUI.exe"
+    },
+    "runtime_verified": true,
+    "integration": "Project-local native Windows GUI and FEM flow solver; no global PATH or registry changes",
+    "version": "26.2-unknown (Rev: Release)",
+    "build_date": "2026-08-05",
+    "quality_passed": true,
+    "verified_scope": "2D laminar incompressible channel; Re_H=100, H=1m, L=4m, rho=1 kg/m3, mu=.01 Pa.s, Umean=1m/s; synthetic verification",
+    "test_report": "outputs/reports/elmer_cfd_qualification.json",
+    "test_utc": "2026-10-18T20:29:55.670049+00:00"
+  },
+  "workflow_interface": "work/agent/projects_desk.ps1",
+  "workflow_intake": "work/agent/intake.py",
+  "comparison_runner": "work/workflow/rank_candidates.py",
+  "latest_workflow_report": "outputs/reports/projeler_exe_ve_profil_cfd.html",
+  "workflow_readiness": "outputs/reports/workflow_readiness.json",
+  "workflow_executable": "outputs/Muhendislik-Merkezi.exe",
+  "projects_registry": "outputs/data/projects",
+  "openaerostruct": {
+    "installed_utc": "2026-10-19T07:44:16.191891+00:00",
+    "version": "2.12.0",
+    "openmdao_version": "3.45.1",
+    "python": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+    "module": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Lib\\site-packages\\openaerostruct\\__init__.py",
+    "pip_report": "work/setup/openaerostruct_pip_report.json",
+    "source_manifest": "work/openaerostruct/sources/manifest.json",
+    "reference_agent_commit": "09336bd12e5816cd212ad5b83d35c560599ea803",
+    "reference_agent_executed": false,
+    "runtime_verified": true,
+    "physical_design_accepted": false,
+    "test_report": "outputs/reports/openaerostruct_examples.json",
+    "runner": "work/openaerostruct/run_examples.py",
+    "limits": [
+      "Published coarse CRM examples and four total derivative groups checked",
+      "No OAS mesh independence, experimental validation or UAV-specific aeroelastic design",
+      "No OpenVSP Python API bridge",
+      "Upstream Gemini/Ollama agent and its auto-plot-save fork not installed"
+    ]
+  },
+  "profile_cfd": {
+    "runner": "work/qualification/profile_cfd.py",
+    "project_id": "proje-0314dcd012",
+    "runtime_verified": true,
+    "quality_passed": true,
+    "verified_scope": "2D inviscid profile",
+    "report": "outputs/projects/proje-0314dcd012/reports/profile_cfd_results.json",
+    "limits": [
+      "No boundary-layer mesh/RANS/transition qualification",
+      "Inviscid numerical CD is not physical profile drag",
+      "No stall or whole-aircraft acceptance",
+      "20-chord farfield sensitivity not independently established"
+    ]
+  },
+  "validation_benchmarks": {
+    "index": "outputs/reports/validation_benchmark_index.json",
+    "projects": {
+      "cad": "proje-e8fe92444f",
+      "cfd": "proje-e9319baef1"
+    },
+    "cad_geometry_verified": true,
+    "M6_CFD_runtime_verified": true,
+    "M6_CFD_quality_passed": false
+  },
+  "source_geometry_blind_validation": {
+    "project_id": "proje-15cce2de02",
+    "report": "outputs/reports/kaynak_geometri_ve_kor_cfd.html",
+    "index": "outputs/reports/blind_cfd_validation_index.json",
+    "v1_runtime_verified": true,
+    "v1_minimum_qualification_passed": false,
+    "v2_status": "frozen_and_independently_reviewed_failed",
+    "source_point_continuity_audit": true,
+    "original_experiment_table_audit": true,
+    "scope": "2D RAE2822 one corrected-condition case; no general 3D UAV acceptance",
+    "v2_runtime_verified": true,
+    "v2_minimum_qualification_passed": false,
+    "v2_review": "outputs/projects/proje-15cce2de02/reports/review_v2_qualification.json",
+    "v2_farfield_solution_available": false
+  }
+}

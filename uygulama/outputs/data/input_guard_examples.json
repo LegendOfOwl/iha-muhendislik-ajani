@@ -1,0 +1,53 @@
+{
+  "complete_synthetic_case": {
+    "status": "conditional_lift_screening",
+    "inputs": {
+      "mass": {
+        "value": 3.0,
+        "unit": "kg",
+        "status": "assumption",
+        "source": "Synthetic integration-test fixture, not project data."
+      },
+      "wing_area": {
+        "value": 0.4,
+        "unit": "m2",
+        "status": "assumption",
+        "source": "Synthetic integration-test fixture, not project data."
+      },
+      "density": {
+        "value": 1.225,
+        "unit": "kg/m3",
+        "status": "assumption",
+        "source": "Synthetic integration-test fixture, not project data."
+      },
+      "cl_max": {
+        "value": 1.1,
+        "unit": "1",
+        "status": "assumption",
+        "source": "Synthetic integration-test fixture, not project data."
+      }
+    },
+    "results": {
+      "stall_speed_m_s": 10.448202480088861,
+      "stall_speed_km_h": 37.6135289283199
+    },
+    "method": "1g, steady level flight: mg = 0.5*rho*V^2*S*CLmax",
+    "source": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+    "limitations": [
+      "Requires applicable whole-wing CLmax; not inferred here.",
+      "No power, drag, structure, stability or endurance assessment."
+    ],
+    "aircraft_feasibility": "not_assessed"
+  },
+  "missing_clmax": {
+    "status": "blocked",
+    "issues": [
+      {
+        "input": "cl_max",
+        "code": "MISSING_VALUE"
+      }
+    ],
+    "results": null,
+    "aircraft_feasibility": "not_assessed"
+  }
+}

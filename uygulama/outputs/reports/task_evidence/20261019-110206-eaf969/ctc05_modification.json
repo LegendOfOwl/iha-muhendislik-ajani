@@ -1,0 +1,33 @@
+{
+  "source_faces": 208,
+  "delivered_faces": 175,
+  "valid": true,
+  "solids": 1,
+  "groove_surfaces": [
+    {
+      "radius_mm": 29.75,
+      "z_range_mm": [
+        360.0,
+        368.0
+      ]
+    },
+    {
+      "radius_mm": 28.75,
+      "z_range_mm": [
+        410.0,
+        422.0
+      ]
+    }
+  ],
+  "keyway_floor_found": true,
+  "analytic_removed_volume_mm3": 10465.200608676321,
+  "roundtrip_baseline_removed_volume_mm3": 10465.2584762685,
+  "removed_volume_relative_error": 5.529525361591681e-06,
+  "unmodified_source_rejected": true,
+  "passed": true,
+  "acceptance_limits": {
+    "coordinate_radius_mm": 1e-05,
+    "removed_volume_relative": 0.0001
+  },
+  "scope": "Source flanged shaft modified with explicit new dimensions; source geometry is credited, not claimed as redrawn from scratch."
+}

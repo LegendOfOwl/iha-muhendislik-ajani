@@ -1,0 +1,14 @@
+{
+  "geometry": "Same original65 source coordinates, C1 LE revision r2; no physical input changes",
+  "failed_mesh_prototypes": [
+    {"BL_thickness_c":0.04,"level":"medium","result":"rejected","error":"Gmsh BoundaryLayer self-intersection, Edge not recovered122123444444","log":"work/blind_validation/solver_v2/mesh_r3_medium_BL004.log","solution":null},
+    {"BL_thickness_c":0.03,"level":"medium","result":"rejected","error":"Gmsh BoundaryLayer self-intersection, Edge not recovered145146444444","log":"work/blind_validation/solver_v2/mesh_r3_medium_BL003.log","solution":null}
+  ],
+  "successful_mesh_only_change_prototype": {"BL_thickness_c":0.02,"case":"v2_r3_medium","source_geometry_changed":false,"purpose":"Compare aft normal resolution and forces/profiles with r2 medium; not a three-grid accepted family"},
+  "other_preserved_rejected_attempts": [
+    "OCC automatic endpoint tangent scaling caused x_max1.008843c; rejected before meshing/CFD, prediction_v2_geometry_rejected_unnormalized.json and solver_v2/geometry_revision*.log",
+    "Old-LE200c halo prototypes v2_coarse/v2_medium: mesh only, superseded before CFD by r2 C1 geometry",
+    "First stitched-far export quality import attempt: Gmsh could not read SU2 directly; solver mesh itself was preserved and quality reconstruction then used the same nodes/elements via Gmsh discrete API; stitch_far.log and stitch_far_attempt2.log"
+  ],
+  "no_failed_mesh_or_failed_field_substituted_as_success":true
+}

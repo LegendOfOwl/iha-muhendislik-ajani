@@ -1,0 +1,278 @@
+{
+  "started_utc": "2026-10-18T17:48:59.570286+00:00",
+  "cases": [
+    {
+      "id": "wide_box",
+      "prompt": "rectangular solid box exactly 72 mm long, 24 mm wide and 5 mm high, centered at the origin. No holes.",
+      "bbox_mm": [
+        72,
+        24,
+        5
+      ],
+      "volume_mm3": 8640,
+      "center_at_origin": true
+    },
+    {
+      "id": "compact_box",
+      "prompt": "rectangular solid box exactly 19 mm long, 17 mm wide and 11 mm high, centered at the origin. No holes.",
+      "bbox_mm": [
+        19,
+        17,
+        11
+      ],
+      "volume_mm3": 3553,
+      "center_at_origin": true
+    },
+    {
+      "id": "centered_plate",
+      "prompt": "rectangular plate exactly 60 mm along X, 40 mm along Y and 6 mm thick along Z, centered at the origin, with one 8 mm diameter cylindrical through-hole along Z at X=0, Y=0.",
+      "bbox_mm": [
+        60,
+        40,
+        6
+      ],
+      "volume_mm3": 14098.407105255379,
+      "center_at_origin": true,
+      "probes_mm": [
+        [
+          0,
+          0,
+          -2.4
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2.4
+        ],
+        [
+          3.6,
+          0,
+          0
+        ],
+        [
+          4.4,
+          0,
+          0
+        ],
+        [
+          24,
+          0,
+          0
+        ]
+      ],
+      "expected_inside": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "offset_plate",
+      "prompt": "rectangular plate exactly 54 mm along X, 36 mm along Y and 4 mm thick along Z. The rectangular plate is centered at the origin. It has one 6 mm diameter cylindrical through-hole along Z whose center is at X=12 mm, Y=0 mm.",
+      "bbox_mm": [
+        54,
+        36,
+        4
+      ],
+      "volume_mm3": 7662.902664470767,
+      "center_at_origin": true,
+      "probes_mm": [
+        [
+          12,
+          0,
+          -1.6
+        ],
+        [
+          12,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          1.6
+        ],
+        [
+          14.7,
+          0,
+          0
+        ],
+        [
+          15.3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected_inside": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "double_plate",
+      "prompt": "rectangular plate exactly 60 mm along X, 24 mm along Y and 4 mm thick along Z, centered at the origin, with two separate 4 mm diameter cylindrical through-holes along Z. The hole centers are at X=-15 mm,Y=0 mm and X=15 mm,Y=0 mm.",
+      "bbox_mm": [
+        60,
+        24,
+        4
+      ],
+      "volume_mm3": 5659.469035085127,
+      "center_at_origin": true,
+      "probes_mm": [
+        [
+          -15,
+          0,
+          -1.6
+        ],
+        [
+          -15,
+          0,
+          0
+        ],
+        [
+          -15,
+          0,
+          1.6
+        ],
+        [
+          15,
+          0,
+          -1.6
+        ],
+        [
+          15,
+          0,
+          0
+        ],
+        [
+          15,
+          0,
+          1.6
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          17.3,
+          0,
+          0
+        ]
+      ],
+      "expected_inside": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "new_spacer",
+      "prompt": "cylindrical spacer exactly 7 mm high along Z, 26 mm outer diameter and one concentric 10 mm diameter through-hole along Z. The spacer is centered at the origin on all three axes.",
+      "bbox_mm": [
+        26,
+        26,
+        7
+      ],
+      "volume_mm3": 3166.7253948185116,
+      "center_at_origin": true,
+      "probes_mm": [
+        [
+          0,
+          0,
+          -2.8
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2.8
+        ],
+        [
+          4.5,
+          0,
+          0
+        ],
+        [
+          5.5,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0
+        ],
+        [
+          13.5,
+          0,
+          0
+        ]
+      ],
+      "expected_inside": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false
+      ]
+    }
+  ],
+  "models": {
+    "k1b": {
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\k-1b-q8_0.gguf",
+      "sha256": "8b0138e712ad33937e0657c226da510816715745adf859573333eae9a89c8b91"
+    },
+    "cadmonkey32": {
+      "path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\cad-model\\cadmonkey-1b-data-32-q8_0.gguf",
+      "sha256": "825d80c42cdd2779d16ead1879241acc19f73b1d14accf29c8bbde4cecb58b76"
+    }
+  },
+  "settings": {
+    "temperature": 0,
+    "seed": 42,
+    "context": 4096,
+    "max_tokens": 1024,
+    "gpu_layers": 99
+  },
+  "prefix": "hey cadmonkey, create me a ",
+  "suffix": " Output only OpenSCAD code.",
+  "generated_code_modified": false,
+  "training_set_overlap": "unknown; these are new local tasks, not certified held-out training examples",
+  "acceptance": "bbox and volume <1% error, origin centering <0.001 mm, finite interior/exterior probes, closed manifold STL",
+  "limitations": [
+    "Six simple parts, not a broad benchmark",
+    "Probe points and total volume do not establish complete shape equivalence",
+    "No human correction or best-of-N selection"
+  ],
+  "script_sha256": "3dc3fdb8f1f5d899acc1d8d1df1cdf4cb58d2f8d2778af1ef53d0018dfc2768b",
+  "validator_sha256": "a88f86c5aace26514212ed767b4720e6c46d67b01b68adf429c1a971c2bce9a0"
+}

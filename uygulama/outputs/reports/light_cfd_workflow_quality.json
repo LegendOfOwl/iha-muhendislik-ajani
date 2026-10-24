@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-18T20:36:26.920018+00:00",
+  "passed": true,
+  "scope": "Installation, native CFD verification and workflow/UI guards; not all-aircraft validation",
+  "html_checks": [
+    {
+      "file": "outputs\\reports\\hafif_cfd_ve_is_akisi.html",
+      "local_links": 13,
+      "missing": []
+    },
+    {
+      "file": "outputs\\reports\\candidate_comparison.html",
+      "local_links": 2,
+      "missing": []
+    },
+    {
+      "file": "outputs\\Proje-Ozeti.html",
+      "local_links": 31,
+      "missing": []
+    }
+  ],
+  "workflow_checks_passed": 17,
+  "basic_checks_passed": 26,
+  "elmer_native_flow_accepted_in_qualified_scope": true,
+  "native_Gmsh_readback_passed": true,
+  "GUI_tabs_rendered_and_inspected": 3,
+  "LLM_session_spawned_for_test": false,
+  "real_project_inputs_unchanged": true,
+  "full_generic_pipeline_verified": false,
+  "CFD_ranking_demo_has_final_winner": false,
+  "elmer_raw_evidence_sha256": {
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n5\\case.sif": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n5\\native.log": "7f56e760efd6d43d68d21cb6028fd1196c3cc0bb72b36e8f2ec23094ee49a462",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n5\\channel.msh": "65d34732a0e34eb32926c38df0575ee053b0fdccb0069805c06de62064801318",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n5\\mesh\\flow_t0001.vtu": "8f58c21e0bc43ecce4a3ada9e2fc8ec36e3d1a1732b33641dbb70f2ba416ca93",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n10\\case.sif": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n10\\native.log": "753754c0dbaa6a625e1102a61c6588c68caa057ba454f6b17f900d32cbbb66ac",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n10\\channel.msh": "a195e843d52c88dc8f9566e14c66e63c82f8104b03be8e8446c942ae0137aa59",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n10\\mesh\\flow_t0001.vtu": "c84b12929d4c145ee09ad2dac70823cb8d75d825b0a0698df1ebdb9a4bfb2dfd",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n20\\case.sif": "48a67f9193761dfe47b7357e83aa5cd0bd2c4414a6c1ed37af59a50354962c6c",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n20\\native.log": "becd2780f144aa13ecc0d5b566198e0454b9d85a3fef2f074a319ab921ec951c",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n20\\channel.msh": "49cae6a3c3dae8cd09868c25ea993e4a1a6a7331b6ef0146a5ba9c51f72fa649",
+    "outputs\\simulations\\elmer_cfd_20261018_232954\\n20\\mesh\\flow_t0001.vtu": "5dfb69a2270a38906a548bcfcbafaadc5a92533c37c749078f4762baea9dfac0"
+  }
+}

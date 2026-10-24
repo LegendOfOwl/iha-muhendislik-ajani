@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-18T18:51:59.255866+00:00",
+  "classification": {
+    "CAD_profile": "kaynaklı; UIUC",
+    "CAD_dimensions": "varsayım; synthetic qualification",
+    "VSPAERO_conditions": "varsayım; tool qualification",
+    "CFD_conditions": "kaynaklı; SU2 tutorial",
+    "solver_outputs": "ölçülmüş; native solver output, not physical experiment",
+    "actual_UAV_inputs": "bilinmiyor"
+  },
+  "VSPAERO_conditions": {
+    "Vinf_m_s": 30,
+    "rho_kg_m3": 1.225,
+    "Mach": 0.08816,
+    "ReCref": 500000,
+    "mu_implied_Pa_s": 1.7422222222222222e-05,
+    "note": "Explicit qualification assumptions; native CDo heuristic is not accepted total drag"
+  },
+  "input_sha256": {
+    "outputs\\data\\parametric_wing_case.json": "080bd8cf1da94473cc10c0ab6ab81725ce210116ad9a49f1f7636a0095b30c36",
+    "outputs\\data\\airfoils\\naca2412.dat": "dce4261b15ef4177ce80563d5980891178c8ec8cbb1e270f0708a18f28d8bf56",
+    "work\\qualification\\sources\\source_manifest.json": "5f2b5dc926b1360ad641c853b164c71ea8a83685a7bc363b9fe571473295559d"
+  },
+  "solver_run_evidence_preserved": true,
+  "Fusion_engine_tested": false,
+  "further_validation": [
+    "Fine-grid RANS drag convergence and y+",
+    "Native VLM surface/wake force disagreement",
+    "Full CAD/OpenVSP surface equivalence",
+    "Custom airfoil mesh generation and operating envelope",
+    "Fusion engine round trip after MCP reload"
+  ]
+}

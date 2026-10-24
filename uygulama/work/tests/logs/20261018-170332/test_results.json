@@ -1,0 +1,379 @@
+{
+  "run_id": "20261018-170332",
+  "started_local": "2026-10-18T17:03:32.024792+03:00",
+  "project_root": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu",
+  "synthetic_test_only": true,
+  "all_requested_groups_passed": true,
+  "passed_checks": 26,
+  "total_checks": 26,
+  "groups": [
+    {
+      "group": "numeric",
+      "synthetic_test_only": true,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+      "checks": [
+        {
+          "name": "Sinüs integralinin analitik değeri",
+          "passed": true,
+          "measured": {
+            "integral": 2.0,
+            "error_estimate": 2.220446049250313e-14
+          },
+          "criterion": "|I-2| < 1e-10"
+        },
+        {
+          "name": "Sınır kısıtlı optimizasyon",
+          "passed": true,
+          "measured": {
+            "x": 2.0,
+            "success": true
+          },
+          "criterion": "0<=x<=2; optimum x=2, hata<1e-6"
+        },
+        {
+          "name": "Lineer denklem sistemi",
+          "passed": true,
+          "measured": [
+            2.0,
+            3.0
+          ],
+          "criterion": "Bilinen çözüm [2,3]"
+        }
+      ],
+      "versions": {
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "matplotlib": "3.11.2",
+        "pandas": "3.0.6"
+      },
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 0.892
+    },
+    {
+      "group": "guards",
+      "synthetic_test_only": true,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+      "checks": [
+        {
+          "name": "Tam girdide koşullu sonuç",
+          "passed": true,
+          "measured": "conditional_lift_screening",
+          "criterion": "Yalnız kaldırma ön hesabı"
+        },
+        {
+          "name": "Kütle ölçekleme kontrolü",
+          "passed": true,
+          "measured": 2.0,
+          "criterion": "Kütle x4 => hız x2"
+        },
+        {
+          "name": "Eksik CLmax sonucu engeller",
+          "passed": true,
+          "measured": {
+            "status": "blocked",
+            "issues": [
+              {
+                "input": "cl_max",
+                "code": "MISSING_VALUE"
+              }
+            ],
+            "results": null,
+            "aircraft_feasibility": "not_assessed"
+          },
+          "criterion": "Sayı üretmeden blocked"
+        },
+        {
+          "name": "Geçersiz girdi yapısı",
+          "passed": true,
+          "measured": [
+            {
+              "code": "INPUTS_MUST_BE_OBJECT"
+            }
+          ],
+          "criterion": "JSON nesnesi gerekli"
+        },
+        {
+          "name": "Yanlış kütle birimi",
+          "passed": true,
+          "measured": [
+            {
+              "input": "mass",
+              "code": "WRONG_OR_MISSING_UNIT",
+              "expected": "kg"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        },
+        {
+          "name": "Sıfır kanat alanı",
+          "passed": true,
+          "measured": [
+            {
+              "input": "wing_area",
+              "code": "INVALID_POSITIVE_FINITE_VALUE"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        },
+        {
+          "name": "Negatif yoğunluk",
+          "passed": true,
+          "measured": [
+            {
+              "input": "density",
+              "code": "INVALID_POSITIVE_FINITE_VALUE"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        },
+        {
+          "name": "NaN kaldırma katsayısı",
+          "passed": true,
+          "measured": [
+            {
+              "input": "cl_max",
+              "code": "INVALID_POSITIVE_FINITE_VALUE"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        },
+        {
+          "name": "Kaynağı olmayan girdi",
+          "passed": true,
+          "measured": [
+            {
+              "input": "mass",
+              "code": "MISSING_PROVENANCE"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        },
+        {
+          "name": "Bilinmiyor durumunda sayı",
+          "passed": true,
+          "measured": [
+            {
+              "input": "mass",
+              "code": "MISSING_PROVENANCE"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        },
+        {
+          "name": "Mantıksal değer sayı sayılmaz",
+          "passed": true,
+          "measured": [
+            {
+              "input": "mass",
+              "code": "INVALID_POSITIVE_FINITE_VALUE"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        },
+        {
+          "name": "Boşluk içeren kaynak",
+          "passed": true,
+          "measured": [
+            {
+              "input": "mass",
+              "code": "MISSING_PROVENANCE"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        },
+        {
+          "name": "Taşma üreten sayısal değer",
+          "passed": true,
+          "measured": [
+            {
+              "code": "NUMERIC_RANGE_ERROR"
+            }
+          ],
+          "criterion": "Geçersiz girdide sonuç yok"
+        }
+      ],
+      "versions": {},
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 0.136
+    },
+    {
+      "group": "aero",
+      "synthetic_test_only": true,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+      "checks": [
+        {
+          "name": "NACA koordinat üretimi",
+          "passed": true,
+          "measured": {
+            "points": 399
+          },
+          "criterion": "Sonlu koordinatlar, >50 nokta; yalnız geometri testi"
+        },
+        {
+          "name": "NeuralFoil simetrik profil kontrolü",
+          "passed": true,
+          "measured": {
+            "alpha_deg": [
+              -4.0,
+              0.0,
+              4.0
+            ],
+            "CL": [
+              -0.43490445245539744,
+              -5.204189192568436e-16,
+              0.4349044524553979
+            ]
+          },
+          "criterion": "CL(0) mutlak<.02; işaret ve simetri hatası<.03"
+        },
+        {
+          "name": "NeuralFoil sürükleme ve model güveni",
+          "passed": true,
+          "measured": {
+            "CD": [
+              0.007422911640258723,
+              0.005351412095536144,
+              0.007422911640258723
+            ],
+            "model_confidence": [
+              0.9597443641608387,
+              0.9581492416231159,
+              0.9597443641608403
+            ]
+          },
+          "criterion": "CD>0; model confidence>.8, deneysel doğrulama değildir"
+        },
+        {
+          "name": "VLM sonlu kanat referansı",
+          "passed": true,
+          "measured": {
+            "CL": 0.3237105372488659,
+            "approximate_theory_CL": 0.35091926759428826,
+            "relative_error": 0.0775355839875953
+          },
+          "criterion": "Yaklaşık kaldırma çizgisi referansından sapma<%20; CDi>0, deneysel doğrulama değildir"
+        },
+        {
+          "name": "VLM panel yakınsaması",
+          "passed": true,
+          "measured": {
+            "rows": [
+              {
+                "spanwise_resolution": 6,
+                "CL": 0.33436629258487627,
+                "CDi": 0.004192978390647586
+              },
+              {
+                "spanwise_resolution": 12,
+                "CL": 0.3275893459615998,
+                "CDi": 0.0042058931380660495
+              },
+              {
+                "spanwise_resolution": 24,
+                "CL": 0.3237105372488659,
+                "CDi": 0.004197094709875997
+              }
+            ],
+            "last_change": 0.011840460505051276
+          },
+          "criterion": "12->24 açıklık panelinde CL değişimi<%4"
+        },
+        {
+          "name": "VLM sıfır hücum açısı",
+          "passed": true,
+          "measured": {
+            "CL_at_zero": 5.756331947300034e-16
+          },
+          "criterion": "Simetrik düz kanat için |CL|<.005"
+        },
+        {
+          "name": "AeroSandbox/CasADi/IPOPT kısıtlı optimizasyon",
+          "passed": true,
+          "measured": {
+            "x": 2.000000019995
+          },
+          "criterion": "Bilinen sınır optimumu x=2; hata<1e-5"
+        }
+      ],
+      "versions": {
+        "aerosandbox": "4.2.10",
+        "neuralfoil": "0.3.3",
+        "casadi": "3.8.1"
+      },
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1.733
+    },
+    {
+      "group": "cad",
+      "synthetic_test_only": true,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv-cad\\Scripts\\python.exe",
+      "checks": [
+        {
+          "name": "CAD katı ve analitik hacim",
+          "passed": true,
+          "measured": {
+            "volume_mm3": 39999.99999999999,
+            "expected_mm3": 40000.0
+          },
+          "criterion": "Tek geçerli katı; hacim bağıl hata<1e-9"
+        },
+        {
+          "name": "STEP dışa/içe aktarımı",
+          "passed": true,
+          "measured": {
+            "reimported_volume_mm3": 39999.99999999999,
+            "bounding_box_mm": [
+              200.0,
+              20.0,
+              10.0
+            ]
+          },
+          "criterion": "Hacim bağıl hata<1e-7; boyut hatası<1e-6 mm"
+        },
+        {
+          "name": "CAD mm3 -> SI m3 dönüşümü",
+          "passed": true,
+          "measured": {
+            "volume_m3": 3.9999999999999996e-05
+          },
+          "criterion": "Analitik SI hacmiyle mutlak hata<1e-12 m3"
+        }
+      ],
+      "versions": {
+        "cadquery": "2.8.0",
+        "cadquery-ocp": "7.9.3.1.1"
+      },
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 2.187
+    }
+  ],
+  "dependency_checks": {
+    ".venv": {
+      "passed": true,
+      "output": "No broken requirements found.\n"
+    },
+    ".venv-cad": {
+      "passed": true,
+      "output": "No broken requirements found.\n"
+    }
+  },
+  "logs_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\tests\\logs\\20261018-170332",
+  "deferred": [
+    "FreeCAD/CalculiX",
+    "ANSYS"
+  ],
+  "does_not_prove": [
+    "LLM hallucination-free behavior",
+    "actual UAV feasibility",
+    "experimental aerodynamic validation",
+    "structural FEM validation"
+  ]
+}

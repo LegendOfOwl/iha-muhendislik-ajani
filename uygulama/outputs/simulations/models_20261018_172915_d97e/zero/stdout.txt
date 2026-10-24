@@ -1,0 +1,66 @@
+
+
+```python
+import cadquery as cq
+# Generating a workplane for sketch 0
+wp_sketch0 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+# Creating sketch 0
+sketch0 = wp_sketch0.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 1
+wp_sketch1 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch1 = wp_sketch1.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 2
+wp_sketch2 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch2 = wp_sketch2.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 3
+wp_sketch3 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch3 = wp_sketch3.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 4
+wp_sketch4 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch4 = wp_sketch4.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 5
+wp_sketch5 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch5 = wp_sketch5.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 6
+wp_sketch6 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch6 = wp_sketch6.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 7
+wp_sketch7 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch7 = wp_sketch7.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 8
+wp_sketch8 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch8 = wp_sketch8.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 9
+wp_sketch9 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch9 = wp_sketch9.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 10
+wp_sketch10 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch10 = wp_sketch10.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 11
+wp_sketch11 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch11 = wp_sketch11.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 12
+wp_sketch12 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch12 = wp_sketch12.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 13
+wp_sketch13 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch13 = wp_sketch13.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 14
+wp_sketch14 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch14 = wp_sketch14.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 15
+wp_sketch15 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch15 = wp_sketch15.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 16
+wp_sketch16 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch16 = wp_sketch16.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 17
+wp_sketch17 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch17 = wp_sketch17.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 18
+wp_sketch18 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch18 = wp_sketch18.moveTo(0, 0).lineTo(0, 1).lineTo(1, 1).lineTo(1, 0).lineTo(0, 0).close()
+# Creating sketch 19
+wp_sketch19 = cq.Workplane(cq.Plane(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), cq.Vector(0, 0, 1)))
+sketch19 = wp_sketch19.moveTo(0, 0).lineTo(
+

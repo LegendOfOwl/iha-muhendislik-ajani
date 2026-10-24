@@ -1,0 +1,26 @@
+# v0.1.0 — Temel hesap ve girdi kontrolleri
+
+22 dosya. Bu bir geriye dönük kanıt grubudur; eksiksiz eski uygulama imajı değildir.
+
+- [outputs/simulations/cat_budget_20261018_210042/k1b/generated.scad](../../uygulama/outputs/simulations/cat_budget_20261018_210042/k1b/generated.scad)
+- [outputs/simulations/k_transfer_20261018_204858/k1b_centered_plate/generated.scad](../../uygulama/outputs/simulations/k_transfer_20261018_204858/k1b_centered_plate/generated.scad)
+- [outputs/simulations/k_transfer_20261018_204858/k1b_compact_box/generated.scad](../../uygulama/outputs/simulations/k_transfer_20261018_204858/k1b_compact_box/generated.scad)
+- [outputs/simulations/k_transfer_20261018_204858/k1b_double_plate/generated.scad](../../uygulama/outputs/simulations/k_transfer_20261018_204858/k1b_double_plate/generated.scad)
+- [outputs/simulations/k_transfer_20261018_204858/k1b_new_spacer/generated.scad](../../uygulama/outputs/simulations/k_transfer_20261018_204858/k1b_new_spacer/generated.scad)
+- [outputs/simulations/k_transfer_20261018_204858/k1b_offset_plate/generated.scad](../../uygulama/outputs/simulations/k_transfer_20261018_204858/k1b_offset_plate/generated.scad)
+- [outputs/simulations/k_transfer_20261018_204858/k1b_wide_box/generated.scad](../../uygulama/outputs/simulations/k_transfer_20261018_204858/k1b_wide_box/generated.scad)
+- [outputs/simulations/models_20261018_172715_5ed0/zero/views/reference.step](../../uygulama/outputs/simulations/models_20261018_172715_5ed0/zero/views/reference.step)
+- [outputs/simulations/models_20261018_172915_d97e/zero/views/reference.step](../../uygulama/outputs/simulations/models_20261018_172915_d97e/zero/views/reference.step)
+- [outputs/simulations/models_20261018_173012_a4e6/k_box/generated.scad](../../uygulama/outputs/simulations/models_20261018_173012_a4e6/k_box/generated.scad)
+- [outputs/simulations/models_20261018_173012_a4e6/k_hole_plate/generated.scad](../../uygulama/outputs/simulations/models_20261018_173012_a4e6/k_hole_plate/generated.scad)
+- [outputs/simulations/models_20261018_173012_a4e6/k_spacer/generated.scad](../../uygulama/outputs/simulations/models_20261018_173012_a4e6/k_spacer/generated.scad)
+- [outputs/simulations/models_20261018_173055_d8b8/zero/views/reference.step](../../uygulama/outputs/simulations/models_20261018_173055_d8b8/zero/views/reference.step)
+- [outputs/simulations/study_20261018_173245/AR10/fine/model.step](../../uygulama/outputs/simulations/study_20261018_173245/AR10/fine/model.step)
+- [outputs/simulations/study_20261018_173245/AR10/fine/model.vsp3](../../uygulama/outputs/simulations/study_20261018_173245/AR10/fine/model.vsp3)
+- [outputs/simulations/study_20261018_173245/AR10/medium/model.vsp3](../../uygulama/outputs/simulations/study_20261018_173245/AR10/medium/model.vsp3)
+- [outputs/simulations/study_20261018_173245/AR6/fine/model.step](../../uygulama/outputs/simulations/study_20261018_173245/AR6/fine/model.step)
+- [outputs/simulations/study_20261018_173245/AR6/fine/model.vsp3](../../uygulama/outputs/simulations/study_20261018_173245/AR6/fine/model.vsp3)
+- [outputs/simulations/study_20261018_173245/AR6/medium/model.vsp3](../../uygulama/outputs/simulations/study_20261018_173245/AR6/medium/model.vsp3)
+- [outputs/simulations/study_20261018_173245/AR8/fine/model.step](../../uygulama/outputs/simulations/study_20261018_173245/AR8/fine/model.step)
+- [outputs/simulations/study_20261018_173245/AR8/fine/model.vsp3](../../uygulama/outputs/simulations/study_20261018_173245/AR8/fine/model.vsp3)
+- [outputs/simulations/study_20261018_173245/AR8/medium/model.vsp3](../../uygulama/outputs/simulations/study_20261018_173245/AR8/medium/model.vsp3)

@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-10-18T18:01:36.420001+00:00",
+  "results": [
+    {
+      "model": "k1b",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\cat_budget_20261018_210042\\k1b",
+      "context": 12288,
+      "max_tokens": 8192,
+      "note": "Larger budget than initial 2048-token short demo; no engineering dimension acceptance",
+      "inference_exit_code": 0,
+      "seconds": 4.794,
+      "openscad_exit_code": 1,
+      "CAD_created": false
+    },
+    {
+      "model": "cadmonkey32",
+      "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\cat_budget_20261018_210042\\cadmonkey32",
+      "context": 12288,
+      "max_tokens": 8192,
+      "note": "Larger budget than initial 2048-token short demo; no engineering dimension acceptance",
+      "inference_exit_code": 0,
+      "seconds": 4.217,
+      "CAD_created": false,
+      "error": "TimeoutExpired: Command '['C:\\\\Users\\\\Urungu\\\\Documents\\\\Codex\\\\2026-10-18\\\\bu\\\\tools\\\\openscad\\\\openscad-2021.01\\\\openscad.com', '-o', 'C:\\\\Users\\\\Urungu\\\\Documents\\\\Codex\\\\2026-10-18\\\\bu\\\\outputs\\\\simulations\\\\cat_budget_20261018_210042\\\\cadmonkey32\\\\generated.stl', '-D', '$fn=100', '-D', '$fs=0.1', '-D', '$fa=1', 'C:\\\\Users\\\\Urungu\\\\Documents\\\\Codex\\\\2026-10-18\\\\bu\\\\outputs\\\\simulations\\\\cat_budget_20261018_210042\\\\cadmonkey32\\\\generated.scad']' timed out after 45.0 seconds"
+    }
+  ],
+  "run_directory": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\cat_budget_20261018_210042",
+  "scope": "Token-budget diagnostic; STL existence does not verify cat appearance or geometry."
+}

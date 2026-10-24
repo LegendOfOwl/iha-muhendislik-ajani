@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-10-19T07:30:04.375238+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "CAD belongs only to importing project",
+      "passed": true
+    },
+    {
+      "name": "Active CAD selection is per project",
+      "passed": true
+    },
+    {
+      "name": "CAD program choice persists per project",
+      "passed": true
+    },
+    {
+      "name": "Other project file rejected",
+      "passed": true
+    },
+    {
+      "name": "Drafts survive project switching",
+      "passed": true
+    },
+    {
+      "name": "Modified active CAD is flagged",
+      "passed": true
+    },
+    {
+      "name": "Unprepared CFD cannot run a demo in real project",
+      "passed": true
+    },
+    {
+      "name": "Project traversal rejected",
+      "passed": true
+    },
+    {
+      "name": "Actual submit saves under selected project context",
+      "passed": true
+    },
+    {
+      "name": "Task snapshots active CAD and detects changed file",
+      "passed": true
+    },
+    {
+      "name": "Saved SI constraints and seven tracked steps",
+      "passed": true
+    },
+    {
+      "name": "Agent receives selected project folders",
+      "passed": true
+    },
+    {
+      "name": "Actual CAD generation respects scoped output root",
+      "passed": true
+    },
+    {
+      "name": "Original CAD evidence untouched",
+      "passed": true
+    },
+    {
+      "name": "Native EXE locates project dependencies",
+      "passed": true
+    }
+  ],
+  "scope": "Real project isolation and routing checks, actual CAD run in temporary scope; agent invocation inspected without starting an LLM session"
+}

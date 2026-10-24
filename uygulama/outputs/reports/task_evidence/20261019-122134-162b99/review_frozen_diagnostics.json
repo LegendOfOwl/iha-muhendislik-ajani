@@ -1,0 +1,90 @@
+{
+  "frozen_sha256": "78de97c3c1e5ed3812af9637a6a405583a2f44f176557d5cc94dfef59df62d3d",
+  "selection_rule": "These are ALL three completed post-v1 numerical diagnostics named in the frozen study; chosen main family remains unchanged. Single medium BL prototype cannot replace a three-level family. No physical condition adjusted after review.",
+  "case_results": [
+    {
+      "case": "v2_diag_jst",
+      "field_iteration": 500,
+      "source_surface_sha256": "c6c80f3428327b19bdcddfbeac60b04d0870731124ddcfa48790ed52cccf9050",
+      "original_table_corrected_all103_Cp": {
+        "points": 103,
+        "RMSE": 0.058136520047296227,
+        "mean_bias": 0.018872321470158222,
+        "p95_abs_error": 0.11869900578993782,
+        "max_abs_error": 0.29537581935601465,
+        "fraction_within_source_uncertainty_0p0026": 0.10679611650485436
+      },
+      "downloaded_reference_Cp": {
+        "points": 103,
+        "RMSE": 0.11500539769282146,
+        "mean_bias": 0.027064554479866953,
+        "p95_abs_error": 0.11869900578993782,
+        "max_abs_error": 1.0228586472702408,
+        "fraction_within_source_uncertainty_0p0026": 0.10679611650485436
+      },
+      "source_numerical_metrics": {
+        "density_log10_below_minus8": true,
+        "CL_final200_range_below_5e_5": true,
+        "CD_final200_range_below_2e_6": true,
+        "max_wall_yplus_below1": true
+      },
+      "accepted_as_main_family": false
+    },
+    {
+      "case": "v2_diag_mat",
+      "field_iteration": 2999,
+      "source_surface_sha256": "c74bf9d4ce67517b780ac3bfb0548e5b53d3fdaf230c197e4b23c8479df06198",
+      "original_table_corrected_all103_Cp": {
+        "points": 103,
+        "RMSE": 0.07088144197596827,
+        "mean_bias": 0.021929710889566696,
+        "p95_abs_error": 0.12786953102172588,
+        "max_abs_error": 0.4431879402872836,
+        "fraction_within_source_uncertainty_0p0026": 0.06796116504854369
+      },
+      "downloaded_reference_Cp": {
+        "points": 103,
+        "RMSE": 0.12292239351441371,
+        "mean_bias": 0.030121943899275434,
+        "p95_abs_error": 0.12786953102172588,
+        "max_abs_error": 1.0374669643897498,
+        "fraction_within_source_uncertainty_0p0026": 0.06796116504854369
+      },
+      "source_numerical_metrics": {
+        "density_log10_below_minus8": true,
+        "CL_final200_range_below_5e_5": true,
+        "CD_final200_range_below_2e_6": true,
+        "max_wall_yplus_below1": true
+      },
+      "accepted_as_main_family": false
+    },
+    {
+      "case": "v2_r3_medium",
+      "field_iteration": 3434,
+      "source_surface_sha256": "f70c100c91bb1775b759280d996b6d4c4a5b718ea51032814307dca6e65e7129",
+      "original_table_corrected_all103_Cp": {
+        "points": 103,
+        "RMSE": 0.05004025707950733,
+        "mean_bias": 0.012499511396967434,
+        "p95_abs_error": 0.12244461167467742,
+        "max_abs_error": 0.26316974535006754,
+        "fraction_within_source_uncertainty_0p0026": 0.038834951456310676
+      },
+      "downloaded_reference_Cp": {
+        "points": 103,
+        "RMSE": 0.09932404392602143,
+        "mean_bias": 0.020691744406676166,
+        "p95_abs_error": 0.12772937292811776,
+        "max_abs_error": 0.8711815551334499,
+        "fraction_within_source_uncertainty_0p0026": 0.038834951456310676
+      },
+      "source_numerical_metrics": {
+        "density_log10_below_minus8": true,
+        "CL_final200_range_below_5e_5": true,
+        "CD_final200_range_below_2e_6": true,
+        "max_wall_yplus_below1": true
+      },
+      "accepted_as_main_family": false
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-18T18:44:28.504852+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "mm_units",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "zero_chord",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "station_reversal",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "nonfinite_station",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "reversed_surface",
+      "passed": true,
+      "error": "Crossed/invalid upper and lower airfoil branches"
+    },
+    {
+      "name": "unnormalized_profile",
+      "passed": true,
+      "error": "Only explicitly normalized unit-chord input is supported"
+    }
+  ],
+  "scope": "Six deliberately invalid inputs. Does not prove rejection of every possible malformed CAD/airfoil."
+}

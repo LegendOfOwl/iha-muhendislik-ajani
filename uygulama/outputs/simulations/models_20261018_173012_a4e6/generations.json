@@ -1,0 +1,44 @@
+[
+  {
+    "id": "box",
+    "prompt": "Hey cadmonkey, make me a rectangular solid box exactly 40 mm long, 30 mm wide and 8 mm high, centered at the origin. No holes. Output only OpenSCAD code.",
+    "bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "volume_mm3": 9600,
+    "model": "k",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\models_20261018_173012_a4e6\\k_box",
+    "exit_code": 0,
+    "seconds": 1.95
+  },
+  {
+    "id": "hole_plate",
+    "prompt": "Hey cadmonkey, make me a rectangular plate exactly 40 mm long, 30 mm wide and 8 mm thick, centered at the origin, with one 10 mm diameter cylindrical through-hole along Z at the center. Output only OpenSCAD code.",
+    "bbox_mm": [
+      40,
+      30,
+      8
+    ],
+    "volume_mm3": 8971.68146928204,
+    "model": "k",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\models_20261018_173012_a4e6\\k_hole_plate",
+    "exit_code": 0,
+    "seconds": 2.018
+  },
+  {
+    "id": "spacer",
+    "prompt": "Hey cadmonkey, make me a cylindrical spacer exactly 12 mm high, 20 mm outer diameter and one concentric 6 mm diameter through-hole. Cylinder axis Z. Output only OpenSCAD code.",
+    "bbox_mm": [
+      20,
+      20,
+      12
+    ],
+    "volume_mm3": 3430.619177720054,
+    "model": "k",
+    "folder": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\simulations\\models_20261018_173012_a4e6\\k_spacer",
+    "exit_code": 0,
+    "seconds": 1.886
+  }
+]

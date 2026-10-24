@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-10-19T07:45:54.059973+00:00",
+  "passed": true,
+  "scope": "Project GUI/EXE and tool integration; physical scope acceptance is separate",
+  "checks": {
+    "core": 26,
+    "workflow": 17,
+    "project_routing": 15,
+    "real_UAV_inputs_unchanged": true,
+    "EXE_self_test_exit": 0,
+    "normal_EXE_window_running": true,
+    "four_tabs_two_projects_rendered": true,
+    "source_profile_native_CFD_runtime": true,
+    "source_profile_Euler_preliminary_quality": true,
+    "published_OAS_examples": 2,
+    "OAS_total_derivative_groups": 4
+  },
+  "exe_sha256": "4fbc87bfda5f35f53c1c9dabab071043d269b9427762fc82ccecd66ebf7965dd",
+  "exe_bytes": 7680,
+  "local_links": [
+    {
+      "file": "outputs\\reports\\projeler_exe_ve_profil_cfd.html",
+      "checked_local_links": 6,
+      "passed": true
+    },
+    {
+      "file": "outputs\\reports\\openaerostruct_ajan_yaklasimi.html",
+      "checked_local_links": 2,
+      "passed": true
+    },
+    {
+      "file": "outputs\\projects\\proje-0314dcd012\\reports\\profile_cfd.html",
+      "checked_local_links": 7,
+      "passed": true
+    },
+    {
+      "file": "outputs\\Proje-Ozeti.html",
+      "checked_local_links": 35,
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "AGENTS.md": "db2f4de6e3f5fff6b1ebbbb76ec9727e214ca7bd3a49be1523f67bdb77b26ee0",
+    "work\\agent\\projects.py": "219e0ab954c06eb3036ca5e2787504a72df80aca804504b892ec9a694c8dc489",
+    "work\\agent\\projects_desk.ps1": "3fa30a12989a1f89ad1f655acabded34372f2d444f8bb426a5e20d4c0ddeb1a9",
+    "work\\agent\\project.py": "54001c5711a008e5b0dfa9cd45e97f67a3f6a4c0c210e6cd5eaf09f639508441",
+    "work\\agent\\intake.py": "f1b2e30e552d982aa670c60b05105426b7b740f06f9cce182750bc2db6ba7018",
+    "work\\agent\\Launcher.cs": "1b7644185daae6249079bd8ad0b8ba50ba49ccc28e7e4be3cdb8fcb9e3e71c3c",
+    "work\\setup\\build_launcher.ps1": "f3055ccf01b96cd36df5a14fe5d4b0324f50eb3e4720a52e2d212b2587646628",
+    "work\\qualification\\profile_cfd.py": "b04485e22c07325cec404c86ddcbfa12a43e6038576218fb90331060a3031988",
+    "work\\qualification\\profile_cfd_views.py": "28c51bd45807fbcb14a493864a8cbcdac0375a2cdaa9fe9352667b330def4a39",
+    "work\\openaerostruct\\run_examples.py": "6bd6b49b01f6bff1c20a6604680270855150809be9d52bcf59edc0bd8670d04b",
+    "work\\openaerostruct\\agent_reference\\manifest.json": "58d735011498857a1f73f6599e73021bb0522dfea1b0491bca08fdb7a1287d1f"
+  },
+  "ui_sha256": {
+    "outputs\\plots\\projects_iha_0.png": "cb08d0cf90e8a8cb553e92f8e2bd5ed39571a603201fbd8c1ff8c356ed0f132f",
+    "outputs\\plots\\projects_iha_1.png": "98491879babd9e66d91ef192ca79fbd5726346a85aef18f62b24effff0471c84",
+    "outputs\\plots\\projects_iha_2.png": "e2705860d120d05e92ab90bccbaface50c12e795fde1d5ffc4826a80e744aaa4",
+    "outputs\\plots\\projects_iha_3.png": "b211669b8936cff9962d6df7179b7031dd8a3800556d047f71819e49f9291417",
+    "outputs\\plots\\projects_qualification_0.png": "780ee547797533455461cf99308ff38a73c2bfe132a5b24cf5bc4a92e7f1be8f",
+    "outputs\\plots\\projects_qualification_1.png": "5e8d305fa8f25dcee39365534b17a68922886f03021ffca46db1118997cc24d3",
+    "outputs\\plots\\projects_qualification_2.png": "f6b0d64b812fb3023a839b246ec4fedf169f597577ac470b22b006e7638ab8c7",
+    "outputs\\plots\\projects_qualification_3.png": "dd6fe09eca609c28d9f3e0e84a3ad84a780adfab16c79bd6c0ee6a31ba81f99b"
+  },
+  "raw_profile_CFD_sha256": {
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\medium\\mesh.su2": "23e244dfe4c432cf7e446e90460c480b8855c93649b468fd2f9e3e3f34d5b1b3",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\medium\\case.cfg": "b2bd15e5732de841377a7d48566adce64482018d019898d25a56350d89c526ee",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\medium\\history.csv": "7dc90f05d62391449dff43a9da1646885128f507c73fafd4f5e0f3a42c0bd731",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\medium\\flow.vtu": "1272d85d9b2bcaa64136d717f9531e48af0ca0d40e513fa561bf57db236b9fc6",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\medium\\native.log": "7ccab1d7460e71bf2675472005fcf3bf54cfee926637f0c41fa9b8682b477ab9",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\fine\\mesh.su2": "f6d850706a303dcccde56af19063659a138f11b0d1fb98c7d44ae0d636293f89",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\fine\\case.cfg": "b73c53d6b213c69469d060612d0db15e4d2187f80ecfab7781b6e656c37483e7",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\fine\\history.csv": "c6271c6310172ff741fc699cc0c287796e6a9ace10fd4a995b18477797c804f4",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\fine\\flow.vtu": "a3c37589583f0271041d3c08c6e67681f4efe9ec2255ec1d3a392f4c71f24009",
+    "outputs\\projects\\proje-0314dcd012\\simulations\\profile_cfd_20261019_102751\\fine\\native.log": "6b46fa59ba9f926d9cd71f324af33e4bde84cbe48ebb4ca3e464d27c523e9321"
+  },
+  "not_completed": [
+    "Arbitrary imported CAD to qualified 3D CFD",
+    "New-source viscous/RANS boundary-layer qualification",
+    "Existing RANS CD and complex VLM surface CDi quality gates",
+    "OAS mesh/physical design acceptance and OpenVSP Python bridge",
+    "Fusion engine, entitlement and STEP round-trip",
+    "Eight actual UAV conceptual steps; current mission/mass data missing"
+  ],
+  "upstream_OAS_LLM_framework_executed": false,
+  "new_LLM_session_started_for_tests": false
+}

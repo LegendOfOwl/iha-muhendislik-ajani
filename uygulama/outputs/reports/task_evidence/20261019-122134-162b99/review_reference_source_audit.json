@@ -1,0 +1,173 @@
+{
+  "source_pdf_url": "https://www.abbottaerospace.com/downloads/agard-r-138/?ind=1461685668841&wpdmdl=3718",
+  "source_pdf_sha256": "795cf26c11525c8336bb5db088bddd12f559fc2413bcd2e3c52049b4e6d41167",
+  "source_pdf_page_1_based": 198,
+  "printed_page": "A6-17",
+  "table": "Table 6.7 continued, Case6, upper-surface last row",
+  "inspection": "Rendered original table read visually. x/c=0.0002, p/H=0.8142, physical Cp=+0.4219. Neighbour x/c=0.0008 has Cp=+0.1042. NASA GENPLOT file encodes -Cp overall but this one entry has +0.4219, so its decoded physical Cp is -0.4219.",
+  "correction": {
+    "side": "upper",
+    "x_over_c": 0.0002,
+    "downloaded_normalized_Cp": -0.4219,
+    "original_published_Cp": 0.4219,
+    "reason": "Original experimental table, not agreement with prediction"
+  },
+  "downloaded_reference_sha256": "739bbec6bd8775240bcf571fc8356701cab4c773c4e3d3b21deea5a3f627f001",
+  "original_reference_preserved": true,
+  "predeclared_thresholds_unchanged": true,
+  "case_results": [
+    {
+      "label": "coarse",
+      "all": {
+        "points": 103,
+        "RMSE": 0.059138527159610134,
+        "mean_bias": 0.023246478037105795,
+        "p95_abs_error": 0.0993887900801623,
+        "max_abs_error": 0.2721999811495288,
+        "fraction_within_source_uncertainty_0p0026": 0.10679611650485436
+      },
+      "upper": {
+        "points": 54,
+        "RMSE": 0.08027610766709507,
+        "mean_bias": 0.04305647192118833,
+        "p95_abs_error": 0.17257569043741305,
+        "max_abs_error": 0.2721999811495288,
+        "fraction_within_source_uncertainty_0p0026": 0.037037037037037035
+      },
+      "lower": {
+        "points": 49,
+        "RMSE": 0.01580425458536351,
+        "mean_bias": 0.0014150562056679096,
+        "p95_abs_error": 0.018912849209819935,
+        "max_abs_error": 0.06393885022141355,
+        "fraction_within_source_uncertainty_0p0026": 0.1836734693877551
+      },
+      "checks": {
+        "all_RMSE": false,
+        "upper_RMSE": false,
+        "lower_RMSE": true,
+        "p95_error": false,
+        "max_error": false
+      },
+      "pressure_magnitude_gates_passed": false,
+      "all_103_points_retained": true,
+      "csv": "outputs\\projects\\proje-15cce2de02\\data\\review\\00_experimental_Cp_original_table_corrected.csv",
+      "surface_prediction_unchanged": true
+    },
+    {
+      "label": "medium",
+      "all": {
+        "points": 103,
+        "RMSE": 0.06331592226867268,
+        "mean_bias": 0.022808981399023372,
+        "p95_abs_error": 0.1134378764230981,
+        "max_abs_error": 0.3238467208523388,
+        "fraction_within_source_uncertainty_0p0026": 0.038834951456310676
+      },
+      "upper": {
+        "points": 54,
+        "RMSE": 0.08614674902648864,
+        "mean_bias": 0.04405608616021071,
+        "p95_abs_error": 0.17433662464290584,
+        "max_abs_error": 0.3238467208523388,
+        "fraction_within_source_uncertainty_0p0026": 0.0
+      },
+      "lower": {
+        "points": 49,
+        "RMSE": 0.015759125279054327,
+        "mean_bias": -0.0006061952765708303,
+        "p95_abs_error": 0.022421718717402936,
+        "max_abs_error": 0.060176601835836285,
+        "fraction_within_source_uncertainty_0p0026": 0.08163265306122448
+      },
+      "checks": {
+        "all_RMSE": false,
+        "upper_RMSE": false,
+        "lower_RMSE": true,
+        "p95_error": false,
+        "max_error": false
+      },
+      "pressure_magnitude_gates_passed": false,
+      "all_103_points_retained": true,
+      "csv": "outputs\\projects\\proje-15cce2de02\\data\\review\\01_experimental_Cp_original_table_corrected.csv",
+      "surface_prediction_unchanged": true
+    },
+    {
+      "label": "fine",
+      "all": {
+        "points": 103,
+        "RMSE": 0.06904871699723865,
+        "mean_bias": 0.0233946065178591,
+        "p95_abs_error": 0.12432576231251288,
+        "max_abs_error": 0.3979575413897968,
+        "fraction_within_source_uncertainty_0p0026": 0.038834951456310676
+      },
+      "upper": {
+        "points": 54,
+        "RMSE": 0.0941671552938905,
+        "mean_bias": 0.04648619865422114,
+        "p95_abs_error": 0.17739857948630494,
+        "max_abs_error": 0.3979575413897968,
+        "fraction_within_source_uncertainty_0p0026": 0.0
+      },
+      "lower": {
+        "points": 49,
+        "RMSE": 0.015800567350709015,
+        "mean_bias": -0.0020532705303765893,
+        "p95_abs_error": 0.020673415132043946,
+        "max_abs_error": 0.0577132120926942,
+        "fraction_within_source_uncertainty_0p0026": 0.08163265306122448
+      },
+      "checks": {
+        "all_RMSE": false,
+        "upper_RMSE": false,
+        "lower_RMSE": true,
+        "p95_error": false,
+        "max_error": false
+      },
+      "pressure_magnitude_gates_passed": false,
+      "all_103_points_retained": true,
+      "csv": "outputs\\projects\\proje-15cce2de02\\data\\review\\02_experimental_Cp_original_table_corrected.csv",
+      "surface_prediction_unchanged": true
+    },
+    {
+      "label": "medium_far",
+      "all": {
+        "points": 103,
+        "RMSE": 0.05814639885535053,
+        "mean_bias": 0.018872895963691454,
+        "p95_abs_error": 0.11871775383973725,
+        "max_abs_error": 0.29540278711574264,
+        "fraction_within_source_uncertainty_0p0026": 0.11650485436893204
+      },
+      "upper": {
+        "points": 54,
+        "RMSE": 0.07899674164991294,
+        "mean_bias": 0.03271781355665676,
+        "p95_abs_error": 0.15600260687389872,
+        "max_abs_error": 0.29540278711574264,
+        "fraction_within_source_uncertainty_0p0026": 0.0
+      },
+      "lower": {
+        "points": 49,
+        "RMSE": 0.015157123167969277,
+        "mean_bias": 0.0036152316775664287,
+        "p95_abs_error": 0.01841620877020215,
+        "max_abs_error": 0.06756542726578585,
+        "fraction_within_source_uncertainty_0p0026": 0.24489795918367346
+      },
+      "checks": {
+        "all_RMSE": false,
+        "upper_RMSE": false,
+        "lower_RMSE": true,
+        "p95_error": false,
+        "max_error": false
+      },
+      "pressure_magnitude_gates_passed": false,
+      "all_103_points_retained": true,
+      "csv": "outputs\\projects\\proje-15cce2de02\\data\\review\\03_experimental_Cp_original_table_corrected.csv",
+      "surface_prediction_unchanged": true
+    }
+  ],
+  "qualification_note": "This corrects a documented transcription discrepancy; it does not repair geometry, mesh, convergence, farfield or remaining experimental errors."
+}

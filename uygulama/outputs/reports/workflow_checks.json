@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-10-19T07:41:45.822291+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "km/h and minute SI conversion",
+      "passed": true
+    },
+    {
+      "name": "Explicit zero payload retained; empty altitude unknown",
+      "passed": true
+    },
+    {
+      "name": "Reject invalid field target_speed_kmh",
+      "passed": true
+    },
+    {
+      "name": "Reject invalid field max_span_m",
+      "passed": true
+    },
+    {
+      "name": "Reject invalid field max_mass_kg",
+      "passed": true
+    },
+    {
+      "name": "Reject invalid field altitude_m",
+      "passed": true
+    },
+    {
+      "name": "Task captures input digest",
+      "passed": true
+    },
+    {
+      "name": "Agent dry-run carries workflow file and CFD mismatch rule",
+      "passed": true
+    },
+    {
+      "name": "Matching synthetic contract is accepted",
+      "passed": true
+    },
+    {
+      "name": "Different conditions cannot reuse CFD",
+      "passed": true
+    },
+    {
+      "name": "Wing CFD cannot validate whole aircraft",
+      "passed": true
+    },
+    {
+      "name": "Failed CFD gate blocks final ranking",
+      "passed": true
+    },
+    {
+      "name": "Missing CFD cannot create a final winner",
+      "passed": true
+    },
+    {
+      "name": "Unrelated solver evidence rejected",
+      "passed": true
+    },
+    {
+      "name": "Changed evidence hash rejected",
+      "passed": true
+    },
+    {
+      "name": "Hard constraint excludes attractive low-drag candidate",
+      "passed": true
+    },
+    {
+      "name": "Unknown objective is not ranked",
+      "passed": true
+    }
+  ],
+  "scope": "Input/traceability/ranking guard verification; no new LLM session started and no actual UAV input changed"
+}

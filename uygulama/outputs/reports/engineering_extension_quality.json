@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-10-18T20:12:05.923757+00:00",
+  "passed": true,
+  "scope": "Integration, traceability and delivery checks, not acceptance of all physical results",
+  "html_links": [
+    {
+      "path": "outputs\\Proje-Ozeti.html",
+      "local_links": 26,
+      "missing": []
+    },
+    {
+      "path": "outputs\\reports\\muhendislik_seviyesi_ve_cfd.html",
+      "local_links": 30,
+      "missing": []
+    }
+  ],
+  "source_hashes_match": true,
+  "real_project_inputs_unchanged": true,
+  "CAD_checks_passed": 9,
+  "invalid_inputs_rejected": 6,
+  "exported_STEP_bores_passed": true,
+  "native_Gmsh_readback_passed": true,
+  "CFD_runtime_passed": true,
+  "CFD_full_quality_accepted": false,
+  "VLM_runtime_passed": true,
+  "VLM_full_quality_accepted": false,
+  "Fusion_OAuth_verified": true,
+  "Fusion_engine_tested": false,
+  "real_UAV_conceptual_steps_completed": 0,
+  "raw_CFD_evidence_sha256": {
+    "outputs\\simulations\\cfd_20261018_212619\\euler_shock\\case.cfg": "94b5529d39be93d347b7cfaf19a580e8009b7a748a378346e3e44af50d1fb07a",
+    "outputs\\simulations\\cfd_20261018_212619\\euler_shock\\command.json": "78829fbaa8b351411fd95f19e838181894af0e366e25284673d86085f4efe128",
+    "outputs\\simulations\\cfd_20261018_212619\\euler_shock\\inputs.json": "ebafe4b9997a605c9cda5c4e2aeeb859d8c762c5018a31d5171ad075d9d4c56e",
+    "outputs\\simulations\\cfd_20261018_212619\\euler_shock\\native.log": "271e7b2083b308879892b63e8f4b0a858db86e7dd66caaee36efb3bb2fe881b3",
+    "outputs\\simulations\\cfd_20261018_212619\\euler_shock\\history.csv": "066fb687f0278587260f8c8470069e1bd5a70168e61c9b58464a54471d509a5d",
+    "outputs\\simulations\\cfd_20261018_212619\\euler_shock\\flow.vtu": "7ee2683b48ae6d9212402889e5c8711665697a9951e4860cb3cfcf68005d7734",
+    "outputs\\simulations\\cfd_20261018_212619\\euler_shock\\surface_flow.csv": "c03bb9721a4ee5fdf8ca432e4cc877480fd5f175cb25b2a9b919ffa818552213",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_coarse\\case.cfg": "09b3785d414d6382493adc6411b24406674e0d553f66349febc1f2a5911f80f1",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_coarse\\command.json": "78829fbaa8b351411fd95f19e838181894af0e366e25284673d86085f4efe128",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_coarse\\inputs.json": "8d791944e1108db0b1a963ef91cc407eb94255e7317d857b7e19785f6086cd71",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_coarse\\native.log": "31313c894574a0fd95277487b75aaaf904fafd7ab905ef3a7620156e892c0196",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_coarse\\history.csv": "25a1669a60138e8f8ab2915b464f3bd0ae0dad24aad5a3f0a0a3b917246dd9db",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_coarse\\flow.vtu": "c536cfad1a5e674a10334e44584058728cbaf7624995aa4a2a60f3cc05f68889",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_coarse\\surface_flow.csv": "75649faaa8ed0905146bb1e3683a72070d86f5ea854168fac54538a274767201",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_medium\\case.cfg": "3b78fcbd4d24d8f6df3f6f2282d437fcafdd80b24121ee711eb240323ebc79eb",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_medium\\command.json": "78829fbaa8b351411fd95f19e838181894af0e366e25284673d86085f4efe128",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_medium\\inputs.json": "87862b9daa8725c157466c8d99c38c8be8b27fd51e4535eb2761a7e9e270da8d",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_medium\\native.log": "3ca6608ecdf6a2d9a7b8b8d2a1d181d42f929f2ab8962791306177eb3b225796",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_medium\\history.csv": "e86a150488bc27328a6d499ec1aeec4ce8c4dda8d394b51348f4eaac1a6a7a1c",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_medium\\flow.vtu": "3b1336350a41efe9ee505161828bf4cde6085a46d4312ff877373bff4c566531",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_medium\\surface_flow.csv": "715c4daa4485253eb01056963415c3ddf3af45ccc033e2f58d5bf842934e97ab",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_fine\\case.cfg": "5b6a410f76653bac2e5a2a8bc57bf7bcca406fd9ed57f06db10bdd640aca8ca6",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_fine\\command.json": "78829fbaa8b351411fd95f19e838181894af0e366e25284673d86085f4efe128",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_fine\\inputs.json": "8452c5b31f6edd3f4d384e31be9744957adc4278365de64904f7bc687c612ece",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_fine\\native.log": "1ac7b0128efb466a8a888158791d187828a317b51658cd22d020e9a46984c562",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_fine\\history.csv": "9fc21d89f8f7a5e2d789aae9bf8f07c6e5afce70f3c81a57eecd2390dda68212",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_fine\\flow.vtu": "817a33a0d8b8f6b741891efd1151cf15bbea06bbc3e7216b4f2fd280b319e2d0",
+    "outputs\\simulations\\cfd_20261018_212619\\rans_fine\\surface_flow.csv": "076cd8cca52f1c7dfbdc7fe566da71cbe90b437c6af19e6c95cfdc9823650b5d"
+  },
+  "visually_inspected": [
+    "outputs/plots/engineering_hub.png",
+    "outputs/plots/parametric_wing_cad.png",
+    "outputs/plots/cfd_pressure_and_mesh.png",
+    "outputs/plots/cfd_cp_validation.png"
+  ]
+}

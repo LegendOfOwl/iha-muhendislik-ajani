@@ -1,0 +1,79 @@
+void SetI( const string &in analysis, const string &in key, int value )
+{
+    array<int> data(1); data[0] = value;
+    SetIntAnalysisInput( analysis, key, data );
+}
+void SetD( const string &in analysis, const string &in key, double value )
+{
+    array<double> data(1); data[0] = value;
+    SetDoubleAnalysisInput( analysis, key, data );
+}
+int main()
+{
+    Print( GetVSPVersion() );
+    ClearVSPModel();
+    string wing = AddGeom( "WING", "" );
+    SetGeomName( wing, "Calibration rectangular NACA0012 wing - synthetic" );
+    SetDriverGroup( wing, 1, SPAN_WSECT_DRIVER, ROOTC_WSECT_DRIVER, TIPC_WSECT_DRIVER );
+    SetParmVal( wing, "Span", "XSec_1", 1.0 );
+    SetParmVal( wing, "Root_Chord", "XSec_1", 0.25 );
+    SetParmVal( wing, "Tip_Chord", "XSec_1", 0.25 );
+    SetParmVal( wing, "Sweep", "XSec_1", 0.0 );
+    SetParmVal( wing, "Dihedral", "XSec_1", 0.0 );
+    SetParmVal( wing, "Twist", "XSec_1", 0.0 );
+    SetParmVal( wing, "Tess_W", "Shape", 33 );
+    SetParmVal( wing, "SectTess_U", "XSec_1", 12 );
+    string surf = GetXSecSurf( wing, 0 );
+    for ( int n = 0; n < GetNumXSec( surf ); n++ )
+    {
+        string xs = GetXSec( surf, n );
+        SetParmVal( GetXSecParm( xs, "Camber" ), 0.0 );
+        SetParmVal( GetXSecParm( xs, "ThickChord" ), 0.12 );
+    }
+    Update();
+    WriteVSPFile( "native_wing.vsp3", SET_ALL );
+
+    Print( "MEASURED_AREA" ); Print( GetParmVal( wing, "TotalArea", "WingGeom" ) );
+    Print( "MEASURED_SPAN" ); Print( GetParmVal( wing, "TotalSpan", "WingGeom" ) );
+    string geom = "VSPAEROComputeGeometry";
+    SetAnalysisInputDefaults( geom );
+    SetI( geom, "GeomSet", SET_NONE );
+    SetI( geom, "ThinGeomSet", SET_ALL );
+
+    string gid = ExecAnalysis( geom );
+    PrintResults( gid );
+    string analysis = "VSPAEROSweep";
+    SetAnalysisInputDefaults( analysis );
+    SetI( analysis, "GeomSet", SET_NONE );
+    SetI( analysis, "ThinGeomSet", SET_ALL );
+    SetI( analysis, "NCPU", 2 );
+    SetI( analysis, "RefFlag", 0 );
+    SetD( analysis, "Sref", 0.5 );
+    SetD( analysis, "bref", 2.0 );
+    SetD( analysis, "cref", 0.25 );
+    SetD( analysis, "Xcg", 0.0625 );
+    SetD( analysis, "Vinf", 30.0 );
+    SetD( analysis, "Rho", 1.225 );
+    SetD( analysis, "MachStart", 0.0 );
+    SetD( analysis, "MachEnd", 0.0 );
+    SetI( analysis, "MachNpts", 1 );
+    SetD( analysis, "ReCref", 500000.0 );
+    SetD( analysis, "ReCrefEnd", 500000.0 );
+    SetI( analysis, "ReCrefNpts", 1 );
+    SetD( analysis, "AlphaStart", 4.0 );
+    SetD( analysis, "AlphaEnd", 4.0 );
+    SetI( analysis, "AlphaNpts", 1 );
+    SetI( analysis, "StallModel", 0 );
+    SetI( analysis, "WakeNumIter", 5 );
+    string result = ExecAnalysis( analysis );
+    PrintResults( result );
+    WriteResultsCSVFile( result, "native_results.csv" );
+    int errors = GetNumTotalErrors();
+    while ( GetNumTotalErrors() > 0 )
+    {
+        ErrorObj err = PopLastError();
+        Print( err.GetErrorString() );
+    }
+    if ( errors == 0 ) Print( "NATIVE_WING_SCRIPT_COMPLETE" );
+    return errors;
+}
