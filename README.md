@@ -1,9 +1,9 @@
-# İHA mühendislik ajanı — v0.7.0
+# İHA mühendislik ajanı — v0.8.0
 
-Kaynak geometri ve ayrı analiz sınaması
+C-grid araştırması ve M6 devamı
 
-RAE2822 v1/v2 geometri aktarımı, dondurulmuş tahminler ve deney değerlendirmesi.
+Konumsal ağ düzeltmeleri, başarısız sayısal kontroller ve 24 Ekim M6 koşuları.
 
 Bu tag mevcut kanıtlardan geriye dönük oluşturulan kısmi bir içe aktarma aşamasıdır; özgün eski çalışan uygulama imajı değildir. Bütün güncel kaynaklar main/v0.10.0 içindedir.
 
-[Bu aşamanın manifesti](surumler/v0.7.0/manifest.json)
+[Bu aşamanın manifesti](surumler/v0.8.0/manifest.json)

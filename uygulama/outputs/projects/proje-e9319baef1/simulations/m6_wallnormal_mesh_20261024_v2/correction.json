@@ -1,0 +1,6 @@
+{
+  "previous_rejection_interpretation": "The original and proposed grid both had negative determinants in a reference-wedge basis that used the opposite orientation to SU2's documented prism face table. This is not evidence that the published source grid is inverted.",
+  "correction": "Revision3 uses one fixed node permutation for every original/modified prism before its reference-element Jacobian test; individual cells are never flipped to hide a failed Jacobian. It also replaces cubic redistribution with a controlled geometric progression.",
+  "native_mesh_emitted_by_revision2": false,
+  "original_source_mesh_changed": false
+}

@@ -1,0 +1,76 @@
+{
+  "scope": "Own numerical mesh and native checkpoint fields only; no expected/reference flow data. Diagnostic, not validation. No solver launched.",
+  "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+  "generator_sha256": "9d385936e598c2371179f8a5a4fe44e44964b2ccc1c5a6d674b1f62912a48637",
+  "frozen_generator_unchanged": true,
+  "actual_SU2_vs_near_arrays_quads_equal": true,
+  "actual_SU2_vs_near_arrays_coordinates_max_m": 0.0,
+  "shock_region_definition_m": [
+    0.5,
+    0.54,
+    0.095,
+    0.125
+  ],
+  "local_mesh": {
+    "cells": 357,
+    "corner_jacobian_m2": {
+      "min": 2.2168768609852406e-06,
+      "median": 2.8593409350911495e-06,
+      "max": 3.8547517598077e-06,
+      "p99": 3.8547517598077e-06
+    },
+    "area_m2": {
+      "min": 2.2168768609824585e-06,
+      "median": 2.8593409350900767e-06,
+      "max": 3.854751759811703e-06,
+      "p99": 3.854751759811703e-06
+    },
+    "angles_deg": {
+      "min": 87.50930734936296,
+      "median": 90.0,
+      "max": 92.49069265063706,
+      "p99": 92.49069265063706
+    },
+    "edge_length_m": {
+      "min": 0.0011131669017226814,
+      "median": 0.0015529037471683498,
+      "max": 0.0034661440293043398,
+      "p99": 0.0034661440293043398
+    },
+    "aspect_edge_ratio": {
+      "min": 1.790064535273247,
+      "median": 2.3091684957794767,
+      "max": 3.1137684959373706,
+      "p99": 3.113768495937215
+    },
+    "distance_to_quad_triangle_interface_m": {
+      "min": 0.0,
+      "median": 0.013358002820673093,
+      "max": 0.026716005641346283,
+      "p99": 0.026716005641346283
+    },
+    "all_quads": true
+  },
+  "median_dual": {
+    "minimum_subpolygon_area_m2": 5.8085839577896176e-11,
+    "minimum_dual_volume_m2": 1.224021531917932e-10,
+    "nonpositive_dual_subpolygons": false,
+    "minimum_dual_face_dot_primal_edge_m2": 1.1617191955197327e-10,
+    "nonpositive_face_projections": 0,
+    "interior_constant_flux_face_vector_closure_m": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 3.552713678800501e-15,
+      "p99": 0.0
+    },
+    "local_neighbor_count": {
+      "min": 4.0,
+      "median": 4.0,
+      "max": 5.0,
+      "p99": 4.0400000000000205
+    },
+    "scope": "Independent median-dual geometric reconstruction; not SU2 internal agglomerated coarse-grid audit."
+  },
+  "diagnosis_script_sha256": "738bc992647c0a33e92aae9b359a441ea84b01a21363870fec5715198c44c6f3"
+}
+[('v3_cgrid_coarse', {'point_id_SU2_mesh': 63511, 'grid_row': 69, 'grid_column': 620, 'xy_m': [0.5182774835510461, 0.1037622784847346], 'density_residual_abs': 0.01728774793446064, 'Mach': 1.2665581703186035, 'distance_to_interface_m': 0.01781067042756415, 'neighbor_count': 4, 'neighbor_xy_m': [[0.5182774835510461, 0.10264911158301183], [0.516285979080733, 0.10382955757551265], [0.5203303724748709, 0.1036910248055995], [0.5182774835510461, 0.10487544538645736]]}, {'x_m': 0.5182774835510461, 'y_range_m': [0.1004227777795663, 0.1193466151088533], 'sample_count': 18, 'Mach_min': 1.2194623947143555, 'Mach_max': 1.3158642053604126, 'Mach_linear_detrend_second_difference_rms': 0.022769900038838387, 'Mach_linear_detrend_second_difference_max': 0.053270936012268066, 'adjacent_slope_sign_reversals': 9, 'neighbor_pressure_laplacian_direction_cancellation_ratio': {'min': 0.031162016093730927, 'median': 1.0, 'max': 1.0, 'p99': 1.0}, 'row_records_columns': ['j', 'x', 'y', 'Mach', 'abs_density_residual', 'lap_i_pressure', 'lap_j_pressure', 'abs(lap_i+lap_j)/(abs(lap_i)+abs(lap_j))']}), ('v3_cgrid_coarse_cfl1', {'point_id_SU2_mesh': 70819, 'grid_row': 77, 'grid_column': 616, 'xy_m': [0.5093611279608811, 0.11295444549053951], 'density_residual_abs': 0.0019211324397474527, 'Mach': 0.8904442191123962, 'distance_to_interface_m': 0.008905335213782048, 'neighbor_count': 4, 'neighbor_xy_m': [[0.5093611279608811, 0.11184127858881676], [0.5066853595551373, 0.11303318218641735], [0.5118440488030079, 0.11287832134812106], [0.5093611279608811, 0.11406761239226229]]}, {'x_m': 0.5093611279608811, 'y_range_m': [0.10070960957158911, 0.1196334469008761], 'sample_count': 18, 'Mach_min': 0.8297203779220581, 'Mach_max': 0.9544455409049988, 'Mach_linear_detrend_second_difference_rms': 0.008196961134672165, 'Mach_linear_detrend_second_difference_max': 0.018921375274658203, 'adjacent_slope_sign_reversals': 7, 'neighbor_pressure_laplacian_direction_cancellation_ratio': {'min': 0.9486223459243774, 'median': 1.0, 'max': 1.0, 'p99': 1.0}, 'row_records_columns': ['j', 'x', 'y', 'Mach', 'abs_density_residual', 'lap_i_pressure', 'lap_j_pressure', 'abs(lap_i+lap_j)/(abs(lap_i)+abs(lap_j))']}), ('v3_cgrid_coarse_cfl1_mg0', {'point_id_SU2_mesh': 62600, 'grid_row': 68, 'grid_column': 623, 'xy_m': [0.524926282399887, 0.10241144164599386], 'density_residual_abs': 9.467734344070777e-06, 'Mach': 1.1260961294174194, 'distance_to_interface_m': 0.018923837329286916, 'neighbor_count': 4, 'neighbor_xy_m': [[0.524926282399887, 0.10129827474427108], [0.5225425258671805, 0.10249893839978749], [0.5274949366876367, 0.10231431450416428], [0.524926282399887, 0.10352460854771661]]}, {'x_m': 0.524926282399887, 'y_range_m': [0.10018510784254833, 0.11910894517183532], 'sample_count': 18, 'Mach_min': 1.0388522148132324, 'Mach_max': 1.1458029747009277, 'Mach_linear_detrend_second_difference_rms': 0.009442286565899849, 'Mach_linear_detrend_second_difference_max': 0.02545642852783203, 'adjacent_slope_sign_reversals': 6, 'neighbor_pressure_laplacian_direction_cancellation_ratio': {'min': 0.7063994407653809, 'median': 0.9962009787559509, 'max': 1.0, 'p99': 1.0}, 'row_records_columns': ['j', 'x', 'y', 'Mach', 'abs_density_residual', 'lap_i_pressure', 'lap_j_pressure', 'abs(lap_i+lap_j)/(abs(lap_i)+abs(lap_j))']}), ('v3_cgrid_coarse_entropy0p2', {'point_id_SU2_mesh': 76307, 'grid_row': 83, 'grid_column': 620, 'xy_m': [0.5182774835510461, 0.1193466151088533], 'density_residual_abs': 0.0014531986089423299, 'Mach': 1.4419947862625122, 'distance_to_interface_m': 0.002226333803445446, 'neighbor_count': 4, 'neighbor_xy_m': [[0.5182774835510461, 0.11823344820713054], [0.516285979080733, 0.11941389419963136], [0.5203303724748709, 0.1192753614297182], [0.5182774835510461, 0.12045978201057607]]}, {'x_m': 0.5182774835510461, 'y_range_m': [0.1004227777795663, 0.1193466151088533], 'sample_count': 18, 'Mach_min': 1.109454870223999, 'Mach_max': 1.4419947862625122, 'Mach_linear_detrend_second_difference_rms': 0.00926576741039753, 'Mach_linear_detrend_second_difference_max': 0.02147233486175537, 'adjacent_slope_sign_reversals': 3, 'neighbor_pressure_laplacian_direction_cancellation_ratio': {'min': 0.35174646973609924, 'median': 0.9974969029426575, 'max': 1.0, 'p99': 1.0}, 'row_records_columns': ['j', 'x', 'y', 'Mach', 'abs_density_residual', 'lap_i_pressure', 'lap_j_pressure', 'abs(lap_i+lap_j)/(abs(lap_i)+abs(lap_j))']})]

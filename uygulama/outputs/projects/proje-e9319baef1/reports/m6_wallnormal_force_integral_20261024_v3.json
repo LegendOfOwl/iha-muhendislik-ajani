@@ -1,0 +1,58 @@
+{
+  "method": "Exact SU2 wall topology; each face oriented toward its sole adjacent fluid-cell centroid; triangle-mean Cp/vectorCf integration, without a force-sign fit",
+  "mesh_sha256": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+  "surface_sha256": "6715a912e6e460a452e68f85fcd34ae449878514d1865c5eb20b2436d9c2001a",
+  "wall_faces": 6545,
+  "sole_fluid_neighbour_verified": true,
+  "wall_mapping_max_distance_m": 8.084471219458525e-08,
+  "minimum_nonzero_orientation_product_m3": 4.740262396767985e-13,
+  "wetted_surface_area_m2": 1.5578062427688941,
+  "reference_area_m2": 0.7613155538973486,
+  "reference_chord_m": 0.64607,
+  "moment_origin_m": [
+    0.25,
+    0.0,
+    0.0
+  ],
+  "pressure_force_xyz": [
+    0.005845074478076098,
+    0.009116189906139485,
+    0.29703196196693027
+  ],
+  "viscous_force_xyz": [
+    0.005114590961058141,
+    0.00017031777042899237,
+    0.0001294548002021083
+  ],
+  "force_xyz": [
+    0.01095966543913424,
+    0.009286507676568478,
+    0.29716141676713237
+  ],
+  "CL_pressure": 0.29629642823504326,
+  "CL_viscous": -0.00014375528682235617,
+  "CD_pressure": 0.021692808502681998,
+  "CD_viscous": 0.005114208996682051,
+  "CL": 0.2961526729482209,
+  "CD": 0.02680701749936405,
+  "CL_native": 0.2961568457,
+  "CD_native": 0.02677296915,
+  "CL_relative_difference": 1.4089668497252461e-05,
+  "CD_relative_difference": 0.0012717434952129736,
+  "moment_pressure_xyz": [
+    0.24593620272445887,
+    -0.1127290041843425,
+    0.00821812344000268
+  ],
+  "moment_viscous_xyz": [
+    0.0001379747354612838,
+    -5.63502768302381e-05,
+    -0.004092222948010073
+  ],
+  "moment_total_xyz": [
+    0.24607417745992016,
+    -0.11278535446117273,
+    0.004125900491992606
+  ],
+  "note": "Surface quadrature and Float32 field interpolation errors remain; no new after-result physical acceptance threshold."
+}

@@ -1,0 +1,18 @@
+{
+  "end_x_m": 8.0,
+  "end_y_range_m": [
+    -0.017627247317325068,
+    0.582372752682675
+  ],
+  "actual_end_intervals": 372,
+  "actual_end_dy_m": {
+    "min": 0.001612903225806317,
+    "median": 0.0016129032258064557,
+    "max": 0.001612903225806539,
+    "p99": 0.001612903225806539
+  },
+  "h_end_m": 0.001612903225806317,
+  "distance_definition": "Euclidean distance to closed vertical segment x=8, y in end_y_range",
+  "rule": "min(h_old, h_end+0.25*distance_to_vertical_end_segment); h_old is unchanged tail-r2 exterior callback, including its level scaling. h_end already measured per level, no second scaling.",
+  "geometry_and_near_block_unchanged": true
+}

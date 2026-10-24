@@ -1,0 +1,6 @@
+{
+  "previous_claim_disproven": "The initial marker parser included trailing boundary-element IDs as mesh-node IDs. The initial topology diagnosis is not valid evidence about the source grid.",
+  "correction": "Read exactly three nodes for type5 and four for type9, as the original force-integral parser already does. Corrected geometry trial is a separate v2 directory.",
+  "original_mesh_changed": false,
+  "native_CFD_run_on_failed_geometry": false
+}

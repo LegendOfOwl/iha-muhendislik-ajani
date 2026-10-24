@@ -1,0 +1,38 @@
+{
+  "revision": "r4_compact_all_interface",
+  "interface_segments": 2422,
+  "node_rule": "h_i=min(length of previous and next actual interface edges)",
+  "segment_rule": "exact nearest closed segment, linear interpolation of endpoint h_i at projected position",
+  "full_target": "min(h_old,h_interface+0.25*d) for d<=0.25c",
+  "transition": "d0.25..1c smoothstep t=(d-.25)/.75, w=t*t*(3-2*t); h=(1-w)*full_target+w*h_old",
+  "outside": "d>=1c returns h_old exactly; midpoint broad-phase cannot skip a segment with true d<1c",
+  "distance_audit": {
+    "random_seed": 17391,
+    "random_samples": 1200,
+    "reference": "Brute-force distance/projection to EVERY real interface segment, independent of cKDTree candidate selection",
+    "max_distance_error_m": 0.0,
+    "max_interpolated_h_error_m": 0.0,
+    "incorrect_d_less_than_1_skips": 0,
+    "queried_d_ge_1_size_exactly_old_count": 10,
+    "broad_phase_completeness": "midpoint lower bound and candidate radius use maximum actual segment half-length, with2e-12m roundoff padding",
+    "interface_segments": 2422,
+    "segment_length_m": {
+      "min": 9.22464473859803e-05,
+      "median": 0.0018328471795996198,
+      "max": 0.033335541041281884
+    },
+    "node_h_m": {
+      "min": 9.22464473859803e-05,
+      "median": 0.0018151611535360476,
+      "max": 0.033335529826287284
+    }
+  },
+  "sizing_query_counters": {
+    "calls": 95406,
+    "far_cutoff_skips": 7093,
+    "candidate_count_max": 314,
+    "candidate_count_mean_for_non_skipped": 27.485353232253463
+  },
+  "geometry_and_near_block_unchanged": true,
+  "helper_sha256": "a47852797ac386b2a7e69ed359d3cc67a23fe55540e178ee876129f176eb2575"
+}

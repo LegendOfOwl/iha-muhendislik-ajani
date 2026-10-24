@@ -1,0 +1,742 @@
+{
+  "created_utc": "2026-10-19T19:29:19.372438+00:00",
+  "freeze_sha256": "18fc8b4525a0ee5c77b38fe2fc055386b9ef48f82c9f86693e89c156a7a78c4f",
+  "frozen_file_count": 139,
+  "frozen_files_verified": true,
+  "cases": [
+    {
+      "case": "v3_cgrid_coarse_jac8",
+      "role": "diagnostic only",
+      "field_iteration": 1000,
+      "run": {
+        "name": "v3_cgrid_coarse_jac8",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 299.530999999959,
+        "start_epoch": 1792436982.7028458,
+        "threads": 4,
+        "config_sha256": "0b8c9c151d13132da030fe44a6d2d9953951dacbb28898c58ab2f7a520cf1828",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "numerical": {
+        "name": "v3_cgrid_coarse_jac8",
+        "iteration": 1000.0,
+        "history_rows": 1082,
+        "history_terminal": {
+          "Time_Iter": 0.0,
+          "Outer_Iter": 0.0,
+          "Inner_Iter": 1081.0,
+          "rms[Rho]": -5.375602009,
+          "rms[RhoU]": -5.245613198,
+          "rms[RhoV]": -5.394560901,
+          "rms[RhoE]": -4.761719326,
+          "rms[nu]": -8.959392948,
+          "max[Rho]": -3.539693341,
+          "max[RhoU]": -3.710856698,
+          "max[RhoV]": -3.76453298,
+          "max[RhoE]": -2.95949977,
+          "max[nu]": -7.941578981,
+          "Linear_Solver_Iterations": 2.0,
+          "LinSolRes": -2.417498629,
+          "LinSolIterTurb": 1.0,
+          "LinSolResTurb": -2.007478034,
+          "Min DT": 3.390090152e-09,
+          "Max DT": 4.35913226,
+          "Min CFL": 1.0,
+          "Max CFL": 1.0,
+          "Avg CFL": 1.0,
+          "RefForce": 0.5,
+          "CD": 0.01351606815,
+          "CL": 0.7684114607,
+          "CSF": 0.0,
+          "CMx": 0.0,
+          "CMy": 0.0,
+          "CMz": 0.08429627633,
+          "CFx": -0.01746664925,
+          "CFy": 0.7683318119,
+          "CFz": 0.0,
+          "CEff": 56.85170068,
+          "Buffet": 0.005345360062
+        },
+        "field_checkpoint_iteration": 1000,
+        "density_log10_residual": -5.366491765,
+        "CL": 0.8062322998,
+        "CD": 0.01862427051,
+        "CL_final200_range": 0.025092603199999952,
+        "CD_final200_range": 0.00730658772,
+        "max_wall_yplus": 0.47435462474823,
+        "p99_wall_yplus": 0.46805667877197266,
+        "checks": {
+          "density_log10_below_minus8": false,
+          "CL_final200_range_below_5e_5": false,
+          "CD_final200_range_below_2e_6": false,
+          "max_wall_yplus_below1": true
+        },
+        "source_camberline_surface_classification": true,
+        "clockwise_boundary_signed_area_m2": -0.07791641311500888,
+        "pressure_force_coefficient_xy": [
+          -0.019264955971377767,
+          0.8062806459446893
+        ],
+        "viscous_force_coefficient_xy": [
+          0.005411161844251701,
+          0.00022144265505339144
+        ],
+        "independent_surface_force": {
+          "CL": 0.8064050988836591,
+          "CD": 0.01866448557823291,
+          "CL_pressure": 0.8064019394645681,
+          "CD_pressure": 0.01324879546780067,
+          "CL_viscous": 3.1594190909699368e-06,
+          "CD_viscous": 0.0054156901104322405,
+          "relative_difference_CL": 0.00021432915017414553,
+          "relative_difference_CD": 0.002159282867552812,
+          "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+        },
+        "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+        "independent_surface_moment": {
+          "CMz_pressure": 0.10281282882119873,
+          "CMz_viscous": -4.597371285685722e-05,
+          "CMz_total": 0.10276685510834187,
+          "history_CMz": 0.102632013,
+          "absolute_difference": 0.00013484210834187327,
+          "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+        }
+      },
+      "raw_downloaded_reference_comparison": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.17659919584849673,
+          "mean_bias": -0.0063037707965835,
+          "p95_abs_error": 0.3609782935435178,
+          "max_abs_error": 0.8318763810593197,
+          "fraction_within_source_uncertainty_0p0026": 0.038834951456310676
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.22726825094828093,
+          "mean_bias": -0.02814542153587236,
+          "p95_abs_error": 0.58521397003251,
+          "max_abs_error": 0.8318763810593197,
+          "fraction_within_source_uncertainty_0p0026": 0.018518518518518517
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.09292778624305091,
+          "mean_bias": 0.017766619814061368,
+          "p95_abs_error": 0.20972884837801734,
+          "max_abs_error": 0.3391220938407151,
+          "fraction_within_source_uncertainty_0p0026": 0.061224489795918366
+        },
+        "wall": {
+          "points": 565,
+          "array_names": [
+            "Density",
+            "Momentum",
+            "Energy",
+            "Nu_Tilde",
+            "Pressure",
+            "Temperature",
+            "Mach",
+            "Pressure_Coefficient",
+            "Velocity",
+            "Laminar_Viscosity",
+            "Skin_Friction_Coefficient",
+            "Heat_Flux",
+            "Y_Plus",
+            "Eddy_Viscosity",
+            "Residual_Density",
+            "Residual_Momentum",
+            "Residual_Energy",
+            "Residual_Nu_Tilde"
+          ],
+          "signed_enclosed_area_m2": 0.07791641354560852,
+          "pressure_CFx_independent": -0.019264958798885345,
+          "pressure_CFy_independent": 0.8062806725502014,
+          "max_wall_yplus": 0.47435462474823,
+          "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+        },
+        "source_pressure_uncertainty": 0.0026,
+        "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+        "regions": {
+          "LE": {
+            "points": 33,
+            "RMSE": 0.1642556119947968,
+            "mean_bias": 0.00038635749655027105,
+            "p95_abs_error": 0.1665417127105535,
+            "max_abs_error": 0.8318763810593197,
+            "fraction_within_source_uncertainty_0p0026": 0.06060606060606061
+          },
+          "mid": {
+            "points": 58,
+            "RMSE": 0.19857856074271502,
+            "mean_bias": -0.01739961767737545,
+            "p95_abs_error": 0.46211146872464676,
+            "max_abs_error": 0.6513790513936061,
+            "fraction_within_source_uncertainty_0p0026": 0.017241379310344827
+          },
+          "TE": {
+            "points": 12,
+            "RMSE": 0.05386149472030906,
+            "mean_bias": 0.028928302987793086,
+            "p95_abs_error": 0.09417933950650513,
+            "max_abs_error": 0.11073331273272599,
+            "fraction_within_source_uncertainty_0p0026": 0.08333333333333333
+          }
+        },
+        "predicted_shock": {
+          "location_x_over_c": 0.5193039178848267,
+          "bracket_x_over_c": [
+            0.5182774662971497,
+            0.5203303694725037
+          ],
+          "Cp_recovery_gradient": 84.79264068603516,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "experimental_shock": {
+          "location_x_over_c": 0.5375000000000001,
+          "bracket_x_over_c": [
+            0.525,
+            0.55
+          ],
+          "Cp_recovery_gradient": 12.25599999999999,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "shock_location_abs_error_chords": 0.01819608211517343,
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": false,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "experimental_passed": false,
+        "negative_control_wrong_Cp_sign_RMSE": 1.404766039383906
+      },
+      "original_table_comparison": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.1564289995176902,
+          "mean_bias": -0.014496003806292236,
+          "p95_abs_error": 0.34148864782500893,
+          "max_abs_error": 0.6513790513936061,
+          "fraction_within_source_uncertainty_0p0026": 0.038834951456310676
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.19707444472956553,
+          "mean_bias": -0.04377134746179828,
+          "p95_abs_error": 0.4902848607528329,
+          "max_abs_error": 0.6513790513936061,
+          "fraction_within_source_uncertainty_0p0026": 0.018518518518518517
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.09292778624305091,
+          "mean_bias": 0.017766619814061368,
+          "p95_abs_error": 0.20972884837801734,
+          "max_abs_error": 0.3391220938407151,
+          "fraction_within_source_uncertainty_0p0026": 0.061224489795918366
+        },
+        "checks": {
+          "RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": false,
+          "p95": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "passed": false
+      },
+      "minimum_qualification_passed": false
+    },
+    {
+      "case": "v3_cgrid_coarse_scalarjst",
+      "role": "diagnostic only",
+      "field_iteration": 1000,
+      "run": {
+        "name": "v3_cgrid_coarse_scalarjst",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 335.89100000000326,
+        "start_epoch": 1792437283.552952,
+        "threads": 4,
+        "config_sha256": "cde1a1463d6aab25a5b3b02f180568cc91dbf0efaab3aef0a666827a02d2f5d9",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "numerical": {
+        "name": "v3_cgrid_coarse_scalarjst",
+        "iteration": 1000.0,
+        "history_rows": 1189,
+        "history_terminal": {
+          "Time_Iter": 0.0,
+          "Outer_Iter": 0.0,
+          "Inner_Iter": 1188.0,
+          "rms[Rho]": -5.599629523,
+          "rms[RhoU]": -5.47400311,
+          "rms[RhoV]": -5.538168209,
+          "rms[RhoE]": -4.949380626,
+          "rms[nu]": -8.981644509,
+          "RefForce": 0.5,
+          "CD": 0.00439419022,
+          "CL": 0.6526989881,
+          "CSF": 0.0,
+          "CMx": 0.0,
+          "CMy": 0.0,
+          "CMz": 0.05216948274,
+          "CFx": -0.02191718627,
+          "CFy": 0.652345702,
+          "CFz": 0.0,
+          "CEff": 148.5368078,
+          "Buffet": 0.005902442789
+        },
+        "field_checkpoint_iteration": 1000,
+        "density_log10_residual": -5.628293507,
+        "CL": 0.7561813992,
+        "CD": 0.01485012762,
+        "CL_final200_range": 0.05644218319999994,
+        "CD_final200_range": 0.01033968449,
+        "max_wall_yplus": 0.4846019148826599,
+        "p99_wall_yplus": 0.4786674678325653,
+        "checks": {
+          "density_log10_below_minus8": false,
+          "CL_final200_range_below_5e_5": false,
+          "CD_final200_range_below_2e_6": false,
+          "max_wall_yplus_below1": true
+        },
+        "source_camberline_surface_classification": true,
+        "clockwise_boundary_signed_area_m2": -0.07791641311500888,
+        "pressure_force_coefficient_xy": [
+          -0.021351939520955928,
+          0.7562576833804008
+        ],
+        "viscous_force_coefficient_xy": [
+          0.005742260078148844,
+          0.00022365189294071391
+        ],
+        "independent_surface_force": {
+          "CL": 0.7564957666801209,
+          "CD": 0.014893881438393604,
+          "CL_pressure": 0.7565037451248406,
+          "CD_pressure": 0.009147273106626264,
+          "CL_viscous": -7.978444719717578e-06,
+          "CD_viscous": 0.005746608331767338,
+          "relative_difference_CL": 0.0004157302473366817,
+          "relative_difference_CD": 0.0029463597561731544,
+          "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+        },
+        "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+        "independent_surface_moment": {
+          "CMz_pressure": 0.08537266207455046,
+          "CMz_viscous": -5.673405772151248e-05,
+          "CMz_total": 0.08531592801682895,
+          "history_CMz": 0.0851657375,
+          "absolute_difference": 0.00015019051682894913,
+          "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+        }
+      },
+      "raw_downloaded_reference_comparison": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.17919053287988435,
+          "mean_bias": -0.0031071466906058133,
+          "p95_abs_error": 0.4575590682509696,
+          "max_abs_error": 0.8295607735563095,
+          "fraction_within_source_uncertainty_0p0026": 0.02912621359223301
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.2352376171163684,
+          "mean_bias": -0.0063151910214285355,
+          "p95_abs_error": 0.5314594786920056,
+          "max_abs_error": 0.8295607735563095,
+          "fraction_within_source_uncertainty_0p0026": 0.05555555555555555
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.08069452061959881,
+          "mean_bias": 0.00042824910254576004,
+          "p95_abs_error": 0.18395599596715034,
+          "max_abs_error": 0.31845128232210795,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "wall": {
+          "points": 565,
+          "array_names": [
+            "Density",
+            "Momentum",
+            "Energy",
+            "Nu_Tilde",
+            "Pressure",
+            "Temperature",
+            "Mach",
+            "Pressure_Coefficient",
+            "Velocity",
+            "Laminar_Viscosity",
+            "Skin_Friction_Coefficient",
+            "Heat_Flux",
+            "Y_Plus",
+            "Eddy_Viscosity",
+            "Residual_Density",
+            "Residual_Momentum",
+            "Residual_Energy",
+            "Residual_Nu_Tilde"
+          ],
+          "signed_enclosed_area_m2": 0.07791641354560852,
+          "pressure_CFx_independent": -0.021351942792534828,
+          "pressure_CFy_independent": 0.7562577128410339,
+          "max_wall_yplus": 0.4846019148826599,
+          "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+        },
+        "source_pressure_uncertainty": 0.0026,
+        "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+        "regions": {
+          "LE": {
+            "points": 33,
+            "RMSE": 0.16291521329239864,
+            "mean_bias": -0.0012416101399386472,
+            "p95_abs_error": 0.16310176810562332,
+            "max_abs_error": 0.8295607735563095,
+            "fraction_within_source_uncertainty_0p0026": 0.0
+          },
+          "mid": {
+            "points": 58,
+            "RMSE": 0.20232095236048034,
+            "mean_bias": -0.010701081637319042,
+            "p95_abs_error": 0.48295373092427346,
+            "max_abs_error": 0.6161765776483367,
+            "fraction_within_source_uncertainty_0p0026": 0.05172413793103448
+          },
+          "TE": {
+            "points": 12,
+            "RMSE": 0.06905843929507832,
+            "mean_bias": 0.028466646704173426,
+            "p95_abs_error": 0.1143865558262276,
+            "max_abs_error": 0.11452645892064794,
+            "fraction_within_source_uncertainty_0p0026": 0.0
+          }
+        },
+        "predicted_shock": {
+          "location_x_over_c": 0.7127089500427246,
+          "bracket_x_over_c": [
+            0.7110636830329895,
+            0.7143541574478149
+          ],
+          "Cp_recovery_gradient": 47.72205352783203,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "experimental_shock": {
+          "location_x_over_c": 0.5375000000000001,
+          "bracket_x_over_c": [
+            0.525,
+            0.55
+          ],
+          "Cp_recovery_gradient": 12.25599999999999,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "shock_location_abs_error_chords": 0.17520895004272452,
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": false,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": false
+        },
+        "experimental_passed": false,
+        "negative_control_wrong_Cp_sign_RMSE": 1.3915671510462295
+      },
+      "original_table_comparison": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.15946768632545627,
+          "mean_bias": -0.011299379700314551,
+          "p95_abs_error": 0.41385718313245085,
+          "max_abs_error": 0.6161765776483367,
+          "fraction_within_source_uncertainty_0p0026": 0.02912621359223301
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.20638939508994647,
+          "mean_bias": -0.021941116947354462,
+          "p95_abs_error": 0.489509182643963,
+          "max_abs_error": 0.6161765776483367,
+          "fraction_within_source_uncertainty_0p0026": 0.05555555555555555
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.08069452061959881,
+          "mean_bias": 0.00042824910254576004,
+          "p95_abs_error": 0.18395599596715034,
+          "max_abs_error": 0.31845128232210795,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "checks": {
+          "RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": false,
+          "p95": false,
+          "max_error": false,
+          "shock_location": false
+        },
+        "passed": false
+      },
+      "minimum_qualification_passed": false
+    },
+    {
+      "case": "v3_cgrid_coarse_warmstart",
+      "role": "diagnostic only",
+      "field_iteration": 2200,
+      "run": {
+        "name": "v3_cgrid_coarse_warmstart",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 377.23500000004424,
+        "start_epoch": 1792437620.710283,
+        "threads": 4,
+        "config_sha256": "31b65e4835932bec989b083684133023f1d7f4cf0bb9e8bb640a84c35039db61",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "numerical": {
+        "name": "v3_cgrid_coarse_warmstart",
+        "iteration": 2200.0,
+        "history_rows": 2203,
+        "history_terminal": {
+          "Time_Iter": 0.0,
+          "Outer_Iter": 0.0,
+          "Inner_Iter": 2202.0,
+          "rms[Rho]": -6.348810227,
+          "rms[RhoU]": -6.174491296,
+          "rms[RhoV]": -6.572283212,
+          "rms[RhoE]": -5.764930778,
+          "rms[nu]": -9.252656784,
+          "max[Rho]": -4.80865393,
+          "max[RhoU]": -4.85419703,
+          "max[RhoV]": -5.188552798,
+          "max[RhoE]": -4.42932727,
+          "max[nu]": -8.275844928,
+          "Linear_Solver_Iterations": 1.0,
+          "LinSolRes": -1.433295951,
+          "LinSolIterTurb": 1.0,
+          "LinSolResTurb": -2.080952388,
+          "Min DT": 1.17242882e-09,
+          "Max DT": 4.359074894,
+          "Min CFL": 1.0,
+          "Max CFL": 1.0,
+          "Avg CFL": 1.0,
+          "RefForce": 0.5,
+          "CD": 0.01190732595,
+          "CL": 0.7163240622,
+          "CSF": 0.0,
+          "CMx": 0.0,
+          "CMy": 0.0,
+          "CMz": 0.08713873122,
+          "CFx": -0.01697463986,
+          "CFy": 0.7162218986,
+          "CFz": 0.0,
+          "CEff": 60.15826436,
+          "Buffet": 0.0054566381
+        },
+        "field_checkpoint_iteration": 2200,
+        "density_log10_residual": -6.345985182,
+        "CL": 0.716330342,
+        "CD": 0.01190602885,
+        "CL_final200_range": 0.00185728620000003,
+        "CD_final200_range": 0.00018802394000000042,
+        "max_wall_yplus": 0.4843330681324005,
+        "p99_wall_yplus": 0.4784126877784729,
+        "checks": {
+          "density_log10_below_minus8": false,
+          "CL_final200_range_below_5e_5": false,
+          "CD_final200_range_below_2e_6": false,
+          "max_wall_yplus_below1": true
+        },
+        "source_camberline_surface_classification": true,
+        "clockwise_boundary_signed_area_m2": -0.07791641311500888,
+        "pressure_force_coefficient_xy": [
+          -0.022820221120074497,
+          0.7159876544654326
+        ],
+        "viscous_force_coefficient_xy": [
+          0.005843324092856629,
+          0.00024472720836807207
+        ],
+        "independent_surface_force": {
+          "CL": 0.7163346276871407,
+          "CD": 0.011905493149091086,
+          "CL_pressure": 0.7163256214475461,
+          "CD_pressure": 0.006057053464156074,
+          "CL_viscous": 9.006239594643728e-06,
+          "CD_viscous": 0.005848439684935012,
+          "relative_difference_CL": 5.9828362550723405e-06,
+          "relative_difference_CD": 4.4994087924931126e-05,
+          "method": "native wall edge topology; trapezoid Cp normal integration and vector skin-friction integration; matched checkpoint history; comparison includes quadrature/output precision error"
+        },
+        "field_time_note": "Exact immutable surface/volume/restart numeric suffix intersection matched to the same history row; later terminal history kept separately.",
+        "independent_surface_moment": {
+          "CMz_pressure": 0.08721609303142974,
+          "CMz_viscous": -7.524707018582148e-05,
+          "CMz_total": 0.08714084596124393,
+          "history_CMz": 0.087136935,
+          "absolute_difference": 3.910961243927535e-06,
+          "reference": "x=.25c,y=0; mathematical z=x cross y convention, not relabeled as a nose-up sign"
+        }
+      },
+      "raw_downloaded_reference_comparison": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.10410642993514309,
+          "mean_bias": 0.024640856145538806,
+          "p95_abs_error": 0.13499156627451045,
+          "max_abs_error": 0.8803735251647933,
+          "fraction_within_source_uncertainty_0p0026": 0.08737864077669903
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.14306578216429958,
+          "mean_bias": 0.04100760949126748,
+          "p95_abs_error": 0.18672034802634294,
+          "max_abs_error": 0.8803735251647933,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.015028644911781451,
+          "mean_bias": 0.006604025927797007,
+          "p95_abs_error": 0.021993630568184964,
+          "max_abs_error": 0.05060087139419789,
+          "fraction_within_source_uncertainty_0p0026": 0.1836734693877551
+        },
+        "wall": {
+          "points": 565,
+          "array_names": [
+            "Density",
+            "Momentum",
+            "Energy",
+            "Nu_Tilde",
+            "Pressure",
+            "Temperature",
+            "Mach",
+            "Pressure_Coefficient",
+            "Velocity",
+            "Laminar_Viscosity",
+            "Skin_Friction_Coefficient",
+            "Heat_Flux",
+            "Y_Plus",
+            "Eddy_Viscosity",
+            "Residual_Density",
+            "Residual_Momentum",
+            "Residual_Energy",
+            "Residual_Nu_Tilde"
+          ],
+          "signed_enclosed_area_m2": 0.07791641354560852,
+          "pressure_CFx_independent": -0.02282022126019001,
+          "pressure_CFy_independent": 0.7159876823425293,
+          "max_wall_yplus": 0.4843330681324005,
+          "classification": "Closed wall topology split at LE and TE; branch mean ordinate identifies upper/lower. No y>=0 classification."
+        },
+        "source_pressure_uncertainty": 0.0026,
+        "source_pressure_uncertainty_scope": "Reported pressure measurement error, not total CFD modeling uncertainty or universal pass criterion",
+        "regions": {
+          "LE": {
+            "points": 33,
+            "RMSE": 0.1646766959342132,
+            "mean_bias": 0.015705604161479814,
+            "p95_abs_error": 0.13817593524246344,
+            "max_abs_error": 0.8803735251647933,
+            "fraction_within_source_uncertainty_0p0026": 0.06060606060606061
+          },
+          "mid": {
+            "points": 58,
+            "RMSE": 0.060518820499990314,
+            "mean_bias": 0.029465069378695755,
+            "p95_abs_error": 0.10052962682623025,
+            "max_abs_error": 0.2958707375403177,
+            "fraction_within_source_uncertainty_0p0026": 0.1206896551724138
+          },
+          "TE": {
+            "points": 12,
+            "RMSE": 0.027378596821115733,
+            "mean_bias": 0.025895768474775777,
+            "p95_abs_error": 0.03797448816354683,
+            "max_abs_error": 0.038091074774242006,
+            "fraction_within_source_uncertainty_0p0026": 0.0
+          }
+        },
+        "predicted_shock": {
+          "location_x_over_c": 0.538190484046936,
+          "bracket_x_over_c": [
+            0.5364590883255005,
+            0.5399219393730164
+          ],
+          "Cp_recovery_gradient": 54.39668273925781,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "experimental_shock": {
+          "location_x_over_c": 0.5375000000000001,
+          "bracket_x_over_c": [
+            0.525,
+            0.55
+          ],
+          "Cp_recovery_gradient": 12.25599999999999,
+          "method": "max positive upper-surface secant dCp/dx, interior 0.15..0.9; bracket/tap spacing retained"
+        },
+        "shock_location_abs_error_chords": 0.0006904840469359463,
+        "checks": {
+          "all_RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": true,
+          "p95_error": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "experimental_passed": false,
+        "negative_control_wrong_Cp_sign_RMSE": 1.359681433231457
+      },
+      "original_table_comparison": {
+        "all": {
+          "points": 103,
+          "RMSE": 0.05767412643443989,
+          "mean_bias": 0.016448623135830072,
+          "p95_abs_error": 0.12114983102765094,
+          "max_abs_error": 0.2958707375403177,
+          "fraction_within_source_uncertainty_0p0026": 0.08737864077669903
+        },
+        "upper": {
+          "points": 54,
+          "RMSE": 0.07835605490219899,
+          "mean_bias": 0.025381683565341553,
+          "p95_abs_error": 0.14423330381803293,
+          "max_abs_error": 0.2958707375403177,
+          "fraction_within_source_uncertainty_0p0026": 0.0
+        },
+        "lower": {
+          "points": 49,
+          "RMSE": 0.015028644911781451,
+          "mean_bias": 0.006604025927797007,
+          "p95_abs_error": 0.021993630568184964,
+          "max_abs_error": 0.05060087139419789,
+          "fraction_within_source_uncertainty_0p0026": 0.1836734693877551
+        },
+        "checks": {
+          "RMSE": false,
+          "upper_RMSE": false,
+          "lower_RMSE": true,
+          "p95": false,
+          "max_error": false,
+          "shock_location": true
+        },
+        "passed": false
+      },
+      "minimum_qualification_passed": false
+    }
+  ],
+  "reference_correction": "Same independently proven single NASA GENPLOT sign transcription at upperx/c=.0002; raw comparison retained, all103 points retained. Original AGARD Table6.7/A6-17 evidence in v2 review.",
+  "main_fine_validation_unchanged": true,
+  "minimum_qualification_passed": false,
+  "scope": "Diagnostic continuation, no general airfoil, M6 or UAV acceptance."
+}

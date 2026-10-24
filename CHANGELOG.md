@@ -29,3 +29,7 @@ NIST kaynak parçaları ve ONERA deney verisiyle ilk 3B RANS kıyası.
 ## v0.7.0 — Kaynak geometri ve ayrı analiz sınaması
 
 RAE2822 v1/v2 geometri aktarımı, dondurulmuş tahminler ve deney değerlendirmesi.
+
+## v0.8.0 — C-grid araştırması ve M6 devamı
+
+Konumsal ağ düzeltmeleri, başarısız sayısal kontroller ve 24 Ekim M6 koşuları.

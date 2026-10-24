@@ -1,0 +1,1141 @@
+{
+  "scope": "Mesh-only R4; no CFD launched; no flow acceptance",
+  "all_three_levels_complete": true,
+  "geometry_topology_checks_passed": true,
+  "levels": [
+    {
+      "case": "v3_cgrid_interfacer4_coarse",
+      "cells": 92412,
+      "baseline_cells": 84404,
+      "increase_percent": 9.487702004644326,
+      "max_skew_before": 0.9538920133554445,
+      "max_skew_after": 0.8331957479732971,
+      "p99_skew_before": 0.47594957229021545,
+      "p99_skew_after": 0.3179935813382761,
+      "global_worst": {
+        "cell_id": 92409,
+        "type": "triangle",
+        "center_m": [
+          9.45915509516031,
+          0.3501822495886125
+        ],
+        "skew": 0.8331957479732971,
+        "angle_min_max_deg": [
+          10.008255121602174,
+          157.43180351595046
+        ],
+        "vertices_m": [
+          [
+            9.448374889969042,
+            0.3443420235236341
+          ],
+          [
+            9.461664479021833,
+            0.27269449661603934
+          ],
+          [
+            9.467425916490061,
+            0.43351022862616395
+          ]
+        ]
+      },
+      "tail_min_angle_before_deg": 3.814185345113032,
+      "tail_min_angle_after_deg": 21.596143351556442,
+      "LE_height_ratio_max_before_after": [
+        22.059716385186977,
+        3.001785455838319
+      ],
+      "TE_height_ratio_max_before_after": [
+        7.762540865580142,
+        4.787604483358584
+      ],
+      "normal_transition": {
+        "definition": "Exact exported interface edges each have one explicit quad and one exterior triangle. Triangle height=2A/edge length; quad height=mean perpendicular distance of two opposite vertices to interface edge.",
+        "regions": {
+          "all_interface": {
+            "edges": 1085,
+            "tangential_edge_m": {
+              "min": 0.0002083070807065314,
+              "median": 0.0041119379691075325,
+              "p99": 0.07473368586026649,
+              "max": 0.07474187153899624
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0009886565887598112,
+              "median": 0.0011122622436476406,
+              "p99": 0.07438412962667051,
+              "max": 0.07438412962667051
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0001594129497609137,
+              "median": 0.003692943365790402,
+              "p99": 0.07878027757471837,
+              "max": 0.09103988744536393
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.029978058465527858,
+              "median": 3.232708566414732,
+              "p99": 56.53820455136425,
+              "max": 76.17613096171846
+            }
+          },
+          "body_interface": {
+            "edges": 565,
+            "tangential_edge_m": {
+              "min": 0.0002083070807065314,
+              "median": 0.004079833262588769,
+              "p99": 0.006046336387460761,
+              "max": 0.0063330660339723475
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0009886565887598112,
+              "median": 0.001111426390312264,
+              "p99": 0.001113160799586734,
+              "max": 0.0011131668995618721
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0001594129497609137,
+              "median": 0.0035653921060146095,
+              "p99": 0.006514391071169891,
+              "max": 0.007198904889785919
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.15043541522418086,
+              "median": 3.220553920970103,
+              "p99": 5.856324747302503,
+              "max": 6.560277005316327
+            }
+          },
+          "LE_interface": {
+            "edges": 124,
+            "tangential_edge_m": {
+              "min": 0.0014153144259250593,
+              "median": 0.002232074963031786,
+              "p99": 0.0030014959508871575,
+              "max": 0.003004636762850451
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0011083104068966114,
+              "median": 0.0011103621188547556,
+              "p99": 0.0011131048937219974,
+              "max": 0.0011131159589056441
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0010110510222675244,
+              "median": 0.0019463460295260863,
+              "p99": 0.0030953845067914145,
+              "max": 0.003336714436115268
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.9101432178005023,
+              "median": 1.7543427828721851,
+              "p99": 2.7840434833428827,
+              "max": 3.001785455838319
+            }
+          },
+          "TE_interface": {
+            "edges": 88,
+            "tangential_edge_m": {
+              "min": 0.0002083070807065314,
+              "median": 0.0019785857383702483,
+              "p99": 0.005983824456661679,
+              "max": 0.005983824605089277
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0009886565887598112,
+              "median": 0.0011059144413901275,
+              "p99": 0.001113159694405054,
+              "max": 0.0011131668995618721
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0001594129497609137,
+              "median": 0.001686390118363701,
+              "p99": 0.005191625029905633,
+              "max": 0.005250381345082057
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.15043541522418086,
+              "median": 1.529418925233655,
+              "p99": 4.735017771302151,
+              "max": 4.787604483358584
+            }
+          },
+          "aft_body_interface": {
+            "edges": 124,
+            "tangential_edge_m": {
+              "min": 0.0002083070807065314,
+              "median": 0.003281305291706186,
+              "p99": 0.005999868019033027,
+              "max": 0.005999868170201381
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0009886565887598112,
+              "median": 0.001106093216219964,
+              "p99": 0.001113157833098472,
+              "max": 0.0011131668995618721
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0001594129497609137,
+              "median": 0.0030444053930921617,
+              "p99": 0.0069329058708779345,
+              "max": 0.007198904889785919
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.15043541522418086,
+              "median": 2.7378842473719387,
+              "p99": 6.302520311972078,
+              "max": 6.560277005316327
+            }
+          },
+          "horizontal_wake_interface": {
+            "edges": 350,
+            "tangential_edge_m": {
+              "min": 0.0004503659783855799,
+              "median": 0.03862698809077861,
+              "p99": 0.07474085932178998,
+              "max": 0.07474187153899624
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.001108627009593796,
+              "median": 0.0011122620744798825,
+              "p99": 0.00346087801048548,
+              "max": 0.0035139650456541428
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.00029875617829997777,
+              "median": 0.030425141634756812,
+              "p99": 0.08501207684235339,
+              "max": 0.09103988744536393
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.26860226668067966,
+              "median": 20.234150760088987,
+              "p99": 62.63867526863856,
+              "max": 76.17613096171846
+            }
+          },
+          "vertical_end_interface": {
+            "edges": 170,
+            "tangential_edge_m": {
+              "min": 0.003529411764705781,
+              "median": 0.003529411764705892,
+              "p99": 0.003529411764706003,
+              "max": 0.003529411764706003
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0743841296266705,
+              "median": 0.0743841296266705,
+              "p99": 0.07438412962667051,
+              "max": 0.07438412962667051
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.002229891786855731,
+              "median": 0.0031766691018697557,
+              "p99": 0.005396984483213823,
+              "max": 0.00851595876153155
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.029978058465527858,
+              "median": 0.04270627508600648,
+              "p99": 0.07255559096141831,
+              "max": 0.114486232537406
+            }
+          }
+        },
+        "largest_symmetric_transition_ratio": [
+          {
+            "interface_edge_id": 844,
+            "edge_midpoint_m": [
+              2.7559188613197287,
+              0.1403061687538733
+            ],
+            "quad_height_m": 0.0011588064011558825,
+            "triangle_height_m": 0.08827338817372815,
+            "outside_over_inside": 76.17613096171846
+          },
+          {
+            "interface_edge_id": 849,
+            "edge_midpoint_m": [
+              3.1278395094530813,
+              0.1619709954137643
+            ],
+            "quad_height_m": 0.0012107070277512745,
+            "triangle_height_m": 0.08225848443563927,
+            "outside_over_inside": 67.94251833858051
+          },
+          {
+            "interface_edge_id": 851,
+            "edge_midpoint_m": [
+              3.2766077687064223,
+              0.17124557852800398
+            ],
+            "quad_height_m": 0.0012377876435123803,
+            "triangle_height_m": 0.08289734252889647,
+            "outside_over_inside": 66.97218457736797
+          },
+          {
+            "interface_edge_id": 853,
+            "edge_midpoint_m": [
+              3.4253760279597634,
+              0.1808793032985337
+            ],
+            "quad_height_m": 0.001268680999312854,
+            "triangle_height_m": 0.08106015853117043,
+            "outside_over_inside": 63.893254943578754
+          },
+          {
+            "interface_edge_id": 847,
+            "edge_midpoint_m": [
+              2.9790712501997403,
+              0.15304887510320833
+            ],
+            "quad_height_m": 0.0011873154503919858,
+            "triangle_height_m": 0.07282148584829574,
+            "outside_over_inside": 61.332888260027374
+          },
+          {
+            "interface_edge_id": 837,
+            "edge_midpoint_m": [
+              2.2499207411825477,
+              0.11403784317383361
+            ],
+            "quad_height_m": 0.0011200644941175531,
+            "triangle_height_m": 0.06696792552061195,
+            "outside_over_inside": 59.789347731599044
+          },
+          {
+            "interface_edge_id": 864,
+            "edge_midpoint_m": [
+              4.243601453853139,
+              0.24035973240882952
+            ],
+            "quad_height_m": 0.0015096632243021193,
+            "triangle_height_m": 0.0878994884982855,
+            "outside_over_inside": 58.22456762760403
+          },
+          {
+            "interface_edge_id": 848,
+            "edge_midpoint_m": [
+              3.053455379826411,
+              0.15746638664028725
+            ],
+            "quad_height_m": 0.0011985589196427872,
+            "triangle_height_m": 0.06951661567728053,
+            "outside_over_inside": 58.000165480391175
+          }
+        ]
+      },
+      "exact_distance_check": {
+        "random_seed": 17391,
+        "random_samples": 1200,
+        "reference": "Brute-force distance/projection to EVERY real interface segment, independent of cKDTree candidate selection",
+        "max_distance_error_m": 0.0,
+        "max_interpolated_h_error_m": 0.0,
+        "incorrect_d_less_than_1_skips": 0,
+        "queried_d_ge_1_size_exactly_old_count": 16,
+        "broad_phase_completeness": "midpoint lower bound and candidate radius use maximum actual segment half-length, with2e-12m roundoff padding",
+        "interface_segments": 1085,
+        "segment_length_m": {
+          "min": 0.0002083070807065314,
+          "median": 0.0041119379691075325,
+          "max": 0.07474187153899624
+        },
+        "node_h_m": {
+          "min": 0.0002083070807065314,
+          "median": 0.004040109201359403,
+          "max": 0.07474163454058169
+        }
+      },
+      "near_block_preserved": true,
+      "geometric_checks_passed": true,
+      "artifact_roundtrip": {
+        "VTU": {
+          "nodes": 85398,
+          "fluid_cells": 92412,
+          "coordinates_bitwise_equal": true,
+          "area_array_bitwise_equal": true
+        },
+        "MSH4_binary": {
+          "nodes": 85398,
+          "fluid_cells": 92412,
+          "coordinates_bitwise_equal": true,
+          "boundary_names": [
+            "AIRFOIL",
+            "FARFIELD"
+          ]
+        },
+        "scope": "Geometry and mesh-quality fields only, no flow solution."
+      },
+      "geometry": {
+        "source65_interpolation_max_m": 2.220446049250313e-16,
+        "actual_wall_vertex_deviation_to_r2_spline_max_m": 0.0,
+        "linear_panel_same_parameter_sample_deviation_max_m": 1.8957518032469314e-06,
+        "panel_sample_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "geometry_payload_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "source_sha256": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736"
+      },
+      "all_cell_angle_min_deg": 10.008255121602174,
+      "farfield_boundary_coordinate_set_bitwise_equal_tailr2": true
+    },
+    {
+      "case": "v3_cgrid_interfacer4_medium",
+      "cells": 196741,
+      "baseline_cells": 185987,
+      "increase_percent": 5.782124557092705,
+      "max_skew_before": 0.9503796356468449,
+      "max_skew_after": 0.7949717186913695,
+      "p99_skew_before": 0.3521719392121409,
+      "p99_skew_after": 0.30231499477836554,
+      "global_worst": {
+        "cell_id": 179713,
+        "type": "triangle",
+        "center_m": [
+          9.394876067563063,
+          0.45563363547450214
+        ],
+        "skew": 0.7949717186913695,
+        "angle_min_max_deg": [
+          12.301696878517827,
+          135.3216786590013
+        ],
+        "vertices_m": [
+          [
+            9.498173379516157,
+            0.4395596000701591
+          ],
+          [
+            9.324566929358786,
+            0.48335990040011023
+          ],
+          [
+            9.36188789381425,
+            0.4439814059532372
+          ]
+        ]
+      },
+      "tail_min_angle_before_deg": 2.9772218611893075,
+      "tail_min_angle_after_deg": 21.846667462096953,
+      "LE_height_ratio_max_before_after": [
+        10.968007437277528,
+        2.9177141695119135
+      ],
+      "TE_height_ratio_max_before_after": [
+        8.022988708875282,
+        5.572502601158286
+      ],
+      "normal_transition": {
+        "definition": "Exact exported interface edges each have one explicit quad and one exterior triangle. Triangle height=2A/edge length; quad height=mean perpendicular distance of two opposite vertices to interface edge.",
+        "regions": {
+          "all_interface": {
+            "edges": 1621,
+            "tangential_edge_m": {
+              "min": 0.00013778419351371924,
+              "median": 0.0027382437881910593,
+              "p99": 0.049929497960120466,
+              "max": 0.04993460512087505
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.00065797266080454,
+              "median": 0.0007401865799777145,
+              "p99": 0.04969559803972068,
+              "max": 0.04969559803972068
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0001266526583986609,
+              "median": 0.0025244775987472187,
+              "p99": 0.051619986826993876,
+              "max": 0.05917735478744254
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.03022027655208931,
+              "median": 3.308275129222973,
+              "p99": 56.48882576817399,
+              "max": 76.66178247155213
+            }
+          },
+          "body_interface": {
+            "edges": 847,
+            "tangential_edge_m": {
+              "min": 0.00013778419351371924,
+              "median": 0.0027237111904135324,
+              "p99": 0.004027487157423103,
+              "max": 0.004236940128357986
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.00065797266080454,
+              "median": 0.000739630030975378,
+              "p99": 0.0007407860980431084,
+              "max": 0.0007407885222068088
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0001266526583986609,
+              "median": 0.0024200459053509856,
+              "p99": 0.004291816662850255,
+              "max": 0.004931949059939818
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.18157731839059815,
+              "median": 3.292721986831899,
+              "p99": 5.825890938135622,
+              "max": 6.716873707638711
+            }
+          },
+          "LE_interface": {
+            "edges": 186,
+            "tangential_edge_m": {
+              "min": 0.0009385174841923818,
+              "median": 0.0014832452350931036,
+              "p99": 0.0020063743269837417,
+              "max": 0.0020178664075252446
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0007375871771342596,
+              "median": 0.0007389179300676595,
+              "p99": 0.0007407646731707524,
+              "max": 0.0007407736378283727
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0008190955235838593,
+              "median": 0.0013304852191049184,
+              "p99": 0.0020787765430296213,
+              "max": 0.0021567942467651327
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 1.1059735692216988,
+              "median": 1.8004405079000734,
+              "p99": 2.8104213655270787,
+              "max": 2.9177141695119135
+            }
+          },
+          "TE_interface": {
+            "edges": 131,
+            "tangential_edge_m": {
+              "min": 0.00013778419351371924,
+              "median": 0.0013055117768474346,
+              "p99": 0.003998669609755477,
+              "max": 0.0039986696731994596
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.00065797266080454,
+              "median": 0.000738605034058258,
+              "p99": 0.0007407859427047242,
+              "max": 0.0007407882461379939
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0001266526583986609,
+              "median": 0.0011263149191120612,
+              "p99": 0.003841489342855645,
+              "max": 0.004066755800304841
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.18157731839059815,
+              "median": 1.5210928026586827,
+              "p99": 5.267717145619961,
+              "max": 5.572502601158286
+            }
+          },
+          "aft_body_interface": {
+            "edges": 187,
+            "tangential_edge_m": {
+              "min": 0.00013778419351371924,
+              "median": 0.0021965895143488197,
+              "p99": 0.003998669640772688,
+              "max": 0.0039986696731994596
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.00065797266080454,
+              "median": 0.0007360351651360517,
+              "p99": 0.0007407833989600478,
+              "max": 0.0007407882461379939
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0001266526583986609,
+              "median": 0.0019012625284741396,
+              "p99": 0.004116620994713066,
+              "max": 0.0044885877037624915
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.18157731839059815,
+              "median": 2.5668086767908327,
+              "p99": 5.6232131806252905,
+              "max": 6.0992670160114555
+            }
+          },
+          "horizontal_wake_interface": {
+            "edges": 522,
+            "tangential_edge_m": {
+              "min": 0.0003002439855930936,
+              "median": 0.026285852674164917,
+              "p99": 0.04993399662778481,
+              "max": 0.04993460512087505
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0007379878080555547,
+              "median": 0.0007401865007570357,
+              "p99": 0.0023368282751472253,
+              "max": 0.002374034938008632
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.00022007976053757704,
+              "median": 0.022487359483076556,
+              "p99": 0.05423718548850872,
+              "max": 0.05917735478744254
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.2973301119819268,
+              "median": 20.598139943807368,
+              "p99": 61.192384974270055,
+              "max": 76.66178247155213
+            }
+          },
+          "vertical_end_interface": {
+            "edges": 252,
+            "tangential_edge_m": {
+              "min": 0.0023809523809523447,
+              "median": 0.0023809523809523725,
+              "p99": 0.0023809523809524835,
+              "max": 0.0023809523809524835
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.04969559803972068,
+              "median": 0.04969559803972068,
+              "p99": 0.04969559803972068,
+              "max": 0.04969559803972068
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0015018147161818263,
+              "median": 0.002142991059231214,
+              "p99": 0.0029757522141268568,
+              "max": 0.005510993859742186
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.03022027655208931,
+              "median": 0.043122351752732005,
+              "p99": 0.05987959359596394,
+              "max": 0.11089501036565373
+            }
+          }
+        },
+        "largest_symmetric_transition_ratio": [
+          {
+            "interface_edge_id": 1259,
+            "edge_midpoint_m": [
+              2.5583320146506034,
+              0.12963044576693938
+            ],
+            "quad_height_m": 0.0007599527446355505,
+            "triangle_height_m": 0.05825933199790958,
+            "outside_over_inside": 76.66178247155213
+          },
+          {
+            "interface_edge_id": 108,
+            "edge_midpoint_m": [
+              2.608027612690324,
+              -0.002529584773726841
+            ],
+            "quad_height_m": 0.0007637196131791377,
+            "triangle_height_m": 0.05460645790454976,
+            "outside_over_inside": 71.50066197362577
+          },
+          {
+            "interface_edge_id": 1273,
+            "edge_midpoint_m": [
+              3.2540703872066907,
+              0.16981139435673812
+            ],
+            "quad_height_m": 0.0008243793072987008,
+            "triangle_height_m": 0.05224897871861032,
+            "outside_over_inside": 63.379779497156555
+          },
+          {
+            "interface_edge_id": 1274,
+            "edge_midpoint_m": [
+              3.303765985246411,
+              0.1729710614712936
+            ],
+            "quad_height_m": 0.0008310156020619973,
+            "triangle_height_m": 0.0523243845115614,
+            "outside_over_inside": 62.964382836771065
+          },
+          {
+            "interface_edge_id": 1271,
+            "edge_midpoint_m": [
+              3.15467919112725,
+              0.16361183786536052
+            ],
+            "quad_height_m": 0.0008119648189669926,
+            "triangle_height_m": 0.04979395467069519,
+            "outside_over_inside": 61.325261276768906
+          },
+          {
+            "interface_edge_id": 1256,
+            "edge_midpoint_m": [
+              2.4097001424091307,
+              0.12196075981888146
+            ],
+            "quad_height_m": 0.0007523844452377113,
+            "triangle_height_m": 0.04613154906938312,
+            "outside_over_inside": 61.31379956267987
+          },
+          {
+            "interface_edge_id": 1276,
+            "edge_midpoint_m": [
+              3.4031571813258523,
+              0.1794111924115811
+            ],
+            "quad_height_m": 0.000845159835728175,
+            "triangle_height_m": 0.051331319177715114,
+            "outside_over_inside": 60.73563485596656
+          },
+          {
+            "interface_edge_id": 1278,
+            "edge_midpoint_m": [
+              3.5025483774052937,
+              0.18601340285268536
+            ],
+            "quad_height_m": 0.0008604816183773829,
+            "triangle_height_m": 0.051980746464010553,
+            "outside_over_inside": 60.40889817266645
+          }
+        ]
+      },
+      "exact_distance_check": {
+        "random_seed": 17391,
+        "random_samples": 1200,
+        "reference": "Brute-force distance/projection to EVERY real interface segment, independent of cKDTree candidate selection",
+        "max_distance_error_m": 0.0,
+        "max_interpolated_h_error_m": 0.0,
+        "incorrect_d_less_than_1_skips": 0,
+        "queried_d_ge_1_size_exactly_old_count": 13,
+        "broad_phase_completeness": "midpoint lower bound and candidate radius use maximum actual segment half-length, with2e-12m roundoff padding",
+        "interface_segments": 1621,
+        "segment_length_m": {
+          "min": 0.00013778419351371924,
+          "median": 0.0027382437881910593,
+          "max": 0.04993460512087505
+        },
+        "node_h_m": {
+          "min": 0.00013778419351371924,
+          "median": 0.0027116285553173123,
+          "max": 0.04993457243322526
+        }
+      },
+      "near_block_preserved": true,
+      "geometric_checks_passed": true,
+      "artifact_roundtrip": {
+        "VTU": {
+          "nodes": 185075,
+          "fluid_cells": 196741,
+          "coordinates_bitwise_equal": true,
+          "area_array_bitwise_equal": true
+        },
+        "MSH4_binary": {
+          "nodes": 185075,
+          "fluid_cells": 196741,
+          "coordinates_bitwise_equal": true,
+          "boundary_names": [
+            "AIRFOIL",
+            "FARFIELD"
+          ]
+        },
+        "scope": "Geometry and mesh-quality fields only, no flow solution."
+      },
+      "geometry": {
+        "source65_interpolation_max_m": 2.220446049250313e-16,
+        "actual_wall_vertex_deviation_to_r2_spline_max_m": 0.0,
+        "linear_panel_same_parameter_sample_deviation_max_m": 8.276022235879614e-07,
+        "panel_sample_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "geometry_payload_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "source_sha256": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736"
+      },
+      "all_cell_angle_min_deg": 12.301696878517827,
+      "farfield_boundary_coordinate_set_bitwise_equal_tailr2": true
+    },
+    {
+      "case": "v3_cgrid_interfacer4_fine",
+      "cells": 424826,
+      "baseline_cells": 409982,
+      "increase_percent": 3.6206467601016534,
+      "max_skew_before": 0.938086875441701,
+      "max_skew_after": 0.9174781300781633,
+      "p99_skew_before": 0.29673478955684807,
+      "p99_skew_after": 0.2811725266167851,
+      "global_worst": {
+        "cell_id": 398349,
+        "type": "triangle",
+        "center_m": [
+          9.89657760018043,
+          0.1947868276127497
+        ],
+        "skew": 0.9174781300781633,
+        "angle_min_max_deg": [
+          4.951312195310201,
+          93.78153245478593
+        ],
+        "vertices_m": [
+          [
+            9.819895158161678,
+            0.24984384800264434
+          ],
+          [
+            9.810822395155835,
+            0.22752431197934203
+          ],
+          [
+            10.05901524722378,
+            0.10699232285626281
+          ]
+        ]
+      },
+      "tail_min_angle_before_deg": 5.483590996701755,
+      "tail_min_angle_after_deg": 22.45543416443149,
+      "LE_height_ratio_max_before_after": [
+        11.119272303739534,
+        3.185574501154799
+      ],
+      "TE_height_ratio_max_before_after": [
+        8.778113648384863,
+        6.308523551019002
+      ],
+      "normal_transition": {
+        "definition": "Exact exported interface edges each have one explicit quad and one exterior triangle. Triangle height=2A/edge length; quad height=mean perpendicular distance of two opposite vertices to interface edge.",
+        "regions": {
+          "all_interface": {
+            "edges": 2422,
+            "tangential_edge_m": {
+              "min": 9.22464473859803e-05,
+              "median": 0.0018328471795996198,
+              "p99": 0.03333208550271542,
+              "max": 0.033335541041281884
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.00044326233681532556,
+              "median": 0.0004995823346057544,
+              "p99": 0.03317597876184841,
+              "max": 0.03317597876184841
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 8.225675154679477e-05,
+              "median": 0.0016808074645783138,
+              "p99": 0.034137079663607454,
+              "max": 0.04065557549202799
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.03223369409180898,
+              "median": 3.275299629298792,
+              "p99": 55.34209563812931,
+              "max": 71.06530511954793
+            }
+          },
+          "body_interface": {
+            "edges": 1270,
+            "tangential_edge_m": {
+              "min": 9.22464473859803e-05,
+              "median": 0.0018131519964038809,
+              "p99": 0.0026874125628919055,
+              "max": 0.0028240574858940898
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.00044326233681532556,
+              "median": 0.0004992081278268792,
+              "p99": 0.0004999876064225149,
+              "max": 0.0004999886245198469
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 8.225675154679477e-05,
+              "median": 0.001613436404087095,
+              "p99": 0.0029249114106262497,
+              "max": 0.0033864575236688967
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.17658346705598654,
+              "median": 3.229393237906338,
+              "p99": 5.86182235070961,
+              "max": 6.839321281629948
+            }
+          },
+          "LE_interface": {
+            "edges": 278,
+            "tangential_edge_m": {
+              "min": 0.0006244828200205855,
+              "median": 0.0009861069124452839,
+              "p99": 0.0013409340082572935,
+              "max": 0.0013471869135033504
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0004978406186373902,
+              "median": 0.0004987391423738549,
+              "p99": 0.0004999806257046865,
+              "max": 0.0004999841748635615
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.00042377592628699306,
+              "median": 0.0008817899546987693,
+              "p99": 0.0014067471406516271,
+              "max": 0.0015917957067071702
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.8476138673065619,
+              "median": 1.770282487014751,
+              "p99": 2.814834899093144,
+              "max": 3.185574501154799
+            }
+          },
+          "TE_interface": {
+            "edges": 197,
+            "tangential_edge_m": {
+              "min": 9.22464473859803e-05,
+              "median": 0.0008774361893982512,
+              "p99": 0.0026657797972230368,
+              "max": 0.0026657798068153095
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.00044326233681532556,
+              "median": 0.0004985177393641688,
+              "p99": 0.0004999872757180319,
+              "max": 0.0004999885607101607
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 8.225675154679477e-05,
+              "median": 0.0007586721201989924,
+              "p99": 0.0025416613838053375,
+              "max": 0.0031064917434772787
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.17658346705598654,
+              "median": 1.5181654190808338,
+              "p99": 5.160585793143187,
+              "max": 6.308523551019002
+            }
+          },
+          "aft_body_interface": {
+            "edges": 279,
+            "tangential_edge_m": {
+              "min": 9.22464473859803e-05,
+              "median": 0.0014503833814493623,
+              "p99": 0.002665779802425001,
+              "max": 0.0026657798068153095
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.00044326233681532556,
+              "median": 0.0004968134504669455,
+              "p99": 0.0004999861509379875,
+              "max": 0.0004999885607101607
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 8.225675154679477e-05,
+              "median": 0.001325180746894733,
+              "p99": 0.0030174267129417665,
+              "max": 0.003157937193052912
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.17658346705598654,
+              "median": 2.6546901608454565,
+              "p99": 6.1143678925078415,
+              "max": 6.355711692613097
+            }
+          },
+          "horizontal_wake_interface": {
+            "edges": 780,
+            "tangential_edge_m": {
+              "min": 0.00020016265706283455,
+              "median": 0.017772247107664743,
+              "p99": 0.03333515102754539,
+              "max": 0.033335541041281884
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.0004981355045341715,
+              "median": 0.000499582280447883,
+              "p99": 0.0015842999008348327,
+              "max": 0.0016097833901033837
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.00012505518922562245,
+              "median": 0.01566443808721605,
+              "p99": 0.037197847312512584,
+              "max": 0.04065557549202799
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.2503194752387908,
+              "median": 20.39622993223943,
+              "p99": 59.571813401648775,
+              "max": 71.06530511954793
+            }
+          },
+          "vertical_end_interface": {
+            "edges": 372,
+            "tangential_edge_m": {
+              "min": 0.001612903225806317,
+              "median": 0.0016129032258064557,
+              "p99": 0.001612903225806539,
+              "max": 0.001612903225806539
+            },
+            "near_quad_normal_height_m": {
+              "min": 0.03317597876184841,
+              "median": 0.03317597876184841,
+              "p99": 0.03317597876184841,
+              "max": 0.03317597876184841
+            },
+            "outside_triangle_normal_height_m": {
+              "min": 0.0010693843506057732,
+              "median": 0.0014517036219334756,
+              "p99": 0.0019328932596254947,
+              "max": 0.0037027099374533634
+            },
+            "outside_over_inside_height_ratio": {
+              "min": 0.03223369409180898,
+              "median": 0.043757672753362745,
+              "p99": 0.05826183075111792,
+              "max": 0.11160815974814259
+            }
+          }
+        },
+        "largest_symmetric_transition_ratio": [
+          {
+            "interface_edge_id": 1898,
+            "edge_midpoint_m": [
+              2.9738392175799286,
+              0.15273280956537028
+            ],
+            "quad_height_m": 0.0005351875475213049,
+            "triangle_height_m": 0.038033266360784086,
+            "outside_over_inside": 71.06530511954793
+          },
+          {
+            "interface_edge_id": 168,
+            "edge_midpoint_m": [
+              2.410075553390426,
+              -0.008215660199270669
+            ],
+            "quad_height_m": 0.0005084623429949976,
+            "triangle_height_m": 0.03396235272887926,
+            "outside_over_inside": 66.79423402101065
+          },
+          {
+            "interface_edge_id": 155,
+            "edge_midpoint_m": [
+              2.8411353025325337,
+              0.0034638540068491347
+            ],
+            "quad_height_m": 0.0005275675807616846,
+            "triangle_height_m": 0.03413276463780754,
+            "outside_over_inside": 64.6983739761412
+          },
+          {
+            "interface_edge_id": 148,
+            "edge_midpoint_m": [
+              3.0733671538654743,
+              0.008620087343927059
+            ],
+            "quad_height_m": 0.000543140420245129,
+            "triangle_height_m": 0.03364042894883612,
+            "outside_over_inside": 61.93689089398575
+          },
+          {
+            "interface_edge_id": 1909,
+            "edge_midpoint_m": [
+              3.338774983960264,
+              0.17521828180831572
+            ],
+            "quad_height_m": 0.0005648618386291133,
+            "triangle_height_m": 0.03456076539173218,
+            "outside_over_inside": 61.184457912060665
+          },
+          {
+            "interface_edge_id": 1889,
+            "edge_midpoint_m": [
+              2.6752554087232907,
+              0.1358746235525592
+            ],
+            "quad_height_m": 0.0005182104783671206,
+            "triangle_height_m": 0.031670424008004065,
+            "outside_over_inside": 61.114981904259174
+          },
+          {
+            "interface_edge_id": 1931,
+            "edge_midpoint_m": [
+              4.068646516720935,
+              0.22671790660936114
+            ],
+            "quad_height_m": 0.0006564964021187531,
+            "triangle_height_m": 0.03984860866980512,
+            "outside_over_inside": 60.69889879243685
+          },
+          {
+            "interface_edge_id": 1899,
+            "edge_midpoint_m": [
+              3.0070151963417775,
+              0.15468961365175027
+            ],
+            "quad_height_m": 0.0005374660930479368,
+            "triangle_height_m": 0.032584032406137615,
+            "outside_over_inside": 60.62528004577106
+          }
+        ]
+      },
+      "exact_distance_check": {
+        "random_seed": 17391,
+        "random_samples": 1200,
+        "reference": "Brute-force distance/projection to EVERY real interface segment, independent of cKDTree candidate selection",
+        "max_distance_error_m": 0.0,
+        "max_interpolated_h_error_m": 0.0,
+        "incorrect_d_less_than_1_skips": 0,
+        "queried_d_ge_1_size_exactly_old_count": 10,
+        "broad_phase_completeness": "midpoint lower bound and candidate radius use maximum actual segment half-length, with2e-12m roundoff padding",
+        "interface_segments": 2422,
+        "segment_length_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0018328471795996198,
+          "max": 0.033335541041281884
+        },
+        "node_h_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0018151611535360476,
+          "max": 0.033335529826287284
+        }
+      },
+      "near_block_preserved": true,
+      "geometric_checks_passed": true,
+      "artifact_roundtrip": {
+        "VTU": {
+          "nodes": 403748,
+          "fluid_cells": 424826,
+          "coordinates_bitwise_equal": true,
+          "area_array_bitwise_equal": true
+        },
+        "MSH4_binary": {
+          "nodes": 403748,
+          "fluid_cells": 424826,
+          "coordinates_bitwise_equal": true,
+          "boundary_names": [
+            "AIRFOIL",
+            "FARFIELD"
+          ]
+        },
+        "scope": "Geometry and mesh-quality fields only, no flow solution."
+      },
+      "geometry": {
+        "source65_interpolation_max_m": 2.220446049250313e-16,
+        "actual_wall_vertex_deviation_to_r2_spline_max_m": 0.0,
+        "linear_panel_same_parameter_sample_deviation_max_m": 3.781496327285647e-07,
+        "panel_sample_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "geometry_payload_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+        "source_sha256": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736"
+      },
+      "all_cell_angle_min_deg": 4.951312195310201,
+      "farfield_boundary_coordinate_set_bitwise_equal_tailr2": true
+    }
+  ]
+}

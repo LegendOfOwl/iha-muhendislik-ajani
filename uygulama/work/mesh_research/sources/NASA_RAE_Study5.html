@@ -1,0 +1,393 @@
+<HTML>
+
+<HEAD>
+<TITLE> RAE 2822 Transonic Airfoil: Study #5 </TITLE>
+<style type="text/css">
+<!--
+.style1 {color: #800000;
+         text-decoration: underline; }
+.style2 {font-weight: bold;}
+.style3 {color: #800000;}
+.style4 {font-face:Courier New;
+         font-size: smaller;}
+.style5 {color: #008B8B;}
+-->
+</style>
+
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" 
+  VLINK="#551A8B" ALINK="#FF0000">
+
+<!---------------------------------------------------------------------->
+<!...Heading Information...>
+
+<B>NPARC Alliance Validation Archive</B><BR>
+<B><A HREF="../../homepage.html">
+ Validation Home</A></B> &nbsp; <B> &gt; </B> &nbsp; 
+<B><A HREF="../../archive.html">
+ Archive</A></B> &nbsp; <B> &gt; </B> &nbsp; 
+<B><A HREF="../raetaf.html">
+  RAE 2822 Transonic Airfoil</A></B> &nbsp; <B> &gt; </B> &nbsp; 
+<B> Study #5 </B>
+
+<HR>
+
+<!---------------------------------------------------------------------->
+<!...Title...>
+
+
+<H2 align="center" class="style3">RAE 2822 Transonic Airfoil: Study #5 </H2>
+
+<!---------------------------------------------------------------------->
+<!...Image...>
+
+<P align="center">
+<IMG SRC="sst/mutwleg.jpeg" WIDTH = 50% alt="Figure 1 is described in the surrounding text"><BR>
+    <B>Figure 1. The turbulent viscosity contours for the RAE 2822 transonic airfoil for a simulation computed using the SST turbulence model.</B>  
+</P>
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Introduction</H3>
+
+<P> This validation study examines the accuracy of Wind-US for computing
+two-dimensional, turbulent, transonic flows about an airfoil.  Nine 
+different turbulence models are used.  The pressure coefficients 
+obtained from the Wind-US solutions are compared with the experimental
+values obtained by RAE as reported in Ref. 1.</P>
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Grid</H3>
+
+<P> The grid is a single-block, two-dimensional C-grid with dimensions
+of 369 x 65. It is contained in the file <A HREF='run.cgd'>run.cgd</A>
+and is in the Wind-US common grid file format (.cgd).
+The airfoil surface and wake are located at the J1 boundary.
+The I-coordinate starts at the lower downstream boundary, intersects
+the sharp trailing edge at I33, proceeds along the bottom of the
+airfoil, around the leading edge, downstream along the top of the
+airfoil, intersects the trailing edge again at I337, and continues to
+the outflow boundary.  The JMAX grid line is the farfield boundary of
+the flow domain. The grid is non-dimensionalized by the chord length.
+Since WIND requires dimensional quantities and assumes English
+Engineering units, the airfoil grid is assumed to have a chord of 1.0
+ft.  The grid normal to the airfoil surface is clustered about the
+airfoil surface to resolve the boundary layer on the airfoil. The first
+grid point off the wall is at a distance of 1.0E-05 ft from the airfoil
+surface.</P>
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Boundary Conditions</H3>
+
+<P> The boundary conditions must now be specified for the grid and this
+is done with the GMAN utility. First, the boundary condition types are
+summarized. A <B>VISCOUS WALL</B> boundary condition is applied at the
+J1 boundary at the airfoil surface, which extends from I33 to I337.
+The J1 boundary from I1 to I32 is coupled to the J1 boundary from I338
+to IMAX (I369) to form the wake region. A <B>FREESTREAM</B> boundary
+condition is applied at the JMAX boundary, which should all be subsonic
+inflow at the freestream conditions.  The I1 and IMAX boundaries are
+specified as <B>OUTFLOW</B> boundaries which allows the static pressure 
+to be directly specified and is assumed to be equal to the freestream 
+pressure.</P>
+
+<P> The boundary conditions can be set either by running GMAN in an 
+interactive mode or by creating an input data file and running GMAN 
+in batch mode.   Here the input data file <A HREF="gman.com">gman.com</A> 
+was created and GMAN was executed as:</P>
+
+<BLOCKQUOTE>
+  <B>gman &lt;</B> <A HREF="gman.com">gman.com</A>
+</BLOCKQUOTE>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Computation Strategy</H3>
+
+<P> The computation is performed using the time-marching capabilities
+of WIND to march to a steady-state (time asymptotic) solution.  Local 
+time stepping is used at each iteration.  The time-marching is performed 
+until iterative convergence is achieved.  The convergence criteria was 
+the lift and drag integrated over the airfoil surface.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Input Parameters and Files</H3>
+
+<P> The input data file is read by WIND at startup to provide WIND with
+information on performing the simulation.  Ten different input data
+files are available that differ by choice
+of turbulence models. The input data <i>.dat</I> file
+names and the corresponding turbulence models used
+for each case are listed in Table 1, along
+with some notes on variations on some of
+the input parameters used.  The resulting output <I>.lis</I> files and the solution <I>.cfl</I> files are also given.</P>
+
+<TABLE BORDER CELLPADDING=7 align="center">
+<CAPTION><B>Table 1. Summary of cases.</B></CAPTION>
+
+<TR>
+<TH scope="col">Input File Name</TH>
+<TH>Output File Name</TH>
+<TH>Solution File</TH>
+<TH>Turbulence Model Used</TH>
+<TH>Initial Conditions</TH>
+<TH>Input Notes</TH>
+</TR>
+
+<TR>
+<TD scope="row"> <A HREF = "laminar/rae.lam.dat">rae.lam.dat</A> </TD>
+<TD> <A HREF = "laminar/rae.lam.lis">rae.lam.lis</A> </TD>
+<TD> <A HREF = "laminar/rae.lam.cfl">rae.lam.cfl</A> </TD>
+<TD> laminar </TD>
+<TD> freestream </TD>
+<TD>  </TD>
+</TR>
+
+<TR>
+<TD scope="row"> <A HREF = "blomax/rae.blomax.dat">rae.blomax.dat</A> </TD>
+<TD> <A HREF = "blomax/rae.blomax.lis">rae.blomax.lis</A> </TD>
+<TD> <A HREF = "blomax/rae.blomax.cfl">rae.blomax.cfl</A> </TD>
+<TD> Baldwin Lomax </TD>
+<TD> freestream </TD>
+<TD>  </TD>
+</TR>
+<TR>
+<TD scope="row"> <A HREF = "pdt/rae.pdt.dat">rae.pdt.dat</A> </TD>
+<TD> <A HREF = "pdt/rae.pdt.lis">rae.pdt.lis</A> </TD>
+<TD> <A HREF = "pdt/rae.pdt.cfl">rae.pdt.cfl</A> </TD>
+<TD> P. D. Thomas </TD>
+<TD> freestream </TD>
+<TD>  </TD>
+</TR>
+<TR>
+<TD scope="row"> <A HREF = "bbarth/rae.bbarth.dat">rae.bbarth.dat</A> </TD>
+<TD> <A HREF = "bbarth/rae.bbarth.lis">rae.bbarth.lis</A> </TD>
+<TD> <A HREF = "bbarth/rae.bbarth.cfl">rae.bbarth.cfl</A> </TD>
+<TD> Baldwin Barth </TD>
+<TD> freestream </TD>
+<TD>  </TD>
+</TR>
+<TR>
+<TD scope="row"> <A HREF = "spalart/rae.spalart.dat">rae.spalart.dat</A> </TD>
+<TD> <A HREF = "spalart/rae.spalart.lis">rae.spalart.lis</A> </TD>
+<TD> <A HREF = "spalart/rae.spalart.cfl">rae.spalart.cfl</A> </TD>
+<TD> Spalart Allmaras </TD>
+<TD> freestream </TD>
+<TD>  </TD>
+</TR>
+<TR>
+<TD scope="row"> <A HREF = "sst/rae.sst.dat">rae.sst.dat</A> </TD>
+<TD> <A HREF = "sst/rae.sst.lis">rae.sst.lis</A> </TD>
+<TD> <A HREF = "sst/rae.sst.cfl">rae.sst.cfl</A> </TD>
+<TD> Mentor SST </TD>
+<TD> freestream </TD>
+<TD>  </TD>
+</TR>
+<TR>
+<TD scope="row"> <A HREF = "sst_comp/rae.sst_comp.dat">rae.sst_comp.dat</A> </TD>
+<TD> <A HREF = "sst_comp/rae.sst_comp.lis">rae.sst_comp.lis</A> </TD>
+<TD> <A HREF = "sst_comp/rae.sst_comp.cfl">rae.sst_comp.cfl</A> </TD>
+<TD> Compressible SST </TD>
+<TD> freestream </TD>
+<TD>  </TD>
+</TR>
+<TR>
+<TD scope="row"> <A HREF = "ke/rae.ke.dat">rae.ke.dat</A> </TD>
+<TD> <A HREF = "ke/rae.ke.lis">rae.ke.lis</A> </TD>
+<TD> <A HREF = "ke/rae.ke.cfl">rae.ke.cfl</A> </TD>
+<TD> Chien k-epsilon </TD>
+<TD> SST solution </TD>
+<TD>  CFL = 1.0</TD>
+</TR>
+<TR>
+<TD scope="row"> <A HREF = "rumsey/rae.rumsey.dat">rae.rumsey.dat</A> </TD>
+<TD> <A HREF = "rumsey/rae.rumsey.lis">rae.rumsey.lis</A> </TD>
+<TD> <A HREF = "rumsey/rae.rumsey.cfl">rae.rumsey.cfl</A> </TD>
+<TD> Rumsey-Gatski EASM </TD>
+<TD> Chien k-epsilon solution </TD>
+<TD>  CFL = 1.0</TD>
+</TR>
+<TR>
+<TD scope="row"> <A HREF = "cebeci/rae.cebeci.dat">rae.cebeci.dat</A> </TD>
+<TD> <A HREF = "cebeci/rae.cebeci.lis">rae.cebeci.lis</A> </TD>
+<TD> <A HREF = "cebeci/rae.cebeci.cfl">rae.cebeci.cfl</A> </TD>
+<TD> Cebeci Smith </TD>
+<TD> Baldwin-Lomax solution </TD>
+<TD>  CFL = 1.0</TD>
+</TR>
+</TABLE>
+
+<p> In the above input <I>.dat</I> files, the
+<B>freestream</B> keyword indicates that the static freestream flow
+conditions are specified as Mach number, pressure (psia), temperature
+(R), angle-of-attack (degrees), and angle-of-sideslip (degrees) as
+listed in Table 2, below.  The <B>downstream pressure</B> keyword indicates
+that the freestream static pressure is to be used at the OUTFLOW
+boundaries.  The <B>turbulence model</B> keyword indicates which
+urbulence model is to be used.  The <B>implicit boundary</B> keyword
+indicates that implicit boundary conditions are applied on the viscous
+walls.  The <B>dq limiter</B> keyword indicates that changes in the
+solution over an iteration are limited in order to avoid instabilities
+due to large transients.  The <B>loads</B> keyword indicates that the
+lift on the airfoil is to be integrated every 10 iterations and
+displayed in the list file.  This will be used to evaluate the
+convergence of the solution. The <B>converge order</B> keyword
+indicates that the computation will stop if the L2 norm of the solution
+drops by 9 orders-of-magnitude.  The <B>cycles</B> keyword indicates
+that 500 cycles will be run.  The <B>iterations per cycle</B> keyword
+indicates that 10 iterations will be run per cycle and residual
+information will be written to the output list file every 5
+iterations.  The <B>cfl</B> keyword indicates that a CFL number of 5.0
+will be used, unless noted in Table 1.  By
+default, WIND uses local CFL number to determine the
+time-step size.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Initial Conditions</H3>
+
+<P> This study assumes freestream flow conditions as summarized in
+Table 1 below.  These conditions correspond to a Reynolds number of 6.5
+million based on the chord length of 1.0 ft.  The static pressure was
+computed based on the specified Reynolds number and Mach number and an
+assumed value of static temperature.</P>
+
+<TABLE BORDER CELLPADDING=7 align="center">
+<CAPTION><B>Table 2. Freestream conditions.</B></CAPTION>
+
+<TR>
+<TH scope="col">Mach number</TH>
+<TH>Static Pressure (psia)</TH>
+<TH>Temperature(R)</TH>
+<TH>Angle-of-Attack (deg)</TH>
+</TR>
+
+<TR>
+<TD scope="row"> 0.729 </TD>
+<TD> 15.80734 </TD>
+<TD> 460.0 </TD>
+<TD> 2.31 </TD>
+</TR>
+</TABLE>
+
+<P> The computational flow field is initialized with uniform flow
+corresponding to these freestream conditions.</P>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Computation</H3>
+
+<P> The WIND solver is run by invoking the <B>wind</B> script.  Further
+details and options for the <B>wind</B> script can be found in the WIND
+documentation 
+(<A HREF="http://www.lerc.nasa.gov/WWW/winddocs/user/scripts.html">wind
+script</A>).</P>
+
+<P> As WIND runs, an output list file is created which contains the
+output from the computation and lists the residual information for both
+the flow equations and the turbulence model equations for each
+iteration.  The integrated lift is also output every 10 iterations.</P>
+
+<P> The output list files for runs with each turbulence model are 
+named rae.<I>name</I>.lis, where name
+corresponds to the turbulence model used, as given in Table 1.</P>
+
+<P> The flow field solution at the final iteration is output to the
+flow data file.  The flow data files for runs with each turbulence model are
+named rae.<I>name</I>.cfl, as given in Table 1.</P>
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Comparisons of the Results</H3>
+
+<P> Figure 2 shows the comparisons of the pressure coeffiecients on the airfoil for each case compared with experimental results.  The pressure coefficient is negative for pressures less than freestream, which occurs on the top of the airfoil. In plots of pressure coefficients for airfoils, the negative of the pressure coefficient is usually plotted to indicate that the lower pressure region is on the top of the airfoil and the high pressure region is on the bottom of the airfoil.  More details about post proccessing these solutions can be found in <A HREF="http://www.grc.nasa.gov/WWW/wind/valid/raetaf/raetaf01/raetaf01.html">Study 1</A>.
+Pressure coefficient data from a wind tunnel experiment is available for comparison and is in the GENPLOT file <A HREF= "cp.exp.gen">cp.exp.gen</A>.</P>
+
+<P align="center"><IMG SRC="cp.nolam.jpg" WIDTH = 60% alt="Figure 2 is described in the surrounding text"><br>
+<B>Figure 2. Plot of the pressure coefficients on the airfoil. 
+</B></P>
+
+<P> The Mach number contours for runs using the  Baldwin Lomax, Spalart-Allmaras, SST and Chien k-epsilon turbulence models are shown in Figure 3, below.  Again, more details about post processing the solutions can be found in <A HREF="http://www.grc.nasa.gov/WWW/wind/valid/raetaf/raetaf01/raetaf01.html">Study 1</A>.</P>
+
+<P align="center"><IMG SRC="Mach.jpg" WIDTH =80% HEIGHT = 80%  alt="Figure 3 is described in the surrounding text"><br>
+<B>Figure 3. The Mach number contours near the RAE 2822 
+transonic airfoil.</B></P>
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">Download tar File</H3>
+
+<P> Most of the smaller files of this validation case (this does not include the grid, output list, and solution files) are available in the compressed tar file
+<A HREF="raetaf05.tar.gz"> raetaf05.tar.gz</A>. The files can then be accessed by the commands:</P>
+
+<BLOCKQUOTE> 
+<B>gunzip <A HREF="raetaf05.tar.gz"> raetaf05.tar.gz</A></B><BR>
+<B>tar -xvof raetaf05.tar</B><BR>
+</BLOCKQUOTE>
+
+
+<!---------------------------------------------------------------------->
+<H3 class="style1">References</H3>
+
+<P> 1. Cook, P.H., M.A. McDonald, M.C.P. Firmin, &quot;Aerofoil RAE 2822 - Pressure Distributions, and Boundary Layer and Wake Measurements,&quot; <I>Experimental Data Base for Computer Program Assessment</I>, AGARD Report AR 138, 1979.</P>
+
+
+<!---------------------------------------------------------------------->
+<h3 class="style1">Contact Information</h3>
+
+<P> This study was created on February 21, 2008 
+by <A HREF="ccnelson@itacllc.com" >
+Chris Nelson</A>, who may be contacted at:</P>
+
+<BLOCKQUOTE>
+   Voice Mail: 314-373-3311 <BR>
+   e-mail: <A HREF="mailto:ccnelson@itacllc.com" > 
+   ccnelson@itacllc.com</A>
+</BLOCKQUOTE>
+
+<P>and <A HREF="Julianne.C.Dudek@nasa.gov"> Julianne Dudek</A>, who may be contacted at:</P>
+
+<BLOCKQUOTE>
+   NASA John H. Glenn Research Center, MS 5-12 <BR>
+   21000 Brookpark Road <BR>
+   Brook Park, Ohio 44135 <BR>
+   Phone: (216) 433-2188 <BR>
+   e-mail: <A HREF="Julianne.C.Dudek@nasa.gov"> Julianne.C.Dudek@nasa.gov</A> <BR>
+</BLOCKQUOTE>
+
+<!---------------------------------------------------------------------->
+<hr>
+<span style="font-weight: bold;">Last Updated:</span> Wednesday, 10-Feb-2021 09:38:58 EST
+
+
+
+
+<div id="footer">
+
+<!-- <img src="images/nasa_logo.gif" class="right"
+      width= "50" height="40" alt="NASA meatball" />
+-->
+
+<div>
+  <span style="font-weight: bold;">Responsible NASA Official/Curator:</span> 
+      <a href="mailto:john.w.slater@nasa.gov">John W. Slater</a>
+</div>
+
+<span><span style="font-weight: bold;">Web Policies: </span>
+      <a href="http://www.grc.nasa.gov/Doc/grcwebpolicies.html">Web Privacy Policy and Important Notices</a></span><br />
+		<span style="font-weight: bold;">Adobe Reader Download: </span>  
+        <a href="http://www.adobe.com/products/acrobat/readstep2.html" title="Go to Adobe Web Site">
+        Adobe Reader</a>
+<!-- <span class="notprinted"><span style="font-weight: bold;">Adobe Reader Download: </span>  
+        <a href="http://www.adobe.com/products/acrobat/readstep2.html" title="Go to Adobe Web Site">
+        Adobe Reader</a>
+</span> -->
+
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script language="javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GRC"></script>
+
+
+</div>
+
+</BODY>
+</HTML>

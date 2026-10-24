@@ -1,0 +1,29 @@
+{
+  "base_config": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium\\case.cfg",
+  "base_sha256": "04a9b6ddd636bc805b1bddbff9a34ccbdcc7a122839653adfa5c0d9122814d0e",
+  "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+  "config_sha256": "cd850d46f9987e9728d455e96382b4e1ab895b87676488a3027930fff637110e",
+  "overrides": {
+    "CFL_NUMBER": {
+      "base": "6.0",
+      "new": "1.0"
+    },
+    "CFL_ADAPT": {
+      "base": "YES",
+      "new": "NO"
+    },
+    "ITER": {
+      "base": "8000",
+      "new": "10000"
+    },
+    "MGLEVEL": {
+      "base": "3",
+      "new": "0"
+    }
+  },
+  "physical_fields_unchanged": true,
+  "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "seed_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\restart_flow_001000.dat",
+  "seed_sha256": "7da05f95cbd76711f3b87b6141d408d0982c3220f542320df841e5f1a7c918e5",
+  "rationale": "Same v2 RANS/SA numerical method on a research-motivated source-preserving explicit C-block. Target forces and Cp not provided to native solver; main agent knows earlier evaluation so this is not a new independent blind trial."
+}

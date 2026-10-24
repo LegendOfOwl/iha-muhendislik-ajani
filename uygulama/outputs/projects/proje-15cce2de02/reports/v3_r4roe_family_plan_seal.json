@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-10-19T19:39:45.103202+00:00",
+  "roles": {
+    "coarse": "v3_r4roe_coarse_warmstart",
+    "medium": "v3_r4roe_medium_warmstart",
+    "fine": "v3_r4roe_fine_warmstart"
+  },
+  "fine_validation_preselected": true,
+  "trial_type": "Separate numerical-method family; not a substitute for earlier JST fine role",
+  "source": {
+    "url": "https://su2code.github.io/documents/SU2_AIAA_SciTech2014.pdf",
+    "pages": "23-24/33",
+    "sha256": "ebbad5ea96e79f3f4e557bc68720804867f989eafe447cad74538362b14b7b3f"
+  },
+  "rationale_record": "work/mesh_research/research_addendum_02.md",
+  "rationale_sha256": "bf26a9fdf50a920819427bc199e51c505f10e4e038a0a53e3d78949ca5cf3653",
+  "coarse_mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+  "coarse_seed_sha256": "12187e66e81eefae21e817fa3ac7e47c01386c13191c23249dd16b1c56f18f3e",
+  "reference_case": "v3_cgrid_interfacer4_coarse_warmstart",
+  "config_difference": {
+    "CONV_NUM_METHOD_FLOW": {
+      "reference": "JST_MAT",
+      "new": "ROE"
+    },
+    "SLOPE_LIMITER_FLOW": {
+      "reference": null,
+      "new": "VENKATAKRISHNAN"
+    },
+    "MUSCL_FLOW": {
+      "reference": null,
+      "new": "YES"
+    }
+  },
+  "changed_policy": "Roe + second-order mean-flow MUSCL + Venkatakrishnan limiter; turbulence order unchanged",
+  "physical_conditions_unchanged": true,
+  "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "minimum_qualification_passed": false
+}

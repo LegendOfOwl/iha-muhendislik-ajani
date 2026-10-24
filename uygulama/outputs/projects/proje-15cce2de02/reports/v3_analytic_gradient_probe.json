@@ -1,0 +1,203 @@
+[
+  {
+    "case": "v3_reference_sourcegrid",
+    "scope": "Analytic-field edge-stencil calculation in NumPy using documented native WLS weights. No SU2 gradients were exported or compared; not an experimental/solver verification.",
+    "reference": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/include/gradients/computeGradientsLeastSquares.hpp",
+    "fields": {
+      "linear": {
+        "near_body": {
+          "points": 12478,
+          "relative_L2": 3.5463995679401087e-13,
+          "maximum_error_over_region_max_exact_gradient": 4.9691699294764404e-12,
+          "p99_error_over_region_max_exact_gradient": 1.6990338234478997e-12
+        },
+        "nose": {
+          "points": 1570,
+          "relative_L2": 3.380945065158538e-14,
+          "maximum_error_over_region_max_exact_gradient": 6.212066159846434e-13,
+          "p99_error_over_region_max_exact_gradient": 1.550252734568908e-13
+        },
+        "aft": {
+          "points": 5145,
+          "relative_L2": 4.346753180720372e-13,
+          "maximum_error_over_region_max_exact_gradient": 4.9691699294764404e-12,
+          "p99_error_over_region_max_exact_gradient": 1.9687106865978262e-12
+        }
+      },
+      "tangential_sine": {
+        "near_body": {
+          "points": 12478,
+          "relative_L2": 0.001268428785777722,
+          "maximum_error_over_region_max_exact_gradient": 0.01077932953810978,
+          "p99_error_over_region_max_exact_gradient": 0.0057086006862603214
+        },
+        "nose": {
+          "points": 1570,
+          "relative_L2": 0.00016413765620530065,
+          "maximum_error_over_region_max_exact_gradient": 0.0011123283127453187,
+          "p99_error_over_region_max_exact_gradient": 0.000606240864539774
+        },
+        "aft": {
+          "points": 5145,
+          "relative_L2": 0.00031658194980750746,
+          "maximum_error_over_region_max_exact_gradient": 0.0005281572227686464,
+          "p99_error_over_region_max_exact_gradient": 0.0004894066781326408
+        }
+      },
+      "radial_exponential": {
+        "near_body": {
+          "points": 12478,
+          "relative_L2": 0.007071486870625662,
+          "maximum_error_over_region_max_exact_gradient": 0.009758814761166471,
+          "p99_error_over_region_max_exact_gradient": 0.005701750203723482
+        },
+        "nose": {
+          "points": 1570,
+          "relative_L2": 0.007069799697281793,
+          "maximum_error_over_region_max_exact_gradient": 0.009758814761166471,
+          "p99_error_over_region_max_exact_gradient": 0.009308638548043193
+        },
+        "aft": {
+          "points": 5145,
+          "relative_L2": 3.227138101482883e-17,
+          "maximum_error_over_region_max_exact_gradient": 8.022696419457017e-18,
+          "p99_error_over_region_max_exact_gradient": 2.591774612344228e-18
+        }
+      }
+    }
+  },
+  {
+    "case": "v2_r2_medium",
+    "scope": "Analytic-field edge-stencil calculation in NumPy using documented native WLS weights. No SU2 gradients were exported or compared; not an experimental/solver verification.",
+    "reference": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/include/gradients/computeGradientsLeastSquares.hpp",
+    "fields": {
+      "linear": {
+        "near_body": {
+          "points": 40132,
+          "relative_L2": 5.592651663285609e-12,
+          "maximum_error_over_region_max_exact_gradient": 2.832544304254643e-10,
+          "p99_error_over_region_max_exact_gradient": 1.732513055005925e-11
+        },
+        "nose": {
+          "points": 6852,
+          "relative_L2": 2.9315082042243756e-13,
+          "maximum_error_over_region_max_exact_gradient": 7.757547163177952e-12,
+          "p99_error_over_region_max_exact_gradient": 1.2005584687563783e-12
+        },
+        "aft": {
+          "points": 13368,
+          "relative_L2": 8.856512416785739e-12,
+          "maximum_error_over_region_max_exact_gradient": 2.832544304254643e-10,
+          "p99_error_over_region_max_exact_gradient": 2.8384823271587224e-11
+        }
+      },
+      "tangential_sine": {
+        "near_body": {
+          "points": 40132,
+          "relative_L2": 0.0005623268875183088,
+          "maximum_error_over_region_max_exact_gradient": 0.013998435715087265,
+          "p99_error_over_region_max_exact_gradient": 0.002131361769397103
+        },
+        "nose": {
+          "points": 6852,
+          "relative_L2": 9.7630746188575e-05,
+          "maximum_error_over_region_max_exact_gradient": 0.0013820415068844013,
+          "p99_error_over_region_max_exact_gradient": 0.0005039096303854446
+        },
+        "aft": {
+          "points": 13368,
+          "relative_L2": 0.0005447080245899568,
+          "maximum_error_over_region_max_exact_gradient": 0.013668761991247362,
+          "p99_error_over_region_max_exact_gradient": 0.002084113015276771
+        }
+      },
+      "radial_exponential": {
+        "near_body": {
+          "points": 40132,
+          "relative_L2": 0.0021400846868485563,
+          "maximum_error_over_region_max_exact_gradient": 0.01346418267501862,
+          "p99_error_over_region_max_exact_gradient": 0.0016325542285813308
+        },
+        "nose": {
+          "points": 6852,
+          "relative_L2": 0.0021393181548498247,
+          "maximum_error_over_region_max_exact_gradient": 0.01346418267501862,
+          "p99_error_over_region_max_exact_gradient": 0.004873506558711736
+        },
+        "aft": {
+          "points": 13368,
+          "relative_L2": 1.419649316390688e-17,
+          "maximum_error_over_region_max_exact_gradient": 2.972394074292289e-18,
+          "p99_error_over_region_max_exact_gradient": 6.213862285225376e-19
+        }
+      }
+    }
+  },
+  {
+    "case": "v3_cgrid_medium",
+    "scope": "Analytic-field edge-stencil calculation in NumPy using documented native WLS weights. No SU2 gradients were exported or compared; not an experimental/solver verification.",
+    "reference": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/include/gradients/computeGradientsLeastSquares.hpp",
+    "fields": {
+      "linear": {
+        "near_body": {
+          "points": 126979,
+          "relative_L2": 2.735172798890688e-12,
+          "maximum_error_over_region_max_exact_gradient": 1.2735016857317674e-10,
+          "p99_error_over_region_max_exact_gradient": 1.2589478359602314e-11
+        },
+        "nose": {
+          "points": 22996,
+          "relative_L2": 2.1455256417878602e-13,
+          "maximum_error_over_region_max_exact_gradient": 7.757855398034749e-12,
+          "p99_error_over_region_max_exact_gradient": 7.46232469464265e-13
+        },
+        "aft": {
+          "points": 36692,
+          "relative_L2": 3.5480913682264947e-12,
+          "maximum_error_over_region_max_exact_gradient": 1.2735016857317674e-10,
+          "p99_error_over_region_max_exact_gradient": 1.620160876059796e-11
+        }
+      },
+      "tangential_sine": {
+        "near_body": {
+          "points": 126979,
+          "relative_L2": 0.0004062949638774716,
+          "maximum_error_over_region_max_exact_gradient": 0.011992836962939978,
+          "p99_error_over_region_max_exact_gradient": 0.0010634765029784974
+        },
+        "nose": {
+          "points": 22996,
+          "relative_L2": 2.794212364066973e-05,
+          "maximum_error_over_region_max_exact_gradient": 0.0009228153699771673,
+          "p99_error_over_region_max_exact_gradient": 5.2503232692714776e-05
+        },
+        "aft": {
+          "points": 36692,
+          "relative_L2": 0.00043518169863304967,
+          "maximum_error_over_region_max_exact_gradient": 0.010796583605715112,
+          "p99_error_over_region_max_exact_gradient": 0.0012190726836359856
+        }
+      },
+      "radial_exponential": {
+        "near_body": {
+          "points": 126979,
+          "relative_L2": 0.000732635213276993,
+          "maximum_error_over_region_max_exact_gradient": 0.0010079599681993964,
+          "p99_error_over_region_max_exact_gradient": 0.0006474142041566589
+        },
+        "nose": {
+          "points": 22996,
+          "relative_L2": 0.0007322993590918561,
+          "maximum_error_over_region_max_exact_gradient": 0.0010079599681993964,
+          "p99_error_over_region_max_exact_gradient": 0.0008654129048117458
+        },
+        "aft": {
+          "points": 36692,
+          "relative_L2": 2.1215108766825773e-17,
+          "maximum_error_over_region_max_exact_gradient": 4.19174318992368e-18,
+          "p99_error_over_region_max_exact_gradient": 6.111058423608552e-19
+        }
+      }
+    }
+  }
+]

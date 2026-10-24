@@ -1,0 +1,9 @@
+{
+  "paired_control": "v3_cgrid_coarse_cfl1",
+  "same_initial_checkpoint": "v3_cgrid_coarse/restart_flow_001000.dat",
+  "single_difference_from_paired_control": "ENTROPY_FIX_COEFF0.05 to0.2, within official recommended0.05..0.2 range. MGLEVEL3 retained.",
+  "hypothesis": "Own max density residual is along upper predicted transonic compression in structured block, not the downstream slender outer triangle. Matrix dissipation eigenvalue floor may be insufficient on this topology. Not a proven cause.",
+  "source": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+  "no_experimental_selection": true,
+  "minimum_acceptance": false
+}

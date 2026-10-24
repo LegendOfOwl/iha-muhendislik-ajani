@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-19T19:09:43.616001+00:00",
+  "scope": "Read own v3 mesh/config/selected checkpoint data; immutable generator and original source geometry. No solver launched and no frozen case modified.",
+  "initial_delegation_and_parent_messages_read": true,
+  "files_read_for_this_diagnosis": [
+    "work\\mesh_research\\cgrid\\build_cgrid.py",
+    "work\\mesh_research\\cgrid\\diagnose_shock.py",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\build_metadata.json",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\independent_cgrid_audit.json",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\own_residual_hotspots.json",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\checkpoint_selection.json",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\mesh.su2",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\near_arrays.npz",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\mesh_arrays.npz",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\near_design.json"
+  ],
+  "per_case_read_patterns": [
+    "v3_cgrid_coarse*/case.cfg",
+    "v3_cgrid_coarse*/history.csv (header or last rows only; no expected results)",
+    "v3_cgrid_coarse*/checkpoint_selection.json",
+    "selected flow_*.vtu listed in numerical report"
+  ],
+  "own_geometry_records_read_before_diagnosis": [
+    "work/blind_validation/solver_v2/geometry_revision.py",
+    "work/blind_validation/solver_v2/mesh.py",
+    "work/blind_validation/solver_v2/audit_mesh_family.py",
+    "work/blind_validation/solver_v2/quality_and_views.py",
+    "work/blind_validation/solver_v2/gradient_regions.json",
+    "outputs/projects/proje-15cce2de02/simulations/v2_r2_medium/mesh_audit.json",
+    "work/blind_validation/analysis_input/conditions.json",
+    "work/setup/freecad_install.json",
+    ".agents/skills/iha-muhendislik/SKILL.md"
+  ],
+  "forbidden_updated_PROJECT_STATE_AGENTS_reviewer_reference_reports_read": false,
+  "accidental_reference_exposure_this_diagnosis": null,
+  "network_scope": "Only SU2 official documentation/source, Gmsh official docs/tutorial mirror, Diskin\u2013Thomas method PDF. No case target outcome search. Some guessed source paths returned404/cachemiss; GitHub source directory names used only to locate actual centered implementation. Python network request to GitHub tree failed socket permission; no data obtained."
+}

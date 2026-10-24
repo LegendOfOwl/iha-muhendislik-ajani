@@ -1,0 +1,7 @@
+{
+  "paired_control": "v3_cgrid_coarse_cfl1",
+  "single_difference_from_paired_control": "JST_MAT to scalar JST; same initial1000 restart, CFL1, MG3, gradients, linear settings, SA and physical conditions",
+  "source": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+  "rationale": "Separate matrix-dissipation/structured-shock interaction from geometric layer validity. Official scalarJST is a robustness control, not an accuracy guarantee; its documented low-Re drag overprediction remains a limitation.",
+  "minimum_acceptance": false
+}

@@ -1,0 +1,56 @@
+{
+  "source_minimum_wedge_jacobian": -4.655253185118302e-05,
+  "new_minimum_wedge_jacobian": -5.070135176396624e-05,
+  "source_nonpositive_wedges": 163625,
+  "new_nonpositive_wedges": 163625,
+  "exact_wedge_Jacobian_minimum_method": "Affine triangle domain vertices plus quadratic t endpoints/interior vertex",
+  "wall_nodes": 3290,
+  "prism_columns": 3290,
+  "column_lengths_in_nodes": [
+    26
+  ],
+  "tetrahedra_unchanged": 95344,
+  "prisms": 163625,
+  "first_normal_m_before": {
+    "min": 1.1323202783410998e-06,
+    "median": 1.7698247919002006e-06,
+    "p95": 1.777657307621749e-06,
+    "max": 1.9182245464735897e-06
+  },
+  "first_normal_m_after": {
+    "min": 5.616846197322111e-07,
+    "median": 8.951852235824442e-07,
+    "p95": 1.2699235230070515e-06,
+    "max": 1.9182245464735897e-06
+  },
+  "normal_growth_before": {
+    "min": 1.3341797063674006,
+    "median": 1.399998766796387,
+    "p95": 1.4007459755715364,
+    "max": 1.4238427867286405
+  },
+  "normal_growth_after": {
+    "min": 1.3149961129119883,
+    "median": 1.4160563069623464,
+    "p95": 1.57129128294285,
+    "max": 1.6404016756380837
+  },
+  "total_source_column_arclength_m": {
+    "min": 0.012788542876240025,
+    "median": 0.019858502823327386,
+    "p95": 0.019992199235590227,
+    "max": 0.021504360888155452
+  },
+  "factor": {
+    "min": 0.34141868352890015,
+    "median": 0.5068453550338745,
+    "p95": 0.7893550395965576,
+    "max": 1.0
+  },
+  "wall_source_coordinates_bitwise_unchanged": true,
+  "farfield_coordinates_bitwise_unchanged": true,
+  "cell_and_boundary_connectivity_unchanged": true,
+  "reference_yplus_max": 1.4644775390625,
+  "primal_geometry_check_passed": false,
+  "not_flow_acceptance": "A designed first-height change does not prove actualy+, layer resolution, convergence or experiment accuracy"
+}

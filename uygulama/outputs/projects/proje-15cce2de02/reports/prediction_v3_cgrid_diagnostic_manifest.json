@@ -1,0 +1,79 @@
+{
+  "wake_tail_spacing_audit": [
+    {
+      "case": "v3_cgrid_coarse",
+      "last_dx_m": 0.1038097220002756,
+      "penultimate_dx_m": 0.07500000000000018,
+      "nominal_cap_dx_m": 0.07500000000000001,
+      "last_to_cap_ratio": 1.3841296266703411,
+      "near_design_sha256": "d302b62070702b668bbcfa06a5f1dc2a4a70408dc20ae26a8719c24af3367342"
+    },
+    {
+      "case": "v3_cgrid_medium",
+      "last_dx_m": 0.0659069804487169,
+      "penultimate_dx_m": 0.04999999999999982,
+      "nominal_cap_dx_m": 0.05,
+      "last_to_cap_ratio": 1.318139608974338,
+      "near_design_sha256": "e0090c33485b06aeacd3b7c9f1d193b42a6bc2417efe8e3f07fd4475e7e2b853"
+    },
+    {
+      "case": "v3_cgrid_fine",
+      "last_dx_m": 0.04023109865726049,
+      "penultimate_dx_m": 0.033333333333333215,
+      "nominal_cap_dx_m": 0.03333333333333333,
+      "last_to_cap_ratio": 1.2069329597178147,
+      "near_design_sha256": "7ea07a597f24a82a84b2809ec5c06160baeb67325ec5a593e86f7b3cb06ac977"
+    }
+  ],
+  "suggested_next_revision_only": "Redistribute remaining L-x tail length over ceil(remaining/cap) equal intervals; do not replace the last already accepted x point. Not applied to frozen meshes.",
+  "controlled_next_test": {
+    "owner": "parent",
+    "only_arithmetic_change": "CENTRAL_JACOBIAN_FIX_FACTOR4->8",
+    "same_spatial_residual": true,
+    "seed": "v3_cgrid_coarse/restart_flow_001000.dat",
+    "CFL": 1,
+    "CFL_ADAPT": "NO",
+    "MGLEVEL": 3,
+    "ENTROPY_FIX_COEFF": 0.05
+  },
+  "sources": [
+    {
+      "url": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+      "accessed": "web tool, this turn"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/include/numerics_simd/flow/convection/centered.hpp",
+      "relevant_lines": [
+        215,
+        216,
+        291,
+        359
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/include/numerics_simd/CNumericsSIMD.cpp",
+      "relevant_lines": [
+        65,
+        79
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/include/numerics_simd/flow/convection/common.hpp",
+      "relevant_lines": [
+        468,
+        484
+      ]
+    }
+  ],
+  "files_sha256": {
+    "work\\mesh_research\\cgrid\\diagnose_shock.py": "738bc992647c0a33e92aae9b359a441ea84b01a21363870fec5715198c44c6f3",
+    "work\\mesh_research\\cgrid\\finalize_diagnosis.py": "d32e2314e641de6a1f93a666a3a99ae49dec63021474db316f3b2689da637e26",
+    "work\\mesh_research\\cgrid\\access_log_v3_diagnosis.json": "4e3f48e1dd2800b3dad75b0947a0ca4dd07e428ddc63baf78f9478f70275822c",
+    "outputs\\projects\\proje-15cce2de02\\reports\\prediction_v3_cgrid_shock_diagnosis_v2.json": "2f8f0eed7ae8b71b3dc3855889070e606ebe1ddd1f54c9d5a570382fc00d7802",
+    "outputs\\projects\\proje-15cce2de02\\reports\\prediction_v3_cgrid_diagnostic_note.md": "ed0eacdfffed2b9c9097fb79f8ca0700b75f8b5ca3f600f1ecb47067e2de8a81",
+    "outputs\\projects\\proje-15cce2de02\\plots\\prediction_v3_cgrid_shock_diagnosis_v2.png": "9ebc75b923697085a811621d059f20f722637e0d3d0487c7be6e0848ab9896a1",
+    "outputs\\projects\\proje-15cce2de02\\plots\\prediction_v3_cgrid_global_residual_diagnosis.png": "c06e91f8b38b012b31844268beaaeb36dfbc324be2547304e540e1c788b058ea",
+    "work\\mesh_research\\cgrid\\wake_tail_revision_proposal.py": "6fea350627229a45193632c2bcfb190b5ac15b7554c8eda4bba25bcda63eff2a",
+    "outputs\\projects\\proje-15cce2de02\\reports\\prediction_v3_cgrid_unapplied_tail_proposal.json": "448ef717e3af96c897c22b664831fdeec9720e13cb0f150f2611a4e47561d14a"
+  }
+}

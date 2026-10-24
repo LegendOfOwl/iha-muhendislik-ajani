@@ -1,0 +1,407 @@
+{
+  "updated_utc": "2026-10-24T12:45:10.188666+00:00",
+  "project_id": "proje-15cce2de02",
+  "report": "outputs\\projects\\proje-15cce2de02\\reports\\v3_research_diagnosis.html",
+  "minimum_qualification_passed": false,
+  "required_missing": [
+    "converged three-grid CFD family",
+    "regional normal sensitivity and full boundary-layer resolution",
+    "controlled farfield200c/400c solve",
+    "preselected fine experiment gate"
+  ],
+  "completed_native_cases": [
+    {
+      "case": "v3_cgrid_coarse",
+      "status": "başarısız / durduruldu",
+      "run": {
+        "name": "v3_cgrid_coarse",
+        "status": "exited",
+        "exit_code": 1,
+        "seconds": 595.0310000000172,
+        "start_epoch": 1792435056.8584847,
+        "threads": 4,
+        "config_sha256": "c9e1bdb1891a57bf5ccef7aaf7b62b5803f63d2d878a74947995c42853a1d0af",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.1184125324209314,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {}
+    },
+    {
+      "case": "v3_cgrid_coarse_cfl1",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_cgrid_coarse_cfl1",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 310.01600000000326,
+        "start_epoch": 1792435748.2267847,
+        "threads": 4,
+        "config_sha256": "51784e6321f76647917b7254196d0cbd79d5cf11b35812f528b602f6b995350c",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.1595636456074219,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "source_case": "v3_cgrid_coarse",
+        "restart_iteration": 1000,
+        "source_terminal": "native divergence after1100, exit1, not manually stopped",
+        "single_changed_numerical_policy": "Adaptive CFL1..6 becomes fixed CFL1; flux, gradients, multigrid, linear solver and physics unchanged",
+        "diagnostic_reason": "500-step density plateau about-5.5..-5.25 followed by residual>1e20; source SU2 docs adaptive policy and previous same-solver stability experience",
+        "mesh_audit_source": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\independent_cgrid_audit.json",
+        "no_experimental_selection": true
+      }
+    },
+    {
+      "case": "v3_cgrid_coarse_cfl1_mg0",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_cgrid_coarse_cfl1_mg0",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 132.53100000001723,
+        "start_epoch": 1792436059.9004838,
+        "threads": 4,
+        "config_sha256": "cd850d46f9987e9728d455e96382b4e1ab895b87676488a3027930fff637110e",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.15437227310047735,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "paired_control": "v3_cgrid_coarse_cfl1",
+        "same_initial_checkpoint": "v3_cgrid_coarse/restart_flow_001000.dat",
+        "single_difference_from_paired_control": "MGLEVEL3 to0; all other native config fields and mesh identical",
+        "hypothesis": "Anisotropic shock-aligned C-block and isotropic multigrid agglomeration may couple poorly; published SU2 developer guidance warns extreme stretched wake elements can impair multigrid. This is not proof for current version or this mesh.",
+        "source": "https://github.com/su2code/SU2/discussions/1522",
+        "pretest_observation": "CFL1 control remains around density-5.6..-5.4 through900steps with large force oscillation",
+        "minimum_acceptance": false
+      }
+    },
+    {
+      "case": "v3_cgrid_coarse_entropy0p2",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_cgrid_coarse_entropy0p2",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 359.06200000003446,
+        "start_epoch": 1792436193.7485752,
+        "threads": 4,
+        "config_sha256": "597799fe3bb1d59d1f9422dc603a183d1bd2f8865c51b656e1b96c2ccf231047",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.16930642011215036,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "paired_control": "v3_cgrid_coarse_cfl1",
+        "same_initial_checkpoint": "v3_cgrid_coarse/restart_flow_001000.dat",
+        "single_difference_from_paired_control": "ENTROPY_FIX_COEFF0.05 to0.2, within official recommended0.05..0.2 range. MGLEVEL3 retained.",
+        "hypothesis": "Own max density residual is along upper predicted transonic compression in structured block, not the downstream slender outer triangle. Matrix dissipation eigenvalue floor may be insufficient on this topology. Not a proven cause.",
+        "source": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+        "no_experimental_selection": true,
+        "minimum_acceptance": false
+      }
+    },
+    {
+      "case": "v3_cgrid_coarse_jac8",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_cgrid_coarse_jac8",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 299.530999999959,
+        "start_epoch": 1792436982.7028458,
+        "threads": 4,
+        "config_sha256": "0b8c9c151d13132da030fe44a6d2d9953951dacbb28898c58ab2f7a520cf1828",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.1564289995176902,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "paired_control": "v3_cgrid_coarse_cfl1",
+        "single_changed_numerical_policy": "CENTRAL_JACOBIAN_FIX_FACTOR4 to8; same mesh/start1000/fixedCFL1/MG3/entropy0.05/linear solver/SA physics",
+        "logging_only_changes": "HISTORY_OUTPUT additionallyMAX_RES,LINSOL,CFL_NUMBER; no arithmetic equation change",
+        "source": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+        "logging_source": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/src/output/CFlowCompOutput.cpp",
+        "rationale": "Independent analyst reconstructed median-dual closure and checked well-shaped shock cells; own field has across-row zigzag. Official docs recommend factor about8 for JST_MAT, so isolate implicit Jacobian conditioning without changing residual dissipation.",
+        "minimum_acceptance": false
+      }
+    },
+    {
+      "case": "v3_cgrid_coarse_scalarjst",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_cgrid_coarse_scalarjst",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 335.89100000000326,
+        "start_epoch": 1792437283.552952,
+        "threads": 4,
+        "config_sha256": "cde1a1463d6aab25a5b3b02f180568cc91dbf0efaab3aef0a666827a02d2f5d9",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.15946768632545627,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "paired_control": "v3_cgrid_coarse_cfl1",
+        "single_difference_from_paired_control": "JST_MAT to scalar JST; same initial1000 restart, CFL1, MG3, gradients, linear settings, SA and physical conditions",
+        "source": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+        "rationale": "Separate matrix-dissipation/structured-shock interaction from geometric layer validity. Official scalarJST is a robustness control, not an accuracy guarantee; its documented low-Re drag overprediction remains a limitation.",
+        "minimum_acceptance": false
+      }
+    },
+    {
+      "case": "v3_cgrid_coarse_warmstart",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_cgrid_coarse_warmstart",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 377.23500000004424,
+        "start_epoch": 1792437620.710283,
+        "threads": 4,
+        "config_sha256": "31b65e4835932bec989b083684133023f1d7f4cf0bb9e8bb640a84c35039db61",
+        "mesh_sha256": "f246c43cf14ac39a3d19a5218838ebd90dada30f2aaca0f230570d6a05fc1c53",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.05767412643443989,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "paired_control": "v3_cgrid_coarse_cfl1",
+        "only_changed_arithmetic_input": "Initial field from own converged same-source-curve v2 fine3400 rather than failed coarse1000. Same equations/mesh/physical conditions/CFL1/MG3/JST_MAT/entropy0.05/Jacobianfactor4.",
+        "logging_only": "Additional MAX_RES,LINSOL,CFL_NUMBER fields do not change equations",
+        "hypothesis": "The same unstable cold-start1000 field may persist across numerical branches; distinguish initialization robustness from a unique physical steady solution. Must reconverge native fields and original gates, no credit for an interpolated seed.",
+        "scope": "Own native interpolation; no expected experimental solution used",
+        "minimum_acceptance": false
+      }
+    },
+    {
+      "case": "v3_cgrid_interfacer4_coarse_warmstart",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_cgrid_interfacer4_coarse_warmstart",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 790.625,
+        "start_epoch": 1792438279.316894,
+        "threads": 4,
+        "config_sha256": "31b65e4835932bec989b083684133023f1d7f4cf0bb9e8bb640a84c35039db61",
+        "mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.057081905675041254,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "paired_initialization_control": "v3_cgrid_coarse_warmstart",
+        "numerics_and_physics_unchanged": true,
+        "mesh_source": "v3_cgrid_interfacer4_coarse",
+        "mesh_changes": "Tail cap patch plus compact interface-distance grading; all source/body/normal block data unchanged, external triangulation rebuilt. Not attributable to a single triangle.",
+        "fine_role_fixed_in": "v3_r4_family_plan_seal.json",
+        "minimum_acceptance": false
+      }
+    },
+    {
+      "case": "v3_cgrid_localr3_coarse_warmstart",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_cgrid_localr3_coarse_warmstart",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 279.89000000001397,
+        "start_epoch": 1792437998.6648495,
+        "threads": 4,
+        "config_sha256": "31b65e4835932bec989b083684133023f1d7f4cf0bb9e8bb640a84c35039db61",
+        "mesh_sha256": "f828571e3c9b85f4cae428542c3e90f8e099ef9f076b471bd1dcc187ed936b99",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.11659752209609786,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "paired_control": "v3_cgrid_coarse_warmstart",
+        "same_physics_and_numerical_settings": true,
+        "same_seed_source": "v2_r2_fine_cfl1 iteration3400, interpolated independently to each target mesh",
+        "mesh_revision": "Tail cap correction plus local external x8c sizing; near-body block nodes/quads/body/wall unchanged. Outer Delaunay triangles may change elsewhere; cannot attribute a difference to a single triangle.",
+        "geometry_audit_source": "outputs/projects/proje-15cce2de02/simulations/v3_cgrid_localr3_coarse/local_revision_audit.json",
+        "new_family_fine_validation_still_missing": true,
+        "no_experimental_selection": true,
+        "minimum_acceptance": false
+      }
+    },
+    {
+      "case": "v3_r4roe_coarse_firstorder_control",
+      "status": "oturumlar arasında kesildi; başarılı çıkış bilinmiyor",
+      "run": {
+        "name": "v3_r4roe_coarse_firstorder_control",
+        "status": "interrupted_between_sessions",
+        "exit_code": null,
+        "seconds": null,
+        "observed_utc": "2026-10-24T12:34:59.406518+00:00",
+        "last_history_iteration": 4302,
+        "process_absent_verified": true,
+        "note": "No solver completion/status file survived; do not infer successful exit or continuous elapsed runtime",
+        "threads": 4,
+        "config_sha256": "98fbe044e60939ed9759712b45b1f4c5c16732b64eadf61747f88ea1ccdc2133",
+        "mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4"
+      },
+      "Cp_RMSE": null,
+      "reviewed_after_freeze": false,
+      "arithmetic_change": {
+        "created_utc": "2026-10-19T19:50:21.762394+00:00",
+        "reference_case": "v3_r4roe_coarse_warmstart",
+        "changed": {
+          "MUSCL_FLOW": {
+            "old": "YES",
+            "new": "NO"
+          }
+        },
+        "same_initial_seed": true,
+        "mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+        "seed_sha256": "12187e66e81eefae21e817fa3ac7e47c01386c13191c23249dd16b1c56f18f3e",
+        "config_sha256": "98fbe044e60939ed9759712b45b1f4c5c16732b64eadf61747f88ea1ccdc2133",
+        "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+        "rationale": "work/mesh_research/research_addendum_03.md",
+        "rationale_sha256": "63df497e3ebad192cf95663b6c5ad1940267b7a2c6e9d18e04f83598bb3bcaff",
+        "scope": "First-order reconstruction-isolation diagnostic only; cannot replace second-order fine validation",
+        "minimum_qualification_passed": false
+      }
+    },
+    {
+      "case": "v3_r4roe_coarse_warmstart",
+      "status": "kontrollü tanı bütçesinde durduruldu",
+      "run": {
+        "name": "v3_r4roe_coarse_warmstart",
+        "status": "exited",
+        "exit_code": 4294967295,
+        "seconds": 384.21899999998277,
+        "start_epoch": 1792439070.7581577,
+        "threads": 4,
+        "config_sha256": "c20a058a5da21644547fb99d7c6c9e0469606218f8cb837ee3983920dff9eb36",
+        "mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.06384141844337442,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "created_utc": "2026-10-19T19:39:45.103202+00:00",
+        "roles": {
+          "coarse": "v3_r4roe_coarse_warmstart",
+          "medium": "v3_r4roe_medium_warmstart",
+          "fine": "v3_r4roe_fine_warmstart"
+        },
+        "fine_validation_preselected": true,
+        "trial_type": "Separate numerical-method family; not a substitute for earlier JST fine role",
+        "source": {
+          "url": "https://su2code.github.io/documents/SU2_AIAA_SciTech2014.pdf",
+          "pages": "23-24/33",
+          "sha256": "ebbad5ea96e79f3f4e557bc68720804867f989eafe447cad74538362b14b7b3f"
+        },
+        "rationale_record": "work/mesh_research/research_addendum_02.md",
+        "rationale_sha256": "bf26a9fdf50a920819427bc199e51c505f10e4e038a0a53e3d78949ca5cf3653",
+        "coarse_mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+        "coarse_seed_sha256": "12187e66e81eefae21e817fa3ac7e47c01386c13191c23249dd16b1c56f18f3e",
+        "reference_case": "v3_cgrid_interfacer4_coarse_warmstart",
+        "config_difference": {
+          "CONV_NUM_METHOD_FLOW": {
+            "reference": "JST_MAT",
+            "new": "ROE"
+          },
+          "SLOPE_LIMITER_FLOW": {
+            "reference": null,
+            "new": "VENKATAKRISHNAN"
+          },
+          "MUSCL_FLOW": {
+            "reference": null,
+            "new": "YES"
+          }
+        },
+        "changed_policy": "Roe + second-order mean-flow MUSCL + Venkatakrishnan limiter; turbulence order unchanged",
+        "physical_conditions_unchanged": true,
+        "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+        "minimum_qualification_passed": false
+      }
+    },
+    {
+      "case": "v3_r4roe_firstorder_cont4200",
+      "status": "native tamamlandı",
+      "run": {
+        "name": "v3_r4roe_firstorder_cont4200",
+        "status": "exited",
+        "exit_code": 0,
+        "seconds": 388.9690000000119,
+        "start_epoch": 1792845309.0938282,
+        "threads": 4,
+        "config_sha256": "f6f0724120ed76e731a71ded29590e437ffd042a83aaf2af3ece568dce679ef2",
+        "mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": null,
+      "reviewed_after_freeze": false,
+      "arithmetic_change": {
+        "created_utc": "2026-10-24T12:34:59.406518+00:00",
+        "source_case": "v3_r4roe_coarse_firstorder_control",
+        "source_checkpoint": 4200,
+        "initial_restart_sha256": "467c01e90d5be5b12b5dfe9c6bcef0dfdb6e6aaf13bc4b755838dd00d816ede8",
+        "only_run_length_restart_changed": true,
+        "same_mesh": true,
+        "numerical_policy": "First-order Roe, fixedCFL1/MG3; same physical case",
+        "scope": "Bounded numerical diagnostic, cannot qualify high-order flow or replace preselected fine",
+        "request_order": "Finish these tests and their review before new ONERA M6 native runs",
+        "minimum_qualification_passed": false
+      }
+    },
+    {
+      "case": "v3_reference_sourcegrid",
+      "status": "native tamamlandı",
+      "run": {
+        "case": "v3_reference_sourcegrid",
+        "status": "exited",
+        "exit_code": 0,
+        "wall_seconds": 553.9060000000172,
+        "threads": 4,
+        "config_sha256": "62724a82ed1bb67f763214ba7e09fb4eaa513f865beb1c1ea90de078fcf179b4",
+        "mesh_sha256": "d7b5240cdccf53ef031609dde0b6b50f199d4e4e422f25cefb2aa86adc69adbd",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+        "start_epoch": 1792434475.9082549,
+        "checkpoint_frequency": 200,
+        "overwrite": false
+      },
+      "Cp_RMSE": 0.04558202913050095,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {}
+    },
+    {
+      "case": "v3_reference_sourcegrid_sa2",
+      "status": "native tamamlandı",
+      "run": {
+        "name": "v3_reference_sourcegrid_sa2",
+        "status": "exited",
+        "exit_code": 0,
+        "seconds": 374.655999999959,
+        "start_epoch": 1792436554.2982128,
+        "threads": 4,
+        "config_sha256": "a86100007e99dbba3c3246ddc520b257235bc23ec8db889f5d7a8df6c06913ad",
+        "mesh_sha256": "d7b5240cdccf53ef031609dde0b6b50f199d4e4e422f25cefb2aa86adc69adbd",
+        "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248"
+      },
+      "Cp_RMSE": 0.05092307998884393,
+      "reviewed_after_freeze": true,
+      "arithmetic_change": {
+        "paired_control": "v3_reference_sourcegrid",
+        "single_changed_numerical_policy": "SA convective reconstruction order: MUSCL_TURB NO to YES; default limiter/reconstruction and physical model unchanged",
+        "source": "https://su2code.github.io/documents/SU2_AIAA_SciTech2014.pdf",
+        "page": "23 of33, RAE2822 numerical methods uses second-order scalar upwind",
+        "note": "Paper T273.15 differs from our predeclared NASA T255.5556; do not copy that physical change. This trial tests one numerical hypothesis on the same source mesh. Still diagnostic, original maxy+ gate retained.",
+        "minimum_acceptance": false
+      }
+    }
+  ],
+  "old_cases_preserved": true,
+  "new_CAD_designed": false,
+  "scope": "Research-backed fixed benchmark continuation; no general CFD acceptance."
+}

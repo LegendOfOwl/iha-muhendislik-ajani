@@ -1,0 +1,10 @@
+{
+  "paired_control": "v3_cgrid_coarse_warmstart",
+  "same_physics_and_numerical_settings": true,
+  "same_seed_source": "v2_r2_fine_cfl1 iteration3400, interpolated independently to each target mesh",
+  "mesh_revision": "Tail cap correction plus local external x8c sizing; near-body block nodes/quads/body/wall unchanged. Outer Delaunay triangles may change elsewhere; cannot attribute a difference to a single triangle.",
+  "geometry_audit_source": "outputs/projects/proje-15cce2de02/simulations/v3_cgrid_localr3_coarse/local_revision_audit.json",
+  "new_family_fine_validation_still_missing": true,
+  "no_experimental_selection": true,
+  "minimum_acceptance": false
+}

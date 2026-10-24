@@ -1,0 +1,9 @@
+{
+  "source_case": "v3_cgrid_coarse",
+  "restart_iteration": 1000,
+  "source_terminal": "native divergence after1100, exit1, not manually stopped",
+  "single_changed_numerical_policy": "Adaptive CFL1..6 becomes fixed CFL1; flux, gradients, multigrid, linear solver and physics unchanged",
+  "diagnostic_reason": "500-step density plateau about-5.5..-5.25 followed by residual>1e20; source SU2 docs adaptive policy and previous same-solver stability experience",
+  "mesh_audit_source": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_coarse\\independent_cgrid_audit.json",
+  "no_experimental_selection": true
+}

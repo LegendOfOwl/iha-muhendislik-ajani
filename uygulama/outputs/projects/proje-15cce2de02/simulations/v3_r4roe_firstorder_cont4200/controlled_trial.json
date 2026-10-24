@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-24T12:34:59.406518+00:00",
+  "source_case": "v3_r4roe_coarse_firstorder_control",
+  "source_checkpoint": 4200,
+  "initial_restart_sha256": "467c01e90d5be5b12b5dfe9c6bcef0dfdb6e6aaf13bc4b755838dd00d816ede8",
+  "only_run_length_restart_changed": true,
+  "same_mesh": true,
+  "numerical_policy": "First-order Roe, fixedCFL1/MG3; same physical case",
+  "scope": "Bounded numerical diagnostic, cannot qualify high-order flow or replace preselected fine",
+  "request_order": "Finish these tests and their review before new ONERA M6 native runs",
+  "minimum_qualification_passed": false
+}

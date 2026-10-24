@@ -1,0 +1,1556 @@
+{
+  "case": "v3_cgrid_interfacer4_fine",
+  "scope": "Geometry-only local exterior mesh revision; no CFD and no expected/reference flow data read.",
+  "baseline": {
+    "kind": "reuse preserved geometry-only tail-r2 comparator created during R3 audit; no CFD",
+    "path": "work\\mesh_research\\cgrid\\tailr2_comparison\\fine\\mesh.su2",
+    "sha256": "94e386bf1205be86d8c118352fed8d0dadf9182768ced4b8a28c63564cd20d83"
+  },
+  "before": {
+    "cells": 409982,
+    "quads": 381300,
+    "triangles": 28682,
+    "all_positive_areas": true,
+    "all_positive_corner_Jacobians": true,
+    "area_m2": {
+      "min": 4.551478169508537e-11,
+      "median": 8.258146691863654e-07,
+      "p99": 6.5756095904174074,
+      "max": 134.70384573615775
+    },
+    "corner_Jacobian_m2_reference_unit_square_or_triangle": {
+      "min": 4.551469070665269e-11,
+      "median": 8.291690480596038e-07,
+      "p99": 13.151219180835001,
+      "max": 269.4076914723196
+    },
+    "scaled_corner_Jacobian": {
+      "min": 0.06478985824313256,
+      "median": 0.9991862521893633,
+      "p99": 0.9999999251273088,
+      "max": 0.9999999997389154
+    },
+    "equiangle_skew": {
+      "min": 2.6053233644537005e-15,
+      "median": 0.025675475041750436,
+      "p99": 0.29673478955684807,
+      "max": 0.938086875441701
+    },
+    "worst_global": [
+      {
+        "cell_id": 382057,
+        "type": "triangle",
+        "center_m": [
+          1.00147714046654,
+          0.06065820758731122
+        ],
+        "skew": 0.938086875441701,
+        "angle_min_max_deg": [
+          3.714787473497942,
+          131.38340889116927
+        ],
+        "vertices_m": [
+          [
+            1.0008284380962964,
+            0.060033418336290306
+          ],
+          [
+            1.0010477683185433,
+            0.060042265891597266
+          ],
+          [
+            1.00255521498478,
+            0.061898938534046086
+          ]
+        ]
+      },
+      {
+        "cell_id": 381383,
+        "type": "triangle",
+        "center_m": [
+          0.9948048843505463,
+          -0.059863574057319006
+        ],
+        "skew": 0.9156261500429029,
+        "angle_min_max_deg": [
+          5.06243099742582,
+          160.53834230321675
+        ],
+        "vertices_m": [
+          [
+            0.9953689240465965,
+            -0.059778684788390234
+          ],
+          [
+            0.9950091827050013,
+            -0.05976083955817172
+          ],
+          [
+            0.9940365463000408,
+            -0.06005119782539506
+          ]
+        ]
+      },
+      {
+        "cell_id": 409679,
+        "type": "triangle",
+        "center_m": [
+          0.9995900954265692,
+          0.060308915552005016
+        ],
+        "skew": 0.914430823350288,
+        "angle_min_max_deg": [
+          5.134150598982719,
+          147.69340505509436
+        ],
+        "vertices_m": [
+          [
+            0.9993765438062243,
+            0.06030995329320987
+          ],
+          [
+            0.9994618825153618,
+            0.06027259275228791
+          ],
+          [
+            0.9999318599581213,
+            0.06034420061051725
+          ]
+        ]
+      },
+      {
+        "cell_id": 408191,
+        "type": "triangle",
+        "center_m": [
+          0.9991439124407288,
+          -0.060067145865778444
+        ],
+        "skew": 0.9139949277327634,
+        "angle_min_max_deg": [
+          5.1603043360342,
+          160.7727361284362
+        ],
+        "vertices_m": [
+          [
+            0.9990436797786645,
+            -0.0600043879267435
+          ],
+          [
+            0.99884548472682,
+            -0.059996721562762347
+          ],
+          [
+            0.9995425728167018,
+            -0.06020032810782949
+          ]
+        ]
+      },
+      {
+        "cell_id": 381305,
+        "type": "triangle",
+        "center_m": [
+          8.004035174779114,
+          0.5371033580074831
+        ],
+        "skew": 0.9086068167216373,
+        "angle_min_max_deg": [
+          5.483590996701755,
+          119.23741165057595
+        ],
+        "vertices_m": [
+          [
+            8.0,
+            0.5404372688117072
+          ],
+          [
+            8.0,
+            0.5388243655859007
+          ],
+          [
+            8.01210552433734,
+            0.5320484396248413
+          ]
+        ]
+      }
+    ],
+    "tail_local_region": "exterior triangles; Euclidean centroid distance to x=8,end-segment <0.25c",
+    "tail_local": {
+      "cells": 944,
+      "skew": {
+        "min": 2.1659711061753721e-13,
+        "median": 0.41318801492374385,
+        "p99": 0.8897678504900333,
+        "max": 0.9086068167216373
+      },
+      "angle_min_deg": {
+        "min": 5.483590996701755,
+        "median": 35.208719104575366,
+        "p99": 59.699792490733564,
+        "max": 59.999999999987004
+      },
+      "angle_max_deg": {
+        "min": 60.00000000000693,
+        "median": 84.28561879514592,
+        "p99": 149.9999999999948,
+        "max": 157.42772534006315
+      },
+      "center_to_face_nonorthogonality_deg": {
+        "min": 0.0,
+        "median": 35.19145444145682,
+        "p99": 77.86765829696668,
+        "max": 80.53913892961545
+      },
+      "max_edge_m": {
+        "min": 0.0016129032258067866,
+        "median": 0.016226812433636807,
+        "p99": 0.08284198423868072,
+        "max": 0.0933485853778317
+      },
+      "worst": [
+        {
+          "cell_id": 381305,
+          "type": "triangle",
+          "center_m": [
+            8.004035174779114,
+            0.5371033580074831
+          ],
+          "skew": 0.9086068167216373,
+          "angle_min_max_deg": [
+            5.483590996701755,
+            119.23741165057595
+          ],
+          "vertices_m": [
+            [
+              8.0,
+              0.5404372688117072
+            ],
+            [
+              8.0,
+              0.5388243655859007
+            ],
+            [
+              8.01210552433734,
+              0.5320484396248413
+            ]
+          ]
+        },
+        {
+          "cell_id": 406799,
+          "type": "triangle",
+          "center_m": [
+            8.000761899182384,
+            0.5237706021450261
+          ],
+          "skew": 0.9037230143480485,
+          "angle_min_max_deg": [
+            5.776619139117093,
+            154.7150039488342
+          ],
+          "vertices_m": [
+            [
+              8.0,
+              0.5226953333278361
+            ],
+            [
+              8.0,
+              0.5210824301020297
+            ],
+            [
+              8.002285697547153,
+              0.5275340430052123
+            ]
+          ]
+        },
+        {
+          "cell_id": 393208,
+          "type": "triangle",
+          "center_m": [
+            8.000558726066979,
+            0.4767275913923524
+          ],
+          "skew": 0.8994181729045393,
+          "angle_min_max_deg": [
+            6.034909625727643,
+            157.42772534006315
+          ],
+          "vertices_m": [
+            [
+              8.0,
+              0.4759211397794491
+            ],
+            [
+              8.0,
+              0.4743082365536426
+            ],
+            [
+              8.001676178200938,
+              0.47995339784396535
+            ]
+          ]
+        },
+        {
+          "cell_id": 393207,
+          "type": "triangle",
+          "center_m": [
+            8.000558726066979,
+            0.4831792042955782
+          ],
+          "skew": 0.8994181729045292,
+          "angle_min_max_deg": [
+            6.034909625728248,
+            157.427725340062
+          ],
+          "vertices_m": [
+            [
+              8.0,
+              0.48559855913428784
+            ],
+            [
+              8.0,
+              0.48398565590848136
+            ],
+            [
+              8.001676178200938,
+              0.47995339784396535
+            ]
+          ]
+        },
+        {
+          "cell_id": 399327,
+          "type": "triangle",
+          "center_m": [
+            8.00464970584923,
+            0.4441173703531584
+          ],
+          "skew": 0.8972230547867655,
+          "angle_min_max_deg": [
+            6.166616712794074,
+            102.04248380804816
+          ],
+          "vertices_m": [
+            [
+              8.0,
+              0.44366307526332005
+            ],
+            [
+              8.0,
+              0.4420501720375136
+            ],
+            [
+              8.01394911754769,
+              0.4466388637586415
+            ]
+          ]
+        }
+      ]
+    },
+    "exterior_triangle_distance_bins": {
+      "0..0.02c": {
+        "cells": 534,
+        "skew": {
+          "min": 2.1659711061753721e-13,
+          "median": 0.6208824849120835,
+          "p99": 0.893873158825711,
+          "max": 0.9086068167216373
+        }
+      },
+      "0.02..0.05c": {
+        "cells": 53,
+        "skew": {
+          "min": 0.021330089652891834,
+          "median": 0.1970328508992097,
+          "p99": 0.6110374582317987,
+          "max": 0.6354438739304391
+        }
+      },
+      "0.05..0.1c": {
+        "cells": 74,
+        "skew": {
+          "min": 0.000921028855155015,
+          "median": 0.08687816009024202,
+          "p99": 0.3344806554659928,
+          "max": 0.3360017572612726
+        }
+      },
+      "0.1..0.25c": {
+        "cells": 283,
+        "skew": {
+          "min": 1.402289420605977e-05,
+          "median": 0.0931742895260836,
+          "p99": 0.5030404348610693,
+          "max": 0.5957761018798141
+        }
+      },
+      "0.25..0.5c": {
+        "cells": 569,
+        "skew": {
+          "min": 3.9945360062650557e-07,
+          "median": 0.09565469248128515,
+          "p99": 0.3694152601168794,
+          "max": 0.5805704916558317
+        }
+      },
+      "0.5..1c": {
+        "cells": 1354,
+        "skew": {
+          "min": 0.00035998881961276654,
+          "median": 0.08602082047364826,
+          "p99": 0.3339552022005108,
+          "max": 0.3901634794927868
+        }
+      },
+      "1..2c": {
+        "cells": 2529,
+        "skew": {
+          "min": 1.9156687246872177e-07,
+          "median": 0.08771043627951916,
+          "p99": 0.5115533745187104,
+          "max": 0.9083059825244849
+        }
+      },
+      "2..5c": {
+        "cells": 4355,
+        "skew": {
+          "min": 8.138751870963764e-08,
+          "median": 0.08784306000489614,
+          "p99": 0.36342591247189926,
+          "max": 0.7064010511173916
+        }
+      },
+      "5..10c": {
+        "cells": 11789,
+        "skew": {
+          "min": 2.6053233644537005e-15,
+          "median": 0.13776563887755333,
+          "p99": 0.7903386995103974,
+          "max": 0.938086875441701
+        }
+      },
+      "10..20c": {
+        "cells": 1020,
+        "skew": {
+          "min": 0.0004979233103855544,
+          "median": 0.09159926359127261,
+          "p99": 0.3154920491163495,
+          "max": 0.38021940930393694
+        }
+      },
+      "20..1000c": {
+        "cells": 6122,
+        "skew": {
+          "min": 1.1487107561454953e-14,
+          "median": 0.06935252798377375,
+          "p99": 0.2971165593583472,
+          "max": 0.3625508481176192
+        }
+      }
+    }
+  },
+  "after": {
+    "cells": 424826,
+    "quads": 381300,
+    "triangles": 43526,
+    "all_positive_areas": true,
+    "all_positive_corner_Jacobians": true,
+    "area_m2": {
+      "min": 4.551478169508537e-11,
+      "median": 8.692507456470322e-07,
+      "p99": 5.841361223778371,
+      "max": 134.70384573615775
+    },
+    "corner_Jacobian_m2_reference_unit_square_or_triangle": {
+      "min": 4.551469070665269e-11,
+      "median": 8.797082133790956e-07,
+      "p99": 11.682722447556701,
+      "max": 269.40769147231237
+    },
+    "scaled_corner_Jacobian": {
+      "min": 0.08630918248756765,
+      "median": 0.9991833364346279,
+      "p99": 0.9999999224853173,
+      "max": 0.9999999997389154
+    },
+    "equiangle_skew": {
+      "min": 1.0066022089934753e-14,
+      "median": 0.025695909089965677,
+      "p99": 0.2811725266167851,
+      "max": 0.9174781300781633
+    },
+    "worst_global": [
+      {
+        "cell_id": 398349,
+        "type": "triangle",
+        "center_m": [
+          9.89657760018043,
+          0.1947868276127497
+        ],
+        "skew": 0.9174781300781633,
+        "angle_min_max_deg": [
+          4.951312195310201,
+          93.78153245478593
+        ],
+        "vertices_m": [
+          [
+            9.819895158161678,
+            0.24984384800264434
+          ],
+          [
+            9.810822395155835,
+            0.22752431197934203
+          ],
+          [
+            10.05901524722378,
+            0.10699232285626281
+          ]
+        ]
+      },
+      {
+        "cell_id": 400868,
+        "type": "triangle",
+        "center_m": [
+          9.88484755256738,
+          0.17998598141899702
+        ],
+        "skew": 0.8973315644270738,
+        "angle_min_max_deg": [
+          6.160106134375564,
+          113.8815191401236
+        ],
+        "vertices_m": [
+          [
+            9.810822395155835,
+            0.22752431197934203
+          ],
+          [
+            9.784705015322523,
+            0.20544130942138628
+          ],
+          [
+            10.05901524722378,
+            0.10699232285626281
+          ]
+        ]
+      },
+      {
+        "cell_id": 390845,
+        "type": "triangle",
+        "center_m": [
+          9.764595845984866,
+          0.2535947830640555
+        ],
+        "skew": 0.8560425085987402,
+        "angle_min_max_deg": [
+          8.63744948407559,
+          91.40079891882476
+        ],
+        "vertices_m": [
+          [
+            9.663069984637088,
+            0.28341618921018
+          ],
+          [
+            9.810822395155835,
+            0.22752431197934203
+          ],
+          [
+            9.819895158161678,
+            0.24984384800264434
+          ]
+        ]
+      },
+      {
+        "cell_id": 389585,
+        "type": "triangle",
+        "center_m": [
+          9.717848528864993,
+          0.28192849074041587
+        ],
+        "skew": 0.821846414252365,
+        "angle_min_max_deg": [
+          10.689215144858096,
+          87.61587731434093
+        ],
+        "vertices_m": [
+          [
+            9.663069984637088,
+            0.28341618921018
+          ],
+          [
+            9.819895158161678,
+            0.24984384800264434
+          ],
+          [
+            9.67058044379621,
+            0.31252543500842334
+          ]
+        ]
+      },
+      {
+        "cell_id": 394363,
+        "type": "triangle",
+        "center_m": [
+          9.75049875934944,
+          0.22806463734564533
+        ],
+        "skew": 0.8187367592928212,
+        "angle_min_max_deg": [
+          10.875794442430728,
+          120.20580277385989
+        ],
+        "vertices_m": [
+          [
+            9.655968867569964,
+            0.2512282906362077
+          ],
+          [
+            9.784705015322523,
+            0.20544130942138628
+          ],
+          [
+            9.810822395155835,
+            0.22752431197934203
+          ]
+        ]
+      }
+    ],
+    "tail_local_region": "exterior triangles; Euclidean centroid distance to x=8,end-segment <0.25c",
+    "tail_local": {
+      "cells": 4462,
+      "skew": {
+        "min": 1.1688428003253648e-13,
+        "median": 0.1302310447900739,
+        "p99": 0.3961491718601876,
+        "max": 0.6257427639261418
+      },
+      "angle_min_deg": {
+        "min": 22.45543416443149,
+        "median": 52.18613731259556,
+        "p99": 59.99999999983334,
+        "max": 59.99999999999299
+      },
+      "angle_max_deg": {
+        "min": 60.00000000000693,
+        "median": 68.41721105353363,
+        "p99": 95.73557213117994,
+        "max": 108.32459458809795
+      },
+      "center_to_face_nonorthogonality_deg": {
+        "min": 0.0,
+        "median": 11.142453566362487,
+        "p99": 35.18932997171754,
+        "max": 53.46331651188026
+      },
+      "max_edge_m": {
+        "min": 0.0014534354089114708,
+        "median": 0.0037701854568045127,
+        "p99": 0.05848278866428066,
+        "max": 0.07956009893248286
+      },
+      "worst": [
+        {
+          "cell_id": 424724,
+          "type": "triangle",
+          "center_m": [
+            7.986255291010498,
+            -0.021156381124568604
+          ],
+          "skew": 0.6257427639261418,
+          "angle_min_max_deg": [
+            22.45543416443149,
+            105.62598933609158
+          ],
+          "vertices_m": [
+            [
+              8.0,
+              -0.017627247317325068
+            ],
+            [
+              7.966824021238152,
+              -0.017812024579360597
+            ],
+            [
+              7.991941851793342,
+              -0.028029871477020143
+            ]
+          ]
+        },
+        {
+          "cell_id": 424712,
+          "type": "triangle",
+          "center_m": [
+            8.001234236645818,
+            0.5811748671141549
+          ],
+          "skew": 0.6254847323536681,
+          "angle_min_max_deg": [
+            22.470916058779913,
+            95.6735030609663
+          ],
+          "vertices_m": [
+            [
+              8.0,
+              0.582372752682675
+            ],
+            [
+              8.0,
+              0.5807598494568684
+            ],
+            [
+              8.003702709937453,
+              0.5803919992029214
+            ]
+          ]
+        },
+        {
+          "cell_id": 424726,
+          "type": "triangle",
+          "center_m": [
+            7.986025785403483,
+            0.5849759605294961
+          ],
+          "skew": 0.6109175721892574,
+          "angle_min_max_deg": [
+            23.344945668644556,
+            102.6934533206705
+          ],
+          "vertices_m": [
+            [
+              7.966824021238152,
+              0.579880960674446
+            ],
+            [
+              8.0,
+              0.582372752682675
+            ],
+            [
+              7.9912533349722965,
+              0.5926741682313672
+            ]
+          ]
+        },
+        {
+          "cell_id": 424719,
+          "type": "triangle",
+          "center_m": [
+            8.00122089048159,
+            -0.016804168526442873
+          ],
+          "skew": 0.5861601333683725,
+          "angle_min_max_deg": [
+            24.830391997897646,
+            78.32899349769632
+          ],
+          "vertices_m": [
+            [
+              8.0,
+              -0.01601434409151864
+            ],
+            [
+              8.0,
+              -0.017627247317325068
+            ],
+            [
+              8.00366267144477,
+              -0.016770914170484912
+            ]
+          ]
+        },
+        {
+          "cell_id": 424725,
+          "type": "triangle",
+          "center_m": [
+            7.9812092063609015,
+            -0.02842032558294172
+          ],
+          "skew": 0.5331948767987956,
+          "angle_min_max_deg": [
+            28.008307392072265,
+            80.26915794893439
+          ],
+          "vertices_m": [
+            [
+              7.966824021238152,
+              -0.017812024579360597
+            ],
+            [
+              7.98486174605121,
+              -0.03941908069244442
+            ],
+            [
+              7.991941851793342,
+              -0.028029871477020143
+            ]
+          ]
+        }
+      ]
+    },
+    "exterior_triangle_distance_bins": {
+      "0..0.02c": {
+        "cells": 3151,
+        "skew": {
+          "min": 1.1688428003253648e-13,
+          "median": 0.13062756980405368,
+          "p99": 0.39452432464386855,
+          "max": 0.6257427639261418
+        }
+      },
+      "0.02..0.05c": {
+        "cells": 591,
+        "skew": {
+          "min": 0.0070973323236767525,
+          "median": 0.12996416446580858,
+          "p99": 0.391831398751686,
+          "max": 0.5331948767987956
+        }
+      },
+      "0.05..0.1c": {
+        "cells": 320,
+        "skew": {
+          "min": 0.007594501577535103,
+          "median": 0.16065493230948863,
+          "p99": 0.4061394584287129,
+          "max": 0.41199905450899316
+        }
+      },
+      "0.1..0.25c": {
+        "cells": 400,
+        "skew": {
+          "min": 2.6138614828141726e-07,
+          "median": 0.11374031696592037,
+          "p99": 0.3613249374551824,
+          "max": 0.4161545961588139
+        }
+      },
+      "0.25..0.5c": {
+        "cells": 593,
+        "skew": {
+          "min": 0.0013373554529013158,
+          "median": 0.08490289791994575,
+          "p99": 0.3495621804829839,
+          "max": 0.4263078455967398
+        }
+      },
+      "0.5..1c": {
+        "cells": 1361,
+        "skew": {
+          "min": 1.0656707467878353e-06,
+          "median": 0.08646994301045095,
+          "p99": 0.3241230665499996,
+          "max": 0.35267747343267336
+        }
+      },
+      "1..2c": {
+        "cells": 2499,
+        "skew": {
+          "min": 1.1108665750233133e-07,
+          "median": 0.08761765248554951,
+          "p99": 0.6722339001107683,
+          "max": 0.9174781300781633
+        }
+      },
+      "2..5c": {
+        "cells": 4359,
+        "skew": {
+          "min": 7.878613518622994e-08,
+          "median": 0.08494857315167721,
+          "p99": 0.34210560228232234,
+          "max": 0.6648413920518901
+        }
+      },
+      "5..10c": {
+        "cells": 23106,
+        "skew": {
+          "min": 1.0066022089934753e-14,
+          "median": 0.11884972056817594,
+          "p99": 0.37519172288124214,
+          "max": 0.48084950994157327
+        }
+      },
+      "10..20c": {
+        "cells": 1024,
+        "skew": {
+          "min": 0.0007294656173228257,
+          "median": 0.09132773814780043,
+          "p99": 0.3141554872526814,
+          "max": 0.3799194776735677
+        }
+      },
+      "20..1000c": {
+        "cells": 6122,
+        "skew": {
+          "min": 1.1487107561454953e-14,
+          "median": 0.06933642314377178,
+          "p99": 0.29710791548589705,
+          "max": 0.36255084811761784
+        }
+      }
+    }
+  },
+  "topology": {
+    "cells": 424826,
+    "nodes": 403748,
+    "connected_fluid_components": 1,
+    "component_cell_counts": [
+      424826
+    ],
+    "nonmanifold_edges": 0,
+    "interior_edge_direction_disagreements": 0,
+    "unmarked_boundary_edges": 0,
+    "declared_edges_not_single_fluid_neighbor": 0,
+    "duplicate_marker_edges": 0,
+    "exact_duplicate_node_coordinates": 0,
+    "closed_markers": {
+      "AIRFOIL": {
+        "edges": 1270,
+        "nodes": 1270,
+        "all_degree2": true
+      },
+      "FARFIELD": {
+        "edges": 100,
+        "nodes": 100,
+        "all_degree2": true
+      }
+    }
+  },
+  "tailr2_near_block_equality": {
+    "points_bitwise_equal": true,
+    "quads_bitwise_equal": true,
+    "wall_connectivity_bitwise_equal": true,
+    "structured_grid_bitwise_equal": true,
+    "near_design_equal": true,
+    "actual_export_coordinates_bitwise_equal": true,
+    "actual_export_quads_bitwise_equal": true,
+    "actual_export_wall_edges_equal": true,
+    "baseline_near_points_bitwise_equal": true,
+    "baseline_quads_bitwise_equal": true
+  },
+  "geometry": {
+    "source65_interpolation_max_m": 2.220446049250313e-16,
+    "actual_wall_vertex_deviation_to_r2_spline_max_m": 0.0,
+    "linear_panel_same_parameter_sample_deviation_max_m": 3.781496327285647e-07,
+    "panel_sample_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "geometry_payload_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+    "source_sha256": "0bef162c8778247a4746f02a1b487f33083a1ae80fdc82ea58afc259c87da736"
+  },
+  "domain": {
+    "boundary_bounds_m": [
+      -200.0,
+      -200.0,
+      200.0,
+      200.0
+    ],
+    "exact_target_bounds_m": [
+      -200,
+      -200,
+      200,
+      200
+    ],
+    "fluid_cell_area_sum_m2": 159999.9220825234,
+    "square_minus_discrete_wall_area_m2": 159999.92208252344,
+    "area_balance_difference_m2": -2.9103830456733704e-11
+  },
+  "mesh_files_sha256": {
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_fine\\mesh.su2": "8930df0d6538b48023180413eaa6463cfeac0d403a1e627d03d8c0192710f520",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_fine\\near_arrays.npz": "d745a8f469c6be5af2d223ac6894a7ab94191cb37c0efe66f20f5fbe80393d8b",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_fine\\near_design.json": "efbd0ca7c209089e8c4bfbd50fae265cb56ad2aad59bd87082a9ff6aed1d48c8",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_fine\\mesh_arrays.npz": "cb2edeab8eb130af90ae05db3bb575a20a401ac94f49bd017ddc35a6af20e7fa",
+    "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_fine\\exterior_interface_sizing.json": "e441b7a4cae5607df6f01c96427ea68b440967599c3629f871d9cce7d76ad433"
+  },
+  "sizing": {
+    "revision": "r4_compact_all_interface",
+    "interface_segments": 2422,
+    "node_rule": "h_i=min(length of previous and next actual interface edges)",
+    "segment_rule": "exact nearest closed segment, linear interpolation of endpoint h_i at projected position",
+    "full_target": "min(h_old,h_interface+0.25*d) for d<=0.25c",
+    "transition": "d0.25..1c smoothstep t=(d-.25)/.75, w=t*t*(3-2*t); h=(1-w)*full_target+w*h_old",
+    "outside": "d>=1c returns h_old exactly; midpoint broad-phase cannot skip a segment with true d<1c",
+    "distance_audit": {
+      "random_seed": 17391,
+      "random_samples": 1200,
+      "reference": "Brute-force distance/projection to EVERY real interface segment, independent of cKDTree candidate selection",
+      "max_distance_error_m": 0.0,
+      "max_interpolated_h_error_m": 0.0,
+      "incorrect_d_less_than_1_skips": 0,
+      "queried_d_ge_1_size_exactly_old_count": 10,
+      "broad_phase_completeness": "midpoint lower bound and candidate radius use maximum actual segment half-length, with2e-12m roundoff padding",
+      "interface_segments": 2422,
+      "segment_length_m": {
+        "min": 9.22464473859803e-05,
+        "median": 0.0018328471795996198,
+        "max": 0.033335541041281884
+      },
+      "node_h_m": {
+        "min": 9.22464473859803e-05,
+        "median": 0.0018151611535360476,
+        "max": 0.033335529826287284
+      }
+    },
+    "sizing_query_counters": {
+      "calls": 95406,
+      "far_cutoff_skips": 7093,
+      "candidate_count_max": 314,
+      "candidate_count_mean_for_non_skipped": 27.485353232253463
+    },
+    "geometry_and_near_block_unchanged": true,
+    "helper_sha256": "a47852797ac386b2a7e69ed359d3cc67a23fe55540e178ee876129f176eb2575"
+  },
+  "elapsed_audit_seconds": 4.969677448272705,
+  "checks_passed": true,
+  "quality_acceptance_note": "No new skew/angle cutoff introduced. Positive Jacobian/topology pass does not prove CFD convergence or flow accuracy. Local angles and global worst cells remain visible.",
+  "interface_normal_transition_before": {
+    "definition": "Exact exported interface edges each have one explicit quad and one exterior triangle. Triangle height=2A/edge length; quad height=mean perpendicular distance of two opposite vertices to interface edge.",
+    "regions": {
+      "all_interface": {
+        "edges": 2422,
+        "tangential_edge_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0018328471795996198,
+          "p99": 0.03333208550271542,
+          "max": 0.033335541041281884
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.00044326233681532556,
+          "median": 0.0004995823346057544,
+          "p99": 0.03317597876184841,
+          "max": 0.03317597876184841
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 7.968987496885022e-05,
+          "median": 0.0023089115785112566,
+          "p99": 0.036232276871638436,
+          "max": 0.047168449811884006
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.04210320899412179,
+          "median": 4.210175597883692,
+          "p99": 54.88665881783203,
+          "max": 63.91477738311527
+        }
+      },
+      "body_interface": {
+        "edges": 1270,
+        "tangential_edge_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0018131519964038809,
+          "p99": 0.0026874125628919055,
+          "max": 0.0028240574858940898
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.00044326233681532556,
+          "median": 0.0004992081278268792,
+          "p99": 0.0004999876064225149,
+          "max": 0.0004999886245198469
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 9.849674636901668e-05,
+          "median": 0.0020165045654627605,
+          "p99": 0.005306093849562132,
+          "max": 0.006604060611485119
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.22142699566536356,
+          "median": 4.037358472824019,
+          "p99": 10.618408574441823,
+          "max": 13.212715425667122
+        }
+      },
+      "LE_interface": {
+        "edges": 278,
+        "tangential_edge_m": {
+          "min": 0.0006244828200205855,
+          "median": 0.0009861069124452839,
+          "p99": 0.0013409340082572935,
+          "max": 0.0013471869135033504
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.0004978406186373902,
+          "median": 0.0004987391423738549,
+          "p99": 0.0004999806257046865,
+          "max": 0.0004999841748635615
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 0.0005446760736705059,
+          "median": 0.001386506315415495,
+          "p99": 0.005222565630179001,
+          "max": 0.005540589143174745
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 1.0934232495478762,
+          "median": 2.7803649616259722,
+          "p99": 10.48379642048088,
+          "max": 11.119272303739534
+        }
+      },
+      "TE_interface": {
+        "edges": 197,
+        "tangential_edge_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0008774361893982512,
+          "p99": 0.0026657797972230368,
+          "max": 0.0026657798068153095
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.00044326233681532556,
+          "median": 0.0004985177393641688,
+          "p99": 0.0004999872757180319,
+          "max": 0.0004999885607101607
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 9.849674636901668e-05,
+          "median": 0.0011654050532437722,
+          "p99": 0.004347597243136821,
+          "max": 0.0043818424589186136
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.22142699566536356,
+          "median": 2.3312110835028714,
+          "p99": 8.703501736178914,
+          "max": 8.778113648384863
+        }
+      },
+      "aft_body_interface": {
+        "edges": 279,
+        "tangential_edge_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0014503833814493623,
+          "p99": 0.002665779802425001,
+          "max": 0.0026657798068153095
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.00044326233681532556,
+          "median": 0.0004968134504669455,
+          "p99": 0.0004999861509379875,
+          "max": 0.0004999885607101607
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 9.849674636901668e-05,
+          "median": 0.0015559131585117405,
+          "p99": 0.004626407988368683,
+          "max": 0.005154580648604793
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.22142699566536356,
+          "median": 3.116401367152678,
+          "p99": 9.298360625526037,
+          "max": 10.439728589725496
+        }
+      },
+      "horizontal_wake_interface": {
+        "edges": 780,
+        "tangential_edge_m": {
+          "min": 0.00020016265706283455,
+          "median": 0.017772247107664743,
+          "p99": 0.03333515102754539,
+          "max": 0.033335541041281884
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.0004981355045341715,
+          "median": 0.000499582280447883,
+          "p99": 0.0015842999008348327,
+          "max": 0.0016097833901033837
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 7.968987496885022e-05,
+          "median": 0.01803351874031404,
+          "p99": 0.03982120524739921,
+          "max": 0.047168449811884006
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.15951299428332977,
+          "median": 21.71337898768749,
+          "p99": 57.613869784667486,
+          "max": 63.91477738311527
+        }
+      },
+      "vertical_end_interface": {
+        "edges": 372,
+        "tangential_edge_m": {
+          "min": 0.001612903225806317,
+          "median": 0.0016129032258064557,
+          "p99": 0.001612903225806539,
+          "max": 0.001612903225806539
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.03317597876184841,
+          "median": 0.03317597876184841,
+          "p99": 0.03317597876184841,
+          "max": 0.03317597876184841
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 0.0013968151673946494,
+          "median": 0.0028546087651344365,
+          "p99": 0.013046510199853145,
+          "max": 0.013949117547689129
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.04210320899412179,
+          "median": 0.08604444756931087,
+          "p99": 0.39325170459948333,
+          "max": 0.4204583577721084
+        }
+      }
+    },
+    "largest_symmetric_transition_ratio": [
+      {
+        "interface_edge_id": 155,
+        "edge_midpoint_m": [
+          2.8411353025325337,
+          0.0034638540068491347
+        ],
+        "quad_height_m": 0.0005275675807616846,
+        "triangle_height_m": 0.03371936447893176,
+        "outside_over_inside": 63.91477738311527
+      },
+      {
+        "interface_edge_id": 1887,
+        "edge_midpoint_m": [
+          2.6089034511995934,
+          0.13230620464013462
+        ],
+        "quad_height_m": 0.0005152575424967048,
+        "triangle_height_m": 0.03173583977814215,
+        "outside_over_inside": 61.592188683671935
+      },
+      {
+        "interface_edge_id": 165,
+        "edge_midpoint_m": [
+          2.5093755149140478,
+          -0.005295820765374104
+        ],
+        "quad_height_m": 0.0005118264726271456,
+        "triangle_height_m": 0.03122921867601795,
+        "outside_over_inside": 61.01524705379543
+      },
+      {
+        "interface_edge_id": 152,
+        "edge_midpoint_m": [
+          2.94066323881808,
+          0.005775612614697452
+        ],
+        "quad_height_m": 0.0005337574325423378,
+        "triangle_height_m": 0.0321673391742396,
+        "outside_over_inside": 60.265838399708045
+      },
+      {
+        "interface_edge_id": 176,
+        "edge_midpoint_m": [
+          2.1710356565653184,
+          -0.01575766697636064
+        ],
+        "quad_height_m": 0.0005025878936096837,
+        "triangle_height_m": 0.030191391261540038,
+        "outside_over_inside": 60.07186334055842
+      },
+      {
+        "interface_edge_id": 1912,
+        "edge_midpoint_m": [
+          3.4383029202458095,
+          0.18172441178804777
+        ],
+        "quad_height_m": 0.0005747722370785351,
+        "triangle_height_m": 0.03445653336812882,
+        "outside_over_inside": 59.948151885806524
+      },
+      {
+        "interface_edge_id": 159,
+        "edge_midpoint_m": [
+          2.708431387485139,
+          0.00015024128470689235
+        ],
+        "quad_height_m": 0.0005203973610399013,
+        "triangle_height_m": 0.031077198171267733,
+        "outside_over_inside": 59.71820861882675
+      },
+      {
+        "interface_edge_id": 178,
+        "edge_midpoint_m": [
+          2.1178557766223367,
+          -0.017527833800594615
+        ],
+        "quad_height_m": 0.0005016679827904429,
+        "triangle_height_m": 0.02915175037970636,
+        "outside_over_inside": 58.109648970529676
+      }
+    ]
+  },
+  "interface_normal_transition_after": {
+    "definition": "Exact exported interface edges each have one explicit quad and one exterior triangle. Triangle height=2A/edge length; quad height=mean perpendicular distance of two opposite vertices to interface edge.",
+    "regions": {
+      "all_interface": {
+        "edges": 2422,
+        "tangential_edge_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0018328471795996198,
+          "p99": 0.03333208550271542,
+          "max": 0.033335541041281884
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.00044326233681532556,
+          "median": 0.0004995823346057544,
+          "p99": 0.03317597876184841,
+          "max": 0.03317597876184841
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 8.225675154679477e-05,
+          "median": 0.0016808074645783138,
+          "p99": 0.034137079663607454,
+          "max": 0.04065557549202799
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.03223369409180898,
+          "median": 3.275299629298792,
+          "p99": 55.34209563812931,
+          "max": 71.06530511954793
+        }
+      },
+      "body_interface": {
+        "edges": 1270,
+        "tangential_edge_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0018131519964038809,
+          "p99": 0.0026874125628919055,
+          "max": 0.0028240574858940898
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.00044326233681532556,
+          "median": 0.0004992081278268792,
+          "p99": 0.0004999876064225149,
+          "max": 0.0004999886245198469
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 8.225675154679477e-05,
+          "median": 0.001613436404087095,
+          "p99": 0.0029249114106262497,
+          "max": 0.0033864575236688967
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.17658346705598654,
+          "median": 3.229393237906338,
+          "p99": 5.86182235070961,
+          "max": 6.839321281629948
+        }
+      },
+      "LE_interface": {
+        "edges": 278,
+        "tangential_edge_m": {
+          "min": 0.0006244828200205855,
+          "median": 0.0009861069124452839,
+          "p99": 0.0013409340082572935,
+          "max": 0.0013471869135033504
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.0004978406186373902,
+          "median": 0.0004987391423738549,
+          "p99": 0.0004999806257046865,
+          "max": 0.0004999841748635615
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 0.00042377592628699306,
+          "median": 0.0008817899546987693,
+          "p99": 0.0014067471406516271,
+          "max": 0.0015917957067071702
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.8476138673065619,
+          "median": 1.770282487014751,
+          "p99": 2.814834899093144,
+          "max": 3.185574501154799
+        }
+      },
+      "TE_interface": {
+        "edges": 197,
+        "tangential_edge_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0008774361893982512,
+          "p99": 0.0026657797972230368,
+          "max": 0.0026657798068153095
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.00044326233681532556,
+          "median": 0.0004985177393641688,
+          "p99": 0.0004999872757180319,
+          "max": 0.0004999885607101607
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 8.225675154679477e-05,
+          "median": 0.0007586721201989924,
+          "p99": 0.0025416613838053375,
+          "max": 0.0031064917434772787
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.17658346705598654,
+          "median": 1.5181654190808338,
+          "p99": 5.160585793143187,
+          "max": 6.308523551019002
+        }
+      },
+      "aft_body_interface": {
+        "edges": 279,
+        "tangential_edge_m": {
+          "min": 9.22464473859803e-05,
+          "median": 0.0014503833814493623,
+          "p99": 0.002665779802425001,
+          "max": 0.0026657798068153095
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.00044326233681532556,
+          "median": 0.0004968134504669455,
+          "p99": 0.0004999861509379875,
+          "max": 0.0004999885607101607
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 8.225675154679477e-05,
+          "median": 0.001325180746894733,
+          "p99": 0.0030174267129417665,
+          "max": 0.003157937193052912
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.17658346705598654,
+          "median": 2.6546901608454565,
+          "p99": 6.1143678925078415,
+          "max": 6.355711692613097
+        }
+      },
+      "horizontal_wake_interface": {
+        "edges": 780,
+        "tangential_edge_m": {
+          "min": 0.00020016265706283455,
+          "median": 0.017772247107664743,
+          "p99": 0.03333515102754539,
+          "max": 0.033335541041281884
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.0004981355045341715,
+          "median": 0.000499582280447883,
+          "p99": 0.0015842999008348327,
+          "max": 0.0016097833901033837
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 0.00012505518922562245,
+          "median": 0.01566443808721605,
+          "p99": 0.037197847312512584,
+          "max": 0.04065557549202799
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.2503194752387908,
+          "median": 20.39622993223943,
+          "p99": 59.571813401648775,
+          "max": 71.06530511954793
+        }
+      },
+      "vertical_end_interface": {
+        "edges": 372,
+        "tangential_edge_m": {
+          "min": 0.001612903225806317,
+          "median": 0.0016129032258064557,
+          "p99": 0.001612903225806539,
+          "max": 0.001612903225806539
+        },
+        "near_quad_normal_height_m": {
+          "min": 0.03317597876184841,
+          "median": 0.03317597876184841,
+          "p99": 0.03317597876184841,
+          "max": 0.03317597876184841
+        },
+        "outside_triangle_normal_height_m": {
+          "min": 0.0010693843506057732,
+          "median": 0.0014517036219334756,
+          "p99": 0.0019328932596254947,
+          "max": 0.0037027099374533634
+        },
+        "outside_over_inside_height_ratio": {
+          "min": 0.03223369409180898,
+          "median": 0.043757672753362745,
+          "p99": 0.05826183075111792,
+          "max": 0.11160815974814259
+        }
+      }
+    },
+    "largest_symmetric_transition_ratio": [
+      {
+        "interface_edge_id": 1898,
+        "edge_midpoint_m": [
+          2.9738392175799286,
+          0.15273280956537028
+        ],
+        "quad_height_m": 0.0005351875475213049,
+        "triangle_height_m": 0.038033266360784086,
+        "outside_over_inside": 71.06530511954793
+      },
+      {
+        "interface_edge_id": 168,
+        "edge_midpoint_m": [
+          2.410075553390426,
+          -0.008215660199270669
+        ],
+        "quad_height_m": 0.0005084623429949976,
+        "triangle_height_m": 0.03396235272887926,
+        "outside_over_inside": 66.79423402101065
+      },
+      {
+        "interface_edge_id": 155,
+        "edge_midpoint_m": [
+          2.8411353025325337,
+          0.0034638540068491347
+        ],
+        "quad_height_m": 0.0005275675807616846,
+        "triangle_height_m": 0.03413276463780754,
+        "outside_over_inside": 64.6983739761412
+      },
+      {
+        "interface_edge_id": 148,
+        "edge_midpoint_m": [
+          3.0733671538654743,
+          0.008620087343927059
+        ],
+        "quad_height_m": 0.000543140420245129,
+        "triangle_height_m": 0.03364042894883612,
+        "outside_over_inside": 61.93689089398575
+      },
+      {
+        "interface_edge_id": 1909,
+        "edge_midpoint_m": [
+          3.338774983960264,
+          0.17521828180831572
+        ],
+        "quad_height_m": 0.0005648618386291133,
+        "triangle_height_m": 0.03456076539173218,
+        "outside_over_inside": 61.184457912060665
+      },
+      {
+        "interface_edge_id": 1889,
+        "edge_midpoint_m": [
+          2.6752554087232907,
+          0.1358746235525592
+        ],
+        "quad_height_m": 0.0005182104783671206,
+        "triangle_height_m": 0.031670424008004065,
+        "outside_over_inside": 61.114981904259174
+      },
+      {
+        "interface_edge_id": 1931,
+        "edge_midpoint_m": [
+          4.068646516720935,
+          0.22671790660936114
+        ],
+        "quad_height_m": 0.0006564964021187531,
+        "triangle_height_m": 0.03984860866980512,
+        "outside_over_inside": 60.69889879243685
+      },
+      {
+        "interface_edge_id": 1899,
+        "edge_midpoint_m": [
+          3.0070151963417775,
+          0.15468961365175027
+        ],
+        "quad_height_m": 0.0005374660930479368,
+        "triangle_height_m": 0.032584032406137615,
+        "outside_over_inside": 60.62528004577106
+      }
+    ]
+  }
+}

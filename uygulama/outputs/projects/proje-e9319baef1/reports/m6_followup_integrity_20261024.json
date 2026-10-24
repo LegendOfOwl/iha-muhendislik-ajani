@@ -1,0 +1,158 @@
+{
+  "verified_utc": "2026-10-24T13:31:46.809979+00:00",
+  "checks": {
+    "frozen_predictions": true,
+    "same_config_bytes": true,
+    "same_seed_bytes": true,
+    "unchanged_limits": true,
+    "geometry_readback": true,
+    "all_271_points": true,
+    "raw_sources_unchanged": true,
+    "baseline_inputs_unchanged": true,
+    "order_and_RAE_preservation": true,
+    "actual_UAV_inputs_unchanged": true
+  },
+  "frozen": [
+    {
+      "file": "outputs\\projects\\proje-e9319baef1\\reports\\m6_jst_prediction_frozen_20261024_v2.json",
+      "hash_records": 74,
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "file": "outputs\\projects\\proje-e9319baef1\\reports\\m6_wallnormal_prediction_frozen_20261024_v3.json",
+      "hash_records": 74,
+      "mismatches": [],
+      "passed": true
+    }
+  ],
+  "geometry": {
+    "same_cell_topology": true,
+    "same_boundary_topology": true,
+    "same_wall_coordinates": true,
+    "same_farfield_coordinates": true,
+    "tetrahedra_coordinates_unchanged": true,
+    "symmetry_plane_y_unchanged": true,
+    "changed_interior_nodes": 77856,
+    "node_count": 100592
+  },
+  "source_data": [
+    {
+      "file": "work\\validation\\sources\\m6_nasa.html",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\mesh_ONERAM6_turb_hybrid_258969.su2",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp1l.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp1u.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp2l.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp2u.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp3l.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp3u.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp4l.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp4u.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp5l.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp5u.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp6l.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp6u.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp7l.ex",
+      "unchanged": true
+    },
+    {
+      "file": "work\\validation\\sources\\cp7u.ex",
+      "unchanged": true
+    }
+  ],
+  "all_point_tables": [
+    {
+      "file": "outputs\\projects\\proje-e9319baef1\\data\\m6_jst_control_20261024_v2\\prediction\\experimental_comparison.csv",
+      "points": 271,
+      "all_finite": true,
+      "unique_sections": 7,
+      "sha256": "3c5a5bf1ec0774974354cc741ebe22e690c960bd3496c030dd9fbf6938087acf"
+    },
+    {
+      "file": "outputs\\projects\\proje-e9319baef1\\data\\m6_jst_wallnormal_20261024_v3\\prediction\\experimental_comparison.csv",
+      "points": 271,
+      "all_finite": true,
+      "unique_sections": 7,
+      "sha256": "622d7aa32908a3f0481b9b6b1cbe6eb7701bfb11a8f63b4fa34b89a1f06b4e5f"
+    }
+  ],
+  "dependency": {
+    "RAE_closed_before_both": true,
+    "closure_unchanged": true,
+    "RAE_report_unchanged": true,
+    "RAE_integrity_record_unchanged": true
+  },
+  "actual_UAV_inputs": {
+    "outputs/data/project/conceptual_steps.json": true,
+    "outputs/data/project/mass_budget.json": true,
+    "outputs/data/project/mission.json": true
+  },
+  "initial_rejection": {
+    "config_guard_rejected": true,
+    "no_history_or_flow": true
+  },
+  "evidence_checks_passed": true,
+  "minimum_physical_qualification_passed": false,
+  "note": "Integrity/readback checks do not turn failed residual/experiment or missing grid/BL/farfield gates into successful physics",
+  "report_links": [
+    {
+      "file": "outputs\\projects\\proje-e9319baef1\\reports\\m6_24_ekim.html",
+      "local_references": 22,
+      "missing": []
+    },
+    {
+      "file": "outputs\\reports\\onera_m6_24_ekim.html",
+      "local_references": 1,
+      "missing": []
+    }
+  ],
+  "fresh_Tecplot_reference": {
+    "record": "outputs\\projects\\proje-e9319baef1\\reports\\m6_reference_recheck_20261024.json",
+    "record_sha256": "d7396d6b6ec8283a93bba933f1b0c254685b014ae8c0688778dd2a6c6f103028",
+    "original_matches_fresh_NASA_bytes": true,
+    "sha256": "1e99e2ba5b70c2988c3a12b3daeaf1d31ebeed5a4241f15a77af5f95d49ba0ea"
+  },
+  "final_verified_utc": "2026-10-24T13:38:39.731461+00:00"
+}

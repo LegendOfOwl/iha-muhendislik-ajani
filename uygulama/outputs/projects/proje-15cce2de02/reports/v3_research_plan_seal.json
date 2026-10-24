@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-10-19T18:36:37.093865+00:00",
+  "role": "Research-motivated continuation, main agent knows v1/v2 experiment scores; not independent blind validation.",
+  "source_grid_role": "diagnostic only; run already in progress, no Cp comparison made yet",
+  "new_family_roles": {
+    "coarse": "v3_cgrid_coarse",
+    "medium": "v3_cgrid_medium",
+    "fine_validation": "v3_cgrid_fine"
+  },
+  "scales": [
+    0.6666666666666666,
+    1,
+    1.5
+  ],
+  "same_geometry_curve_sha256": "050ee43ead96df3cbc2a34649cf06c0839ed6fe47ae8aaf4955744d19f49cf5a",
+  "initial_family_numerics": "v2 medium settings, uniform freestream. If a case stagnates, preserve it and change one numerical policy in a separately named attempt.",
+  "minimum_acceptance": false,
+  "gates": "All existing contract gates remain conjunctive. Missing farfield or regional sensitivity remains open.",
+  "sha256": {
+    "work\\blind_validation\\contract.json": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+    "work\\mesh_research\\research_plan.md": "e612d71ced9a376a22d6d8269698acf1b428acbafd3907a1707c4ee971a100a6",
+    "work\\mesh_research\\cgrid\\build_cgrid.py": "9d385936e598c2371179f8a5a4fe44e44964b2ccc1c5a6d674b1f62912a48637",
+    "work\\mesh_research\\reference\\run_reference_control.py": "6a8843aa6a59c844f374753893c221bc01a1163a127020f3faf4042efa8bafbf",
+    "work\\mesh_research\\run_case.py": "0b48de6c3fea58c8c1439feca26ca1ea8fa7bf02730e37f8329b3bd9287ddb69"
+  }
+}

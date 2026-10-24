@@ -1,0 +1,99 @@
+{
+  "verified_utc": "2026-10-24T12:45:16.592870+00:00",
+  "manifests": [
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\prediction_frozen.json",
+      "records": 73,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\prediction_v2_frozen.json",
+      "records": 649,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\v3_diagnostic_freeze_01.json",
+      "records": 180,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\v3_diagnostic_freeze_02.json",
+      "records": 248,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\v3_diagnostic_freeze_03.json",
+      "records": 144,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\v3_diagnostic_freeze_04.json",
+      "records": 64,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\v3_diagnostic_freeze_05.json",
+      "records": 107,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\v3_diagnostic_freeze_06.json",
+      "records": 70,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\prediction_v3_cgrid_diagnostic_manifest.json",
+      "records": 9,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\prediction_v3_cgrid_localr3_mesh_manifest.json",
+      "records": 41,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\prediction_v3_cgrid_interfacer4_mesh_manifest.json",
+      "records": 46,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "outputs\\projects\\proje-15cce2de02\\reports\\v3_firstorder_control_prediction_frozen.json",
+      "records": 179,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "actual_UAV_inputs_unchanged": {
+    "outputs/data/project/conceptual_steps.json": true,
+    "outputs/data/project/mass_budget.json": true,
+    "outputs/data/project/mission.json": true
+  },
+  "original_plan_helper_preserved_with_matching_hash": true,
+  "contract_unchanged": true,
+  "HTML_links": [
+    {
+      "file": "outputs\\projects\\proje-15cce2de02\\reports\\v3_research_diagnosis.html",
+      "local_references": 49,
+      "missing": []
+    },
+    {
+      "file": "outputs\\reports\\kaynakli_cfd_teshisi.html",
+      "local_references": 1,
+      "missing": []
+    }
+  ],
+  "evidence_checks_passed": true,
+  "minimum_physical_qualification_passed": false,
+  "scope": "Evidence integrity/software checks only; failed CFD gates stay failed"
+}

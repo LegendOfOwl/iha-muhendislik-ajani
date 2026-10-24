@@ -1,0 +1,46 @@
+{
+  "source_surface": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_jst_control_20261024_v2\\surface_flow_002999.vtu",
+  "surface_sha256": "fcf309a0e0f3753f224a9b59795ac158d6394adb12de5376a8686b31d0803028",
+  "field_iteration": 2999,
+  "points": 3290,
+  "display_triangles": 6545,
+  "gmsh_SDK_version": "4.15.2",
+  "gmsh_SDK_counts": [
+    [
+      6545
+    ],
+    [
+      6545
+    ]
+  ],
+  "native_gmsh_readback_exit": 0,
+  "native_gmsh_sha256": "7f583d16dc0d6a80ff25c4e979b43b20f6d5c99a027de55a33ca678c1258ff65",
+  "POS": "outputs\\projects\\proje-e9319baef1\\data\\m6_jst_control_20261024_v2\\views\\native_wing_fields.pos",
+  "POS_sha256": "106f35e5f7849723ffa8caa26108e56b4f40bfea2838517ca877ef73f8e1228b",
+  "plot": "outputs\\projects\\proje-e9319baef1\\plots\\m6_main_native_fields_20261024.png",
+  "yplus_max_location_m": [
+    0.6794965267181396,
+    1.1787198781967163,
+    0.005254081916064024
+  ],
+  "yplus_max": 1.4580680131912231,
+  "spanwise_yplus": {
+    "eta0to0p2": {
+      "points": 592,
+      "yplus_max": 1.3136368989944458,
+      "fraction_below1": 0.3547297297297297
+    },
+    "eta0p2to0p8": {
+      "points": 2009,
+      "yplus_max": 1.2975980043411255,
+      "fraction_below1": 0.430562468889995
+    },
+    "eta_gt0p8": {
+      "points": 689,
+      "yplus_max": 1.4580680131912231,
+      "fraction_below1": 0.4397677793904209
+    }
+  },
+  "native_field_unchanged": true,
+  "scope": "Display and reading validation of actual fields; finite/maxy+ and iterative/experimental acceptance remain separate"
+}

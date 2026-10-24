@@ -1,0 +1,40 @@
+{
+  "role": "Published WIND numerical curve, not our solver and not experimental coefficients",
+  "source": "https://www.grc.nasa.gov/www/wind/valid/raetaf/raetaf04/raetaf04.html",
+  "misleading_file_header": "cp.wind.gen says Experiment in its label; source page identifies generated WIND data. File label alone does not determine data type.",
+  "source_file_sha256": "eb4371990d743e1fd66c97efde5f66d78109d72a771d23b967a2712d84f02d6c",
+  "raw_reference": {
+    "points": 103,
+    "RMSE": 1.035707226321211,
+    "mean_bias": 0.04915462494791924,
+    "p95_abs_error": 1.659753406811612,
+    "max_abs_error": 1.7074856929807454,
+    "fraction_within_source_uncertainty_0p0026": 0.0
+  },
+  "original_table_reference": {
+    "points": 103,
+    "RMSE": 1.0281702158894674,
+    "mean_bias": 0.040962391938210496,
+    "p95_abs_error": 1.659753406811612,
+    "max_abs_error": 1.7074856929807454,
+    "fraction_within_source_uncertainty_0p0026": 0.0
+  },
+  "upper": {
+    "points": 54,
+    "RMSE": 1.0201817682758065,
+    "mean_bias": 0.90209220212396,
+    "p95_abs_error": 1.6381095240668704,
+    "max_abs_error": 1.6720886918633195,
+    "fraction_within_source_uncertainty_0p0026": 0.0
+  },
+  "lower": {
+    "points": 49,
+    "RMSE": 1.03690252907534,
+    "mean_bias": -0.9080378070420033,
+    "p95_abs_error": 1.6894638230538965,
+    "max_abs_error": 1.7074856929807454,
+    "fraction_within_source_uncertainty_0p0026": 0.0
+  },
+  "threshold_unchanged": 0.03,
+  "our_qualification_unchanged": false
+}

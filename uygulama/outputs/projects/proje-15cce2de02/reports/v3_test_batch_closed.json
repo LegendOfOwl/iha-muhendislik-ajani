@@ -1,0 +1,46 @@
+{
+  "closed_utc": "2026-10-24T12:45:16.629110+00:00",
+  "bounded_test_and_review_completed": true,
+  "task_id": "20261019-201609-ab8031",
+  "native_attempts_with_result_records": 14,
+  "firstorder_diagnostics": {
+    "v3_r4roe_coarse_firstorder_control": {
+      "field_checkpoint_iteration": 4200,
+      "density_log10_residual": -7.773163062,
+      "CL_final200_range": 5.37939999999959e-05,
+      "CD_final200_range": 2.945880000000678e-06,
+      "max_wall_yplus": 0.4714072346687317,
+      "checks": {
+        "density_log10_below_minus8": false,
+        "CL_final200_range_below_5e_5": false,
+        "CD_final200_range_below_2e_6": false,
+        "max_wall_yplus_below1": true
+      }
+    },
+    "v3_r4roe_firstorder_cont4200": {
+      "field_checkpoint_iteration": 2999,
+      "density_log10_residual": -7.994377321,
+      "CL_final200_range": 5.6297300000007766e-05,
+      "CD_final200_range": 8.884500000000406e-07,
+      "max_wall_yplus": 0.4713245630264282,
+      "checks": {
+        "density_log10_below_minus8": false,
+        "CL_final200_range_below_5e_5": false,
+        "CD_final200_range_below_2e_6": true,
+        "max_wall_yplus_below1": true
+      }
+    }
+  },
+  "minimum_physical_qualification_passed": false,
+  "open_gates": [
+    "converged three-grid CFD family",
+    "regional normal sensitivity and full boundary-layer resolution",
+    "controlled farfield200c/400c solve",
+    "preselected fine experiment gate"
+  ],
+  "evidence_integrity_sha256": "bbc70c4617c04d6d0b557c5b442e5826553dbbe2aeb276f8099ac5ebd3823cb9",
+  "report": "outputs\\projects\\proje-15cce2de02\\reports\\v3_research_diagnosis.html",
+  "report_sha256": "ab13dee50b276154d7c549d85f3b8f15adde5350b10c48fcd28bc358ca90702d",
+  "next_authorized_step": "New ONERA M6 3D native RANS test, as requested on2026-10-24",
+  "no_claim": "Not a successful general CFD service, validated RAE airfoil or flightworthy aircraft"
+}

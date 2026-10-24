@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-19T19:31:11.828273+00:00",
+  "new_grid_revision": "Compact all-interface tangential-spacing-controlled outer triangles, same tail-r2 near block/sourcecurve/200c domain",
+  "roles": {
+    "coarse": "v3_cgrid_interfacer4_coarse_warmstart",
+    "medium": "v3_cgrid_interfacer4_medium_warmstart",
+    "fine": "v3_cgrid_interfacer4_fine_warmstart"
+  },
+  "fine_validation_role_preselected": true,
+  "initialization": "Each uses own v2_r2_fine_cfl1 checkpoint3400 as guess; native must reconverge. Prior failed-original-coarse1000 seed not reused.",
+  "physics": "Same frozen M0.729/AOA2.31/Re6.5M/T255.5556/SA-noft2/adiabatic",
+  "numerical_method": "JST_MAT entropy0.05/factor4/WLS/MG3/CFL1 fixed/FGMRES-ILU tolerance0.05 max15",
+  "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "coarse_mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+  "generator_sha256": "67e9041008821d4b0d8ac56ba1b672b46dbdaca821f8c304bf7c21977f575112",
+  "minimum_qualification_passed": false,
+  "scope": "New numerical mesh family; v3 earlier failures preserved; no switching to the best experiment fitting run."
+}

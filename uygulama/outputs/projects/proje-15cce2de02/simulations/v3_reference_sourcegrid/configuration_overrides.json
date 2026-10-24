@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-19T18:27:54.531258+00:00",
+  "case": "v3_reference_sourcegrid",
+  "base_config": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium\\case.cfg",
+  "base_sha256": "04a9b6ddd636bc805b1bddbff9a34ccbdcc7a122839653adfa5c0d9122814d0e",
+  "config_sha256": "62724a82ed1bb67f763214ba7e09fb4eaa513f865beb1c1ea90de078fcf179b4",
+  "mesh_sha256": "d7b5240cdccf53ef031609dde0b6b50f199d4e4e422f25cefb2aa86adc69adbd",
+  "overrides": {
+    "RESTART_SOL": {
+      "base": "YES",
+      "new": "NO"
+    },
+    "SOLUTION_FILENAME": {
+      "base": "seed",
+      "new": "solution"
+    }
+  },
+  "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "physical_and_numerical_method_unchanged": true,
+  "restart": "uniform freestream; no interpolation from a different mesh",
+  "role_preselected": "diagnostic only; cannot replace preselected v2 fine validation",
+  "time_budget_seconds": 1000,
+  "maximum_iterations": 8000
+}

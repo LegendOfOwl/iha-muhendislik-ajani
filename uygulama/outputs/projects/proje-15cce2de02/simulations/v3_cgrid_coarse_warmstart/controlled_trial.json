@@ -1,0 +1,8 @@
+{
+  "paired_control": "v3_cgrid_coarse_cfl1",
+  "only_changed_arithmetic_input": "Initial field from own converged same-source-curve v2 fine3400 rather than failed coarse1000. Same equations/mesh/physical conditions/CFL1/MG3/JST_MAT/entropy0.05/Jacobianfactor4.",
+  "logging_only": "Additional MAX_RES,LINSOL,CFL_NUMBER fields do not change equations",
+  "hypothesis": "The same unstable cold-start1000 field may persist across numerical branches; distinguish initialization robustness from a unique physical steady solution. Must reconverge native fields and original gates, no credit for an interpolated seed.",
+  "scope": "Own native interpolation; no expected experimental solution used",
+  "minimum_acceptance": false
+}

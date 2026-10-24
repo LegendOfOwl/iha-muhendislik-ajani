@@ -1,0 +1,15 @@
+{
+  "scope": "Rejected geometry-only assumption; no new solver mesh, no new flow run",
+  "reason": "Canonical prism extrusion edges are not a wall-normal column family on this published grid",
+  "source_mesh_sha256": "d20855c5a7b97cf6c32713f4f406b9b5b158b937a97ba583855dc58afe87e9f4",
+  "wing_face_types": {
+    "5": 6545
+  },
+  "wing_vertex_prism_extrusion_degree": {
+    "1": 3290,
+    "2": 3255
+  },
+  "wall_geometry_or_original_mesh_changed": false,
+  "mesh_emitted": false,
+  "minimum_qualification_passed": false
+}

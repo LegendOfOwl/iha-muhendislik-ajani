@@ -1,0 +1,29 @@
+{
+  "base_config": "outputs\\projects\\proje-15cce2de02\\simulations\\v2_r2_medium\\case.cfg",
+  "base_sha256": "04a9b6ddd636bc805b1bddbff9a34ccbdcc7a122839653adfa5c0d9122814d0e",
+  "mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+  "config_sha256": "31b65e4835932bec989b083684133023f1d7f4cf0bb9e8bb640a84c35039db61",
+  "overrides": {
+    "CFL_NUMBER": {
+      "base": "6.0",
+      "new": "1.0"
+    },
+    "CFL_ADAPT": {
+      "base": "YES",
+      "new": "NO"
+    },
+    "ITER": {
+      "base": "8000",
+      "new": "10000"
+    },
+    "HISTORY_OUTPUT": {
+      "base": "( ITER, RMS_RES, AERO_COEFF )",
+      "new": "( ITER, RMS_RES, MAX_RES, AERO_COEFF, LINSOL, CFL_NUMBER )"
+    }
+  },
+  "physical_fields_unchanged": true,
+  "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "seed_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_coarse_warmstart\\seed.dat",
+  "seed_sha256": "12187e66e81eefae21e817fa3ac7e47c01386c13191c23249dd16b1c56f18f3e",
+  "rationale": "Same v2 RANS/SA numerical method on a research-motivated source-preserving explicit C-block. Target forces and Cp not provided to native solver; main agent knows earlier evaluation so this is not a new independent blind trial."
+}

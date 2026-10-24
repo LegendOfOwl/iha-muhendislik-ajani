@@ -1,0 +1,2205 @@
+{
+  "scope": "Own native 1200/1400/4000 fields at actual R4 interface; no expected result, no CFD run.",
+  "residual_scope": "Native exported LinSysRes working vector, not reconstructed and not substituted for history GetRes_RMS. Unweighted nodal squared sums describe these exported arrays only.",
+  "field_precision": "VTU Float32 states/residuals mapped to original double SU2 coordinates.",
+  "mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+  "interface_metric": "h_quad=mean perpendicular distance of two off-edge quad vertices; h_tri=perpendicular height of off-edge triangle vertex; ratio=h_tri/h_quad.",
+  "high_ratio_band_selection": "All real interface edges with h_triangle/h_quad>20; threshold used only to summarize a diagnosed geometric region, never as a mesh pass cutoff.",
+  "high_ratio_edges": 177,
+  "high_ratio_adjacent_unique_nodes": 549,
+  "high_ratio_midpoint_bbox_m": [
+    [
+      1.4924457726790907,
+      -0.03935328293046886
+    ],
+    [
+      7.888423805559994,
+      0.5619928498627738
+    ]
+  ],
+  "worst_edges": [
+    {
+      "interface_edge_id": 844,
+      "midpoint_m": [
+        2.7559188613197287,
+        0.1403061687538733
+      ],
+      "quad_id": 77704,
+      "triangle_id": 185,
+      "interface_nodes": [
+        78528,
+        78529
+      ],
+      "quad_nodes": [
+        77612,
+        77613,
+        78529,
+        78528
+      ],
+      "triangle_nodes": [
+        78528,
+        78529,
+        83482
+      ],
+      "quad_height_m": 0.0011588064011558825,
+      "triangle_height_m": 0.08827338817372815,
+      "outside_over_inside_height": 76.17613096171846
+    },
+    {
+      "interface_edge_id": 849,
+      "midpoint_m": [
+        3.1278395094530813,
+        0.1619709954137643
+      ],
+      "quad_id": 77709,
+      "triangle_id": 6589,
+      "interface_nodes": [
+        78533,
+        78534
+      ],
+      "quad_nodes": [
+        77617,
+        77618,
+        78534,
+        78533
+      ],
+      "triangle_nodes": [
+        78533,
+        78534,
+        80743
+      ],
+      "quad_height_m": 0.0012107070277512745,
+      "triangle_height_m": 0.08225848443563927,
+      "outside_over_inside_height": 67.94251833858051
+    },
+    {
+      "interface_edge_id": 851,
+      "midpoint_m": [
+        3.2766077687064223,
+        0.17124557852800398
+      ],
+      "quad_id": 77711,
+      "triangle_id": 6749,
+      "interface_nodes": [
+        78535,
+        78536
+      ],
+      "quad_nodes": [
+        77619,
+        77620,
+        78536,
+        78535
+      ],
+      "triangle_nodes": [
+        78535,
+        78536,
+        82781
+      ],
+      "quad_height_m": 0.0012377876435123803,
+      "triangle_height_m": 0.08289734252889647,
+      "outside_over_inside_height": 66.97218457736797
+    },
+    {
+      "interface_edge_id": 853,
+      "midpoint_m": [
+        3.4253760279597634,
+        0.1808793032985337
+      ],
+      "quad_id": 77713,
+      "triangle_id": 6867,
+      "interface_nodes": [
+        78537,
+        78538
+      ],
+      "quad_nodes": [
+        77621,
+        77622,
+        78538,
+        78537
+      ],
+      "triangle_nodes": [
+        78537,
+        78538,
+        82823
+      ],
+      "quad_height_m": 0.001268680999312854,
+      "triangle_height_m": 0.08106015853117043,
+      "outside_over_inside_height": 63.893254943578754
+    },
+    {
+      "interface_edge_id": 847,
+      "midpoint_m": [
+        2.9790712501997403,
+        0.15304887510320833
+      ],
+      "quad_id": 77707,
+      "triangle_id": 6510,
+      "interface_nodes": [
+        78531,
+        78532
+      ],
+      "quad_nodes": [
+        77615,
+        77616,
+        78532,
+        78531
+      ],
+      "triangle_nodes": [
+        78531,
+        78532,
+        83478
+      ],
+      "quad_height_m": 0.0011873154503919858,
+      "triangle_height_m": 0.07282148584829574,
+      "outside_over_inside_height": 61.332888260027374
+    },
+    {
+      "interface_edge_id": 837,
+      "midpoint_m": [
+        2.2499207411825477,
+        0.11403784317383361
+      ],
+      "quad_id": 77697,
+      "triangle_id": 7525,
+      "interface_nodes": [
+        78521,
+        78522
+      ],
+      "quad_nodes": [
+        77605,
+        77606,
+        78522,
+        78521
+      ],
+      "triangle_nodes": [
+        78521,
+        78522,
+        82964
+      ],
+      "quad_height_m": 0.0011200644941175531,
+      "triangle_height_m": 0.06696792552061195,
+      "outside_over_inside_height": 59.789347731599044
+    },
+    {
+      "interface_edge_id": 864,
+      "midpoint_m": [
+        4.243601453853139,
+        0.24035973240882952
+      ],
+      "quad_id": 77724,
+      "triangle_id": 1909,
+      "interface_nodes": [
+        78548,
+        78549
+      ],
+      "quad_nodes": [
+        77632,
+        77633,
+        78549,
+        78548
+      ],
+      "triangle_nodes": [
+        78548,
+        78549,
+        82661
+      ],
+      "quad_height_m": 0.0015096632243021193,
+      "triangle_height_m": 0.0878994884982855,
+      "outside_over_inside_height": 58.22456762760403
+    },
+    {
+      "interface_edge_id": 848,
+      "midpoint_m": [
+        3.053455379826411,
+        0.15746638664028725
+      ],
+      "quad_id": 77708,
+      "triangle_id": 6560,
+      "interface_nodes": [
+        78532,
+        78533
+      ],
+      "quad_nodes": [
+        77616,
+        77617,
+        78533,
+        78532
+      ],
+      "triangle_nodes": [
+        78532,
+        78533,
+        82754
+      ],
+      "quad_height_m": 0.0011985589196427872,
+      "triangle_height_m": 0.06951661567728053,
+      "outside_over_inside_height": 58.000165480391175
+    }
+  ],
+  "iterations": [
+    {
+      "iteration": 1200,
+      "field_path": "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_coarse_warmstart\\flow_001200.vtu",
+      "field_sha256": "8e6bd27eef0639b0f90342b66255303e09c15ffe785c95b4ade542b2ab5e18e3",
+      "high_ratio_band": {
+        "density": {
+          "fraction_exported_nodal_sum_squared": 0.003532639320996189,
+          "band_abs_max_over_global": 0.24611122266272953,
+          "band_abs_max": 1.5954512491589412e-05,
+          "global_abs_max": 6.482643220806494e-05,
+          "global_max_xy_m": [
+            0.5274949366876367,
+            0.12012498493172852
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.9657804017416494
+        },
+        "momentum_norm": {
+          "fraction_exported_nodal_sum_squared": 0.0026751158843246452,
+          "band_abs_max_over_global": 0.1597533991172432,
+          "band_abs_max": 2.555271807186636e-05,
+          "global_abs_max": 0.0001599510133309476,
+          "global_max_xy_m": [
+            7.330542833359965,
+            0.16005360783873457
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.17968593242661923
+        },
+        "energy": {
+          "fraction_exported_nodal_sum_squared": 0.002542190078056419,
+          "band_abs_max_over_global": 0.2986801167840517,
+          "band_abs_max": 6.699530786136165e-05,
+          "global_abs_max": 0.00022430454555433244,
+          "global_max_xy_m": [
+            0.5274949366876367,
+            0.12123815183345121
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.9658271705134615
+        },
+        "SA": {
+          "fraction_exported_nodal_sum_squared": 0.003000742769416387,
+          "band_abs_max_over_global": 0.487272530773596,
+          "band_abs_max": 1.8200474460883243e-09,
+          "global_abs_max": 3.735173503827127e-09,
+          "global_max_xy_m": [
+            1.9907585815758706,
+            -0.004078653175649087
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.031147688745778855
+        }
+      },
+      "worst_edge_local_fields": [
+        {
+          "interface_edge_id": 837,
+          "local_abs_max_over_global": {
+            "density": 0.24138223529315372,
+            "momentum_norm": 0.11837668475756907,
+            "energy": 0.2825343057855309,
+            "SA": 0.005248571475364656
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7202176451683044,
+              "median": 0.7211099863052368,
+              "p99": 0.7224590444564819,
+              "max": 0.7225110530853271
+            },
+            "Density": {
+              "min": 1.0033886432647705,
+              "median": 1.0034056901931763,
+              "p99": 1.00377592086792,
+              "max": 1.0037760734558105
+            },
+            "Pressure": {
+              "min": 1.35067880153656,
+              "median": 1.3512508869171143,
+              "p99": 1.3519934844970702,
+              "max": 1.3519970178604126
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77605,
+                77606
+              ],
+              "mean_xy_m": [
+                2.2499207411825477,
+                0.1129164557641296
+              ],
+              "mean_normal_s_m": -0.0011200644941175598,
+              "Mach": 0.7208468914031982,
+              "Density": 1.0035889744758606,
+              "Pressure": 1.3516239523887634
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78521,
+                78522
+              ],
+              "mean_xy_m": [
+                2.2499207411825477,
+                0.11403784317383361
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7206638157367706,
+              "Density": 1.0035881400108337,
+              "Pressure": 1.3515399098396301
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82964
+              ],
+              "mean_xy_m": [
+                2.246895458259834,
+                0.18093778491276608
+              ],
+              "mean_normal_s_m": 0.06696792552061194,
+              "Mach": 0.7225110530853271,
+              "Density": 1.0033886432647705,
+              "Pressure": 1.35067880153656
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 844,
+          "local_abs_max_over_global": {
+            "density": 0.0865852726759904,
+            "momentum_norm": 0.10658241826013569,
+            "energy": 0.07419135192597474,
+            "SA": 0.004054818100265097
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7235921621322632,
+              "median": 0.7238989472389221,
+              "p99": 0.7256464791297913,
+              "max": 0.7257091999053955
+            },
+            "Density": {
+              "min": 1.0018006563186646,
+              "median": 1.0018221139907837,
+              "p99": 1.0018315887451172,
+              "max": 1.0018317699432373
+            },
+            "Pressure": {
+              "min": 1.3475818634033203,
+              "median": 1.348009467124939,
+              "p99": 1.3480517673492431,
+              "max": 1.3480530977249146
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77612,
+                77613
+              ],
+              "mean_xy_m": [
+                2.7559188613197287,
+                0.13914558370474753
+              ],
+              "mean_normal_s_m": -0.0011588064011558827,
+              "Mach": 0.7237380146980286,
+              "Density": 1.0018187165260315,
+              "Pressure": 1.3480312824249268
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78528,
+                78529
+              ],
+              "mean_xy_m": [
+                2.7559188613197287,
+                0.1403061687538733
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7240200638771057,
+              "Density": 1.0018269419670105,
+              "Pressure": 1.348003089427948
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                83482
+              ],
+              "mean_xy_m": [
+                2.7635644667934898,
+                0.22913882019649515
+              ],
+              "mean_normal_s_m": 0.08827338817372817,
+              "Mach": 0.7257091999053955,
+              "Density": 1.0018006563186646,
+              "Pressure": 1.3475818634033203
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 847,
+          "local_abs_max_over_global": {
+            "density": 0.042439845181817475,
+            "momentum_norm": 0.1597533991172432,
+            "energy": 0.05827936918239292,
+            "SA": 0.0047334052923582275
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7235117554664612,
+              "median": 0.7242858409881592,
+              "p99": 0.7249848461151123,
+              "max": 0.7249946594238281
+            },
+            "Density": {
+              "min": 1.001916766166687,
+              "median": 1.0020670890808105,
+              "p99": 1.00210205078125,
+              "max": 1.0021028518676758
+            },
+            "Pressure": {
+              "min": 1.347866415977478,
+              "median": 1.3483285903930664,
+              "p99": 1.348494849205017,
+              "max": 1.3484965562820435
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77615,
+                77616
+              ],
+              "mean_xy_m": [
+                2.9790712501997403,
+                0.15185950845853963
+              ],
+              "mean_normal_s_m": -0.0011873154503919858,
+              "Mach": 0.7245175838470459,
+              "Density": 1.002074956893921,
+              "Pressure": 1.3483912348747253
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78531,
+                78532
+              ],
+              "mean_xy_m": [
+                2.9790712501997403,
+                0.15304887510320833
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7238145172595978,
+              "Density": 1.0020709037780762,
+              "Pressure": 1.3483840823173523
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                83478
+              ],
+              "mean_xy_m": [
+                2.9777270003023193,
+                0.22591711644546403
+              ],
+              "mean_normal_s_m": 0.07282148584829574,
+              "Mach": 0.7249946594238281,
+              "Density": 1.001916766166687,
+              "Pressure": 1.347866415977478
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 848,
+          "local_abs_max_over_global": {
+            "density": 0.0963532684742668,
+            "momentum_norm": 0.1597533991172432,
+            "energy": 0.07459871457875784,
+            "SA": 0.002921478134140337
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7241172790527344,
+              "median": 0.7247493267059326,
+              "p99": 0.724972722530365,
+              "max": 0.7249734401702881
+            },
+            "Density": {
+              "min": 1.001796007156372,
+              "median": 1.0019327402114868,
+              "p99": 1.0020659637451172,
+              "max": 1.0020670890808105
+            },
+            "Pressure": {
+              "min": 1.3476847410202026,
+              "median": 1.348092794418335,
+              "p99": 1.3483263111114503,
+              "max": 1.3483285903930664
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77616,
+                77617
+              ],
+              "mean_xy_m": [
+                3.053455379826411,
+                0.15626567444266432
+              ],
+              "mean_normal_s_m": -0.001198558919642787,
+              "Mach": 0.7248524129390717,
+              "Density": 1.0019999146461487,
+              "Pressure": 1.3482106924057007
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78532,
+                78533
+              ],
+              "mean_xy_m": [
+                3.053455379826411,
+                0.15746638664028725
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7243065536022186,
+              "Density": 1.0019580125808716,
+              "Pressure": 1.3481340408325195
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82754
+              ],
+              "mean_xy_m": [
+                3.052153103255895,
+                0.22702979594056882
+              ],
+              "mean_normal_s_m": 0.06951661567728053,
+              "Mach": 0.7249734401702881,
+              "Density": 1.001796007156372,
+              "Pressure": 1.3476847410202026
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 849,
+          "local_abs_max_over_global": {
+            "density": 0.12426780454555199,
+            "momentum_norm": 0.10513828682811507,
+            "energy": 0.10319490296249062,
+            "SA": 0.0032862540290901185
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7244958281517029,
+              "median": 0.7250017523765564,
+              "p99": 0.7255102491378784,
+              "max": 0.7255213856697083
+            },
+            "Density": {
+              "min": 1.0016556978225708,
+              "median": 1.001723289489746,
+              "p99": 1.001930513381958,
+              "max": 1.0019327402114868
+            },
+            "Pressure": {
+              "min": 1.3473316431045532,
+              "median": 1.3476873636245728,
+              "p99": 1.3480889415740966,
+              "max": 1.348092794418335
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77617,
+                77618
+              ],
+              "mean_xy_m": [
+                3.1278395094530813,
+                0.16075802703513725
+              ],
+              "mean_normal_s_m": -0.0012107070277512883,
+              "Mach": 0.7250992357730865,
+              "Density": 1.0018280148506165,
+              "Pressure": 1.3478900790214539
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78533,
+                78534
+              ],
+              "mean_xy_m": [
+                3.1278395094530813,
+                0.1619709954137643
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7247487902641296,
+              "Density": 1.0017922520637512,
+              "Pressure": 1.3478200435638428
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                80743
+              ],
+              "mean_xy_m": [
+                3.1315412322681127,
+                0.24460947460925747
+              ],
+              "mean_normal_s_m": 0.08225848443563925,
+              "Mach": 0.7255213856697083,
+              "Density": 1.0016556978225708,
+              "Pressure": 1.3473316431045532
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 851,
+          "local_abs_max_over_global": {
+            "density": 0.1248795410877409,
+            "momentum_norm": 0.07026607985568119,
+            "energy": 0.12438059921924685,
+            "SA": 0.008552012401997273
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7254107594490051,
+              "median": 0.7255722880363464,
+              "p99": 0.7261231803894043,
+              "max": 0.7261295318603516
+            },
+            "Density": {
+              "min": 1.0013257265090942,
+              "median": 1.0014123916625977,
+              "p99": 1.0015228080749512,
+              "max": 1.001524567604065
+            },
+            "Pressure": {
+              "min": 1.346714735031128,
+              "median": 1.3470149040222168,
+              "p99": 1.3472931432723998,
+              "max": 1.3472977876663208
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77619,
+                77620
+              ],
+              "mean_xy_m": [
+                3.2766077687064223,
+                0.17000529451775093
+              ],
+              "mean_normal_s_m": -0.0012377876435123798,
+              "Mach": 0.7254580557346344,
+              "Density": 1.0014520287513733,
+              "Pressure": 1.3471563458442688
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78535,
+                78536
+              ],
+              "mean_xy_m": [
+                3.2766077687064223,
+                0.17124557852800398
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7257715165615082,
+              "Density": 1.0014464855194092,
+              "Pressure": 1.3470968008041382
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82781
+              ],
+              "mean_xy_m": [
+                3.2703344338176175,
+                0.25391148418166676
+              ],
+              "mean_normal_s_m": 0.08289734252889648,
+              "Mach": 0.7261295318603516,
+              "Density": 1.0013257265090942,
+              "Pressure": 1.346714735031128
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 853,
+          "local_abs_max_over_global": {
+            "density": 0.03396200908854496,
+            "momentum_norm": 0.05546150433467843,
+            "energy": 0.03190329225382152,
+            "SA": 0.0078397248370946
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7252325415611267,
+              "median": 0.7257294654846191,
+              "p99": 0.7265115904808045,
+              "max": 0.7265300750732422
+            },
+            "Density": {
+              "min": 1.0012485980987549,
+              "median": 1.0012882947921753,
+              "p99": 1.0013854551315307,
+              "max": 1.0013868808746338
+            },
+            "Pressure": {
+              "min": 1.3465923070907593,
+              "median": 1.3467928171157837,
+              "p99": 1.3469877338409424,
+              "max": 1.3469886779785156
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77621,
+                77622
+              ],
+              "mean_xy_m": [
+                3.4253760279597634,
+                0.17960786426879835
+              ],
+              "mean_normal_s_m": -0.0012686809993128678,
+              "Mach": 0.7252748608589172,
+              "Density": 1.0012999176979065,
+              "Pressure": 1.3468763828277588
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78537,
+                78538
+              ],
+              "mean_xy_m": [
+                3.4253760279597634,
+                0.1808793032985337
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7258987128734589,
+              "Density": 1.0013375878334045,
+              "Pressure": 1.3468907475471497
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82823
+              ],
+              "mean_xy_m": [
+                3.4110031311300504,
+                0.2611674408317051
+              ],
+              "mean_normal_s_m": 0.08106015853117043,
+              "Mach": 0.7265300750732422,
+              "Density": 1.001278281211853,
+              "Pressure": 1.3465923070907593
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 864,
+          "local_abs_max_over_global": {
+            "density": 0.08065582792731993,
+            "momentum_norm": 0.01717888860313517,
+            "energy": 0.08782764095527916,
+            "SA": 0.003579905385452123
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7264457941055298,
+              "median": 0.7265954613685608,
+              "p99": 0.7271556448936463,
+              "max": 0.7271752953529358
+            },
+            "Density": {
+              "min": 1.0009301900863647,
+              "median": 1.0009645223617554,
+              "p99": 1.0009923362731934,
+              "max": 1.000993013381958
+            },
+            "Pressure": {
+              "min": 1.3458815813064575,
+              "median": 1.34608793258667,
+              "p99": 1.3461253833770752,
+              "max": 1.346125602722168
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77632,
+                77633
+              ],
+              "mean_xy_m": [
+                4.243601453853139,
+                0.2388453294648556
+              ],
+              "mean_normal_s_m": -0.001509663224302119,
+              "Mach": 0.7264606952667236,
+              "Density": 1.0009845495224,
+              "Pressure": 1.3461228609085083
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78548,
+                78549
+              ],
+              "mean_xy_m": [
+                4.243601453853139,
+                0.24035973240882952
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7266397476196289,
+              "Density": 1.0009587407112122,
+              "Pressure": 1.3460681438446045
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82661
+              ],
+              "mean_xy_m": [
+                4.223189775112998,
+                0.32691647317684164
+              ],
+              "mean_normal_s_m": 0.0878994884982855,
+              "Mach": 0.7271752953529358,
+              "Density": 1.0009301900863647,
+              "Pressure": 1.3458815813064575
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 1400,
+      "field_path": "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_coarse_warmstart\\flow_001400.vtu",
+      "field_sha256": "ba549dffebb4815a1664362ab16ab23c6e15895316b3079d1c4341fd3cdfee5f",
+      "high_ratio_band": {
+        "density": {
+          "fraction_exported_nodal_sum_squared": 0.0016553430623196888,
+          "band_abs_max_over_global": 0.04775265615883366,
+          "band_abs_max": 1.693568628979847e-05,
+          "global_abs_max": 0.00035465433029457927,
+          "global_max_xy_m": [
+            0.5274949366876367,
+            0.11567231732483746
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.9656061368612847
+        },
+        "momentum_norm": {
+          "fraction_exported_nodal_sum_squared": 0.002638532052445085,
+          "band_abs_max_over_global": 0.16264065377966,
+          "band_abs_max": 2.772125408557092e-05,
+          "global_abs_max": 0.00017044480233783816,
+          "global_max_xy_m": [
+            0.5302628084222901,
+            0.12001695733942441
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.9630104309774055
+        },
+        "energy": {
+          "fraction_exported_nodal_sum_squared": 0.001425549529113118,
+          "band_abs_max_over_global": 0.05292182630048749,
+          "band_abs_max": 6.237669003894553e-05,
+          "global_abs_max": 0.0011786571703851223,
+          "global_max_xy_m": [
+            0.5274949366876367,
+            0.11567231732483746
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.9656061368612847
+        },
+        "SA": {
+          "fraction_exported_nodal_sum_squared": 0.005028042730099019,
+          "band_abs_max_over_global": 0.5479139234778794,
+          "band_abs_max": 2.116619546299603e-09,
+          "global_abs_max": 3.863051212249502e-09,
+          "global_max_xy_m": [
+            1.7265791486067315,
+            -0.008135653842043431
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.029708232618372438
+        }
+      },
+      "worst_edge_local_fields": [
+        {
+          "interface_edge_id": 837,
+          "local_abs_max_over_global": {
+            "density": 0.011975938446539956,
+            "momentum_norm": 0.14427053895870345,
+            "energy": 0.019812553113272364,
+            "SA": 0.002633346726675969
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7188854813575745,
+              "median": 0.7191556692123413,
+              "p99": 0.7215205144882202,
+              "max": 0.7216062545776367
+            },
+            "Density": {
+              "min": 1.0039069652557373,
+              "median": 1.0040792226791382,
+              "p99": 1.0041158771514893,
+              "max": 1.0041168928146362
+            },
+            "Pressure": {
+              "min": 1.35169517993927,
+              "median": 1.3525738716125488,
+              "p99": 1.3527120065689087,
+              "max": 1.3527157306671143
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77605,
+                77606
+              ],
+              "mean_xy_m": [
+                2.2499207411825477,
+                0.1129164557641296
+              ],
+              "mean_normal_s_m": -0.0011200644941175598,
+              "Mach": 0.7192075550556183,
+              "Density": 1.0040980577468872,
+              "Pressure": 1.3526448011398315
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78521,
+                78522
+              ],
+              "mean_xy_m": [
+                2.2499207411825477,
+                0.11403784317383361
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7190205752849579,
+              "Density": 1.0040647983551025,
+              "Pressure": 1.3525575995445251
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82964
+              ],
+              "mean_xy_m": [
+                2.246895458259834,
+                0.18093778491276608
+              ],
+              "mean_normal_s_m": 0.06696792552061194,
+              "Mach": 0.7216062545776367,
+              "Density": 1.0039069652557373,
+              "Pressure": 1.35169517993927
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 844,
+          "local_abs_max_over_global": {
+            "density": 0.008016530521515564,
+            "momentum_norm": 0.1114105724841473,
+            "energy": 0.010751131922602677,
+            "SA": 0.006516146611815536
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7233900427818298,
+              "median": 0.7241679430007935,
+              "p99": 0.7255870866775512,
+              "max": 0.7256413102149963
+            },
+            "Density": {
+              "min": 1.0016676187515259,
+              "median": 1.001741647720337,
+              "p99": 1.001840090751648,
+              "max": 1.0018402338027954
+            },
+            "Pressure": {
+              "min": 1.3475068807601929,
+              "median": 1.3478268384933472,
+              "p99": 1.3480911684036254,
+              "max": 1.3480932712554932
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77612,
+                77613
+              ],
+              "mean_xy_m": [
+                2.7559188613197287,
+                0.13914558370474753
+              ],
+              "mean_normal_s_m": -0.0011588064011558827,
+              "Mach": 0.7235556244850159,
+              "Density": 1.001771330833435,
+              "Pressure": 1.3479600548744202
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78528,
+                78529
+              ],
+              "mean_xy_m": [
+                2.7559188613197287,
+                0.1403061687538733
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7242268323898315,
+              "Density": 1.0017521381378174,
+              "Pressure": 1.3478866815567017
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                83482
+              ],
+              "mean_xy_m": [
+                2.7635644667934898,
+                0.22913882019649515
+              ],
+              "mean_normal_s_m": 0.08827338817372817,
+              "Mach": 0.7256413102149963,
+              "Density": 1.001741647720337,
+              "Pressure": 1.3475068807601929
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 847,
+          "local_abs_max_over_global": {
+            "density": 0.026549412309214884,
+            "momentum_norm": 0.0436448509728772,
+            "energy": 0.035672717003398066,
+            "SA": 0.0034921743462732525
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7239084243774414,
+              "median": 0.7241251468658447,
+              "p99": 0.7256033682823181,
+              "max": 0.7256637811660767
+            },
+            "Density": {
+              "min": 1.0016148090362549,
+              "median": 1.0016679763793945,
+              "p99": 1.0017743444442748,
+              "max": 1.0017756223678589
+            },
+            "Pressure": {
+              "min": 1.3474088907241821,
+              "median": 1.3476827144622803,
+              "p99": 1.3478373670578003,
+              "max": 1.3478397130966187
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77615,
+                77616
+              ],
+              "mean_xy_m": [
+                2.9790712501997403,
+                0.15185950845853963
+              ],
+              "mean_normal_s_m": -0.0011873154503919858,
+              "Mach": 0.7240309417247772,
+              "Density": 1.0017095804214478,
+              "Pressure": 1.3477612137794495
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78531,
+                78532
+              ],
+              "mean_xy_m": [
+                2.9790712501997403,
+                0.15304887510320833
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7241198718547821,
+              "Density": 1.001679241657257,
+              "Pressure": 1.3477043509483337
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                83478
+              ],
+              "mean_xy_m": [
+                2.9777270003023193,
+                0.22591711644546403
+              ],
+              "mean_normal_s_m": 0.07282148584829574,
+              "Mach": 0.7256637811660767,
+              "Density": 1.0016679763793945,
+              "Pressure": 1.3474088907241821
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 848,
+          "local_abs_max_over_global": {
+            "density": 0.026549412309214884,
+            "momentum_norm": 0.046793290950164566,
+            "energy": 0.035672717003398066,
+            "SA": 0.0034921743462732525
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7240541577339172,
+              "median": 0.724153459072113,
+              "p99": 0.7253387188911438,
+              "max": 0.7253739237785339
+            },
+            "Density": {
+              "min": 1.0016347169876099,
+              "median": 1.0017582178115845,
+              "p99": 1.00180034160614,
+              "max": 1.0018013715744019
+            },
+            "Pressure": {
+              "min": 1.3473997116088867,
+              "median": 1.3478161096572876,
+              "p99": 1.3478769063949585,
+              "max": 1.3478784561157227
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77616,
+                77617
+              ],
+              "mean_xy_m": [
+                3.053455379826411,
+                0.15626567444266432
+              ],
+              "mean_normal_s_m": -0.001198558919642787,
+              "Mach": 0.7243236303329468,
+              "Density": 1.0017884969711304,
+              "Pressure": 1.3478590846061707
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78532,
+                78533
+              ],
+              "mean_xy_m": [
+                3.053455379826411,
+                0.15746638664028725
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.724089652299881,
+              "Density": 1.0017509460449219,
+              "Pressure": 1.3477985858917236
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82754
+              ],
+              "mean_xy_m": [
+                3.052153103255895,
+                0.22702979594056882
+              ],
+              "mean_normal_s_m": 0.06951661567728053,
+              "Mach": 0.7253739237785339,
+              "Density": 1.0016347169876099,
+              "Pressure": 1.3473997116088867
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 849,
+          "local_abs_max_over_global": {
+            "density": 0.01684350286357187,
+            "momentum_norm": 0.07013605550077005,
+            "energy": 0.02314358989225043,
+            "SA": 0.0034368511869946007
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7240541577339172,
+              "median": 0.724533200263977,
+              "p99": 0.725695013999939,
+              "max": 0.7257311940193176
+            },
+            "Density": {
+              "min": 1.0015485286712646,
+              "median": 1.0016764402389526,
+              "p99": 1.001799645423889,
+              "max": 1.0018013715744019
+            },
+            "Pressure": {
+              "min": 1.3471627235412598,
+              "median": 1.3476247787475586,
+              "p99": 1.3478759622573853,
+              "max": 1.3478784561157227
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77617,
+                77618
+              ],
+              "mean_xy_m": [
+                3.1278395094530813,
+                0.16075802703513725
+              ],
+              "mean_normal_s_m": -0.0012107070277512883,
+              "Mach": 0.7246602475643158,
+              "Density": 1.0017389059066772,
+              "Pressure": 1.3477516174316406
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78533,
+                78534
+              ],
+              "mean_xy_m": [
+                3.1278395094530813,
+                0.1619709954137643
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7242936789989471,
+              "Density": 1.0016788244247437,
+              "Pressure": 1.347657859325409
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                80743
+              ],
+              "mean_xy_m": [
+                3.1315412322681127,
+                0.24460947460925747
+              ],
+              "mean_normal_s_m": 0.08225848443563925,
+              "Mach": 0.7257311940193176,
+              "Density": 1.0015485286712646,
+              "Pressure": 1.3471627235412598
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 851,
+          "local_abs_max_over_global": {
+            "density": 0.010772226071182677,
+            "momentum_norm": 0.04371792071109557,
+            "energy": 0.014611437151812992,
+            "SA": 0.0015959123160468468
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7250458002090454,
+              "median": 0.7254862189292908,
+              "p99": 0.7261235332489013,
+              "max": 0.7261446118354797
+            },
+            "Density": {
+              "min": 1.0011708736419678,
+              "median": 1.0011967420578003,
+              "p99": 1.0014829444885254,
+              "max": 1.0014861822128296
+            },
+            "Pressure": {
+              "min": 1.346505880355835,
+              "median": 1.3466533422470093,
+              "p99": 1.3472398138046264,
+              "max": 1.3472455739974976
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77619,
+                77620
+              ],
+              "mean_xy_m": [
+                3.2766077687064223,
+                0.17000529451775093
+              ],
+              "mean_normal_s_m": -0.0012377876435123798,
+              "Mach": 0.7253358662128448,
+              "Density": 1.001333236694336,
+              "Pressure": 1.3469494581222534
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78535,
+                78536
+              ],
+              "mean_xy_m": [
+                3.2766077687064223,
+                0.17124557852800398
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.725331723690033,
+              "Density": 1.0012880563735962,
+              "Pressure": 1.3468620777130127
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82781
+              ],
+              "mean_xy_m": [
+                3.2703344338176175,
+                0.25391148418166676
+              ],
+              "mean_normal_s_m": 0.08289734252889648,
+              "Mach": 0.7261446118354797,
+              "Density": 1.0011967420578003,
+              "Pressure": 1.346505880355835
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 853,
+          "local_abs_max_over_global": {
+            "density": 0.020268399085249016,
+            "momentum_norm": 0.03979689693879044,
+            "energy": 0.02491893373834076,
+            "SA": 0.002742904086221829
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7257240414619446,
+              "median": 0.7259518504142761,
+              "p99": 0.7267007374763489,
+              "max": 0.7267267107963562
+            },
+            "Density": {
+              "min": 1.000870704650879,
+              "median": 1.0009042024612427,
+              "p99": 1.0009507083892821,
+              "max": 1.0009515285491943
+            },
+            "Pressure": {
+              "min": 1.3459358215332031,
+              "median": 1.3460617065429688,
+              "p99": 1.34620858669281,
+              "max": 1.3462101221084595
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77621,
+                77622
+              ],
+              "mean_xy_m": [
+                3.4253760279597634,
+                0.17960786426879835
+              ],
+              "mean_normal_s_m": -0.0012686809993128678,
+              "Mach": 0.7257702946662903,
+              "Density": 1.0009111166000366,
+              "Pressure": 1.3461359143257141
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78537,
+                78538
+              ],
+              "mean_xy_m": [
+                3.4253760279597634,
+                0.1808793032985337
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7260146141052246,
+              "Density": 1.0009034872055054,
+              "Pressure": 1.346114158630371
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82823
+              ],
+              "mean_xy_m": [
+                3.4110031311300504,
+                0.2611674408317051
+              ],
+              "mean_normal_s_m": 0.08106015853117043,
+              "Mach": 0.7267267107963562,
+              "Density": 1.0009042024612427,
+              "Pressure": 1.3459358215332031
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 864,
+          "local_abs_max_over_global": {
+            "density": 0.006084842753837859,
+            "momentum_norm": 0.0484224676602849,
+            "energy": 0.009970499848981509,
+            "SA": 0.002517609693135895
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7266921997070312,
+              "median": 0.7267597913742065,
+              "p99": 0.7273223686218262,
+              "max": 0.7273454666137695
+            },
+            "Density": {
+              "min": 1.0006024837493896,
+              "median": 1.00062894821167,
+              "p99": 1.0006608533859254,
+              "max": 1.000661849975586
+            },
+            "Pressure": {
+              "min": 1.3452922105789185,
+              "median": 1.3454656600952148,
+              "p99": 1.3455203723907472,
+              "max": 1.3455214500427246
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77632,
+                77633
+              ],
+              "mean_xy_m": [
+                4.243601453853139,
+                0.2388453294648556
+              ],
+              "mean_normal_s_m": -0.001509663224302119,
+              "Mach": 0.7267301082611084,
+              "Density": 1.0006493926048279,
+              "Pressure": 1.3455079793930054
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78548,
+                78549
+              ],
+              "mean_xy_m": [
+                4.243601453853139,
+                0.24035973240882952
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7267359793186188,
+              "Density": 1.0006209015846252,
+              "Pressure": 1.345461130142212
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82661
+              ],
+              "mean_xy_m": [
+                4.223189775112998,
+                0.32691647317684164
+              ],
+              "mean_normal_s_m": 0.0878994884982855,
+              "Mach": 0.7273454666137695,
+              "Density": 1.0006024837493896,
+              "Pressure": 1.3452922105789185
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 4000,
+      "field_path": "outputs\\projects\\proje-15cce2de02\\simulations\\v3_cgrid_interfacer4_coarse_warmstart\\flow_004000.vtu",
+      "field_sha256": "b06c47e420e6a0c322287ac49cb1faa6c99cc9ff4af3df8532e39538b5354709",
+      "high_ratio_band": {
+        "density": {
+          "fraction_exported_nodal_sum_squared": 6.043298766943922e-05,
+          "band_abs_max_over_global": 0.010589280596600697,
+          "band_abs_max": 4.253060069459025e-06,
+          "global_abs_max": 0.0004016382445115596,
+          "global_max_xy_m": [
+            0.666086570020507,
+            0.051371181645761085
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.8268585818449861
+        },
+        "momentum_norm": {
+          "fraction_exported_nodal_sum_squared": 1.0966591452363417e-05,
+          "band_abs_max_over_global": 0.0055685214053824116,
+          "band_abs_max": 5.371483564907928e-06,
+          "global_abs_max": 0.0009646157703041186,
+          "global_max_xy_m": [
+            0.7072475187204265,
+            0.05342744637741607
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.7856512863117732
+        },
+        "energy": {
+          "fraction_exported_nodal_sum_squared": 4.6263597980013394e-05,
+          "band_abs_max_over_global": 0.0087959376652865,
+          "band_abs_max": 1.693223930487875e-05,
+          "global_abs_max": 0.0019250067416578531,
+          "global_max_xy_m": [
+            0.666086570020507,
+            0.051371181645761085
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 0.8268585818449861
+        },
+        "SA": {
+          "fraction_exported_nodal_sum_squared": 0.014551193192963203,
+          "band_abs_max_over_global": 0.3710987301786945,
+          "band_abs_max": 2.7830360238567664e-09,
+          "global_abs_max": 7.499449061754149e-09,
+          "global_max_xy_m": [
+            10.770448244506923,
+            0.3424753420355485
+          ],
+          "global_max_distance_to_nearest_high_ratio_edge_midpoint_m": 2.9044936979438907
+        }
+      },
+      "worst_edge_local_fields": [
+        {
+          "interface_edge_id": 837,
+          "local_abs_max_over_global": {
+            "density": 0.0033869365926978514,
+            "momentum_norm": 0.0009374171733682364,
+            "energy": 0.002799482450285389,
+            "SA": 0.00016943109192149488
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7200067639350891,
+              "median": 0.7205260396003723,
+              "p99": 0.7223012280464173,
+              "max": 0.7223702073097229
+            },
+            "Density": {
+              "min": 1.0035098791122437,
+              "median": 1.0035834312438965,
+              "p99": 1.0037628316879272,
+              "max": 1.0037636756896973
+            },
+            "Pressure": {
+              "min": 1.3511096239089966,
+              "median": 1.3517416715621948,
+              "p99": 1.3522361946105956,
+              "max": 1.3522387742996216
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77605,
+                77606
+              ],
+              "mean_xy_m": [
+                2.2499207411825477,
+                0.1129164557641296
+              ],
+              "mean_normal_s_m": -0.0011200644941175598,
+              "Mach": 0.7202664017677307,
+              "Density": 1.0036262273788452,
+              "Pressure": 1.3519902229309082
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78521,
+                78522
+              ],
+              "mean_xy_m": [
+                2.2499207411825477,
+                0.11403784317383361
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7203850448131561,
+              "Density": 1.0036453008651733,
+              "Pressure": 1.351932168006897
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82964
+              ],
+              "mean_xy_m": [
+                2.246895458259834,
+                0.18093778491276608
+              ],
+              "mean_normal_s_m": 0.06696792552061194,
+              "Mach": 0.7223702073097229,
+              "Density": 1.0035834312438965,
+              "Pressure": 1.3511096239089966
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 844,
+          "local_abs_max_over_global": {
+            "density": 0.0036625697862021417,
+            "momentum_norm": 0.0019938538336239982,
+            "energy": 0.002520461792111145,
+            "SA": 0.00020981269622412946
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7232347130775452,
+              "median": 0.7235732078552246,
+              "p99": 0.7248453378677369,
+              "max": 0.7248976826667786
+            },
+            "Density": {
+              "min": 1.002219319343567,
+              "median": 1.0022575855255127,
+              "p99": 1.0023864316940307,
+              "max": 1.0023868083953857
+            },
+            "Pressure": {
+              "min": 1.3484399318695068,
+              "median": 1.3489938974380493,
+              "p99": 1.349254698753357,
+              "max": 1.3492573499679565
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77612,
+                77613
+              ],
+              "mean_xy_m": [
+                2.7559188613197287,
+                0.13914558370474753
+              ],
+              "mean_normal_s_m": -0.0011588064011558827,
+              "Mach": 0.7234039604663849,
+              "Density": 1.0023221969604492,
+              "Pressure": 1.349125623703003
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78528,
+                78529
+              ],
+              "mean_xy_m": [
+                2.7559188613197287,
+                0.1403061687538733
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7234269380569458,
+              "Density": 1.002298355102539,
+              "Pressure": 1.3490418195724487
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                83482
+              ],
+              "mean_xy_m": [
+                2.7635644667934898,
+                0.22913882019649515
+              ],
+              "mean_normal_s_m": 0.08827338817372817,
+              "Mach": 0.7248976826667786,
+              "Density": 1.0022259950637817,
+              "Pressure": 1.3484399318695068
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 847,
+          "local_abs_max_over_global": {
+            "density": 0.0016876051786171708,
+            "momentum_norm": 0.003210343024569386,
+            "energy": 0.0008864325994007988,
+            "SA": 0.0003060344095678529
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7238147854804993,
+              "median": 0.7241026163101196,
+              "p99": 0.7250436615943908,
+              "max": 0.725081205368042
+            },
+            "Density": {
+              "min": 1.0020476579666138,
+              "median": 1.0021111965179443,
+              "p99": 1.0021271705627441,
+              "max": 1.002127766609192
+            },
+            "Pressure": {
+              "min": 1.3481420278549194,
+              "median": 1.3485898971557617,
+              "p99": 1.3487056255340577,
+              "max": 1.348708152770996
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77615,
+                77616
+              ],
+              "mean_xy_m": [
+                2.9790712501997403,
+                0.15185950845853963
+              ],
+              "mean_normal_s_m": -0.0011873154503919858,
+              "Mach": 0.7239749431610107,
+              "Density": 1.002120316028595,
+              "Pressure": 1.348649024963379
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78531,
+                78532
+              ],
+              "mean_xy_m": [
+                2.9790712501997403,
+                0.15304887510320833
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7239786982536316,
+              "Density": 1.0021063685417175,
+              "Pressure": 1.3485966324806213
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                83478
+              ],
+              "mean_xy_m": [
+                2.9777270003023193,
+                0.22591711644546403
+              ],
+              "mean_normal_s_m": 0.07282148584829574,
+              "Mach": 0.725081205368042,
+              "Density": 1.0020476579666138,
+              "Pressure": 1.3481420278549194
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 848,
+          "local_abs_max_over_global": {
+            "density": 0.0019021358171557121,
+            "momentum_norm": 0.003210343024569386,
+            "energy": 0.002474419079373321,
+            "SA": 0.00025394374706768556
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7241026163101196,
+              "median": 0.7242175936698914,
+              "p99": 0.7250922226905823,
+              "max": 0.7251273393630981
+            },
+            "Density": {
+              "min": 1.0018993616104126,
+              "median": 1.0019776821136475,
+              "p99": 1.0021127986907958,
+              "max": 1.002112865447998
+            },
+            "Pressure": {
+              "min": 1.347929835319519,
+              "median": 1.3483405113220215,
+              "p99": 1.3485882329940795,
+              "max": 1.3485898971557617
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77616,
+                77617
+              ],
+              "mean_xy_m": [
+                3.053455379826411,
+                0.15626567444266432
+              ],
+              "mean_normal_s_m": -0.001198558919642787,
+              "Mach": 0.7241601049900055,
+              "Density": 1.0020452737808228,
+              "Pressure": 1.3484652042388916
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78532,
+                78533
+              ],
+              "mean_xy_m": [
+                3.053455379826411,
+                0.15746638664028725
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7241960167884827,
+              "Density": 1.0020419359207153,
+              "Pressure": 1.3484290838241577
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82754
+              ],
+              "mean_xy_m": [
+                3.052153103255895,
+                0.22702979594056882
+              ],
+              "mean_normal_s_m": 0.06951661567728053,
+              "Mach": 0.7251273393630981,
+              "Density": 1.0018993616104126,
+              "Pressure": 1.347929835319519
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 849,
+          "local_abs_max_over_global": {
+            "density": 0.0030925250617111293,
+            "momentum_norm": 0.0027980967150901814,
+            "energy": 0.0034523265637758393,
+            "SA": 0.00027184639651830984
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7242175936698914,
+              "median": 0.7244188785552979,
+              "p99": 0.7255640816688538,
+              "max": 0.7256066203117371
+            },
+            "Density": {
+              "min": 1.0018081665039062,
+              "median": 1.0018582344055176,
+              "p99": 1.001977481842041,
+              "max": 1.0019776821136475
+            },
+            "Pressure": {
+              "min": 1.3476513624191284,
+              "median": 1.3481026887893677,
+              "p99": 1.348339285850525,
+              "max": 1.3483405113220215
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77617,
+                77618
+              ],
+              "mean_xy_m": [
+                3.1278395094530813,
+                0.16075802703513725
+              ],
+              "mean_normal_s_m": -0.0012107070277512883,
+              "Mach": 0.7243182361125946,
+              "Density": 1.0019179582595825,
+              "Pressure": 1.3482216000556946
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78533,
+                78534
+              ],
+              "mean_xy_m": [
+                3.1278395094530813,
+                0.1619709954137643
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.724396288394928,
+              "Density": 1.0019111037254333,
+              "Pressure": 1.3481817841529846
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                80743
+              ],
+              "mean_xy_m": [
+                3.1315412322681127,
+                0.24460947460925747
+              ],
+              "mean_normal_s_m": 0.08225848443563925,
+              "Mach": 0.7256066203117371,
+              "Density": 1.0018081665039062,
+              "Pressure": 1.3476513624191284
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 851,
+          "local_abs_max_over_global": {
+            "density": 0.0042606610097074785,
+            "momentum_norm": 0.001796516386975054,
+            "energy": 0.004157662747898756,
+            "SA": 0.00024130321849948937
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7246971726417542,
+              "median": 0.7250165343284607,
+              "p99": 0.7259403800964356,
+              "max": 0.7259731292724609
+            },
+            "Density": {
+              "min": 1.0015504360198975,
+              "median": 1.00156569480896,
+              "p99": 1.0017235612869262,
+              "max": 1.0017244815826416
+            },
+            "Pressure": {
+              "min": 1.3471781015396118,
+              "median": 1.3474767208099365,
+              "p99": 1.3478085327148437,
+              "max": 1.3478113412857056
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77619,
+                77620
+              ],
+              "mean_xy_m": [
+                3.2766077687064223,
+                0.17000529451775093
+              ],
+              "mean_normal_s_m": -0.0012377876435123798,
+              "Mach": 0.7248568534851074,
+              "Density": 1.0016450881958008,
+              "Pressure": 1.347644031047821
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78535,
+                78536
+              ],
+              "mean_xy_m": [
+                3.2766077687064223,
+                0.17124557852800398
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7249968647956848,
+              "Density": 1.001626193523407,
+              "Pressure": 1.3475855588912964
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82781
+              ],
+              "mean_xy_m": [
+                3.2703344338176175,
+                0.25391148418166676
+              ],
+              "mean_normal_s_m": 0.08289734252889648,
+              "Mach": 0.7259731292724609,
+              "Density": 1.0015504360198975,
+              "Pressure": 1.3471781015396118
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 853,
+          "local_abs_max_over_global": {
+            "density": 0.0040045820151142905,
+            "momentum_norm": 0.0011781095188984421,
+            "energy": 0.00393302661140617,
+            "SA": 0.00015457163120413035
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.7252577543258667,
+              "median": 0.7254718542098999,
+              "p99": 0.7263411831855774,
+              "max": 0.7263720035552979
+            },
+            "Density": {
+              "min": 1.0012832880020142,
+              "median": 1.0013127326965332,
+              "p99": 1.0014170026779174,
+              "max": 1.0014173984527588
+            },
+            "Pressure": {
+              "min": 1.3467199802398682,
+              "median": 1.3469436168670654,
+              "p99": 1.3471799468994141,
+              "max": 1.3471812009811401
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77621,
+                77622
+              ],
+              "mean_xy_m": [
+                3.4253760279597634,
+                0.17960786426879835
+              ],
+              "mean_normal_s_m": -0.0012686809993128678,
+              "Mach": 0.7253648042678833,
+              "Density": 1.0013560056686401,
+              "Pressure": 1.3470624089241028
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78537,
+                78538
+              ],
+              "mean_xy_m": [
+                3.4253760279597634,
+                0.1808793032985337
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7254942357540131,
+              "Density": 1.0013453960418701,
+              "Pressure": 1.3470295667648315
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82823
+              ],
+              "mean_xy_m": [
+                3.4110031311300504,
+                0.2611674408317051
+              ],
+              "mean_normal_s_m": 0.08106015853117043,
+              "Mach": 0.7263720035552979,
+              "Density": 1.0013127326965332,
+              "Pressure": 1.3467199802398682
+            }
+          ]
+        },
+        {
+          "interface_edge_id": 864,
+          "local_abs_max_over_global": {
+            "density": 0.0023850257713936445,
+            "momentum_norm": 0.0007327268452925903,
+            "energy": 0.0023527286419906964,
+            "SA": 0.00010388975438981865
+          },
+          "local_state_ranges": {
+            "Mach": {
+              "min": 0.727031409740448,
+              "median": 0.7270907163619995,
+              "p99": 0.7276205015182495,
+              "max": 0.7276410460472107
+            },
+            "Density": {
+              "min": 1.0006663799285889,
+              "median": 1.000683069229126,
+              "p99": 1.0007003736495972,
+              "max": 1.000700831413269
+            },
+            "Pressure": {
+              "min": 1.3454235792160034,
+              "median": 1.3456130027770996,
+              "p99": 1.3456502056121826,
+              "max": 1.345650553703308
+            }
+          },
+          "normal_projection_samples": [
+            {
+              "label": "inner_quad_opposite_nodes",
+              "ids": [
+                77632,
+                77633
+              ],
+              "mean_xy_m": [
+                4.243601453853139,
+                0.2388453294648556
+              ],
+              "mean_normal_s_m": -0.001509663224302119,
+              "Mach": 0.7270610630512238,
+              "Density": 1.0006951093673706,
+              "Pressure": 1.3456462025642395
+            },
+            {
+              "label": "interface_nodes",
+              "ids": [
+                78548,
+                78549
+              ],
+              "mean_xy_m": [
+                4.243601453853139,
+                0.24035973240882952
+              ],
+              "mean_normal_s_m": 0.0,
+              "Mach": 0.7270939946174622,
+              "Density": 1.0006777048110962,
+              "Pressure": 1.3456076979637146
+            },
+            {
+              "label": "outer_triangle_vertex",
+              "ids": [
+                82661
+              ],
+              "mean_xy_m": [
+                4.223189775112998,
+                0.32691647317684164
+              ],
+              "mean_normal_s_m": 0.0878994884982855,
+              "Mach": 0.7276410460472107,
+              "Density": 1.0006663799285889,
+              "Pressure": 1.3454235792160034
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "samples_csv": {
+    "path": "outputs\\projects\\proje-15cce2de02\\reports\\prediction_v3_cgrid_r4_wake_interface_samples.csv",
+    "sha256": "b598bde5d72c547557e2c8d16d3f95a7306fe869e1c642e23934ce7637ec654b"
+  },
+  "source_script_sha256": "0a0e4baf9e872aa8492879c323a734eee8c86bc9085204f40f5f6403f177e975",
+  "created_utc": "2026-10-19T19:50:42.132847+00:00"
+}

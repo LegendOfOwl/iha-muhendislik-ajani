@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"enableRemoteConsent":true,"lang":"en","siteId":1608752,"cookiePolicyId":93470831,"cookiePolicyUrl":"https://su2code.github.io/cookie_declaration.html", "banner":{ "position":"float-bottom-left","textColor":"white","backgroundColor":"#333333" }};
+</script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-28187985-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Convective Schemes</title>
+    <meta name="description" content="This page lists the convective schemes available in SU2 and their associated options, it is not meant as a detailed theory guide but some application guidanc...">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico?1">
+
+    <link rel="canonical" href="/docs_v7/Convective-Schemes/">
+    <link rel="alternate" type="application/rss+xml" title="SU2 | Multiphysics Simulation and Design Software" href="/feed.xml" />
+
+    <!-- Load Font Awesome 5 or 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous">
+
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/f17953d81d.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logos/logonav.png"></span>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/download.html">Download</a></li>
+                <li ><a href="/publications.html">Publications</a></li>
+                <li ><a href="/docs_v7/home/">Docs</a></li>
+                <li ><a href="/tutorials/home/">Tutorials</a></li>
+                <li ><a href="/vandv/home/">V&V</a></li>
+                <li ><a href="https://www.cfd-online.com/Forums/su2/">User Forum</a></li>
+                <li ><a href="https://join.slack.com/t/su2devteam/shared_invite/zt-af0uuqf8-8XNExKMV9G~UVsnkvi5uVA">Slack</a></li>
+                <li ><a href="/develop.html">Develop</a></li>
+                <li ><a href="/su2gui/Introduction">GUI</a></li>
+                <li ><a href="/gsoc/Introduction">GSOC</a></li>
+            </ul>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://www.youtube.com/channel/UCxv_00gWLAQPBUnl9mGRQjA"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/su2code/SU2.git"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/su2code/"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/su2code/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+          Introduction to SU2
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/home/">SU2, Multiphysics Simulation and Design Software</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/contribute/">Contribute</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          New in Version 7
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Guide-to-v7/">Guide to Version v7</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+          Quick Start
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Quick-Start/">Quick Start</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+          Installation
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Download/">Download</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Software-Components/">Software Components</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Installation/">Installation</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/SU2-Linux-MacOS/">SU2 on Linux/MacOS</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/SU2-Windows/">SU2 on Windows</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Test-Cases/">Test Cases</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+          Build From Source
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Build-SU2-Linux-MacOS/">Build SU2 on Linux/MacOS</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Build-SU2-Windows/">Build SU2 on Windows</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Running-Unit-Tests/">Running Unit Tests</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+          Theory
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Theory/">Governing Equations in SU2</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Streamwise-Periodicity/">Streamwise Periodicity</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Thermochemical-Nonequilibrium/">Thermochemical Nonequilibrium</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+          Users Guide
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Configuration-File/">Configuration File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Mesh-File/">Mesh File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Restart-File/">Restart File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Solver-Setup/">Solver Setup</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Physical-Definition/">Physical Definition</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Markers-and-BC/">Markers and Boundary Conditions</a>
+        
+          
+          
+          <a class="list-group-item active" href="/docs_v7/Convective-Schemes/">Convective Schemes</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Slope-Limiters-and-Shock-Resolution/">Slope Limiters and Shock Resolution</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Custom-Output/">History and Solution Output</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Linear-Solvers-and-Preconditioners/">Linear Solvers and Preconditioners</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Multizone/">Basics of Multi-Zone Computations</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Execution/">Execution</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+          Developer Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Gitting-Started/">GIT-ting Started</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Developing-SU2-on-GitHub-(Internal-Developers)/">Developing SU2 on GitHub (Internal Developers)</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Running-Regression-Tests/">Running Regression Tests</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Code-Review/">Code Review</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Code-Structure/">Code Structure</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Style-Guide/">Style Guide</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Advanced-AD-Techniques/">Advanced AD Techniques</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Container-Development/">Containers for Development</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Writing-Unit-Tests/">Writing Unit Tests</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Tracy-Integration/">Integrating Tracy Profiler with SU2</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+          FAQ
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/FAQ/">FAQ</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
+          Contact
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Contact/">Contact</a>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Convective Schemes</h1>
+            <div id="markdown-content-container"><p>This page lists the convective schemes available in SU2 and their associated options, it is not meant as a detailed theory guide but some application guidance is given nonetheless.
+The options listed here do not apply to the high order DG solver.</p>
+
+<hr />
+
+<ul>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#compressible-flow">Compressible Flow</a>
+    <ul>
+      <li><a href="#central-schemes">Central Schemes</a></li>
+      <li><a href="#upwind-schemes">Upwind Schemes</a></li>
+    </ul>
+  </li>
+  <li><a href="#incompressible-flow">Incompressible Flow</a>
+    <ul>
+      <li><a href="#central-schemes-1">Central Schemes</a></li>
+      <li><a href="#upwind-schemes-1">Upwind Schemes</a></li>
+    </ul>
+  </li>
+  <li><a href="#turbulence-equations">Turbulence Equations</a></li>
+</ul>
+
+<hr />
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Convective schemes are used in the FVM discretization of convective fluxes through the faces of the dual-grid control volumes.
+They are selected via option <code class="language-plaintext highlighter-rouge">CONV_NUM_METHOD_FLOW</code> and fall under the two broad categories of central and upwind.
+Central schemes tend to be more robust whereas second order upwind schemes can be more accurate (i.e. less dissipative).
+To achieve second-order in space, upwind schemes need to be used with MUSCL reconstruction (<code class="language-plaintext highlighter-rouge">MUSCL_FLOW = YES</code>), see the <a href="/docs_v7/Slope-Limiters-and-Shock-Resolution">Slope Limiters and Shock Resolution</a> page for the MUSCL-related options.</p>
+
+<p><strong>Note:</strong> MUSCL options have no effect on central schemes or on coarse multigrid levels in general.</p>
+
+<h2 id="compressible-flow">Compressible Flow</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">EULER</code>, <code class="language-plaintext highlighter-rouge">NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">RANS</code></td>
+      <td>8.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="central-schemes">Central Schemes</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">JST</code> - Jameson-Schmidt-Turkel scheme with scalar dissipation defined by the second and fourth order dissipation coefficients in option <code class="language-plaintext highlighter-rouge">JST_SENSOR_COEFF = (2nd, 4th)</code> the default values are 0.5 and 0.02 respectively. This scheme offers a good compromise between accuracy and robustness but it will over predict viscous drag contributions in low-Re meshes.</li>
+  <li><code class="language-plaintext highlighter-rouge">JST_KE</code> - Equivalent to <code class="language-plaintext highlighter-rouge">JST</code> with 0 fourth order coefficient (the computational effort is slightly reduced as solution Laplacians no longer need to be computed);</li>
+  <li><code class="language-plaintext highlighter-rouge">JST_MAT</code> - Jameson-Schmidt-Turkel scheme with matrix dissipation, the classical dissipation term is scaled by the flux Jacobian with the minimum Eigenvalue limited by <code class="language-plaintext highlighter-rouge">ENTROPY_FIX_COEFF</code> (0.05-0.2 is recommended, larger means more numerical dissipation). This scheme gives better viscous drag predictions on low-Re meshes than <code class="language-plaintext highlighter-rouge">JST</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">LAX-FRIEDRICH</code> - The simplest of central schemes with a first order dissipation term specified via <code class="language-plaintext highlighter-rouge">LAX_SENSOR_COEFF</code> (the default is 0.15), this scheme is the most stable and least accurate due to its very dissipative nature.</li>
+</ul>
+
+<p>The option <code class="language-plaintext highlighter-rouge">CENTRAL_JACOBIAN_FIX_FACTOR</code> (default value 4.0) affects all central schemes.
+In implicit time marching it improves the numerical properties of the Jacobian matrix so that higher CFL values can be used.
+To maintain CFL at lower-than-default values of dissipation coefficients, a higher factor should be used.
+<code class="language-plaintext highlighter-rouge">JST_MAT</code> benefits from higher values (~8.0).</p>
+
+<p><strong>Note:</strong> The Lax-Friedrich scheme is always used on coarse multigrid levels when any central scheme is selected. All compressible central schemes use vectorization, see the build instructions for how to tune the compilation for maximum performance.</p>
+
+<h3 id="upwind-schemes">Upwind Schemes</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ROE</code> - Classic Roe scheme;</li>
+  <li><code class="language-plaintext highlighter-rouge">L2ROE</code> - Low dissipation Low Mach Roe (L^2 Roe);</li>
+  <li><code class="language-plaintext highlighter-rouge">LMROE</code> - Rieper’s Low Mach Roe;</li>
+  <li><code class="language-plaintext highlighter-rouge">TURKEL_PREC</code> - Roe scheme with Turkel preconditioning;</li>
+  <li><code class="language-plaintext highlighter-rouge">AUSM</code> - Advection Upstream Splitting Method;</li>
+  <li><code class="language-plaintext highlighter-rouge">AUSMPLUSUP</code> - AUSM+up, revised Mach and pressure splittings;</li>
+  <li><code class="language-plaintext highlighter-rouge">AUSMPLUSUP2</code> - AUSM+up2, uses an alternative pressure flux formulation;</li>
+  <li><code class="language-plaintext highlighter-rouge">SLAU</code> - Simple Low dissipation AUSM scheme;</li>
+  <li><code class="language-plaintext highlighter-rouge">SLAU2</code> - SLAU with the alternative pressure flux formulation;</li>
+  <li><code class="language-plaintext highlighter-rouge">HLLC</code> - Harten-Lax-van Leer-Contact;</li>
+  <li><code class="language-plaintext highlighter-rouge">MSW</code> - Modified Steger-Warming.</li>
+</ul>
+
+<p>Some of the schemes above have tunning parameters or accept extra options, the following table lists those options and indicates to which schemes they apply (if a scheme does not appear on the table, no options apply to it).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option \ Scheme</th>
+      <th><code class="language-plaintext highlighter-rouge">ROE</code></th>
+      <th><code class="language-plaintext highlighter-rouge">L2ROE</code></th>
+      <th><code class="language-plaintext highlighter-rouge">TURKEL_PREC</code></th>
+      <th><code class="language-plaintext highlighter-rouge">AUSMPLUSUP[2]</code></th>
+      <th><code class="language-plaintext highlighter-rouge">SLAU[2]</code></th>
+      <th><code class="language-plaintext highlighter-rouge">HLLC</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">ROE_KAPPA</code></strong></td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">ENTROPY_FIX_COEFF</code></strong></td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">ROE_LOW_DISSIPATION</code></strong></td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">USE_ACCURATE_FLUX_JACOBIANS</code></strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td>X</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">MIN/MAX_ROE_TURKEL_PREC</code></strong></td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ROE_KAPPA</code>, default 0.5, constant that multiplies the left and right state sum;</li>
+  <li><code class="language-plaintext highlighter-rouge">ENTROPY_FIX_COEFF</code>, default 0.001, puts a lower bound on dissipation by limiting the minimum convective Eigenvalue to a fraction of the speed of sound. Increasing it may help overcome convergence issues, at the expense of making the solution sensitive to this parameter.</li>
+  <li><code class="language-plaintext highlighter-rouge">ROE_LOW_DISSIPATION</code>, default <code class="language-plaintext highlighter-rouge">NONE</code>, methods to reduce dissipation in regions where certain conditions are verified, <code class="language-plaintext highlighter-rouge">FD</code> (wall distance based), <code class="language-plaintext highlighter-rouge">NTS</code> (Travin and Shur), <code class="language-plaintext highlighter-rouge">FD_DUCROS</code> and <code class="language-plaintext highlighter-rouge">NTS_DUCROS</code> as before plus Ducros’ shock sensor;</li>
+  <li><code class="language-plaintext highlighter-rouge">USE_ACCURATE_FLUX_JACOBIANS</code>, default <code class="language-plaintext highlighter-rouge">NO</code>, if set to <code class="language-plaintext highlighter-rouge">YES</code> accurate flux Jacobians are used instead of Roe approximates, slower on a per iteration basis but in some cases allows much higher CFL values to be used and therefore faster overall convergence;</li>
+  <li><code class="language-plaintext highlighter-rouge">MIN_ROE_TURKEL_PREC</code> and <code class="language-plaintext highlighter-rouge">MAX_ROE_TURKEL_PREC</code>, defaults 0.01 and 0.2 respectively, reference Mach numbers for Turkel preconditioning;</li>
+</ul>
+
+<p><strong>Note:</strong> Some schemes are not compatible with all other features of SU2, the AUSM family is not compatible with unsteady simulations of moving grids, non-ideal gases are only compatible with the standard Roe and HLLC schemes. The only upwind scheme that uses vectorization is the Roe scheme (ideal gas only), see the build instructions for how to tune the compilation for maximum performance.</p>
+
+<h2 id="incompressible-flow">Incompressible Flow</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">INC_EULER</code>, <code class="language-plaintext highlighter-rouge">INC_NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">INC_RANS</code></td>
+      <td>7.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="central-schemes-1">Central Schemes</h3>
+
+<p><code class="language-plaintext highlighter-rouge">JST</code> and <code class="language-plaintext highlighter-rouge">LAX-FRIEDRICH</code> are available with low speed preconditioning, the afforementioned 1st, 2nd, and 4th order dissipation coefficients apply to these schemes but the <code class="language-plaintext highlighter-rouge">CENTRAL_JACOBIAN_FIX_FACTOR</code> option does not.</p>
+
+<h3 id="upwind-schemes-1">Upwind Schemes</h3>
+
+<p><code class="language-plaintext highlighter-rouge">FDS</code> - Flux Difference Splitting with low speed preconditioning, this scheme does not have tuning parameters.</p>
+
+<h2 id="turbulence-and-scalarspecies-equations">Turbulence and Scalar/Species Equations</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">RANS</code>, <code class="language-plaintext highlighter-rouge">INC_RANS</code></td>
+      <td>8.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For compressible flows the only method available is <code class="language-plaintext highlighter-rouge">SCALAR_UPWIND</code> which must be selected via option <code class="language-plaintext highlighter-rouge">CONV_NUM_METHOD_TURB</code>.
+For incompressible flows the <code class="language-plaintext highlighter-rouge">BOUNDED_SCALAR</code> method is also available, this includes a divergence correction to prevent spurious production/destruction of the transported scalar while convergence is not reached.
+These methods do not have any special parameters.</p>
+
+</div>
+            <hr>
+                   
+            <p class="text-center">
+              <br />
+              <a target="_blank" href="https://github.com/su2code/su2code.github.io/blob/master/_docs_v7/Convective-Schemes.md" class="btn btn-default githubEditButton" role="button">
+                <i class="fa fa-pencil fa-lg"></i> Improve this page
+              </a>
+            </p>
+            
+
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            SU2 | Multiphysics Simulation and Design Software 2026 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a> | 
+            <a href="https://www.iubenda.com/privacy-policy/93470831" class="iubenda-white iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+</body>
+
+</html>

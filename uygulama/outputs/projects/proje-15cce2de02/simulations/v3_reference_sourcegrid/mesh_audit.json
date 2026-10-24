@@ -1,0 +1,75 @@
+{
+  "case": "v3_reference_sourcegrid",
+  "nodes": 23952,
+  "cells": 23552,
+  "all_positive_signed_areas": true,
+  "minimum_signed_area_m2": 9.855250668306227e-09,
+  "exact_duplicate_node_coordinates": 0,
+  "unmarked_boundary_edges": 0,
+  "tagged_edges_not_single_fluid_neighbor": 0,
+  "nonmanifold_edges": 0,
+  "fluid_connected_components_cell_counts": [
+    23552
+  ],
+  "marker_closed_loops": {
+    "AIRFOIL": {
+      "edges": 304,
+      "nodes": 304,
+      "all_node_degrees_2": true,
+      "min_degree": 2,
+      "max_degree": 2
+    },
+    "FARFIELD": {
+      "edges": 496,
+      "nodes": 496,
+      "all_node_degrees_2": true,
+      "min_degree": 2,
+      "max_degree": 2
+    }
+  },
+  "max_equiangle_skewness": 0.44370182995395324,
+  "worst_skew_cell_center_m": [
+    18.1826325,
+    -1.4362205000000001
+  ],
+  "worst_skew_cell_node_ids": [
+    702,
+    703,
+    1072,
+    1071
+  ],
+  "method_scope": "Independent primal SU2 geometry/edge audit. High wall aspect ratio is not a failure by itself. This does not directly audit SU2 node-centered dual-volume orthogonality; no after-result skew cutoff was introduced.",
+  "topology_and_positive_area_checks_passed": true,
+  "minimum_corner_cross_product_m2": 9.834079990010884e-09,
+  "all_corner_jacobians_positive": true,
+  "first_wall_node_spacing_m": {
+    "min": 9.981084622933603e-06,
+    "max": 1.0022953656484939e-05
+  },
+  "source": {
+    "url": "https://www.grc.nasa.gov/www/wind/valid/raetaf/raetaf04/raetaf.x.fmt",
+    "local_path": "work\\blind_validation\\reviewer\\additional_sources\\raetaf.x.fmt",
+    "sha256": "2318157ce20050a3f7c1a5dc208cbfd3d821108b618afb2e43fd4792ee4238ed",
+    "published_dimensions": [
+      369,
+      65
+    ],
+    "source_chord_unit": "normalized by chord",
+    "solver_chord_m": 1.0,
+    "source_coordinates_changed": false,
+    "exact_coincident_nodes_welded": 33,
+    "wake_cut": "J1 I1..33 paired exactly with I369..337, no wake wall"
+  },
+  "scope": {
+    "arm": "parent reference-mesh diagnostic; not a new blind prediction or new mesher qualification",
+    "not_a_pure_mesh_comparison_to_v2": [
+      "Published 305-point polygon differs from the r2 interpolated source curve.",
+      "Published far boundary is roughly 20-27 chords, not the v2 200c square.",
+      "Outer boundary uses the existing SU2 characteristic FARFIELD on all outer edges; WIND uses FREESTREAM plus downstream pressure OUTFLOW.",
+      "Wall spacing about 1e-5c is unchanged; strict max y+<1 is not assumed."
+    ],
+    "purpose": "Test native SU2 on a published structured C-grid without experimental fitting; identify whether mesh construction merits targeted investigation.",
+    "gates_unchanged": true
+  },
+  "mesh_sha256": "d7b5240cdccf53ef031609dde0b6b50f199d4e4e422f25cefb2aa86adc69adbd"
+}

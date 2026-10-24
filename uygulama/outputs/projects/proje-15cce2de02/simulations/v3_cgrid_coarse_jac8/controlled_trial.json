@@ -1,0 +1,9 @@
+{
+  "paired_control": "v3_cgrid_coarse_cfl1",
+  "single_changed_numerical_policy": "CENTRAL_JACOBIAN_FIX_FACTOR4 to8; same mesh/start1000/fixedCFL1/MG3/entropy0.05/linear solver/SA physics",
+  "logging_only_changes": "HISTORY_OUTPUT additionallyMAX_RES,LINSOL,CFL_NUMBER; no arithmetic equation change",
+  "source": "https://su2code.github.io/docs_v7/Convective-Schemes/",
+  "logging_source": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/src/output/CFlowCompOutput.cpp",
+  "rationale": "Independent analyst reconstructed median-dual closure and checked well-shaped shock cells; own field has across-row zigzag. Official docs recommend factor about8 for JST_MAT, so isolate implicit Jacobian conditioning without changing residual dissipation.",
+  "minimum_acceptance": false
+}

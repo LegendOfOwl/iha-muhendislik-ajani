@@ -1,0 +1,652 @@
+{
+  "reviewed_utc": "2026-10-24T13:09:38.930174+00:00",
+  "project_id": "proje-e9319baef1",
+  "native_run": {
+    "status": "exited",
+    "exit_code": 0,
+    "started_utc": "2026-10-24T12:48:34.149566+00:00",
+    "ended_utc": "2026-10-24T13:06:39.860996+00:00",
+    "seconds": 1085.703999999998,
+    "config_sha256": "4aa872caea1d3011c9100ceaddf3735649542b7e97c215bb4fd2e2906e906884",
+    "mesh_sha256": "d20855c5a7b97cf6c32713f4f406b9b5b158b937a97ba583855dc58afe87e9f4",
+    "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+    "threads": 4
+  },
+  "matched": {
+    "field_iteration": 2999,
+    "terminal_history_iteration": 2999.0,
+    "CL": 0.2958434745,
+    "CD": 0.02671454852,
+    "density_log10": -6.467749836,
+    "turbulence_log10": -8.415196174,
+    "CL_last100_range": 2.114300000022329e-06,
+    "CD_last100_range": 2.3847000000035146e-07,
+    "linear_iterations_max": 10.0,
+    "linear_residual_log10_range": [
+      -4.60630697,
+      -4.56807041
+    ],
+    "iteration_checks": {
+      "density": false,
+      "CL_window": true,
+      "CD_window": true
+    }
+  },
+  "experiment_points": 271,
+  "sign_checks": [
+    {
+      "section": 1,
+      "side": "u",
+      "max_sign_normalization_error": 2.0000000058861822e-09,
+      "points": 22
+    },
+    {
+      "section": 1,
+      "side": "l",
+      "max_sign_normalization_error": 3.999999997894577e-09,
+      "points": 12
+    },
+    {
+      "section": 2,
+      "side": "u",
+      "max_sign_normalization_error": 2.0000000093556292e-10,
+      "points": 23
+    },
+    {
+      "section": 2,
+      "side": "l",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 11
+    },
+    {
+      "section": 3,
+      "side": "u",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 23
+    },
+    {
+      "section": 3,
+      "side": "l",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 11
+    },
+    {
+      "section": 4,
+      "side": "u",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 23
+    },
+    {
+      "section": 4,
+      "side": "l",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 11
+    },
+    {
+      "section": 5,
+      "side": "u",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 31
+    },
+    {
+      "section": 5,
+      "side": "l",
+      "max_sign_normalization_error": 3.999999997894577e-09,
+      "points": 14
+    },
+    {
+      "section": 6,
+      "side": "u",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 31
+    },
+    {
+      "section": 6,
+      "side": "l",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 14
+    },
+    {
+      "section": 7,
+      "side": "u",
+      "max_sign_normalization_error": 0.0,
+      "points": 31
+    },
+    {
+      "section": 7,
+      "side": "l",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 14
+    }
+  ],
+  "Cp": {
+    "grid": "JST same fine source mesh",
+    "surface_points": 3290,
+    "yplus_max": 1.4580680131912231,
+    "yplus_p95": 1.2552261352539062,
+    "fraction_yplus_below1": 0.4188449848024316,
+    "all_point_Cp_RMSE": 0.12927590944899023,
+    "fraction_within_NASA_measurement_uncertainty": 0.2988929889298893,
+    "all_points_within_NASA_uncertainty": false,
+    "geometry_distance_max_over_chord": 0.007020627735850825,
+    "sections": [
+      {
+        "section": 1,
+        "eta": 0.2,
+        "eta_in_tec_file": 0.2,
+        "side": "u",
+        "points": 22,
+        "Cp_RMSE": 0.09752095709404844,
+        "Cp_max_abs_error": 0.34171252293775045,
+        "fraction_within_measurement_0p02": 0.18181818181818182,
+        "max_geometry_distance_over_chord": 0.0007365148217169631
+      },
+      {
+        "section": 1,
+        "eta": 0.2,
+        "eta_in_tec_file": 0.2,
+        "side": "l",
+        "points": 12,
+        "Cp_RMSE": 0.06974576086933733,
+        "Cp_max_abs_error": 0.16747485074695237,
+        "fraction_within_measurement_0p02": 0.4166666666666667,
+        "max_geometry_distance_over_chord": 0.0006654322832963735
+      },
+      {
+        "section": 2,
+        "eta": 0.44,
+        "eta_in_tec_file": 0.44,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.13239655003969755,
+        "Cp_max_abs_error": 0.4702656936270332,
+        "fraction_within_measurement_0p02": 0.17391304347826086,
+        "max_geometry_distance_over_chord": 0.0011684759263876998
+      },
+      {
+        "section": 2,
+        "eta": 0.44,
+        "eta_in_tec_file": 0.44,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.07424442671347255,
+        "Cp_max_abs_error": 0.1648801699921293,
+        "fraction_within_measurement_0p02": 0.36363636363636365,
+        "max_geometry_distance_over_chord": 0.0006342850425926692
+      },
+      {
+        "section": 3,
+        "eta": 0.65,
+        "eta_in_tec_file": 0.65,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.14674044778202067,
+        "Cp_max_abs_error": 0.5342516631112543,
+        "fraction_within_measurement_0p02": 0.2608695652173913,
+        "max_geometry_distance_over_chord": 0.0008319312629884962
+      },
+      {
+        "section": 3,
+        "eta": 0.65,
+        "eta_in_tec_file": 0.65,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.03964940028260559,
+        "Cp_max_abs_error": 0.08525458683765173,
+        "fraction_within_measurement_0p02": 0.18181818181818182,
+        "max_geometry_distance_over_chord": 0.001000364416818326
+      },
+      {
+        "section": 4,
+        "eta": 0.8,
+        "eta_in_tec_file": 0.8,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.15239327527853117,
+        "Cp_max_abs_error": 0.5802998297865934,
+        "fraction_within_measurement_0p02": 0.34782608695652173,
+        "max_geometry_distance_over_chord": 0.0012822232305200099
+      },
+      {
+        "section": 4,
+        "eta": 0.8,
+        "eta_in_tec_file": 0.8,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.06820189522365563,
+        "Cp_max_abs_error": 0.14852642459698417,
+        "fraction_within_measurement_0p02": 0.18181818181818182,
+        "max_geometry_distance_over_chord": 0.0007176810652785666
+      },
+      {
+        "section": 5,
+        "eta": 0.9,
+        "eta_in_tec_file": 0.9,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.2012476033858289,
+        "Cp_max_abs_error": 0.7308010655127657,
+        "fraction_within_measurement_0p02": 0.3548387096774194,
+        "max_geometry_distance_over_chord": 0.0018118474839610224
+      },
+      {
+        "section": 5,
+        "eta": 0.9,
+        "eta_in_tec_file": 0.9,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.09236345235286879,
+        "Cp_max_abs_error": 0.29063833507018655,
+        "fraction_within_measurement_0p02": 0.42857142857142855,
+        "max_geometry_distance_over_chord": 0.0010729598384099216
+      },
+      {
+        "section": 6,
+        "eta": 0.95,
+        "eta_in_tec_file": 0.96,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.1494268438181204,
+        "Cp_max_abs_error": 0.4004772264344725,
+        "fraction_within_measurement_0p02": 0.45161290322580644,
+        "max_geometry_distance_over_chord": 0.0009690538087001177
+      },
+      {
+        "section": 6,
+        "eta": 0.95,
+        "eta_in_tec_file": 0.96,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.09643897069342254,
+        "Cp_max_abs_error": 0.2813286930419698,
+        "fraction_within_measurement_0p02": 0.42857142857142855,
+        "max_geometry_distance_over_chord": 0.0012992189433146844
+      },
+      {
+        "section": 7,
+        "eta": 0.99,
+        "eta_in_tec_file": 0.99,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.1215285769510586,
+        "Cp_max_abs_error": 0.2965009023648344,
+        "fraction_within_measurement_0p02": 0.22580645161290322,
+        "max_geometry_distance_over_chord": 0.007020627735850825
+      },
+      {
+        "section": 7,
+        "eta": 0.99,
+        "eta_in_tec_file": 0.99,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.05643028399470105,
+        "Cp_max_abs_error": 0.1016313257452604,
+        "fraction_within_measurement_0p02": 0.14285714285714285,
+        "max_geometry_distance_over_chord": 0.005589864263075065
+      }
+    ]
+  },
+  "baseline_Cp": {
+    "grid": "Prior Roe CFL4 same source mesh",
+    "surface_points": 3290,
+    "yplus_max": 1.4644775390625,
+    "yplus_p95": 1.332927942276001,
+    "fraction_yplus_below1": 0.5620060790273557,
+    "all_point_Cp_RMSE": 0.15439069147000162,
+    "fraction_within_NASA_measurement_uncertainty": 0.19557195571955718,
+    "all_points_within_NASA_uncertainty": false,
+    "geometry_distance_max_over_chord": 0.007020627735850825,
+    "sections": [
+      {
+        "section": 1,
+        "eta": 0.2,
+        "eta_in_tec_file": 0.2,
+        "side": "u",
+        "points": 22,
+        "Cp_RMSE": 0.1166406043246798,
+        "Cp_max_abs_error": 0.4486772795590775,
+        "fraction_within_measurement_0p02": 0.13636363636363635,
+        "max_geometry_distance_over_chord": 0.0007365148217169631
+      },
+      {
+        "section": 1,
+        "eta": 0.2,
+        "eta_in_tec_file": 0.2,
+        "side": "l",
+        "points": 12,
+        "Cp_RMSE": 0.0838949696375998,
+        "Cp_max_abs_error": 0.20292313368543913,
+        "fraction_within_measurement_0p02": 0.5833333333333334,
+        "max_geometry_distance_over_chord": 0.0006654322832963735
+      },
+      {
+        "section": 2,
+        "eta": 0.44,
+        "eta_in_tec_file": 0.44,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.16562942922053522,
+        "Cp_max_abs_error": 0.5402081736494807,
+        "fraction_within_measurement_0p02": 0.13043478260869565,
+        "max_geometry_distance_over_chord": 0.0011684759263876998
+      },
+      {
+        "section": 2,
+        "eta": 0.44,
+        "eta_in_tec_file": 0.44,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.10173780980269685,
+        "Cp_max_abs_error": 0.2919894617972203,
+        "fraction_within_measurement_0p02": 0.5454545454545454,
+        "max_geometry_distance_over_chord": 0.0006342850425926692
+      },
+      {
+        "section": 3,
+        "eta": 0.65,
+        "eta_in_tec_file": 0.65,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.16061758242521842,
+        "Cp_max_abs_error": 0.5899475529899776,
+        "fraction_within_measurement_0p02": 0.21739130434782608,
+        "max_geometry_distance_over_chord": 0.0008319312629884962
+      },
+      {
+        "section": 3,
+        "eta": 0.65,
+        "eta_in_tec_file": 0.65,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.07106615990773218,
+        "Cp_max_abs_error": 0.14750457114113436,
+        "fraction_within_measurement_0p02": 0.36363636363636365,
+        "max_geometry_distance_over_chord": 0.001000364416818326
+      },
+      {
+        "section": 4,
+        "eta": 0.8,
+        "eta_in_tec_file": 0.8,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.17335540621292958,
+        "Cp_max_abs_error": 0.6027434748546098,
+        "fraction_within_measurement_0p02": 0.17391304347826086,
+        "max_geometry_distance_over_chord": 0.0012822232305200099
+      },
+      {
+        "section": 4,
+        "eta": 0.8,
+        "eta_in_tec_file": 0.8,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.10784155024585576,
+        "Cp_max_abs_error": 0.24919838760150492,
+        "fraction_within_measurement_0p02": 0.45454545454545453,
+        "max_geometry_distance_over_chord": 0.0007176810652785666
+      },
+      {
+        "section": 5,
+        "eta": 0.9,
+        "eta_in_tec_file": 0.9,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.24963198512352558,
+        "Cp_max_abs_error": 0.9453948554022069,
+        "fraction_within_measurement_0p02": 0.0967741935483871,
+        "max_geometry_distance_over_chord": 0.0018118474839610224
+      },
+      {
+        "section": 5,
+        "eta": 0.9,
+        "eta_in_tec_file": 0.9,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.1144945030437095,
+        "Cp_max_abs_error": 0.3499174436217898,
+        "fraction_within_measurement_0p02": 0.14285714285714285,
+        "max_geometry_distance_over_chord": 0.0010729598384099216
+      },
+      {
+        "section": 6,
+        "eta": 0.95,
+        "eta_in_tec_file": 0.96,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.18088781345690833,
+        "Cp_max_abs_error": 0.41629680623090054,
+        "fraction_within_measurement_0p02": 0.0967741935483871,
+        "max_geometry_distance_over_chord": 0.0009690538087001177
+      },
+      {
+        "section": 6,
+        "eta": 0.95,
+        "eta_in_tec_file": 0.96,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.12743369809739533,
+        "Cp_max_abs_error": 0.3146772503408688,
+        "fraction_within_measurement_0p02": 0.21428571428571427,
+        "max_geometry_distance_over_chord": 0.0012992189433146844
+      },
+      {
+        "section": 7,
+        "eta": 0.99,
+        "eta_in_tec_file": 0.99,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.12013403631330667,
+        "Cp_max_abs_error": 0.22850724880698087,
+        "fraction_within_measurement_0p02": 0.0967741935483871,
+        "max_geometry_distance_over_chord": 0.007020627735850825
+      },
+      {
+        "section": 7,
+        "eta": 0.99,
+        "eta_in_tec_file": 0.99,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.06472862622255764,
+        "Cp_max_abs_error": 0.13926848899015337,
+        "fraction_within_measurement_0p02": 0.14285714285714285,
+        "max_geometry_distance_over_chord": 0.005589864263075065
+      }
+    ]
+  },
+  "alternate_eta0p96": {
+    "grid": "JST same fine source mesh",
+    "surface_points": 3290,
+    "yplus_max": 1.4580680131912231,
+    "yplus_p95": 1.2552261352539062,
+    "fraction_yplus_below1": 0.4188449848024316,
+    "all_point_Cp_RMSE": 0.12990919579239968,
+    "fraction_within_NASA_measurement_uncertainty": 0.2878228782287823,
+    "all_points_within_NASA_uncertainty": false,
+    "geometry_distance_max_over_chord": 0.007020627735850825,
+    "sections": [
+      {
+        "section": 1,
+        "eta": 0.2,
+        "eta_in_tec_file": 0.2,
+        "side": "u",
+        "points": 22,
+        "Cp_RMSE": 0.09752095709404844,
+        "Cp_max_abs_error": 0.34171252293775045,
+        "fraction_within_measurement_0p02": 0.18181818181818182,
+        "max_geometry_distance_over_chord": 0.0007365148217169631
+      },
+      {
+        "section": 1,
+        "eta": 0.2,
+        "eta_in_tec_file": 0.2,
+        "side": "l",
+        "points": 12,
+        "Cp_RMSE": 0.06974576086933733,
+        "Cp_max_abs_error": 0.16747485074695237,
+        "fraction_within_measurement_0p02": 0.4166666666666667,
+        "max_geometry_distance_over_chord": 0.0006654322832963735
+      },
+      {
+        "section": 2,
+        "eta": 0.44,
+        "eta_in_tec_file": 0.44,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.13239655003969755,
+        "Cp_max_abs_error": 0.4702656936270332,
+        "fraction_within_measurement_0p02": 0.17391304347826086,
+        "max_geometry_distance_over_chord": 0.0011684759263876998
+      },
+      {
+        "section": 2,
+        "eta": 0.44,
+        "eta_in_tec_file": 0.44,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.07424442671347255,
+        "Cp_max_abs_error": 0.1648801699921293,
+        "fraction_within_measurement_0p02": 0.36363636363636365,
+        "max_geometry_distance_over_chord": 0.0006342850425926692
+      },
+      {
+        "section": 3,
+        "eta": 0.65,
+        "eta_in_tec_file": 0.65,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.14674044778202067,
+        "Cp_max_abs_error": 0.5342516631112543,
+        "fraction_within_measurement_0p02": 0.2608695652173913,
+        "max_geometry_distance_over_chord": 0.0008319312629884962
+      },
+      {
+        "section": 3,
+        "eta": 0.65,
+        "eta_in_tec_file": 0.65,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.03964940028260559,
+        "Cp_max_abs_error": 0.08525458683765173,
+        "fraction_within_measurement_0p02": 0.18181818181818182,
+        "max_geometry_distance_over_chord": 0.001000364416818326
+      },
+      {
+        "section": 4,
+        "eta": 0.8,
+        "eta_in_tec_file": 0.8,
+        "side": "u",
+        "points": 23,
+        "Cp_RMSE": 0.15239327527853117,
+        "Cp_max_abs_error": 0.5802998297865934,
+        "fraction_within_measurement_0p02": 0.34782608695652173,
+        "max_geometry_distance_over_chord": 0.0012822232305200099
+      },
+      {
+        "section": 4,
+        "eta": 0.8,
+        "eta_in_tec_file": 0.8,
+        "side": "l",
+        "points": 11,
+        "Cp_RMSE": 0.06820189522365563,
+        "Cp_max_abs_error": 0.14852642459698417,
+        "fraction_within_measurement_0p02": 0.18181818181818182,
+        "max_geometry_distance_over_chord": 0.0007176810652785666
+      },
+      {
+        "section": 5,
+        "eta": 0.9,
+        "eta_in_tec_file": 0.9,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.2012476033858289,
+        "Cp_max_abs_error": 0.7308010655127657,
+        "fraction_within_measurement_0p02": 0.3548387096774194,
+        "max_geometry_distance_over_chord": 0.0018118474839610224
+      },
+      {
+        "section": 5,
+        "eta": 0.9,
+        "eta_in_tec_file": 0.9,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.09236345235286879,
+        "Cp_max_abs_error": 0.29063833507018655,
+        "fraction_within_measurement_0p02": 0.42857142857142855,
+        "max_geometry_distance_over_chord": 0.0010729598384099216
+      },
+      {
+        "section": 6,
+        "eta": 0.96,
+        "eta_in_tec_file": 0.96,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.15608134618452718,
+        "Cp_max_abs_error": 0.3923195957801763,
+        "fraction_within_measurement_0p02": 0.3548387096774194,
+        "max_geometry_distance_over_chord": 0.0012242753075479124
+      },
+      {
+        "section": 6,
+        "eta": 0.96,
+        "eta_in_tec_file": 0.96,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.0893088540701281,
+        "Cp_max_abs_error": 0.27718606893723574,
+        "fraction_within_measurement_0p02": 0.42857142857142855,
+        "max_geometry_distance_over_chord": 0.0012780649342610366
+      },
+      {
+        "section": 7,
+        "eta": 0.99,
+        "eta_in_tec_file": 0.99,
+        "side": "u",
+        "points": 31,
+        "Cp_RMSE": 0.1215285769510586,
+        "Cp_max_abs_error": 0.2965009023648344,
+        "fraction_within_measurement_0p02": 0.22580645161290322,
+        "max_geometry_distance_over_chord": 0.007020627735850825
+      },
+      {
+        "section": 7,
+        "eta": 0.99,
+        "eta_in_tec_file": 0.99,
+        "side": "l",
+        "points": 14,
+        "Cp_RMSE": 0.05643028399470105,
+        "Cp_max_abs_error": 0.1016313257452604,
+        "fraction_within_measurement_0p02": 0.14285714285714285,
+        "max_geometry_distance_over_chord": 0.005589864263075065
+      }
+    ]
+  },
+  "iteration_passed": false,
+  "wall_passed": false,
+  "experimental_checks": {
+    "section1u": false,
+    "section1l": true,
+    "section2u": false,
+    "section2l": true,
+    "section3u": false,
+    "section3l": true,
+    "section4u": false,
+    "section4l": true,
+    "section5u": false,
+    "section5l": false,
+    "section6u": false,
+    "section6l": false,
+    "section7u": false,
+    "section7l": true
+  },
+  "experiment_passed": false,
+  "minimum_qualification_passed": false,
+  "missing_full_qualification": [
+    "systematic same-geometry three-grid family",
+    "regional boundary-layer sensitivity",
+    "controlled farfield sensitivity"
+  ],
+  "frozen_prediction_sha256": "206272da7f854c4d5ce9bbacfee304266aea966186f849ab863d97c2ae5f6e0f",
+  "scope": "Fixed published fine-hybrid M6 geometry and domain; one numerical-method diagnostic, not mesh convergence or a new blind validation",
+  "force_reference": "Same half-wing projected reference area0.7613155538973486m2, cref0.64607m; no force rescaling to match experiment",
+  "geometry_note": "Published rounded-tip source surface extends past nominal NASA1.1963m semispan; unchanged source approximation. Section6 main eta.95 and alternative.96 both retained."
+}

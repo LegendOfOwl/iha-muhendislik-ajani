@@ -1,0 +1,8 @@
+{
+  "paired_control": "v3_reference_sourcegrid",
+  "single_changed_numerical_policy": "SA convective reconstruction order: MUSCL_TURB NO to YES; default limiter/reconstruction and physical model unchanged",
+  "source": "https://su2code.github.io/documents/SU2_AIAA_SciTech2014.pdf",
+  "page": "23 of33, RAE2822 numerical methods uses second-order scalar upwind",
+  "note": "Paper T273.15 differs from our predeclared NASA T255.5556; do not copy that physical change. This trial tests one numerical hypothesis on the same source mesh. Still diagnostic, original maxy+ gate retained.",
+  "minimum_acceptance": false
+}

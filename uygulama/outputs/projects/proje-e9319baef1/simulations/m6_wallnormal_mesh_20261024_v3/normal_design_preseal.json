@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-24T13:06:30.242258+00:00",
+  "source_mesh_sha256": "d20855c5a7b97cf6c32713f4f406b9b5b158b937a97ba583855dc58afe87e9f4",
+  "own_yplus_field": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823\\surface_flow.vtu",
+  "own_field_sha256": "c1abdf8562a598dbe9f4cf4fad76ec9206f7ea68854e5c293aebacfdc1136dbe",
+  "algorithm": "Per-column a=clip(0.5/max(own_yplus,0.5),0.25,1); where a<1 solve geometric25-layer progression for first=a*source_first and same total source-column arclength. Piecewise-linear interpolation on source columns. Unrefined columns unchanged.",
+  "target_yplus_design": 0.5,
+  "strict_solution_max_yplus_remains": 1.0,
+  "normal_layers_unchanged": 25,
+  "cells_unchanged": 258969,
+  "wall_geometry_unchanged": true,
+  "farfield_and_outer_prism_interface_unchanged": true,
+  "source_used_for_design": "Own prior native Y_Plus only; no experiment, expected Cp or shock position used",
+  "mesh_qualification_only": true,
+  "future_native_solution_required": true,
+  "minimum_physical_qualification_passed": false
+}

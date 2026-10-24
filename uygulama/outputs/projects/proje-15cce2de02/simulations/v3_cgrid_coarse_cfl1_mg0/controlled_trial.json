@@ -1,0 +1,9 @@
+{
+  "paired_control": "v3_cgrid_coarse_cfl1",
+  "same_initial_checkpoint": "v3_cgrid_coarse/restart_flow_001000.dat",
+  "single_difference_from_paired_control": "MGLEVEL3 to0; all other native config fields and mesh identical",
+  "hypothesis": "Anisotropic shock-aligned C-block and isotropic multigrid agglomeration may couple poorly; published SU2 developer guidance warns extreme stretched wake elements can impair multigrid. This is not proof for current version or this mesh.",
+  "source": "https://github.com/su2code/SU2/discussions/1522",
+  "pretest_observation": "CFL1 control remains around density-5.6..-5.4 through900steps with large force oscillation",
+  "minimum_acceptance": false
+}

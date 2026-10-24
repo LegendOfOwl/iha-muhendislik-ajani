@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-24T12:47:26.701696+00:00",
+  "project_id": "proje-e9319baef1",
+  "RAE_batch_closed": "outputs\\projects\\proje-15cce2de02\\reports\\v3_test_batch_closed.json",
+  "RAE_closure_sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3",
+  "source_case": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823",
+  "source_checkpoint_note": "Previously completed M6 bounded1000 run, history terminal999; matching last field/restart preserved",
+  "source_inputs_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823\\case.cfg": "88f6cdb6d79b92eaefac4c7121336602cbc453b44706145eb9c3bd85267cf6c0",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823\\mesh.su2": "d20855c5a7b97cf6c32713f4f406b9b5b158b937a97ba583855dc58afe87e9f4",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823\\restart_flow.dat": "b5d57e0919b69bc987201111bdda62edfc33d15b817f39a38555adf0e19f8198",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823\\surface_flow.vtu": "c1abdf8562a598dbe9f4cf4fad76ec9206f7ea68854e5c293aebacfdc1136dbe",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_bounded_cfl_20261019_123823\\history.csv": "b2f6434da51173e33e3b99b52482dd08d16a51cd04d97553f221a11e01b9e5ab"
+  },
+  "conditions": {
+    "Mach": 0.8395,
+    "alpha_deg": 3.06,
+    "beta_deg": 0,
+    "Re": 11720000.0,
+    "Re_length_m": 0.64607,
+    "T_K": 288.15,
+    "solver": "3D compressible RANS",
+    "turbulence": "SA, fully turbulent, no transition",
+    "boundary": "adiabatic no-slip wing; symmetry root; freestream farfield"
+  },
+  "thresholds": {
+    "density_log10_max": -7,
+    "CL_last100_range_max": 0.0002,
+    "CD_last100_range_max": 2e-05,
+    "strict_max_yplus": 1,
+    "grid_CL_relative_change_max": 0.03,
+    "grid_CD_relative_change_max": 0.1,
+    "per_section_Cp_RMSE_max": 0.08,
+    "NASA_Cp_measurement_uncertainty": 0.02,
+    "note": "Numerical/engineering screens chosen before runs; NASA +/-0.02 is measurement uncertainty, not a universal CFD pass criterion."
+  },
+  "physical_fields_unchanged": [
+    "SOLVER",
+    "KIND_TURB_MODEL",
+    "MACH_NUMBER",
+    "AOA",
+    "SIDESLIP_ANGLE",
+    "REYNOLDS_NUMBER",
+    "REYNOLDS_LENGTH",
+    "FREESTREAM_TEMPERATURE",
+    "REF_AREA",
+    "REF_LENGTH",
+    "MARKER_HEATFLUX",
+    "MARKER_SYM",
+    "MARKER_FAR",
+    "VISCOSITY_MODEL"
+  ],
+  "overrides": {
+    "ITER": {
+      "old": "1000",
+      "new": "3000"
+    },
+    "CONV_NUM_METHOD_FLOW": {
+      "old": "ROE",
+      "new": "JST"
+    },
+    "SOLUTION_FILENAME": {
+      "old": "restart_flow.dat",
+      "new": "seed"
+    },
+    "OUTPUT_WRT_FREQ": {
+      "old": "200",
+      "new": "( 200, 200, 200, 200 )"
+    },
+    "HISTORY_OUTPUT": {
+      "old": "(ITER, RMS_RES, AERO_COEFF)",
+      "new": "( ITER, RMS_RES, MAX_RES, AERO_COEFF, LINSOL )"
+    },
+    "READ_BINARY_RESTART": {
+      "old": null,
+      "new": "YES"
+    },
+    "WRT_RESTART_OVERWRITE": {
+      "old": null,
+      "new": "NO"
+    },
+    "WRT_SURFACE_OVERWRITE": {
+      "old": null,
+      "new": "NO"
+    },
+    "WRT_VOLUME_OVERWRITE": {
+      "old": null,
+      "new": "NO"
+    },
+    "VOLUME_OUTPUT": {
+      "old": null,
+      "new": "( COORDINATES, SOLUTION, PRIMITIVE, RESIDUAL )"
+    }
+  },
+  "single_numerical_policy": "Mean flow ROE -> scalar JST; MUSCL_FLOW/limiter remain configured but are inactive for central JST. No CFL/gradient/linear/turbulence/mesh/physics change.",
+  "source_rationale": {
+    "paper": "https://su2code.github.io/documents/SU2_AIAA_SciTech2014.pdf",
+    "page": "25/33",
+    "paper_sha256": "ebbad5ea96e79f3f4e557bc68720804867f989eafe447cad74538362b14b7b3f",
+    "claim": "Published M6 validation uses JST mean flow with first-order SA/SST transport. This trial keeps its own prior conditions and is not a full reproduction of that mesh/T/method.",
+    "experiment": "https://www.grc.nasa.gov/www/wind/valid/m6wing/m6wing.html"
+  },
+  "scope": "Fixed published fine-hybrid M6 geometry and domain; one numerical-method diagnostic, not mesh convergence or a new blind validation",
+  "required_unclosed_gates": [
+    "systematic same-geometry three-grid family",
+    "regional boundary-layer sensitivity",
+    "controlled farfield sensitivity"
+  ],
+  "minimum_qualification_passed": false
+}

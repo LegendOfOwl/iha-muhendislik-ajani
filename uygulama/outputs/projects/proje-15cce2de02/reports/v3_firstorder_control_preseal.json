@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-19T19:50:21.762394+00:00",
+  "reference_case": "v3_r4roe_coarse_warmstart",
+  "changed": {
+    "MUSCL_FLOW": {
+      "old": "YES",
+      "new": "NO"
+    }
+  },
+  "same_initial_seed": true,
+  "mesh_sha256": "619010cb6ba249c7198a02c4deebf817ceca847a28e0b5d4390395717dfc3ba4",
+  "seed_sha256": "12187e66e81eefae21e817fa3ac7e47c01386c13191c23249dd16b1c56f18f3e",
+  "config_sha256": "98fbe044e60939ed9759712b45b1f4c5c16732b64eadf61747f88ea1ccdc2133",
+  "contract_sha256": "a3106e323f9a5671067b69fded039fa8b3d2aae607514ec114a949b501b91c69",
+  "rationale": "work/mesh_research/research_addendum_03.md",
+  "rationale_sha256": "63df497e3ebad192cf95663b6c5ad1940267b7a2c6e9d18e04f83598bb3bcaff",
+  "scope": "First-order reconstruction-isolation diagnostic only; cannot replace second-order fine validation",
+  "minimum_qualification_passed": false
+}

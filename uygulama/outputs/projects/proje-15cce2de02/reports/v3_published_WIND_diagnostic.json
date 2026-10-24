@@ -1,0 +1,43 @@
+{
+  "algorithm_version": 2,
+  "role": "Published WIND numerical curve, not our solver and not experimental coefficients",
+  "source": "https://www.grc.nasa.gov/www/wind/valid/raetaf/raetaf04/raetaf04.html",
+  "branch_order_evidence": "https://www.grc.nasa.gov/www/wind/valid/raetaf/raetaf01/raetaf01.html#grid; lower TE I33 to upper TE I337; CFPOST exact subset and all305 x values verified against source grid.",
+  "source_file_sha256": "eb4371990d743e1fd66c97efde5f66d78109d72a771d23b967a2712d84f02d6c",
+  "misleading_file_header": "Experiment label in cp.wind.gen comes from CFPOST curve1 title; source page identifies generated WIND data.",
+  "raw_reference": {
+    "points": 103,
+    "RMSE": 0.10682682210129267,
+    "mean_bias": 0.02410465024349459,
+    "p95_abs_error": 0.09008561554585537,
+    "max_abs_error": 0.9558172634990898,
+    "fraction_within_source_uncertainty_0p0026": 0.019417475728155338
+  },
+  "original_table_reference": {
+    "points": 103,
+    "RMSE": 0.051614151734577854,
+    "mean_bias": 0.015912417233785867,
+    "p95_abs_error": 0.09008561554585537,
+    "max_abs_error": 0.28008845470888677,
+    "fraction_within_source_uncertainty_0p0026": 0.019417475728155338
+  },
+  "upper": {
+    "points": 54,
+    "RMSE": 0.06815101589903687,
+    "mean_bias": 0.019823370371943035,
+    "p95_abs_error": 0.11713579757913271,
+    "max_abs_error": 0.28008845470888677,
+    "fraction_within_source_uncertainty_0p0026": 0.018518518518518517
+  },
+  "lower": {
+    "points": 49,
+    "RMSE": 0.02194047402889621,
+    "mean_bias": 0.01160238724479632,
+    "p95_abs_error": 0.030524791181596244,
+    "max_abs_error": 0.09019671805308982,
+    "fraction_within_source_uncertainty_0p0026": 0.02040816326530612
+  },
+  "correction_scope": "Only this published numerical diagnostic branch classifier corrected. Native SU2 predictions, original sources, contract and v1/v2 reviewers unchanged. Initial wrong-order score preserved separately.",
+  "threshold_unchanged": 0.03,
+  "our_qualification_unchanged": false
+}

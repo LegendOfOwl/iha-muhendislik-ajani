@@ -1,0 +1,42 @@
+{
+  "scope": "1D distribution proposal only; not applied to any mesh, config, field or frozen generator. Requires a new mesh revision if authorized. Does not claim to fix shock instability.",
+  "results": [
+    {
+      "level": "coarse",
+      "first_redistributed_x_m": 2.4211902779997114,
+      "unchanged_prefix_nodes": 101,
+      "old_nodes": 175,
+      "proposed_nodes": 176,
+      "old_last_dx_m": 0.1038097220002756,
+      "proposed_tail_dx_m": 0.07438412962667051,
+      "cap_m": 0.07500000000000001,
+      "max_proposed_dx_m": 0.07438412962667051,
+      "source_sha256": "d302b62070702b668bbcfa06a5f1dc2a4a70408dc20ae26a8719c24af3367342"
+    },
+    {
+      "level": "medium",
+      "first_redistributed_x_m": 2.434093019551302,
+      "unchanged_prefix_nodes": 150,
+      "old_nodes": 261,
+      "proposed_nodes": 262,
+      "old_last_dx_m": 0.0659069804487169,
+      "proposed_tail_dx_m": 0.04969559803972068,
+      "cap_m": 0.05,
+      "max_proposed_dx_m": 0.04969559803972068,
+      "source_sha256": "e0090c33485b06aeacd3b7c9f1d193b42a6bc2417efe8e3f07fd4475e7e2b853"
+    },
+    {
+      "level": "fine",
+      "first_redistributed_x_m": 2.426435568009426,
+      "unchanged_prefix_nodes": 223,
+      "old_nodes": 390,
+      "proposed_nodes": 391,
+      "old_last_dx_m": 0.04023109865726049,
+      "proposed_tail_dx_m": 0.03317597876184841,
+      "cap_m": 0.03333333333333333,
+      "max_proposed_dx_m": 0.0331759787618493,
+      "source_sha256": "7ea07a597f24a82a84b2809ec5c06160baeb67325ec5a593e86f7b3cb06ac977"
+    }
+  ],
+  "script_sha256": "6fea350627229a45193632c2bcfb190b5ac15b7554c8eda4bba25bcda63eff2a"
+}
