@@ -37,3 +37,7 @@ Konumsal ağ düzeltmeleri, başarısız sayısal kontroller ve 24 Ekim M6 koşu
 ## v0.9.0 — Hata dersleri ve ajan talimatı
 
 Kanıtlı hata defteri, operasyonel bellek, 39 kontrol ve başlatıcı talimat sürümü.
+
+## v0.10.0 — Düzenlenmiş GitHub dağıtımı
+
+Kategori dizinleri, tam dosya kataloğu, sürüm notları ve hash kontrollü analiz arşivleri.
