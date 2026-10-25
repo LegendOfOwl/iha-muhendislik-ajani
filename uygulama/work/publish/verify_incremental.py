@@ -42,8 +42,8 @@ def full_restore(catalog):
     return {'scope':'Actual new release raw-data restore in empty directory on this Windows machine; not VM/clean solver installation or new CFD run',
         'restored_original_paths':len(rows),'all_sha256_passed':True}
 
-def verify_blobs(catalog,ref):
-    rows=[r for r in catalog['files'] if r['storage']=='git'];p=subprocess.Popen(['git','-C',str(DEST),'cat-file','--batch'],stdin=subprocess.PIPE,stdout=subprocess.PIPE)
+def verify_blobs(catalog,ref,env=None):
+    rows=[r for r in catalog['files'] if r['storage']=='git'];p=subprocess.Popen(['git','-C',str(DEST),'cat-file','--batch'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,env=env)
     for r in rows:
         p.stdin.write((ref+':'+r['repository_path']+'\n').encode());p.stdin.flush();header=p.stdout.readline().decode().split();assert len(header)==3 and header[1]=='blob',r['repository_path']
         n=int(header[2]);h=hashlib.sha256()

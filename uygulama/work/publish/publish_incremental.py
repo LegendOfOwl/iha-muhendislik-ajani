@@ -20,7 +20,7 @@ def commit():
     run(['git','commit','-m',VERSION+': kaynak CFD teşhisi, güvenilirlik ve okunabilir sonuç raporları'])
     head=run(['git','rev-parse','HEAD']);assert run(['git','rev-parse','HEAD^'])==BASE_HEAD
     from verify_incremental import verify_blobs
-    count=verify_blobs(read(DEST/'analizler/dosya_katalogu.json'),'HEAD')
+    count=verify_blobs(read(DEST/'analizler/dosya_katalogu.json'),'HEAD',env=ENV)
     assert not run(['git','status','--porcelain'])
     run(['git','tag','-a',VERSION,'-m',VERSION+' —25Ekim kaynak CFD ve güvenilirlik; fizik kabulü açık'])
     dump(RUN/'commit.json',{'created_utc':now(),'head':head,'base':BASE_HEAD,'git_source_blobs_verified':count,'tag':VERSION,'tag_object':run(['git','rev-parse',VERSION])})
