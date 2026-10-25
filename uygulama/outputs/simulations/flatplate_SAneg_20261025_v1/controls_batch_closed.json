@@ -1,0 +1,55 @@
+{
+  "closed_utc": "2026-10-25T20:32:10.855978+00:00",
+  "scope": "Finite convergence research/control batch complete; all physical qualification gates remain open",
+  "rows": [
+    {
+      "method": "CFL100→10",
+      "comparable": true,
+      "density_gain": -0.10849578199999854,
+      "SA_worsening": 0.21184991400000008,
+      "effect_passed": false
+    },
+    {
+      "method": "MG0→2",
+      "comparable": false,
+      "density_gain": null,
+      "SA_worsening": null,
+      "effect_passed": false
+    },
+    {
+      "method": "Otomatik→sabit CFL",
+      "comparable": true,
+      "density_gain": 0.010748713999999993,
+      "SA_worsening": 0.30702530000000117,
+      "effect_passed": false
+    },
+    {
+      "method": "Newton / soğuk başlangıç",
+      "comparable": true,
+      "density_gain": 0.2330264979999992,
+      "SA_worsening": 0.41495461000000056,
+      "effect_passed": false
+    },
+    {
+      "method": "Yalnız değişken ölçekleme",
+      "comparable": true,
+      "density_gain": 0.055043492033426844,
+      "SA_worsening": -0.042092234906242254,
+      "effect_passed": false
+    },
+    {
+      "method": "Newton / gelişmiş alan",
+      "comparable": true,
+      "density_gain": -0.00019341000000139275,
+      "SA_worsening": -0.00431822999999909,
+      "effect_passed": false
+    }
+  ],
+  "integrity_report_sha256": "80cbcfc63d3b413db68a74672dad338920c5a63f148567aa1a5d1d72f9ff8305",
+  "new_native_runs": 11,
+  "new_numerical_effects_accepted": 0,
+  "next_registered_not_run": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\next_linear_work_control_not_run.json",
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "expert_agent_claimed": false
+}

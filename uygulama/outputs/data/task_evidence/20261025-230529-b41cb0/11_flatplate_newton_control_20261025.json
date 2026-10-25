@@ -1,0 +1,132 @@
+{
+  "created_utc": "2026-10-25T20:27:07.041465+00:00",
+  "contract_sha256": "f201fec7e5f89bfb582ea0c9cb9298341da3d6b6e0cc8cedd4ba8f950fd26023",
+  "quasi": {
+    "frozen_utc": "2026-10-25T20:20:39.977133+00:00",
+    "not_blind": true,
+    "contract_sha256": "f201fec7e5f89bfb582ea0c9cb9298341da3d6b6e0cc8cedd4ba8f950fd26023",
+    "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+    "matched": {
+      "field_iteration": 399,
+      "terminal_history_iteration": 399,
+      "rms[Rho]": -9.13312218,
+      "rms[RhoU]": -8.543151213,
+      "rms[RhoV]": -9.287487129,
+      "rms[RhoE]": -8.744781888,
+      "rms[nu]": -12.34716461,
+      "CL": -0.0004189058639,
+      "CD": 0.002969542265,
+      "LinSolRes": -0.7505802822,
+      "Linear_Solver_Iterations": 5.0,
+      "last100_samples": 100,
+      "CD_last100_range": 0.0002638172589999998
+    },
+    "native_status": {
+      "started_utc": "2026-10-25T20:20:33.453458+00:00",
+      "ended_utc": "2026-10-25T20:20:39.970246+00:00",
+      "exit_code": 0,
+      "seconds": 6.51600000000326,
+      "stop_reason": null,
+      "peak_working_set_GiB": 0.056850433349609375,
+      "budget_s": 300,
+      "command": [
+        "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+        "case.cfg",
+        "-t",
+        "4"
+      ]
+    },
+    "files_sha256": {
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\case.cfg": "33aee4903587d21efd411fb84af986f54e776e7de2c990aa93fb86e048fc7603",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\flow.vtu": "76dee117870303fc0bf6e82d9304a7a05218f15e2e8eeb1d56ac8107a39f32e7",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\flow_000200.vtu": "cc8839cf80d1209ba4b82bf882fb359830cd2bb8eb4629963110cf8a94375c8c",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\flow_000399.vtu": "76dee117870303fc0bf6e82d9304a7a05218f15e2e8eeb1d56ac8107a39f32e7",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\history.csv": "124026abf326cab274469ca226dd0bdd7741924ca8e3766f72aaae139b80c713",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\restart_flow.dat": "74c5bacef57787705d897702a7ef3aaf89e7a387ee4ee8d28dad019ff055da19",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\restart_flow_000200.dat": "f0f0bf93d0fe5718bf8cc0e65a092e148020179acab82a80557988170e4c5ad7",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\restart_flow_000399.dat": "74c5bacef57787705d897702a7ef3aaf89e7a387ee4ee8d28dad019ff055da19",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\runner_code_before_native.json": "dde33fc7b439bca750494dd7ce3c4f259935f3894f3dfa8ec1e9fdbd8a50060b",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\seed.dat": "e21c80d75f49d2aba92272837732d62fbfbe7ba1c8b3796bcc1dd3708e33ae6c",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\solver.log": "9eb61483d335a291c60c2acf363735a6b0960cf629ce62d6346c6bd19ec7a93f",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\solver.process.json": "8b16e195b5fe4a1215bac91c0601c024cfe06a0023b5ae64d182558f5813db88",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\solver.status.json": "f9af975b0bed0458bccfe1865a34dd8750e47007e1e93dec09e2e3d8e3dbdacb",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow.csv": "5cba137d5f4161d17fcab429ddf4f9a107f4b6408ce962737fb01a9eaf0ac381",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow.vtu": "80cd74dd791041fa302b3ef45cb45f79eb4cf4d6be5892d7147a1b25930c81e7",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow_000200.csv": "e7b14653fae9a3de9f455410f6a522dea38b9c17c702b9f36edc1a1f1773a331",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow_000200.vtu": "bf370ec5091b69351745222925351cac9bd7ca7cf9a1989cffa786bea0b2a809",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow_000399.csv": "5cba137d5f4161d17fcab429ddf4f9a107f4b6408ce962737fb01a9eaf0ac381",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow_000399.vtu": "80cd74dd791041fa302b3ef45cb45f79eb4cf4d6be5892d7147a1b25930c81e7"
+    }
+  },
+  "newton": {
+    "frozen_utc": "2026-10-25T20:21:12.749450+00:00",
+    "not_blind": true,
+    "contract_sha256": "f201fec7e5f89bfb582ea0c9cb9298341da3d6b6e0cc8cedd4ba8f950fd26023",
+    "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+    "matched": {
+      "field_iteration": 399,
+      "terminal_history_iteration": 399,
+      "rms[Rho]": -9.366148678,
+      "rms[RhoU]": -8.194948395,
+      "rms[RhoV]": -9.297146967,
+      "rms[RhoE]": -8.904475538,
+      "rms[nu]": -11.93221,
+      "CL": -0.0002413702433,
+      "CD": 0.003146459227,
+      "LinSolRes": -0.7465876798,
+      "Linear_Solver_Iterations": 7.0,
+      "last100_samples": 100,
+      "CD_last100_range": 0.0006610431710000002
+    },
+    "native_status": {
+      "started_utc": "2026-10-25T20:21:03.723971+00:00",
+      "ended_utc": "2026-10-25T20:21:12.742867+00:00",
+      "exit_code": 0,
+      "seconds": 9.01500000001397,
+      "stop_reason": null,
+      "peak_working_set_GiB": 0.06438446044921875,
+      "budget_s": 300,
+      "command": [
+        "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+        "case.cfg",
+        "-t",
+        "4"
+      ]
+    },
+    "files_sha256": {
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\case.cfg": "59c4c5e3f79043c63bb4bbc107b56698b586a00436f8e0acded231b651f19636",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\flow.vtu": "e780c9b7f624a591f90b4e61a5a9ac01694292fda2ebc993fe4a8773dd339291",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\flow_000200.vtu": "69f5fa25f73c781006f0f5822d7dbdf68ac64fcceabc7b841d2605297ba4462f",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\flow_000399.vtu": "e780c9b7f624a591f90b4e61a5a9ac01694292fda2ebc993fe4a8773dd339291",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\history.csv": "a034e01f121f93ed36d79606ecc187170d35491cc6398dc9f13dfc1003ee8019",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\restart_flow.dat": "c3ba8ca37e9a230e36f51bf52a13e07e183d97c9054aa149d4916fb758e9880b",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\restart_flow_000200.dat": "72bc080711891be4a47a299b03305094eaa6e4f843d6890ebd7f3ff4879fc71a",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\restart_flow_000399.dat": "c3ba8ca37e9a230e36f51bf52a13e07e183d97c9054aa149d4916fb758e9880b",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\runner_code_before_native.json": "7a0550ace62e06efaabd0963575d7f2a096522b213cd96ff98c32b89521b6d0e",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\seed.dat": "e21c80d75f49d2aba92272837732d62fbfbe7ba1c8b3796bcc1dd3708e33ae6c",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\solver.log": "bc157be850f927a686c2f5db83c26f2d12780d8dfad26eb72b434e17ee257a9b",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\solver.process.json": "cfe8f64378197208a737f09e6741f18af9de0f9792d19f08d429b75a23a1c68e",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\solver.status.json": "c020516cf36f95365c381a4ea4995f533e979a3456597960ec6c6d71a72ec274",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\surface_flow.csv": "b4b4b40e465b7e43c06e55d01035555c2e046a39dadecfc71a3bc9a2a85cd22a",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\surface_flow.vtu": "1f48d0afd13a03358bd83c0a05cacc7058b2d704fdc0da50cbfbfbbe0af262fb",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\surface_flow_000200.csv": "fe52402b75b9294692f31a2c090105bece852ebb19498cff1814c2a94a26f8f9",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\surface_flow_000200.vtu": "3e0c2f718eb920187e68e94f2c2d5457e8184e197625a78f09349077ff8fecea",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\surface_flow_000399.csv": "b4b4b40e465b7e43c06e55d01035555c2e046a39dadecfc71a3bc9a2a85cd22a",
+      "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton\\surface_flow_000399.vtu": "1f48d0afd13a03358bd83c0a05cacc7058b2d704fdc0da50cbfbfbbe0af262fb"
+    }
+  },
+  "verified_files": 38,
+  "startup_first20_max_log_or_CD_difference": 0.0,
+  "evaluation_version": 2,
+  "residual_normalizations": [
+    "SU2_ND2D",
+    "SU2_ND2D"
+  ],
+  "comparable": true,
+  "comparison_rejected_because": [],
+  "density_log10_gain": 0.2330264979999992,
+  "SA_log10_worsening": 0.41495461000000056,
+  "effect_passed": false,
+  "physical_qualification_passed": false,
+  "raw_residuals_same_nondimensionalization_only": true
+}

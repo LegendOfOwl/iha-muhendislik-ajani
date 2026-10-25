@@ -1,0 +1,126 @@
+{
+  "checked_utc": "2026-10-25T20:32:10.841962+00:00",
+  "new_runs": [
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl100",
+      "seal_sha256": "fa41fdb7d8b12f9c9938432f9ddddf24e6722c35c18642cd141ae6042047866b",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 136.23399999999674,
+      "sampled_peak_working_set_GiB": 0.28748321533203125,
+      "field_iteration": 399,
+      "terminal_history_iteration": 399
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10",
+      "seal_sha256": "f44c0a1d81359263f45abf12fbdad44648c637e56271888e85418e042bbeadfa",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 36.53100000001723,
+      "sampled_peak_working_set_GiB": 0.2874870300292969,
+      "field_iteration": 399,
+      "terminal_history_iteration": 399
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\mg_control_v1\\smoke",
+      "seal_sha256": "dcdfa63d6edc8d560fec7a2fce9b6d141e60e53f25b7d99fdd7cff172c155b04",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 11.01600000000326,
+      "sampled_peak_working_set_GiB": 0.3617897033691406,
+      "field_iteration": 19,
+      "terminal_history_iteration": 19
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\mg_control_v1\\mg2",
+      "seal_sha256": "401a3456247f3afecc3d8cbce4b17d4337a4a6dd07b9eed99cc196c11f7e37b2",
+      "exit_code": 1,
+      "stop_reason": "time_budget_exceeded",
+      "seconds": 240.21900000004098,
+      "sampled_peak_working_set_GiB": 0.3645820617675781,
+      "field_iteration": 200,
+      "terminal_history_iteration": 390
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\adaptive_toggle_v1\\adaptive",
+      "seal_sha256": "90a69605210b5d9f85bc413345fdfeee2825290c365eef5e80451551f23292a4",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 184.67199999996228,
+      "sampled_peak_working_set_GiB": 0.2874031066894531,
+      "field_iteration": 399,
+      "terminal_history_iteration": 399
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\seed",
+      "seal_sha256": "1ce5c90fb7c0c642284ef3c5e932d024bcea5cc21ed97ff8b7d814b4def7d1c4",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 0.5150000000139698,
+      "sampled_peak_working_set_GiB": 0.001895904541015625,
+      "field_iteration": 0,
+      "terminal_history_iteration": 0
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi",
+      "seal_sha256": "762f44e35f4a9910f80895db2ae8b96239fe2d7e15e81aaf1b56952de8e9ea9e",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 6.51600000000326,
+      "sampled_peak_working_set_GiB": 0.056850433349609375,
+      "field_iteration": 399,
+      "terminal_history_iteration": 399
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\newton",
+      "seal_sha256": "a7bddc5d0cd54de6176ccc210f8df7e5b73584d77ea02944559121164810f899",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 9.01500000001397,
+      "sampled_peak_working_set_GiB": 0.06438446044921875,
+      "field_iteration": 399,
+      "terminal_history_iteration": 399
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\warm_scaling_pair_v1\\scaled",
+      "seal_sha256": "60cf1e373007c4ad98439f2714fc4873b791c07dffa1c344dc171df8c40ffe67",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 20.03200000000652,
+      "sampled_peak_working_set_GiB": 0.07953643798828125,
+      "field_iteration": 199,
+      "terminal_history_iteration": 199
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_warm_control_v1\\quasi",
+      "seal_sha256": "3b1cc50672c422ec66f527a9f37d45367cd19224e1dcfcacd94a8d6bd0f3f376",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 7.51600000000326,
+      "sampled_peak_working_set_GiB": 0.056774139404296875,
+      "field_iteration": 399,
+      "terminal_history_iteration": 399
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_warm_control_v1\\newton",
+      "seal_sha256": "26481ecad651e059fba3f70e4f0230447de3bf34975016c816be82d6e27acb8d",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 12.51600000000326,
+      "sampled_peak_working_set_GiB": 0.0572357177734375,
+      "field_iteration": 399,
+      "terminal_history_iteration": 399
+    }
+  ],
+  "new_native_runs": 11,
+  "new_hash_records_verified": 187,
+  "pre_native_code_archive_hash_records_verified": 40,
+  "old_hash_records_reverified": 230,
+  "actual_project_inputs_unchanged_vs_v0_11": {
+    "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "physical_qualification_passed": false,
+  "scope": "All new top-level files in seals; nested code archives verified through sealed manifests. Not a fresh-machine reproduction."
+}

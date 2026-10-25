@@ -1,0 +1,150 @@
+{
+  "id": "20261025-230529-b41cb0",
+  "request": "Düz plaka yakınsaması: ön kayıtlı sabit CFL100/10 kontrolü ve kaynaklı neden araştırması",
+  "kind": "qualification",
+  "created_utc": "2026-10-25T20:05:29.574211+00:00",
+  "status": "tamamlandı",
+  "phase": "sınırlı kontrollü araştırma paketi kapandı",
+  "acceptance": [
+    "400 ortak adım; yalnız CFL_NUMBER farkı",
+    "Ham başarısızlıkları ve aynı iterasyon alan/geçmişini mühürle",
+    "Etki eşiğini fiziksel yeterlilikten ayır; kaynakla sonraki mekanizmayı seç"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\cfd_yakinsama_arastirmasi_20261025.md",
+      "sha256": "def7dfd1591f9249f57ddad43711fc6b8e33c3373766e9824aaa6b1df5433380",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\00_cfd_yakinsama_arastirmasi_20261025.md"
+    },
+    {
+      "path": "outputs\\reports\\cfd_yakinsama_arastirmasi_20261025.html",
+      "sha256": "0141b08b1c2e3afa450369f13d5cee82436fd7ecfd636ccc9d70f3dc73e56189",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\01_cfd_yakinsama_arastirmasi_20261025.html"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_controls_integrity_20261025.json",
+      "sha256": "80cbcfc63d3b413db68a74672dad338920c5a63f148567aa1a5d1d72f9ff8305",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\02_flatplate_controls_integrity_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_pair_guards_20261025.json",
+      "sha256": "5dc108d187b85fd2ecd63d1d77143fabca025ced121ebe6cae65371c032eb0d8",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\03_flatplate_pair_guards_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_scaling_guards_20261025.json",
+      "sha256": "0e85cbda53f7e5a0ff99c301e1db3e3222f2976ff8f31b57f8036e8f81d580da",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\04_flatplate_scaling_guards_20261025.json"
+    },
+    {
+      "path": "outputs\\data\\agent_learning\\reviewer_ledger_flatplate_controls_20261025.json",
+      "sha256": "b29478f16b819176c22c5ade0c04b61919f8176592e53b1fe64b41488088bbe5",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\05_reviewer_ledger_flatplate_controls_20261025.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\controls_batch_closed.json",
+      "sha256": "f5d73f4619fc1b8543c9c17a98d3bbc8e6d795632abb5524dd29fd07e66c5976",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\06_controls_batch_closed.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\next_linear_work_control_not_run.json",
+      "sha256": "6cb3c0d3080b3f3946bb129ddebd6c7efb2d76b9d19e4b2773199efaeb5c682b",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\07_next_linear_work_control_not_run.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_fixed_cfl_control_20261025.json",
+      "sha256": "8261dbc999df151258d24619aa861094081ec5ee6e9413166dfb9f0e70c24699",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\08_flatplate_fixed_cfl_control_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_multigrid_control_20261025.json",
+      "sha256": "7ecf422d53ce5c351548fe5f8ee5de46b1e4a344bfac8044d9242657ee7570ac",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\09_flatplate_multigrid_control_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_adaptive_toggle_20261025.json",
+      "sha256": "781fc710d90fe5b1639e44e8a792ccc02d9241ee42e41e4fc3b7690473172af8",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\10_flatplate_adaptive_toggle_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_newton_control_20261025.json",
+      "sha256": "c9b43e41914205d2c359265073a296a32cd533085726432613d63221bf897bec",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\11_flatplate_newton_control_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_scaling_control_20261025.json",
+      "sha256": "fbbcd53fb99774d5ad79f18d13af7216076000d61b7dea9f802ed605b7a53964",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\12_flatplate_scaling_control_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_newton_warm_control_20261025.json",
+      "sha256": "4d104ceb2604adc4c6e8b2884460ebf0b5bbf6157a9e52c31aceef59142247d6",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\13_flatplate_newton_warm_control_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_control_fields_20261025.json",
+      "sha256": "36fd8f4c729bd10d88f15564d0397cad70bae2270254d572a8acc6cde4d13722",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\14_flatplate_control_fields_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_scaled_control_fields_20261025.json",
+      "sha256": "d897ab443cc8636f25b2225609244e454b1734465135282d7dcebeb5e719ebf3",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\15_flatplate_scaled_control_fields_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\cfd_yakinsama_arastirmasi_20261025.html",
+      "sha256": "90c4fb8d5d1d5d5386bdcd0475c3c99f12259bbb5e8ff479abfbe461055d6e11",
+      "archived": "outputs\\data\\task_evidence\\20261025-230529-b41cb0\\report_layout_v2.html",
+      "revision_note": "HTML rendered as readable table/links/headings; prior escaped Markdown layout retained; no solver/data changes"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+  },
+  "project_id": "qualification",
+  "project_manifest": "outputs\\data\\projects\\qualification.json",
+  "project_data_root": "outputs/data/qualification",
+  "project_output_root": "outputs",
+  "project_snapshot": {
+    "id": "qualification",
+    "name": "Araç doğrulama örnekleri",
+    "kind": "qualification",
+    "artifact_root": "outputs",
+    "data_root": "outputs/data/qualification",
+    "created_utc": "2026-10-19T07:06:12.206479+00:00",
+    "active_cad": null
+  },
+  "applied_lesson_ids": [
+    "L04",
+    "L05",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "R01",
+    "R03"
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "contract": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\contract.json",
+  "contract_sha256": "537b061db5e4a970be1fa5c61b4b66fa5fbb1c88f7367671c73a2f3999bad144",
+  "real_project_inputs_at_close": {
+    "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "physical_qualification_passed": false,
+  "completed_utc": "2026-10-25T20:32:11.823888+00:00"
+}

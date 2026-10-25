@@ -32,8 +32,8 @@ def restore_tests():
     return results
 
 def full_restore(catalog):
-    # Actual v0.11 assets, not synthetic fields, in a new empty destination.
-    target=RUN/'fresh_data_restore';assert not target.exists();target.mkdir()
+    # Actual new assets, not synthetic fields, in a new empty destination.
+    target=RUN/('fresh_data_restore_'+digest(DEST/'analizler/dosya_katalogu.json')[:12]);assert not target.exists();target.mkdir()
     cache=target/'arsiv-indirmeleri';cache.mkdir();build=read(RUN/'build.json')
     for asset in build['archives']:shutil.copyfile(asset['local_path'],cache/asset['name'])
     m=module();m.ROOT=target;m.restore(catalog,version=VERSION);m.restore(catalog,version=VERSION,verify_only=True)
@@ -68,7 +68,7 @@ def main(mode):
                 with z.open(member) as f:assert hashlib.file_digest(f,'sha256').hexdigest()==r['sha256']
         archivechecks.append({'name':asset['name'],'paths':len(rows),'unique_members':len(members),'passed':True})
     tests=restore_tests();restored=full_restore(catalog)
-    docs=[DEST/'README.md',DEST/'SURUMLEME.md',DEST/'surumler/v0.11.0/README.md',DEST/'raporlar/v0.11.0/README.md',DEST/'kurulum/EXE_KAYNAK_VE_HASH.md']
+    docs=[DEST/'README.md',DEST/'SURUMLEME.md',DEST/'surumler'/VERSION/'README.md',DEST/'raporlar'/VERSION/'README.md',DEST/'kurulum/EXE_KAYNAK_VE_HASH.md']
     links=[]
     for doc in docs:
         for match in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)',doc.read_text(encoding='utf-8')):
@@ -84,7 +84,7 @@ def main(mode):
     result={'checked_utc':now(),'version':VERSION,'passed':True,'archives':archivechecks,'restore_tests':tests,'actual_data_restore':restored,
         'new_document_links_checked':len(links),'secret_scan_files':scanned,'secret_scan_findings':findings,
         'physical_qualification':False,'LLM_improvement_measured':False,'clean_machine_solver_installation_tested':False}
-    dump(RUN/'verification.json',result);dump(DEST/'surumler/v0.11.0/publication_checks.json',result)
+    dump(RUN/'verification.json',result);dump(DEST/'surumler'/VERSION/'publication_checks.json',result)
     print({'passed':True,'restore_tests':len(tests),'actual_raw_paths_restored':restored['restored_original_paths'],'links':len(links),'secret_scan_files':scanned})
 
 if __name__=='__main__':

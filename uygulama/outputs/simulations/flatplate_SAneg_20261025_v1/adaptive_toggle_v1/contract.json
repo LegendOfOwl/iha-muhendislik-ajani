@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-25T20:15:02.809309+00:00",
+  "not_blind": true,
+  "hypothesis": "The adaptive growth/reset policy, rather than simply CFL100 itself, disrupts late convergence. Fixed100 is predicted to outperform the unchanged adaptive100..1e5 recipe.",
+  "source": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/config_template.cfg",
+  "source_sha256": "3e04a99021cdae4286b54c4e009d2c072c433bead708c0041fad8116ebb62b7d",
+  "baseline_fixed100": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl100",
+  "baseline_seal_sha256": "fa41fdb7d8b12f9c9938432f9ddddf24e6722c35c18642cd141ae6042047866b",
+  "baseline_reused_without_rerun": true,
+  "baseline_before_new_hypothesis": true,
+  "seed_sha256": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "config_sha256": "e5371081338f5e4ae3d288e82e12154543c99fd5be31474193ae4da4e6d55c22",
+  "only_config_difference": [
+    [
+      "CFL_ADAPT= NO",
+      "CFL_ADAPT= YES"
+    ]
+  ],
+  "comparison_iteration": 399,
+  "iterations": 400,
+  "seconds": 240,
+  "threads": 4,
+  "effect_orientation": "A=adaptive, B=fixed100; positive gain favors fixed100",
+  "density_log10_gain_min": 0.3,
+  "SA_log10_worsening_max": 0.1,
+  "physical_changes": null,
+  "physical_acceptance_contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "conditional_next": "Only if effect passes, register a finite fixed100 continuation family with the original three meshes and frozen prior seeds. No further CFL-value sweep.",
+  "no_automatic_extension_of_this_pair": true
+}

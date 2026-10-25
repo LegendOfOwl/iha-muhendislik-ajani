@@ -1,0 +1,56 @@
+{
+  "frozen_utc": "2026-10-25T20:08:35.078407+00:00",
+  "not_blind": true,
+  "contract_sha256": "537b061db5e4a970be1fa5c61b4b66fa5fbb1c88f7367671c73a2f3999bad144",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "matched": {
+    "field_iteration": 399,
+    "terminal_history_iteration": 399,
+    "rms[Rho]": -9.822330921,
+    "rms[RhoU]": -6.173690597,
+    "rms[RhoV]": -7.757010507,
+    "rms[RhoE]": -4.450146132,
+    "rms[nu]": -9.800019196,
+    "CL": -0.0006406119116,
+    "CD": 0.002846954284,
+    "LinSolRes": -6.111330829,
+    "Linear_Solver_Iterations": 10.0,
+    "last100_samples": 100,
+    "CD_last100_range": 1.3043999999920453e-08
+  },
+  "native_status": {
+    "started_utc": "2026-10-25T20:07:58.535332+00:00",
+    "ended_utc": "2026-10-25T20:08:35.071200+00:00",
+    "exit_code": 0,
+    "seconds": 36.53100000001723,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.2874870300292969,
+    "budget_s": 240,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "files_sha256": {
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\case.cfg": "fc5d8261cb059ee87dc75993ffa997d73ce96d2603a2126e606bda2f4abc53f1",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\flow.vtu": "7c2251dacccb28463e301ad37faeb610f0ae7cb7ea3ec6f4bc6f4d0cb2e3600f",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\flow_000200.vtu": "ce3614f4be7077ec71c4dfd4bed72d72373ddfef9cb31f1086c397c848c68825",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\flow_000399.vtu": "7c2251dacccb28463e301ad37faeb610f0ae7cb7ea3ec6f4bc6f4d0cb2e3600f",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\history.csv": "f873453c356a06640c3080bcc54db9aae497b5e8930b8c6491f4d8e942a768c6",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\restart_flow.dat": "de5acc9d03135ba7f3f1411847067fe10df8b211532d09bcbefc26c3f2c8d23b",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\restart_flow_000200.dat": "f29e9a95c1e3d82bcbe8181d3add61922504eafeecf26160871edb3018637a55",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\restart_flow_000399.dat": "de5acc9d03135ba7f3f1411847067fe10df8b211532d09bcbefc26c3f2c8d23b",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\seed.dat": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\solver.log": "fa9f39569d3032a0a5a85ad02c6ebe68ec7cc2be06c3fd7f655e6616cf6d8b57",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\solver.process.json": "9f8e07f701023874c132b38abda654980a443d185368eafbc5749b4bd729f9e3",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\solver.status.json": "67805eaf6a131fcd20dfc07735bde22d0b6e6f32fcacb62c6f530539042ed9b5",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\surface_flow.csv": "7a9fc3af99ae2455916c9a31f9c4d19d8c57cf5eb6772bd5230f88f9398eb713",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\surface_flow.vtu": "cf114a5b6e80f0a14f5ef76c5d9a79fa07c27b10d12b806a8740e4ce72e86496",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\surface_flow_000200.csv": "2c223e3fff56146f6387beddc4651b300d85800fb4042264789b712ff2d50f26",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\surface_flow_000200.vtu": "8be3da09e54e645eac4869fb22d69219684bbd5da25321114bc9de97735dab35",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\surface_flow_000399.csv": "7a9fc3af99ae2455916c9a31f9c4d19d8c57cf5eb6772bd5230f88f9398eb713",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl10\\surface_flow_000399.vtu": "cf114a5b6e80f0a14f5ef76c5d9a79fa07c27b10d12b806a8740e4ce72e86496"
+  }
+}

@@ -1,6 +1,6 @@
 # Hafif mühendislik ortamı — kurulum ve test raporu
 
-Test zamanı: 25.10.2026 00:04:24 (Europe/Istanbul)
+Test zamanı: 25.10.2026 23:27:50 (Europe/Istanbul)
 
 **Sonuç: İSTENEN GRUPLAR GEÇTİ — 26/26 kontrol geçti.**
 
@@ -8,10 +8,10 @@ Bu rapor gerçek yerel çalıştırmalardan üretilmiştir. Bütün örnekler se
 
 | Grup | Durum | Kontrol sayısı | Süre |
 |---|---|---:|---:|
-| Sayısal hesaplama | Geçti | 3 | 4.86 s |
-| Eksik veri ve birim kontrolleri | Geçti | 13 | 0.25 s |
-| Aerodinamik ve optimizasyon | Geçti | 7 | 8.31 s |
-| Parametrik CAD ve STEP | Geçti | 3 | 9.03 s |
+| Sayısal hesaplama | Geçti | 3 | 8.17 s |
+| Eksik veri ve birim kontrolleri | Geçti | 13 | 0.15 s |
+| Aerodinamik ve optimizasyon | Geçti | 7 | 8.08 s |
+| Parametrik CAD ve STEP | Geçti | 3 | 7.32 s |
 
 ## Sürümler ve ortamlar
 
@@ -118,7 +118,7 @@ Python ortamları, masaüstü uygulamasının mevcut Python 3.12 tabanından olu
 
 Üst klasördeki **Testleri-Calistir.cmd** dosyasını aç. Her çalıştırma araçları tekrar çalıştırır ve bu raporu günceller. Rapor, canlı internet erişimi gerektirmez.
 
-Ham loglar: `C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\tests\logs\20261025-000424`
+Ham loglar: `C:\Users\Urungu\Documents\Codex\2026-10-18\bu\work\tests\logs\20261025-232750`
 
 ## Yöntem ve kurulum kaynakları
 

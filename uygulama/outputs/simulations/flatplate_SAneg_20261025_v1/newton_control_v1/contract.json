@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-10-25T20:20:32.385033+00:00",
+  "seed_contract_sha256": "bf64f89deb203586ebe9236a6d13bbf7ff59260a4d2277255af5cf3babf61bad",
+  "startup_policy_note": "Pair uses source200 startup iterations, not unused20 in the earlier NO-NK seed draft. Cold-seed startup was reviewed before either paired run; seed state unchanged.",
+  "seed_sha256": "e21c80d75f49d2aba92272837732d62fbfbe7ba1c8b3796bcc1dd3708e33ae6c",
+  "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+  "cases": {
+    "quasi": {
+      "cfg_sha256": "33aee4903587d21efd411fb84af986f54e776e7de2c990aa93fb86e048fc7603",
+      "seed_sha256": "e21c80d75f49d2aba92272837732d62fbfbe7ba1c8b3796bcc1dd3708e33ae6c"
+    },
+    "newton": {
+      "cfg_sha256": "59c4c5e3f79043c63bb4bbc107b56698b586a00436f8e0acded231b651f19636",
+      "seed_sha256": "e21c80d75f49d2aba92272837732d62fbfbe7ba1c8b3796bcc1dd3708e33ae6c"
+    }
+  },
+  "only_config_difference": [
+    [
+      "NEWTON_KRYLOV= NO",
+      "NEWTON_KRYLOV= YES"
+    ]
+  ],
+  "hypothesis": "Finite-difference matrix-free mean-flow Jacobian improves late iteration progress relative to the first-order approximate Jacobian.",
+  "comparison_iteration": 399,
+  "iterations": 400,
+  "seconds_each": 300,
+  "threads": 4,
+  "density_log10_gain_min": 0.3,
+  "SA_log10_worsening_max": 0.1,
+  "same_nondimensionalization": true,
+  "startup_identity_check_first_rows": 20,
+  "no_automatic_sweep": true,
+  "physical_acceptance_claimed": false,
+  "not_blind": true
+}

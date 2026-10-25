@@ -13,3 +13,5 @@ Asıl dosyalar uygulamanın bağıl yolları korunarak `uygulama/` içinde sakla
 - [v0.9.0 — Hata dersleri ve ajan talimatı](v0.9.0/README.md): 8 dosya
 
 - [v0.11.0](v0.11.0/README.md)
+
+- [v0.12.0](v0.12.0/README.md)

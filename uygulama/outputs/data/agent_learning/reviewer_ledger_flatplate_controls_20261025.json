@@ -1,0 +1,105 @@
+{
+  "created_utc": "2026-10-25T20:32:10.855978+00:00",
+  "instruction_snapshot": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "events": [
+    {
+      "type": "hypothesis_not_supported",
+      "scope": "Only this seed, mesh, installed solver and registered budget",
+      "result": {
+        "method": "CFL100→10",
+        "comparable": true,
+        "density_gain": -0.10849578199999854,
+        "SA_worsening": 0.21184991400000008,
+        "effect_passed": false
+      }
+    },
+    {
+      "type": "not_evaluated_at_registered_checkpoint",
+      "scope": "Only this seed, mesh, installed solver and registered budget",
+      "result": {
+        "method": "MG0→2",
+        "comparable": false,
+        "density_gain": null,
+        "SA_worsening": null,
+        "effect_passed": false
+      }
+    },
+    {
+      "type": "hypothesis_not_supported",
+      "scope": "Only this seed, mesh, installed solver and registered budget",
+      "result": {
+        "method": "Otomatik→sabit CFL",
+        "comparable": true,
+        "density_gain": 0.010748713999999993,
+        "SA_worsening": 0.30702530000000117,
+        "effect_passed": false
+      }
+    },
+    {
+      "type": "hypothesis_not_supported",
+      "scope": "Only this seed, mesh, installed solver and registered budget",
+      "result": {
+        "method": "Newton / soğuk başlangıç",
+        "comparable": true,
+        "density_gain": 0.2330264979999992,
+        "SA_worsening": 0.41495461000000056,
+        "effect_passed": false
+      }
+    },
+    {
+      "type": "hypothesis_not_supported",
+      "scope": "Only this seed, mesh, installed solver and registered budget",
+      "result": {
+        "method": "Yalnız değişken ölçekleme",
+        "comparable": true,
+        "density_gain": 0.055043492033426844,
+        "SA_worsening": -0.042092234906242254,
+        "effect_passed": false
+      }
+    },
+    {
+      "type": "hypothesis_not_supported",
+      "scope": "Only this seed, mesh, installed solver and registered budget",
+      "result": {
+        "method": "Newton / gelişmiş alan",
+        "comparable": true,
+        "density_gain": -0.00019341000000139275,
+        "SA_worsening": -0.00431822999999909,
+        "effect_passed": false
+      }
+    },
+    {
+      "type": "prevented_failure",
+      "id": "mixed_residual_normalization",
+      "evidence": "outputs/reports/flatplate_scaling_control_20261025.json",
+      "observation": "Unconverted mixed-unit gain2.71919549log; SI-normalized gain0.055043492log. Mixed-unit comparator now refuses the input.",
+      "related_existing_rule": "L08 source semantics/normalization; no duplicate prompt lesson added"
+    },
+    {
+      "type": "source_policy_clarification",
+      "id": "native_MG_CFL",
+      "evidence": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\mg_control_v1\\native_policy_note.json",
+      "observation": "CFL_ADAPT=NO does not imply constant native coarse-grid CFL or damping."
+    },
+    {
+      "type": "rejected_test_design",
+      "evidence": "outputs/reports/flatplate_scaling_guards_20261025.json",
+      "observation": "All-component exact native residual identity threshold failed. Original draft preserved; native observation has no replacement relaxed acceptance threshold."
+    }
+  ],
+  "new_prompt_version": false,
+  "new_LLM_behaviour_evaluation": false,
+  "not_blind": true
+}

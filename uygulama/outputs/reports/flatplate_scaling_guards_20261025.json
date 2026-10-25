@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-10-25T20:30:10.181727+00:00",
+  "passed": 4,
+  "checks": [
+    "analytic conservative-variable SI/ND identity",
+    "wrong binary magic",
+    "truncated payload",
+    "nonpositive state"
+  ],
+  "native_first_row_log10_differences_after_conversion": {
+    "rms[Rho]": 9.66572599736537e-10,
+    "rms[RhoU]": 8.486548352948375e-09,
+    "rms[RhoV]": 2.312848654817401e-05,
+    "rms[RhoE]": 1.7499396687270519e-06,
+    "rms[nu]": 4.90624429971831e-09
+  },
+  "native_CD_first_row_difference": 0.0,
+  "native_exact_residual_identity_accepted": false,
+  "preserved_rejected_draft": "work/flatplate_20261025/check_scaling_v1_rejected.py",
+  "draft_failure": "An unmotivated1e-5log all-component identity assertion failed for weak vertical momentum:2.31285e-5log. Analytic scaling is tested separately; this native comparison is retained as observation without a new relaxed pass threshold.",
+  "physical_qualification": false
+}

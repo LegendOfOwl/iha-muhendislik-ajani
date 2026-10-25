@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-25T20:32:10.855978+00:00",
+  "status": "registered_not_run",
+  "scope": "Inner linear oversolving / work reduction, not another CFL sweep or physical-model fit",
+  "sources": [
+    "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/"
+  ],
+  "baseline": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\warm_scaling_pair_v1\\scaled",
+  "baseline_seal_sha256": "60cf1e373007c4ad98439f2714fc4873b791c07dffa1c344dc171df8c40ffe67",
+  "seed_sha256": "53f7a71d0f1a9350a63071b2ada6fb794388bdb65bf1ced927512a67cc3b8af4",
+  "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+  "only_config_change": "LINEAR_SOLVER_ERROR1e-6→1e-3",
+  "iterations": 200,
+  "seconds": 120,
+  "threads": 4,
+  "comparison_iteration": 199,
+  "effect": {
+    "total_flow_plus_SA_Krylov_iterations_ratio_max": 0.7,
+    "density_and_SA_SI_log10_worsening_max": 0.05,
+    "absolute_CD_difference_max": 1e-07
+  },
+  "no_speedup_claim_from_single_timing": true,
+  "no_automatic_extension_or_sweep": true,
+  "physical_thresholds_unchanged": true
+}

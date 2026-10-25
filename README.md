@@ -1,6 +1,6 @@
 # İHA mühendislik ajanı
 
-Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve kanıtlı rapor iş akışı. Güncel dağıtım **v0.11.0**. Üniversite düzeyindeki çalışmalar için geliştirilen ve sınanan bir araç bütünüdür; genel mühendislik/CFD yeterliliği tamamlanmış veya uçuşa hazır tasarım değildir.
+Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve kanıtlı rapor iş akışı. Güncel dağıtım **v0.12.0**. Üniversite düzeyindeki çalışmalar için geliştirilen ve sınanan bir araç bütünüdür; genel mühendislik/CFD yeterliliği tamamlanmış veya uçuşa hazır tasarım değildir.
 
 
 ## Güncel sürüm —25 Ekim2026
@@ -19,13 +19,13 @@ NASA TMR kaynak M6 üreteci ve üç ağ ailesi, SA-neg düz plaka kod karşıla�
 | [analizler](analizler/) | CFD/FEM/model çalışma kayıtları, büyük alan arşivleri ve tam SHA256 kataloğu |
 | [testler](testler/) | Test kodları, kabul ölçütleri, başarısızlık ve doğrulama kayıtları |
 | [kurulum](kurulum/) | Ortam hazırlığı, mevcut yerel araçlara bağlanma ve arşiv geri yükleme |
-| [surumler](surumler/) | v0.1.0 → v0.11.0 sürüm ve kanıt notları ve dosya manifestleri |
+| [surumler](surumler/) | v0.1.0 → v0.12.0 sürüm ve kanıt notları ve dosya manifestleri |
 
 Hazır Windows ortamında [BASLAT.cmd](BASLAT.cmd), `uygulama/outputs/Muhendislik-Merkezi.exe` açar. EXE başlatıcıdır; Python ortamları ve haricî araçlar yanında gerekir. [Kurulum açıklaması](kurulum/README.md) önce okunmalıdır. Mevcut çalışma klasörünü değiştirmeden ona yerel junction'larla bağlanmak mümkündür.
 
 ## Sürüm geçmişinin anlamı
 
-Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyaları, tarihli çıktılar ve korunmuş başarısız denemelerden **geriye dönük gruplandırılarak** oluşturuldu. Eski tag'ler özgün tarihteki tam çalışan uygulama kopyası değildir. v0.1.0–v0.10.0 bu geriye dönük içe aktarımdır. **v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.** Tam güncel içerik için `main` veya `v0.11.0` kullanın. Git commit/yayın tarihleri bugün oluşturulan arşivin tarihidir; kaynak dosyaların gözlenen değiştirme tarihleri ayrıca katalogdadır.
+Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyaları, tarihli çıktılar ve korunmuş başarısız denemelerden **geriye dönük gruplandırılarak** oluşturuldu. Eski tag'ler özgün tarihteki tam çalışan uygulama kopyası değildir. v0.1.0–v0.10.0 bu geriye dönük içe aktarımdır. **v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.** Tam güncel içerik için `main` veya `v0.12.0` kullanın. Git commit/yayın tarihleri bugün oluşturulan arşivin tarihidir; kaynak dosyaların gözlenen değiştirme tarihleri ayrıca katalogdadır.
 
 | Sürüm | Kanıt grubu |
 |---|---|
@@ -40,6 +40,7 @@ Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyalar�
 | [v0.9.0](surumler/v0.9.0/README.md) | Hata dersleri ve ajan talimatı |
 | [v0.10.0](surumler/v0.10.0/README.md) | Düzenlenmiş GitHub dağıtımı |
 | [v0.11.0](surumler/v0.11.0/README.md) | Kaynak TMR M6, düz plaka, güvenilirlik politikası; gerçek artımlı sürüm |
+| [v0.12.0](surumler/v0.12.0/README.md) | 11 yeni CFD kontrolü, Newton–Krylov ve kalıntı birim denetimi |
 
 ## Dosyalar ve yeniden üretim
 
@@ -55,7 +56,7 @@ Bütün özgün proje dosyaları `uygulama/work` ve `uygulama/outputs` düzenind
 - RAE2822 ve ONERA M6 genel fizik kabulleri geçmedi. y+ veya kuvvet ekranının tek başına geçmesi bütün CFD doğrulamasını kapatmaz.
 - Gerçek İHA girdileri ile araç yeterlilik örnekleri ayrı tutulur. ANSYS ve OpenFOAM kurulmuş değildir; Fusion yalnız OAuth aşamasında doğrulanmıştır.
 
-[GitHub’da okunabilir güncel sonuçlar](raporlar/v0.11.0/README.md) · [Yerel HTML proje özeti](uygulama/outputs/Proje-Ozeti.html) · [Ajan dersleri](uygulama/outputs/reports/ajan_talimat_gelisimi_20261024.html) · [M6 sonuçları](raporlar/v0.11.0/README.md#onera-m6) · [Üçüncü taraf kaynakları](THIRD_PARTY_NOTICES.md)
+[GitHub’da okunabilir güncel sonuçlar](raporlar/v0.12.0/README.md) · [Yerel HTML proje özeti](uygulama/outputs/Proje-Ozeti.html) · [Ajan dersleri](uygulama/outputs/reports/ajan_talimat_gelisimi_20261024.html) · [M6 sonuçları](raporlar/v0.11.0/README.md#onera-m6) · [Üçüncü taraf kaynakları](THIRD_PARTY_NOTICES.md)
 
 Dosya/arşiv dağıtım sınırları için [GitHub büyük dosya belgeleri](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) ve [Releases belgeleri](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) esas alındı. Başarısız sonuçlar gizlenmedi; eşikler yayın için değiştirilmedi.
 
@@ -65,7 +66,7 @@ Proje sahibi hedefleri, kısıtları, araç tercihlerini ve ilerleme sırasını
 
 ## English summary
 
-A Windows project workflow integrating CAD, aerodynamic/CFD and structural tools with source provenance, raw solver outputs, frozen predictions and acceptance gates. Version0.11.0 adds source-generated NASA TMR ONERA M6 meshes, a three-grid compressible SA-neg flat-plate comparison, and scoped reliability checks. Some local code-comparison screens pass; required iterative convergence and general M6 qualification remain open. Earlier tags are retrospective evidence groups; releases from0.11.0 are genuine incremental updates. Code and reports were developed with substantial Codex assistance. This is neither a flight-ready UAV design nor independently demonstrated expert-agent capability.
+A Windows project workflow integrating CAD, aerodynamic/CFD and structural tools with source provenance, raw solver outputs, frozen predictions and acceptance gates. Version0.12.0 adds11controlled native solver runs, finite-difference Newton–Krylov tests and residual-normalization guards. No tested method met the registered joint improvement criterion; physical qualification remains open. Version0.11.0 added source-generated NASA TMR ONERA M6 meshes, a three-grid compressible SA-neg flat-plate comparison, and scoped reliability checks. Some local code-comparison screens pass; required iterative convergence and general M6 qualification remain open. Earlier tags are retrospective evidence groups; releases from0.11.0 are genuine incremental updates. Code and reports were developed with substantial Codex assistance. This is neither a flight-ready UAV design nor independently demonstrated expert-agent capability.
 
 ## EXE ve lisans durumu
 

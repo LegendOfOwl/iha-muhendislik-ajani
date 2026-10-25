@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-25T20:15:44.218230+00:00",
+  "status": "source clarification after registration; original contract and native files unchanged",
+  "source": "work\\flatplate_20261025\\convergence_sources\\CMultiGridIntegration.cpp",
+  "source_sha256": "05cadd244210d5123735819c5c5098365c05fd4998c96a00a18e3a837eb4d7e1",
+  "details": [
+    "CFL_ADAPT=NO fixes the finest-level policy in this test; it does not disable native coarse-level CFL adaptation.",
+    "CMultiGridIntegration.cpp calls computeMultigridCFL once per cycle on coarse levels; the call is not guarded by CFL_ADAPT.",
+    "Restriction/prolongation factors0.5 in contract are initial values, not guaranteed constant; native damping adaptation is part of the activated MG policy.",
+    "Only explicit user config difference remains MGLEVEL0->2; this is a native MG policy comparison, not isolated coarse correction mathematics."
+  ],
+  "inferred_runtime_coarse_CFL_values": null,
+  "no_new_native_run": true
+}

@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-10-25T20:09:35.457092+00:00",
+  "not_blind": true,
+  "hypothesis": "Agglomerated FAS mean-flow corrections reduce slowly damped error components; this is a test, not an observed error-spectrum diagnosis.",
+  "sources": [
+    "https://su2code.github.io/documents/SU2_AIAA_SciTech2014.pdf",
+    "https://arxiv.org/html/1805.03756v1",
+    "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/Common/src/CConfig.cpp"
+  ],
+  "baseline": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fixed_cfl_pair_v1\\cfl100",
+  "baseline_seal_sha256": "fa41fdb7d8b12f9c9938432f9ddddf24e6722c35c18642cd141ae6042047866b",
+  "baseline_reused_without_rerun": true,
+  "baseline_before_new_hypothesis": true,
+  "seed_sha256": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "only_config_difference": [
+    [
+      "MGLEVEL= 0",
+      "MGLEVEL= 2"
+    ]
+  ],
+  "target_config_sha256": "e9ffae29df62bf8e0419a211070654fa3aab600a97bb4f9c01e5e1b601d60679",
+  "comparison_iteration": 399,
+  "iterations": 400,
+  "seconds": 240,
+  "threads": 4,
+  "density_log10_gain_min": 0.3,
+  "SA_log10_worsening_max": 0.1,
+  "native_smoke_required": {
+    "iterations": 20,
+    "seconds": 45
+  },
+  "policy": {
+    "V_cycle": "restart forces V cycle in CConfig",
+    "default_pre_smooth": [
+      1,
+      2,
+      3
+    ],
+    "default_post_smooth": [
+      0,
+      0,
+      0
+    ],
+    "default_correction_smooth": [
+      0,
+      0,
+      0
+    ],
+    "restriction_and_prolongation_damping": [
+      0.5,
+      0.5
+    ],
+    "fine_flux": "unchanged second-order Roe",
+    "coarse_flux": "native agglomeration policy; first-order Roe on coarse levels",
+    "SA_transport": "same fine-grid-only transport, same dt reduction default1"
+  },
+  "limits": [
+    "Native FAS is not the residual-smoothed exact Newton method in the arXiv paper.",
+    "MG iterations have different work cost; no timing speedup inferred from iteration count.",
+    "This is a new flat-plate case test; prior M6 MG effect is not transferred as proof."
+  ],
+  "physical_changes": null,
+  "physical_acceptance_contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "conditional_next": "Only if effect passes, register bounded same-policy continuation of fixed mesh roles. Otherwise no automatic MG/CFL sweep."
+}

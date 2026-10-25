@@ -1,0 +1,841 @@
+{
+  "created_utc": "2026-10-25T20:27:12.955216+00:00",
+  "cases": {
+    "scaling": {
+      "postprocessing_version": 2,
+      "role": "medium",
+      "output_label": "x=1.90334",
+      "matched": {
+        "field_iteration": 199,
+        "terminal_history_iteration": 199,
+        "rms[Rho]": -9.640559018033427,
+        "rms[RhoU]": -7.798858315486548,
+        "rms[RhoV]": -9.319353565486548,
+        "rms[RhoE]": -5.918089602939669,
+        "rms[nu]": -12.197823484906243,
+        "CL": -0.0006416893988,
+        "CD": 0.002846302286,
+        "LinSolRes": -5.551383345,
+        "Linear_Solver_Iterations": 40.0,
+        "last100_samples": 100,
+        "CD_last100_range": 1.5180000000059035e-09
+      },
+      "normalization_to_SI": {
+        "mu_Pa_s": 1.8459162511975804e-05,
+        "U_m_s": 69.44475790151479,
+        "rho_kg_m3": 1.3290537018038302,
+        "p_Pa": 114454.64925972116,
+        "inlet_Ttotal_K": 302.4
+      },
+      "native_status": {
+        "started_utc": "2026-10-25T20:23:30.328972+00:00",
+        "ended_utc": "2026-10-25T20:23:50.353227+00:00",
+        "exit_code": 0,
+        "seconds": 20.03200000000652,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.07953643798828125,
+        "budget_s": 120,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "wall_points": 113,
+      "max_yplus": 0.4822250306606293,
+      "all_wall_yplus_below1": true,
+      "Cf_x0p97008": 0.002715293358924248,
+      "CD_independent_trapezoid": 0.002846302283426313,
+      "CD_integration_relative_difference": 9.042212534282612e-10,
+      "iterative_gate": false,
+      "profiles": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.97008,
+          "columns": [
+            111,
+            112
+          ],
+          "source_column_x_m": [
+            0.930941943112,
+            0.970084048409
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 3.630594873179859e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_scaling\\profile_x0.97008.csv"
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.90334,
+          "columns": [
+            133,
+            134
+          ],
+          "source_column_x_m": [
+            1.87112459393,
+            1.91408306262
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 6.509348286129906e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_scaling\\profile_x1.90334.csv"
+        }
+      ],
+      "negative_nu_tilde_nodes": 0,
+      "native_arrays": [
+        "Density",
+        "Momentum",
+        "Energy",
+        "Nu_Tilde",
+        "Pressure",
+        "Temperature",
+        "Mach",
+        "Pressure_Coefficient",
+        "Velocity",
+        "Laminar_Viscosity",
+        "Skin_Friction_Coefficient",
+        "Heat_Flux",
+        "Y_Plus",
+        "Eddy_Viscosity"
+      ],
+      "source_field_sha256": "7f1e1b7897c9c5bd2bc1a9999af0703ac97eba8c66354101896daab5371f6a9f",
+      "source_surface_sha256": "37191f163160fd09001b480dbeb5b61a21a3d6c865e6eef6e6d4a7a3f4cd648c",
+      "reference_errors": {
+        "Cf_curve": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.002702647684663716,
+            "relative_L2_all_points": 0.20975914228333212,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_scaling\\Cf_curve_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.0029745793712844496,
+            "relative_L2_all_points": 0.131284380792518,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_scaling\\Cf_curve_1.csv"
+          }
+        ],
+        "velocity": [
+          {
+            "source_zone": "zone,t=\"x=     0.97008\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.0011241359187858211,
+            "relative_L2_all_points": 0.0011241359187858211,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_scaling\\velocity_0.csv"
+          },
+          {
+            "source_zone": "zone,t=\"x=     1.90334\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.0014323549702381804,
+            "relative_L2_all_points": 0.0014323549702381804,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_scaling\\velocity_1.csv"
+          }
+        ],
+        "eddy_viscosity": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 384,
+            "invalid_points": 0,
+            "relative_L2": 0.018887010913462343,
+            "relative_L2_all_points": 0.018887010913462343,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_scaling\\eddy_viscosity_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.01839580991537778,
+            "relative_L2_all_points": 0.01839580991537778,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_scaling\\eddy_viscosity_1.csv"
+          }
+        ]
+      },
+      "diagnostic_screens": {
+        "iteration": false,
+        "max_yplus": true,
+        "Cf_curve": true,
+        "velocity": true,
+        "eddy_viscosity": true
+      },
+      "all_diagnostic_screens": false
+    },
+    "cold_quasi": {
+      "postprocessing_version": 2,
+      "role": "medium",
+      "output_label": "x=1.90334",
+      "matched": {
+        "field_iteration": 399,
+        "terminal_history_iteration": 399,
+        "rms[Rho]": -6.4689701780334286,
+        "rms[RhoU]": -3.3383897384865477,
+        "rms[RhoV]": -4.0827256544865484,
+        "rms[RhoE]": -0.9994109409396694,
+        "rms[nu]": -7.265945664906242,
+        "CL": -0.0004189058639,
+        "CD": 0.002969542265,
+        "LinSolRes": -0.7505802822,
+        "Linear_Solver_Iterations": 5.0,
+        "last100_samples": 100,
+        "CD_last100_range": 0.0002638172589999998
+      },
+      "normalization_to_SI": {
+        "mu_Pa_s": 1.8459162511975804e-05,
+        "U_m_s": 69.44475790151479,
+        "rho_kg_m3": 1.3290537018038302,
+        "p_Pa": 114454.64925972116,
+        "inlet_Ttotal_K": 302.4
+      },
+      "native_status": {
+        "started_utc": "2026-10-25T20:20:33.453458+00:00",
+        "ended_utc": "2026-10-25T20:20:39.970246+00:00",
+        "exit_code": 0,
+        "seconds": 6.51600000000326,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.056850433349609375,
+        "budget_s": 300,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "wall_points": 113,
+      "max_yplus": 0.4836776852607727,
+      "all_wall_yplus_below1": true,
+      "Cf_x0p97008": 0.002838417846387104,
+      "CD_independent_trapezoid": 0.002969542265414093,
+      "CD_integration_relative_difference": 1.3944667642817876e-10,
+      "iterative_gate": false,
+      "profiles": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.97008,
+          "columns": [
+            111,
+            112
+          ],
+          "source_column_x_m": [
+            0.930941943112,
+            0.970084048409
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 3.630594873179859e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_quasi\\profile_x0.97008.csv"
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.90334,
+          "columns": [
+            133,
+            134
+          ],
+          "source_column_x_m": [
+            1.87112459393,
+            1.91408306262
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 6.509348286129906e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_quasi\\profile_x1.90334.csv"
+        }
+      ],
+      "negative_nu_tilde_nodes": 0,
+      "native_arrays": [
+        "Density",
+        "Momentum",
+        "Energy",
+        "Nu_Tilde",
+        "Pressure",
+        "Temperature",
+        "Mach",
+        "Pressure_Coefficient",
+        "Velocity",
+        "Laminar_Viscosity",
+        "Skin_Friction_Coefficient",
+        "Heat_Flux",
+        "Y_Plus",
+        "Eddy_Viscosity"
+      ],
+      "source_field_sha256": "76dee117870303fc0bf6e82d9304a7a05218f15e2e8eeb1d56ac8107a39f32e7",
+      "source_surface_sha256": "80cd74dd791041fa302b3ef45cb45f79eb4cf4d6be5892d7147a1b25930c81e7",
+      "reference_errors": {
+        "Cf_curve": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.0348886237474864,
+            "relative_L2_all_points": 0.21144767033210188,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_quasi\\Cf_curve_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.03505349008246692,
+            "relative_L2_all_points": 0.13419097326680002,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_quasi\\Cf_curve_1.csv"
+          }
+        ],
+        "velocity": [
+          {
+            "source_zone": "zone,t=\"x=     0.97008\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.009919516070345082,
+            "relative_L2_all_points": 0.009919516070345082,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_quasi\\velocity_0.csv"
+          },
+          {
+            "source_zone": "zone,t=\"x=     1.90334\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.019318903311889634,
+            "relative_L2_all_points": 0.019318903311889634,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_quasi\\velocity_1.csv"
+          }
+        ],
+        "eddy_viscosity": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 384,
+            "invalid_points": 0,
+            "relative_L2": 0.03935475067574199,
+            "relative_L2_all_points": 0.03935475067574199,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_quasi\\eddy_viscosity_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.039435569861913905,
+            "relative_L2_all_points": 0.039435569861913905,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_quasi\\eddy_viscosity_1.csv"
+          }
+        ]
+      },
+      "diagnostic_screens": {
+        "iteration": false,
+        "max_yplus": true,
+        "Cf_curve": false,
+        "velocity": true,
+        "eddy_viscosity": true
+      },
+      "all_diagnostic_screens": false
+    },
+    "cold_newton": {
+      "postprocessing_version": 2,
+      "role": "medium",
+      "output_label": "x=1.90334",
+      "matched": {
+        "field_iteration": 399,
+        "terminal_history_iteration": 399,
+        "rms[Rho]": -6.701996676033428,
+        "rms[RhoU]": -2.9901869204865488,
+        "rms[RhoV]": -4.092385492486548,
+        "rms[RhoE]": -1.1591045909396689,
+        "rms[nu]": -6.850991054906242,
+        "CL": -0.0002413702433,
+        "CD": 0.003146459227,
+        "LinSolRes": -0.7465876798,
+        "Linear_Solver_Iterations": 7.0,
+        "last100_samples": 100,
+        "CD_last100_range": 0.0006610431710000002
+      },
+      "normalization_to_SI": {
+        "mu_Pa_s": 1.8459162511975804e-05,
+        "U_m_s": 69.44475790151479,
+        "rho_kg_m3": 1.3290537018038302,
+        "p_Pa": 114454.64925972116,
+        "inlet_Ttotal_K": 302.4
+      },
+      "native_status": {
+        "started_utc": "2026-10-25T20:21:03.723971+00:00",
+        "ended_utc": "2026-10-25T20:21:12.742867+00:00",
+        "exit_code": 0,
+        "seconds": 9.01500000001397,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.06438446044921875,
+        "budget_s": 300,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "wall_points": 113,
+      "max_yplus": 0.4837983250617981,
+      "all_wall_yplus_below1": true,
+      "Cf_x0p97008": 0.0030342053453077116,
+      "CD_independent_trapezoid": 0.0031464592289117453,
+      "CD_integration_relative_difference": 6.075862035714863e-10,
+      "iterative_gate": false,
+      "profiles": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.97008,
+          "columns": [
+            111,
+            112
+          ],
+          "source_column_x_m": [
+            0.930941943112,
+            0.970084048409
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 3.630594873179859e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_newton\\profile_x0.97008.csv"
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.90334,
+          "columns": [
+            133,
+            134
+          ],
+          "source_column_x_m": [
+            1.87112459393,
+            1.91408306262
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 6.509348286129906e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_newton\\profile_x1.90334.csv"
+        }
+      ],
+      "negative_nu_tilde_nodes": 0,
+      "native_arrays": [
+        "Density",
+        "Momentum",
+        "Energy",
+        "Nu_Tilde",
+        "Pressure",
+        "Temperature",
+        "Mach",
+        "Pressure_Coefficient",
+        "Velocity",
+        "Laminar_Viscosity",
+        "Skin_Friction_Coefficient",
+        "Heat_Flux",
+        "Y_Plus",
+        "Eddy_Viscosity"
+      ],
+      "source_field_sha256": "e780c9b7f624a591f90b4e61a5a9ac01694292fda2ebc993fe4a8773dd339291",
+      "source_surface_sha256": "1f48d0afd13a03358bd83c0a05cacc7058b2d704fdc0da50cbfbfbbe0af262fb",
+      "reference_errors": {
+        "Cf_curve": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.083341411815434,
+            "relative_L2_all_points": 0.2204789088067762,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_newton\\Cf_curve_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.08353836846838518,
+            "relative_L2_all_points": 0.14851633030411812,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_newton\\Cf_curve_1.csv"
+          }
+        ],
+        "velocity": [
+          {
+            "source_zone": "zone,t=\"x=     0.97008\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.0259494595117075,
+            "relative_L2_all_points": 0.0259494595117075,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_newton\\velocity_0.csv"
+          },
+          {
+            "source_zone": "zone,t=\"x=     1.90334\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.04450180467645792,
+            "relative_L2_all_points": 0.04450180467645792,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_newton\\velocity_1.csv"
+          }
+        ],
+        "eddy_viscosity": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 384,
+            "invalid_points": 0,
+            "relative_L2": 0.12624364177685274,
+            "relative_L2_all_points": 0.12624364177685274,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_newton\\eddy_viscosity_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.12645892332528932,
+            "relative_L2_all_points": 0.12645892332528932,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_cold_newton\\eddy_viscosity_1.csv"
+          }
+        ]
+      },
+      "diagnostic_screens": {
+        "iteration": false,
+        "max_yplus": true,
+        "Cf_curve": false,
+        "velocity": false,
+        "eddy_viscosity": false
+      },
+      "all_diagnostic_screens": false
+    },
+    "warm_quasi": {
+      "postprocessing_version": 2,
+      "role": "medium",
+      "output_label": "x=1.90334",
+      "matched": {
+        "field_iteration": 399,
+        "terminal_history_iteration": 399,
+        "rms[Rho]": -9.973221908033429,
+        "rms[RhoU]": -8.401412295486548,
+        "rms[RhoV]": -8.750450615486548,
+        "rms[RhoE]": -5.687760372939668,
+        "rms[nu]": -12.509467804906242,
+        "CL": -0.0006416906887,
+        "CD": 0.002846299364,
+        "LinSolRes": -0.7778590972,
+        "Linear_Solver_Iterations": 6.0,
+        "last100_samples": 100,
+        "CD_last100_range": 8.709999999891027e-10
+      },
+      "normalization_to_SI": {
+        "mu_Pa_s": 1.8459162511975804e-05,
+        "U_m_s": 69.44475790151479,
+        "rho_kg_m3": 1.3290537018038302,
+        "p_Pa": 114454.64925972116,
+        "inlet_Ttotal_K": 302.4
+      },
+      "native_status": {
+        "started_utc": "2026-10-25T20:25:16.697600+00:00",
+        "ended_utc": "2026-10-25T20:25:24.211349+00:00",
+        "exit_code": 0,
+        "seconds": 7.51600000000326,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.056774139404296875,
+        "budget_s": 180,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "wall_points": 113,
+      "max_yplus": 0.48221391439437866,
+      "all_wall_yplus_below1": true,
+      "Cf_x0p97008": 0.002715292660432317,
+      "CD_independent_trapezoid": 0.002846299366103877,
+      "CD_integration_relative_difference": 7.391622869334924e-10,
+      "iterative_gate": false,
+      "profiles": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.97008,
+          "columns": [
+            111,
+            112
+          ],
+          "source_column_x_m": [
+            0.930941943112,
+            0.970084048409
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 3.630594873179859e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_quasi\\profile_x0.97008.csv"
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.90334,
+          "columns": [
+            133,
+            134
+          ],
+          "source_column_x_m": [
+            1.87112459393,
+            1.91408306262
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 6.509348286129906e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_quasi\\profile_x1.90334.csv"
+        }
+      ],
+      "negative_nu_tilde_nodes": 0,
+      "native_arrays": [
+        "Density",
+        "Momentum",
+        "Energy",
+        "Nu_Tilde",
+        "Pressure",
+        "Temperature",
+        "Mach",
+        "Pressure_Coefficient",
+        "Velocity",
+        "Laminar_Viscosity",
+        "Skin_Friction_Coefficient",
+        "Heat_Flux",
+        "Y_Plus",
+        "Eddy_Viscosity"
+      ],
+      "source_field_sha256": "cde48f067a10362d270ac3b286a7c03f47e89b664a0bd3f0a9c86219d0ab762b",
+      "source_surface_sha256": "b7ef77dfdb6acf5350e7d95364ac222063787f70f090a0dc75ad45ae4e1ba652",
+      "reference_errors": {
+        "Cf_curve": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.0027021930147531144,
+            "relative_L2_all_points": 0.20976138592870555,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_quasi\\Cf_curve_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.0029740457591147067,
+            "relative_L2_all_points": 0.1312873594480902,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_quasi\\Cf_curve_1.csv"
+          }
+        ],
+        "velocity": [
+          {
+            "source_zone": "zone,t=\"x=     0.97008\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.001124134733076966,
+            "relative_L2_all_points": 0.001124134733076966,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_quasi\\velocity_0.csv"
+          },
+          {
+            "source_zone": "zone,t=\"x=     1.90334\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.0014325709974022393,
+            "relative_L2_all_points": 0.0014325709974022393,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_quasi\\velocity_1.csv"
+          }
+        ],
+        "eddy_viscosity": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 384,
+            "invalid_points": 0,
+            "relative_L2": 0.018888165877049463,
+            "relative_L2_all_points": 0.018888165877049463,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_quasi\\eddy_viscosity_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.01839695856983625,
+            "relative_L2_all_points": 0.01839695856983625,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_quasi\\eddy_viscosity_1.csv"
+          }
+        ]
+      },
+      "diagnostic_screens": {
+        "iteration": false,
+        "max_yplus": true,
+        "Cf_curve": true,
+        "velocity": true,
+        "eddy_viscosity": true
+      },
+      "all_diagnostic_screens": false
+    },
+    "warm_newton": {
+      "postprocessing_version": 2,
+      "role": "medium",
+      "output_label": "x=1.90334",
+      "matched": {
+        "field_iteration": 399,
+        "terminal_history_iteration": 399,
+        "rms[Rho]": -9.973028498033427,
+        "rms[RhoU]": -8.423951125486548,
+        "rms[RhoV]": -8.693795715486548,
+        "rms[RhoE]": -5.74203289293967,
+        "rms[nu]": -12.513786034906241,
+        "CL": -0.0006416908606,
+        "CD": 0.002846299341,
+        "LinSolRes": -0.8055703953,
+        "Linear_Solver_Iterations": 7.0,
+        "last100_samples": 100,
+        "CD_last100_range": 8.660000000090817e-10
+      },
+      "normalization_to_SI": {
+        "mu_Pa_s": 1.8459162511975804e-05,
+        "U_m_s": 69.44475790151479,
+        "rho_kg_m3": 1.3290537018038302,
+        "p_Pa": 114454.64925972116,
+        "inlet_Ttotal_K": 302.4
+      },
+      "native_status": {
+        "started_utc": "2026-10-25T20:25:29.423388+00:00",
+        "ended_utc": "2026-10-25T20:25:41.939014+00:00",
+        "exit_code": 0,
+        "seconds": 12.51600000000326,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.0572357177734375,
+        "budget_s": 180,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "wall_points": 113,
+      "max_yplus": 0.4822138845920563,
+      "all_wall_yplus_below1": true,
+      "Cf_x0p97008": 0.002715292660432317,
+      "CD_independent_trapezoid": 0.00284629933715416,
+      "CD_integration_relative_difference": 1.3511719521019927e-09,
+      "iterative_gate": false,
+      "profiles": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.97008,
+          "columns": [
+            111,
+            112
+          ],
+          "source_column_x_m": [
+            0.930941943112,
+            0.970084048409
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 3.630594873179859e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_newton\\profile_x0.97008.csv"
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.90334,
+          "columns": [
+            133,
+            134
+          ],
+          "source_column_x_m": [
+            1.87112459393,
+            1.91408306262
+          ],
+          "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+          "invalid_samples": 0,
+          "coordinate_mapping_max_m": 6.509348286129906e-08,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_newton\\profile_x1.90334.csv"
+        }
+      ],
+      "negative_nu_tilde_nodes": 0,
+      "native_arrays": [
+        "Density",
+        "Momentum",
+        "Energy",
+        "Nu_Tilde",
+        "Pressure",
+        "Temperature",
+        "Mach",
+        "Pressure_Coefficient",
+        "Velocity",
+        "Laminar_Viscosity",
+        "Skin_Friction_Coefficient",
+        "Heat_Flux",
+        "Y_Plus",
+        "Eddy_Viscosity"
+      ],
+      "source_field_sha256": "3179454e99e1c4aee48786850735bc40411628a4b02d81cef33d067dea212423",
+      "source_surface_sha256": "e73178e76601fb8dda7633a759c33d979e019e7c735c50674b82562cda9a85fd",
+      "reference_errors": {
+        "Cf_curve": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.0027021845668467512,
+            "relative_L2_all_points": 0.2097613949113298,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_newton\\Cf_curve_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 447,
+            "invalid_points": 0,
+            "relative_L2": 0.002974035162893958,
+            "relative_L2_all_points": 0.1312873711940399,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_newton\\Cf_curve_1.csv"
+          }
+        ],
+        "velocity": [
+          {
+            "source_zone": "zone,t=\"x=     0.97008\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.0011241345340969728,
+            "relative_L2_all_points": 0.0011241345340969728,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_newton\\velocity_0.csv"
+          },
+          {
+            "source_zone": "zone,t=\"x=     1.90334\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.0014325708116126308,
+            "relative_L2_all_points": 0.0014325708116126308,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_newton\\velocity_1.csv"
+          }
+        ],
+        "eddy_viscosity": [
+          {
+            "source_zone": "zone, t=\"CFL3D\"",
+            "points": 384,
+            "invalid_points": 0,
+            "relative_L2": 0.0188881871222192,
+            "relative_L2_all_points": 0.0188881871222192,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_newton\\eddy_viscosity_0.csv"
+          },
+          {
+            "source_zone": "zone, t=\"FUN3D\"",
+            "points": 385,
+            "invalid_points": 0,
+            "relative_L2": 0.01839697963612889,
+            "relative_L2_all_points": 0.01839697963612889,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\control_warm_newton\\eddy_viscosity_1.csv"
+          }
+        ]
+      },
+      "diagnostic_screens": {
+        "iteration": false,
+        "max_yplus": true,
+        "Cf_curve": true,
+        "velocity": true,
+        "eddy_viscosity": true
+      },
+      "all_diagnostic_screens": false
+    }
+  },
+  "physical_qualification_passed": false,
+  "scaling": "Same source freestream SI reference, length1m; force/Cf/yplus unchanged, primitive fields and residuals converted.",
+  "limits": [
+    "One medium mesh only; no general three-grid qualification.",
+    "Cold-start reference errors are diagnostic; they are not accepted converged predictions."
+  ]
+}

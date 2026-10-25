@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-25T20:19:56.298074+00:00",
+  "source_physics_contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "source_recipe": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/TestCases/rans/oneram6/turb_ONERAM6_nk.cfg",
+  "source_recipe_sha256": "622086c32a6af2fb67879dae57b4f776dcb2011267ecc566a5093f16b1972fcf",
+  "common_changes_from_old_recipe": {
+    "LINEAR_SOLVER_PREC= LU_SGS": "LINEAR_SOLVER_PREC= ILU",
+    "LINEAR_SOLVER_ERROR= 1e-06": "LINEAR_SOLVER_ERROR= 0.2",
+    "LINEAR_SOLVER_ITER= 40": "LINEAR_SOLVER_ITER= 8",
+    "CFL_NUMBER= 100": "CFL_NUMBER= 10",
+    "CFL_ADAPT_PARAM= (0.1,2,100,1e5,0.001,50)": "CFL_ADAPT_PARAM= (1,1.05,10,400,0.2,0)",
+    "CONV_STARTITER= 200": "CONV_STARTITER= 1000"
+  },
+  "scaling": {
+    "length_m": 1.0,
+    "density_kg_m3": 1.3290537018038302,
+    "velocity_m_s": 347.22378950757394,
+    "temperature_K": 300.0,
+    "pressure_Pa": 160236.5089636096
+  },
+  "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+  "seed_policy": "One native iteration from uniform source freestream in the new scaling; identical binary result is copied to both arms. No old dimensional restart is reinterpreted.",
+  "newton_adaptation": "Source200 startup reduced to20 for this small controlled run; full MUSCL products fixed1 instead of automatic-1 to make the method explicit.",
+  "CFL_adaptation": "Source four-entry list expanded to installed six-entry form; acceptable linear ratio0.2 matches the source-recipe linear tolerance0.2.",
+  "not_blind": true,
+  "physical_changes": null,
+  "residual_warning": "Raw logs are nondimensional and must not be judged against prior dimensional residual thresholds. Pair effect compares the same normalization only.",
+  "scope": "Matrix-free finite-difference flow Jacobian; separately solved SA, not fully coupled flow+SA, not an adjoint or the arXiv smoothing implementation."
+}

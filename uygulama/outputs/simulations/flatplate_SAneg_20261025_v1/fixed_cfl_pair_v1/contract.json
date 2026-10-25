@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-25T20:05:29.551368+00:00",
+  "registered_contract": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\next_numerical_control_not_run.json",
+  "registered_sha256": "bbb00f8d0ff06537cd9a402040b25231eee8d8f8f5fac1e0b26fa4dba0ce7302",
+  "original_prepared_status_preserved": true,
+  "cases": {
+    "cfl100": {
+      "cfg_sha256": "56f0dfff8f65283875892bb5ec33913ea38a821928495e3761ed1f82542a3262",
+      "seed_sha256": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813"
+    },
+    "cfl10": {
+      "cfg_sha256": "fc5d8261cb059ee87dc75993ffa997d73ce96d2603a2126e606bda2f4abc53f1",
+      "seed_sha256": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813"
+    }
+  },
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "seed_sha256": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813",
+  "only_config_difference": [
+    [
+      "CFL_NUMBER= 100",
+      "CFL_NUMBER= 10"
+    ]
+  ],
+  "common_policy_changes_from_adaptive_parent": {
+    "ITER= 2000": "ITER= 400",
+    "CFL_ADAPT= YES": "CFL_ADAPT= NO",
+    "CONV_STARTITER= 200": "CONV_STARTITER= 1000",
+    "MESH_FILENAME= ../meshes/fine.su2": "MESH_FILENAME= ../../meshes/fine.su2"
+  },
+  "comparison_iteration": 399,
+  "iterations_each": 400,
+  "seconds_each": 240,
+  "threads_each": 4,
+  "density_log10_gain_min": 0.3,
+  "SA_log10_worsening_max": 0.1,
+  "physical_acceptance_contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "no_automatic_extension": true,
+  "not_blind": true
+}

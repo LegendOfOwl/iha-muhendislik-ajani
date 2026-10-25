@@ -1,0 +1,57 @@
+{
+  "frozen_utc": "2026-10-25T20:20:39.977133+00:00",
+  "not_blind": true,
+  "contract_sha256": "f201fec7e5f89bfb582ea0c9cb9298341da3d6b6e0cc8cedd4ba8f950fd26023",
+  "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+  "matched": {
+    "field_iteration": 399,
+    "terminal_history_iteration": 399,
+    "rms[Rho]": -9.13312218,
+    "rms[RhoU]": -8.543151213,
+    "rms[RhoV]": -9.287487129,
+    "rms[RhoE]": -8.744781888,
+    "rms[nu]": -12.34716461,
+    "CL": -0.0004189058639,
+    "CD": 0.002969542265,
+    "LinSolRes": -0.7505802822,
+    "Linear_Solver_Iterations": 5.0,
+    "last100_samples": 100,
+    "CD_last100_range": 0.0002638172589999998
+  },
+  "native_status": {
+    "started_utc": "2026-10-25T20:20:33.453458+00:00",
+    "ended_utc": "2026-10-25T20:20:39.970246+00:00",
+    "exit_code": 0,
+    "seconds": 6.51600000000326,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.056850433349609375,
+    "budget_s": 300,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "files_sha256": {
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\case.cfg": "33aee4903587d21efd411fb84af986f54e776e7de2c990aa93fb86e048fc7603",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\flow.vtu": "76dee117870303fc0bf6e82d9304a7a05218f15e2e8eeb1d56ac8107a39f32e7",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\flow_000200.vtu": "cc8839cf80d1209ba4b82bf882fb359830cd2bb8eb4629963110cf8a94375c8c",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\flow_000399.vtu": "76dee117870303fc0bf6e82d9304a7a05218f15e2e8eeb1d56ac8107a39f32e7",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\history.csv": "124026abf326cab274469ca226dd0bdd7741924ca8e3766f72aaae139b80c713",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\restart_flow.dat": "74c5bacef57787705d897702a7ef3aaf89e7a387ee4ee8d28dad019ff055da19",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\restart_flow_000200.dat": "f0f0bf93d0fe5718bf8cc0e65a092e148020179acab82a80557988170e4c5ad7",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\restart_flow_000399.dat": "74c5bacef57787705d897702a7ef3aaf89e7a387ee4ee8d28dad019ff055da19",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\runner_code_before_native.json": "dde33fc7b439bca750494dd7ce3c4f259935f3894f3dfa8ec1e9fdbd8a50060b",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\seed.dat": "e21c80d75f49d2aba92272837732d62fbfbe7ba1c8b3796bcc1dd3708e33ae6c",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\solver.log": "9eb61483d335a291c60c2acf363735a6b0960cf629ce62d6346c6bd19ec7a93f",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\solver.process.json": "8b16e195b5fe4a1215bac91c0601c024cfe06a0023b5ae64d182558f5813db88",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\solver.status.json": "f9af975b0bed0458bccfe1865a34dd8750e47007e1e93dec09e2e3d8e3dbdacb",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow.csv": "5cba137d5f4161d17fcab429ddf4f9a107f4b6408ce962737fb01a9eaf0ac381",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow.vtu": "80cd74dd791041fa302b3ef45cb45f79eb4cf4d6be5892d7147a1b25930c81e7",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow_000200.csv": "e7b14653fae9a3de9f455410f6a522dea38b9c17c702b9f36edc1a1f1773a331",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow_000200.vtu": "bf370ec5091b69351745222925351cac9bd7ca7cf9a1989cffa786bea0b2a809",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow_000399.csv": "5cba137d5f4161d17fcab429ddf4f9a107f4b6408ce962737fb01a9eaf0ac381",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\newton_control_v1\\quasi\\surface_flow_000399.vtu": "80cd74dd791041fa302b3ef45cb45f79eb4cf4d6be5892d7147a1b25930c81e7"
+  }
+}

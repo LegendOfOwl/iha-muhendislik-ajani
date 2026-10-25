@@ -5,21 +5,21 @@ from collections import Counter
 import os,json,hashlib,zipfile,shutil,subprocess
 from build_export import ROOT,DEST,STATE,ASSETS,URL,digest,dump,excluded,is_bulk,secret_findings
 
-VERSION='v0.11.0'
+VERSION='v0.12.0'
 RUN=STATE/VERSION
 PLAN=RUN/'plan.json'
-BASE_HEAD='843b436a92475d42648d8626092b864f624e918d'
+BASE_HEAD='f06d1524c390646e0659d2e72327f30d8bd59dff'
 def now():return datetime.now(timezone.utc).isoformat()
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 
 def reference_urls():
     result={r['source_path']:r['source_url'] for r in read(DEST/'analizler/dosya_katalogu.json')['files'] if r['storage']=='external_reference'}
-    for manifest in [ROOT/'work/cfd_literature_20261025/sources/manifest.json',ROOT/'work/reliability/sources/manifest.json']:
+    for manifest in [ROOT/'work/cfd_literature_20261025/sources/manifest.json',ROOT/'work/reliability/sources/manifest.json',ROOT/'work/flatplate_20261025/convergence_sources/manifest.json']:
         for item in read(manifest):
             if item.get('path'):p=ROOT/item['path']
             elif item.get('file'):p=manifest.parent/item['file']
             else:continue
-            if p.suffix.lower()=='.pdf' and item.get('url'):result[p.relative_to(ROOT).as_posix()]=item['url']
+            if (p.suffix.lower()=='.pdf' or p.name=='arxiv1805.03756v1.html') and item.get('url'):result[p.relative_to(ROOT).as_posix()]=item['url']
     return result
 
 def plan():
@@ -32,7 +32,7 @@ def plan():
         for name in files:
             path=Path(folder)/name;relative=path.relative_to(ROOT);rel=relative.as_posix();reason=excluded(relative)
             if rel.startswith('work/publish/') and relative.suffix not in {'.py'}:reason='local_publication_state_assets_or_auth'
-            if rel.startswith('work/publish/restore-fixtures/') or rel.startswith('work/publish/v0.11.0/'):reason='publication_fixture_or_self_output'
+            if rel.startswith('work/publish/restore-fixtures/') or (len(relative.parts)>2 and relative.parts[:2]==('work','publish') and relative.parts[2].startswith('v0.')):reason='publication_fixture_or_self_output'
             if 'compiler_packages' in relative.parts or rel.endswith('.pkg.tar.zst'):reason='external_compiler_binary_package'
             if path.is_symlink():reason='symbolic_link'
             if reason:omitted.append({'path':rel,'reason':reason});continue
@@ -44,7 +44,7 @@ def plan():
             row={'source_path':rel,'repository_path':'uygulama/'+rel,'bytes':path.stat().st_size,'sha256':h,'version':VERSION,
                  'source_mtime_utc':datetime.fromtimestamp(path.stat().st_mtime,timezone.utc).isoformat()}
             if prior:row.update(previous_sha256=prior['sha256'],previous_version=prior['version'])
-            if relative.suffix.lower()=='.pdf':
+            if relative.suffix.lower()=='.pdf' or relative.name=='arxiv1805.03756v1.html':
                 if rel not in urls:
                     omitted.append({'path':rel,'reason':'full_third_party_PDF_no_verified_restore_URL'});continue
                 row.update(storage='external_reference',source_url=urls[rel])
@@ -102,7 +102,7 @@ def build():
     dump(folder/'manifest.json',{'version':VERSION,'created_utc':now(),'base_commit':BASE_HEAD,'history_kind':'genuine_incremental',
        'changed_files':new,'new_archives':[{k:v for k,v in a.items() if k!='local_path'} for a in archives]})
     dump(RUN/'build.json',{'created_utc':now(),'archives':archives,'copied_git_files':copied,'catalog_sha256':digest(DEST/'analizler/dosya_katalogu.json')})
-    dump(DEST/'kurulum/yayin_kapsami_v0.11.0.json',{'version':VERSION,'base_commit':BASE_HEAD,'omitted_files':p['omitted'],'secret_scan_findings':[],
+    dump(DEST/('kurulum/yayin_kapsami_'+VERSION+'.json'),{'version':VERSION,'base_commit':BASE_HEAD,'omitted_files':p['omitted'],'secret_scan_findings':[],
         'compiler_distribution':'Portable GNU/MSYS2 installed binaries and compiler packages excluded; source/build/hash records retained.',
         'clean_machine_solver_reproduction_tested':False,'expert_or_physical_qualification_claimed':False})
     print({'copied':copied,'archives':len(archives),'catalog_records':len(records)},flush=True)

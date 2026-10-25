@@ -2,6 +2,7 @@ from incremental_export import ROOT,DEST,RUN,VERSION,read,dump,digest,now,BASE_H
 from pathlib import Path
 import os,subprocess,json,zipfile
 REPO='LegendOfOwl/iha-muhendislik-ajani'
+TITLE='CFD yakınsama kontrolleri ve birim denetimi'
 ENV=dict(os.environ,GH_CONFIG_DIR=str(ROOT/'tools/github-cli/auth'),GH_PROMPT_DISABLED='1',GIT_TERMINAL_PROMPT='0')
 n=int(ENV.get('GIT_CONFIG_COUNT','0'));ENV.update({f'GIT_CONFIG_KEY_{n}':'safe.directory',f'GIT_CONFIG_VALUE_{n}':str(DEST),'GIT_CONFIG_COUNT':str(n+1)})
 GH=read(ROOT/'work/publish/github_cli_install.json')['executable']
@@ -25,10 +26,10 @@ def commit():
     from verify_incremental import verify_blobs
     count=verify_blobs(catalog,'',env=ENV)
     staged=run(['git','diff','--cached','--stat']);print(staged[-2500:],flush=True)
-    run(['git','commit','-m',VERSION+': kaynak CFD teşhisi, güvenilirlik ve okunabilir sonuç raporları'])
+    run(['git','commit','-m',VERSION+': '+TITLE])
     head=run(['git','rev-parse','HEAD']);assert run(['git','rev-parse','HEAD^'])==BASE_HEAD
     assert not run(['git','status','--porcelain'])
-    run(['git','tag','-a',VERSION,'-m',VERSION+' —25Ekim kaynak CFD ve güvenilirlik; fizik kabulü açık'])
+    run(['git','tag','-a',VERSION,'-m',VERSION+' — '+TITLE+'; fizik kabulü açık'])
     dump(RUN/'commit.json',{'created_utc':now(),'head':head,'base':BASE_HEAD,'git_source_blobs_verified':count,'tag':VERSION,'tag_object':run(['git','rev-parse',VERSION])})
     print({'commit':head,'git_source_blobs_verified':count},flush=True)
 
@@ -54,7 +55,7 @@ def publish():
     print(run(['git','push','origin','main','refs/tags/'+VERSION]),flush=True)
     releases=api('repos/'+REPO+'/releases?per_page=100');release=next((r for r in releases if r['tag_name']==VERSION),None)
     if release is None:
-        run([GH,'release','create',VERSION,'--repo',REPO,'--verify-tag','--title',VERSION+' —Kaynak CFD ve güvenilirlik','--notes-file',RUN/'release-notes.md','--latest'])
+        run([GH,'release','create',VERSION,'--repo',REPO,'--verify-tag','--title',VERSION+' — '+TITLE,'--notes-file',RUN/'release-notes.md','--latest'])
     state['status']='uploading';dump(statepath,state)
     for asset in assets:
         assert digest(Path(asset['local_path']))==asset['sha256']
@@ -69,8 +70,8 @@ def publish():
     assert run(['git','ls-remote','origin','refs/heads/main']).split()[0]==head
     assert run(['git','ls-remote','origin','refs/tags/'+VERSION+'^{}']).split()[0]==head
     releases=api('repos/'+REPO+'/releases?per_page=100');assert {f'v0.{i}.0' for i in range(1,12)}.issubset({r['tag_name'] for r in releases})
-    state.update(status='published_verified',finished_utc=now(),release_url=URL+'/releases/tag/'+VERSION,remote_head_matches=True,old_release_count_retained=10)
-    dump(statepath,state);dump(ROOT/'outputs/reports/github_publication_v0.11.0.json',state)
+    state.update(status='published_verified',finished_utc=now(),release_url=URL+'/releases/tag/'+VERSION,remote_head_matches=True,old_release_count_retained=len([r for r in releases if r['tag_name']!=VERSION]))
+    dump(statepath,state);dump(ROOT/('outputs/reports/github_publication_'+VERSION+'.json'),state)
     print({'published':state['release_url'],'head':head,'verified_assets':len(state['uploaded'])},flush=True)
 
 if __name__=='__main__':

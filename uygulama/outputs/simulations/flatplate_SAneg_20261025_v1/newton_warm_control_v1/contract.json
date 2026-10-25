@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-25T20:25:15.592011+00:00",
+  "cases": {
+    "quasi": {
+      "config_sha256": "ccc61025ad6de9a369f59495b9783cb6edd78302943f1105f09afad621607c71",
+      "seed_sha256": "53f7a71d0f1a9350a63071b2ada6fb794388bdb65bf1ced927512a67cc3b8af4"
+    },
+    "newton": {
+      "config_sha256": "873e6de002c0ac826fc9b72943a37f75b58c0a18a55578896ee442d7ad715e84",
+      "seed_sha256": "53f7a71d0f1a9350a63071b2ada6fb794388bdb65bf1ced927512a67cc3b8af4"
+    }
+  },
+  "seed_sha256": "53f7a71d0f1a9350a63071b2ada6fb794388bdb65bf1ced927512a67cc3b8af4",
+  "same_physical_seed_conversion_contract_sha256": "36fa746fd9c473dd75511f079136bffbe7d9288dfcda58591180be67edc4e8df",
+  "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+  "only_config_difference": [
+    [
+      "NEWTON_KRYLOV= NO",
+      "NEWTON_KRYLOV= YES"
+    ]
+  ],
+  "hypothesis": "The cold-start control does not isolate late-stage Jacobian behavior. Use the same developed source state in both arms, with Newton active immediately.",
+  "comparison_iteration": 399,
+  "iterations": 400,
+  "seconds_each": 180,
+  "threads": 4,
+  "density_log10_gain_min": 0.3,
+  "SA_log10_worsening_max": 0.1,
+  "sources": [
+    "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/TestCases/rans/oneram6/turb_ONERAM6_nk.cfg",
+    "https://arxiv.org/html/1805.03756v1"
+  ],
+  "no_cold_vs_warm_causal_attribution": "The source-based startup delay changes from200 to0 in both warm arms. Only within-pair Newton on/off has causal interpretation.",
+  "no_further_extension_or_sweep_in_this_batch": true,
+  "physical_changes": null,
+  "not_blind": true
+}

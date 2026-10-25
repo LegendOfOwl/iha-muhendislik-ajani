@@ -10,3 +10,5 @@ Asıl dosyalar uygulamanın bağıl yolları korunarak `uygulama/` içinde sakla
 - [v0.6.0 — Karmaşık CAD ve ilk ONERA M6](v0.6.0/README.md): 34 dosya
 
 - [v0.11.0](v0.11.0/README.md)
+
+- [v0.12.0](v0.12.0/README.md)
