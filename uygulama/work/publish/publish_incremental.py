@@ -16,11 +16,17 @@ def commit():
     assert run(['git','rev-parse','HEAD'])==BASE_HEAD
     assert not run(['git','tag','--list',VERSION])
     run(['git','add','--all'])
+    # Local application ignores exclude run logs during development. The public
+    # catalogue explicitly selects reviewed logs; stage only that exact list.
+    catalog=read(DEST/'analizler/dosya_katalogu.json')
+    pathfile=RUN/'catalogued-git-paths.bin'
+    pathfile.write_bytes(b'\0'.join(r['repository_path'].encode('utf-8') for r in catalog['files'] if r['storage']=='git')+b'\0')
+    run(['git','add','--force','--pathspec-from-file='+str(pathfile),'--pathspec-file-nul'])
+    from verify_incremental import verify_blobs
+    count=verify_blobs(catalog,'',env=ENV)
     staged=run(['git','diff','--cached','--stat']);print(staged[-2500:],flush=True)
     run(['git','commit','-m',VERSION+': kaynak CFD teşhisi, güvenilirlik ve okunabilir sonuç raporları'])
     head=run(['git','rev-parse','HEAD']);assert run(['git','rev-parse','HEAD^'])==BASE_HEAD
-    from verify_incremental import verify_blobs
-    count=verify_blobs(read(DEST/'analizler/dosya_katalogu.json'),'HEAD',env=ENV)
     assert not run(['git','status','--porcelain'])
     run(['git','tag','-a',VERSION,'-m',VERSION+' —25Ekim kaynak CFD ve güvenilirlik; fizik kabulü açık'])
     dump(RUN/'commit.json',{'created_utc':now(),'head':head,'base':BASE_HEAD,'git_source_blobs_verified':count,'tag':VERSION,'tag_object':run(['git','rev-parse',VERSION])})

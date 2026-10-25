@@ -1,0 +1,54 @@
+{
+  "project_id": "proje-e9319baef1",
+  "evidence_errors": [],
+  "raw_recomputed": {
+    "fixed": {
+      "checkpoint_complete": true,
+      "iterative_gate": {
+        "passed": false,
+        "observed": {
+          "density_log10": -6.651164448,
+          "CL_last100_range": 1.1297999999992925e-06,
+          "CD_last100_range": 1.2909999999588528e-08
+        },
+        "checks": {
+          "density_log10": false,
+          "CL_last100_range": true,
+          "CD_last100_range": true
+        },
+        "selected_iteration": 599
+      }
+    },
+    "adaptive": {
+      "checkpoint_complete": true,
+      "iterative_gate": {
+        "passed": false,
+        "observed": {
+          "density_log10": -6.687008991,
+          "CL_last100_range": 1.9343999999588135e-06,
+          "CD_last100_range": 5.3700000002265824e-08
+        },
+        "checks": {
+          "density_log10": false,
+          "CL_last100_range": true,
+          "CD_last100_range": true
+        },
+        "selected_iteration": 599
+      }
+    }
+  },
+  "quality_passed": false,
+  "passed": true,
+  "recommendation": {
+    "action": "localize_nonlinear_stall",
+    "reason": "Cap test did not show the registered effect; no more cap sweep.",
+    "automatically_execute": false,
+    "native_budget_available": 0,
+    "native_action_budget_blocked": false,
+    "new_physical_acceptance": false,
+    "strategy": "dependency_ordered_falsifiable_test_v1",
+    "strategy_optimality_proved": false
+  },
+  "note": "Kayıtlı ham geçmiş ve mühürler yeniden denetlendi; yeni çözücü koşusu veya fizik kabulü üretilmedi.",
+  "spec_sha256": "8c7d09899727b083eaae85b2b6c47d0a95637378c1fbb558e40107010934bb8d"
+}
