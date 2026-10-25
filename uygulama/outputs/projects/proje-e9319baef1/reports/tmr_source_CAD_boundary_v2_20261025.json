@@ -1,0 +1,116 @@
+{
+  "version": 2,
+  "created_utc": "2026-10-24T23:01:01.101363+00:00",
+  "source_STEP_sha256": "0ed2862f3952d04b747b0f90e47062d059ff98b2e48933a323d1c6b66771a7bf",
+  "source_CAD_solids": 1,
+  "normalization_root_chord_mm": 810.491484086,
+  "levels": [
+    {
+      "level": 3,
+      "mesh_sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70",
+      "unique_samples": 505,
+      "total_samples": 739,
+      "node_distance": {
+        "min": 3.2105028430984803e-18,
+        "median": 1.2147829929859073e-05,
+        "p95": 0.0006242658848551385,
+        "max": 0.0006670427374200342
+      },
+      "facet_center_distance": {
+        "min": 1.0276339049016149e-05,
+        "median": 0.0008846668754598976,
+        "p95": 0.003127041615638455,
+        "max": 0.005269332002867302
+      },
+      "edge_midpoint_distance": {
+        "min": 0.0,
+        "median": 0.00037760542352387844,
+        "p95": 0.0021813396928530744,
+        "max": 0.005072557349168037
+      },
+      "all_samples": {
+        "min": 0.0,
+        "median": 0.000340843640580701,
+        "p95": 0.0021813396928530744,
+        "max": 0.005269332002867302
+      },
+      "csv_sha256": "b05b31655a0cc9660e4b942ac3615b7257b50fb18f85a9f39abf97b7e55af5d5"
+    },
+    {
+      "level": 2,
+      "mesh_sha256": "b94e9b17e0d2373c3561559d38870fd60303d3a2f5fe0fc5087b8d383593e60a",
+      "unique_samples": 2017,
+      "total_samples": 2989,
+      "node_distance": {
+        "min": 3.2105028430984803e-18,
+        "median": 1.4160740294597611e-05,
+        "p95": 0.000637464464715277,
+        "max": 0.0006982881033937155
+      },
+      "facet_center_distance": {
+        "min": 6.60000700692624e-06,
+        "median": 0.0002522918796839578,
+        "p95": 0.0010260317592078994,
+        "max": 0.002251920472921654
+      },
+      "edge_midpoint_distance": {
+        "min": 0.0,
+        "median": 0.0001461119213881293,
+        "p95": 0.0008998555275705727,
+        "max": 0.0017432878919206884
+      },
+      "all_samples": {
+        "min": 0.0,
+        "median": 0.00014466844926209232,
+        "p95": 0.0009240525428701621,
+        "max": 0.002251920472921654
+      },
+      "csv_sha256": "7c4ff88c06ab6faad8ad725d601ba062ae24f299e99aa5ee47c4d3f06e9721ef"
+    },
+    {
+      "level": 1,
+      "mesh_sha256": "22d9aaa299869b90d03837f2a0721e0a304355daeb7052b4ab502040bf2fa68d",
+      "unique_samples": 8065,
+      "total_samples": 12025,
+      "node_distance": {
+        "min": 0.0,
+        "median": 1.5148594134356804e-05,
+        "p95": 0.0006442177268416308,
+        "max": 0.0006982881033937155
+      },
+      "facet_center_distance": {
+        "min": 1.2286931591150263e-06,
+        "median": 5.962424574095029e-05,
+        "p95": 0.0007270507312400948,
+        "max": 0.0009781042944231042
+      },
+      "edge_midpoint_distance": {
+        "min": 0.0,
+        "median": 3.885547811096256e-05,
+        "p95": 0.0006859486003008452,
+        "max": 0.0008643736671111453
+      },
+      "all_samples": {
+        "min": 0.0,
+        "median": 3.8756174058873996e-05,
+        "p95": 0.0006857429830502194,
+        "max": 0.0009781042944231042
+      },
+      "csv_sha256": "6aae862df650cb3d6f71297f464035531a08e9ecc36d8fa58a320afe7141e1bc"
+    }
+  ],
+  "seconds": 24.625,
+  "method": "Exact OCC distance to compound of source boundary faces only; reuse distance operator; no interior-of-solid zero classification.",
+  "analytic_counterexample": {
+    "solid_interior_distance": 0.0,
+    "boundary_distance": 0.5,
+    "expected_boundary_distance": 0.5
+  },
+  "superseded_records": [
+    "tmr_source_CAD_distances_20261025.json",
+    "tmr_source_CAD_facets_20261025.json"
+  ],
+  "superseded_reason": "Distance to a solid can return0 for inside points; not suitable as an unsigned surface-equivalence distance.",
+  "source_or_mesh_changed": false,
+  "scope": "Finite surface sample distances; not an exact Hausdorff bound or a new after-result geometry acceptance."
+}

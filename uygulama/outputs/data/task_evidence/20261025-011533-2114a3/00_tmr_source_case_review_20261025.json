@@ -1,0 +1,530 @@
+{
+  "reviewed_utc": "2026-10-24T23:06:59.119254+00:00",
+  "results": {
+    "coarse": {
+      "matched": {
+        "field_iteration": 3999,
+        "terminal_history_iteration": 3999,
+        "CL": 0.1863916441,
+        "CD": 0.03884530554,
+        "rms[Rho]": -6.081210864,
+        "rms[nu]": -8.361174783,
+        "last100_samples": 100,
+        "CL_last100_range": 1.3885000000046777e-06,
+        "CD_last100_range": 8.27200000025341e-08
+      },
+      "native_status": {
+        "started_utc": "2026-10-24T22:28:56.960054+00:00",
+        "ended_utc": "2026-10-24T22:30:55.557430+00:00",
+        "exit_code": 0,
+        "seconds": 118.59399999998277,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.041584014892578125,
+        "budget_s": 300,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "experiment_points": 271,
+      "all_271_points_kept": true,
+      "Cp_RMSE": 0.2898752516137176,
+      "Cp_fraction_within_0p02": 0.12915129151291513,
+      "sections": [
+        {
+          "section": 1,
+          "eta": 0.2,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.2933426550986241,
+          "Cp_max_absolute_error": 0.7948873955365168,
+          "max_projection_distance_over_local_chord": 0.005578106992175394
+        },
+        {
+          "section": 1,
+          "eta": 0.2,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.1798525280203499,
+          "Cp_max_absolute_error": 0.4621974180166262,
+          "max_projection_distance_over_local_chord": 0.005580494703772062
+        },
+        {
+          "section": 2,
+          "eta": 0.44,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.3279373378516902,
+          "Cp_max_absolute_error": 0.7676161562354371,
+          "max_projection_distance_over_local_chord": 0.00566615884302377
+        },
+        {
+          "section": 2,
+          "eta": 0.44,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.1374481897383727,
+          "Cp_max_absolute_error": 0.36394230903903363,
+          "max_projection_distance_over_local_chord": 0.005561243989375093
+        },
+        {
+          "section": 3,
+          "eta": 0.65,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.3232815139985427,
+          "Cp_max_absolute_error": 0.7482195265697378,
+          "max_projection_distance_over_local_chord": 0.005595539261815584
+        },
+        {
+          "section": 3,
+          "eta": 0.65,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.09739584190556815,
+          "Cp_max_absolute_error": 0.2540809747407224,
+          "max_projection_distance_over_local_chord": 0.005543521183693058
+        },
+        {
+          "section": 4,
+          "eta": 0.8,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.327021738961052,
+          "Cp_max_absolute_error": 0.737086202255127,
+          "max_projection_distance_over_local_chord": 0.0055878943619189145
+        },
+        {
+          "section": 4,
+          "eta": 0.8,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.09704466177347314,
+          "Cp_max_absolute_error": 0.2426588027859079,
+          "max_projection_distance_over_local_chord": 0.005616018942258775
+        },
+        {
+          "section": 5,
+          "eta": 0.9,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.3719713739088324,
+          "Cp_max_absolute_error": 0.7315966939217058,
+          "max_projection_distance_over_local_chord": 0.005556233885108332
+        },
+        {
+          "section": 5,
+          "eta": 0.9,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.10352719746132992,
+          "Cp_max_absolute_error": 0.26360727991705846,
+          "max_projection_distance_over_local_chord": 0.005484071889456344
+        },
+        {
+          "section": 6,
+          "eta": 0.96,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.3505863589490751,
+          "Cp_max_absolute_error": 0.7418542536319885,
+          "max_projection_distance_over_local_chord": 0.00560586220209062
+        },
+        {
+          "section": 6,
+          "eta": 0.96,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.12455255839789808,
+          "Cp_max_absolute_error": 0.28674018744116114,
+          "max_projection_distance_over_local_chord": 0.005556531097712006
+        },
+        {
+          "section": 7,
+          "eta": 0.99,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.35313727802689926,
+          "Cp_max_absolute_error": 0.7979706482037301,
+          "max_projection_distance_over_local_chord": 0.005579426544421476
+        },
+        {
+          "section": 7,
+          "eta": 0.99,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.15839561421491496,
+          "Cp_max_absolute_error": 0.32538243807194245,
+          "max_projection_distance_over_local_chord": 0.005538796542311437
+        }
+      ],
+      "section_screens_passed": 0,
+      "max_yplus": 0.8325291275978088,
+      "wall_points": 127,
+      "fraction_yplus_below1": 1.0,
+      "max_projection_distance_over_local_chord": 0.00566615884302377,
+      "iterative_gate_passed": false,
+      "experiment_CSV_sha256": "ea29dd03e990283a995aa52a7234296abfc36374a18d04d9ce8ebefc6f0ed114",
+      "source_surface_sha256": "b7bf9ecc21daa127aa95dbdec156eebfee4ff78c51f18962b73d34856f9a07b9",
+      "quality_passed": false
+    },
+    "medium": {
+      "matched": {
+        "field_iteration": 2400,
+        "terminal_history_iteration": 2539,
+        "CL": 0.2388373261,
+        "CD": 0.02226650654,
+        "rms[Rho]": -5.116082912,
+        "rms[nu]": -6.281408718,
+        "last100_samples": 100,
+        "CL_last100_range": 0.0006340546999999974,
+        "CD_last100_range": 4.7756319999998215e-05
+      },
+      "native_status": {
+        "started_utc": "2026-10-24T22:30:55.721481+00:00",
+        "ended_utc": "2026-10-24T22:40:56.224073+00:00",
+        "exit_code": 1,
+        "seconds": 600.5160000000033,
+        "stop_reason": "time_budget_exceeded",
+        "peak_working_set_GiB": 0.24418258666992188,
+        "budget_s": 600,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "experiment_points": 271,
+      "all_271_points_kept": true,
+      "Cp_RMSE": 0.15347741423984926,
+      "Cp_fraction_within_0p02": 0.31365313653136534,
+      "sections": [
+        {
+          "section": 1,
+          "eta": 0.2,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.1516772740578286,
+          "Cp_max_absolute_error": 0.5002628526389471,
+          "max_projection_distance_over_local_chord": 0.0014413824257581884
+        },
+        {
+          "section": 1,
+          "eta": 0.2,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.11061755178611882,
+          "Cp_max_absolute_error": 0.3258586748262294,
+          "max_projection_distance_over_local_chord": 0.0011343364654219522
+        },
+        {
+          "section": 2,
+          "eta": 0.44,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.16497268335978038,
+          "Cp_max_absolute_error": 0.4268296842551861,
+          "max_projection_distance_over_local_chord": 0.001364699556229432
+        },
+        {
+          "section": 2,
+          "eta": 0.44,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.08680487177967831,
+          "Cp_max_absolute_error": 0.27509532351982613,
+          "max_projection_distance_over_local_chord": 0.0012954097110306564
+        },
+        {
+          "section": 3,
+          "eta": 0.65,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.16166702099199354,
+          "Cp_max_absolute_error": 0.3852239879175231,
+          "max_projection_distance_over_local_chord": 0.0014039679656446212
+        },
+        {
+          "section": 3,
+          "eta": 0.65,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.07182294915221195,
+          "Cp_max_absolute_error": 0.22869147077558694,
+          "max_projection_distance_over_local_chord": 0.0011566992045124824
+        },
+        {
+          "section": 4,
+          "eta": 0.8,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.14305413709848716,
+          "Cp_max_absolute_error": 0.3621516715781188,
+          "max_projection_distance_over_local_chord": 0.001432174466867862
+        },
+        {
+          "section": 4,
+          "eta": 0.8,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.07118773021529363,
+          "Cp_max_absolute_error": 0.22559586441556995,
+          "max_projection_distance_over_local_chord": 0.0011488833888635714
+        },
+        {
+          "section": 5,
+          "eta": 0.9,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.1871053269599905,
+          "Cp_max_absolute_error": 0.4299979312306448,
+          "max_projection_distance_over_local_chord": 0.0014384601527315255
+        },
+        {
+          "section": 5,
+          "eta": 0.9,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.07159500268848887,
+          "Cp_max_absolute_error": 0.23866743143974933,
+          "max_projection_distance_over_local_chord": 0.0011207636288297026
+        },
+        {
+          "section": 6,
+          "eta": 0.96,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.17660404990172504,
+          "Cp_max_absolute_error": 0.43606059672803266,
+          "max_projection_distance_over_local_chord": 0.0014523048487132518
+        },
+        {
+          "section": 6,
+          "eta": 0.96,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.07522468111820092,
+          "Cp_max_absolute_error": 0.24704040444604405,
+          "max_projection_distance_over_local_chord": 0.0012168215265017691
+        },
+        {
+          "section": 7,
+          "eta": 0.99,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.21852119404923195,
+          "Cp_max_absolute_error": 0.4038563257605502,
+          "max_projection_distance_over_local_chord": 0.0014590833747777697
+        },
+        {
+          "section": 7,
+          "eta": 0.99,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.10113473690446806,
+          "Cp_max_absolute_error": 0.28122316786514995,
+          "max_projection_distance_over_local_chord": 0.0011993866977050341
+        }
+      ],
+      "section_screens_passed": 4,
+      "max_yplus": 0.385248601436615,
+      "wall_points": 505,
+      "fraction_yplus_below1": 1.0,
+      "max_projection_distance_over_local_chord": 0.0014590833747777697,
+      "iterative_gate_passed": false,
+      "experiment_CSV_sha256": "3666d21032fb7cae84d98fd33949ae6d24fd3659cfeb8f0423e8247e1cb888f4",
+      "source_surface_sha256": "1004d2db9edadeaca88a98c03304641a46ddeb9d53ecb672bb61f9ff10ace6ff",
+      "quality_passed": false
+    },
+    "fine": {
+      "matched": {
+        "field_iteration": 600,
+        "terminal_history_iteration": 663,
+        "CL": 0.2420389262,
+        "CD": 0.036274882,
+        "rms[Rho]": -1.754011348,
+        "rms[nu]": -5.843036788,
+        "last100_samples": 100,
+        "CL_last100_range": 0.021091262599999994,
+        "CD_last100_range": 0.008016144610000001
+      },
+      "native_status": {
+        "started_utc": "2026-10-24T22:40:56.557511+00:00",
+        "ended_utc": "2026-10-24T23:05:57.019420+00:00",
+        "exit_code": 1,
+        "seconds": 1500.4679999999935,
+        "stop_reason": "time_budget_exceeded",
+        "peak_working_set_GiB": 1.8391914367675781,
+        "budget_s": 1500,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "experiment_points": 271,
+      "all_271_points_kept": true,
+      "Cp_RMSE": 0.31157967808563114,
+      "Cp_fraction_within_0p02": 0.05166051660516605,
+      "sections": [
+        {
+          "section": 1,
+          "eta": 0.2,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.14505000192871487,
+          "Cp_max_absolute_error": 0.4254835617028003,
+          "max_projection_distance_over_local_chord": 0.0007635245021728131
+        },
+        {
+          "section": 1,
+          "eta": 0.2,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.11956235287879137,
+          "Cp_max_absolute_error": 0.1913473206625312,
+          "max_projection_distance_over_local_chord": 0.0010730634983679725
+        },
+        {
+          "section": 2,
+          "eta": 0.44,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.18936167730126835,
+          "Cp_max_absolute_error": 0.4817146576823461,
+          "max_projection_distance_over_local_chord": 0.0007811903571571266
+        },
+        {
+          "section": 2,
+          "eta": 0.44,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.15956493057551338,
+          "Cp_max_absolute_error": 0.37665976147354613,
+          "max_projection_distance_over_local_chord": 0.0010484244716555781
+        },
+        {
+          "section": 3,
+          "eta": 0.65,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.2782706351032107,
+          "Cp_max_absolute_error": 0.7579117747778535,
+          "max_projection_distance_over_local_chord": 0.0007402423437506074
+        },
+        {
+          "section": 3,
+          "eta": 0.65,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.20796078403642249,
+          "Cp_max_absolute_error": 0.5321140109668794,
+          "max_projection_distance_over_local_chord": 0.0011442515023147339
+        },
+        {
+          "section": 4,
+          "eta": 0.8,
+          "side": "u",
+          "points": 23,
+          "Cp_RMSE": 0.3651758955763841,
+          "Cp_max_absolute_error": 0.9731266544294609,
+          "max_projection_distance_over_local_chord": 0.0007587929377762007
+        },
+        {
+          "section": 4,
+          "eta": 0.8,
+          "side": "l",
+          "points": 11,
+          "Cp_RMSE": 0.27138325624735443,
+          "Cp_max_absolute_error": 0.6650143844384532,
+          "max_projection_distance_over_local_chord": 0.0010700049659455705
+        },
+        {
+          "section": 5,
+          "eta": 0.9,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.4157273802782035,
+          "Cp_max_absolute_error": 0.8921649685442198,
+          "max_projection_distance_over_local_chord": 0.0009895574926046358
+        },
+        {
+          "section": 5,
+          "eta": 0.9,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.34897592572151853,
+          "Cp_max_absolute_error": 0.6610597728896072,
+          "max_projection_distance_over_local_chord": 0.001057739668587386
+        },
+        {
+          "section": 6,
+          "eta": 0.96,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.39630227052127837,
+          "Cp_max_absolute_error": 0.7364771508594041,
+          "max_projection_distance_over_local_chord": 0.001024779617357684
+        },
+        {
+          "section": 6,
+          "eta": 0.96,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.3128357295303604,
+          "Cp_max_absolute_error": 0.6194924050949708,
+          "max_projection_distance_over_local_chord": 0.0010581276362426702
+        },
+        {
+          "section": 7,
+          "eta": 0.99,
+          "side": "u",
+          "points": 31,
+          "Cp_RMSE": 0.37105391228869067,
+          "Cp_max_absolute_error": 0.6567544309103526,
+          "max_projection_distance_over_local_chord": 0.001055511225804679
+        },
+        {
+          "section": 7,
+          "eta": 0.99,
+          "side": "l",
+          "points": 14,
+          "Cp_RMSE": 0.2477913816742344,
+          "Cp_max_absolute_error": 0.481464627871598,
+          "max_projection_distance_over_local_chord": 0.0010594290444494526
+        }
+      ],
+      "section_screens_passed": 0,
+      "max_yplus": 0.40423259139060974,
+      "wall_points": 2017,
+      "fraction_yplus_below1": 1.0,
+      "max_projection_distance_over_local_chord": 0.0011442515023147339,
+      "iterative_gate_passed": false,
+      "experiment_CSV_sha256": "ee34629316f35b6537a491dcc75dcd9cc4fd6ff43a0a044c0fab0a3d728fdafa",
+      "source_surface_sha256": "0ba6792c2e461c88072f88c292524cbfbf3e90b3870a4269a4fcc26f3f2a6c08",
+      "quality_passed": false
+    }
+  },
+  "not_blind": true,
+  "reference_source_hashes": {
+    "case_2308.dat": "020c5fcc58060737024eb87d9404f56bc563f3f6f15e337675c47477fa91f0d0",
+    "CFL3D_OM6_A3p06_CPCF.dat": "d918ca18f0d9d6fc4b3f6cb74fadf278fc8d530bad9ce57ebc2c347c5f0f71de"
+  },
+  "experiment": "NASA TMR-hosted ONERA pressure measurements; Cp. No experimental force/Cf substituted.",
+  "source_case_geometry": "Sharp-TE numerical exercise approximates original blunt experiment; same source definitions as TMR comparison.",
+  "chosen_fine_role_before_evaluation": "mesh family L1 (258048cells), never the best Cp run",
+  "GCI": null,
+  "GCI_reason": "Three iteratively converged solutions and asymptotic behavior not established.",
+  "minimum_physical_qualification_passed": false,
+  "open_gates": [
+    "iterative convergence",
+    "regional BL/TE/tip/wake",
+    "separate farfield sensitivity",
+    "experimental acceptance",
+    "independent-code grid-asymptotic comparison"
+  ]
+}

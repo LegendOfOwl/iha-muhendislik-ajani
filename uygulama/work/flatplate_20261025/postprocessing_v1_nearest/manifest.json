@@ -1,0 +1,246 @@
+{
+  "created_utc": "2026-10-25T19:19:57.335133+00:00",
+  "reason": "Nearest-column x1.90334 profile actually sampled at1.91408 or1.89260m. Replace with explicit two-column interpolation to requested x. Raw CFD unchanged. Old records retain their original relative paths, mapped here to archived copies.",
+  "files": [
+    {
+      "original_path": "work\\flatplate_20261025\\field_audit.py",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\work\\flatplate_20261025\\field_audit.py",
+      "sha256": "7f8596c3981fb742f8bde31bfa9692724c076b5f18e71b46dfa179ca0501d71c"
+    },
+    {
+      "original_path": "work\\flatplate_20261025\\compare.py",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\work\\flatplate_20261025\\compare.py",
+      "sha256": "954559b5d8b4dcd72bbdc33b881e42a7ab7cb2179eda455f9df35657e85159da"
+    },
+    {
+      "original_path": "outputs\\reports\\flatplate_comparison_20261025.json",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\reports\\flatplate_comparison_20261025.json",
+      "sha256": "fd582b37bda2778d9f9c34b048848ab55f453439ccb2d9f2ecc26d6eb0115e92"
+    },
+    {
+      "original_path": "outputs\\plots\\flatplate_reference_comparison_20261025.png",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\plots\\flatplate_reference_comparison_20261025.png",
+      "sha256": "04df106b829ad85e4449e80efd7925087cb338fb4c04612c3fe44f168d76ac49"
+    },
+    {
+      "original_path": "outputs\\reports\\flatplate_coarse_field_audit_20261025.json",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\reports\\flatplate_coarse_field_audit_20261025.json",
+      "sha256": "632482e1c0441a8117c7a51098cb387f841d882f854c0ea4a59ddbc499d849cc"
+    },
+    {
+      "original_path": "outputs\\plots\\flatplate_coarse_profiles_20261025.png",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\plots\\flatplate_coarse_profiles_20261025.png",
+      "sha256": "c0ec402fb17c85f421bd4fffca5263df5973568fb8bcf5de72ac20fdb4b49b43"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\Cf_vs_CFL3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\Cf_vs_CFL3D.csv",
+      "sha256": "552719b0d60a1d86fbeac698af81a3f882be9b7b89b6f7cf05b27208afc2c740"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\Cf_vs_FUN3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\Cf_vs_FUN3D.csv",
+      "sha256": "3d1aadd9e4cac881e4fd1b046d16f4503d9c806bddbcd46771f0294186fd563a"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\mut_vs_CFL3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\mut_vs_CFL3D.csv",
+      "sha256": "2f2da4dc2246a6ce3f641749ac20fcd2883c5686f34e3af4a64714f56dc3e519"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\mut_vs_FUN3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\mut_vs_FUN3D.csv",
+      "sha256": "964daff63a4fac43e282fcfc8cffb7653ccd0dc4d28ae6adf7375be4a71db763"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\profile_x0.97008.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\profile_x0.97008.csv",
+      "sha256": "9f2f4377b82c7221f9ca078edb5be326985a078eb7454a9ae17c3135ede799e6"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\profile_x1.90334.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\profile_x1.90334.csv",
+      "sha256": "d2459faa5b961888f0e793fe47f89c842656640a1bf0e0071ab661d28b701cea"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\velocity_0.97008.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\velocity_0.97008.csv",
+      "sha256": "eb3575654c2acfbe4c505195f2463009695580c1857affb47bddb5471acece20"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\velocity_1.90334.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\velocity_1.90334.csv",
+      "sha256": "8ef68e92767c1d7ad3d53e077cbeeb99a745292843dedebb5f38e408fd0f3a61"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\wall.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\wall.csv",
+      "sha256": "e84ad7f67e089b759271cc0a5b657c5113a60ea2458816fb6a6548f10ee9fbd8"
+    },
+    {
+      "original_path": "outputs\\reports\\flatplate_medium_field_audit_20261025.json",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\reports\\flatplate_medium_field_audit_20261025.json",
+      "sha256": "acfeee044163e533ae4ec2e2838ef3f0b2391aaeaaeef1e7db17fbcdea1dd79d"
+    },
+    {
+      "original_path": "outputs\\plots\\flatplate_medium_profiles_20261025.png",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\plots\\flatplate_medium_profiles_20261025.png",
+      "sha256": "8cdf5a19ed1efae163fe80b2fc16c9ef49cc3bc50c78536824367c8942f94c6e"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\Cf_vs_CFL3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\Cf_vs_CFL3D.csv",
+      "sha256": "cc8078e03ecccca31467ebf4bcceee8def5def959f50bc4ee1fb531a1a7d5d8e"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\Cf_vs_FUN3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\Cf_vs_FUN3D.csv",
+      "sha256": "4758fa500e59ddc1d844ee8e79132cddc620b5292ae05ec93660272494a09852"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\mut_vs_CFL3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\mut_vs_CFL3D.csv",
+      "sha256": "bc87b9a98d3f413d6d7e3b5cd957815ab05929bc588b1717a28a10e722109e1f"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\mut_vs_FUN3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\mut_vs_FUN3D.csv",
+      "sha256": "92cd490363dd7edbd641030181d5a533590a1de8182243aae6390313f78530e3"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\profile_x0.97008.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\profile_x0.97008.csv",
+      "sha256": "7fccc065e34dc4ad2873c0edbc68b514c3bb97a2d235236ae0c16a75ce984591"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\profile_x1.90334.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\profile_x1.90334.csv",
+      "sha256": "50b5012f7df90fb8282851c09599e7ca500ed432aca60e7287ac30be16e8e55c"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\velocity_0.97008.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\velocity_0.97008.csv",
+      "sha256": "76d0e14e62120d4f99a2171342ca42729a5b6ad101f5a0cc1348f1bb8530571b"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\velocity_1.90334.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\velocity_1.90334.csv",
+      "sha256": "c2f58a379fcd55edfb5e7195d8875926153cbb75c3124be9ff7527364b783a54"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\wall.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\wall.csv",
+      "sha256": "b1aa6b67efa6b492ae9205e1fc5fb88101e7ef8305de82078bc912a76b24d0e6"
+    },
+    {
+      "original_path": "outputs\\reports\\flatplate_fine_field_audit_20261025.json",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\reports\\flatplate_fine_field_audit_20261025.json",
+      "sha256": "2f144a44fb9d21b84feea1c12c5028b53b4d8b09bfbcc2c0c4be70221d7556a8"
+    },
+    {
+      "original_path": "outputs\\plots\\flatplate_fine_profiles_20261025.png",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\plots\\flatplate_fine_profiles_20261025.png",
+      "sha256": "ccb41560c9126e58919f00250df0bfcfa42e45207d4766aaf159e0cda7378be8"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\Cf_vs_CFL3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\Cf_vs_CFL3D.csv",
+      "sha256": "9fb17c4e123c58ef0ae8b856c8b527c140b53d357eacc0c156bb2dee44cd29e8"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\Cf_vs_FUN3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\Cf_vs_FUN3D.csv",
+      "sha256": "7b939674d0343e329e6ece9e2e3aa853d7dd43a621503102d4030fee98680cf9"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\mut_vs_CFL3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\mut_vs_CFL3D.csv",
+      "sha256": "93fd8a7727b6f5833f4b86c7cfd2052303abef669c4774573551da02276b370a"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\mut_vs_FUN3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\mut_vs_FUN3D.csv",
+      "sha256": "af4d4bad3cfed63bc37e88418cdeb8f52003b7f0f60c9594b3813277c880415c"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\profile_x0.97008.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\profile_x0.97008.csv",
+      "sha256": "99c49ef56ef7fa887d6e660277b1419e2d051421fc480bcd949c221bca7bd53a"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\profile_x1.90334.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\profile_x1.90334.csv",
+      "sha256": "2dbe29a04747e0c83001a605bfd2324b27df15eaf9e247986d4b83eddedad0ea"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\velocity_0.97008.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\velocity_0.97008.csv",
+      "sha256": "bc6290993743eacdceeec0789256ecf17e61ef5fce1070db212ec9432167593f"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\velocity_1.90334.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\velocity_1.90334.csv",
+      "sha256": "28249d35b3043a7254c83c0676b77a50284cba55180d59f507195a6ec69330dd"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\wall.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\wall.csv",
+      "sha256": "4e5cb6990fbfef6101cc6da09f97e80ce1214c23c334ffd5237de8333ca049ed"
+    },
+    {
+      "original_path": "outputs\\reports\\flatplate_fine_nested_field_audit_20261025.json",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\reports\\flatplate_fine_nested_field_audit_20261025.json",
+      "sha256": "8cc2199b6fd1dc7d6db902718b82771f9873d1d6367b4018b4b0f2dff2d60908"
+    },
+    {
+      "original_path": "outputs\\plots\\flatplate_fine_nested_profiles_20261025.png",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\plots\\flatplate_fine_nested_profiles_20261025.png",
+      "sha256": "d55f446e5bd8e424436203c7192ed87ca6cb4fbe067cf441a97b90220f48b356"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\Cf_vs_CFL3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\Cf_vs_CFL3D.csv",
+      "sha256": "474e460c2bc4a67312717a32a47d00c9e0e5f459faa4d11a9d574d098334a53f"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\Cf_vs_FUN3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\Cf_vs_FUN3D.csv",
+      "sha256": "4108bee38b9d28aaf25b244aca6baf048b955c44085ec17f5803d125bef80249"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\mut_vs_CFL3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\mut_vs_CFL3D.csv",
+      "sha256": "cf012d5ae4890ec6fd4c0296294fea373755f271c75f9c61d070707aecfb7beb"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\mut_vs_FUN3D.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\mut_vs_FUN3D.csv",
+      "sha256": "a42495d8fa29d36dd165f0093c33de38753f08f0344eed9ad01d8ab1569b4ed4"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\profile_x0.97008.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\profile_x0.97008.csv",
+      "sha256": "46e5a1abde651ac0792b926a3fb4dc0cb882c6fa2bb8eab467007c607476003f"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\profile_x1.90334.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\profile_x1.90334.csv",
+      "sha256": "bf748f385d9f837ea821c3e5032cbf0522241830bf6cf8d951cb96adc5991c74"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\velocity_0.97008.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\velocity_0.97008.csv",
+      "sha256": "6b4ac274ddfa41a3c59fa738ea3230c6f6d6f10dadd211328fd97c7fd25ba778"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\velocity_1.90334.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\velocity_1.90334.csv",
+      "sha256": "0a5a137774903d96b4bfc1778b6a7896857db1947b1daa3cfa9ed29d3b52f78e"
+    },
+    {
+      "original_path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\wall.csv",
+      "preserved_path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\wall.csv",
+      "sha256": "a3a61a900c3e22079d473398a8fb17ce6071eaf74bae0185aa50a94c22069f6c"
+    }
+  ]
+}

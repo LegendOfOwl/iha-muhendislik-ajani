@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-24T22:34:49.485423+00:00",
+  "source_case_contract_sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+  "baseline_seal_sha256": "f9a9351d00ab9d408e8565bb339a09a90b9dd2d262c72dfbc1e975383ec19b2f",
+  "control_cfg_sha256": "52580ece6febc6a52177c7fc031f01a7064fd336c44f3507c08dd43c092a2f41",
+  "baseline_cfg_sha256": "92fbaa05fd206b825f87c1d5ddb65161301bc11af89554cb6d461b8b93c304d3",
+  "only_input_config_change": [
+    [
+      "MGLEVEL= 0",
+      "MGLEVEL= 2"
+    ]
+  ],
+  "same_source_mesh_sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70",
+  "same_initialization": "RESTART_SOL=NO; same freestream state, mesh, physics and numerical settings except MGLEVEL",
+  "effect": "Compare density log10 at matched history iteration1000; MG improves by at least0.3 log10 and is finite.",
+  "effect_log10_min": 0.3,
+  "common_iteration": 1000,
+  "budget_s": 300,
+  "threads": 4,
+  "max_iterations": 4000,
+  "scope": "Enabling the complete built-in two-level agglomeration policy; coarse operators/smoothers are part of the treatment, not a pure isolated scalar.",
+  "timing_comparison_not_controlled": "Other source-family run may execute concurrently; no speedup claim from wall time.",
+  "physical_acceptance_unchanged": true
+}

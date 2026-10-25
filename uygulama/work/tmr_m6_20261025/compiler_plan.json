@@ -1,0 +1,295 @@
+{
+  "created_utc": "2026-10-24T22:16:48.017645+00:00",
+  "root_package": "mingw-w64-ucrt-x86_64-gcc-fortran",
+  "source_url": "https://mirror.msys2.org/mingw/ucrt64/ucrt64.db",
+  "db_sha256": "5f513c54a8e1b86c8014ef941fabf596664f848d624c2e2fbd3b86a7a61505c9",
+  "compressed_bytes": 88408075,
+  "installed_bytes": 550558236,
+  "packages": [
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-gcc-fortran",
+      "VERSION": "16.2.0-6",
+      "FILENAME": "mingw-w64-ucrt-x86_64-gcc-fortran-16.2.0-6-any.pkg.tar.zst",
+      "CSIZE": "14939820",
+      "ISIZE": "44553335",
+      "SHA256SUM": "2c92f09f3ea08997bdc4243ba8f47c2d5026aa42571facd8d6295c2b16508359",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-gcc=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-gmp",
+        "mingw-w64-ucrt-x86_64-isl",
+        "mingw-w64-ucrt-x86_64-libgfortran=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-libwinpthread",
+        "mingw-w64-ucrt-x86_64-mpc",
+        "mingw-w64-ucrt-x86_64-mpfr",
+        "mingw-w64-ucrt-x86_64-zlib",
+        "mingw-w64-ucrt-x86_64-zstd"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gcc-fortran-16.2.0-6-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-zstd",
+      "VERSION": "1.5.7-2",
+      "FILENAME": "mingw-w64-ucrt-x86_64-zstd-1.5.7-2-any.pkg.tar.zst",
+      "CSIZE": "668277",
+      "ISIZE": "3731047",
+      "SHA256SUM": "dbdb8427280046a2b41697780aa4c52983b708082b0da4755951dc3bea96ca89",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-cc-libs"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-zstd-1.5.7-2-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-cc-libs",
+      "VERSION": "16.2.0-6",
+      "FILENAME": "mingw-w64-ucrt-x86_64-cc-libs-16.2.0-6-any.pkg.tar.zst",
+      "CSIZE": "2343",
+      "ISIZE": "0",
+      "SHA256SUM": "d8fff9e62443168bcda8ce746697243519c4f090ea607357ce94feac0bd10a50",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-libgcc=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-libstdc++=16.2.0-6"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-cc-libs-16.2.0-6-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-libstdc++",
+      "VERSION": "16.2.0-6",
+      "FILENAME": "mingw-w64-ucrt-x86_64-libstdc++-16.2.0-6-any.pkg.tar.zst",
+      "CSIZE": "795910",
+      "ISIZE": "2697665",
+      "SHA256SUM": "33c5e58a85a538cf843a8672991cce591f0231d66da3b66a57629712d64be17f",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-libgcc=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-libwinpthread",
+        "mingw-w64-ucrt-x86_64-tzdata"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libstdc++-16.2.0-6-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-tzdata",
+      "VERSION": "2026e-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-tzdata-2026e-1-any.pkg.tar.zst",
+      "CSIZE": "225916",
+      "ISIZE": "1568443",
+      "SHA256SUM": "f1809089f8ed5cec858ae8584289172896eb921be1e78ba583555f74e9015428",
+      "depends": [],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tzdata-2026e-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-libwinpthread",
+      "VERSION": "14.0.0.r532.gdbbc8e99d-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-libwinpthread-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst",
+      "CSIZE": "33772",
+      "ISIZE": "74719",
+      "SHA256SUM": "caab3068ad48dbefd39d88f7ec39778d1ce452f8e7dda0670344462b598d86ec",
+      "depends": [],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libwinpthread-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-libgcc",
+      "VERSION": "16.2.0-6",
+      "FILENAME": "mingw-w64-ucrt-x86_64-libgcc-16.2.0-6-any.pkg.tar.zst",
+      "CSIZE": "77191",
+      "ISIZE": "189008",
+      "SHA256SUM": "80b2497f019977dd9528b1abc8621b1328a0115ab1f724047ccbb56bf323f11d",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-libwinpthread"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libgcc-16.2.0-6-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-zlib",
+      "VERSION": "1.3.2-3",
+      "FILENAME": "mingw-w64-ucrt-x86_64-zlib-1.3.2-3-any.pkg.tar.zst",
+      "CSIZE": "108848",
+      "ISIZE": "429721",
+      "SHA256SUM": "130e6ef04c654fc2150a177600aa5ed0035087665a893479d2c85ba7485d5704",
+      "depends": [],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-zlib-1.3.2-3-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-mpfr",
+      "VERSION": "4.2.2-3",
+      "FILENAME": "mingw-w64-ucrt-x86_64-mpfr-4.2.2-3-any.pkg.tar.zst",
+      "CSIZE": "553765",
+      "ISIZE": "2293651",
+      "SHA256SUM": "6b70a275d2ec75c70aa50a236c218e6b7ee9a5ab4c6d52cb0b580267b7d200fe",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-cc-libs",
+        "mingw-w64-ucrt-x86_64-gmp"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-mpfr-4.2.2-3-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-gmp",
+      "VERSION": "6.3.0-2",
+      "FILENAME": "mingw-w64-ucrt-x86_64-gmp-6.3.0-2-any.pkg.tar.zst",
+      "CSIZE": "592359",
+      "ISIZE": "3126931",
+      "SHA256SUM": "e82a75968a556484a50084578238a84eb60fb93e34986fd6695c537975bd39ea",
+      "depends": [],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gmp-6.3.0-2-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-mpc",
+      "VERSION": "1.4.1-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-mpc-1.4.1-1-any.pkg.tar.zst",
+      "CSIZE": "139585",
+      "ISIZE": "562884",
+      "SHA256SUM": "f06556e811c711ce91609484e31d358e4f495811ba29813bf2284a3b236d82ce",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-gmp",
+        "mingw-w64-ucrt-x86_64-mpfr"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-mpc-1.4.1-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-libgfortran",
+      "VERSION": "16.2.0-6",
+      "FILENAME": "mingw-w64-ucrt-x86_64-libgfortran-16.2.0-6-any.pkg.tar.zst",
+      "CSIZE": "1222985",
+      "ISIZE": "11181863",
+      "SHA256SUM": "34406a0c721e44655c3971ce131efd81652d5f6fa5381eb5700b288bc9a780ab",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-libgcc=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-libquadmath=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-libwinpthread"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libgfortran-16.2.0-6-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-libquadmath",
+      "VERSION": "16.2.0-6",
+      "FILENAME": "mingw-w64-ucrt-x86_64-libquadmath-16.2.0-6-any.pkg.tar.zst",
+      "CSIZE": "179374",
+      "ISIZE": "440861",
+      "SHA256SUM": "7b553c0b6dd9cf2f676c0c6812aa359495940dbdd7347f47be1dbd75d29cd611",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-libgcc=16.2.0-6"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libquadmath-16.2.0-6-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-isl",
+      "VERSION": "0.28-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-isl-0.28-1-any.pkg.tar.zst",
+      "CSIZE": "1540719",
+      "ISIZE": "13373114",
+      "SHA256SUM": "8594e01a253d5a72646c586cf5a1626c1b1c2be7c30060fe67abd9bebe3fe223",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-gmp"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-isl-0.28-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-gcc",
+      "VERSION": "16.2.0-6",
+      "FILENAME": "mingw-w64-ucrt-x86_64-gcc-16.2.0-6-any.pkg.tar.zst",
+      "CSIZE": "48529712",
+      "ISIZE": "184029978",
+      "SHA256SUM": "0290e91f5a9a8a3699bcea6221a899403bb9bd5d6f7dbd98c883d74e2ef36338",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-binutils",
+        "mingw-w64-ucrt-x86_64-crt",
+        "mingw-w64-ucrt-x86_64-headers",
+        "mingw-w64-ucrt-x86_64-isl",
+        "mingw-w64-ucrt-x86_64-gmp",
+        "mingw-w64-ucrt-x86_64-mpfr",
+        "mingw-w64-ucrt-x86_64-mpc",
+        "mingw-w64-ucrt-x86_64-libgcc=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-libstdc++=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-windows-default-manifest",
+        "mingw-w64-ucrt-x86_64-winpthreads",
+        "mingw-w64-ucrt-x86_64-zlib",
+        "mingw-w64-ucrt-x86_64-zstd"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gcc-16.2.0-6-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-winpthreads",
+      "VERSION": "14.0.0.r532.gdbbc8e99d-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-winpthreads-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst",
+      "CSIZE": "47134",
+      "ISIZE": "485670",
+      "SHA256SUM": "d38f611692e8505555a78653c4eafd029bb48964e549eb7f04f37eed7bc0359a",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-crt",
+        "mingw-w64-ucrt-x86_64-libwinpthread=14.0.0.r532.gdbbc8e99d"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-winpthreads-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-crt",
+      "VERSION": "14.0.0.r532.gdbbc8e99d-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-crt-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst",
+      "CSIZE": "4069193",
+      "ISIZE": "134727251",
+      "SHA256SUM": "cd9e7bec62a5cf145fb5e12710c51cd9d818ec9ff4e80b358ccf4c225d7055f0",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-headers"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-crt-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-headers",
+      "VERSION": "14.0.0.r532.gdbbc8e99d-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-headers-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst",
+      "CSIZE": "6889955",
+      "ISIZE": "95803012",
+      "SHA256SUM": "1cab853b7fad6850ac96ffab0c2922f54a8b3e4ad3432c615b6b52f0a2424b20",
+      "depends": [],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-headers-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-windows-default-manifest",
+      "VERSION": "20260815-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-windows-default-manifest-20260815-1-any.pkg.tar.zst",
+      "CSIZE": "2652",
+      "ISIZE": "892",
+      "SHA256SUM": "b39039f754a600cc0dec49df7d675a59a3cb2b63691d91b4ae60735ee7075eca",
+      "depends": [],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-windows-default-manifest-20260815-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-binutils",
+      "VERSION": "2.47-4",
+      "FILENAME": "mingw-w64-ucrt-x86_64-binutils-2.47-4-any.pkg.tar.zst",
+      "CSIZE": "6625838",
+      "ISIZE": "45909439",
+      "SHA256SUM": "c18a40b871bfddb5da030f015003479ca85625afde1cb89f7313945e6151397d",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-gettext-runtime",
+        "mingw-w64-ucrt-x86_64-libwinpthread",
+        "mingw-w64-ucrt-x86_64-zlib",
+        "mingw-w64-ucrt-x86_64-zstd"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-binutils-2.47-4-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-gettext-runtime",
+      "VERSION": "1.0-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-gettext-runtime-1.0-1-any.pkg.tar.zst",
+      "CSIZE": "417977",
+      "ISIZE": "2822670",
+      "SHA256SUM": "ba693dda4ac375af76ce481ff3a6e7481286546cc7dc6d56c7021dae34084157",
+      "depends": [
+        "mingw-w64-ucrt-x86_64-cc-libs",
+        "mingw-w64-ucrt-x86_64-libiconv"
+      ],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-1.0-1-any.pkg.tar.zst"
+    },
+    {
+      "NAME": "mingw-w64-ucrt-x86_64-libiconv",
+      "VERSION": "1.19-1",
+      "FILENAME": "mingw-w64-ucrt-x86_64-libiconv-1.19-1-any.pkg.tar.zst",
+      "CSIZE": "744750",
+      "ISIZE": "2556082",
+      "SHA256SUM": "9a500f38c2b91808741c62fae746b3e9110b33a1ecf5c30fa0c66dbedddf7e16",
+      "depends": [],
+      "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libiconv-1.19-1-any.pkg.tar.zst"
+    }
+  ],
+  "install_root": "tools/fortran_msys2",
+  "system_path_changed": false,
+  "budget_download_bytes": 188743680
+}

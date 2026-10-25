@@ -3,11 +3,30 @@
   "request": "Tüm proje çalışmalarını sürümlü, kategorilere ayrılmış ve hassas bilgi taraması yapılmış yeni public iha-muhendislik-ajani GitHub deposuna yayımla",
   "kind": "publication",
   "created_utc": "2026-10-24T14:05:08.814735+00:00",
-  "status": "bekliyor",
-  "phase": "araç entegrasyonu",
-  "acceptance": [],
+  "status": "tamamlandı",
+  "phase": "sürümlü GitHub yayını",
+  "acceptance": [
+    "Yeni public repo ve kategori erişimi",
+    "Açık geriye dönük sürüm grupları, 10 commit/tag/release",
+    "Ham dosyalar ve kod SHA256 korunması",
+    "Hesap/kimlik dosyalarını dışarıda bırakma",
+    "Tüm yayın varlıklarının sunucu hashleri ve uzak commitlerin doğrulanması"
+  ],
   "blocked_by": [],
-  "evidence": [],
+  "evidence": [
+    {
+      "path": "outputs/reports/github_yayini_20261024.html",
+      "sha256": "39eb185730d028ad0ac1c1a9b3339cebf66273d094a8b64096bba3adb77a3beb"
+    },
+    {
+      "path": "outputs/reports/github_local_verification_20261024.json",
+      "sha256": "a253ef9f71b83cb179f41a1811d9718945b2849dc715ba2dce631a60d3742f50"
+    },
+    {
+      "path": "outputs/data/github_publication_20261024.json",
+      "sha256": "69f41265fad20a5c193957d9fcd5067b7889b31d92416b7d7241e2762cb330fe"
+    }
+  ],
   "input_sha256": {
     "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
   },
@@ -23,5 +42,16 @@
     "data_root": "outputs/data/qualification",
     "created_utc": "2026-10-19T07:06:12.206479+00:00",
     "active_cad": null
-  }
+  },
+  "completed_utc": "2026-10-24T19:59:48.959103+00:00",
+  "repository_url": "https://github.com/LegendOfOwl/iha-muhendislik-ajani",
+  "repository_visibility": "public",
+  "release": "v0.10.0",
+  "local_repository": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\iha-muhendislik-ajani",
+  "source_snapshot_utc": "2026-10-24T14:23:46.751661+00:00",
+  "historical_versions_reconstructed": true,
+  "original_git_history_available": false,
+  "expert_qualification_passed": false,
+  "minimum_physical_qualification_passed": false,
+  "completion_scope": "İstenen yeni public depoda kaynak, rapor, CAD ve ham analiz arşivlerinin sürümlü yayını; mühendislik kabulleri ayrı"
 }

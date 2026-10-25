@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-24T22:31:58.707317+00:00",
+  "source_STEP_sha256": "0ed2862f3952d04b747b0f90e47062d059ff98b2e48933a323d1c6b66771a7bf",
+  "source_STEP_unit": "mm per TMR page",
+  "original_CAD_bounds_mm": {
+    "xmin": -1.0000000782707232e-07,
+    "xmax": 1146.570404444566,
+    "ymin": -1.0000022737367544e-07,
+    "ymax": 1218.4813088712144,
+    "zmin": -39.43236880144951,
+    "zmax": 39.43236387984512
+  },
+  "normalization": "All source CAD coordinates divided by published sharp root chord810.491484086mm; grid root chord=1.",
+  "source_geometry_redesigned": false,
+  "actual_fine_wall_points_compared": 2017,
+  "distance_over_root_chord": {
+    "min": 0.0,
+    "median": 3.2163905088344576e-06,
+    "p95": 2.780452490411398e-05,
+    "max": 0.000545526499711497
+  },
+  "worst_node": 650,
+  "worst_location_normalized": [
+    0.8688405228345758,
+    1.487059295380202,
+    -0.003591406130422255
+  ],
+  "csv_sha256": "47aa417465fba7a915a4c80b6d659c54ddf7df4786dea3f9bc2a06928f0eae6f",
+  "seconds": 31.5,
+  "geometry_equivalence_acceptance": "Not asserted: source generator curve and independent source CAD have a measured difference. No after-the-fact tolerance chosen."
+}

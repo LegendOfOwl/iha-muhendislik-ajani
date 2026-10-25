@@ -42,9 +42,21 @@ def restore(catalog, version=None, verify_only=False):
             partial.replace(archive)
         if sha(archive) != asset['sha256']:
             raise ValueError('Yerel arşiv SHA256 uyuşmadı.')
+        # Older assets use one member per destination. New assets may share
+        # immutable content; every destination still has its own expected hash.
         expected = {r['repository_path']: r for r in records}
+        if len(expected) != len(records):
+            raise ValueError('Katalogda yinelenen hedef yolu.')
+        members = {}
+        for rec in records:
+            member = rec.get('archive_member', rec['repository_path'])
+            if not member.startswith('uygulama/') or '..' in Path(member).parts:
+                raise ValueError('Güvenli olmayan arşiv üyesi.')
+            if member in members and members[member] != rec['sha256']:
+                raise ValueError('Aynı arşiv üyesi için farklı hash bekleniyor.')
+            members[member] = rec['sha256']
         with zipfile.ZipFile(archive) as zipped:
-            if set(zipped.namelist()) != set(expected) or len(zipped.namelist()) != len(expected):
+            if set(zipped.namelist()) != set(members) or len(zipped.namelist()) != len(members):
                 raise ValueError('Arşiv dosya listesi katalogla eşleşmiyor.')
             for name, rec in expected.items():
                 dest = (ROOT / name).resolve()
@@ -56,7 +68,7 @@ def restore(catalog, version=None, verify_only=False):
                     raise ValueError('Mevcut farklı dosyanın üzerine yazılmadı: ' + name)
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 partial = dest.with_name(dest.name + '.part')
-                with zipped.open(name) as source, partial.open('xb') as stream:
+                with zipped.open(rec.get('archive_member', name)) as source, partial.open('xb') as stream:
                     shutil.copyfileobj(source, stream, length=1024 * 1024)
                 if sha(partial) != rec['sha256']:
                     raise ValueError('Çıkarılan dosya SHA256 uyuşmadı: ' + name)

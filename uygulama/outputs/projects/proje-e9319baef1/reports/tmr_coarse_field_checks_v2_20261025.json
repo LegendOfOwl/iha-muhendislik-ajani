@@ -1,0 +1,705 @@
+{
+  "created_utc": "2026-10-24T22:46:14.625526+00:00",
+  "role": "coarse",
+  "field_iteration": 3999,
+  "prediction_seal_sha256": "f9a9351d00ab9d408e8565bb339a09a90b9dd2d262c72dfbc1e975383ec19b2f",
+  "forces": {
+    "method": "Native wing topology; sole fluid neighbor sets normal; bilinear quad3x3 Gauss and triangle3point quadrature",
+    "quadrature_scheme": "bilinear_v2",
+    "matched_surface_sha256": "b7bf9ecc21daa127aa95dbdec156eebfee4ff78c51f18962b73d34856f9a07b9",
+    "native_CL": 0.1863916441,
+    "native_CD": 0.03884530554,
+    "independent_CL": 0.1861520455675357,
+    "independent_CD": 0.03870063429631354,
+    "CL_relative_difference": 0.0012854574764937787,
+    "CD_relative_difference": 0.003724291563043214,
+    "CL_pressure": 0.1862162983979176,
+    "CL_viscous": -6.425283038187564e-05,
+    "CD_pressure": 0.033853489983877896,
+    "CD_viscous": 0.004847144312435642,
+    "moment_total_xyz": [
+      0.14584677207362937,
+      -0.1262355418261594,
+      -0.014897826070015465
+    ],
+    "mapping_max_distance": 7.89567166056342e-08,
+    "all_wall_faces_one_fluid_neighbour": true,
+    "scope": "Quadrature/Float32 differences measured; agreement is not convergence or physical accuracy."
+  },
+  "forces_triangle_v1_preserved": {
+    "method": "Native wing topology; sole fluid neighbor sets normal; diagonal triangle mean v1",
+    "quadrature_scheme": "triangle_v1",
+    "matched_surface_sha256": "b7bf9ecc21daa127aa95dbdec156eebfee4ff78c51f18962b73d34856f9a07b9",
+    "native_CL": 0.1863916441,
+    "native_CD": 0.03884530554,
+    "independent_CL": 0.18146559732700718,
+    "independent_CD": 0.03832022773939116,
+    "CL_relative_difference": 0.02642847428476991,
+    "CD_relative_difference": 0.01351714945498772,
+    "CL_pressure": 0.18153471894850287,
+    "CL_viscous": -6.912162149569915e-05,
+    "CD_pressure": 0.03347682887003238,
+    "CD_viscous": 0.004843398869358775,
+    "moment_total_xyz": [
+      0.1424966888305606,
+      -0.12279512349881808,
+      -0.02025126607574534
+    ],
+    "mapping_max_distance": 7.89567166056342e-08,
+    "all_wall_faces_one_fluid_neighbour": true,
+    "scope": "Quadrature/Float32 differences measured; agreement is not convergence or physical accuracy."
+  },
+  "normal_profiles": {
+    "source_level": 3,
+    "native_arrays": [
+      "Density",
+      "Momentum",
+      "Energy",
+      "Nu_Tilde",
+      "Pressure",
+      "Temperature",
+      "Mach",
+      "Pressure_Coefficient",
+      "Velocity",
+      "Laminar_Viscosity",
+      "Skin_Friction_Coefficient",
+      "Heat_Flux",
+      "Y_Plus",
+      "Eddy_Viscosity",
+      "Residual_Density",
+      "Residual_Momentum",
+      "Residual_Energy",
+      "Residual_Nu_Tilde"
+    ],
+    "profiles": [
+      {
+        "station_request": 0.2,
+        "xc_request": 0.2,
+        "side": "u",
+        "actual_eta": -0.0,
+        "actual_xc": 0.2350037122015944,
+        "wall_node": 124,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 349.83258587309996,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 348.0174611649765,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 348.0174611649765,
+            "delta99_radial_over_c": null
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.2_xc0.2_u.csv"
+      },
+      {
+        "station_request": 0.2,
+        "xc_request": 0.2,
+        "side": "l",
+        "actual_eta": -0.0,
+        "actual_xc": 0.2350037122015944,
+        "wall_node": 112,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 302.67222374241516,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 297.879247418186,
+            "delta99_radial_over_c": 0.011380167430045017
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 297.879247418186,
+            "delta99_radial_over_c": 0.011380167430045017
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.2_xc0.2_l.csv"
+      },
+      {
+        "station_request": 0.2,
+        "xc_request": 0.5,
+        "side": "u",
+        "actual_eta": -0.0,
+        "actual_xc": 0.406293705911365,
+        "wall_node": 123,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 352.2303772480965,
+            "delta99_radial_over_c": 0.034246179996364506
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 354.54494790824714,
+            "delta99_radial_over_c": 0.03755939367992647
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 354.54494790824714,
+            "delta99_radial_over_c": 0.03755939367992647
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.2_xc0.5_u.csv"
+      },
+      {
+        "station_request": 0.2,
+        "xc_request": 0.5,
+        "side": "l",
+        "actual_eta": -0.0,
+        "actual_xc": 0.4062937059113648,
+        "wall_node": 113,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 320.80754016134637,
+            "delta99_radial_over_c": 0.017619887777104742
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 317.9985667585189,
+            "delta99_radial_over_c": 0.013442760214311924
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 317.9985667585189,
+            "delta99_radial_over_c": 0.013442760214311924
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.2_xc0.5_l.csv"
+      },
+      {
+        "station_request": 0.2,
+        "xc_request": 0.8,
+        "side": "u",
+        "actual_eta": -0.0,
+        "actual_xc": 0.7649962877984058,
+        "wall_node": 121,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 293.6294614081592,
+            "delta99_radial_over_c": 0.03794040006855605
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 308.1303935538596,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 308.1303935538596,
+            "delta99_radial_over_c": null
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.2_xc0.8_u.csv"
+      },
+      {
+        "station_request": 0.2,
+        "xc_request": 0.8,
+        "side": "l",
+        "actual_eta": -0.0,
+        "actual_xc": 0.7649962877984053,
+        "wall_node": 115,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 314.0599562189797,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 311.0403247491963,
+            "delta99_radial_over_c": 0.02114570518253947
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 311.0403247491963,
+            "delta99_radial_over_c": 0.02114570518253947
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.2_xc0.8_l.csv"
+      },
+      {
+        "station_request": 0.2,
+        "xc_request": 0.95,
+        "side": "u",
+        "actual_eta": -0.0,
+        "actual_xc": 0.9739870844980427,
+        "wall_node": 119,
+        "invalid_samples": 1,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 136.55328161005247,
+            "delta99_radial_over_c": 0.03853863834792876
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 178.85954076928306,
+            "delta99_radial_over_c": 0.06733136294924572
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 178.85954076928306,
+            "delta99_radial_over_c": 0.06733136294924572
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.2_xc0.95_u.csv"
+      },
+      {
+        "station_request": 0.2,
+        "xc_request": 0.95,
+        "side": "l",
+        "actual_eta": -0.0,
+        "actual_xc": 0.9739870844980426,
+        "wall_node": 117,
+        "invalid_samples": 1,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 245.1460877853318,
+            "delta99_radial_over_c": 0.03745428305739194
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 261.28381110385055,
+            "delta99_radial_over_c": 0.06381223152381786
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 261.28381110385055,
+            "delta99_radial_over_c": 0.06381223152381786
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.2_xc0.95_l.csv"
+      },
+      {
+        "station_request": 0.8,
+        "xc_request": 0.2,
+        "side": "u",
+        "actual_eta": 0.8442241598762504,
+        "actual_xc": 0.23500371220159422,
+        "wall_node": 88,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 357.3745536721939,
+            "delta99_radial_over_c": 0.03220710227604397
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 361.3415680828376,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 2,
+            "Ue_operational_m_s": 357.81381623097184,
+            "delta99_radial_over_c": 0.032603208866760894
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.8_xc0.2_u.csv"
+      },
+      {
+        "station_request": 0.8,
+        "xc_request": 0.2,
+        "side": "l",
+        "actual_eta": 0.8442241598762504,
+        "actual_xc": 0.23500371220159422,
+        "wall_node": 76,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 313.3194316920681,
+            "delta99_radial_over_c": 0.009827246505316066
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 309.6619688626028,
+            "delta99_radial_over_c": 0.007725378828728935
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 2,
+            "Ue_operational_m_s": 306.16489329410666,
+            "delta99_radial_over_c": 0.006345602430749471
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.8_xc0.2_l.csv"
+      },
+      {
+        "station_request": 0.8,
+        "xc_request": 0.5,
+        "side": "u",
+        "actual_eta": 0.8442241598762504,
+        "actual_xc": 0.40629370591136477,
+        "wall_node": 87,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 339.11731150513435,
+            "delta99_radial_over_c": 0.033363267059128565
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 346.54612992011863,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 2,
+            "Ue_operational_m_s": 346.41548807849796,
+            "delta99_radial_over_c": null
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.8_xc0.5_u.csv"
+      },
+      {
+        "station_request": 0.8,
+        "xc_request": 0.5,
+        "side": "l",
+        "actual_eta": 0.8442241598762504,
+        "actual_xc": 0.4062937059113646,
+        "wall_node": 77,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 327.5041848820008,
+            "delta99_radial_over_c": 0.01331795533332062
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 324.75905371301405,
+            "delta99_radial_over_c": 0.011011680972414648
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 2,
+            "Ue_operational_m_s": 322.69049000407233,
+            "delta99_radial_over_c": 0.010339840493077039
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.8_xc0.5_l.csv"
+      },
+      {
+        "station_request": 0.8,
+        "xc_request": 0.8,
+        "side": "u",
+        "actual_eta": 0.8442241598762504,
+        "actual_xc": 0.764996287798406,
+        "wall_node": 85,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 234.95587823660023,
+            "delta99_radial_over_c": 0.03468650517584555
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 279.50322477486293,
+            "delta99_radial_over_c": 0.06019938174971952
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 2,
+            "Ue_operational_m_s": 287.30051466954177,
+            "delta99_radial_over_c": 0.07653206895858324
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.8_xc0.8_u.csv"
+      },
+      {
+        "station_request": 0.8,
+        "xc_request": 0.8,
+        "side": "l",
+        "actual_eta": 0.8442241598762504,
+        "actual_xc": 0.764996287798406,
+        "wall_node": 79,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 311.5001715847356,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 308.7211163027165,
+            "delta99_radial_over_c": null
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 2,
+            "Ue_operational_m_s": 306.53986863421824,
+            "delta99_radial_over_c": 0.019395292904303987
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.8_xc0.8_l.csv"
+      },
+      {
+        "station_request": 0.8,
+        "xc_request": 0.95,
+        "side": "u",
+        "actual_eta": 0.8442241598762504,
+        "actual_xc": 0.9739870844980424,
+        "wall_node": 83,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 99.3858199225,
+            "delta99_radial_over_c": 0.03442790835630159
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 135.9147533960106,
+            "delta99_radial_over_c": 0.060606647222144566
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 2,
+            "Ue_operational_m_s": 158.75745220272685,
+            "delta99_radial_over_c": 0.08311688019248595
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.8_xc0.95_u.csv"
+      },
+      {
+        "station_request": 0.8,
+        "xc_request": 0.95,
+        "side": "l",
+        "actual_eta": 0.8442241598762504,
+        "actual_xc": 0.9739870844980424,
+        "wall_node": 81,
+        "invalid_samples": 2,
+        "profiles": [
+          {
+            "outer_s_over_c": [
+              0.03,
+              0.06
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 248.86139178341563,
+            "delta99_radial_over_c": 0.033730239109359544
+          },
+          {
+            "outer_s_over_c": [
+              0.04,
+              0.08
+            ],
+            "valid_outer_nodes": 1,
+            "Ue_operational_m_s": 268.0257956108752,
+            "delta99_radial_over_c": 0.057893883204026206
+          },
+          {
+            "outer_s_over_c": [
+              0.06,
+              0.12
+            ],
+            "valid_outer_nodes": 2,
+            "Ue_operational_m_s": 272.51319668474457,
+            "delta99_radial_over_c": 0.07067533388086969
+          }
+        ],
+        "csv": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\eta0.8_xc0.95_l.csv"
+      }
+    ],
+    "iterative_gate_passed": false,
+    "sampling": "Direct source radial nodes mapped by coordinate distance to the same native volume field; validity retained through edge search.",
+    "limits": "Radial arclength and operational99% crossing; window sensitivity shown. Not a full 3D compressible BL qualification or accepted uncertainty."
+  },
+  "physical_qualification_passed": false
+}

@@ -1,0 +1,112 @@
+<html>
+
+<head>
+<title> Examining Iterative Convergence </title>
+<style type="text/css">
+<!--
+.style1 {color: #800000;
+         }
+.style2 {text-decoration: underline;  }
+.style3 {color: navy;}
+
+-->
+</style>
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" 
+ vlink="#551A8B" alink="#FF0000"  >
+
+<table border=0 width="600" cellspacing=0 cellpadding=0>
+<tr>
+<td align=left valign="top" width="600" >
+
+<img src="title2.gif" border=1 hspace=0 vspace=0  
+  alt="NPARC Alliance CFD V&V Web Site">
+
+<a href="../homepage.html"><b>V&amp;V Home</b></a>  &nbsp; &nbsp; &nbsp;
+<a href="../archive.html"><b>Archive</b></a> &nbsp; &nbsp; &nbsp;
+<a href="tutorial.html"><b>Tutorial</b></a> 
+
+
+<h2 align="center" class="style3">Examining Iterative Convergence</h2>
+
+
+
+<p> Generally, CFD methods involve some iterative scheme to arrive at 
+the simulation results.  Here it is assumed that the iteration is with 
+respect to time or a pseudo-temporal quantity and some type of time step 
+is taken at each iteration.   A steady-state flow simulation involves 
+starting with a uniform or fabricated flow field and iterating in time 
+until the steady-state flow field is obtained.   This is termed 
+iterative convergence, but requires some criteria for determining 
+convergence.  Criteria include: </p>
+
+<p><b>Residuals</b>.  The residuals of the equations are the change in
+the equations over an iteration.  These are usually scaled or
+normalized.  One usually looks for the residuals to reach a certain
+level and then level-off as an indication of iterative convergence.
+For a time-marching, steady-state strategy, this involves examining
+whether the residual has been reduced a certain number (usually 3-4) of
+orders of magnitude.</p>
+
+<p><b>Results</b>.  The CFD simulation has the objective of determining
+some quantity such as lift, drag, recovery, etc...  One can track the
+values of such engineering quantities with respect to iteration and
+define iterative convergence when these quantities converge.  The
+convergence criteria is usually defined by acceptable error in these
+values.  It is often the case that certain quantities may reach
+convergence at a different rate than other quantities.    One can check
+that a monitored flow value (such as thrust, drag, or boundary layer
+profile) has remained unchanged with respect to the number of
+iterations.</p>
+
+<p><b>Time-Accurate Simulations</b>.  For a time-marching,
+time-accurate strategy, this involves examining whether the final time
+has been reached with proper convergence at each time step.</p>
+
+<p><b>Space-Marching Simulation</b>  For a space-marching strategy,
+this involves examining whether the end of the marching segment has
+been reached with proper convergence at each marching step.</p>
+
+
+<!------------------------------------------------------------------------->
+<hr>
+<span style="font-weight: bold;">Last Updated:</span> Wednesday, 10-Feb-2021 09:38:58 EST<br>
+
+
+</td></tr></table>
+
+
+
+
+<div id="footer">
+
+<!-- <img src="images/nasa_logo.gif" class="right"
+      width= "50" height="40" alt="NASA meatball" />
+-->
+
+<div>
+  <span style="font-weight: bold;">Responsible NASA Official/Curator:</span> 
+      <a href="mailto:john.w.slater@nasa.gov">John W. Slater</a>
+</div>
+
+<span><span style="font-weight: bold;">Web Policies: </span>
+      <a href="http://www.grc.nasa.gov/Doc/grcwebpolicies.html">Web Privacy Policy and Important Notices</a></span><br />
+		<span style="font-weight: bold;">Adobe Reader Download: </span>  
+        <a href="http://www.adobe.com/products/acrobat/readstep2.html" title="Go to Adobe Web Site">
+        Adobe Reader</a>
+<!-- <span class="notprinted"><span style="font-weight: bold;">Adobe Reader Download: </span>  
+        <a href="http://www.adobe.com/products/acrobat/readstep2.html" title="Go to Adobe Web Site">
+        Adobe Reader</a>
+</span> -->
+
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script language="javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GRC"></script>
+
+
+</div>
+
+</body>
+</html>

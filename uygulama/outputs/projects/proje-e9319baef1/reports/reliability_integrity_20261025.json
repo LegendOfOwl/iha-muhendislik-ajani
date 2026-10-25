@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-10-24T21:26:17.014561+00:00",
+  "frozen_predictions": {
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\lin10\\prediction_frozen.json": {
+      "sha256": "5737e9770f5104bbb35da9fe64c706f23f994a9bbfe2f803cb41d139346c91e3",
+      "files": 31
+    },
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\lin40\\prediction_frozen.json": {
+      "sha256": "81c3a4bdc82dbcef57f2d98d4c990e0b75a4991c0372c2424426bf5609645dd4",
+      "files": 31
+    },
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\prediction_frozen.json": {
+      "sha256": "994332e62ccb7616d6efe5e4444f096566078766aeab50d799407f4efd44ebcb",
+      "files": 23
+    },
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\fixed\\prediction_frozen.json": {
+      "sha256": "c89c9384e3b40d3ca035d464a151357454660eb7ff9799481cee51c1edd3d748",
+      "files": 25
+    }
+  },
+  "source_seal_files": 73,
+  "real_UAV_inputs_unchanged": {
+    "outputs/data/project/conceptual_steps.json": true,
+    "outputs/data/project/mass_budget.json": true,
+    "outputs/data/project/mission.json": true
+  },
+  "research_source_hashes": {
+    "su2_v850_config.cfg": true,
+    "su2_linear_solvers.html": true,
+    "su2_v850_CFlowCompOutput.cpp": true,
+    "su2_v850_CSysSolve.cpp": true,
+    "nasa_iterative.html": true,
+    "nasa_adaptation_M6_20200003084.pdf": true,
+    "refine_README.md": true
+  },
+  "real_UAV_baseline": {
+    "path": "work/reliability/preexisting_real_inputs_catalog.json",
+    "sha256": "903b337ca5bdf2979acaee4cf70b8edc37fd50daa8b0014eac727ee6b5e6614d"
+  },
+  "new_native_runs": 4,
+  "minimum_qualification_passed": false
+}

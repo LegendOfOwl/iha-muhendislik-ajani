@@ -1,6 +1,16 @@
 # Değişiklik günlüğü
 
-Geriye dönük gruplandırılmış içe aktarım; gerçek eski Git tarihçesi değildir.
+v0.1.0–v0.10.0 geriye dönük içe aktarım; v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.
+
+
+## v0.11.0 —25 Ekim2026: kaynak CFD teşhisi ve sürümlü güvenilirlik
+
+- Kaynak TMR M6 üreteci/coarsener yerel derleme kayıtları;258048/32256/4032hücreli sistematik aile ve10dondurulmuş native deneme. Minimum fizik kabulü false.
+- NASA kaynak düz plaka SA-neg:3264/13056/52224hücre,8native deneme, kaynak Cf/hız/μt kıyası. Kaba yakınsadı; orta/ince iteratif kapılar açık.
+- Kontrollü MG, başlangıç aktarımı, LINELET ve ILU denemeleri; desteklenmeyen hipotezler ve son işlem hataları korunur.
+- R01–R03 güvenilirlik politikası, L10/L11 kapsamlı hata dersleri ve hash/alan eşlemesi kontrolleri. Yeni LLM davranış iyileşmesi gösterilmedi.
+- GitHub’da okunabilir sonuç özeti, EXE kaynak/hash bilgisi, İngilizce özet, yazarlık ve sürümleme politikası.
+- Eski tag/yayınlar değişmedi. Yeni büyük dosyalar içerik bazında tekilleştirilmiş, her hedef yola geri yüklenebilir Release arşivlerinde.
 
 ## v0.1.0 — Temel hesap ve girdi kontrolleri
 

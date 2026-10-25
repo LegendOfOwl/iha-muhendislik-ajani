@@ -1,0 +1,103 @@
+{
+  "created_utc": "2026-10-25T18:58:56.565259+00:00",
+  "prediction_seals": [
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\coarse_MG2_control\\prediction_frozen.json",
+      "seal_sha256": "f24df68aa679f13bb76c2f44f451c52fa106c739aff238f42b3492da51c9b027",
+      "checked_files": 90,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_smoke\\prediction_frozen.json",
+      "seal_sha256": "7737601d59fb4a2200c9b2c74a3150b6c87852f4fc0b8fc137fb9c89f28d0f9e",
+      "checked_files": 4,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_coarse\\prediction_frozen.json",
+      "seal_sha256": "f9a9351d00ab9d408e8565bb339a09a90b9dd2d262c72dfbc1e975383ec19b2f",
+      "checked_files": 89,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\prediction_frozen.json",
+      "seal_sha256": "0872be1f3d4d22d79633686164eb1bf8ce0d884e82d619be2b269c574e49fa99",
+      "checked_files": 21,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_medium\\prediction_frozen.json",
+      "seal_sha256": "ab2d34a333309f2ab25d2f40435f7afa7a0abf865ba1db9dc66fd8815ab98466",
+      "checked_files": 57,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\prediction_frozen.json",
+      "seal_sha256": "7dd98412cbd367491739a5bb7a466152379b0f967648804b9f7a226ef671ac68",
+      "checked_files": 13,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\medium_linelet_pair\\linelet\\prediction_frozen.json",
+      "seal_sha256": "7501bfba995060f70fb08669dc4060362ca0513484c9cbe035211cdcbd0febd9",
+      "checked_files": 14,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\medium_linelet_pair\\lusgs\\prediction_frozen.json",
+      "seal_sha256": "1b5c03287283f190414f4c5415d634876a5793aa16cd18b5114f31a84b6592e1",
+      "checked_files": 14,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\nested_medium_control\\prediction_frozen.json",
+      "seal_sha256": "e94c5b59efcc73cbe45c15552aae31a453050152aad1c61024dd69ad3f75ad7c",
+      "checked_files": 31,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\nested_medium_smoke\\prediction_frozen.json",
+      "seal_sha256": "cae1134a445e62e22e97f58c093e31ec0238ecc0d3ff808df9ccc1bd593a6b31",
+      "checked_files": 15,
+      "mismatches": []
+    }
+  ],
+  "checked_file_records": 348,
+  "registered_project_inputs_unchanged": {
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": true,
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": true,
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": true,
+    "outputs\\data\\projects\\proje-e9319baef1.json": true
+  },
+  "all_passed": true,
+  "physical_qualification_passed": false,
+  "script_sha256": {
+    "work\\tmr_m6_20261025\\cad_boundary_v2.py": "1dcc4aa4fd1e40fc456a142852da8bab56d153470e9c7c99a64bf7bd55e7ee30",
+    "work\\tmr_m6_20261025\\cad_facet_check.py": "351f382461333b73f0bd0793d1afdca8b1efce5c3ea1800e9d95441ae76b1c06",
+    "work\\tmr_m6_20261025\\cad_geometry_check.py": "e2ea75c0b9031eec91b1c7b63efa6887b07a42a01bdd1ffd0e542eed97063217",
+    "work\\tmr_m6_20261025\\check_agent_guards_tmr.py": "60166432c988879c23946092dc04d4f41feb34e4610a04970b9393935fd25e4f",
+    "work\\tmr_m6_20261025\\check_agent_guards_tmr_v2.py": "7575bca40f215cd4a7f7f4df53f6c18e14b6bd475df162cbba0c5d8c26e18350",
+    "work\\tmr_m6_20261025\\close_batch.py": "5f8516912ccf9fcc6a17d0c2220e3d325e4c76bfd255bb707a020549a72b9e88",
+    "work\\tmr_m6_20261025\\coarsen.py": "764ab2f6f5358ea67400e51cfc38025fa1833544587e9453ee82e96e83a6333a",
+    "work\\tmr_m6_20261025\\common.py": "6394bedae4ce15606bc2055b24728c2143d03d49cae1035482656b98760c7613",
+    "work\\tmr_m6_20261025\\compiler_plan.py": "828f463f9cb85d93c8dc6ccabe43a3e6a5cc3ea08f3bb6bb05c62ee1d9961a31",
+    "work\\tmr_m6_20261025\\field_checks.py": "5e28e973666f34491ec5da211604dae3b45ae919bfd9a228127f08b9119815d4",
+    "work\\tmr_m6_20261025\\field_checks_v1_triangle.py": "7bed8e75b72d97a354606ba246d4ea28d2d7d2562d08389670b4e15ea003911a",
+    "work\\tmr_m6_20261025\\install_compile.py": "f902488a180dfdc86b26ae612b0a0b26291db19e29d068f30f7f61029650622d",
+    "work\\tmr_m6_20261025\\linelet_control.py": "008344a926da418b76e59107c315cb2d80853066a5eaef176576cf4ca3144ed2",
+    "work\\tmr_m6_20261025\\mesh_audit.py": "0324618edfc10408440dd27e9d421c2603c678ba74807a451e534b67052d6b86",
+    "work\\tmr_m6_20261025\\multigrid_control.py": "86a36500756e2d703a7c6014d697b9c64c25688fce4f890d19de84d648061069",
+    "work\\tmr_m6_20261025\\nested_initialization.py": "9590693189e6cb2909031454727dedf9f158afa68fa3a24d65ddabc4a1fc63e3",
+    "work\\tmr_m6_20261025\\nested_initialization_v1_finalize_error.py": "ef2a8942c50e5d341992bbcb5473b4e3986e8012c1265b47145c7741bd0c605e",
+    "work\\tmr_m6_20261025\\plot_mesh.py": "6436fa47af45a11c5d8bde91d6056fc728bd3cdd41963ac1578b87c1f8effe8a",
+    "work\\tmr_m6_20261025\\prepare_mesh.py": "fb74f386f2d8c37ae30c5e95d6cac5973ea4d157ab7dd39b9fea57f614d14a7b",
+    "work\\tmr_m6_20261025\\record_lesson.py": "ecdabfde3d28f045f369ce1c4f695a3ffe43046eb61ea6824566e8a47ab3e573",
+    "work\\tmr_m6_20261025\\record_surface_lesson.py": "b849bdc18c2615c9924da489ae7a0be5a4fcc9c602c095098ccba01b047a01bb",
+    "work\\tmr_m6_20261025\\review_source_case.py": "c70af5cb4d21ba6daa96ddf08eaacf75bbb92894f2bf632f5e6a7936b9a3425e",
+    "work\\tmr_m6_20261025\\revise_radial_plan.py": "23ca31b9ba59f0e735f6fc96741219c92c39477f59d6403f5eecd6f69ef95eab",
+    "work\\tmr_m6_20261025\\revise_size_plan.py": "f0e92d0a4d32b8aa3d34b48949671e30d2417291e9c552ae055fb08770934347",
+    "work\\tmr_m6_20261025\\run_flow.py": "ec0962c258b3667b048f82ef1b467fbcf50bc12b2b1303c614e93332b94b45a1",
+    "work\\tmr_m6_20261025\\test_guards.py": "641a1206007aba8fe2c12d8456006b2ada8c3e75281df672c35fbde6b8fb8393",
+    "work\\tmr_m6_20261025\\update_install_manifest.py": "244a212dcf871b5f7ade2c46324c1905e195dae10b30fc0d53c16d3bc645ed4c"
+  }
+}

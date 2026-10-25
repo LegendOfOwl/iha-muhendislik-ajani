@@ -1,0 +1,254 @@
+{
+  "version": "v0.11.0",
+  "base_commit": "843b436a92475d42648d8626092b864f624e918d",
+  "omitted_files": [
+    {
+      "path": "work/cache/fonts.conf",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/cache/ezdxf/font_manager_cache.json",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/freecad/data/SavedPreferencePacks/user.cfg.backup",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/freecad/data/SavedPreferencePacks/Backups/user.1792396121.cfg",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/freecad/home/system.cfg",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/freecad/home/user.cfg",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/publish/export_plan.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/export_summary.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/git-paths.bin",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/github_authorization.png",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/github_cli_install.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/github_publication_state.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/inventory.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/local_repository.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/local_verification.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/one_asset_upload.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/open_auth.cmd",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/priority_uploads.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/README-final.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/secret_scan.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/tail_uploads.json",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/transfer_progress.ps1",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.1.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.10.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.2.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.3.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.4.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.5.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.6.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.7.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.8.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.9.0-release-notes.md",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.1.0-part01.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.2.0-part01.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.3.0-part01.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.4.0-part01.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.5.0-part01.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.6.0-part01.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.7.0-part01.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.7.0-part02.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.7.0-part03.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.8.0-part01.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.8.0-part02.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.8.0-part03.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.8.0-part04.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.8.0-part05.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.8.0-part06.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/analiz-arsivi-v0.8.0-part07.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/SHA256SUMS.txt",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/assets/uygulama-ve-raporlar-v0.10.0.zip",
+      "reason": "local_publication_state_assets_or_auth"
+    },
+    {
+      "path": "work/publish/v0.11.0/plan.json",
+      "reason": "publication_fixture_or_self_output"
+    },
+    {
+      "path": "work/setup/downloads/cudart-llama-bin-win-cuda-12.4-x64.zip",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/download.php",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/elmer-gui-nompi-20260805.zip",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/FreeCAD_1.1.4-Windows-x86_64-py311.7z",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/FreeCAD_1.1.4-Windows-x86_64-py311.7z-SHA256.txt",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/llama-b11719-bin-win-cuda-12.4-x64.zip",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/OpenSCAD-2021.01-x86-64.zip",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/OpenSCAD-2021.01-x86-64.zip.sha256",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/SU2-v8.5.0-win64-omp.zip",
+      "reason": "download_or_application_cache"
+    },
+    {
+      "path": "work/setup/downloads/XFOIL6.99.zip",
+      "reason": "download_or_application_cache"
+    }
+  ],
+  "secret_scan_findings": [],
+  "compiler_distribution": "Portable GNU/MSYS2 installed binaries and compiler packages excluded; source/build/hash records retained.",
+  "clean_machine_solver_reproduction_tested": false,
+  "expert_or_physical_qualification_claimed": false
+}

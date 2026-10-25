@@ -1,0 +1,122 @@
+{
+  "id": "20261024-235336-d874a2",
+  "request": "Kaynak araştırması ve kanıt odaklı yöntemle güvenilirlik geliştirme: M6 aynı restart doğrusal çözücü kontrolü, otomatik teşhis ve bölgesel hata göstergesi",
+  "kind": "qualification",
+  "created_utc": "2026-10-24T20:53:36.097906+00:00",
+  "status": "tamamlandı",
+  "phase": "araç doğrulama",
+  "acceptance": [
+    "Kaynaklı yöntem araştırması",
+    "Aynı kaynakla mühürlü tek değişkenli native karşılaştırma",
+    "Yanlış kabulü durduran ve sonraki denemeyi gerekçelendiren denetçi",
+    "Gerçek alanla konumsal gösterge; hata bandı ve fizik kabulüyle karıştırmama",
+    "Başarısızlıklar ve açık kapılar dahil rapor"
+  ],
+  "blocked_by": [
+    "M6 yoğunluk artığı mevcut iteratif eşiği geçmedi.",
+    "Genel fizik kabulü: bölgesel ağ, üç sistematik ağ, uzak alan ve deney kapıları açık."
+  ],
+  "evidence": [
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_linear_pair_20261024.json",
+      "sha256": "4fc79f79c5dc2515e73e16ec5cf10f0e9eae71c8b59e3351185c47e1b0054662"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_cfl_feedback_20261025.json",
+      "sha256": "d09b70ea2afb364823d5f311544d7d7ca9c228bb20f945ededbda13c82abfc35"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_curvature_20261024.json",
+      "sha256": "39dd60515902a8a07d2e58248e2aaabad773a289c0d2b1a9294c513e5b601020"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_curvature_v2_20261025.json",
+      "sha256": "e8de7a9c4b9fe920fe88eb8e4c4f753a5688441b2afdf016d8bc090ddf5c2b24"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\reliability_integrity_20261025.json",
+      "sha256": "d42700e0f989cbb18325fa203cd816e07f7fcaac697a150dcc60114c49df2c8e"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\reliability_audit.json",
+      "sha256": "0de5e1deb2ae56547ffeabaf27b05f2114dc2992c1a40b96d09fe878a37d156f"
+    },
+    {
+      "path": "outputs\\reports\\reliability_method_tests.json",
+      "sha256": "5fe612bc90c30ef32b55da86a7296d5782ddc4be72e296ffdae18691957d8946"
+    },
+    {
+      "path": "outputs\\reports\\guvenilirlik_gelistirme_20261025.html",
+      "sha256": "a3a09106a05f3f5903c97825c3bff052e1beb7c2799a874906d26e8c5dcb64e0"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\guvenilirlik_gelistirme_20261025.html",
+      "sha256": "3db2cb018cbbecd5ba212ab4579d9ea091b3ea1abd957cc8c428304423c9c195"
+    },
+    {
+      "path": "outputs\\reports\\agent_learning_checks_20261025.json",
+      "sha256": "adf2b83091ff3a4d91b5e13df29018fe82905809a08725181835c3ce473d0ecd"
+    },
+    {
+      "path": "outputs\\reports\\agent_guard_report_preservation_20261025.json",
+      "sha256": "9a51cbf9504876d6a160c019fe1d5753c79c121f117ca3e287afbefcc5d85a89"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+  },
+  "project_id": "proje-e9319baef1",
+  "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+  "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+  "project_output_root": "outputs/projects/proje-e9319baef1",
+  "project_snapshot": {
+    "id": "proje-e9319baef1",
+    "name": "NASA ONERA M6 CFD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e9319baef1",
+    "data_root": "outputs/projects/proje-e9319baef1/data/project",
+    "created_utc": "2026-10-19T08:02:06.291509+00:00",
+    "active_cad": null
+  },
+  "applied_lesson_ids": [
+    "L03",
+    "L04",
+    "L05",
+    "L07",
+    "L08",
+    "L09"
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false
+  },
+  "experiment_contract": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\contract.json",
+  "updated_agent_instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "applied_reliability_policy": "2026-10-25.1",
+  "reviewer_ledger": "outputs\\data\\agent_learning\\reviewer_ledger_v2_20261025.json",
+  "finished_utc": "2026-10-24T21:26:17.017693+00:00",
+  "bounded_development_iteration_completed": true,
+  "minimum_physical_qualification_passed": false
+}

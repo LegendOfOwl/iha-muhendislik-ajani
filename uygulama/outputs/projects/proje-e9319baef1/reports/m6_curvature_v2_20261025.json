@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-24T21:15:16.066005+00:00",
+  "source_field": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\lin10\\flow_000999.vtu",
+  "source_sha256": "55b0b42bdc5f5fb6b007d2e6bfd6aace5464ec9fbd6fe244b890a50931fc35cf",
+  "version": 2,
+  "region_candidates": 88407,
+  "fit_quality_passed": 53770,
+  "support_covered_among_good_fits": 53768,
+  "eligible": 53068,
+  "not_eligible": 35339,
+  "selected_cells": 531,
+  "quantile99": 0.022453534251303742,
+  "selected_direction_valid": 274,
+  "selected_bbox_m": {
+    "min": [
+      -0.0411714855581522,
+      0.0030963837634772062,
+      -0.04844876006245613
+    ],
+    "max": [
+      1.138624519109726,
+      1.2929777204990387,
+      0.21661771088838577
+    ]
+  },
+  "v1_preserved": "outputs\\projects\\proje-e9319baef1\\reports\\m6_curvature_20261024.json",
+  "v1_selected_max_indicator_warning": 27521.71918229077,
+  "scope": "Geometric/fit/scale checks improve rejection of unreliable stencils. No proof of CFD error estimation or unseen generalisation.",
+  "minimum_qualification_passed": false,
+  "permission_to_claim_error_bound": false,
+  "artifacts": {
+    "outputs\\projects\\proje-e9319baef1\\data\\reliability_v2_20261025\\contract.json": "05a3e1f2c20f9804ef33c9d8530ce15633c476ef4df043a7c0f71eb47b274434",
+    "outputs\\projects\\proje-e9319baef1\\data\\reliability_v2_20261025\\curvature_v2_cells.csv": "7d69a8c47f8b0ff6c89edb1293dfb924b16fa2ecbb189e93b16ad8e319973aa3",
+    "outputs\\projects\\proje-e9319baef1\\data\\reliability_v2_20261025\\curvature_v2_view.vtu": "809a919a6f27bd1a14ff1585ab1ddb59bfe3dc4f583631b76a00e6d692111381",
+    "outputs\\projects\\proje-e9319baef1\\plots\\m6_curvature_v2_20261025.png": "5643af57af00feaa09f4e64dcc7c49d49b6588addf344b7bac7d1bbe8582970f"
+  }
+}

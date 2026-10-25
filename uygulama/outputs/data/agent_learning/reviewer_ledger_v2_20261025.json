@@ -1,0 +1,155 @@
+{
+  "schema_version": 2,
+  "version": "2026-10-25.1",
+  "created_utc": "2026-10-24T21:25:02.354779+00:00",
+  "role": "reviewer_only",
+  "task_id": "20261024-235336-d874a2",
+  "predecessor": [
+    {
+      "path": "outputs\\data\\agent_learning\\reviewer_ledger_v1.json",
+      "sha256": "5ea141efc7369f076acea3469b000da77a5395a574527c92492e4590eac16cbb"
+    }
+  ],
+  "operational_addendum": [
+    {
+      "path": "work\\reliability\\protocol_v1.json",
+      "sha256": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    }
+  ],
+  "baseline_instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false
+  },
+  "updated_instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "scope": "Guard reliability and scoped numerical discrimination; not unseen LLM improvement or physical qualification.",
+  "expert_status": "not_established",
+  "new_unseen_engineering_test": false,
+  "entries": [
+    {
+      "id": "R01",
+      "status": "confirmed_error",
+      "observed": "Missing json import raised after native child launch; the child was still running.",
+      "enabling_behavior_inference": "Post-launch monitoring path was not exercised before the expensive run; behaviour cause beyond the visible code is unmeasured.",
+      "correction": "Verify executable/PID creation time, adopt the same process handle with the original budget, capture actual OS exit; never relaunch in place.",
+      "evidence": [
+        {
+          "path": "work\\reliability\\cfl_feedback_v1_wrapper_error.py",
+          "sha256": "4b721b987264ec9d21ec7e99bab9a26c41c25b43b4bf73652e76f19ce5683ded"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\fixed\\wrapper_recovery.json",
+          "sha256": "3a3d1bd56d1e77379956783fba4f611c03e0eb98df2fe04981c6b9d7211d7431"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\fixed\\run_status.json",
+          "sha256": "33ec9c858d2715ca8115c58fe449f772f1ef331338e0bf5af41a0c337f10735a"
+        }
+      ],
+      "counterexample": "A recovered child returning7 remains unsuccessful; measured by test_wrapper_recovery_preserves_nonzero_exit.",
+      "promotion": "scoped_guard_tested",
+      "unseen_llm_behaviour_measured": false
+    },
+    {
+      "id": "R02",
+      "status": "confirmed_prototype_limitation",
+      "observed": {
+        "v1_max_selected_indicator": 27521.71918229077,
+        "v2_eligible": 53068,
+        "v2_masked": 35339
+      },
+      "enabling_behavior_inference": "Passing exact quadratic examples was insufficient for using local derivatives on the actual ill-conditioned/multiscale stencils.",
+      "correction": "Convex support, fit condition, fit residual and two-stencil scale consistency are separate guards; uncertain cells remain visible and ineligible.",
+      "evidence": [
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_curvature_20261024.json",
+          "sha256": "39dd60515902a8a07d2e58248e2aaabad773a289c0d2b1a9294c513e5b601020"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_curvature_v2_20261025.json",
+          "sha256": "e8de7a9c4b9fe920fe88eb8e4c4f753a5688441b2afdf016d8bc090ddf5c2b24"
+        },
+        {
+          "path": "outputs\\reports\\reliability_method_tests.json",
+          "sha256": "5fe612bc90c30ef32b55da86a7296d5782ddc4be72e296ffdae18691957d8946"
+        }
+      ],
+      "counterexample": "Inside a componentwise bounding box but outside the actual tetrahedral support must be rejected.",
+      "promotion": "support_guard_tested_not_CFD_error_verified",
+      "unseen_llm_behaviour_measured": false
+    },
+    {
+      "id": "L09-control",
+      "status": "disproven_diagnosis_scoped",
+      "hypothesis": "The active cap increase cures the nonlinear convergence deficit in this fixed M6 case.",
+      "observation": {
+        "comparable": true,
+        "additional_log10_reduction": -4.260000006084397e-07,
+        "registered_effect_size": 0.3,
+        "effect_passed": false,
+        "only_config_difference": [
+          "LINEAR_SOLVER_ITER"
+        ],
+        "time_ratio_40_over10": 1.0885754568969763,
+        "claim_limit": "One fixed seed/mesh, one run order; no universal causation, no timing confidence interval."
+      },
+      "interpretation": "Not supported by this equal-seed/equal-iteration control. This is not a universal statement about linear solvers.",
+      "correction": "Do not sweep further cap values under the same unsupported diagnosis.",
+      "evidence": [
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_linear_pair_20261024.json",
+          "sha256": "4fc79f79c5dc2515e73e16ec5cf10f0e9eae71c8b59e3351185c47e1b0054662"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\contract.json",
+          "sha256": "8fd923d79b7d1bb484219ba8b46df272e169eef5cbf8a407e90b71f001b72add"
+        }
+      ],
+      "preserve_original_hypothesis": true
+    },
+    {
+      "id": "CFL-control",
+      "status": "bounded_policy_test",
+      "observation": {
+        "comparable": true,
+        "only_config_difference": [
+          "CFL_ADAPT"
+        ],
+        "additional_log10_reduction": 0.03584454299999962,
+        "effect_passed": false,
+        "time_ratio_adaptive_over_fixed": 2.336784687840614,
+        "not_timing_benchmark": true
+      },
+      "interpretation": "Built-in bounded feedback tested once against fixedCFL with the same seed. No physical gate is relaxed.",
+      "evidence": [
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_cfl_feedback_20261025.json",
+          "sha256": "d09b70ea2afb364823d5f311544d7d7ca9c228bb20f945ededbda13c82abfc35"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\contract.json",
+          "sha256": "f6306492f3ebac69aeed006394154cf959f9db03268afb31dcce1b5c4776f01c"
+        }
+      ]
+    }
+  ],
+  "minimum_physical_qualification_passed": false
+}

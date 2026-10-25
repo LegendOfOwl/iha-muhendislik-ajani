@@ -1,5 +1,10 @@
 # İHA mühendislik çalışma alanı
 
+## 25 Ekim: kanıt odaklı güvenilirlik politikası
+- Mühendislik görevinde `work/reliability/protocol_v1.json` ekini oku; yalnız süreç kurtarma, yerel regresyon/gösterge veya sayısal hipotez sınaması kapsamına uyan R01–R03 derslerini uygula. Bu ek hedef deney katsayılarını içermez. GUI/CLI talimat anlık kaydı ekin sürüm ve SHA256 değerini de saklar; LLM davranışında iyileşme henüz kanıtlanmadı.
+- `run reliability --project ID` kayıtlı ham geçmişi ve dosya mühürlerini yeniden denetler; yeni CFD çalıştırmaz. Projenin `data/reliability_case.json` tanımı yoksa başka projenin sonucu kullanılmaz. Denetim başarısını fiziksel kabul sayma.
+- Yerel Hessian prototipini tam anizotropik remesher, adjoint veya CFD hata bandı diye sunma. Hücre/şablon desteği, fit koşulu ve iki ölçek tutarlılığı ayrı gösterilmeli; maskelenen bölgeler kayıttan çıkarılmamalı. Tam BL/iz/uç ve sistematik mesh kabulleri ayrıca gereklidir.
+
 ## Ortam ve kapsam
 - Proje kökü bu dosyanın bulunduğu klasördür. Yolları buraya göre çöz.
 - Sayısal hesaplar: `.venv/Scripts/python.exe`.

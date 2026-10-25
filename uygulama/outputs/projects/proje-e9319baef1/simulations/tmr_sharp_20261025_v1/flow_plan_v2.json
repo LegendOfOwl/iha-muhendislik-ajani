@@ -1,0 +1,75 @@
+{
+  "prepared_utc": "2026-10-24T22:28:56.277522+00:00",
+  "contract_sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+  "threads": 4,
+  "cases": {
+    "coarse": {
+      "folder": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_coarse",
+      "mesh": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\mesh_family_budget_v3\\wing_strct.3.su2",
+      "mesh_sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70",
+      "cfg_sha256": "92fbaa05fd206b825f87c1d5ddb65161301bc11af89554cb6d461b8b93c304d3",
+      "max_seconds": 300
+    },
+    "medium": {
+      "folder": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_medium",
+      "mesh": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\mesh_family_budget_v3\\wing_strct.2.su2",
+      "mesh_sha256": "b94e9b17e0d2373c3561559d38870fd60303d3a2f5fe0fc5087b8d383593e60a",
+      "cfg_sha256": "2a5293762b308b0c4241cf302955ff5f3eb51e194c5d260aed89a444b6ff2ac3",
+      "max_seconds": 600
+    },
+    "fine": {
+      "folder": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine",
+      "mesh": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\mesh_family_budget_v3\\wing_strct.1.su2",
+      "mesh_sha256": "22d9aaa299869b90d03837f2a0721e0a304355daeb7052b4ab502040bf2fa68d",
+      "cfg_sha256": "5b4400aacecd3cbd547fc43c4d8eea8f7f79232616fe2074e58e2673fcdf3f18",
+      "max_seconds": 1500
+    },
+    "smoke": {
+      "folder": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke",
+      "mesh": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\mesh_family_budget_v3\\wing_strct.3.su2",
+      "mesh_sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70",
+      "cfg_sha256": "44086c722bc1ee7c3049568e9efb74ca893d5c933a8e7bd4f0825209bfcad26c",
+      "max_seconds": 60
+    }
+  },
+  "baseline_config_sha256": "ccba3ffdf008025411c4ef8fe435fbe52fbd19c1c1bdafb8c9949bd7e2229511",
+  "physical_changes_from_old_blunt_case": {
+    "geometry": "normalized sharp TMR source grid",
+    "Mach": [
+      0.8395,
+      0.84
+    ],
+    "Re_and_length": [
+      [
+        11720000.0,
+        0.64607
+      ],
+      [
+        14600000.0,
+        1.0
+      ]
+    ],
+    "T_K": [
+      288.15,
+      300.0
+    ],
+    "SA_options": [
+      "default NONE",
+      "NEGATIVE, WITHFT2"
+    ],
+    "nu_tilde_freestream": "3nu, explicit tagged source option",
+    "Sutherland": "Exact TMR Rankine -> K conversion; mu0=1.716e-5",
+    "references": "TMR half-wing area/MAC/nominal semispan/moment center"
+  },
+  "not_single_variable_comparison_with_old_case": true,
+  "physical_source": "TMR M6 intro + SAneg case specification",
+  "numerical_changes_reason": "New source-case baseline syntax adapted to v8.5; method not tuned to experimental outputs",
+  "source_solver_implementation_checks": {
+    "FREESTREAM_NU_FACTOR": "CConfig.cpp option and CTurbSASolver nu_tilde_inf=Factor*mu/rho"
+  },
+  "smoke_required_before_full_runs": true,
+  "prediction_freeze_before_reference_review": true,
+  "prior_rejected_plan_sha256": "23e2bbedd4627928585d6f5bd808bfebf0194de5c11a96dfc2696bd13fc65a8e",
+  "correction": "The intended standard SA-neg requires WITHFT2 in SU2. NEGATIVE alone was rejected by the native parser before flow. EXPERIMENTAL override was not used.",
+  "correction_source": "https://su2code.github.io/docs_v7/Physical-Definition/#spalart-allmaras-sa"
+}

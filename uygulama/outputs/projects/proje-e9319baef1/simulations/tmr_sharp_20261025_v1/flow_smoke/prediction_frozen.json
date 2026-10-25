@@ -1,0 +1,31 @@
+{
+  "frozen_utc": "2026-10-24T22:28:03.118868+00:00",
+  "contract_sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+  "flow_plan_sha256": "23e2bbedd4627928585d6f5bd808bfebf0194de5c11a96dfc2696bd13fc65a8e",
+  "matched": null,
+  "native_status": {
+    "started_utc": "2026-10-24T22:28:02.602981+00:00",
+    "ended_utc": "2026-10-24T22:28:03.115594+00:00",
+    "exit_code": 1,
+    "seconds": 0.5150000000139698,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.00189971923828125,
+    "budget_s": 60,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "not_blind": true,
+  "no_new_reference_scores_yet": true,
+  "source_mesh_sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70",
+  "files_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_smoke\\case.cfg": "cc098e66d543ca880434a63d2dac510390df7b4ade94d0272ae4fc3b2d33aa40",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_smoke\\solver.log": "4a77ef9ac720a553b3ce0a8852ec2e533c2f27d64b37a8f7f6de9eb14eb81833",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_smoke\\solver.process.json": "f64f31762dca28341c5bea483c419eda50a09752134707e412bb0af495e47cc6",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_smoke\\solver.status.json": "5b2d0b9cb86f658aa82eb03c447be5f135ed9801d0febb01b6feedac89226d2a"
+  },
+  "physical_qualification_passed": false
+}

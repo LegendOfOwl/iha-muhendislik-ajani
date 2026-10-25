@@ -17,5 +17,12 @@
     "One 2D RANS angle; no automatic arbitrary airfoil meshing service",
     "Medium/fine drag changes 22.84%; mesh independence not established",
     "Fine max y+ 1.744 does not meet strict max y+ <1"
-  ]
+  ],
+  "additional_case_reports": {
+    "flatplate_20261025": {
+      "report": "outputs\\reports\\cfd_duz_plaka_ve_m6_20261025.html",
+      "native_runs": 8,
+      "scoped_qualification_passed": false
+    }
+  }
 }

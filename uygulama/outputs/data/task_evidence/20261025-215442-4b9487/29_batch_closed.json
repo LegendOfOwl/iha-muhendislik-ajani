@@ -1,0 +1,65 @@
+{
+  "closed_utc": "2026-10-25T19:23:30.934835+00:00",
+  "scope": "bounded source SA implementation diagnostic batch complete",
+  "scoped_qualification_passed": false,
+  "native_runs": [
+    {
+      "case": "coarse",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 12.51500000001397
+    },
+    {
+      "case": "fine",
+      "exit_code": 1,
+      "stop_reason": "time_budget_exceeded",
+      "seconds": 600.5
+    },
+    {
+      "case": "fine_nested",
+      "exit_code": 1,
+      "stop_reason": "time_budget_exceeded",
+      "seconds": 300.26499999995576
+    },
+    {
+      "case": "ilu_pair\\ilu",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 20.03100000001723
+    },
+    {
+      "case": "ilu_pair\\lusgs",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 24.53100000001723
+    },
+    {
+      "case": "medium",
+      "exit_code": 1,
+      "stop_reason": "time_budget_exceeded",
+      "seconds": 300.25
+    },
+    {
+      "case": "nested_smoke",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 11.03100000001723
+    },
+    {
+      "case": "smoke",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 0.5320000000065193
+    }
+  ],
+  "report": "outputs\\reports\\cfd_duz_plaka_ve_m6_20261025.html",
+  "report_sha256": "c03d2cfa61d690b7d1ccbaeffacedb5de530b526b2c7edce4b91c047e248bef8",
+  "local_links_checked": 32,
+  "integrity_report_sha256": "e00c4c7e93e2ce12fa46b4b681789389082fa048d212d2d0a9cf795907ca1037",
+  "open_checks": [
+    "medium and fine iterative convergence",
+    "three converged meshes and asymptotic comparison",
+    "dimensional constant identity limitation",
+    "general3D/M6/experiment qualification remains separate"
+  ]
+}

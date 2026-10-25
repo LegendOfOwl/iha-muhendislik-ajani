@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "2026-10-24.1",
+  "version": "2026-10-25.2",
   "scope": "Bu mühendislik çalışma alanının araç ve değerlendirme süreci; uzmanlık sertifikası değildir.",
   "lessons": [
     {
@@ -65,6 +65,20 @@
       "scope": "Kontrollü sayısal/fiziksel neden araştırması",
       "action": "Belirtiyi nedenden ayır. Aynı girdi/başlangıçla tek değişkenli karşılaştırma tasarla; hedefe uydurmak için fiziksel koşulu veya eşiği değiştirme. Daha fazla doğrusal iterasyon ya da daha çok hücreyi henüz sınanmadan çözüm diye kaydetme.",
       "knowledge_status": "hypothesis"
+    },
+    {
+      "id": "L10",
+      "trigger": "SU2 SA varyantını başka kaynak modeline eşleme",
+      "scope": "SU2v8.5.0 standart SA-neg; diğer SA varyantlarına genelleme yok",
+      "action": "Model adını tek anahtarla eşleşmiş sayma. Bu sürümde standart SA-neg için SA_OPTIONS=NEGATIVE,WITHFT2 gerekir; NEGATIVE tek başına native parser tarafından standart dışı sayılır. Kaynakta standart model isteniyorsa EXPERIMENTAL ile hatayı bypass etme. Kurulu sürüm dokümanı/koduyla terimleri ve FREESTREAM_NU_FACTOR anlamını kontrol et; pahalı koşudan önce küçük native ön kontrol yap.",
+      "knowledge_status": "confirmed_error_and_native_counterexample_tested"
+    },
+    {
+      "id": "L11",
+      "trigger": "CAD yüzeyi ile mesh/nokta/temsil eşdeğerliği mesafesi",
+      "scope": "OCC/CadQuery katı–nokta mesafe sorgusu; yüzey eşdeğerliği amaçlı denetim",
+      "action": "Katıya mesafe, içerideki nokta için0 olabilir; bunu yüzeyde olma kanıtı sayma. Yüzey uzaklığını yalnız sınır yüzlerinden kurulan shell/compound üzerinde ölç. Önce birim küp merkezinin katıya0, sınıra0.5 mesafe verdiği analitik karşı örneği doğrula. Düğümlere ek olarak yüzey parçası içi ve kenar örneklerini de denetle; sonlu örneklemeyi tam Hausdorff sınırı diye sunma. Önceki geçersiz ölçümü ve hangi çıktıyı etkilediğini koru.",
+      "knowledge_status": "confirmed_error_and_analytic_surface_counterexample_tested"
     }
   ]
 }

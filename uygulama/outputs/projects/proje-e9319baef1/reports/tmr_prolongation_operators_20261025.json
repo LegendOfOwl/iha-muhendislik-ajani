@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-10-24T22:45:09.225769+00:00",
+  "runtime": {
+    "started_utc": "2026-10-24T22:44:34.805725+00:00",
+    "ended_utc": "2026-10-24T22:44:39.827184+00:00",
+    "exit_code": 0,
+    "seconds": 5.01500000001397,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.059478759765625,
+    "budget_s": 180,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\tmr_m6\\bin\\hcf_coarsening.exe"
+    ]
+  },
+  "maps": [
+    {
+      "source_map": "wing_strct.1.prolong_nc",
+      "sha256": "31e08d6fb3d14e4bf06831df7ff50b746f5ac4df5e74bb188f7c0470ee489007",
+      "shape": [
+        260193,
+        32825
+      ],
+      "nonzero_coefficients": 868693,
+      "minimum_weight": 0.125,
+      "max_constant_reproduction_error": 1.999955756559757e-12,
+      "single_coarse_node_rows": 32825
+    },
+    {
+      "source_map": "wing_strct.2.prolong_nc",
+      "sha256": "c371f6d66d02791e33e225fb412c3ddf613c300a03fff039987b9387fac64778",
+      "shape": [
+        32825,
+        4191
+      ],
+      "nonzero_coefficients": 108349,
+      "minimum_weight": 0.125,
+      "max_constant_reproduction_error": 1.999955756559757e-12,
+      "single_coarse_node_rows": 4191
+    }
+  ],
+  "meaning": "Source-defined convex nodal initial-state interpolation; integrated mass/momentum conservation is not guaranteed.",
+  "source_mesh_files_unchanged": true,
+  "wrapper_finalize_recovery_without_native_repeat": true
+}

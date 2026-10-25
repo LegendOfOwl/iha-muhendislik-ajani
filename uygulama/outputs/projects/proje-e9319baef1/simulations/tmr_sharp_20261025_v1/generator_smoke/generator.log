@@ -1,0 +1,236 @@
+
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+  Wing grid generator
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+
+ Reading the input file: input.nml..... 
+
+ **************************************************************
+  List of namelist variables and their values
+
+&INPUT_PARAMETERS
+ DEBUG_MODE=F,
+ TARGET_REYNOLDS_NUMBER=  14600000.000000000     ,
+ TARGET_Y_PLUS= 0.12500000000000000     ,
+ IGRID_TYPE=5          ,
+ AIRFOIL_TYPE=0          ,
+ AIRFOIL_DATA_FILE="om6_wing_section_sharp.dat                                                      ",
+ NACAXX=  12.000000000000000     ,
+ TIP_TYPE="round                                                                           ",
+ USE_S_BLUNT=F,
+ USE_S_BLUNT_MATCH=F,
+ USE_S_BLUNT_SSF=  4.0000000000000000     ,
+ USE_S_BLUNT_SSFYZ=  4.0000000000000000     ,
+ TIP_CORNER_NORMAL_DEFLECT=  45.000000000000000     ,
+ TR= 0.56251598526681579     ,
+ BETA=  29.998999999999999     ,
+ R_OUTER=  100.00000000000000     ,
+ HC_REGION_FIXED_OUTER= -45.000000000000000     ,
+ NNODES_CYLINDER_INPUT=16         ,
+ B=  1.4760179762198000     ,
+ NR_GS=4          ,
+ NRE=32         ,
+ WING_SIDE=2          ,
+ ROOT_LE_X=  0.0000000000000000     ,
+ NON_ORTHOG_NEAR_TE=F,
+ NON_ORTHOG_NEAR_TE_SF=  65000.000000000000     ,
+ KEEP_ORTHOG_BL_ALL_THE_WAY=F,
+ SPLINE_TYPE=1          ,
+ STRETCHING_TANH_TOWARDS_LETE=  1.0000000000000000     ,
+ STRETCHING_TOWARDS_TIP= -1.0000000000000000     ,
+ SF_GROW_TOWARDS_TIP_C1= -1.0000000000000000     ,
+ SF_GROW_TOWARDS_TIP_C2= -1.0000000000000000     ,
+ BL_HEIGHT_FACTOR= 0.50000000000000000     ,
+ LIFTING_FACTOR_NODE_TE=  3.0000000000000000     ,
+ UNIFORM_STRETCHING_TO_OUTER=T,
+ STRETCHING_FACTOR_RADIAL_OUTER= -1.0000000000000000     ,
+ SF_GROW_RADIAL_OUTER_C1= -1.0000000000000000     ,
+ SF_GROW_RADIAL_OUTER_C2= -1.0000000000000000     ,
+ STRETCHING_2ND_LE=  5.0000000000000000     ,
+ STRETCHING_2ND_TE=  13.000000000000000     ,
+ STRETCHING_2ND_BLEND=  5.0000000000000000     ,
+ SPACING_RATIO=  1.1000000000000001     ,
+ SPACING_RATIO_OUTER=  1.7000000000000000     ,
+ GLOBAL_SCALING=  1.0000000000000000     ,
+ NON_ORTHOG_NEAR_TE=F,
+ NON_ORTHOG_NEAR_TE_SF=  65000.000000000000     ,
+ GENERATE_UGRID_FILE=T,
+ UGRID_FILE_UNFORMATTED=T,
+ GENERATE_P3D_UFMT_FILE=F,
+ GENERATE_SU2GRID_FILE=T,
+ GENERATE_K_FILE=T,
+ K_FILE_UNFORMATTED=F,
+ GENERATE_LINE_FILE_NC=T,
+ GENERATE_LINE_FILE_CC=T,
+ GENERATE_TEC_FILE_B=T,
+ GENERATE_TEC_FILE_V=F,
+ GRID_STATISTICS=F,
+ CHECK_NEGATIVE_ELM_VOL=T,
+ CHECK_NON_PLANARITY=T,
+ GENERATE_2D_GRID=F,
+ /
+
+
+ ***********************************************************
+  0. Set up input parameters
+ ***********************************************************
+ The system is little Endian
+  Ensure little Endian -> setenv F_UFMTENDIAN little
+    wing side =            2
+   ----- Choose 1: left wing, or 2: right wing
+    Note: the wing will be facing -ve x-direction,
+          so the free steam is assumed to be coming
+          from x=-infty and going to x=+infty.
+
+
+    -------------------------------------------------  
+    ----   Maximum level of regular coarsening   ----  
+    -------------------------------------------------  
+          # of coarse grids that can be generated =            2
+    Total grid level (including the target level) =            3
+    -------------------------------------------------  
+   
+    -------------------------------------------------  
+
+
+ ***********************************************************
+  1. Generate a structured grid over a hemisphere
+ ***********************************************************
+
+  Surface grid of the hemisphere part: 
+                   Nodes =           97
+               Triangles =           24
+          Quadrilaterals =           72
+
+  xLE =   0.50000000000000000     
+  yLE =   0.50000000000000000     
+  zLE =    0.0000000000000000     
+
+  xTE =   0.50000000000000000     
+  yTE =  -0.50000000000000000     
+  zTE =    0.0000000000000000     
+                   Last spacing, s =    4.2280239102702018E-002
+
+ ***********************************************************
+  2. Generate a wing surface grid.
+ ***********************************************************
+  nnodes along the wing =           16
+ Determined stretching factor =    1.3099999999999994       at iterations =           70
+                 s =    4.6508263012972222E-002
+   nnodes_cylinder =           16
+                x1 =   0.50000000000000000     
+                x2 =    1.9760179762198000     
+           First spacing on the cylinder =    4.6535835594350025E-002
+   Edge length on the hemisphere surface =    3.9413782214383242E-002
+  nnodes_circum =           24
+
+ ------------------------------------------------------------------
+  At this point, we have a surface grid of a 3D wing:
+            Nodes =          481
+        Triangles =           24
+   Quadrilaterals =          456
+ ------------------------------------------------------------------
+
+  Sweep angle by tapering (degree) =    8.4297295958844742     
+
+ ***********************************************************
+  3. Generate a hemisphere-shape outer boundary grid.
+ ***********************************************************
+  Map the original HC grid to the outer hemisphere.
+  So, the number of nodes are the same as that of the surface grid.
+  Radius of the outer hemisphere   =    100.00000000000000     
+                   Number of nodes =          481
+                           Spacing =    7.8459095727844943     
+
+ ***********************************************************
+  4. Go up to the outer boundary and generate interior nodes
+ ***********************************************************
+  Parameters for interior node generation
+
+ >>> Compute the first off-the-wall spacing dr1:
+     dr1 determined by the target Re and y_plus:
+     target_reynolds_number =    14600000.000000000     
+              target_y_plus =   0.12500000000000000     
+     --------->         dr1 =    2.4396356486644094E-007
+
+ >>> Boundary-layer thickness estimate, rmax, at the TE (x=1.0) 
+     from a turbulent flow over a flat plate:
+     Eq.(6-72), page 430, 'Viscous Fluid Flow' 2nd edition (1991) by White.
+     Multiplied by a factor =   0.50000000000000000     
+     ------------> rmax =    6.8281201930473958E-003
+
+
+   NOTE: rmax defines the BL region in the grid.
+
+
+ >>> Typical spacing over the hemisphere: 
+      h_hemisphere =   0.19634954084936207     
+
+ >>> Typical spacing over the surface: 
+         h_surface =    9.2251123513737501E-002
+
+ >>> Set a spacing of the outer most cell in the BL region: drN
+     ------------> drN =    9.2251123513737501E-003
+
+ >>> drN > rmax !! Impossible... drN =    9.2251123513737501E-003
+     ------------> Modified drN =    9.2251123513737506E-004
+
+ >>> AR =    378134.83978331287     
+
+  NOTE: dr1 is a non-dimensionalized length. 
+        Reference length is the diameter of the hemisphere (=1.0 in the grid).
+
+          Surface spacing (rough estimate) =    9.2251123513737501E-002
+           rmax (the end of the BR region) =    6.8281201930473958E-003
+                                       dr1 =    2.4396356486644094E-007
+                                       drN =    9.2251123513737506E-004
+                                        gr =    1.1554887765465165     
+                            dr1*gr**(nm-1) =    9.2251123513736823E-004
+
+ >>> Number of elements in the BL region (in a line normal to the surface):
+     ---> nm-1 (elements) =           58
+ >>> Number of nodes in the BL region (in a line normal to the surface):
+     ---> nm   (nodes)   =           59
+
+
+ *************************************************************************
+ *************************************************************************
+  Problem! Code has stopped.....
+
+  Input value: Elements in the radial direction =           32  is not enough...
+
+  [The number of elements in BL region has been found to be larger than the
+   total number of elements in the radial direction requested.]
+
+  Try one of the followings:
+
+   (1)Increase the input value: Elements in the radial direction (>59).
+      Note: (the input value) - 59 is the # of elements outside the BL region.
+
+   (2)Let the code determines the number of elements in the radial direction by
+      giving a negative input value: e.g., 
+
+                Elements in the radial direction =           -1
+
+      Note: # of elements is determined by surface spacing of the outer boundary.
+
+
+   (3)Increase Target y-plus value to reduce the number of elements in BL region.
+
+
+   (4)Decrease Target Reynolds number to reduce the number of elements in BL region.
+
+
+ *************************************************************************
+ *************************************************************************
+
+  No grids generated... Try again.
+

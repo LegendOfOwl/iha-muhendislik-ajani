@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-25T19:03:10.760302+00:00",
+  "results": {
+    "lusgs": {
+      "native": {
+        "started_utc": "2026-10-25T19:02:26.055885+00:00",
+        "ended_utc": "2026-10-25T19:02:50.590598+00:00",
+        "exit_code": 0,
+        "seconds": 24.53100000001723,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.0796661376953125,
+        "budget_s": 120,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "comparison": {
+        "rms[Rho]": -9.585515526,
+        "rms[nu]": -12.15573125,
+        "CD": 0.002846303241
+      },
+      "median_last100_linear_log10": -6.088676395,
+      "Krylov_iterations_sum": 7295.0
+    },
+    "ilu": {
+      "native": {
+        "started_utc": "2026-10-25T19:02:50.687684+00:00",
+        "ended_utc": "2026-10-25T19:03:10.710763+00:00",
+        "exit_code": 0,
+        "seconds": 20.03100000001723,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.08873748779296875,
+        "budget_s": 120,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "comparison": {
+        "rms[Rho]": -9.640580024,
+        "rms[nu]": -12.19765428,
+        "CD": 0.002846302286
+      },
+      "median_last100_linear_log10": -6.051935975,
+      "Krylov_iterations_sum": 6375.0
+    }
+  },
+  "density_log10_gain": 0.05506449800000013,
+  "effect_passed": false,
+  "contract_sha256": "ec12c7437ef323912a0cfc0f4ec532731625434a716b4c599d6b138a8d55e785",
+  "no_timing_speedup_claim": true,
+  "physical_qualification_passed": false
+}

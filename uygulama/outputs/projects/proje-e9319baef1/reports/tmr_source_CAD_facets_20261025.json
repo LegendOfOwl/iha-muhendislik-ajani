@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-10-24T22:59:45.967152+00:00",
+  "source_STEP_sha256": "0ed2862f3952d04b747b0f90e47062d059ff98b2e48933a323d1c6b66771a7bf",
+  "normalization_root_chord_mm": 810.491484086,
+  "levels": [
+    {
+      "level": 3,
+      "mesh_sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70",
+      "unique_samples": 378,
+      "total_face_samples": 612,
+      "facet_center_distance": {
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 1.4057823700330433e-05,
+        "max": 2.0133476084693727e-05
+      },
+      "edge_midpoint_distance": {
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 1.7160260111780498e-05,
+        "max": 4.0438256516265106e-05
+      },
+      "all_sample_distance": {
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 1.6745578233488854e-05,
+        "max": 4.0438256516265106e-05
+      },
+      "csv_sha256": "d351f3374402e65462b2edbacc60253ac9daf9d325b750c84b059e1750414f0a"
+    },
+    {
+      "level": 2,
+      "mesh_sha256": "b94e9b17e0d2373c3561559d38870fd60303d3a2f5fe0fc5087b8d383593e60a",
+      "unique_samples": 1512,
+      "total_face_samples": 2484,
+      "facet_center_distance": {
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 8.035299463649664e-05,
+        "max": 0.0002819195408544823
+      },
+      "edge_midpoint_distance": {
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 5.145722937978118e-05,
+        "max": 0.0007640647686409155
+      },
+      "all_sample_distance": {
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 5.404387985404056e-05,
+        "max": 0.0007640647686409155
+      },
+      "csv_sha256": "c02a49ced07f3dbaeca7ab3da39518245ccd3a150d2b1418dd8eaf850d7bdda6"
+    },
+    {
+      "level": 1,
+      "mesh_sha256": "22d9aaa299869b90d03837f2a0721e0a304355daeb7052b4ab502040bf2fa68d",
+      "unique_samples": 6048,
+      "total_face_samples": 10008,
+      "facet_center_distance": {
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 4.7611633391179324e-05,
+        "max": 0.0009781042944231036
+      },
+      "edge_midpoint_distance": {
+        "min": 0.0,
+        "median": 1.7050024201968084e-06,
+        "p95": 4.3332359450867825e-05,
+        "max": 0.0008501328376808283
+      },
+      "all_sample_distance": {
+        "min": 0.0,
+        "median": 1.0735180309788067e-06,
+        "p95": 4.471535145521297e-05,
+        "max": 0.0009781042944231036
+      },
+      "csv_sha256": "8369ab92646d7216e2d6674949d5950ee8ed15a5665216916cd27fa46cf3cec7"
+    }
+  ],
+  "seconds": 116.51600000000326,
+  "scope": "Additional face centers and edge midpoints; finite sampling, not an exact Hausdorff bound or after-the-fact geometry acceptance."
+}

@@ -523,5 +523,18 @@
     "v2_minimum_qualification_passed": false,
     "v2_review": "outputs/projects/proje-15cce2de02/reports/review_v2_qualification.json",
     "v2_farfield_solution_available": false
+  },
+  "tmr_m6_grid_generator": {
+    "version": "HCF wing5.0/coarsener3.9",
+    "manifest": "work\\setup\\tmr_m6_install.json",
+    "executables": {
+      "hcf_wing.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\tmr_m6\\bin\\hcf_wing.exe",
+      "hcf_coarsening.exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\tmr_m6\\bin\\hcf_coarsening.exe"
+    },
+    "process_PATH_prefix": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\fortran_msys2\\ucrt64\\bin",
+    "runtime_verified": true,
+    "source_geometry": "TMR normalized sharp-TE M6 only",
+    "physical_qualification_passed": false,
+    "system_PATH_changed": false
   }
 }

@@ -1,0 +1,266 @@
+{
+  "created_utc": "2026-10-24T22:03:57.411991+00:00",
+  "scope": "Literature research and read-only evidence recomputation; no new native CFD",
+  "project_id": "proje-e9319baef1",
+  "local_mesh": {
+    "volume_cells": 258969,
+    "nodes": 100592,
+    "element_types": {
+      "10": 95344,
+      "13": 163625
+    },
+    "wing_faces": 6545,
+    "wing_points": 3290,
+    "bounds_m": [
+      [
+        0.001101675937937447,
+        -0.0,
+        -0.03922125600770379
+      ],
+      [
+        1.142786007100165,
+        1.218088879515749,
+        0.03921415166113599
+      ]
+    ],
+    "semispan_m": 1.218088879515749,
+    "root_chord_m": 0.8060006627781536,
+    "tip_chord_m": 0.0,
+    "projected_semispan_area_m2": 0.7613155538973486,
+    "mesh_sha256": "d20855c5a7b97cf6c32713f4f406b9b5b158b937a97ba583855dc58afe87e9f4"
+  },
+  "local_config": {
+    "SOLVER": "RANS",
+    "KIND_TURB_MODEL": "SA",
+    "MATH_PROBLEM": "DIRECT",
+    "RESTART_SOL": "YES",
+    "MACH_NUMBER": "0.8395",
+    "AOA": "3.06",
+    "SIDESLIP_ANGLE": "0.0",
+    "FREESTREAM_TEMPERATURE": "288.15",
+    "REYNOLDS_NUMBER": "11.72E6",
+    "REYNOLDS_LENGTH": "0.64607",
+    "FLUID_MODEL": "STANDARD_AIR",
+    "GAMMA_VALUE": "1.4",
+    "GAS_CONSTANT": "287.058",
+    "CRITICAL_TEMPERATURE": "131.00",
+    "CRITICAL_PRESSURE": "3588550.0",
+    "CRITICAL_DENSITY": "263.0",
+    "ACENTRIC_FACTOR": "0.035",
+    "VISCOSITY_MODEL": "SUTHERLAND",
+    "MU_CONSTANT": "1.716E-5",
+    "MU_REF": "1.716E-5",
+    "MU_T_REF": "273.15",
+    "SUTHERLAND_CONSTANT": "110.4",
+    "REF_ORIGIN_MOMENT_X": "0.25",
+    "REF_ORIGIN_MOMENT_Y": "0.00",
+    "REF_ORIGIN_MOMENT_Z": "0.00",
+    "REF_LENGTH": "0.64607",
+    "REF_AREA": "0.7613155538973486",
+    "MARKER_HEATFLUX": "( WING, 0.0 )",
+    "MARKER_FAR": "( FARFIELD )",
+    "MARKER_SYM": "( SYMMETRY )",
+    "MARKER_PLOTTING": "( WING )",
+    "MARKER_MONITORING": "( WING )",
+    "NUM_METHOD_GRAD": "GREEN_GAUSS",
+    "CFL_NUMBER": "4",
+    "CFL_ADAPT": "YES",
+    "CFL_ADAPT_PARAM": "( 0.5, 1.2, 4.0, 40.0, 0.001, 25 )",
+    "RK_ALPHA_COEFF": "( 0.66667, 0.66667, 1.000000 )",
+    "ITER": "600",
+    "LINEAR_SOLVER": "FGMRES",
+    "LINEAR_SOLVER_PREC": "LU_SGS",
+    "LINEAR_SOLVER_ERROR": "1e-05",
+    "LINEAR_SOLVER_ITER": "40",
+    "CONV_NUM_METHOD_FLOW": "JST",
+    "MUSCL_FLOW": "NO",
+    "SLOPE_LIMITER_FLOW": "VENKATAKRISHNAN",
+    "VENKAT_LIMITER_COEFF": "1.0",
+    "JST_SENSOR_COEFF": "( 0.5, 0.02 )",
+    "TIME_DISCRE_FLOW": "EULER_IMPLICIT",
+    "CONV_NUM_METHOD_TURB": "SCALAR_UPWIND",
+    "MUSCL_TURB": "NO",
+    "SLOPE_LIMITER_TURB": "VENKATAKRISHNAN",
+    "TIME_DISCRE_TURB": "EULER_IMPLICIT",
+    "CONV_RESIDUAL_MINVAL": "-8",
+    "CONV_STARTITER": "601",
+    "CONV_CAUCHY_ELEMS": "100",
+    "CONV_CAUCHY_EPS": "1E-6",
+    "PARMETIS_TOLERANCE": "0.05",
+    "PARMETIS_EDGE_WEIGHT": "0",
+    "PARMETIS_POINT_WEIGHT": "1",
+    "MESH_FILENAME": "mesh.su2",
+    "MESH_FORMAT": "SU2",
+    "MESH_OUT_FILENAME": "mesh_out",
+    "SOLUTION_FILENAME": "seed",
+    "SOLUTION_ADJ_FILENAME": "solution_adj",
+    "OUTPUT_FILES": "(RESTART, PARAVIEW, SURFACE_PARAVIEW, SURFACE_CSV)",
+    "TABULAR_FORMAT": "CSV",
+    "CONV_FILENAME": "history",
+    "RESTART_FILENAME": "restart_flow",
+    "RESTART_ADJ_FILENAME": "restart_adj",
+    "VOLUME_FILENAME": "flow",
+    "VOLUME_ADJ_FILENAME": "adjoint",
+    "GRAD_OBJFUNC_FILENAME": "of_grad",
+    "SURFACE_FILENAME": "surface_flow",
+    "SURFACE_ADJ_FILENAME": "surface_adjoint",
+    "OUTPUT_WRT_FREQ": "( 200, 200, 200, 200 )",
+    "SCREEN_OUTPUT": "(INNER_ITER, RMS_DENSITY, RMS_NU_TILDE, LIFT, DRAG)",
+    "CONV_FIELD": "(RMS_DENSITY)",
+    "HISTORY_OUTPUT": "( ITER, RMS_RES, MAX_RES, AERO_COEFF, LINSOL, CFL_NUMBER )",
+    "READ_BINARY_RESTART": "YES",
+    "WRT_RESTART_OVERWRITE": "NO",
+    "WRT_SURFACE_OVERWRITE": "NO",
+    "WRT_VOLUME_OVERWRITE": "NO",
+    "VOLUME_OUTPUT": "( COORDINATES, SOLUTION, PRIMITIVE, RESIDUAL )"
+  },
+  "M6_current_results": {
+    "fixed": {
+      "matched": {
+        "field_iteration": 599,
+        "terminal_history_iteration": 599.0,
+        "CL": 0.296117914,
+        "CD": 0.02676918998,
+        "rms[Rho]": -6.651164448,
+        "iteration_checks": {
+          "density_log10": false,
+          "CL_last100_range": true,
+          "CD_last100_range": true
+        }
+      },
+      "scores": {
+        "Cp": {
+          "points": 271,
+          "Cp_RMSE_recomputed": 0.12906125387402623,
+          "csv_sha256": "4195ab054e49e5233a8b9ddfa1ed5474648b5df0b7e66c59a4a6d47ba0c1e142"
+        },
+        "alternate_eta0p96": {
+          "points": 271,
+          "Cp_RMSE_recomputed": 0.12969596168826455,
+          "csv_sha256": "524856c2369a4be4dbf5df8dbbbe72e26b71f53460717e480e1079ad2527afe7"
+        }
+      },
+      "max_yplus": 0.8319516777992249,
+      "all_surface_points_below_yplus_1": true,
+      "verified_frozen_files": 25,
+      "minimum_qualification_passed": false
+    },
+    "adaptive": {
+      "matched": {
+        "field_iteration": 599,
+        "terminal_history_iteration": 599.0,
+        "CL": 0.2961135147,
+        "CD": 0.02676924124,
+        "rms[Rho]": -6.687008991,
+        "iteration_checks": {
+          "density_log10": false,
+          "CL_last100_range": true,
+          "CD_last100_range": true
+        }
+      },
+      "scores": {
+        "Cp": {
+          "points": 271,
+          "Cp_RMSE_recomputed": 0.12906302703350206,
+          "csv_sha256": "30a0ed43034d60ede6e8186884ad4bc998bf84f4a0553d5fd5a545f22fa0de58"
+        },
+        "alternate_eta0p96": {
+          "points": 271,
+          "Cp_RMSE_recomputed": 0.1296981929217113,
+          "csv_sha256": "c4e0c63e0d6fb5eec6ded87eeb234587b1bd7252679f51311c37ccdf151d5cb4"
+        }
+      },
+      "max_yplus": 0.8322378993034363,
+      "all_surface_points_below_yplus_1": true,
+      "verified_frozen_files": 23,
+      "minimum_qualification_passed": false
+    }
+  },
+  "Reynolds_reference_conversion": {
+    "Re_per_m": 18140449.177333724,
+    "Re_on_measured_root_chord": 14621214.060024394,
+    "local_temperature_K": 288.15,
+    "SU2_2014_temperature_K": 273.15,
+    "current_TMR_temperature_K": 300.0,
+    "warning": "Different temperatures alone do not prove error cause; match complete nondimensional problem and viscosity law."
+  },
+  "source_code_check": {
+    "driver_line": 1804,
+    "gradient_correction_call_lines": [
+      456,
+      634,
+      964
+    ],
+    "driver_sha256": "d6bd86d521f50a4271e384390d181cd6df9860779b4353bf86421e77a405c706",
+    "diffusion_sha256": "c51bfac39b7ced23ec46e8fbb3f17ac53450c75a7832363afc81a7b699fc8f45",
+    "conclusion": "Tagged v8.5.0 selects corrected finest-grid ideal-gas interior viscous gradient; runtime binary not instrumented. GREEN_GAUSS does not establish use of paper L00."
+  },
+  "RAE_v2": {
+    "minimum_qualification_passed": false,
+    "grid_sensitivity": {
+      "evaluated": true,
+      "CL_relative_change": 0.002137735410097347,
+      "CD_relative_change": 0.01411923472380379,
+      "Cp_uniform_x_RMSE": 0.0028084463053359198,
+      "converged_inputs": true,
+      "checks": {
+        "CL": true,
+        "CD": true,
+        "Cp": true,
+        "converged_inputs": true
+      }
+    },
+    "farfield_sensitivity": {
+      "evaluated": false
+    },
+    "critical_regional_mesh_issue_open": true
+  },
+  "generator": {
+    "downloaded_bytes": 125194,
+    "source_and_inputs_inspected": true,
+    "compiled": false,
+    "mesh_generated": false,
+    "available_compilers_on_PATH": {
+      "gfortran": null,
+      "ifort": null,
+      "g95": null
+    },
+    "scope": "Sharp trailing edge, normalized root chord, new benchmark definition; not the old source mesh family."
+  },
+  "agent_instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "applied_lesson_ids": [
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "R03"
+  ],
+  "evidence_sha256": {
+    "outputs/projects/proje-e9319baef1/simulations/m6_cfl_feedback_20261025/fixed/prediction_frozen.json": "c89c9384e3b40d3ca035d464a151357454660eb7ff9799481cee51c1edd3d748",
+    "outputs/projects/proje-e9319baef1/data/m6_cfl_feedback_20261025/fixed/experimental_comparison.csv": "4195ab054e49e5233a8b9ddfa1ed5474648b5df0b7e66c59a4a6d47ba0c1e142",
+    "outputs/projects/proje-e9319baef1/data/m6_cfl_feedback_20261025/fixed/experimental_comparison_tec_eta.csv": "524856c2369a4be4dbf5df8dbbbe72e26b71f53460717e480e1079ad2527afe7",
+    "outputs/projects/proje-e9319baef1/simulations/m6_cfl_feedback_20261025/adaptive/prediction_frozen.json": "994332e62ccb7616d6efe5e4444f096566078766aeab50d799407f4efd44ebcb",
+    "outputs/projects/proje-e9319baef1/data/m6_cfl_feedback_20261025/adaptive/experimental_comparison.csv": "30a0ed43034d60ede6e8186884ad4bc998bf84f4a0553d5fd5a545f22fa0de58",
+    "outputs/projects/proje-e9319baef1/data/m6_cfl_feedback_20261025/adaptive/experimental_comparison_tec_eta.csv": "c4e0c63e0d6fb5eec6ded87eeb234587b1bd7252679f51311c37ccdf151d5cb4",
+    "outputs/projects/proje-e9319baef1/reports/m6_cfl_feedback_20261025.json": "d09b70ea2afb364823d5f311544d7d7ca9c228bb20f945ededbda13c82abfc35",
+    "outputs/projects/proje-15cce2de02/reports/review_v2_qualification.json": "1d70d7d13e5be22e75133f0207543184c1aa3a759ddc66f6a2cdcfc711f1975c",
+    "outputs/projects/proje-e9319baef1/simulations/m6_cfl_feedback_20261025/adaptive/case.cfg": "470c8976ed1cab6b9c13f2a08b041f98754818324f4b4682c233c07ed10fda41",
+    "work/setup/su2_install.json": "6846b11abd5367f147987b80d8c77860da20d95f87b27eb969bd064938d03c64",
+    "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+  },
+  "minimum_CFD_qualification_passed": false
+}

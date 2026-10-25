@@ -1,0 +1,29 @@
+{
+  "runtime": {
+    "started_utc": "2026-10-24T22:24:52.923157+00:00",
+    "ended_utc": "2026-10-24T22:24:54.999146+00:00",
+    "exit_code": 0,
+    "seconds": 2.0780000000377186,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.03570556640625,
+    "budget_s": 180,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\tmr_m6\\bin\\hcf_coarsening.exe"
+    ]
+  },
+  "input_sha256": "1b31f36fce0930d93c99f33f75e0568118868a25b10183b77805b5dc728f7d92",
+  "mesh_files": [
+    {
+      "file": "wing_strct.1.su2",
+      "sha256": "22d9aaa299869b90d03837f2a0721e0a304355daeb7052b4ab502040bf2fa68d"
+    },
+    {
+      "file": "wing_strct.2.su2",
+      "sha256": "b94e9b17e0d2373c3561559d38870fd60303d3a2f5fe0fc5087b8d383593e60a"
+    },
+    {
+      "file": "wing_strct.3.su2",
+      "sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70"
+    }
+  ]
+}

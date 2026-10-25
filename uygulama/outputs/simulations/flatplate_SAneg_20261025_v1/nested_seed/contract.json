@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-25T19:11:10.629238+00:00",
+  "source_contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "seed_sha256": "c49c77f773848d92220e5e03e77de05503d04e327d8474ac0e73ea0ee9bec3f5",
+  "only_treatment": "initialization from medium state; native restart mechanics enabled",
+  "physical_and_mesh_unchanged": true,
+  "same_convection_gradient_CFL_and_linear_policy": true,
+  "common_iteration": 400,
+  "minimum_density_log10_gain": 0.3,
+  "budgets": {
+    "smoke_s": 60,
+    "full_s": 300,
+    "full_iterations": 2000
+  },
+  "not_blind": true,
+  "reference_scores_not_accessed": true,
+  "role_policy": "Uniform fine remains registered baseline. Nested fine is a separately reported diagnostic; no promotion by reference score."
+}

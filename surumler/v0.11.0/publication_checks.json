@@ -1,0 +1,94 @@
+{
+  "checked_utc": "2026-10-25T19:37:50.937479+00:00",
+  "version": "v0.11.0",
+  "passed": true,
+  "archives": [
+    {
+      "name": "analiz-arsivi-v0.11.0-part01.zip",
+      "paths": 60,
+      "unique_members": 45,
+      "passed": true
+    },
+    {
+      "name": "analiz-arsivi-v0.11.0-part02.zip",
+      "paths": 94,
+      "unique_members": 69,
+      "passed": true
+    },
+    {
+      "name": "analiz-arsivi-v0.11.0-part03.zip",
+      "paths": 69,
+      "unique_members": 58,
+      "passed": true
+    }
+  ],
+  "restore_tests": [
+    {
+      "case": "valid",
+      "passed": true
+    },
+    {
+      "case": "verify-only",
+      "passed": true
+    },
+    {
+      "case": "archive-hash",
+      "passed": true
+    },
+    {
+      "case": "member-list",
+      "passed": true
+    },
+    {
+      "case": "traversal",
+      "passed": true
+    },
+    {
+      "case": "field-hash",
+      "passed": true
+    },
+    {
+      "case": "existing-changed",
+      "passed": true
+    },
+    {
+      "case": "missing-field",
+      "passed": true
+    },
+    {
+      "case": "reference-existing",
+      "passed": true
+    },
+    {
+      "case": "reference-changed",
+      "passed": true
+    },
+    {
+      "case": "shared-content",
+      "passed": true
+    },
+    {
+      "case": "shared-conflicting-hash",
+      "passed": true
+    },
+    {
+      "case": "duplicate-zip-member",
+      "passed": true
+    },
+    {
+      "case": "shared-unsafe-member",
+      "passed": true
+    }
+  ],
+  "actual_data_restore": {
+    "scope": "Actual new release raw-data restore in empty directory on this Windows machine; not VM/clean solver installation or new CFD run",
+    "restored_original_paths": 223,
+    "all_sha256_passed": true
+  },
+  "new_document_links_checked": 47,
+  "secret_scan_files": 5459,
+  "secret_scan_findings": [],
+  "physical_qualification": false,
+  "LLM_improvement_measured": false,
+  "clean_machine_solver_installation_tested": false
+}

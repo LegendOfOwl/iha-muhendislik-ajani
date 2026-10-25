@@ -1,0 +1,142 @@
+{
+  "created_utc": "2026-10-25T19:15:38.227717+00:00",
+  "inputs": [
+    {
+      "name": "Mach",
+      "value": 0.2,
+      "unit": "1",
+      "kind": "kaynaklı",
+      "source": "https://tmbwg.github.io/turbmodels/flatplate.html",
+      "limits_or_uncertainty": "Prescribed compressible verification condition, not measured uncertainty"
+    },
+    {
+      "name": "Reynolds per length",
+      "value": 5000000.0,
+      "unit": "1/m",
+      "kind": "kaynaklı",
+      "source": "https://tmbwg.github.io/turbmodels/flatplate.html",
+      "limits_or_uncertainty": "At x=1m Re_x=5M; wall ends at2m"
+    },
+    {
+      "name": "Static temperature",
+      "value": 300,
+      "unit": "K",
+      "kind": "kaynaklı",
+      "source": "https://tmbwg.github.io/turbmodels/FlatPlate/SA/cfl3d_typical.inp",
+      "limits_or_uncertainty": "540R converted to300K"
+    },
+    {
+      "name": "Flow angle",
+      "value": 0,
+      "unit": "deg",
+      "kind": "kaynaklı",
+      "source": "https://tmbwg.github.io/turbmodels/FlatPlate/SA/cfl3d_typical.inp",
+      "limits_or_uncertainty": "Nominal zero incidence"
+    },
+    {
+      "name": "Reference area",
+      "value": 2,
+      "unit": "m2",
+      "kind": "kaynaklı",
+      "source": "https://tmbwg.github.io/turbmodels/FlatPlate/SA/cfl3d_typical.inp",
+      "limits_or_uncertainty": "2D unit span; wall length2m"
+    },
+    {
+      "name": "nu_tilde inflow / nu_inf",
+      "value": 3,
+      "unit": "1",
+      "kind": "kaynaklı",
+      "source": "https://tmbwg.github.io/turbmodels/FlatPlate/SA/cfl3d_typical.inp",
+      "limits_or_uncertainty": "tur10=3; not eddy/laminar viscosity ratio"
+    },
+    {
+      "name": "SA variant",
+      "value": "NEGATIVE,WITHFT2",
+      "unit": "1",
+      "kind": "kaynaklı",
+      "source": "https://tmbwg.github.io/turbmodels/spalart.html",
+      "limits_or_uncertainty": "Standard SA-neg recommended; expected same as standard SA for positive states, not universal equivalence"
+    },
+    {
+      "name": "gamma",
+      "value": 1.4,
+      "unit": "1",
+      "kind": "varsayım",
+      "source": "Explicit standard-air SU2 configuration",
+      "limits_or_uncertainty": "Calorically perfect gas for verification case"
+    },
+    {
+      "name": "gas constant",
+      "value": 287.058,
+      "unit": "J/(kg K)",
+      "kind": "varsayım",
+      "source": "Explicit standard-air SU2 configuration",
+      "limits_or_uncertainty": "Matches chosen SI gas law; not measured experiment input"
+    },
+    {
+      "name": "Sutherland mu_ref/T_ref/S",
+      "value": [
+        1.716e-05,
+        273.15,
+        110.4
+      ],
+      "unit": "Pa s; K; K",
+      "kind": "varsayım",
+      "source": "Explicit conventional SU2 SI Sutherland constants",
+      "limits_or_uncertainty": "Full dimensional TMR constant identity is not independently established; no coefficient tuning"
+    },
+    {
+      "name": "Prandtl laminar/turbulent",
+      "value": [
+        0.72,
+        0.9
+      ],
+      "unit": "1",
+      "kind": "kaynaklı",
+      "source": "https://tmbwg.github.io/turbmodels/spalart.html",
+      "limits_or_uncertainty": "Default compressible SA perfect-gas heat-transfer convention"
+    },
+    {
+      "name": "mu_Pa_s",
+      "value": 1.8459162511975804e-05,
+      "unit": "Pa s",
+      "kind": "hesaplanmış",
+      "source": "Mach/Re/T and explicit SI gas/viscosity laws",
+      "limits_or_uncertainty": "Derived consistently; original rounded tutorial static pressure115056Pa is not silently copied"
+    },
+    {
+      "name": "U_m_s",
+      "value": 69.44475790151479,
+      "unit": "m/s",
+      "kind": "hesaplanmış",
+      "source": "Mach/Re/T and explicit SI gas/viscosity laws",
+      "limits_or_uncertainty": "Derived consistently; original rounded tutorial static pressure115056Pa is not silently copied"
+    },
+    {
+      "name": "rho_kg_m3",
+      "value": 1.3290537018038302,
+      "unit": "kg/m3",
+      "kind": "hesaplanmış",
+      "source": "Mach/Re/T and explicit SI gas/viscosity laws",
+      "limits_or_uncertainty": "Derived consistently; original rounded tutorial static pressure115056Pa is not silently copied"
+    },
+    {
+      "name": "p_Pa",
+      "value": 114454.64925972116,
+      "unit": "Pa",
+      "kind": "hesaplanmış",
+      "source": "Mach/Re/T and explicit SI gas/viscosity laws",
+      "limits_or_uncertainty": "Derived consistently; original rounded tutorial static pressure115056Pa is not silently copied"
+    },
+    {
+      "name": "inlet_Ttotal_K",
+      "value": 302.4,
+      "unit": "K",
+      "kind": "hesaplanmış",
+      "source": "Mach/Re/T and explicit SI gas/viscosity laws",
+      "limits_or_uncertainty": "Derived consistently; original rounded tutorial static pressure115056Pa is not silently copied"
+    }
+  ],
+  "source_manifest_sha256": "652d70e8548d4b8918de66514cc1af9ff80b0b804cfa06cddcef2d4524430e7e",
+  "scope": "Source numerical verification; no experimental inputs or aircraft requirements inferred."
+}

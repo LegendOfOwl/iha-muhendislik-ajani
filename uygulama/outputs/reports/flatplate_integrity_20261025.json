@@ -1,0 +1,145 @@
+{
+  "checked_utc": "2026-10-25T19:23:30.927923+00:00",
+  "predictions": [
+    {
+      "seal": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\coarse\\prediction_frozen.json",
+      "sha256": "3a88d22b3329b95a142838bc47aff914ef6593a4c9648f626bd2480b4aef5bb5",
+      "files_checked": 17,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine\\prediction_frozen.json",
+      "sha256": "9255ba9a4aec875ea2d4fff727d559b7afe724ea92df27c428e20943dc8d5a05",
+      "files_checked": 49,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\prediction_frozen.json",
+      "sha256": "ae2e36012b1cf2bda674f8aa644acdc7d6408fa952b019f3afa47fb03e2cc8f8",
+      "files_checked": 27,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\ilu_pair\\ilu\\prediction_frozen.json",
+      "sha256": "c41f31ebc72c77dad5bf80fa0b9c3770840f1b585d3a7d43ddb76ae3fb5d8f05",
+      "files_checked": 14,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\ilu_pair\\lusgs\\prediction_frozen.json",
+      "sha256": "d1e381ee28bbb3f5b15b982e316186ef8980e29195012b34cc0a8ef609dd95b3",
+      "files_checked": 14,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\medium\\prediction_frozen.json",
+      "sha256": "9b099506c51dc3a9f7122ce129a06df1b69cd3084b9ec101f00ad3765a4f07e9",
+      "files_checked": 81,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\prediction_frozen.json",
+      "sha256": "031d09addb55da2731e8fe0d9e17ec4af4a09e5f68ceb8748e60b61cc51f1f59",
+      "files_checked": 15,
+      "mismatches": []
+    },
+    {
+      "seal": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\smoke\\prediction_frozen.json",
+      "sha256": "dd34d3f3c470b9dbb791f0f02015af752f04ef5d36f30d59bb990484441bfefd",
+      "files_checked": 13,
+      "mismatches": []
+    }
+  ],
+  "file_records": 230,
+  "runtime": [
+    {
+      "case": "coarse",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 12.51500000001397
+    },
+    {
+      "case": "fine",
+      "exit_code": 1,
+      "stop_reason": "time_budget_exceeded",
+      "seconds": 600.5
+    },
+    {
+      "case": "fine_nested",
+      "exit_code": 1,
+      "stop_reason": "time_budget_exceeded",
+      "seconds": 300.26499999995576
+    },
+    {
+      "case": "ilu_pair\\ilu",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 20.03100000001723
+    },
+    {
+      "case": "ilu_pair\\lusgs",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 24.53100000001723
+    },
+    {
+      "case": "medium",
+      "exit_code": 1,
+      "stop_reason": "time_budget_exceeded",
+      "seconds": 300.25
+    },
+    {
+      "case": "nested_smoke",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 11.03100000001723
+    },
+    {
+      "case": "smoke",
+      "exit_code": 0,
+      "stop_reason": null,
+      "seconds": 0.5320000000065193
+    }
+  ],
+  "registered_project_inputs_unchanged": {
+    "outputs\\data\\projects\\qualification.json": true
+  },
+  "selected_all_RMS_history": {
+    "coarse": {
+      "rms[Rho]": -13.03593527,
+      "rms[RhoU]": -10.7511145,
+      "rms[RhoV]": -10.38145512,
+      "rms[RhoE]": -7.547820003,
+      "rms[nu]": -15.62266787
+    },
+    "medium": {
+      "rms[Rho]": -9.47084987,
+      "rms[RhoU]": -7.51448766,
+      "rms[RhoV]": -9.409074895,
+      "rms[RhoE]": -5.709853442,
+      "rms[nu]": -12.05551051
+    },
+    "fine": {
+      "rms[Rho]": -8.307790989,
+      "rms[RhoU]": -5.06710908,
+      "rms[RhoV]": -5.99107594,
+      "rms[RhoE]": -2.905271951,
+      "rms[nu]": -9.075843203
+    },
+    "fine_nested": {
+      "rms[Rho]": -9.366385192,
+      "rms[RhoU]": -6.145802272,
+      "rms[RhoV]": -7.21811232,
+      "rms[RhoE]": -3.910734518,
+      "rms[nu]": -9.764415392
+    }
+  },
+  "all_integrity_checks_passed": true,
+  "scoped_implementation_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "comparison_guard_checks": {
+    "analytic_identity": true,
+    "invalid_profile_not_scored": true,
+    "out_of_domain_no_extrapolation": true
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "postprocessing_version": 2,
+  "role": "fine_nested",
+  "matched": {
+    "field_iteration": 800,
+    "terminal_history_iteration": 925,
+    "CL": -0.000640668315,
+    "CD": 0.00284690087,
+    "rms[Rho]": -9.366385192,
+    "rms[nu]": -9.764415392,
+    "last100_samples": 100,
+    "CD_last100_range": 3.4266399999991273e-07
+  },
+  "native_status": {
+    "started_utc": "2026-10-25T19:11:21.883016+00:00",
+    "ended_utc": "2026-10-25T19:16:22.150896+00:00",
+    "exit_code": 1,
+    "seconds": 300.26499999995576,
+    "stop_reason": "time_budget_exceeded",
+    "peak_working_set_GiB": 0.2892799377441406,
+    "budget_s": 300,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "wall_points": 225,
+  "max_yplus": 0.25811147689819336,
+  "all_wall_yplus_below1": true,
+  "Cf_x0p97008": 0.0027097468508241462,
+  "CD_independent_trapezoid": 0.002846900858901837,
+  "CD_integration_relative_difference": 3.898331324414528e-09,
+  "iterative_gate": false,
+  "profiles": [
+    {
+      "requested_x_m": 0.97008,
+      "actual_x_m": 0.97008,
+      "columns": [
+        223,
+        224
+      ],
+      "source_column_x_m": [
+        0.950189340033,
+        0.970084048409
+      ],
+      "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+      "invalid_samples": 0,
+      "coordinate_mapping_max_m": 3.630594873179859e-08,
+      "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\profile_x0.97008.csv"
+    },
+    {
+      "requested_x_m": 1.90334,
+      "actual_x_m": 1.90334,
+      "columns": [
+        267,
+        268
+      ],
+      "source_column_x_m": [
+        1.89260382828,
+        1.91408306262
+      ],
+      "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+      "invalid_samples": 0,
+      "coordinate_mapping_max_m": 6.509348286129906e-08,
+      "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\profile_x1.90334.csv"
+    }
+  ],
+  "negative_nu_tilde_nodes": 0,
+  "native_arrays": [
+    "Density",
+    "Momentum",
+    "Energy",
+    "Nu_Tilde",
+    "Pressure",
+    "Temperature",
+    "Mach",
+    "Pressure_Coefficient",
+    "Velocity",
+    "Laminar_Viscosity",
+    "Skin_Friction_Coefficient",
+    "Heat_Flux",
+    "Y_Plus",
+    "Eddy_Viscosity"
+  ],
+  "source_field_sha256": "3481486cc38dec4af0f520e4a001eb644b24bbb0d64bb65d2aa0cb07a3541382",
+  "source_surface_sha256": "fe6cd239f62c3bb2fc96f7b49cac9850939904e585180427fee7751d5b3e9807"
+}

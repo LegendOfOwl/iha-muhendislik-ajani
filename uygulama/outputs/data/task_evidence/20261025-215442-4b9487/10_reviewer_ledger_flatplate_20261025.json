@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-25T19:23:30.934835+00:00",
+  "instruction_version": "2026-10-25.2",
+  "events": [
+    {
+      "type": "hypothesis_not_supported",
+      "id": "flatplate_ILU",
+      "evidence": "outputs/reports/flatplate_ILU_control_20261025.json",
+      "result": "Gain0.0550645log <0.3; high-CFL linear solver explanation not established. Do not generalize ILU as bad."
+    },
+    {
+      "type": "prevented_failure",
+      "id": "transfer_support",
+      "evidence": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_seed\\support_check_v4.json",
+      "observation": "Exact tensor, index-selected parent and VTK negative-weight guards rejected three drafts before native execution.",
+      "disproven_diagnosis": "Source grid is curvilinear was incorrect; measured x/y differences4.76e-17/2.00e-12m are ASCII rounding.",
+      "correction": "Initial-state only tensor interpolation with measured coordinate reproduction2e-12m, exact shared-node states, positive weights and no physical clipping. Native mesh unchanged."
+    },
+    {
+      "type": "confirmed_postprocessing_limitation",
+      "id": "nearest_profile",
+      "evidence": "work\\flatplate_20261025\\postprocessing_v1_nearest\\manifest.json",
+      "correction": "Preserve48v1 files; interpolate between two native columns to requested x. Both coordinate/value masks required; compare again. CFD fields and force histories unchanged."
+    },
+    {
+      "type": "scoped_numerical_effect",
+      "id": "nested_fine",
+      "result": {
+        "common_iteration": 400,
+        "density_log10_gain": 2.5774696589999992,
+        "effect_passed": true,
+        "physical_qualification_passed": false
+      },
+      "not_physical_validation": true
+    }
+  ],
+  "new_LLM_behaviour_evaluation": false,
+  "new_prompt_lesson_needed": "No duplicate lesson added: existing support/validity, raw-field matching and single-variable rules cover these cases.",
+  "reference_manifest_sha256": "c8e529cb92f33921178bf7c96ec0279e293e81fd7600e8001ce4924d1d205277",
+  "not_blind": true
+}

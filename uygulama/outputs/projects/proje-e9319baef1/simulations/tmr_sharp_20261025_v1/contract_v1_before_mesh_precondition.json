@@ -1,0 +1,113 @@
+{
+  "version": "tmr_sharp_20261025_v1",
+  "created_utc": "2026-10-24T22:21:58.980505+00:00",
+  "project_id": "proje-e9319baef1",
+  "scope": "Source generator + nested family + budgeted SU2 source-case diagnostic; independent agent blindness and general CFD acceptance not claimed",
+  "not_blind": true,
+  "physical": {
+    "Mach": 0.84,
+    "alpha_deg": 3.06,
+    "beta_deg": 0,
+    "Re_root": 14600000.0,
+    "Reynolds_length_m": 1.0,
+    "T_K": 300.0,
+    "source_root_chord_original_mm": 810.491484086,
+    "normalized_root_chord_m": 1.0,
+    "nominal_semispan_m": 1.4760179762198,
+    "S_ref_half_wing_m2": 1.15315084119231,
+    "MAC_m": 0.801672958512342,
+    "moment_center_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "SA_variant": "SA-neg",
+    "nu_tilde_inf_over_nu": 3.0,
+    "Pr_lam": 0.72,
+    "Pr_turb": 0.9,
+    "mu_ref": 1.716e-05,
+    "T_mu_ref_K": 273.1111111111111,
+    "Sutherland_K": 110.33333333333333,
+    "boundary": "No-slip adiabatic wing; root symmetry; characteristic farfield",
+    "origin": "TMR sharp-TE numerical comparison definition, NOT original blunt tunnel geometry"
+  },
+  "source_sha256": {
+    "hcf_coarsening_v3p9.f90": "3a7ee89cd3f452c10013019fa319905af009b214b2b4a2ebec915b1b1341398d",
+    "hcf_wing_v5p0.f90": "53fce6719bfc851af5bea41d9469fb7b8207c5f1f94f4ea4b7b3136e292ef233",
+    "input.nml_naca0012_blunt": "45d4d86a3ab94f0f0af9f7e6cde125dfbc25701db25b82744e2c9d54fbcfc47d",
+    "input.nml_naca0012_round": "4ece635a7c37c2c379d77ee25157e730cf0b8a1d148f99d8958a398c9d841f6c",
+    "input.nml_strct": "10dc003174d60192f34e18fb7eb83f47ad389962a3e42fb0ecd3c0f1a9d56cdd",
+    "input.nml_tetra": "dbbb2dbee3929c1aaacf640cc0a31fe49168f1df4a6e5677adbd9c0e5cd16aa6",
+    "input_coarsen.nml_naca0012_blunt": "d430f0f757cfa9f00e035d58de72d2b5ef97960a8f5cc556bb568e8840f1569c",
+    "input_coarsen.nml_naca0012_round": "d430f0f757cfa9f00e035d58de72d2b5ef97960a8f5cc556bb568e8840f1569c",
+    "input_coarsen.nml_strct": "09f1b2fdc37fad2d0d385dd834e3933d5e9f64336a9e0dffbf5eddea487f70fd",
+    "input_coarsen.nml_tetra": "fffdd5cc188c8f99193da89b30115764f068a358b24ec2149174f6f6b480845c",
+    "om6_wing_section_sharp.dat": "0a60e747a0a7b747cc52b7937c4f1e347e66f04e51a9e61bd5eb2bbe3d90eebc",
+    "readme_release.txt": "9b886c269cbe9ef824f0e926705e928d52e0d527b55609f2e359f960c29505be"
+  },
+  "source_urls": [
+    "https://tmbwg.github.io/turbmodels/onerawingnumerics_val.html",
+    "https://tmbwg.github.io/turbmodels/onerawingnumerics_val_sa.html",
+    "https://tmbwg.github.io/turbmodels/onerawingnumerics_grids.html"
+  ],
+  "planned_fine_mesh": {
+    "nnodes_cylinder_input": 32,
+    "nr_gs": 16,
+    "nre": 64,
+    "R_outer": 100,
+    "target_y_plus": 0.125,
+    "stretching_tanh_towards_lete": 1.0,
+    "igrid_type": 5
+  },
+  "family": "Generate one fine HC mesh, use original coarsener twice; same analytical source geometry and outer radius. Discrete surface facets change systematically.",
+  "geometry_screens": {
+    "root_chord_abs_error_max": 1e-09,
+    "boundary_node_single_fluid_neighbour_required": true,
+    "positive_element_volume_required": true,
+    "positive_sampled_Jacobian_required": true,
+    "same_source_points_and_normalized_scale_required": true
+  },
+  "mesh_resource_budget": {
+    "fine_max_nodes": 320000,
+    "fine_max_cells": 320000,
+    "generator_seconds": 180,
+    "coarsener_seconds": 180
+  },
+  "native_budget": {
+    "full_runs_max": 3,
+    "iterations_per_run_max": 4000,
+    "seconds_by_role": {
+      "coarse": 300,
+      "medium": 600,
+      "fine": 1500
+    },
+    "working_set_GiB_max": 2.5,
+    "minimum_available_system_GiB": 1.0
+  },
+  "physical_acceptance_gates": {
+    "density_log10_below": -7.0,
+    "CL_last100_absolute_range_below": 0.0001,
+    "CD_last100_absolute_range_below": 1e-05,
+    "strict_max_yplus_below": 1.0,
+    "all_14_section_Cp_RMSE_below": 0.08,
+    "all_experiment_points_retained": true,
+    "three_iteratively_converged_systematic_meshes_required": true,
+    "regional_BL_TE_tip_wake_required": true,
+    "separate_farfield_sensitivity_required": true,
+    "independent_force_integral_required": true
+  },
+  "native_numerical_policy": {
+    "baseline": "Installed SU2 v8.5 native M6 source config syntax; JST, MUSCL_FLOW=NO, first-order SA transport",
+    "gradient": "GREEN_GAUSS; corrected interior viscous flux per tagged code",
+    "linear_solver": "FGMRES/LU_SGS; tol1e-5 cap40",
+    "CFL": "5 adaptive(0.5,1.2,5,100,0.001,50)",
+    "multigrid_levels": 0,
+    "reason": "Single mesh nonlinear baseline; no simultaneous method sweep or feedback to experiment"
+  },
+  "comparison_policy": "Freeze each failed or successful prediction before opening new reference tables; numerical-source forces are not experiment.",
+  "memory_at_registration": {
+    "total_GiB": 15.625694274902344,
+    "available_GiB": 3.4720535278320312
+  },
+  "minimum_physical_qualification_passed": false
+}

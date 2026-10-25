@@ -8,3 +8,5 @@ Asıl dosyalar uygulamanın bağıl yolları korunarak `uygulama/` içinde sakla
 - [v0.4.0 — Deterministik geometri ve hafif CFD](v0.4.0/README.md): 15 dosya
 - [v0.5.0 — Proje merkezli arayüz ve aeroelastisite](v0.5.0/README.md): 1 dosya
 - [v0.6.0 — Karmaşık CAD ve ilk ONERA M6](v0.6.0/README.md): 34 dosya
+
+- [v0.11.0](v0.11.0/README.md)

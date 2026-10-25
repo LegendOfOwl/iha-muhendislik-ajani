@@ -1,0 +1,8 @@
+{
+  "provenance": "Transcribed from the actual execution-tool error, not the native CFD log",
+  "command": "python work/reliability/cfl_feedback.py run",
+  "exception": "NameError: name json is not defined",
+  "stage": "After Popen and process.json, before the wrapper wait loop",
+  "original_code_sha256": "4b721b987264ec9d21ec7e99bab9a26c41c25b43b4bf73652e76f19ce5683ded",
+  "native_restart": false
+}

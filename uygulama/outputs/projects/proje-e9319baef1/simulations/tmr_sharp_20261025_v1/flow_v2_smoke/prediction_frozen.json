@@ -1,0 +1,50 @@
+{
+  "frozen_utc": "2026-10-24T22:28:56.894058+00:00",
+  "contract_sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+  "flow_plan_sha256": "3d92bb5358568b16d756fac7d10b3dc7b82f45e351d0a7d1bfe73af6b4cf5333",
+  "matched": {
+    "field_iteration": 19,
+    "terminal_history_iteration": 19,
+    "CL": 0.2068087719,
+    "CD": 0.1900664296,
+    "rms[Rho]": -1.098066772,
+    "rms[nu]": -5.221015794,
+    "last100_samples": 20,
+    "CL_last100_range": 0.07130361900000001,
+    "CD_last100_range": 0.1529496089
+  },
+  "native_status": {
+    "started_utc": "2026-10-24T22:28:56.387663+00:00",
+    "ended_utc": "2026-10-24T22:28:56.894058+00:00",
+    "exit_code": 0,
+    "seconds": 0.5149999999557622,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.00232696533203125,
+    "budget_s": 60,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "not_blind": true,
+  "no_new_reference_scores_yet": true,
+  "source_mesh_sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70",
+  "files_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\case.cfg": "44086c722bc1ee7c3049568e9efb74ca893d5c933a8e7bd4f0825209bfcad26c",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\flow.vtu": "d20d05778ce2e6b8dd8ba0b836bf402cef55ddb90920586b80e1e904abe8fb91",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\flow_000019.vtu": "d20d05778ce2e6b8dd8ba0b836bf402cef55ddb90920586b80e1e904abe8fb91",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\history.csv": "101fa68535e3db33fb70d824d5555f4b04efcfc6b3ddc73479a94195176726ab",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\restart_flow.dat": "69f4f419019e63693523cd91707762ba905314346c109978b6a7f2e48c87ba3d",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\restart_flow_000019.dat": "69f4f419019e63693523cd91707762ba905314346c109978b6a7f2e48c87ba3d",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\solver.log": "2d9560b8c8bf1692d3c4585c28fd3c9cca7273190b3eb620b3c3220ca461fcf4",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\solver.process.json": "106731ce1fb3991d974209236787d126aec4ec19f6285f749472f9a0122ce67d",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\solver.status.json": "51763c17b09d55bfb2bbed5858df45b3d3fedc6d66b462850718a974a51900c1",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\surface_flow.csv": "d513dc20a608cbfa7af8364842a44e64e96e8f80fd042f8615a28ec9f468c581",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\surface_flow.vtu": "492bb510922dfacc0c881c0fb590a235e694b57ccf9b7a5dcaf06b53cf7e7678",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\surface_flow_000019.csv": "d513dc20a608cbfa7af8364842a44e64e96e8f80fd042f8615a28ec9f468c581",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\surface_flow_000019.vtu": "492bb510922dfacc0c881c0fb590a235e694b57ccf9b7a5dcaf06b53cf7e7678"
+  },
+  "physical_qualification_passed": false
+}

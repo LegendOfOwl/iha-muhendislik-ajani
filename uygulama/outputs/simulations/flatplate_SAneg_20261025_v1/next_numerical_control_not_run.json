@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-25T19:23:30.928736+00:00",
+  "status": "prepared_not_run",
+  "scope": "Distinguish nonlinear pseudo-time step aggressiveness; not a reference-target fit",
+  "source": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/",
+  "observation": "Fine histories show repeated transient residual growth while adaptive CFL is at or above100. Correlation only; ILU matched-seed test did not meet effect.",
+  "seed": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\restart_flow_000800.dat",
+  "seed_sha256": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813",
+  "mesh": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\meshes\\fine.su2",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "pair": {
+    "A": "fixed CFL100, adaptation off",
+    "B": "fixed CFL10, adaptation off"
+  },
+  "only_paired_difference": "CFL_NUMBER100 versus10; same fixed policy, seed, numerics and physics",
+  "iterations_each": 400,
+  "max_seconds_each": 240,
+  "threads_each": 4,
+  "preselected_comparison_iteration": 399,
+  "effect": "B density log10 at least0.3 lower than A; SA residual must not be worse by more than0.1log. No physical acceptance inferred.",
+  "no_automatic_sweep_or_further_extension": true,
+  "existing_acceptance_thresholds_unchanged": true
+}

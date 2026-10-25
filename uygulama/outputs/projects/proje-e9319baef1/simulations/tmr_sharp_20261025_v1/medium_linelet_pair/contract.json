@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-24T22:53:46.137122+00:00",
+  "source_seed_sha256": "b6a2124918013152cc59aaa2745a38fa8293eacb4eb260524ccf1b7a6892cdf9",
+  "source_field_iteration": 2400,
+  "source_mesh_sha256": "b94e9b17e0d2373c3561559d38870fd60303d3a2f5fe0fc5087b8d383593e60a",
+  "only_config_change": [
+    [
+      "LINEAR_SOLVER_PREC= LU_SGS",
+      "LINEAR_SOLVER_PREC= LINELET"
+    ]
+  ],
+  "cases": {
+    "lusgs": {
+      "cfg_sha256": "426d2d6dffc501005f96467051da3b714e2addd952740c21960ae0e75c1fa3a1",
+      "seed_sha256": "b6a2124918013152cc59aaa2745a38fa8293eacb4eb260524ccf1b7a6892cdf9"
+    },
+    "linelet": {
+      "cfg_sha256": "97432fdd7cc24e194eeffe936389c739beb810456fd20fd4ad23b27fa011358f",
+      "seed_sha256": "b6a2124918013152cc59aaa2745a38fa8293eacb4eb260524ccf1b7a6892cdf9"
+    }
+  },
+  "source": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/",
+  "mechanism": "Solve wall-normal tridiagonal linelets to address highly anisotropic layer coupling; Jacobi elsewhere. Different from merely raising the inner iteration cap.",
+  "iterations": 200,
+  "budget_seconds_each": 180,
+  "threads_each": 4,
+  "common_comparison_iteration": 199,
+  "primary_nonlinear_effect_log10_min": 0.3,
+  "secondary_Krylov_work_ratio_max": 0.8,
+  "secondary_requires_both_median_linear_residual_log10_below": -5.0,
+  "cost_warning": "Krylov iterations are a work proxy, not equal per-iteration cost or measured speedup. Other CFD jobs may run concurrently.",
+  "physical_and_acceptance_unchanged": true
+}

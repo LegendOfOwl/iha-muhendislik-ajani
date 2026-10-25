@@ -1,0 +1,71 @@
+{
+  "created_utc": "2026-10-24T21:09:44.305414+00:00",
+  "version": 1,
+  "project_id": "proje-e9319baef1",
+  "conditional_trigger": "Stage1 cap control failed the preregistered0.3-log effect; nonlinear flow remains slowly converging at fixedCFL4.",
+  "trigger_report_sha256": "4fc79f79c5dc2515e73e16ec5cf10f0e9eae71c8b59e3351185c47e1b0054662",
+  "source_seal_sha256": "81c3a4bdc82dbcef57f2d98d4c990e0b75a4991c0372c2424426bf5609645dd4",
+  "source_checkpoint": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\lin40\\restart_flow_000999.dat",
+  "executable": "tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+  "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+  "only_pair_difference": [
+    "CFL_ADAPT"
+  ],
+  "order": [
+    "fixed",
+    "adaptive"
+  ],
+  "iterations_each": 600,
+  "max_seconds_each": 1200,
+  "threads": 4,
+  "rationale": "Test pseudo-time acceleration with bounded feedback instead of more cap values or global mesh growth. SU2 built-in feedback; not a new integration scheme.",
+  "policy": "CFL min4/max40; down0.5/up1.2; acceptable relative linear residual0.001; activate after25 iterations. Both configs carry the same parameters.",
+  "source": "https://github.com/su2code/SU2/blob/v8.5.0/config_template.cfg#L1449-L1455",
+  "common_stopping_metadata": "Disable automatic stop before600 only to compare equal batches; acceptance thresholds remain unchanged.",
+  "common_changes_from_seed_case": {
+    "CFL_ADAPT_PARAM": {
+      "old": "(0.5, 1.2, 1.0, 100.0)",
+      "new": "( 0.5, 1.2, 4.0, 40.0, 0.001, 25 )"
+    },
+    "ITER": {
+      "old": "1000",
+      "new": "600"
+    },
+    "CONV_STARTITER": {
+      "old": "100",
+      "new": "601"
+    },
+    "HISTORY_OUTPUT": {
+      "old": "( ITER, RMS_RES, MAX_RES, AERO_COEFF, LINSOL )",
+      "new": "( ITER, RMS_RES, MAX_RES, AERO_COEFF, LINSOL, CFL_NUMBER )"
+    }
+  },
+  "thresholds_unchanged": {
+    "density_log10_max": -7,
+    "CL_last100_range_max": 0.0002,
+    "CD_last100_range_max": 2e-05,
+    "strict_max_yplus": 1,
+    "grid_CL_relative_change_max": 0.03,
+    "grid_CD_relative_change_max": 0.1,
+    "per_section_Cp_RMSE_max": 0.08,
+    "NASA_Cp_measurement_uncertainty": 0.02,
+    "note": "Numerical/engineering screens chosen before runs; NASA +/-0.02 is measurement uncertainty, not a universal CFD pass criterion."
+  },
+  "diagnostic_effect_log10_min": 0.3,
+  "preselected_candidate": "adaptive",
+  "stop_policy": "One pair only; timeout/failure is retained. No subsequent CFL sweep authorized by this batch.",
+  "scope": "One fixed M6 mesh and existing physical conditions; numerical diagnostic, not blind/mesh/experimental qualification.",
+  "cases": {
+    "fixed": {
+      "case.cfg": "754fffe8384e128e6e6a0460d83981bce5c7f42d0fbf4d075062694cf5f8e746",
+      "mesh.su2": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+      "seed.dat": "a96d4f73d45faf14b9b2ea225c156ae0fb0d8a6a3b9caaade273c745e8efc343"
+    },
+    "adaptive": {
+      "case.cfg": "470c8976ed1cab6b9c13f2a08b041f98754818324f4b4682c233c07ed10fda41",
+      "mesh.su2": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+      "seed.dat": "a96d4f73d45faf14b9b2ea225c156ae0fb0d8a6a3b9caaade273c745e8efc343"
+    }
+  },
+  "code_sha256": "4b721b987264ec9d21ec7e99bab9a26c41c25b43b4bf73652e76f19ce5683ded"
+}

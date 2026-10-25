@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-25T19:02:26.055337+00:00",
+  "source": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/",
+  "mechanism": "High-CFL stiff linear systems: source documentation recommends ILU; LU_SGS histories reach40 cap with LinSolRes above tolerance.",
+  "baseline_seal_sha256": "9b099506c51dc3a9f7122ce129a06df1b69cd3084b9ec101f00ad3765a4f07e9",
+  "seed_iteration": 3600,
+  "seed_sha256": "6a28400bafb53a4e59c3d26754f7313766cf7aee4489d2bce0adc48708d46468",
+  "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+  "cases": {
+    "lusgs": {
+      "cfg_sha256": "0fb31360bb6e849358b4f1c331d0a6268ce138d22f9823755deb8221e55c3bf5",
+      "seed_sha256": "6a28400bafb53a4e59c3d26754f7313766cf7aee4489d2bce0adc48708d46468"
+    },
+    "ilu": {
+      "cfg_sha256": "92e57785783679d4eb51419ae5f0dc42504c5ce92204332d9f057accbf505658",
+      "seed_sha256": "6a28400bafb53a4e59c3d26754f7313766cf7aee4489d2bce0adc48708d46468"
+    }
+  },
+  "only_config_difference": [
+    [
+      "LINEAR_SOLVER_PREC= LU_SGS",
+      "LINEAR_SOLVER_PREC= ILU"
+    ]
+  ],
+  "common_comparison_iteration": 199,
+  "iterations": 200,
+  "seconds_each": 120,
+  "effect_log10_gain_min": 0.3,
+  "secondary_last100_linear_log10_median_max": -5,
+  "conditional_next_step": "Only if nonlinear gain>=0.3 and ILU medianLinSolRes<-5, create explicitly registered same-physics ILU continuations on all three fixed mesh roles. No parameter sweep.",
+  "no_timing_speedup_claim": true,
+  "no_reference_target_access_yet": true,
+  "physical_changes": null
+}

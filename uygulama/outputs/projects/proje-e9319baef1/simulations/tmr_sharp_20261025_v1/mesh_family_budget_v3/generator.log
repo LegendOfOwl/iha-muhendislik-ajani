@@ -1,0 +1,443 @@
+
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+  Wing grid generator
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+
+ Reading the input file: input.nml..... 
+
+ **************************************************************
+  List of namelist variables and their values
+
+&INPUT_PARAMETERS
+ DEBUG_MODE=F,
+ TARGET_REYNOLDS_NUMBER=  14600000.000000000     ,
+ TARGET_Y_PLUS= 0.12500000000000000     ,
+ IGRID_TYPE=5          ,
+ AIRFOIL_TYPE=0          ,
+ AIRFOIL_DATA_FILE="om6_wing_section_sharp.dat                                                      ",
+ NACAXX=  12.000000000000000     ,
+ TIP_TYPE="round                                                                           ",
+ USE_S_BLUNT=F,
+ USE_S_BLUNT_MATCH=F,
+ USE_S_BLUNT_SSF=  4.0000000000000000     ,
+ USE_S_BLUNT_SSFYZ=  4.0000000000000000     ,
+ TIP_CORNER_NORMAL_DEFLECT=  45.000000000000000     ,
+ TR= 0.56251598526681579     ,
+ BETA=  29.998999999999999     ,
+ R_OUTER=  100.00000000000000     ,
+ HC_REGION_FIXED_OUTER= -45.000000000000000     ,
+ NNODES_CYLINDER_INPUT=16         ,
+ B=  1.4760179762198000     ,
+ NR_GS=12         ,
+ NRE=128        ,
+ WING_SIDE=2          ,
+ ROOT_LE_X=  0.0000000000000000     ,
+ NON_ORTHOG_NEAR_TE=F,
+ NON_ORTHOG_NEAR_TE_SF=  65000.000000000000     ,
+ KEEP_ORTHOG_BL_ALL_THE_WAY=F,
+ SPLINE_TYPE=1          ,
+ STRETCHING_TANH_TOWARDS_LETE=  1.0000000000000000     ,
+ STRETCHING_TOWARDS_TIP= -1.0000000000000000     ,
+ SF_GROW_TOWARDS_TIP_C1= -1.0000000000000000     ,
+ SF_GROW_TOWARDS_TIP_C2= -1.0000000000000000     ,
+ BL_HEIGHT_FACTOR= 0.50000000000000000     ,
+ LIFTING_FACTOR_NODE_TE=  3.0000000000000000     ,
+ UNIFORM_STRETCHING_TO_OUTER=T,
+ STRETCHING_FACTOR_RADIAL_OUTER= -1.0000000000000000     ,
+ SF_GROW_RADIAL_OUTER_C1= -1.0000000000000000     ,
+ SF_GROW_RADIAL_OUTER_C2= -1.0000000000000000     ,
+ STRETCHING_2ND_LE=  5.0000000000000000     ,
+ STRETCHING_2ND_TE=  13.000000000000000     ,
+ STRETCHING_2ND_BLEND=  5.0000000000000000     ,
+ SPACING_RATIO=  1.1000000000000001     ,
+ SPACING_RATIO_OUTER=  1.7000000000000000     ,
+ GLOBAL_SCALING=  1.0000000000000000     ,
+ NON_ORTHOG_NEAR_TE=F,
+ NON_ORTHOG_NEAR_TE_SF=  65000.000000000000     ,
+ GENERATE_UGRID_FILE=T,
+ UGRID_FILE_UNFORMATTED=T,
+ GENERATE_P3D_UFMT_FILE=F,
+ GENERATE_SU2GRID_FILE=T,
+ GENERATE_K_FILE=T,
+ K_FILE_UNFORMATTED=F,
+ GENERATE_LINE_FILE_NC=T,
+ GENERATE_LINE_FILE_CC=T,
+ GENERATE_TEC_FILE_B=T,
+ GENERATE_TEC_FILE_V=F,
+ GRID_STATISTICS=F,
+ CHECK_NEGATIVE_ELM_VOL=T,
+ CHECK_NON_PLANARITY=T,
+ GENERATE_2D_GRID=F,
+ /
+
+
+ ***********************************************************
+  0. Set up input parameters
+ ***********************************************************
+ The system is little Endian
+  Ensure little Endian -> setenv F_UFMTENDIAN little
+    wing side =            2
+   ----- Choose 1: left wing, or 2: right wing
+    Note: the wing will be facing -ve x-direction,
+          so the free steam is assumed to be coming
+          from x=-infty and going to x=+infty.
+
+
+    -------------------------------------------------  
+    ----   Maximum level of regular coarsening   ----  
+    -------------------------------------------------  
+          # of coarse grids that can be generated =            2
+    Total grid level (including the target level) =            3
+    -------------------------------------------------  
+   
+    -------------------------------------------------  
+
+
+ ***********************************************************
+  1. Generate a structured grid over a hemisphere
+ ***********************************************************
+
+  Surface grid of the hemisphere part: 
+                   Nodes =          865
+               Triangles =           72
+          Quadrilaterals =          792
+
+  xLE =   0.50000000000000000     
+  yLE =   0.50000000000000000     
+  zLE =    0.0000000000000000     
+
+  xTE =   0.50000000000000000     
+  yTE =  -0.50000000000000000     
+  zTE =    0.0000000000000000     
+                   Last spacing, s =    1.1098024634982459E-002
+
+ ***********************************************************
+  2. Generate a wing surface grid.
+ ***********************************************************
+  nnodes along the wing =           16
+ Determined stretching factor =    3.3799999999999706       at iterations =          501
+                 s =    1.2207827098480705E-002
+   nnodes_cylinder =           16
+                x1 =   0.50000000000000000     
+                x2 =    1.9760179762198000     
+           First spacing on the cylinder =    1.2151365575727954E-002
+   Edge length on the hemisphere surface =    1.0345616185153141E-002
+  nnodes_circum =           72
+
+ ------------------------------------------------------------------
+  At this point, we have a surface grid of a 3D wing:
+            Nodes =         2017
+        Triangles =           72
+   Quadrilaterals =         1944
+ ------------------------------------------------------------------
+
+  Sweep angle by tapering (degree) =    8.4297295958844742     
+
+ ***********************************************************
+  3. Generate a hemisphere-shape outer boundary grid.
+ ***********************************************************
+  Map the original HC grid to the outer hemisphere.
+  So, the number of nodes are the same as that of the surface grid.
+  Radius of the outer hemisphere   =    100.00000000000000     
+                   Number of nodes =         2017
+                           Spacing =    5.6070447237191789     
+
+ ***********************************************************
+  4. Go up to the outer boundary and generate interior nodes
+ ***********************************************************
+  Parameters for interior node generation
+
+ >>> Compute the first off-the-wall spacing dr1:
+     dr1 determined by the target Re and y_plus:
+     target_reynolds_number =    14600000.000000000     
+              target_y_plus =   0.12500000000000000     
+     --------->         dr1 =    2.4396356486644094E-007
+
+ >>> Boundary-layer thickness estimate, rmax, at the TE (x=1.0) 
+     from a turbulent flow over a flat plate:
+     Eq.(6-72), page 430, 'Viscous Fluid Flow' 2nd edition (1991) by White.
+     Multiplied by a factor =   0.50000000000000000     
+     ------------> rmax =    6.8281201930473958E-003
+
+
+   NOTE: rmax defines the BL region in the grid.
+
+
+ >>> Typical spacing over the hemisphere: 
+      h_hemisphere =    6.5449846949787352E-002
+
+ >>> Typical spacing over the surface: 
+         h_surface =    9.2251123513737501E-002
+
+ >>> Set a spacing of the outer most cell in the BL region: drN
+     ------------> drN =    9.2251123513737501E-003
+
+ >>> drN > rmax !! Impossible... drN =    9.2251123513737501E-003
+     ------------> Modified drN =    9.2251123513737506E-004
+
+ >>> AR =    378134.83978331287     
+
+  NOTE: dr1 is a non-dimensionalized length. 
+        Reference length is the diameter of the hemisphere (=1.0 in the grid).
+
+          Surface spacing (rough estimate) =    9.2251123513737501E-002
+           rmax (the end of the BR region) =    6.8281201930473958E-003
+                                       dr1 =    2.4396356486644094E-007
+                                       drN =    9.2251123513737506E-004
+                                        gr =    1.1554887765465165     
+                            dr1*gr**(nm-1) =    9.2251123513736823E-004
+
+ >>> Number of elements in the BL region (in a line normal to the surface):
+     ---> nm-1 (elements) =           58
+ >>> Number of nodes in the BL region (in a line normal to the surface):
+     ---> nm   (nodes)   =           59
+
+
+ >>> Stop iteration and use the requested value: nre =          128
+     --->  nr(nodes) = nre + 1 =          129
+
+
+ >>> Total number of nodes in the radial direction:
+     --->  nr =          129
+
+      Number of nodes outside the BL region = nr-nm =           70
+
+
+ >>> Total number of nodes over the hemisphere-cylinder surface:
+     ---> nnodes_body =        2017
+
+
+  Generating interior nodes..........
+
+  Iteratively determined: 
+  stretching_factor_radial_outer =    15.399999999999974     
+
+ ***********************************************************
+  4.5. Rotate the grid, enforce y=0.0, and scale the grid 
+ ***********************************************************
+  Performing the switch: y <- x and x <- (-y)..... (Left wing)
+  Enforcing y = 0.0 at the symmetry plane.....
+
+  The grid has been rotated for a left wing.
+  Enforced y=0.0 at symmetry plane.
+
+  Also performing the 180-degree rotation to generate a right wing.
+
+  Right wing generated.
+
+
+
+ ***********************************************************
+  5. Write a boundary info file
+ ***********************************************************
+  Full geometry -> 3 boundary groups.
+    --- (1)3D Wing.
+    --- (2)Y-Symmetry.
+    --- (3)Farfield (inflow and outflow)
+
+  Boundary info file = wing_strct.1.mapbc                                                              
+
+ ***********************************************************
+  6. Generate a structured grid: Hex + some prisms
+ ***********************************************************
+ -- Structured grid  Expected values... 
+     nodes      =       260193
+   Volume elements:
+     tetrahedra =            0
+     prisms     =         9216
+     hex        =       248832
+   Boundary elements:
+      triangles =            0
+          quads =         9216
+  -----------------------------------------------------
+  Generated elements.....
+   Volume elements:
+     tetrahedra =            0
+     prisms     =         9216
+     hex        =       248832
+   Boundary elements:
+      triangles =          144
+          quads =        13104
+  -----------------------------------------------------
+
+  check(tetra ) =            0
+  check(prisms) =            0
+  check(hexa  ) =            0
+  check(tria  ) =            0
+  check(quads ) =            0
+
+  Structured has been generated.
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ >>> Check element volumes...
+
+   # of Tetrahedra =            0
+   # of Hexahedra  =       248832
+   # of Prisms     =         9216
+
+
+  Negative hex volume not detected. Great! 
+
+
+ Minimum hexahedral volume =     6.0174022246616680E-14
+ Maximum hexahedral volume =     5.6012578766337197E+02
+ Average hexahedral volume =     8.3865488991341728E+00
+
+
+  Negative prism volume not detected. Great! 
+
+
+ Minimum prismatic volume =     1.2338721668620266E-12
+ Maximum prismatic volume =     1.5437458383583966E+01
+ Average prismatic volume =     3.5272151747174030E-01
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ >>> Check non-planerity of quadrilateral faces...
+
+
+  Non-planarity:
+    Each quad face is split into two triangles: T1 and T2.
+    Dot product of unit tria-face normals computed: n(T1)*n(T2).
+    Two possible splits considered, and the larger is taken.
+
+ Minimum  =     5.6368821378478273E-01
+ Maximum  =     1.0000000000000004E+00
+ Average  =     9.9961182467250409E-01
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+ ***********************************************************
+  7. Generate line-info files
+ ***********************************************************
+ --------------------------------------------
+  7-1. NC: Generate line-info files
+ --------------------------------------------
+
+ Writing a regular BL line-info file....
+  - Points within the BL region only.
+
+  Total number of lines =         2017
+             max points =           59
+             min points =           59
+
+ lines_fmt file has been written: wing_strct.1.lines_fmt                                                          
+
+ Writing an all-node line-info file....
+  - All points in a line from the wing to the outer boundary.
+
+  Total number of lines =         2017
+             max points =          129
+             min points =          129
+
+ lines_fmt file has been written: wing_strct.1.lines_fmt_all                                                      
+ --------------------------------------------
+  7-2. CC: Generate line-info files
+ --------------------------------------------
+
+ Writing a regular BL line-info file....
+  - (nm-1) within the BL region only: (nm-1) =           58
+
+
+  Cell-line information: 
+  Total number of lines =         2016
+             max cells =           58
+             min cells =           58
+
+ lines_cc_fmt file has been written: wing_strct.1.lines_fmt_cc                                                       
+
+ Writing an all-node line-info file....
+  - All points in a line from the wing to the outer boundary.
+
+
+  Cell-line information: 
+  Total number of lines =         2016
+             max cells =          128
+             min cells =          128
+
+ lines_cc_fmt file has been written: wing_strct.1.lines_fmt_cc_all                                                   
+
+ ***********************************************************
+  8. Generate a k file
+ ***********************************************************
+ Writing a k file....
+
+ k1 min max =            0          72  Around HC.
+ k2 min max =            0           0  Not used in structured grid.
+ k3 min max =            0           0  Used to indicate half-geometry (-1).
+ k4 min max =            0          28  Index along the HC (apex to base).
+ k5 min max =            0         128  Index in the radial direction
+
+
+ K file written : wing_strct.1.k                                                                  
+
+ ***********************************************************
+  9. Generate .su2 and/or .ugrid file for a flow solver
+ ***********************************************************
+
+ Writing a SU2 grid file....
+   --- elm check      258048      258048
+   --- node check      260193      260193
+ SU2GRID file written : wing_strct.1.su2                                                                
+
+ --- Boundary Markers
+  1. WING3D
+  2. SYMMETRY
+  3. FARFIELD
+
+
+
+
+ Writing a ugrid file....
+ UGRID file written : wing_strct.1.lb8.ugrid                                                          
+
+ ***********************************************************
+  10. Generate a tecplot file for viewing boundaries
+ ***********************************************************
+ Writing a Tecplot file for boundaries....
+ Tecplot file for boundaries written : wing_strct.1.tec_bndary.dat                                                     
+
+ ***********************************************************
+  11. Generate a tecplot file for viewing a volume grid
+ ***********************************************************
+
+ Skipping write of Teplot volume file : wing_strct.1.tec_volume.dat                                                     
+
+ Skipping write of p3d/ufmt file : wing_strct.1.ufmt                                                               
+
+ Congratulations!
+ Grid generation successfully completed.
+
+ -------------------------------------------------------------
+  Wing characteristics (assuming a trapezoidal wing)
+ -------------------------------------------------------------
+
+                       Root chord  =    1.0000000000000000     
+                         Semi span =    1.4760179762198000     
+                   Reference area  =    1.1531508411923062     
+        Aspect ratio (span^2/area) =    3.7785673622219096     
+  Mean aerodynamic chord (M.A.C.)  =   0.80167295851234166     
+
+ -------------------------------------------------------------
+

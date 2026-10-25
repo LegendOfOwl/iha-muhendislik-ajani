@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-24T20:54:58.503438+00:00",
+  "project_id": "proje-e9319baef1",
+  "hypothesis": "The active linear iteration cap materially limits nonlinear convergence. This is a hypothesis, not an established cause.",
+  "source_hashes": {
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_jst_wallnormal_20261024_v3\\case.cfg": "4aa872caea1d3011c9100ceaddf3735649542b7e97c215bb4fd2e2906e906884",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_jst_wallnormal_20261024_v3\\mesh.su2": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_jst_wallnormal_20261024_v3\\restart_flow_002999.dat": "7adb53809a1c4d3f7c8c72b3bbf0f2d3b6080df3a8ae336662a1674438940c0a",
+    "outputs\\projects\\proje-e9319baef1\\reports\\m6_wallnormal_prediction_frozen_20261024_v3.json": "b827bb66386680a41062bbd13afae4c072ea2e27fba66f134017d9e01e78d974"
+  },
+  "source_frozen_files_verified": 73,
+  "same_source_checkpoint": 2999,
+  "only_pair_difference": [
+    "LINEAR_SOLVER_ITER"
+  ],
+  "executable": "tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+  "executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+  "iterations_each": 1000,
+  "max_seconds_each": 1500,
+  "threads": 4,
+  "order": [
+    "lin10",
+    "lin40"
+  ],
+  "concurrent_runs": false,
+  "thresholds_unchanged": {
+    "density_log10_max": -7,
+    "CL_last100_range_max": 0.0002,
+    "CD_last100_range_max": 2e-05,
+    "strict_max_yplus": 1,
+    "grid_CL_relative_change_max": 0.03,
+    "grid_CD_relative_change_max": 0.1,
+    "per_section_Cp_RMSE_max": 0.08,
+    "NASA_Cp_measurement_uncertainty": 0.02,
+    "note": "Numerical/engineering screens chosen before runs; NASA +/-0.02 is measurement uncertainty, not a universal CFD pass criterion."
+  },
+  "diagnostic_effect_rule": {
+    "native_outcome_required": "Both native exits zero and matched complete checkpoints at iteration999",
+    "meaningful_extra_log10_reduction": 0.3,
+    "interpretation": "A preselected diagnostic effect size, not a physical acceptance threshold or a statistical confidence level.",
+    "insufficient_effect_action": "Reject the cap increase as an evidenced cure; do not sweep more caps.",
+    "cost": "Report both equal nonlinear iteration counts and observed time/linear work; single-order timing is not a hardware benchmark."
+  },
+  "not_blind": true,
+  "no_targets_in_configs": true,
+  "scope": "Numerical mechanism discrimination on one fixed M6 mesh; no new mesh independence, physical validation, or LLM-behaviour evaluation.",
+  "plan_after": "Compare coupled residuals and force windows; if iteration error remains, do not interpret spatial indicators as quantified discretization error.",
+  "code_sha256": "5d0a1aa9f873b0ffc3d95b64cecd806beadfa76429b34d7983748917f554b653",
+  "cases": {
+    "lin10": {
+      "case.cfg": "895c1ebf379c2efe8a8d622834a5524d586b426ba1abdfc6a96133afc1f2b5d3",
+      "mesh.su2": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+      "seed.dat": "7adb53809a1c4d3f7c8c72b3bbf0f2d3b6080df3a8ae336662a1674438940c0a"
+    },
+    "lin40": {
+      "case.cfg": "d4f09eabdb1d668f29fc8defb139fba87e96daba48bbde7e3d31feea99cb1f3a",
+      "mesh.su2": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+      "seed.dat": "7adb53809a1c4d3f7c8c72b3bbf0f2d3b6080df3a8ae336662a1674438940c0a"
+    }
+  }
+}

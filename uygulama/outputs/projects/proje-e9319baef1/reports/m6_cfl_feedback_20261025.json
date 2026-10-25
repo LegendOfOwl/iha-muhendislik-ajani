@@ -1,0 +1,995 @@
+{
+  "reviewed_utc": "2026-10-24T21:24:50.053122+00:00",
+  "project_id": "proje-e9319baef1",
+  "contract_sha256": "f6306492f3ebac69aeed006394154cf959f9db03268afb31dcce1b5c4776f01c",
+  "pair": {
+    "comparable": true,
+    "only_config_difference": [
+      "CFL_ADAPT"
+    ],
+    "additional_log10_reduction": 0.03584454299999962,
+    "effect_passed": false,
+    "time_ratio_adaptive_over_fixed": 2.336784687840614,
+    "not_timing_benchmark": true
+  },
+  "results": {
+    "fixed": {
+      "native_run": {
+        "status": "exited",
+        "exit_code": 0,
+        "started_utc": "2026-10-24T21:09:47.887504+00:00",
+        "ended_utc": "2026-10-24T21:14:12.614076+00:00",
+        "seconds": 264.72657203674316,
+        "wrapper_recovered_without_native_restart": true
+      },
+      "matched": {
+        "field_iteration": 599,
+        "terminal_history_iteration": 599.0,
+        "CL": 0.296117914,
+        "CD": 0.02676918998,
+        "rms[Rho]": -6.651164448,
+        "iteration_checks": {
+          "density_log10": false,
+          "CL_last100_range": true,
+          "CD_last100_range": true
+        }
+      },
+      "iterative_gate": {
+        "passed": false,
+        "observed": {
+          "density_log10": -6.651164448,
+          "CL_last100_range": 1.1297999999992925e-06,
+          "CD_last100_range": 1.2909999999588528e-08
+        },
+        "checks": {
+          "density_log10": false,
+          "CL_last100_range": true,
+          "CD_last100_range": true
+        },
+        "selected_iteration": 599
+      },
+      "Cp": {
+        "grid": "fixed",
+        "surface_points": 3290,
+        "yplus_max": 0.8319516777992249,
+        "yplus_p95": 0.610824465751648,
+        "fraction_yplus_below1": 1.0,
+        "all_point_Cp_RMSE": 0.12906125387402623,
+        "fraction_within_NASA_measurement_uncertainty": 0.2915129151291513,
+        "all_points_within_NASA_uncertainty": false,
+        "geometry_distance_max_over_chord": 0.007020627735850825,
+        "sections": [
+          {
+            "section": 1,
+            "eta": 0.2,
+            "eta_in_tec_file": 0.2,
+            "side": "u",
+            "points": 22,
+            "Cp_RMSE": 0.09746710834185895,
+            "Cp_max_abs_error": 0.3416319628687972,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.0007365148217169631
+          },
+          {
+            "section": 1,
+            "eta": 0.2,
+            "eta_in_tec_file": 0.2,
+            "side": "l",
+            "points": 12,
+            "Cp_RMSE": 0.07007256334333829,
+            "Cp_max_abs_error": 0.168526382043562,
+            "fraction_within_measurement_0p02": 0.4166666666666667,
+            "max_geometry_distance_over_chord": 0.0006654322832963735
+          },
+          {
+            "section": 2,
+            "eta": 0.44,
+            "eta_in_tec_file": 0.44,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.13242942538004754,
+            "Cp_max_abs_error": 0.4702883754635043,
+            "fraction_within_measurement_0p02": 0.17391304347826086,
+            "max_geometry_distance_over_chord": 0.0011684759263876998
+          },
+          {
+            "section": 2,
+            "eta": 0.44,
+            "eta_in_tec_file": 0.44,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.07423043268066656,
+            "Cp_max_abs_error": 0.16194561896554638,
+            "fraction_within_measurement_0p02": 0.36363636363636365,
+            "max_geometry_distance_over_chord": 0.0006342850425926692
+          },
+          {
+            "section": 3,
+            "eta": 0.65,
+            "eta_in_tec_file": 0.65,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.14660733171646803,
+            "Cp_max_abs_error": 0.5342050193282171,
+            "fraction_within_measurement_0p02": 0.2608695652173913,
+            "max_geometry_distance_over_chord": 0.0008319312629884962
+          },
+          {
+            "section": 3,
+            "eta": 0.65,
+            "eta_in_tec_file": 0.65,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.039743107209762006,
+            "Cp_max_abs_error": 0.08698692427456534,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.001000364416818326
+          },
+          {
+            "section": 4,
+            "eta": 0.8,
+            "eta_in_tec_file": 0.8,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.15243927740452348,
+            "Cp_max_abs_error": 0.579924876856856,
+            "fraction_within_measurement_0p02": 0.34782608695652173,
+            "max_geometry_distance_over_chord": 0.0012822232305200099
+          },
+          {
+            "section": 4,
+            "eta": 0.8,
+            "eta_in_tec_file": 0.8,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.06803532113613127,
+            "Cp_max_abs_error": 0.14731196161616433,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.0007176810652785666
+          },
+          {
+            "section": 5,
+            "eta": 0.9,
+            "eta_in_tec_file": 0.9,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.200779264381595,
+            "Cp_max_abs_error": 0.7294043206870633,
+            "fraction_within_measurement_0p02": 0.3225806451612903,
+            "max_geometry_distance_over_chord": 0.0018118474839610224
+          },
+          {
+            "section": 5,
+            "eta": 0.9,
+            "eta_in_tec_file": 0.9,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.09196302223912832,
+            "Cp_max_abs_error": 0.28965212888970393,
+            "fraction_within_measurement_0p02": 0.42857142857142855,
+            "max_geometry_distance_over_chord": 0.0010729598384099216
+          },
+          {
+            "section": 6,
+            "eta": 0.95,
+            "eta_in_tec_file": 0.96,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.14897721048790058,
+            "Cp_max_abs_error": 0.39875989751514407,
+            "fraction_within_measurement_0p02": 0.41935483870967744,
+            "max_geometry_distance_over_chord": 0.0009690538087001177
+          },
+          {
+            "section": 6,
+            "eta": 0.95,
+            "eta_in_tec_file": 0.96,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.09632833367741285,
+            "Cp_max_abs_error": 0.28271123895930933,
+            "fraction_within_measurement_0p02": 0.42857142857142855,
+            "max_geometry_distance_over_chord": 0.0012992189433146844
+          },
+          {
+            "section": 7,
+            "eta": 0.99,
+            "eta_in_tec_file": 0.99,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.12101329956548461,
+            "Cp_max_abs_error": 0.2965526415981871,
+            "fraction_within_measurement_0p02": 0.22580645161290322,
+            "max_geometry_distance_over_chord": 0.007020627735850825
+          },
+          {
+            "section": 7,
+            "eta": 0.99,
+            "eta_in_tec_file": 0.99,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.056697461161153824,
+            "Cp_max_abs_error": 0.10221209716536897,
+            "fraction_within_measurement_0p02": 0.14285714285714285,
+            "max_geometry_distance_over_chord": 0.005589864263075065
+          }
+        ]
+      },
+      "alternate_eta0p96": {
+        "grid": "fixed",
+        "surface_points": 3290,
+        "yplus_max": 0.8319516777992249,
+        "yplus_p95": 0.610824465751648,
+        "fraction_yplus_below1": 1.0,
+        "all_point_Cp_RMSE": 0.12969596168826455,
+        "fraction_within_NASA_measurement_uncertainty": 0.28413284132841327,
+        "all_points_within_NASA_uncertainty": false,
+        "geometry_distance_max_over_chord": 0.007020627735850825,
+        "sections": [
+          {
+            "section": 1,
+            "eta": 0.2,
+            "eta_in_tec_file": 0.2,
+            "side": "u",
+            "points": 22,
+            "Cp_RMSE": 0.09746710834185895,
+            "Cp_max_abs_error": 0.3416319628687972,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.0007365148217169631
+          },
+          {
+            "section": 1,
+            "eta": 0.2,
+            "eta_in_tec_file": 0.2,
+            "side": "l",
+            "points": 12,
+            "Cp_RMSE": 0.07007256334333829,
+            "Cp_max_abs_error": 0.168526382043562,
+            "fraction_within_measurement_0p02": 0.4166666666666667,
+            "max_geometry_distance_over_chord": 0.0006654322832963735
+          },
+          {
+            "section": 2,
+            "eta": 0.44,
+            "eta_in_tec_file": 0.44,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.13242942538004754,
+            "Cp_max_abs_error": 0.4702883754635043,
+            "fraction_within_measurement_0p02": 0.17391304347826086,
+            "max_geometry_distance_over_chord": 0.0011684759263876998
+          },
+          {
+            "section": 2,
+            "eta": 0.44,
+            "eta_in_tec_file": 0.44,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.07423043268066656,
+            "Cp_max_abs_error": 0.16194561896554638,
+            "fraction_within_measurement_0p02": 0.36363636363636365,
+            "max_geometry_distance_over_chord": 0.0006342850425926692
+          },
+          {
+            "section": 3,
+            "eta": 0.65,
+            "eta_in_tec_file": 0.65,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.14660733171646803,
+            "Cp_max_abs_error": 0.5342050193282171,
+            "fraction_within_measurement_0p02": 0.2608695652173913,
+            "max_geometry_distance_over_chord": 0.0008319312629884962
+          },
+          {
+            "section": 3,
+            "eta": 0.65,
+            "eta_in_tec_file": 0.65,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.039743107209762006,
+            "Cp_max_abs_error": 0.08698692427456534,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.001000364416818326
+          },
+          {
+            "section": 4,
+            "eta": 0.8,
+            "eta_in_tec_file": 0.8,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.15243927740452348,
+            "Cp_max_abs_error": 0.579924876856856,
+            "fraction_within_measurement_0p02": 0.34782608695652173,
+            "max_geometry_distance_over_chord": 0.0012822232305200099
+          },
+          {
+            "section": 4,
+            "eta": 0.8,
+            "eta_in_tec_file": 0.8,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.06803532113613127,
+            "Cp_max_abs_error": 0.14731196161616433,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.0007176810652785666
+          },
+          {
+            "section": 5,
+            "eta": 0.9,
+            "eta_in_tec_file": 0.9,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.200779264381595,
+            "Cp_max_abs_error": 0.7294043206870633,
+            "fraction_within_measurement_0p02": 0.3225806451612903,
+            "max_geometry_distance_over_chord": 0.0018118474839610224
+          },
+          {
+            "section": 5,
+            "eta": 0.9,
+            "eta_in_tec_file": 0.9,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.09196302223912832,
+            "Cp_max_abs_error": 0.28965212888970393,
+            "fraction_within_measurement_0p02": 0.42857142857142855,
+            "max_geometry_distance_over_chord": 0.0010729598384099216
+          },
+          {
+            "section": 6,
+            "eta": 0.96,
+            "eta_in_tec_file": 0.96,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.15565573277694014,
+            "Cp_max_abs_error": 0.39055683419737086,
+            "fraction_within_measurement_0p02": 0.3548387096774194,
+            "max_geometry_distance_over_chord": 0.0012242753075479124
+          },
+          {
+            "section": 6,
+            "eta": 0.96,
+            "eta_in_tec_file": 0.96,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.08918134880925063,
+            "Cp_max_abs_error": 0.2792088384127115,
+            "fraction_within_measurement_0p02": 0.42857142857142855,
+            "max_geometry_distance_over_chord": 0.0012780649342610366
+          },
+          {
+            "section": 7,
+            "eta": 0.99,
+            "eta_in_tec_file": 0.99,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.12101329956548461,
+            "Cp_max_abs_error": 0.2965526415981871,
+            "fraction_within_measurement_0p02": 0.22580645161290322,
+            "max_geometry_distance_over_chord": 0.007020627735850825
+          },
+          {
+            "section": 7,
+            "eta": 0.99,
+            "eta_in_tec_file": 0.99,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.056697461161153824,
+            "Cp_max_abs_error": 0.10221209716536897,
+            "fraction_within_measurement_0p02": 0.14285714285714285,
+            "max_geometry_distance_over_chord": 0.005589864263075065
+          }
+        ]
+      },
+      "force_integral": {
+        "method": "Exact SU2 wall topology; each face oriented toward its sole adjacent fluid-cell centroid; triangle-mean Cp/vectorCf integration, without a force-sign fit",
+        "mesh_sha256": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+        "surface_sha256": "11453db58e18560f8f5a1d0fe3417fc489c7e260df3ca8ce6cdf18bd962bb107",
+        "wall_faces": 6545,
+        "sole_fluid_neighbour_verified": true,
+        "wall_mapping_max_distance_m": 8.084471219458525e-08,
+        "minimum_nonzero_orientation_product_m3": 4.740262396767985e-13,
+        "wetted_surface_area_m2": 1.5578062427688941,
+        "reference_area_m2": 0.7613155538973486,
+        "reference_chord_m": 0.64607,
+        "moment_origin_m": [
+          0.25,
+          0.0,
+          0.0
+        ],
+        "pressure_force_xyz": [
+          0.005851059225507972,
+          0.009111658380028777,
+          0.2969930650413552
+        ],
+        "viscous_force_xyz": [
+          0.005106935243616664,
+          0.0001768843681034976,
+          0.00012931961905831156
+        ],
+        "force_xyz": [
+          0.010957994469124637,
+          0.009288542748132275,
+          0.2971223846604135
+        ],
+        "CL_pressure": 0.2962572672935084,
+        "CL_viscous": -0.0001434816000889842,
+        "CD_pressure": 0.02169670833333437,
+        "CD_viscous": 0.005106556978709167,
+        "CL": 0.2961137856934194,
+        "CD": 0.02680326531204354,
+        "CL_native": 0.296117914,
+        "CD_native": 0.02676918998,
+        "CL_relative_difference": 1.3941428010255663e-05,
+        "CD_relative_difference": 0.0012729310102024272,
+        "moment_pressure_xyz": [
+          0.24589684701013262,
+          -0.11270437265512988,
+          0.008209170553109607
+        ],
+        "moment_viscous_xyz": [
+          0.00013794757673914483,
+          -5.631099414475984e-05,
+          -0.004079512289183637
+        ],
+        "moment_total_xyz": [
+          0.24603479458687177,
+          -0.11276068364927463,
+          0.00412965826392597
+        ],
+        "note": "Surface quadrature and Float32 field interpolation errors remain; no new after-result physical acceptance threshold."
+      },
+      "CFL_range": [
+        4.0,
+        4.0
+      ],
+      "linear_work_total": 7200.0,
+      "experimental_sections_passed": 5,
+      "all_271_points_kept": true,
+      "minimum_qualification_passed": false
+    },
+    "adaptive": {
+      "native_run": {
+        "status": "exited",
+        "exit_code": 0,
+        "started_utc": "2026-10-24T21:14:12.637058+00:00",
+        "ended_utc": "2026-10-24T21:24:31.243108+00:00",
+        "seconds": 618.6089999999967
+      },
+      "matched": {
+        "field_iteration": 599,
+        "terminal_history_iteration": 599.0,
+        "CL": 0.2961135147,
+        "CD": 0.02676924124,
+        "rms[Rho]": -6.687008991,
+        "iteration_checks": {
+          "density_log10": false,
+          "CL_last100_range": true,
+          "CD_last100_range": true
+        }
+      },
+      "iterative_gate": {
+        "passed": false,
+        "observed": {
+          "density_log10": -6.687008991,
+          "CL_last100_range": 1.9343999999588135e-06,
+          "CD_last100_range": 5.3700000002265824e-08
+        },
+        "checks": {
+          "density_log10": false,
+          "CL_last100_range": true,
+          "CD_last100_range": true
+        },
+        "selected_iteration": 599
+      },
+      "Cp": {
+        "grid": "adaptive",
+        "surface_points": 3290,
+        "yplus_max": 0.8322378993034363,
+        "yplus_p95": 0.6112532019615173,
+        "fraction_yplus_below1": 1.0,
+        "all_point_Cp_RMSE": 0.12906302703350206,
+        "fraction_within_NASA_measurement_uncertainty": 0.2915129151291513,
+        "all_points_within_NASA_uncertainty": false,
+        "geometry_distance_max_over_chord": 0.007020627735850825,
+        "sections": [
+          {
+            "section": 1,
+            "eta": 0.2,
+            "eta_in_tec_file": 0.2,
+            "side": "u",
+            "points": 22,
+            "Cp_RMSE": 0.09746771423796838,
+            "Cp_max_abs_error": 0.3416485706349917,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.0007365148217169631
+          },
+          {
+            "section": 1,
+            "eta": 0.2,
+            "eta_in_tec_file": 0.2,
+            "side": "l",
+            "points": 12,
+            "Cp_RMSE": 0.07007252869401652,
+            "Cp_max_abs_error": 0.16853558518848824,
+            "fraction_within_measurement_0p02": 0.4166666666666667,
+            "max_geometry_distance_over_chord": 0.0006654322832963735
+          },
+          {
+            "section": 2,
+            "eta": 0.44,
+            "eta_in_tec_file": 0.44,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.13243189414631518,
+            "Cp_max_abs_error": 0.47030214198074904,
+            "fraction_within_measurement_0p02": 0.17391304347826086,
+            "max_geometry_distance_over_chord": 0.0011684759263876998
+          },
+          {
+            "section": 2,
+            "eta": 0.44,
+            "eta_in_tec_file": 0.44,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.07423101782931014,
+            "Cp_max_abs_error": 0.16195044626717048,
+            "fraction_within_measurement_0p02": 0.36363636363636365,
+            "max_geometry_distance_over_chord": 0.0006342850425926692
+          },
+          {
+            "section": 3,
+            "eta": 0.65,
+            "eta_in_tec_file": 0.65,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.14661061050525204,
+            "Cp_max_abs_error": 0.5342237472664959,
+            "fraction_within_measurement_0p02": 0.2608695652173913,
+            "max_geometry_distance_over_chord": 0.0008319312629884962
+          },
+          {
+            "section": 3,
+            "eta": 0.65,
+            "eta_in_tec_file": 0.65,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.039748013413562634,
+            "Cp_max_abs_error": 0.08699788425397689,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.001000364416818326
+          },
+          {
+            "section": 4,
+            "eta": 0.8,
+            "eta_in_tec_file": 0.8,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.15244098638851933,
+            "Cp_max_abs_error": 0.5799467346519056,
+            "fraction_within_measurement_0p02": 0.34782608695652173,
+            "max_geometry_distance_over_chord": 0.0012822232305200099
+          },
+          {
+            "section": 4,
+            "eta": 0.8,
+            "eta_in_tec_file": 0.8,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.06804257948688283,
+            "Cp_max_abs_error": 0.14733692881139543,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.0007176810652785666
+          },
+          {
+            "section": 5,
+            "eta": 0.9,
+            "eta_in_tec_file": 0.9,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.20078242765059306,
+            "Cp_max_abs_error": 0.7294033062443315,
+            "fraction_within_measurement_0p02": 0.3225806451612903,
+            "max_geometry_distance_over_chord": 0.0018118474839610224
+          },
+          {
+            "section": 5,
+            "eta": 0.9,
+            "eta_in_tec_file": 0.9,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.0919660492649655,
+            "Cp_max_abs_error": 0.2896608335710324,
+            "fraction_within_measurement_0p02": 0.42857142857142855,
+            "max_geometry_distance_over_chord": 0.0010729598384099216
+          },
+          {
+            "section": 6,
+            "eta": 0.95,
+            "eta_in_tec_file": 0.96,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.14897780289291332,
+            "Cp_max_abs_error": 0.3987613227591924,
+            "fraction_within_measurement_0p02": 0.41935483870967744,
+            "max_geometry_distance_over_chord": 0.0009690538087001177
+          },
+          {
+            "section": 6,
+            "eta": 0.95,
+            "eta_in_tec_file": 0.96,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.09633278113439969,
+            "Cp_max_abs_error": 0.2827203352921828,
+            "fraction_within_measurement_0p02": 0.42857142857142855,
+            "max_geometry_distance_over_chord": 0.0012992189433146844
+          },
+          {
+            "section": 7,
+            "eta": 0.99,
+            "eta_in_tec_file": 0.99,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.12101214743842029,
+            "Cp_max_abs_error": 0.2965404487245238,
+            "fraction_within_measurement_0p02": 0.22580645161290322,
+            "max_geometry_distance_over_chord": 0.007020627735850825
+          },
+          {
+            "section": 7,
+            "eta": 0.99,
+            "eta_in_tec_file": 0.99,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.05669762109547896,
+            "Cp_max_abs_error": 0.10220619143626461,
+            "fraction_within_measurement_0p02": 0.14285714285714285,
+            "max_geometry_distance_over_chord": 0.005589864263075065
+          }
+        ]
+      },
+      "alternate_eta0p96": {
+        "grid": "adaptive",
+        "surface_points": 3290,
+        "yplus_max": 0.8322378993034363,
+        "yplus_p95": 0.6112532019615173,
+        "fraction_yplus_below1": 1.0,
+        "all_point_Cp_RMSE": 0.1296981929217113,
+        "fraction_within_NASA_measurement_uncertainty": 0.28413284132841327,
+        "all_points_within_NASA_uncertainty": false,
+        "geometry_distance_max_over_chord": 0.007020627735850825,
+        "sections": [
+          {
+            "section": 1,
+            "eta": 0.2,
+            "eta_in_tec_file": 0.2,
+            "side": "u",
+            "points": 22,
+            "Cp_RMSE": 0.09746771423796838,
+            "Cp_max_abs_error": 0.3416485706349917,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.0007365148217169631
+          },
+          {
+            "section": 1,
+            "eta": 0.2,
+            "eta_in_tec_file": 0.2,
+            "side": "l",
+            "points": 12,
+            "Cp_RMSE": 0.07007252869401652,
+            "Cp_max_abs_error": 0.16853558518848824,
+            "fraction_within_measurement_0p02": 0.4166666666666667,
+            "max_geometry_distance_over_chord": 0.0006654322832963735
+          },
+          {
+            "section": 2,
+            "eta": 0.44,
+            "eta_in_tec_file": 0.44,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.13243189414631518,
+            "Cp_max_abs_error": 0.47030214198074904,
+            "fraction_within_measurement_0p02": 0.17391304347826086,
+            "max_geometry_distance_over_chord": 0.0011684759263876998
+          },
+          {
+            "section": 2,
+            "eta": 0.44,
+            "eta_in_tec_file": 0.44,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.07423101782931014,
+            "Cp_max_abs_error": 0.16195044626717048,
+            "fraction_within_measurement_0p02": 0.36363636363636365,
+            "max_geometry_distance_over_chord": 0.0006342850425926692
+          },
+          {
+            "section": 3,
+            "eta": 0.65,
+            "eta_in_tec_file": 0.65,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.14661061050525204,
+            "Cp_max_abs_error": 0.5342237472664959,
+            "fraction_within_measurement_0p02": 0.2608695652173913,
+            "max_geometry_distance_over_chord": 0.0008319312629884962
+          },
+          {
+            "section": 3,
+            "eta": 0.65,
+            "eta_in_tec_file": 0.65,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.039748013413562634,
+            "Cp_max_abs_error": 0.08699788425397689,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.001000364416818326
+          },
+          {
+            "section": 4,
+            "eta": 0.8,
+            "eta_in_tec_file": 0.8,
+            "side": "u",
+            "points": 23,
+            "Cp_RMSE": 0.15244098638851933,
+            "Cp_max_abs_error": 0.5799467346519056,
+            "fraction_within_measurement_0p02": 0.34782608695652173,
+            "max_geometry_distance_over_chord": 0.0012822232305200099
+          },
+          {
+            "section": 4,
+            "eta": 0.8,
+            "eta_in_tec_file": 0.8,
+            "side": "l",
+            "points": 11,
+            "Cp_RMSE": 0.06804257948688283,
+            "Cp_max_abs_error": 0.14733692881139543,
+            "fraction_within_measurement_0p02": 0.18181818181818182,
+            "max_geometry_distance_over_chord": 0.0007176810652785666
+          },
+          {
+            "section": 5,
+            "eta": 0.9,
+            "eta_in_tec_file": 0.9,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.20078242765059306,
+            "Cp_max_abs_error": 0.7294033062443315,
+            "fraction_within_measurement_0p02": 0.3225806451612903,
+            "max_geometry_distance_over_chord": 0.0018118474839610224
+          },
+          {
+            "section": 5,
+            "eta": 0.9,
+            "eta_in_tec_file": 0.9,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.0919660492649655,
+            "Cp_max_abs_error": 0.2896608335710324,
+            "fraction_within_measurement_0p02": 0.42857142857142855,
+            "max_geometry_distance_over_chord": 0.0010729598384099216
+          },
+          {
+            "section": 6,
+            "eta": 0.96,
+            "eta_in_tec_file": 0.96,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.15566010096088026,
+            "Cp_max_abs_error": 0.39055832102523147,
+            "fraction_within_measurement_0p02": 0.3548387096774194,
+            "max_geometry_distance_over_chord": 0.0012242753075479124
+          },
+          {
+            "section": 6,
+            "eta": 0.96,
+            "eta_in_tec_file": 0.96,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.08918460143245331,
+            "Cp_max_abs_error": 0.27921760865991957,
+            "fraction_within_measurement_0p02": 0.42857142857142855,
+            "max_geometry_distance_over_chord": 0.0012780649342610366
+          },
+          {
+            "section": 7,
+            "eta": 0.99,
+            "eta_in_tec_file": 0.99,
+            "side": "u",
+            "points": 31,
+            "Cp_RMSE": 0.12101214743842029,
+            "Cp_max_abs_error": 0.2965404487245238,
+            "fraction_within_measurement_0p02": 0.22580645161290322,
+            "max_geometry_distance_over_chord": 0.007020627735850825
+          },
+          {
+            "section": 7,
+            "eta": 0.99,
+            "eta_in_tec_file": 0.99,
+            "side": "l",
+            "points": 14,
+            "Cp_RMSE": 0.05669762109547896,
+            "Cp_max_abs_error": 0.10220619143626461,
+            "fraction_within_measurement_0p02": 0.14285714285714285,
+            "max_geometry_distance_over_chord": 0.005589864263075065
+          }
+        ]
+      },
+      "force_integral": {
+        "method": "Exact SU2 wall topology; each face oriented toward its sole adjacent fluid-cell centroid; triangle-mean Cp/vectorCf integration, without a force-sign fit",
+        "mesh_sha256": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+        "surface_sha256": "1bf70f1713c1e0b2dc5a1466e8d06d5f7be0f564011ee63f92aff71f576e6ebe",
+        "wall_faces": 6545,
+        "sole_fluid_neighbour_verified": true,
+        "wall_mapping_max_distance_m": 8.084471219458525e-08,
+        "minimum_nonzero_orientation_product_m3": 4.740262396767985e-13,
+        "wetted_surface_area_m2": 1.5578062427688941,
+        "reference_area_m2": 0.7613155538973486,
+        "reference_chord_m": 0.64607,
+        "moment_origin_m": [
+          0.25,
+          0.0,
+          0.0
+        ],
+        "pressure_force_xyz": [
+          0.005851985264336285,
+          0.009111038842398398,
+          0.2969887184927428
+        ],
+        "viscous_force_xyz": [
+          0.005106302853316724,
+          0.0001771702672757284,
+          0.0001293064670376459
+        ],
+        "force_xyz": [
+          0.010958288117653009,
+          0.009288209109674126,
+          0.2971180249597804
+        ],
+        "CL_pressure": 0.2962528775087696,
+        "CL_viscous": -0.00014346097529445263,
+        "CD_pressure": 0.02169740102568949,
+        "CD_viscous": 0.005105924788006169,
+        "CL": 0.2961094165334751,
+        "CD": 0.026803325813695655,
+        "CL_native": 0.2961135147,
+        "CD_native": 0.02676924124,
+        "CL_relative_difference": 1.3839849657193426e-05,
+        "CD_relative_difference": 0.0012732738066822957,
+        "moment_pressure_xyz": [
+          0.24589275296450716,
+          -0.11270187503386503,
+          0.008207898046005734
+        ],
+        "moment_viscous_xyz": [
+          0.00013794079924661236,
+          -5.63213036359221e-05,
+          -0.004078594742198845
+        ],
+        "moment_total_xyz": [
+          0.24603069376375378,
+          -0.11275819633750095,
+          0.0041293033038068885
+        ],
+        "note": "Surface quadrature and Float32 field interpolation errors remain; no new after-result physical acceptance threshold."
+      },
+      "CFL_range": [
+        4.0,
+        11.943936
+      ],
+      "linear_work_total": 16611.0,
+      "experimental_sections_passed": 5,
+      "all_271_points_kept": true,
+      "minimum_qualification_passed": false
+    }
+  },
+  "sign_checks": [
+    {
+      "section": 1,
+      "side": "u",
+      "max_sign_normalization_error": 2.0000000058861822e-09,
+      "points": 22
+    },
+    {
+      "section": 1,
+      "side": "l",
+      "max_sign_normalization_error": 3.999999997894577e-09,
+      "points": 12
+    },
+    {
+      "section": 2,
+      "side": "u",
+      "max_sign_normalization_error": 2.0000000093556292e-10,
+      "points": 23
+    },
+    {
+      "section": 2,
+      "side": "l",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 11
+    },
+    {
+      "section": 3,
+      "side": "u",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 23
+    },
+    {
+      "section": 3,
+      "side": "l",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 11
+    },
+    {
+      "section": 4,
+      "side": "u",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 23
+    },
+    {
+      "section": 4,
+      "side": "l",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 11
+    },
+    {
+      "section": 5,
+      "side": "u",
+      "max_sign_normalization_error": 9.999999994736442e-10,
+      "points": 31
+    },
+    {
+      "section": 5,
+      "side": "l",
+      "max_sign_normalization_error": 3.999999997894577e-09,
+      "points": 14
+    },
+    {
+      "section": 6,
+      "side": "u",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 31
+    },
+    {
+      "section": 6,
+      "side": "l",
+      "max_sign_normalization_error": 1.9999999989472883e-09,
+      "points": 14
+    },
+    {
+      "section": 7,
+      "side": "u",
+      "max_sign_normalization_error": 0.0,
+      "points": 31
+    },
+    {
+      "section": 7,
+      "side": "l",
+      "max_sign_normalization_error": 2.9999999984209325e-09,
+      "points": 14
+    }
+  ],
+  "experiment_points": 271,
+  "not_blind": true,
+  "minimum_qualification_passed": false,
+  "recommendation": {
+    "action": "localize_nonlinear_stall",
+    "reason": "Cap test did not show the registered effect; no more cap sweep.",
+    "automatically_execute": false,
+    "native_budget_available": 0,
+    "native_action_budget_blocked": false,
+    "new_physical_acceptance": false,
+    "strategy": "dependency_ordered_falsifiable_test_v1",
+    "strategy_optimality_proved": false
+  },
+  "open_gates": [
+    "regional full BL/TE/tip/wake resolution",
+    "three systematic meshes",
+    "farfield sensitivity",
+    "experimental Cp"
+  ],
+  "scope": "One fixed M6 mesh and existing physical conditions; numerical diagnostic, not blind/mesh/experimental qualification.",
+  "code_sha256": "2dba44424477c3b18021ddcdf267718d7f8761ed7ef950e16fe7756abfe5b6eb"
+}

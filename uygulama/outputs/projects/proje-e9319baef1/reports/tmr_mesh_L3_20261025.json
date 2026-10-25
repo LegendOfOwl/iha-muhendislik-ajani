@@ -1,0 +1,139 @@
+{
+  "level": 3,
+  "file": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\mesh_family_budget_v3\\wing_strct.3.su2",
+  "sha256": "c5ac82f7b2c19f850485052b4c0656a1ce8e4aa386ba038ce4bbdb1950c70b70",
+  "nodes": 4191,
+  "cells": 4032,
+  "cell_types": {
+    "12": 3456,
+    "13": 576
+  },
+  "wing_points": 127,
+  "root_chord": 1.0,
+  "wing_bounds": [
+    [
+      0.0,
+      -0.0,
+      -0.04848842074278067
+    ],
+    [
+      1.41466101301415,
+      1.501244591569691,
+      0.04848842074278067
+    ]
+  ],
+  "volume_bounds": [
+    [
+      -99.5,
+      -0.0,
+      -98.48077530122082
+    ],
+    [
+      100.5,
+      100.0,
+      98.48077530122082
+    ]
+  ],
+  "topology": {
+    "single_neighbour_boundary_faces": 828,
+    "declared_boundary_faces": 828,
+    "max_fluid_neighbours_per_face": 2,
+    "boundary_exactly_matches_exterior": true
+  },
+  "hex_27point_Jacobian": {
+    "min": 1.6108560767702649e-12,
+    "median": 4.049338938153907e-06,
+    "p95": 153.83794717253477,
+    "max": 1338.7609060003485
+  },
+  "hex_nonpositive_sampled_Jacobian": 0,
+  "hex_sampled_scaled_Jacobian": {
+    "min": 0.01567168572986238,
+    "median": 0.7199204636708553,
+    "p95": 0.9766243761224718,
+    "max": 0.9783589908595492
+  },
+  "hex_coordinate_nonorthogonality_deg": {
+    "min": 7.912739658721269,
+    "median": 34.110163971514424,
+    "p95": 79.75733678286167,
+    "max": 82.84246001510996
+  },
+  "prism_exact_min_Jacobian": {
+    "min": 2.605838117400497e-10,
+    "median": 2.4327642558101703e-06,
+    "p95": 220.6082917209884,
+    "max": 1173.719976369083
+  },
+  "wall_radial_columns": {
+    "count": 127,
+    "layers_min": 14,
+    "layers_max": 14,
+    "first_spacing": {
+      "min": 1.227965941441013e-06,
+      "median": 1.2279659421055723e-06,
+      "p95": 1.2279659426975145e-06,
+      "max": 1.7158930720739818e-06
+    },
+    "adjacent_growth_in_BL": {
+      "min": 1.275730758875408,
+      "median": 1.7569609872225052,
+      "p95": 1.7882848457460445,
+      "max": 1.9312791483100593
+    },
+    "BL_radial_column_arclength": {
+      "min": 0.003875585379007598,
+      "median": 0.004124400091395441,
+      "p95": 0.004179960326418589,
+      "max": 0.004187433727513294
+    },
+    "warning": "Source radial line arclength/BL label is not flow delta99 or exact normal projection."
+  },
+  "regions": {
+    "LE": {
+      "columns": 15,
+      "first_spacing": {
+        "min": 1.2279659420411093e-06,
+        "median": 1.2279659421055723e-06,
+        "p95": 1.2279659421521318e-06,
+        "max": 1.227965942152132e-06
+      },
+      "max_BL_growth": 1.7974846735913659
+    },
+    "TE": {
+      "columns": 15,
+      "first_spacing": {
+        "min": 1.227965942090692e-06,
+        "median": 1.2279659421167172e-06,
+        "p95": 1.7158930720739818e-06,
+        "max": 1.7158930720739818e-06
+      },
+      "max_BL_growth": 1.9312791483100593
+    },
+    "tip": {
+      "columns": 73,
+      "first_spacing": {
+        "min": 1.227965941441013e-06,
+        "median": 1.2279659420999379e-06,
+        "p95": 1.2279659426134063e-06,
+        "max": 1.7158930720739818e-06
+      },
+      "max_BL_growth": 1.9312791483100593
+    },
+    "root": {
+      "columns": 18,
+      "first_spacing": {
+        "min": 1.2279659420968136e-06,
+        "median": 1.2279659421085844e-06,
+        "p95": 1.3011550116404089e-06,
+        "max": 1.7158930720739818e-06
+      },
+      "max_BL_growth": 1.8754057529052361
+    }
+  },
+  "mesh_screens_passed": true,
+  "limits": [
+    "Hex Jacobian checked at27 reference points, not a global analytic proof.",
+    "No flow-based y+/BL thickness, shock, wake or physical grid independence acceptance yet."
+  ]
+}

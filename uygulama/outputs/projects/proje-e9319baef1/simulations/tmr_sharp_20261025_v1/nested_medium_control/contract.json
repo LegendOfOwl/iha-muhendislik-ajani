@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-24T22:46:49.685932+00:00",
+  "baseline_seal_sha256": "ab2d34a333309f2ab25d2f40435f7afa7a0abf865ba1db9dc66fd8815ab98466",
+  "seed_sha256": "5f1f35315a9db9e60b79a3d83aaa3ae157ac0b14f89f05950b3960cb4080f9e5",
+  "cfg_sha256": "93de7c94584436d1123ddc02a5405ea23c69af3e193bdbd769a916fc439f8266",
+  "source_contract_sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+  "treatment": "Only initialization differs: source coarsener interpolates coarse conservative state; same medium mesh, physics and numerical policy.",
+  "smoke": false,
+  "budget_s": 600,
+  "common_iteration": 1000,
+  "effect_log10_min": 0.3,
+  "timing_not_controlled": "Fine baseline runs concurrently; no wall-time speedup claim.",
+  "physical_acceptance_unchanged": true
+}

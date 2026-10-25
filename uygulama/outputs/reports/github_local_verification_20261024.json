@@ -1,0 +1,164 @@
+{
+  "verified_utc": "2026-10-24T14:31:15.644779+00:00",
+  "passed": true,
+  "git_original_file_hashes": 4267,
+  "archives": [
+    {
+      "asset": "analiz-arsivi-v0.1.0-part01.zip",
+      "files": 3,
+      "sha256": "76be568e7efa7766bd330f2bb359a06dd5bf9e4786f821ac33c34c66b699d997",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.2.0-part01.zip",
+      "files": 22,
+      "sha256": "f8858947253074cfe4639dceb1ea7d23f1b09148a59eb05751a35b2ec2971569",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.3.0-part01.zip",
+      "files": 5,
+      "sha256": "6fe817b7767d1ceee23c96906a6a70a93723178fe66964546ce92032249cb535",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.4.0-part01.zip",
+      "files": 12,
+      "sha256": "08e7af12ec06ba3b80a0ce400e5a8eb4cd9d5db451bc9feb820d702576803416",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.5.0-part01.zip",
+      "files": 11,
+      "sha256": "4665e2f29462efea41a926f79d73eea25427869a9aa321dc5538d718bc66e4dd",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.6.0-part01.zip",
+      "files": 29,
+      "sha256": "f32395003401e68d6e492212ad48d89460d95028a6736ba19844b85fa1a16ab1",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.7.0-part01.zip",
+      "files": 126,
+      "sha256": "41298718b6d676b14c69dd126e52cecf10ae0cf22364575da71b9973a8bcebf2",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.7.0-part02.zip",
+      "files": 111,
+      "sha256": "87fefb23c7dc7e5180eebbfa6f512c3df91ed09e37df5e7d6c537503b6d74107",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.7.0-part03.zip",
+      "files": 9,
+      "sha256": "8cb3b6107cf2e6b2385520a2a218ba70d01d174d3512852ad5621604d52438f8",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.8.0-part01.zip",
+      "files": 82,
+      "sha256": "ca710ec558d23ef33dfbabfafb973c682832f4d77ad0805084ab6d022db03be3",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.8.0-part02.zip",
+      "files": 77,
+      "sha256": "1d81622b3faaf45cbd0b0d0624e68370d7428405eaf17136789a59fc33a96954",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.8.0-part03.zip",
+      "files": 70,
+      "sha256": "54783a1b667cbdd5c084233ec60f52cc175dc63ec73140c9db11df94f80eaa73",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.8.0-part04.zip",
+      "files": 77,
+      "sha256": "fea904cc4a5b86a19fd6d30f4b111cf6dcb88a0cc49d7d49273c1f650e3e8757",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.8.0-part05.zip",
+      "files": 160,
+      "sha256": "8d3284b4914f58808f60b31067b98601599415bcf33a40f93213a5c3416825fb",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.8.0-part06.zip",
+      "files": 45,
+      "sha256": "97f44a3902b1cb66ec75e2ef7abb50c12ee7fd4d1ea4bd7760e8cec9942feaa6",
+      "passed": true
+    },
+    {
+      "asset": "analiz-arsivi-v0.8.0-part07.zip",
+      "files": 27,
+      "sha256": "5fec174dee3e36f7d1e1c3830b62669f120b8bf4d0bd15d07d527014f5f3d97b",
+      "passed": true
+    }
+  ],
+  "archived_original_file_hashes": 866,
+  "external_references": 4,
+  "restore_adversarial_tests": [
+    {
+      "case": "valid",
+      "passed": true
+    },
+    {
+      "case": "verify-only",
+      "passed": true
+    },
+    {
+      "case": "archive-hash",
+      "passed": true
+    },
+    {
+      "case": "member-list",
+      "passed": true
+    },
+    {
+      "case": "traversal",
+      "passed": true
+    },
+    {
+      "case": "field-hash",
+      "passed": true
+    },
+    {
+      "case": "existing-changed",
+      "passed": true
+    },
+    {
+      "case": "missing-field",
+      "passed": true
+    },
+    {
+      "case": "reference-existing",
+      "passed": true
+    },
+    {
+      "case": "reference-changed",
+      "passed": true
+    }
+  ],
+  "tags": [
+    "v0.1.0",
+    "v0.10.0",
+    "v0.2.0",
+    "v0.3.0",
+    "v0.4.0",
+    "v0.5.0",
+    "v0.6.0",
+    "v0.7.0",
+    "v0.8.0",
+    "v0.9.0"
+  ],
+  "commits": 10,
+  "forbidden_files": [],
+  "errors": [],
+  "tracked_files": 4328,
+  "scope": "Publication/integrity checks, not new CAD/CFD or LLM physical validation"
+}

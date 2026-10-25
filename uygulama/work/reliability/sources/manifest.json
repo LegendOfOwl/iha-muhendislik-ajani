@@ -1,0 +1,58 @@
+[
+  {
+    "file": "su2_v850_config.cfg",
+    "url": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/config_template.cfg",
+    "downloaded_utc": "2026-10-24T21:00:04.839943+00:00",
+    "sha256": "3e04a99021cdae4286b54c4e009d2c072c433bead708c0041fad8116ebb62b7d",
+    "bytes": 104205,
+    "use": "Tagged v8.5.0 config: linear controls, CFL feedback, verification and AD options."
+  },
+  {
+    "file": "su2_linear_solvers.html",
+    "url": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/",
+    "downloaded_utc": "2026-10-24T21:00:05.458425+00:00",
+    "sha256": "fda2d4463f56dc87a6b36f694727b74223bf64fab13d4bb086b8c7e548014049",
+    "bytes": 27161,
+    "use": "Linear accuracy must be balanced with nonlinear convergence and cost; central schemes may need more inner steps."
+  },
+  {
+    "file": "su2_v850_CFlowCompOutput.cpp",
+    "url": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/SU2_CFD/src/output/CFlowCompOutput.cpp",
+    "downloaded_utc": "2026-10-24T21:00:06.138180+00:00",
+    "sha256": "bfdd613fda3f70c11d17f63ecc5e8982741087f13b3a77dc90fe1b523374f182",
+    "bytes": 43684,
+    "use": "LinSolRes is log10 of solver-reported relative linear residual; history RMS and volume residual have distinct semantics."
+  },
+  {
+    "file": "su2_v850_CSysSolve.cpp",
+    "url": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/Common/src/linear_algebra/CSysSolve.cpp",
+    "downloaded_utc": "2026-10-24T21:00:07.155170+00:00",
+    "sha256": "767ff544d658baffcadf3ed2fa9cd2b3a83c0f696ebecd4765704d368cf136b6",
+    "bytes": 58440,
+    "use": "FGMRES relative residual beta/norm0 and iteration-cap mechanics."
+  },
+  {
+    "file": "nasa_iterative.html",
+    "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/iterconv.html",
+    "downloaded_utc": "2026-10-24T21:00:08.628670+00:00",
+    "sha256": "a3961804f1cc6f563eda44ab0bd0661593bb38a963f6427c473dce8528339992",
+    "bytes": 4247,
+    "use": "Monitor both equation residuals and engineering outputs."
+  },
+  {
+    "file": "nasa_adaptation_M6_20200003084.pdf",
+    "url": "https://ntrs.nasa.gov/api/citations/20200003084/downloads/20200003084.pdf",
+    "downloaded_utc": "2026-10-24T21:00:28.622129+00:00",
+    "sha256": "63607396f0d96feeca4b7e45caa884293798325d15413b9746639c1b91fd7cfc",
+    "bytes": 4725657,
+    "use": "Balan et al. 2020: Mach-Hessian anisotropic adaptation; this prototype is only an indicator, not a reproduction."
+  },
+  {
+    "file": "refine_README.md",
+    "url": "https://raw.githubusercontent.com/nasa/refine/master/README.md",
+    "downloaded_utc": "2026-10-24T21:00:28.985078+00:00",
+    "sha256": "a5cc70623976d1edf5b555616ae4a6c2b06ff215690942177612f0137be9c526",
+    "bytes": 5145,
+    "use": "Production mesh adaptation dependencies and geometry requirements; not installed by this iteration."
+  }
+]

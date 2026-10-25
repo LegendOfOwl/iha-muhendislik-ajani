@@ -43,6 +43,7 @@ Kütlesi bilinmeyen bileşenler: yapı, motor_ve_pervane, enerji_sistemi, aviyon
 | comparison | çalışıyor; tüm kabul ölçütleri sağlanmadı | [candidate_comparison.json](candidate_comparison.json) |
 | profile-cfd | kayıt bekleniyor | [profile_cfd_results.json](profile_cfd_results.json) |
 | aerostruct | geçti | [openaerostruct_examples.json](openaerostruct_examples.json) |
+| reliability | kayıt bekleniyor | [reliability_audit.json](reliability_audit.json) |
 
 ## Görevler
 
@@ -58,3 +59,8 @@ Kütlesi bilinmeyen bileşenler: yapı, motor_ve_pervane, enerji_sistemi, aviyon
 - 20261019-201609-ab8031: Kaynak araştırmasıyla RAE2822 bölgesel ağ duyarlılığını teşhis et; kaynak geometriyi koruyan C-grid/blok çözümünü gerçek CFD ile ve değişmeyen kabul eşikleriyle sına — tamamlandı
 - 20261024-153804-27f425: RAE2822 testlerini kapattıktan sonra ONERA M6 Test2308 için kaynaklı kontrollü gerçek3B RANS ve271 deney noktası karşılaştırması yap — tamamlandı
 - 20261024-164603-4764e5: Kanıtlı hata derslerini ve hipotezleri ayır; ajan talimatı ve kalıcı hafızayı güncelle; karşı örneklerle sınayıp uzmanlık iddiasını ayrı tut — tamamlandı
+- 20261024-170508-83546a: Tüm proje çalışmalarını sürümlü, kategorilere ayrılmış ve hassas bilgi taraması yapılmış yeni public iha-muhendislik-ajani GitHub deposuna yayımla — tamamlandı
+- 20261024-235336-d874a2: Kaynak araştırması ve kanıt odaklı yöntemle güvenilirlik geliştirme: M6 aynı restart doğrusal çözücü kontrolü, otomatik teşhis ve bölgesel hata göstergesi — tamamlandı
+- 20261025-005212-dd782d: CFD doğruluğu literatür araştırması: arXiv, hazır ONERA M6/RAE doğrulamaları ve yerel kurulum farklarının kaynaklı ayrıntılı karşılaştırması — tamamlandı
+- 20261025-011533-2114a3: Resmî TMR ONERA M6 üreteci: taşınabilir derleme, kaynak geometri ve üç sistematik ağ kontrolü; bütçeli native SU2 kaynak vaka sınaması — tamamlandı
+- 20261025-215442-4b9487: NASA TMR kaynak düz plaka ağlarıyla SA-neg uygulama kontrolü: üç küçük ağ, gerçek SU2 ve kaynak Cf/profil karşılaştırması — tamamlandı

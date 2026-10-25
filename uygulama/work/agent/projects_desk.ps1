@@ -108,7 +108,7 @@ $runReason=Label $runsTab '' 18 483 810 100 10
 $script:suiteChoices=@(
     [pscustomobject]@{id='geometry';label='Kanat tanımından CAD üret'},[pscustomobject]@{id='complex-vlm';label='Kanat tanımından ön analiz (VSPAERO)'},
     [pscustomobject]@{id='profile-cfd';label='Hazırlanmış profil için ağ ve CFD'},[pscustomobject]@{id='cfd';label='SU2 RANS yeterlilik örneği'},
-    [pscustomobject]@{id='elmer-cfd';label='Elmer Navier–Stokes yeterlilik örneği'},[pscustomobject]@{id='fem';label='Yapısal yeterlilik örneği'},[pscustomobject]@{id='aerostruct';label='OpenAeroStruct aeroelastik optimizasyon örneği'},[pscustomobject]@{id='comparison';label='Koşullu karşılaştırma örneği'})
+    [pscustomobject]@{id='elmer-cfd';label='Elmer Navier–Stokes yeterlilik örneği'},[pscustomobject]@{id='fem';label='Yapısal yeterlilik örneği'},[pscustomobject]@{id='aerostruct';label='OpenAeroStruct aeroelastik optimizasyon örneği'},[pscustomobject]@{id='comparison';label='Koşullu karşılaştırma örneği'},[pscustomobject]@{id='reliability';label='Kayıtlı sonuçların güvenilirliğini yeniden denetle'})
 foreach($s in $script:suiteChoices){$null=$suite.Items.Add($s)};$suite.SelectedIndex=0
 function Payload{
     $c=@{};foreach($key in $script:fields.Keys){$c[$key]=$script:fields[$key].Text}

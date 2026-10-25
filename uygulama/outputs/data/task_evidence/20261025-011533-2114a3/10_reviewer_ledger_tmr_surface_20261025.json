@@ -1,0 +1,27 @@
+{
+  "version": "2026-10-25.tmr2",
+  "created_utc": "2026-10-25T18:53:14.606280+00:00",
+  "prior_ledger_sha256": "89ba062562283f4a8583b75eeb3281a983c8ede29672973b23c3f6178ec5c457",
+  "observed_error": "First CAD checks used a solid-containing compound; interior points were classified at distance0 and surface gap understated.",
+  "behavioural_cause_inference": "Treated a successful geometric distance API query as the requested surface metric without an inside-point counterexample.",
+  "correction": "Use compound of source boundary faces; compare vertices, facet centers and edge midpoints; retain invalid earlier records.",
+  "counterexample": {
+    "solid_interior_distance": 0.0,
+    "boundary_distance": 0.5,
+    "expected_boundary_distance": 0.5
+  },
+  "evidence_sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb",
+  "native_solver_and_source_mesh_unchanged": true,
+  "instruction_before_sha256": "5889934b15f273ec8e285dd0039e3aac77d6b3c571d501cd27c7aa2d499b7a2d",
+  "instruction_after_sha256": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+  "lesson_id": "L11",
+  "LLM_behaviour_improvement_tested": false,
+  "minimum_physical_qualification_passed": false,
+  "reference_access_disclosure": {
+    "event_utc": "2026-10-24T22:58:19+00:00",
+    "event": "A metadata-only filter printed commented numerical CFD force rows while the fixed fine baseline was still running.",
+    "not_blind_before_event": true,
+    "subsequent_solver_configs_or_thresholds_changed": false,
+    "effect": "This is development/review evidence, not a blind or unseen-agent benchmark. All new reference comparison code waits for baseline prediction seals."
+  }
+}

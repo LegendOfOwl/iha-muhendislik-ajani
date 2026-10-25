@@ -1,0 +1,679 @@
+{
+  "reviewed_utc": "2026-10-25T19:18:48.179245+00:00",
+  "contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "results": {
+    "coarse": {
+      "field_audit": {
+        "role": "coarse",
+        "matched": {
+          "field_iteration": 400,
+          "terminal_history_iteration": 400,
+          "CL": -0.0006445177401,
+          "CD": 0.002857562273,
+          "rms[Rho]": -13.03593527,
+          "rms[nu]": -15.62266787,
+          "last100_samples": 100,
+          "CD_last100_range": 2.9999999880125916e-12
+        },
+        "native_status": {
+          "started_utc": "2026-10-25T18:56:37.306824+00:00",
+          "ended_utc": "2026-10-25T18:56:49.819190+00:00",
+          "exit_code": 0,
+          "seconds": 12.51500000001397,
+          "stop_reason": null,
+          "peak_working_set_GiB": 0.028804779052734375,
+          "budget_s": 180,
+          "command": [
+            "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+            "case.cfg",
+            "-t",
+            "4"
+          ]
+        },
+        "wall_points": 57,
+        "max_yplus": 0.9515027403831482,
+        "all_wall_yplus_below1": true,
+        "Cf_x0p97008": 0.0027351983226890256,
+        "CD_independent_trapezoid": 0.002857562286750755,
+        "CD_integration_relative_difference": 4.81205786329042e-09,
+        "iterative_gate": true,
+        "profiles": [
+          {
+            "requested_x_m": 0.97008,
+            "actual_x_m": 0.970084048409,
+            "column": 56,
+            "invalid_samples": 0,
+            "coordinate_mapping_max_m": 3.503009052410881e-08,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\profile_x0.97008.csv"
+          },
+          {
+            "requested_x_m": 1.90334,
+            "actual_x_m": 1.91408306262,
+            "column": 67,
+            "invalid_samples": 0,
+            "coordinate_mapping_max_m": 6.438972729076924e-08,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\profile_x1.90334.csv"
+          }
+        ],
+        "negative_nu_tilde_nodes": 0,
+        "native_arrays": [
+          "Density",
+          "Momentum",
+          "Energy",
+          "Nu_Tilde",
+          "Pressure",
+          "Temperature",
+          "Mach",
+          "Pressure_Coefficient",
+          "Velocity",
+          "Laminar_Viscosity",
+          "Skin_Friction_Coefficient",
+          "Heat_Flux",
+          "Y_Plus",
+          "Eddy_Viscosity"
+        ],
+        "source_field_sha256": "f091187fc7a0639dc69f81b61aaee66b1796f30b8d0de50b516c299ae18e1b33",
+        "source_surface_sha256": "50b292b060aad1538bb1de1273755e1582829bc6b2268640d6fe01667af428af"
+      },
+      "curve_errors": [
+        {
+          "code": "CFL3D",
+          "points": 447,
+          "invalid_points": 0,
+          "window_points": 349,
+          "relative_L2_window": 0.008264049993222545,
+          "relative_L2_all_points": 0.2363733485926825,
+          "max_absolute_error_all_valid": 0.014977862968606856,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\Cf_vs_CFL3D.csv"
+        },
+        {
+          "code": "FUN3D",
+          "points": 447,
+          "invalid_points": 0,
+          "window_points": 349,
+          "relative_L2_window": 0.008570029547296678,
+          "relative_L2_all_points": 0.1656990724894901,
+          "max_absolute_error_all_valid": 0.008922683078485514,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\Cf_vs_FUN3D.csv"
+        }
+      ],
+      "same_grid_reference": [
+        {
+          "code": "CFL3D",
+          "same_grid_cells": 3264,
+          "Cf_reference_same_grid": 0.00272834697,
+          "Cf_relative_difference_same_grid": 0.0025111735290124226,
+          "CD_reference_same_grid": 0.00288437885,
+          "CD_relative_difference_same_grid": 0.009297175716012518,
+          "Cf_relative_difference_finest_reference": 0.010931607529389264
+        },
+        {
+          "code": "FUN3D",
+          "same_grid_cells": 3264,
+          "Cf_reference_same_grid": 0.00269497594242929,
+          "Cf_relative_difference_same_grid": 0.014924949654087971,
+          "CD_reference_same_grid": 0.002822641,
+          "CD_relative_difference_same_grid": 0.012371843603206978,
+          "Cf_relative_difference_finest_reference": 0.011012620934410355
+        }
+      ],
+      "velocity_errors": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.970084048409,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.0020429818756265324
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.91408306262,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.003572831503680853
+        }
+      ],
+      "eddy_viscosity_errors": [
+        {
+          "code": "CFL3D",
+          "reference_x_m": 0.9701266289,
+          "native_x_m": 0.970084048409,
+          "points": 384,
+          "invalid_points": 0,
+          "relative_L2": 0.04757352272500497
+        },
+        {
+          "code": "FUN3D",
+          "reference_x_m": 0.97,
+          "native_x_m": 0.970084048409,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.047299234634284995
+        }
+      ],
+      "screens": {
+        "iteration": true,
+        "max_yplus": true,
+        "Cf_scalar_both_finest_codes": true,
+        "Cf_curve_both_codes": true,
+        "velocity_both_stations": true,
+        "mut_both_codes": true
+      },
+      "role_gate_passed": true
+    },
+    "medium": {
+      "field_audit": {
+        "role": "medium",
+        "matched": {
+          "field_iteration": 3600,
+          "terminal_history_iteration": 3716,
+          "CL": -0.0006416878432,
+          "CD": 0.002846305903,
+          "rms[Rho]": -9.47084987,
+          "rms[nu]": -12.05551051,
+          "last100_samples": 100,
+          "CD_last100_range": 1.6400000003857773e-09
+        },
+        "native_status": {
+          "started_utc": "2026-10-25T18:56:49.879758+00:00",
+          "ended_utc": "2026-10-25T19:01:50.133361+00:00",
+          "exit_code": 1,
+          "seconds": 300.25,
+          "stop_reason": "time_budget_exceeded",
+          "peak_working_set_GiB": 0.08071517944335938,
+          "budget_s": 300,
+          "command": [
+            "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+            "case.cfg",
+            "-t",
+            "4"
+          ]
+        },
+        "wall_points": 113,
+        "max_yplus": 0.48224198818206787,
+        "all_wall_yplus_below1": true,
+        "Cf_x0p97008": 0.0027152938245855354,
+        "CD_independent_trapezoid": 0.002846305895435634,
+        "CD_integration_relative_difference": 2.6576081335605295e-09,
+        "iterative_gate": false,
+        "profiles": [
+          {
+            "requested_x_m": 0.97008,
+            "actual_x_m": 0.970084048409,
+            "column": 112,
+            "invalid_samples": 0,
+            "coordinate_mapping_max_m": 3.630594873179859e-08,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\profile_x0.97008.csv"
+          },
+          {
+            "requested_x_m": 1.90334,
+            "actual_x_m": 1.91408306262,
+            "column": 134,
+            "invalid_samples": 0,
+            "coordinate_mapping_max_m": 6.509348286129906e-08,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\profile_x1.90334.csv"
+          }
+        ],
+        "negative_nu_tilde_nodes": 0,
+        "native_arrays": [
+          "Density",
+          "Momentum",
+          "Energy",
+          "Nu_Tilde",
+          "Pressure",
+          "Temperature",
+          "Mach",
+          "Pressure_Coefficient",
+          "Velocity",
+          "Laminar_Viscosity",
+          "Skin_Friction_Coefficient",
+          "Heat_Flux",
+          "Y_Plus",
+          "Eddy_Viscosity"
+        ],
+        "source_field_sha256": "59b9602d5b3400f5d6f08aba0f9c238bd2a9532a2a0bee8f071e50e0bd98a8e7",
+        "source_surface_sha256": "6400396719933c0e50e856a5f28841ef8e36c13eac4d412308d12c735f6cf32b"
+      },
+      "curve_errors": [
+        {
+          "code": "CFL3D",
+          "points": 447,
+          "invalid_points": 0,
+          "window_points": 349,
+          "relative_L2_window": 0.0027029964056614507,
+          "relative_L2_all_points": 0.20975572066680045,
+          "max_absolute_error_all_valid": 0.01436263808390894,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\Cf_vs_CFL3D.csv"
+        },
+        {
+          "code": "FUN3D",
+          "points": 447,
+          "invalid_points": 0,
+          "window_points": 349,
+          "relative_L2_window": 0.0029750087733498,
+          "relative_L2_all_points": 0.13127983269295773,
+          "max_absolute_error_all_valid": 0.00830745822454884,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\Cf_vs_FUN3D.csv"
+        }
+      ],
+      "same_grid_reference": [
+        {
+          "code": "CFL3D",
+          "same_grid_cells": 13056,
+          "Cf_reference_same_grid": 0.00271115173,
+          "Cf_relative_difference_same_grid": 0.0015277988832942402,
+          "CD_reference_same_grid": 0.00286620917,
+          "CD_relative_difference_same_grid": 0.006944108339448252,
+          "Cf_relative_difference_finest_reference": 0.003574888238539131
+        },
+        {
+          "code": "FUN3D",
+          "same_grid_cells": 13056,
+          "Cf_reference_same_grid": 0.00270215403362043,
+          "Cf_relative_difference_same_grid": 0.004862709823947542,
+          "CD_reference_same_grid": 0.002840045,
+          "CD_relative_difference_same_grid": 0.002204508379268555,
+          "Cf_relative_difference_finest_reference": 0.00365531209538994
+        }
+      ],
+      "velocity_errors": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.970084048409,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.0011241109582880969
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.91408306262,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.001805000702241759
+        }
+      ],
+      "eddy_viscosity_errors": [
+        {
+          "code": "CFL3D",
+          "reference_x_m": 0.9701266289,
+          "native_x_m": 0.970084048409,
+          "points": 384,
+          "invalid_points": 0,
+          "relative_L2": 0.018889201360732313
+        },
+        {
+          "code": "FUN3D",
+          "reference_x_m": 0.97,
+          "native_x_m": 0.970084048409,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.01839798099805976
+        }
+      ],
+      "screens": {
+        "iteration": false,
+        "max_yplus": true,
+        "Cf_scalar_both_finest_codes": true,
+        "Cf_curve_both_codes": true,
+        "velocity_both_stations": true,
+        "mut_both_codes": true
+      },
+      "role_gate_passed": false
+    },
+    "fine": {
+      "field_audit": {
+        "role": "fine",
+        "matched": {
+          "field_iteration": 2000,
+          "terminal_history_iteration": 2015,
+          "CL": -0.000619149545,
+          "CD": 0.002856672837,
+          "rms[Rho]": -8.307790989,
+          "rms[nu]": -9.075843203,
+          "last100_samples": 100,
+          "CD_last100_range": 3.397621000000156e-06
+        },
+        "native_status": {
+          "started_utc": "2026-10-25T19:01:50.331891+00:00",
+          "ended_utc": "2026-10-25T19:11:50.843451+00:00",
+          "exit_code": 1,
+          "seconds": 600.5,
+          "stop_reason": "time_budget_exceeded",
+          "peak_working_set_GiB": 0.2891960144042969,
+          "budget_s": 600,
+          "command": [
+            "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+            "case.cfg",
+            "-t",
+            "4"
+          ]
+        },
+        "wall_points": 225,
+        "max_yplus": 0.25888901948928833,
+        "all_wall_yplus_below1": true,
+        "Cf_x0p97008": 0.002717064669832394,
+        "CD_independent_trapezoid": 0.002856672846393157,
+        "CD_integration_relative_difference": 3.2881459777200917e-09,
+        "iterative_gate": false,
+        "profiles": [
+          {
+            "requested_x_m": 0.97008,
+            "actual_x_m": 0.970084048409,
+            "column": 224,
+            "invalid_samples": 0,
+            "coordinate_mapping_max_m": 3.630594873179859e-08,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\profile_x0.97008.csv"
+          },
+          {
+            "requested_x_m": 1.90334,
+            "actual_x_m": 1.89260382828,
+            "column": 267,
+            "invalid_samples": 0,
+            "coordinate_mapping_max_m": 5.3942996261563e-08,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\profile_x1.90334.csv"
+          }
+        ],
+        "negative_nu_tilde_nodes": 0,
+        "native_arrays": [
+          "Density",
+          "Momentum",
+          "Energy",
+          "Nu_Tilde",
+          "Pressure",
+          "Temperature",
+          "Mach",
+          "Pressure_Coefficient",
+          "Velocity",
+          "Laminar_Viscosity",
+          "Skin_Friction_Coefficient",
+          "Heat_Flux",
+          "Y_Plus",
+          "Eddy_Viscosity"
+        ],
+        "source_field_sha256": "0cf2d534705e9d76204b48f6098b63a0ad6aa1e304be0d2a49e60f0fb95b7f19",
+        "source_surface_sha256": "bf3db658bd9fd48614d06b72aea8e9cd02f727afb274529cb484e3de359199e7"
+      },
+      "curve_errors": [
+        {
+          "code": "CFL3D",
+          "points": 447,
+          "invalid_points": 0,
+          "window_points": 349,
+          "relative_L2_window": 0.0033332916824541604,
+          "relative_L2_all_points": 0.1781519726893634,
+          "max_absolute_error_all_valid": 0.01281009164718206,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\Cf_vs_CFL3D.csv"
+        },
+        {
+          "code": "FUN3D",
+          "points": 447,
+          "invalid_points": 0,
+          "window_points": 349,
+          "relative_L2_window": 0.003633746701127982,
+          "relative_L2_all_points": 0.09588249384344065,
+          "max_absolute_error_all_valid": 0.00675491186544928,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\Cf_vs_FUN3D.csv"
+        }
+      ],
+      "same_grid_reference": [
+        {
+          "code": "CFL3D",
+          "same_grid_cells": 52224,
+          "Cf_reference_same_grid": 0.00270673749,
+          "Cf_relative_difference_same_grid": 0.003815360695504255,
+          "CD_reference_same_grid": 0.00286130951,
+          "CD_relative_difference_same_grid": 0.0016204723689609013,
+          "Cf_relative_difference_finest_reference": 0.004229394135695674
+        },
+        {
+          "code": "FUN3D",
+          "same_grid_cells": 52224,
+          "Cf_reference_same_grid": 0.00270448474835251,
+          "Cf_relative_difference_same_grid": 0.004651503946379254,
+          "CD_reference_same_grid": 0.002847933,
+          "CD_relative_difference_same_grid": 0.0030688351867829144,
+          "Cf_relative_difference_finest_reference": 0.004309870442930741
+        }
+      ],
+      "velocity_errors": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.970084048409,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.0014427258885287666
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.89260382828,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.0012253494528550147
+        }
+      ],
+      "eddy_viscosity_errors": [
+        {
+          "code": "CFL3D",
+          "reference_x_m": 0.9701266289,
+          "native_x_m": 0.970084048409,
+          "points": 384,
+          "invalid_points": 0,
+          "relative_L2": 0.005636851332297946
+        },
+        {
+          "code": "FUN3D",
+          "reference_x_m": 0.97,
+          "native_x_m": 0.970084048409,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.005022350502370833
+        }
+      ],
+      "screens": {
+        "iteration": false,
+        "max_yplus": true,
+        "Cf_scalar_both_finest_codes": true,
+        "Cf_curve_both_codes": true,
+        "velocity_both_stations": true,
+        "mut_both_codes": true
+      },
+      "role_gate_passed": false
+    },
+    "fine_nested": {
+      "field_audit": {
+        "role": "fine_nested",
+        "matched": {
+          "field_iteration": 800,
+          "terminal_history_iteration": 925,
+          "CL": -0.000640668315,
+          "CD": 0.00284690087,
+          "rms[Rho]": -9.366385192,
+          "rms[nu]": -9.764415392,
+          "last100_samples": 100,
+          "CD_last100_range": 3.4266399999991273e-07
+        },
+        "native_status": {
+          "started_utc": "2026-10-25T19:11:21.883016+00:00",
+          "ended_utc": "2026-10-25T19:16:22.150896+00:00",
+          "exit_code": 1,
+          "seconds": 300.26499999995576,
+          "stop_reason": "time_budget_exceeded",
+          "peak_working_set_GiB": 0.2892799377441406,
+          "budget_s": 300,
+          "command": [
+            "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+            "case.cfg",
+            "-t",
+            "4"
+          ]
+        },
+        "wall_points": 225,
+        "max_yplus": 0.25811147689819336,
+        "all_wall_yplus_below1": true,
+        "Cf_x0p97008": 0.0027097468508241462,
+        "CD_independent_trapezoid": 0.002846900858901837,
+        "CD_integration_relative_difference": 3.898331324414528e-09,
+        "iterative_gate": false,
+        "profiles": [
+          {
+            "requested_x_m": 0.97008,
+            "actual_x_m": 0.970084048409,
+            "column": 224,
+            "invalid_samples": 0,
+            "coordinate_mapping_max_m": 3.630594873179859e-08,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\profile_x0.97008.csv"
+          },
+          {
+            "requested_x_m": 1.90334,
+            "actual_x_m": 1.89260382828,
+            "column": 267,
+            "invalid_samples": 0,
+            "coordinate_mapping_max_m": 5.3942996261563e-08,
+            "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\profile_x1.90334.csv"
+          }
+        ],
+        "negative_nu_tilde_nodes": 0,
+        "native_arrays": [
+          "Density",
+          "Momentum",
+          "Energy",
+          "Nu_Tilde",
+          "Pressure",
+          "Temperature",
+          "Mach",
+          "Pressure_Coefficient",
+          "Velocity",
+          "Laminar_Viscosity",
+          "Skin_Friction_Coefficient",
+          "Heat_Flux",
+          "Y_Plus",
+          "Eddy_Viscosity"
+        ],
+        "source_field_sha256": "3481486cc38dec4af0f520e4a001eb644b24bbb0d64bb65d2aa0cb07a3541382",
+        "source_surface_sha256": "fe6cd239f62c3bb2fc96f7b49cac9850939904e585180427fee7751d5b3e9807"
+      },
+      "curve_errors": [
+        {
+          "code": "CFL3D",
+          "points": 447,
+          "invalid_points": 0,
+          "window_points": 349,
+          "relative_L2_window": 0.001525292473471854,
+          "relative_L2_all_points": 0.1784824179298258,
+          "max_absolute_error_all_valid": 0.012826725461626975,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\Cf_vs_CFL3D.csv"
+        },
+        {
+          "code": "FUN3D",
+          "points": 447,
+          "invalid_points": 0,
+          "window_points": 349,
+          "relative_L2_window": 0.0018372512388776076,
+          "relative_L2_all_points": 0.09623590061582521,
+          "max_absolute_error_all_valid": 0.0067715456790625045,
+          "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\Cf_vs_FUN3D.csv"
+        }
+      ],
+      "same_grid_reference": [
+        {
+          "code": "CFL3D",
+          "same_grid_cells": 52224,
+          "Cf_reference_same_grid": 0.00270673749,
+          "Cf_relative_difference_same_grid": 0.0011118037250616997,
+          "CD_reference_same_grid": 0.00286130951,
+          "CD_relative_difference_same_grid": 0.005035680323866809,
+          "Cf_relative_difference_finest_reference": 0.0015247220568008757
+        },
+        {
+          "code": "FUN3D",
+          "same_grid_cells": 52224,
+          "Cf_reference_same_grid": 0.00270448474835251,
+          "Cf_relative_difference_same_grid": 0.00194569500709596,
+          "CD_reference_same_grid": 0.002847933,
+          "CD_relative_difference_same_grid": 0.0003624137225138879,
+          "Cf_relative_difference_finest_reference": 0.0016049816187162502
+        }
+      ],
+      "velocity_errors": [
+        {
+          "requested_x_m": 0.97008,
+          "actual_x_m": 0.970084048409,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.001161324674172227
+        },
+        {
+          "requested_x_m": 1.90334,
+          "actual_x_m": 1.89260382828,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.0006443709849674201
+        }
+      ],
+      "eddy_viscosity_errors": [
+        {
+          "code": "CFL3D",
+          "reference_x_m": 0.9701266289,
+          "native_x_m": 0.970084048409,
+          "points": 384,
+          "invalid_points": 0,
+          "relative_L2": 0.007344360797919647
+        },
+        {
+          "code": "FUN3D",
+          "reference_x_m": 0.97,
+          "native_x_m": 0.970084048409,
+          "points": 385,
+          "invalid_points": 0,
+          "relative_L2": 0.006751461628505586
+        }
+      ],
+      "screens": {
+        "iteration": false,
+        "max_yplus": true,
+        "Cf_scalar_both_finest_codes": true,
+        "Cf_curve_both_codes": true,
+        "velocity_both_stations": true,
+        "mut_both_codes": true
+      },
+      "role_gate_passed": false
+    }
+  },
+  "mesh_sensitivity": {
+    "Cf_change": 0.0006521744463985346,
+    "CD_change": 0.0036422416821302317,
+    "valid_discretization_error_estimate": false,
+    "reason": "Medium and fine iterative gates failed. Small differences cannot close convergence."
+  },
+  "nested_initialization_effect": {
+    "common_iteration": 400,
+    "density_log10_gain": 2.5774696589999992,
+    "effect_passed": true,
+    "physical_qualification_passed": false
+  },
+  "comparison_definitions": {
+    "relative_L2": "unweighted norm(pred-reference)/norm(reference), all invalid samples retained; any invalid sample prevents score",
+    "source_velocity_normalization": "Reference variable u interpreted as u/Uinf: nominal outer u≈1; native SI speed divided by registered freestream. This interpretation is explicit, not a measured velocity in m/s.",
+    "source_mut_normalization": "TMR page explicitly specifies eddy viscosity normalized by freestream laminar viscosity",
+    "curve": "Source finest545x385 Cf curves vs each native mesh; scalar same-grid values separately reported",
+    "profile_positions": "Native actual coordinate and CFL3D/FUN3D reference x positions recorded; near0.97 is not exact identical x."
+  },
+  "reference_sha256": {
+    "cf_plate.dat": "f2995d18cb4f5d603f63ecfe609044844ef45fb3af3a7373923048eb3d364577",
+    "cf_convergence.dat": "966a9f9c8036c3c6d8a1f2c4f1744b6a79f395f5986c8a2b37941803faf67695",
+    "drag_convergence.dat": "c665787fdcd2257da8552973fe373e2f037e055d39e0d148c21f473d5a46bc39",
+    "mut_0.97.dat": "939e494d5f9e1c19705849971c59d218b4ee3fb57497a0101136a8cb9a5846fb",
+    "flatplate_u.dat": "cc8ed1a4e6320f8a198f4eae2f10170113496bb6adf976241fccf60b44a86894"
+  },
+  "guard_checks": {
+    "analytic_identity": true,
+    "invalid_profile_not_scored": true,
+    "out_of_domain_no_extrapolation": true
+  },
+  "GCI": null,
+  "not_blind": true,
+  "experiment_compared": false,
+  "scoped_implementation_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "conclusion": "Some local code-agreement screens pass, but not all required iterative/profile gates. No proof that M6 discrepancy is solely mesh/numerics or solely SA implementation."
+}

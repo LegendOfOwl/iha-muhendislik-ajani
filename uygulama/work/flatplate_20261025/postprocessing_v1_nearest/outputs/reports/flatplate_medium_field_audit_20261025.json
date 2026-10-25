@@ -1,0 +1,72 @@
+{
+  "role": "medium",
+  "matched": {
+    "field_iteration": 3600,
+    "terminal_history_iteration": 3716,
+    "CL": -0.0006416878432,
+    "CD": 0.002846305903,
+    "rms[Rho]": -9.47084987,
+    "rms[nu]": -12.05551051,
+    "last100_samples": 100,
+    "CD_last100_range": 1.6400000003857773e-09
+  },
+  "native_status": {
+    "started_utc": "2026-10-25T18:56:49.879758+00:00",
+    "ended_utc": "2026-10-25T19:01:50.133361+00:00",
+    "exit_code": 1,
+    "seconds": 300.25,
+    "stop_reason": "time_budget_exceeded",
+    "peak_working_set_GiB": 0.08071517944335938,
+    "budget_s": 300,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "wall_points": 113,
+  "max_yplus": 0.48224198818206787,
+  "all_wall_yplus_below1": true,
+  "Cf_x0p97008": 0.0027152938245855354,
+  "CD_independent_trapezoid": 0.002846305895435634,
+  "CD_integration_relative_difference": 2.6576081335605295e-09,
+  "iterative_gate": false,
+  "profiles": [
+    {
+      "requested_x_m": 0.97008,
+      "actual_x_m": 0.970084048409,
+      "column": 112,
+      "invalid_samples": 0,
+      "coordinate_mapping_max_m": 3.630594873179859e-08,
+      "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\profile_x0.97008.csv"
+    },
+    {
+      "requested_x_m": 1.90334,
+      "actual_x_m": 1.91408306262,
+      "column": 134,
+      "invalid_samples": 0,
+      "coordinate_mapping_max_m": 6.509348286129906e-08,
+      "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\profile_x1.90334.csv"
+    }
+  ],
+  "negative_nu_tilde_nodes": 0,
+  "native_arrays": [
+    "Density",
+    "Momentum",
+    "Energy",
+    "Nu_Tilde",
+    "Pressure",
+    "Temperature",
+    "Mach",
+    "Pressure_Coefficient",
+    "Velocity",
+    "Laminar_Viscosity",
+    "Skin_Friction_Coefficient",
+    "Heat_Flux",
+    "Y_Plus",
+    "Eddy_Viscosity"
+  ],
+  "source_field_sha256": "59b9602d5b3400f5d6f08aba0f9c238bd2a9532a2a0bee8f071e50e0bd98a8e7",
+  "source_surface_sha256": "6400396719933c0e50e856a5f28841ef8e36c13eac4d412308d12c735f6cf32b"
+}

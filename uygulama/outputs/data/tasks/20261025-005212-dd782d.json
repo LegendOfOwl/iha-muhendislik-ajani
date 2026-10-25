@@ -1,0 +1,85 @@
+{
+  "id": "20261025-005212-dd782d",
+  "request": "CFD doğruluğu literatür araştırması: arXiv, hazır ONERA M6/RAE doğrulamaları ve yerel kurulum farklarının kaynaklı ayrıntılı karşılaştırması",
+  "kind": "qualification",
+  "created_utc": "2026-10-24T21:52:12.408711+00:00",
+  "status": "tamamlandı",
+  "phase": "kaynaklı yöntem araştırması",
+  "acceptance": [
+    "Birincil kaynaklar ve arXiv metinlerinin yöntem/başarı tanımlarıyla araştırılması",
+    "Yerel M6/RAE ile koşul, geometri, yöntem ve doğrulama derinliği karşılaştırması",
+    "Mevcut ham geçmiş/271 nokta CSV ve dosya mühürleriyle yerel iddiaların yeniden denetimi",
+    "Sınanmamış öneriler ve genel fizik kabulü ayrılarak uygulanabilir öncelik raporu"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs/reports/cfd_dogrulugu_literatur_20261025.md",
+      "sha256": "bb36554f0d05b3af3ce7b3d7f8ba80da64101ff2f78547fa1a43c490298c779b"
+    },
+    {
+      "path": "outputs/reports/cfd_dogrulugu_literatur_20261025.html",
+      "sha256": "3e4f8fc430ceeff56798dbde5ae5bf5d805a43c3828cf821a719f0859bca80f2"
+    },
+    {
+      "path": "outputs/reports/cfd_literatur_yerel_kiyas_20261025.json",
+      "sha256": "efc3152d5749636e4f698e716ef740539d12455eb3924e6833e52e6935b8a3d5"
+    },
+    {
+      "path": "work/cfd_literature_20261025/sources/manifest.json",
+      "sha256": "2b5dcf04102d732ea2d0f6aa3f4f64f96ef07d72443b5eb9d7a4cb34fe52e68d"
+    },
+    {
+      "path": "outputs/plots/m6_literatur_kesit_hatalari_20261025.png",
+      "sha256": "8e4b0309a195392c8e90018cd6b09e1dcb27e530e59d999b44e1a1285b290d18"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+  },
+  "project_id": "proje-e9319baef1",
+  "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+  "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+  "project_output_root": "outputs/projects/proje-e9319baef1",
+  "project_snapshot": {
+    "id": "proje-e9319baef1",
+    "name": "NASA ONERA M6 CFD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e9319baef1",
+    "data_root": "outputs/projects/proje-e9319baef1/data/project",
+    "created_utc": "2026-10-19T08:02:06.291509+00:00",
+    "active_cad": null
+  },
+  "completed_utc": "2026-10-24T22:09:20.085565+00:00",
+  "scope": "Araştırma ve mevcut kanıt denetimi tamamlandı; yeni CFD, ağ üretimi veya model kurulumu yapılmadı.",
+  "engineering_open_items": [
+    "Genel M6/RAE fizik kabulü false; bölgesel ağ, yakınsama, sistematik aile, uzak alan ve deney kapıları açık.",
+    "Resmî Fortran üreteci yalnız indirildi/incelendi; derlenmedi ve ağ üretilmedi.",
+    "Makalelerdeki ajan sonuçları yerelde yeniden üretilmedi."
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "applied_lesson_ids": [
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "R03"
+  ]
+}

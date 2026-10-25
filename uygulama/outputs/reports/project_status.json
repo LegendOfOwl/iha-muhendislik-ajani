@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24T13:59:48.220200+00:00",
+  "timestamp": "2026-10-25T19:24:23.649148+00:00",
   "scope": "Mühendislik araçları ve iş akışı; gerçek İHA aşamaları aşağıda ayrı izlenir.",
   "aircraft_feasibility": "henüz değerlendirilemedi",
   "missing_mission_inputs": [
@@ -83,7 +83,7 @@
       "report": "outputs/reports/test_results.json",
       "passed": true,
       "quality_passed": null,
-      "timestamp": "2026-10-24T16:55:26.925630+03:00"
+      "timestamp": "2026-10-25T00:04:24.564578+03:00"
     },
     {
       "suite": "native",
@@ -180,6 +180,11 @@
       "passed": true,
       "quality_passed": null,
       "timestamp": "2026-10-19T07:35:14.811633+00:00"
+    },
+    {
+      "suite": "reliability",
+      "report": "outputs/reports/reliability_audit.json",
+      "passed": null
     }
   ],
   "tasks": [
@@ -1389,6 +1394,712 @@
       "engineering_work_remaining": [
         "Görülmemiş görevlerde önce/sonra LLM davranış kıyası",
         "Açık RAE/M6 sayısal, ağ ve deney kapıları"
+      ]
+    },
+    {
+      "id": "20261024-170508-83546a",
+      "request": "Tüm proje çalışmalarını sürümlü, kategorilere ayrılmış ve hassas bilgi taraması yapılmış yeni public iha-muhendislik-ajani GitHub deposuna yayımla",
+      "kind": "publication",
+      "created_utc": "2026-10-24T14:05:08.814735+00:00",
+      "status": "tamamlandı",
+      "phase": "sürümlü GitHub yayını",
+      "acceptance": [
+        "Yeni public repo ve kategori erişimi",
+        "Açık geriye dönük sürüm grupları, 10 commit/tag/release",
+        "Ham dosyalar ve kod SHA256 korunması",
+        "Hesap/kimlik dosyalarını dışarıda bırakma",
+        "Tüm yayın varlıklarının sunucu hashleri ve uzak commitlerin doğrulanması"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs/reports/github_yayini_20261024.html",
+          "sha256": "39eb185730d028ad0ac1c1a9b3339cebf66273d094a8b64096bba3adb77a3beb"
+        },
+        {
+          "path": "outputs/reports/github_local_verification_20261024.json",
+          "sha256": "a253ef9f71b83cb179f41a1811d9718945b2849dc715ba2dce631a60d3742f50"
+        },
+        {
+          "path": "outputs/data/github_publication_20261024.json",
+          "sha256": "69f41265fad20a5c193957d9fcd5067b7889b31d92416b7d7241e2762cb330fe"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+      },
+      "project_id": "qualification",
+      "project_manifest": "outputs\\data\\projects\\qualification.json",
+      "project_data_root": "outputs/data/qualification",
+      "project_output_root": "outputs",
+      "project_snapshot": {
+        "id": "qualification",
+        "name": "Araç doğrulama örnekleri",
+        "kind": "qualification",
+        "artifact_root": "outputs",
+        "data_root": "outputs/data/qualification",
+        "created_utc": "2026-10-19T07:06:12.206479+00:00",
+        "active_cad": null
+      },
+      "completed_utc": "2026-10-24T19:59:48.959103+00:00",
+      "repository_url": "https://github.com/LegendOfOwl/iha-muhendislik-ajani",
+      "repository_visibility": "public",
+      "release": "v0.10.0",
+      "local_repository": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\iha-muhendislik-ajani",
+      "source_snapshot_utc": "2026-10-24T14:23:46.751661+00:00",
+      "historical_versions_reconstructed": true,
+      "original_git_history_available": false,
+      "expert_qualification_passed": false,
+      "minimum_physical_qualification_passed": false,
+      "completion_scope": "İstenen yeni public depoda kaynak, rapor, CAD ve ham analiz arşivlerinin sürümlü yayını; mühendislik kabulleri ayrı"
+    },
+    {
+      "id": "20261024-235336-d874a2",
+      "request": "Kaynak araştırması ve kanıt odaklı yöntemle güvenilirlik geliştirme: M6 aynı restart doğrusal çözücü kontrolü, otomatik teşhis ve bölgesel hata göstergesi",
+      "kind": "qualification",
+      "created_utc": "2026-10-24T20:53:36.097906+00:00",
+      "status": "tamamlandı",
+      "phase": "araç doğrulama",
+      "acceptance": [
+        "Kaynaklı yöntem araştırması",
+        "Aynı kaynakla mühürlü tek değişkenli native karşılaştırma",
+        "Yanlış kabulü durduran ve sonraki denemeyi gerekçelendiren denetçi",
+        "Gerçek alanla konumsal gösterge; hata bandı ve fizik kabulüyle karıştırmama",
+        "Başarısızlıklar ve açık kapılar dahil rapor"
+      ],
+      "blocked_by": [
+        "M6 yoğunluk artığı mevcut iteratif eşiği geçmedi.",
+        "Genel fizik kabulü: bölgesel ağ, üç sistematik ağ, uzak alan ve deney kapıları açık."
+      ],
+      "evidence": [
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_linear_pair_20261024.json",
+          "sha256": "4fc79f79c5dc2515e73e16ec5cf10f0e9eae71c8b59e3351185c47e1b0054662"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_cfl_feedback_20261025.json",
+          "sha256": "d09b70ea2afb364823d5f311544d7d7ca9c228bb20f945ededbda13c82abfc35"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_curvature_20261024.json",
+          "sha256": "39dd60515902a8a07d2e58248e2aaabad773a289c0d2b1a9294c513e5b601020"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\m6_curvature_v2_20261025.json",
+          "sha256": "e8de7a9c4b9fe920fe88eb8e4c4f753a5688441b2afdf016d8bc090ddf5c2b24"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\reliability_integrity_20261025.json",
+          "sha256": "d42700e0f989cbb18325fa203cd816e07f7fcaac697a150dcc60114c49df2c8e"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\reliability_audit.json",
+          "sha256": "0de5e1deb2ae56547ffeabaf27b05f2114dc2992c1a40b96d09fe878a37d156f"
+        },
+        {
+          "path": "outputs\\reports\\reliability_method_tests.json",
+          "sha256": "5fe612bc90c30ef32b55da86a7296d5782ddc4be72e296ffdae18691957d8946"
+        },
+        {
+          "path": "outputs\\reports\\guvenilirlik_gelistirme_20261025.html",
+          "sha256": "a3a09106a05f3f5903c97825c3bff052e1beb7c2799a874906d26e8c5dcb64e0"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\guvenilirlik_gelistirme_20261025.html",
+          "sha256": "3db2cb018cbbecd5ba212ab4579d9ea091b3ea1abd957cc8c428304423c9c195"
+        },
+        {
+          "path": "outputs\\reports\\agent_learning_checks_20261025.json",
+          "sha256": "adf2b83091ff3a4d91b5e13df29018fe82905809a08725181835c3ce473d0ecd"
+        },
+        {
+          "path": "outputs\\reports\\agent_guard_report_preservation_20261025.json",
+          "sha256": "9a51cbf9504876d6a160c019fe1d5753c79c121f117ca3e287afbefcc5d85a89"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+      },
+      "project_id": "proje-e9319baef1",
+      "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+      "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+      "project_output_root": "outputs/projects/proje-e9319baef1",
+      "project_snapshot": {
+        "id": "proje-e9319baef1",
+        "name": "NASA ONERA M6 CFD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e9319baef1",
+        "data_root": "outputs/projects/proje-e9319baef1/data/project",
+        "created_utc": "2026-10-19T08:02:06.291509+00:00",
+        "active_cad": null
+      },
+      "applied_lesson_ids": [
+        "L03",
+        "L04",
+        "L05",
+        "L07",
+        "L08",
+        "L09"
+      ],
+      "agent_instruction_snapshot": {
+        "version": "2026-10-24.1",
+        "files": {
+          "AGENTS.md": "8c2b2924456c01f1e0260a5c626fffdabd89869be0f54426ebac45ada2150529",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false
+      },
+      "experiment_contract": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\contract.json",
+      "updated_agent_instruction_snapshot": {
+        "version": "2026-10-24.1",
+        "files": {
+          "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+          "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false,
+        "reliability_policy_version": "2026-10-25.1"
+      },
+      "applied_reliability_policy": "2026-10-25.1",
+      "reviewer_ledger": "outputs\\data\\agent_learning\\reviewer_ledger_v2_20261025.json",
+      "finished_utc": "2026-10-24T21:26:17.017693+00:00",
+      "bounded_development_iteration_completed": true,
+      "minimum_physical_qualification_passed": false
+    },
+    {
+      "id": "20261025-005212-dd782d",
+      "request": "CFD doğruluğu literatür araştırması: arXiv, hazır ONERA M6/RAE doğrulamaları ve yerel kurulum farklarının kaynaklı ayrıntılı karşılaştırması",
+      "kind": "qualification",
+      "created_utc": "2026-10-24T21:52:12.408711+00:00",
+      "status": "tamamlandı",
+      "phase": "kaynaklı yöntem araştırması",
+      "acceptance": [
+        "Birincil kaynaklar ve arXiv metinlerinin yöntem/başarı tanımlarıyla araştırılması",
+        "Yerel M6/RAE ile koşul, geometri, yöntem ve doğrulama derinliği karşılaştırması",
+        "Mevcut ham geçmiş/271 nokta CSV ve dosya mühürleriyle yerel iddiaların yeniden denetimi",
+        "Sınanmamış öneriler ve genel fizik kabulü ayrılarak uygulanabilir öncelik raporu"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs/reports/cfd_dogrulugu_literatur_20261025.md",
+          "sha256": "bb36554f0d05b3af3ce7b3d7f8ba80da64101ff2f78547fa1a43c490298c779b"
+        },
+        {
+          "path": "outputs/reports/cfd_dogrulugu_literatur_20261025.html",
+          "sha256": "3e4f8fc430ceeff56798dbde5ae5bf5d805a43c3828cf821a719f0859bca80f2"
+        },
+        {
+          "path": "outputs/reports/cfd_literatur_yerel_kiyas_20261025.json",
+          "sha256": "efc3152d5749636e4f698e716ef740539d12455eb3924e6833e52e6935b8a3d5"
+        },
+        {
+          "path": "work/cfd_literature_20261025/sources/manifest.json",
+          "sha256": "2b5dcf04102d732ea2d0f6aa3f4f64f96ef07d72443b5eb9d7a4cb34fe52e68d"
+        },
+        {
+          "path": "outputs/plots/m6_literatur_kesit_hatalari_20261025.png",
+          "sha256": "8e4b0309a195392c8e90018cd6b09e1dcb27e530e59d999b44e1a1285b290d18"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+      },
+      "project_id": "proje-e9319baef1",
+      "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+      "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+      "project_output_root": "outputs/projects/proje-e9319baef1",
+      "project_snapshot": {
+        "id": "proje-e9319baef1",
+        "name": "NASA ONERA M6 CFD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e9319baef1",
+        "data_root": "outputs/projects/proje-e9319baef1/data/project",
+        "created_utc": "2026-10-19T08:02:06.291509+00:00",
+        "active_cad": null
+      },
+      "completed_utc": "2026-10-24T22:09:20.085565+00:00",
+      "scope": "Araştırma ve mevcut kanıt denetimi tamamlandı; yeni CFD, ağ üretimi veya model kurulumu yapılmadı.",
+      "engineering_open_items": [
+        "Genel M6/RAE fizik kabulü false; bölgesel ağ, yakınsama, sistematik aile, uzak alan ve deney kapıları açık.",
+        "Resmî Fortran üreteci yalnız indirildi/incelendi; derlenmedi ve ağ üretilmedi.",
+        "Makalelerdeki ajan sonuçları yerelde yeniden üretilmedi."
+      ],
+      "agent_instruction_snapshot": {
+        "version": "2026-10-24.1",
+        "files": {
+          "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+          "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false,
+        "reliability_policy_version": "2026-10-25.1"
+      },
+      "applied_lesson_ids": [
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "R03"
+      ]
+    },
+    {
+      "id": "20261025-011533-2114a3",
+      "request": "Resmî TMR ONERA M6 üreteci: taşınabilir derleme, kaynak geometri ve üç sistematik ağ kontrolü; bütçeli native SU2 kaynak vaka sınaması",
+      "kind": "qualification",
+      "created_utc": "2026-10-24T22:15:33.159414+00:00",
+      "status": "tamamlandı",
+      "phase": "sınırlı kaynak ve yöntem denemesi kapandı",
+      "acceptance": [
+        "Özgün kaynak programların yerel derlenmesi ve gerçek çalışması",
+        "Üç sistematik kaynak ağının topoloji/geometri/bölgesel ölçüleri",
+        "Bütçeli native çözümler ve dondurulmuş ham çıktılar",
+        "Kaynak koşullarına bağlı karşılaştırma ve açık kabullerle rapor"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\00_tmr_source_case_review_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_mesh_family_20261025.json",
+          "sha256": "6fe14e82659f3c54e16cc82142288ffebe856d8178a18aa806af5c4f48c42759",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\01_tmr_mesh_family_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\02_tmr_source_CAD_boundary_v2_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_integrity_20261025.json",
+          "sha256": "c9a70706168653d78ba339bb8c2b7916b3a5276fc9481018d3c4f3de18a073cd",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\03_tmr_integrity_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_MG_control_20261025.json",
+          "sha256": "cb5d350850de0087956864893839d87c9d946a16b03d002777fdae26a4d11cb0",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\04_tmr_MG_control_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_nested_initialization_20261025.json",
+          "sha256": "e94c5b59efcc73cbe45c15552aae31a453050152aad1c61024dd69ad3f75ad7c",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\05_tmr_nested_initialization_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_linelet_control_20261025.json",
+          "sha256": "39314717898d067bfe60497bbcdd72f1ee540ef356747859a85ae38fe3794ea6",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\06_tmr_linelet_control_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\contract.json",
+          "sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\07_contract.json"
+        },
+        {
+          "path": "work\\setup\\tmr_m6_install.json",
+          "sha256": "1afdb4c124f99a5471e7ef6e9d1fcf5b81520a01885c0c09ead082f42fdf375d",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\08_tmr_m6_install.json"
+        },
+        {
+          "path": "work\\tmr_m6_20261025\\sources_current_inventory.json",
+          "sha256": "37020655cb6286ab97dc45db7353e25b50025fc442ad878cdc9982a68816dd1f",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\09_sources_current_inventory.json"
+        },
+        {
+          "path": "outputs\\data\\agent_learning\\reviewer_ledger_tmr_surface_20261025.json",
+          "sha256": "17612ff379798cba3ac774ba9d2fb363d4dccbe80007b631bfb3bfdf70fce9d5",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\10_reviewer_ledger_tmr_surface_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_coarse_field_checks_v3_20261025.json",
+          "sha256": "6c5ff13c91933854c97460687ace1a13c1326971bf9242a8d650546e1a04bb72",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\11_tmr_coarse_field_checks_v3_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\experiment_comparison.csv",
+          "sha256": "ea29dd03e990283a995aa52a7234296abfc36374a18d04d9ce8ebefc6f0ed114",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\12_experiment_comparison.csv"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_coarse\\prediction_frozen.json",
+          "sha256": "f9a9351d00ab9d408e8565bb339a09a90b9dd2d262c72dfbc1e975383ec19b2f",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\13_prediction_frozen.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_medium_field_checks_v3_20261025.json",
+          "sha256": "60531491d95a55689aa94929287c38088283ca823205a99d34908ead0a9e56d4",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\14_tmr_medium_field_checks_v3_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\medium\\experiment_comparison.csv",
+          "sha256": "3666d21032fb7cae84d98fd33949ae6d24fd3659cfeb8f0423e8247e1cb888f4",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\15_experiment_comparison.csv"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_medium\\prediction_frozen.json",
+          "sha256": "ab2d34a333309f2ab25d2f40435f7afa7a0abf865ba1db9dc66fd8815ab98466",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\16_prediction_frozen.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_fine_field_checks_v3_20261025.json",
+          "sha256": "9a9ee8928bcca91479d84fa2d05de7466aa30170ee05887f6dfada6e58ef23ed",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\17_tmr_fine_field_checks_v3_20261025.json"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\fine\\experiment_comparison.csv",
+          "sha256": "ee34629316f35b6537a491dcc75dcd9cc4fd6ff43a0a044c0fab0a3d728fdafa",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\18_experiment_comparison.csv"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\prediction_frozen.json",
+          "sha256": "0872be1f3d4d22d79633686164eb1bf8ce0d884e82d619be2b269c574e49fa99",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\19_prediction_frozen.json"
+        },
+        {
+          "path": "outputs\\reports\\tmr_m6_kaynak_ve_yontem_20261025.html",
+          "sha256": "17552eeb7089fa11d6d6dfeb7d965c464f035189bea44bc5eba33db1a16e8192",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\20_tmr_m6_kaynak_ve_yontem_20261025.html"
+        },
+        {
+          "path": "outputs\\reports\\tmr_m6_kaynak_ve_yontem_20261025.md",
+          "sha256": "45ea1e3a97eef31e1354b45c688546e5b3756deb31f0d3a832ff331aa0c6ee20",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\21_tmr_m6_kaynak_ve_yontem_20261025.md"
+        },
+        {
+          "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_source_batch_closed_20261025.json",
+          "sha256": "bc9482297b895964f4d0c89ce2cb1b1f1a083614e1547a25ae15fcee3f15ceb6",
+          "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\22_tmr_source_batch_closed_20261025.json"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+        "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+        "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+      },
+      "project_id": "proje-e9319baef1",
+      "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+      "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+      "project_output_root": "outputs/projects/proje-e9319baef1",
+      "project_snapshot": {
+        "id": "proje-e9319baef1",
+        "name": "NASA ONERA M6 CFD doğrulaması",
+        "kind": "qualification",
+        "artifact_root": "outputs/projects/proje-e9319baef1",
+        "data_root": "outputs/projects/proje-e9319baef1/data/project",
+        "created_utc": "2026-10-19T08:02:06.291509+00:00",
+        "active_cad": null
+      },
+      "applied_lesson_ids": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "R01",
+        "R03",
+        "L10",
+        "L11"
+      ],
+      "agent_instruction_snapshot": {
+        "version": "2026-10-24.1",
+        "files": {
+          "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+          "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false,
+        "reliability_policy_version": "2026-10-25.1"
+      },
+      "contract": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\contract.json",
+      "contract_sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+      "agent_instruction_snapshot_after_correction": {
+        "version": "2026-10-25.1",
+        "files": {
+          "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "5889934b15f273ec8e285dd0039e3aac77d6b3c571d501cd27c7aa2d499b7a2d",
+          "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false,
+        "reliability_policy_version": "2026-10-25.1"
+      },
+      "agent_instruction_snapshot_after_surface_correction": {
+        "version": "2026-10-25.2",
+        "files": {
+          "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+          "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false,
+        "reliability_policy_version": "2026-10-25.1"
+      },
+      "completed_utc": "2026-10-25T18:58:57.506946+00:00",
+      "result_scope": "Bounded integration and diagnostic batch; physical qualification false",
+      "minimum_physical_qualification_passed": false,
+      "open_engineering_checks": [
+        "iterative convergence",
+        "regional BL/TE/tip/wake",
+        "separate farfield sensitivity",
+        "experimental acceptance",
+        "independent-code grid-asymptotic comparison"
+      ]
+    },
+    {
+      "id": "20261025-215442-4b9487",
+      "request": "NASA TMR kaynak düz plaka ağlarıyla SA-neg uygulama kontrolü: üç küçük ağ, gerçek SU2 ve kaynak Cf/profil karşılaştırması",
+      "kind": "qualification",
+      "created_utc": "2026-10-25T18:54:42.627618+00:00",
+      "status": "tamamlandı",
+      "phase": "sınırlı SA kaynak kontrolü kapandı",
+      "acceptance": [
+        "Özgün kaynak ağ ve koşulları koru",
+        "Üç sistematik ağda native çözüm ve eşlenmiş alan/geçmiş mühürleri",
+        "Referans Cf ve profil farklarını bütün noktalarla raporla; deney ve kod doğrulamasını ayır"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs\\reports\\flatplate_comparison_20261025.json",
+          "sha256": "f27659ccce85a2ba1404d2649b9382848673b60847fc3d7ed557c9e5653e5c6e",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\00_flatplate_comparison_20261025.json"
+        },
+        {
+          "path": "outputs\\reports\\flatplate_integrity_20261025.json",
+          "sha256": "e00c4c7e93e2ce12fa46b4b681789389082fa048d212d2d0a9cf795907ca1037",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\01_flatplate_integrity_20261025.json"
+        },
+        {
+          "path": "outputs\\reports\\flatplate_ILU_control_20261025.json",
+          "sha256": "ed7d5989681813c6d52771eee1a1bdb0c479ac5771ab441ed12bc588c480cf0b",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\02_flatplate_ILU_control_20261025.json"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\contract.json",
+          "sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\03_contract.json"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_seed\\contract.json",
+          "sha256": "e58994761bd9b176ef378c70677327e5551bd737959481b1fd3d1238e4b7df9f",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\04_contract.json"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_seed\\transfer.json",
+          "sha256": "b40659c280bd9d46890877ac4f7b79cee13ccaec488954f09a19ce56719a3dd2",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\05_transfer.json"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_seed\\support_check_v4.json",
+          "sha256": "205819da19767777fb68bc7baac45723c1000b902adfc9db3a113f0860404632",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\06_support_check_v4.json"
+        },
+        {
+          "path": "work\\flatplate_20261025\\sources\\input_sources_manifest.json",
+          "sha256": "652d70e8548d4b8918de66514cc1af9ff80b0b804cfa06cddcef2d4524430e7e",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\07_input_sources_manifest.json"
+        },
+        {
+          "path": "work\\flatplate_20261025\\sources\\reference_manifest.json",
+          "sha256": "c8e529cb92f33921178bf7c96ec0279e293e81fd7600e8001ce4924d1d205277",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\08_reference_manifest.json"
+        },
+        {
+          "path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\manifest.json",
+          "sha256": "28555fd5ce92fb05b3116a33cd5cff0316cf0bf901af1362a029d00b38c20ff3",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\09_manifest.json"
+        },
+        {
+          "path": "outputs\\data\\agent_learning\\reviewer_ledger_flatplate_20261025.json",
+          "sha256": "5d77542c077ecce20826e679984bc25f49958fa0e192f04d06efa46a1b02f2a8",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\10_reviewer_ledger_flatplate_20261025.json"
+        },
+        {
+          "path": "outputs\\reports\\flatplate_coarse_field_audit_20261025.json",
+          "sha256": "58d33d329f42944760ad54f7b77f44e4ca144c60b71bf554af754af75cd212e3",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\11_flatplate_coarse_field_audit_20261025.json"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\coarse\\prediction_frozen.json",
+          "sha256": "3a88d22b3329b95a142838bc47aff914ef6593a4c9648f626bd2480b4aef5bb5",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\12_prediction_frozen.json"
+        },
+        {
+          "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\Cf_vs_CFL3D.csv",
+          "sha256": "552719b0d60a1d86fbeac698af81a3f882be9b7b89b6f7cf05b27208afc2c740",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\13_Cf_vs_CFL3D.csv"
+        },
+        {
+          "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\velocity_1.90334.csv",
+          "sha256": "3ea9592c7666018aa5b255595a9968a427831cf39cc9191f694a4946b3e01327",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\14_velocity_1.90334.csv"
+        },
+        {
+          "path": "outputs\\reports\\flatplate_medium_field_audit_20261025.json",
+          "sha256": "69a7bee275f1171bd1faee64973aadeff9e1ca95fa151d8f7e1b9cd25501187b",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\15_flatplate_medium_field_audit_20261025.json"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\medium\\prediction_frozen.json",
+          "sha256": "9b099506c51dc3a9f7122ce129a06df1b69cd3084b9ec101f00ad3765a4f07e9",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\16_prediction_frozen.json"
+        },
+        {
+          "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\Cf_vs_CFL3D.csv",
+          "sha256": "cc8078e03ecccca31467ebf4bcceee8def5def959f50bc4ee1fb531a1a7d5d8e",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\17_Cf_vs_CFL3D.csv"
+        },
+        {
+          "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\velocity_1.90334.csv",
+          "sha256": "67bf31c7726cff7419015ade29c940f67500406cdfc1ea3091548beccf715ef8",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\18_velocity_1.90334.csv"
+        },
+        {
+          "path": "outputs\\reports\\flatplate_fine_field_audit_20261025.json",
+          "sha256": "7911e342b61ab36ad94bf16059749107b6d05c6f1064a19b9e0874e1c7678be1",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\19_flatplate_fine_field_audit_20261025.json"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine\\prediction_frozen.json",
+          "sha256": "9255ba9a4aec875ea2d4fff727d559b7afe724ea92df27c428e20943dc8d5a05",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\20_prediction_frozen.json"
+        },
+        {
+          "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\Cf_vs_CFL3D.csv",
+          "sha256": "9fb17c4e123c58ef0ae8b856c8b527c140b53d357eacc0c156bb2dee44cd29e8",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\21_Cf_vs_CFL3D.csv"
+        },
+        {
+          "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\velocity_1.90334.csv",
+          "sha256": "ec36846a03f03f958300670f20f6ae5e4328fd17925e1d2334071e771b7a9e91",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\22_velocity_1.90334.csv"
+        },
+        {
+          "path": "outputs\\reports\\flatplate_fine_nested_field_audit_20261025.json",
+          "sha256": "2aa958bf6baa1be63579943e03d08c80a6b0e87d06ce46386ebf44d7faf5ad56",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\23_flatplate_fine_nested_field_audit_20261025.json"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\prediction_frozen.json",
+          "sha256": "ae2e36012b1cf2bda674f8aa644acdc7d6408fa952b019f3afa47fb03e2cc8f8",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\24_prediction_frozen.json"
+        },
+        {
+          "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\Cf_vs_CFL3D.csv",
+          "sha256": "474e460c2bc4a67312717a32a47d00c9e0e5f459faa4d11a9d574d098334a53f",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\25_Cf_vs_CFL3D.csv"
+        },
+        {
+          "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\velocity_1.90334.csv",
+          "sha256": "b5cc903baf6bdf88beddce1bf207199300053ef281124f043cd484082e539ff3",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\26_velocity_1.90334.csv"
+        },
+        {
+          "path": "outputs\\reports\\cfd_duz_plaka_ve_m6_20261025.html",
+          "sha256": "c03d2cfa61d690b7d1ccbaeffacedb5de530b526b2c7edce4b91c047e248bef8",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\27_cfd_duz_plaka_ve_m6_20261025.html"
+        },
+        {
+          "path": "outputs\\reports\\cfd_duz_plaka_ve_m6_20261025.md",
+          "sha256": "74d8dd4e1eec689fad40fcbb08944a0527e9a85e19de8339d255b1c526bd16ba",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\28_cfd_duz_plaka_ve_m6_20261025.md"
+        },
+        {
+          "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\batch_closed.json",
+          "sha256": "c4d6eb814dcb5e310c8c05c10e8af7e288c7f60c600226a880b6022761a66282",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\29_batch_closed.json"
+        },
+        {
+          "path": "outputs\\reports\\flatplate_code_snapshot_20261025.json",
+          "sha256": "96ac9fac3e3754dc49f9acd3566773301c5b864e7fb9091eb13a86ec6caf9292",
+          "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\flatplate_code_snapshot_20261025.json"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+      },
+      "project_id": "qualification",
+      "project_manifest": "outputs\\data\\projects\\qualification.json",
+      "project_data_root": "outputs/data/qualification",
+      "project_output_root": "outputs",
+      "project_snapshot": {
+        "id": "qualification",
+        "name": "Araç doğrulama örnekleri",
+        "kind": "qualification",
+        "artifact_root": "outputs",
+        "data_root": "outputs/data/qualification",
+        "created_utc": "2026-10-19T07:06:12.206479+00:00",
+        "active_cad": null
+      },
+      "applied_lesson_ids": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "R01",
+        "R03"
+      ],
+      "agent_instruction_snapshot": {
+        "version": "2026-10-25.2",
+        "files": {
+          "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+          "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false,
+        "reliability_policy_version": "2026-10-25.1"
+      },
+      "contract": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\contract.json",
+      "contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+      "completed_utc": "2026-10-25T19:23:31.251183+00:00",
+      "result_scope": "Source-code agreement diagnostic; family numerical qualification false, M6 false",
+      "scoped_qualification_passed": false,
+      "open_engineering_checks": [
+        "medium and fine iterative convergence",
+        "three converged meshes and asymptotic comparison",
+        "dimensional constant identity limitation",
+        "general3D/M6/experiment qualification remains separate"
       ]
     }
   ]

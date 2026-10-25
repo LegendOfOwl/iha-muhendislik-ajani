@@ -11,3 +11,5 @@ Asıl dosyalar uygulamanın bağıl yolları korunarak `uygulama/` içinde sakla
 - [v0.7.0 — Kaynak geometri ve ayrı analiz sınaması](v0.7.0/README.md): 70 dosya
 - [v0.8.0 — C-grid araştırması ve M6 devamı](v0.8.0/README.md): 35 dosya
 - [v0.9.0 — Hata dersleri ve ajan talimatı](v0.9.0/README.md): 8 dosya
+
+- [v0.11.0](v0.11.0/README.md)

@@ -1,0 +1,14 @@
+{
+  "invalid_nodes": [],
+  "x_tensor_error_m": 4.75693703178e-17,
+  "y_tensor_error_m": 2.0000667788622195e-12,
+  "method": "Initial-state interpolation on tensor axes within5e-12m source text rounding; shared source nodes copied exactly. Native mesh untouched.",
+  "coordinate_reproduction_max_tolerance_m": 5e-12,
+  "rejected_drafts": [
+    "exact tensor equality",
+    "index-parent support",
+    "VTK negative shape weights"
+  ],
+  "disproven_diagnosis": "Curvilinear-grid interpretation was false; measured differences are source ASCII roundoff.",
+  "native_runs_from_rejected_drafts": 0
+}

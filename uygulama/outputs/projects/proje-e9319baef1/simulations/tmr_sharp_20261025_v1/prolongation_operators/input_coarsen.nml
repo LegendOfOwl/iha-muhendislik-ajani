@@ -1,0 +1,18 @@
+&input_parameters
+ debug_mode = F
+ project = 'wing_strct'
+ tet2prism = F
+ ugrid_file_unformatted = T
+ k_file_unformatted = F
+ generate_su2grid_file = T
+ generate_tec_file_b = T
+ generate_tec_file_vol = F
+ generate_ntrl_partition_files = F
+ generate_heff_vol_report = T
+ generate_nc_prolong_file = T
+ generate_rmp_file = F
+ generate_cc_prolong_file = F
+ check_negative_elm_vol = T
+ prolong_file_unformatted = F
+ check_non_planarity = T
+/

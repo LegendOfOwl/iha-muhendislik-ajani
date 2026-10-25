@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-24T21:11:33.090626+00:00",
+  "source_field": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\lin10\\flow_000999.vtu",
+  "source_sha256": "55b0b42bdc5f5fb6b007d2e6bfd6aace5464ec9fbd6fe244b890a50931fc35cf",
+  "preselected_case": "lin10",
+  "field_iteration": 999,
+  "tetrahedra_total": 95344,
+  "region_candidates": 88407,
+  "valid_fits": 88282,
+  "invalid_fits": 125,
+  "selected_cells": 883,
+  "indicator_quantile99": 3.211361423386568,
+  "selected_bbox_m": {
+    "min": [
+      0.12763801589608192,
+      0.00749488640576601,
+      -0.08548174519091845
+    ],
+    "max": [
+      1.1455388963222504,
+      1.2442538440227509,
+      0.07584268692880869
+    ]
+  },
+  "selected_fit_relative_rmse": {
+    "median": 0.10849297057032796,
+    "max": 0.22295422397548134
+  },
+  "iterative_prerequisite_passed": false,
+  "permission_to_claim_error_bound": false,
+  "minimum_qualification_passed": false,
+  "artifacts": {
+    "outputs\\projects\\proje-e9319baef1\\data\\reliability_20261024\\indicator_spec.json": "c110dd49c7902fd67b634cdcceaf2eefb281327e37f067f20dafaa310bb430ee",
+    "outputs\\projects\\proje-e9319baef1\\data\\reliability_20261024\\curvature_cells.csv": "0b97ffad20354f5c8981644e742e8b71d14e109f9bf7c680187c34f85fd1f21a",
+    "outputs\\projects\\proje-e9319baef1\\data\\reliability_20261024\\curvature_view.vtu": "5db59858427c135d3192f4324dafd27f9312b9d655256590ff2a716f1674b480",
+    "outputs\\projects\\proje-e9319baef1\\plots\\m6_curvature_20261024.png": "ba50534d696c70ebf59b3c588c5facac3bdcce87dbecb3922f60b1764f21f46c"
+  },
+  "scope": "A location/direction indicator on a nonconverged field. Full anisotropic remeshing, adjoint weighting and BL coverage are not implemented."
+}

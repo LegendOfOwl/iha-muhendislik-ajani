@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-24T21:11:18.860035+00:00",
+  "source_field": "outputs\\projects\\proje-e9319baef1\\simulations\\m6_linear_pair_20261024\\lin10\\flow_000999.vtu",
+  "source_sha256": "55b0b42bdc5f5fb6b007d2e6bfd6aace5464ec9fbd6fe244b890a50931fc35cf",
+  "preselected_role": "lin10 regardless of experimental agreement",
+  "formula": "0.5 mean_i[(v_i-centroid)^T |H_Mach| (v_i-centroid)]",
+  "fit": "40 nearest volume vertices; whitened quadratic LS, geometry ratio>1e-8, design condition<1e6",
+  "selection": "99th percentile within tetrahedra at nondimensional nearest-wall-vertex distance<2 chords; ties retained",
+  "no_experimental_targets": true,
+  "not_error_bound": true,
+  "not_adjoint": true,
+  "normal_prism_layers_excluded": true,
+  "limitation": "Nearest-wall-vertex distance is only a region filter; shocks are nonsmooth and quadratic assumptions fail. No boundary-layer or wall-distance certification.",
+  "code_sha256": "188330e09bcb066ab57a01bc0db1704b31ed8f481aef9f4ba0ecd0a473a971eb"
+}

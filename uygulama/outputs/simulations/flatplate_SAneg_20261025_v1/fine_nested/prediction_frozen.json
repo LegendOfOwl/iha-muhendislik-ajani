@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-25T19:16:22.184747+00:00",
+  "native_status": {
+    "started_utc": "2026-10-25T19:11:21.883016+00:00",
+    "ended_utc": "2026-10-25T19:16:22.150896+00:00",
+    "exit_code": 1,
+    "seconds": 300.26499999995576,
+    "stop_reason": "time_budget_exceeded",
+    "peak_working_set_GiB": 0.2892799377441406,
+    "budget_s": 300,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "matched": {
+    "field_iteration": 800,
+    "terminal_history_iteration": 925,
+    "CL": -0.000640668315,
+    "CD": 0.00284690087,
+    "rms[Rho]": -9.366385192,
+    "rms[nu]": -9.764415392,
+    "last100_samples": 100,
+    "CD_last100_range": 3.4266399999991273e-07
+  },
+  "files_sha256": {
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\case.cfg": "0a5ccb5c1d6e9b4eee30febcbb1a1879f327fefb084542dfae34b8e8ce693a02",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\flow.vtu": "3481486cc38dec4af0f520e4a001eb644b24bbb0d64bb65d2aa0cb07a3541382",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\flow_000200.vtu": "793d848e0002674433302a8efa959ec57c92c32453c2eff3edf0f43598f5d226",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\flow_000400.vtu": "43e90fc764472e67c6b571489ebb6645b021cb9df0681ab5dcfb7bab19f3df74",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\flow_000600.vtu": "f51ddbcf4b32e3efccda0b4950cf6afdff3be13135d0494744dfcdb17081a03e",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\flow_000800.vtu": "3481486cc38dec4af0f520e4a001eb644b24bbb0d64bb65d2aa0cb07a3541382",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\history.csv": "f5ddc709021586534bfb891ce4ba019da2dfbcb21bd92b6a9fc89c85504756db",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\registered_inputs.json": "f80e73c308c7dd066f29b5277d68487b92ed3d197379b3b3e819b8800f1326d9",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\restart_flow.dat": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\restart_flow_000200.dat": "76596dd11ae487b37ffbdc3657bef6df65f2169556c63b5ff31ca8841fe7ed62",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\restart_flow_000400.dat": "035c14687589ae1e5b542a249af250e94618beb3c4264bb0f6fd435116db343f",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\restart_flow_000600.dat": "73db1da642240ecc6a3de371fdea754c9bb73c47eccab825e7187770a40f33ed",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\restart_flow_000800.dat": "ada7b4fd20b35673edbc453654af7acbbf04d8b4585ff4db70a69d83e7e8e813",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\seed.dat": "c49c77f773848d92220e5e03e77de05503d04e327d8474ac0e73ea0ee9bec3f5",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\solver.log": "754f0b4d623e84c454288893d0e60a1a599e088b561bcd5fd15d6bbc8f80456a",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\solver.process.json": "1a145656d49f6e4b3c9d9d2c69e4441d8831c10fdd32275e0d3fac56ef6d3ab1",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\solver.status.json": "2177b21815de9ef96ea63f2f306db8805c25f1cde3e6343aaf806b91d3229b22",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow.csv": "726575c4dddfb4f591acac5ca59dc84dbd32b88a5b4a4048481f4235f54aa05b",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow.vtu": "fe6cd239f62c3bb2fc96f7b49cac9850939904e585180427fee7751d5b3e9807",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow_000200.csv": "dfd1e90edcade1e2a945a117941684abfd0bae3fd035033a764a5cde5cf4792b",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow_000200.vtu": "a91ec10e4d953b7ebd0ec255ebae2704cff35eaa1a3b5b6a70d30aed1947ba39",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow_000400.csv": "717b0fb7e7d03b1bbed21773cd12297bc83f8bb8f658c5440cadf36ab0c7fc8e",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow_000400.vtu": "b229ab975c2155b4bcc63d6df9818e18b075c033cf74b236952c9ba897cfb38b",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow_000600.csv": "fe320ba2081fbe3e3de0da807379467be151dec4a93dceaef9cc8fc5bd509400",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow_000600.vtu": "8a36e8591c2576e004e5978b9850a0c5c8918a83f64a3f41392aab9715e60ce8",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow_000800.csv": "726575c4dddfb4f591acac5ca59dc84dbd32b88a5b4a4048481f4235f54aa05b",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\surface_flow_000800.vtu": "fe6cd239f62c3bb2fc96f7b49cac9850939904e585180427fee7751d5b3e9807"
+  },
+  "not_blind": true
+}

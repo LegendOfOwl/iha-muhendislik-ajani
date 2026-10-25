@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-24T21:14:10.235626+00:00",
+  "source_sha256": "55b0b42bdc5f5fb6b007d2e6bfd6aace5464ec9fbd6fe244b890a50931fc35cf",
+  "v1_report_sha256": "39dd60515902a8a07d2e58248e2aaabad773a289c0d2b1a9294c513e5b601020",
+  "reason": "V1 priorities could extrapolate a thin-point stencil across a larger cell and grow without physical scale support.",
+  "neighbors": [
+    40,
+    80
+  ],
+  "maximum_design_condition": 10000.0,
+  "maximum_relative_fit_RMSE": 0.1,
+  "support": "All four actual tetrahedron vertices must lie within the whitened convex hull of the40-nearest-point stencil.",
+  "scale_agreement": "abs(I40-I80)/max(I40,I80,1e-12)<=0.5",
+  "priority": "Largest1% of eligible I80; noneligible cells kept as masked diagnostics.",
+  "not_error_bound": true,
+  "no_target_values": true,
+  "not_blind_session": true,
+  "code_sha256": "e2f37c616bfd394cde964151fd2a27aee8c81a20d85a279ac3418700066c6aad"
+}

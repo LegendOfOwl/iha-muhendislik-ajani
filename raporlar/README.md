@@ -11,3 +11,5 @@ Asıl dosyalar uygulamanın bağıl yolları korunarak `uygulama/` içinde sakla
 - [v0.7.0 — Kaynak geometri ve ayrı analiz sınaması](v0.7.0/README.md): 37 dosya
 - [v0.8.0 — C-grid araştırması ve M6 devamı](v0.8.0/README.md): 68 dosya
 - [v0.9.0 — Hata dersleri ve ajan talimatı](v0.9.0/README.md): 5 dosya
+
+- [v0.11.0 —GitHub’da okunabilir güncel CFD ve güvenilirlik sonuçları](v0.11.0/README.md)

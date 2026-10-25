@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-25T19:11:21.721033+00:00",
+  "native_status": {
+    "started_utc": "2026-10-25T19:11:10.688809+00:00",
+    "ended_utc": "2026-10-25T19:11:21.718660+00:00",
+    "exit_code": 0,
+    "seconds": 11.03100000001723,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.2848930358886719,
+    "budget_s": 60,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "matched": {
+    "field_iteration": 19,
+    "terminal_history_iteration": 19,
+    "CL": -0.000640696638,
+    "CD": 0.002851627013,
+    "rms[Rho]": -7.715762575,
+    "rms[nu]": -7.65910441,
+    "last100_samples": 20,
+    "CD_last100_range": 1.3790300000000172e-06
+  },
+  "files_sha256": {
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\case.cfg": "b24ac499ab75fc3f547569bb6c9f553e870a9ef3e07cd61b121820201b6fb860",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\flow.vtu": "486b562e6c968ef3f3e133689a3a81852dd38002ac8f7ddbe50c5e69f6c79ebe",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\flow_000019.vtu": "486b562e6c968ef3f3e133689a3a81852dd38002ac8f7ddbe50c5e69f6c79ebe",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\history.csv": "903107dedcb8672b7c83cd842dd10f93f9e8af2c31afed6d3893eb8b91afc13b",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\registered_inputs.json": "d32fbee58ef2c0423f441a748e771da7b1c3e962c394fa6ffc8a88de4e7400d6",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\restart_flow.dat": "56563896ca66f65f14a5407c704e2ca5fc5458e0b6f91a2d0df3df12e10c5ac1",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\restart_flow_000019.dat": "56563896ca66f65f14a5407c704e2ca5fc5458e0b6f91a2d0df3df12e10c5ac1",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\seed.dat": "c49c77f773848d92220e5e03e77de05503d04e327d8474ac0e73ea0ee9bec3f5",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\solver.log": "00c527c7a15184a8d49b5b909fa0fc27560ab979d336f66b0c44601c4ec5cb83",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\solver.process.json": "2f0e3dd4daa563059c1e3d8ee7c855a661ea4cc36dd4d235bce3984733b89db3",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\solver.status.json": "0c9370872fee1dd7be0faae14579855851be3655f3e947e25d8bb3dc852e6291",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\surface_flow.csv": "ffa5d6c9289c5544100135c0e359704cfc1231236e6e4736268ca2a0d89f26af",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\surface_flow.vtu": "caf63800870f8972d134910d683dda525c31c1758859a0601d3122add50b38fc",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\surface_flow_000019.csv": "ffa5d6c9289c5544100135c0e359704cfc1231236e6e4736268ca2a0d89f26af",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_smoke\\surface_flow_000019.vtu": "caf63800870f8972d134910d683dda525c31c1758859a0601d3122add50b38fc"
+  },
+  "not_blind": true
+}

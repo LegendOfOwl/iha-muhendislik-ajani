@@ -114,6 +114,10 @@ def import_file(id,source):
     return {'path':str(dest.relative_to(ROOT)),'sha256':sha(dest),'project_id':id}
 def run_plan(id,suite):
     p=get(id);root=resolve(p['artifact_root'])
+    if suite=='reliability':
+        case=root/'data/reliability_case.json'
+        if not case.exists():return {'ready':False,'reason':'Bu projede kaynak ve kabul sözleşmesi bağlı bir güvenilirlik kaydı henüz yok.'}
+        return {'ready':True,'output_root':str(root),'case':str(case),'note':'Kayıtlı ham çıktı ve dosya mühürlerini yeniden denetler; yeni CFD çalıştırmaz. Kabul durumu raporda ayrı gösterilir.'}
     if id=='qualification' and suite!='profile-cfd':return {'ready':True,'output_root':str(root),'note':'Kayıtlı yeterlilik örneği'}
     needed={'geometry':'data/parametric_wing_case.json','complex-vlm':'data/parametric_wing_case.json','profile-cfd':'data/profile_cfd_case.json'}
     if suite not in needed:return {'ready':False,'reason':'Bu çözüm seçili projenin girdilerine henüz bağlanmadı; görev olarak hazırlanmalı.'}
@@ -129,7 +133,7 @@ def summary(id):
     if active:
         f=resolve(active['path']);changed=not f.exists() or sha(f)!=active['sha256']
     result={'project':p,'files':all_files,'tasks':sorted(tasks,key=lambda t:t['id'],reverse=True),
-        'active_cad_changed':changed,'actions':{s:run_plan(id,s) for s in ['geometry','complex-vlm','profile-cfd','cfd','fem','elmer-cfd','comparison','aerostruct']},
+        'active_cad_changed':changed,'actions':{s:run_plan(id,s) for s in ['geometry','complex-vlm','profile-cfd','cfd','fem','elmer-cfd','comparison','aerostruct','reliability']},
         'scope_note':'Araç yeterlilik örnekleri; gerçek tasarım değildir.' if p['kind']=='qualification' else 'Yalnız bu projenin görevleri ve dosyaları. Eksik girdiler sonuç sayılmaz.'}
     return result
 def main():

@@ -1,0 +1,58 @@
+{
+  "frozen_utc": "2026-10-24T23:05:57.155849+00:00",
+  "contract_sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+  "flow_plan_sha256": "3d92bb5358568b16d756fac7d10b3dc7b82f45e351d0a7d1bfe73af6b4cf5333",
+  "matched": {
+    "field_iteration": 600,
+    "terminal_history_iteration": 663,
+    "CL": 0.2420389262,
+    "CD": 0.036274882,
+    "rms[Rho]": -1.754011348,
+    "rms[nu]": -5.843036788,
+    "last100_samples": 100,
+    "CL_last100_range": 0.021091262599999994,
+    "CD_last100_range": 0.008016144610000001
+  },
+  "native_status": {
+    "started_utc": "2026-10-24T22:40:56.557511+00:00",
+    "ended_utc": "2026-10-24T23:05:57.019420+00:00",
+    "exit_code": 1,
+    "seconds": 1500.4679999999935,
+    "stop_reason": "time_budget_exceeded",
+    "peak_working_set_GiB": 1.8391914367675781,
+    "budget_s": 1500,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "not_blind": true,
+  "no_new_reference_scores_yet": true,
+  "source_mesh_sha256": "22d9aaa299869b90d03837f2a0721e0a304355daeb7052b4ab502040bf2fa68d",
+  "files_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\case.cfg": "5b4400aacecd3cbd547fc43c4d8eea8f7f79232616fe2074e58e2673fcdf3f18",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\flow.vtu": "148dc3c2e219eeadd86ce4bf078955dbed7230d379a16fd1cec2fb41f0786606",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\flow_000200.vtu": "110a15d1e6d8472fdcf31ca3de25e57497e52e01598df70f33ed5622eaa029d7",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\flow_000400.vtu": "843caa768994178c8979dc4855584c3b46511972eecffa490c1dc4394c231fc2",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\flow_000600.vtu": "148dc3c2e219eeadd86ce4bf078955dbed7230d379a16fd1cec2fb41f0786606",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\history.csv": "6032c4ef73d739b1daed4041b6a39b7bd7a7088f056f45164d6ecee1fb02d9e2",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\restart_flow.dat": "2a4ad05259f989fac1955637342202f27e4106b058d931ac4e76f0c053b8dc05",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\restart_flow_000200.dat": "5f810231169039270d6c66ef401744c8a1c86b5089f7f179fc135fe0cb755bcd",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\restart_flow_000400.dat": "ee5af06e0f04ac67480a14966686bd90eec2bc99b21c159b16fec6b529f5e514",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\restart_flow_000600.dat": "2a4ad05259f989fac1955637342202f27e4106b058d931ac4e76f0c053b8dc05",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\solver.log": "af2a13b06a7c59ce31f9b6f2c8285a752200d22389cf3d7d6c9ac573e43cd82c",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\solver.process.json": "92110b831ec45ae648ab2e3976111e47efd982483805c358a5bef3c1ebdbc151",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\solver.status.json": "6b3e623e21b25b6fa57d64f27fb975efd6d64dba7adaca1d10de4e052a9c7ac3",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\surface_flow.csv": "4d0b5ca8a26b697108fa84aad6b2e38fa00822a58d07f7d54f82b15e9343fafd",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\surface_flow.vtu": "0ba6792c2e461c88072f88c292524cbfbf3e90b3870a4269a4fcc26f3f2a6c08",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\surface_flow_000200.csv": "226efa11b9a9327165c8252bf4e959a1bd45fee9bbe4bac5ee74e0ac6cdde5fc",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\surface_flow_000200.vtu": "5e24fc78ad2f3245da1503b2963a491e71bf5faebb37a067dcced5481460db2e",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\surface_flow_000400.csv": "2e4c665345ebc9ab920383af4cae5e5da444f01eda45966178133df5c75a80bb",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\surface_flow_000400.vtu": "9c3fccc44e2fd6353d23b5a789a09b2b5b8209bd0563590bf03bbdce8b1cdd9a",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\surface_flow_000600.csv": "4d0b5ca8a26b697108fa84aad6b2e38fa00822a58d07f7d54f82b15e9343fafd",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\surface_flow_000600.vtu": "0ba6792c2e461c88072f88c292524cbfbf3e90b3870a4269a4fcc26f3f2a6c08"
+  },
+  "physical_qualification_passed": false
+}

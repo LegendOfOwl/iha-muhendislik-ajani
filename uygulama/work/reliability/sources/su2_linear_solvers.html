@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"enableRemoteConsent":true,"lang":"en","siteId":1608752,"cookiePolicyId":93470831,"cookiePolicyUrl":"https://su2code.github.io/cookie_declaration.html", "banner":{ "position":"float-bottom-left","textColor":"white","backgroundColor":"#333333" }};
+</script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-28187985-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Linear Solvers and Preconditioners</title>
+    <meta name="description" content="Linear solvers (and preconditioners) are used in implicit (pseudo)time integration schemes (any option with “IMPLICIT” or “DUAL-TIME” in the name).This page ...">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico?1">
+
+    <link rel="canonical" href="/docs_v7/Linear-Solvers-and-Preconditioners/">
+    <link rel="alternate" type="application/rss+xml" title="SU2 | Multiphysics Simulation and Design Software" href="/feed.xml" />
+
+    <!-- Load Font Awesome 5 or 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous">
+
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/f17953d81d.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logos/logonav.png"></span>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/download.html">Download</a></li>
+                <li ><a href="/publications.html">Publications</a></li>
+                <li ><a href="/docs_v7/home/">Docs</a></li>
+                <li ><a href="/tutorials/home/">Tutorials</a></li>
+                <li ><a href="/vandv/home/">V&V</a></li>
+                <li ><a href="https://www.cfd-online.com/Forums/su2/">User Forum</a></li>
+                <li ><a href="https://join.slack.com/t/su2devteam/shared_invite/zt-af0uuqf8-8XNExKMV9G~UVsnkvi5uVA">Slack</a></li>
+                <li ><a href="/develop.html">Develop</a></li>
+                <li ><a href="/su2gui/Introduction">GUI</a></li>
+                <li ><a href="/gsoc/Introduction">GSOC</a></li>
+            </ul>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://www.youtube.com/channel/UCxv_00gWLAQPBUnl9mGRQjA"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/su2code/SU2.git"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/su2code/"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/su2code/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+          Introduction to SU2
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/home/">SU2, Multiphysics Simulation and Design Software</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/contribute/">Contribute</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          New in Version 7
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Guide-to-v7/">Guide to Version v7</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+          Quick Start
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Quick-Start/">Quick Start</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+          Installation
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Download/">Download</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Software-Components/">Software Components</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Installation/">Installation</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/SU2-Linux-MacOS/">SU2 on Linux/MacOS</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/SU2-Windows/">SU2 on Windows</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Test-Cases/">Test Cases</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+          Build From Source
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Build-SU2-Linux-MacOS/">Build SU2 on Linux/MacOS</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Build-SU2-Windows/">Build SU2 on Windows</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Running-Unit-Tests/">Running Unit Tests</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+          Theory
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Theory/">Governing Equations in SU2</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Streamwise-Periodicity/">Streamwise Periodicity</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Thermochemical-Nonequilibrium/">Thermochemical Nonequilibrium</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+          Users Guide
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Configuration-File/">Configuration File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Mesh-File/">Mesh File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Restart-File/">Restart File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Solver-Setup/">Solver Setup</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Physical-Definition/">Physical Definition</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Markers-and-BC/">Markers and Boundary Conditions</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Convective-Schemes/">Convective Schemes</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Slope-Limiters-and-Shock-Resolution/">Slope Limiters and Shock Resolution</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Custom-Output/">History and Solution Output</a>
+        
+          
+          
+          <a class="list-group-item active" href="/docs_v7/Linear-Solvers-and-Preconditioners/">Linear Solvers and Preconditioners</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Multizone/">Basics of Multi-Zone Computations</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Execution/">Execution</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+          Developer Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Gitting-Started/">GIT-ting Started</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Developing-SU2-on-GitHub-(Internal-Developers)/">Developing SU2 on GitHub (Internal Developers)</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Running-Regression-Tests/">Running Regression Tests</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Code-Review/">Code Review</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Code-Structure/">Code Structure</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Style-Guide/">Style Guide</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Advanced-AD-Techniques/">Advanced AD Techniques</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Container-Development/">Containers for Development</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Writing-Unit-Tests/">Writing Unit Tests</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Tracy-Integration/">Integrating Tracy Profiler with SU2</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+          FAQ
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/FAQ/">FAQ</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
+          Contact
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Contact/">Contact</a>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Linear Solvers and Preconditioners</h1>
+            <div id="markdown-content-container"><p>Linear solvers (and preconditioners) are used in implicit (pseudo)time integration schemes (any option with “IMPLICIT” or “DUAL-TIME” in the name).
+This page lists the available options and provides guidance on how to setup the linear solvers for best results.
+As the numerical properties of the linear systems vary significantly with application, and even with application-specific options, a “one size fits all” default setting is not available.</p>
+
+<hr />
+
+<ul>
+  <li><a href="#option-list">Option List</a>
+    <ul>
+      <li><a href="#linear-solvers">Linear Solvers</a></li>
+      <li><a href="#linear-preconditioners">Linear Preconditioners</a></li>
+      <li><a href="#external-solvers">External Solvers</a></li>
+    </ul>
+  </li>
+  <li><a href="#setup-advice">Setup Advice</a>
+    <ul>
+      <li><a href="#fluid-simulations">Fluid Simulations</a></li>
+      <li><a href="#structural-simulations">Structural Simulations</a></li>
+      <li><a href="#mesh-deformation">Mesh Deformation</a></li>
+      <li><a href="#discrete-adjoint">Discrete Adjoint</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="option-list">Option List</h2>
+
+<h3 id="linear-solvers">Linear Solvers</h3>
+
+<p>The following options accept a type of linear solver:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LINEAR_SOLVER</code>: Main option for direct/primal and continuous adjoint problems. The linear solver used by all physics solvers of the zone associated with the configuration file.</li>
+  <li><code class="language-plaintext highlighter-rouge">DISCADJ_LIN_SOLVER</code>: Main option for discrete adjoint problems.</li>
+  <li><code class="language-plaintext highlighter-rouge">DEFORM_LINEAR_SOLVER</code>: Linear solver for elasticity-based mesh deformation.</li>
+</ul>
+
+<p>In most applications the linear solver tolerance is defined by option <code class="language-plaintext highlighter-rouge">LINEAR_SOLVER_ERROR</code>, and the maximum number of iterations by <code class="language-plaintext highlighter-rouge">LINEAR_SOLVER_ITER</code>.
+Mesh deformation uses <code class="language-plaintext highlighter-rouge">DEFORM_LINEAR_SOLVER_ERROR</code> and <code class="language-plaintext highlighter-rouge">DEFORM_LINEAR_SOLVER_ITER</code>, as it may coexist with other physics in the same physical zone.</p>
+
+<p>The available types of (iterative) linear solver are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">FGMRES</code></td>
+      <td>Flexible Generalized Minimum Residual</td>
+      <td>This is the default option.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">RESTARTED_FGMRES</code></td>
+      <td>Restarted <code class="language-plaintext highlighter-rouge">FGMRES</code> (reduces memory footprint)</td>
+      <td>Restart frequency controlled by <code class="language-plaintext highlighter-rouge">LINEAR_SOLVER_RESTART_FREQUENCY</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">BCGSTAB</code></td>
+      <td>Bi-Conjugate Gradient Stabilized</td>
+      <td>See setup advice.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CONJUGATE_GRADIENT</code></td>
+      <td>Conjugate Gradient</td>
+      <td>Use it only for elasticy, or mesh deformation problems (i.e. symmetric/self-adjoint).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SMOOTHER</code></td>
+      <td>Iterative smoothing with the selected preconditioner.</td>
+      <td>Relaxation factor controlled by <code class="language-plaintext highlighter-rouge">LINEAR_SOLVER_SMOOTHER_RELAXATION</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note</strong>: The <code class="language-plaintext highlighter-rouge">SMOOTHER</code> option is not available for mesh deformation applications (as it stands little chance of doing any smoothing).</p>
+
+<h3 id="linear-preconditioners">Linear Preconditioners</h3>
+
+<p>Analogously to the above options, the following accept a type of linear preconditioner:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LINEAR_SOLVER_PREC</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DISCADJ_LIN_PREC</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DEFORM_LINEAR_SOLVER_PREC</code></li>
+</ul>
+
+<p>The available types of preconditioner are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">JACOBI</code></td>
+      <td>Block Jacobi preconditioner.</td>
+      <td>Lowest computational cost and effectiveness.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">LU_SGS</code></td>
+      <td>Lower-Upper Symmetric Gauss-Seidel.</td>
+      <td>Lowest memory footprint, intermediate cost and effectiveness.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ILU</code></td>
+      <td>Incomplete Lower Upper factorization with connectivity-based sparse pattern.</td>
+      <td>Highest cost and effectiveness, fill-in is controlled by <code class="language-plaintext highlighter-rouge">LINEAR_SOLVER_ILU_FILL_IN</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">LINELET</code></td>
+      <td>Line-implicit Jacobi preconditioner.</td>
+      <td>Tridiagonal systems solved along grid lines normal to walls, Jacobi elsewhere.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note</strong>: Only <code class="language-plaintext highlighter-rouge">JACOBI</code> and <code class="language-plaintext highlighter-rouge">ILU</code> are compatible with discrete adjoint solvers.</p>
+
+<h3 id="external-solvers">External Solvers</h3>
+
+<p>Version 7 introduces experimental support for the direct sparse solver <a href="https://gforge.inria.fr/projects/pastix/">PaStiX</a> see detailed options in <code class="language-plaintext highlighter-rouge">TestCases/pastix_support/readme.txt</code></p>
+
+<h2 id="setup-advice">Setup Advice</h2>
+
+<p>For tiny problems with ~10k nodes almost any solver will do, these settings are more important for medium-large problems.</p>
+
+<p><strong>Disclaimer</strong>: Your own experience is more important that this advice, but if you have yet to gain some this should help.</p>
+
+<h3 id="fluid-simulations">Fluid Simulations</h3>
+
+<p>Fastest overall convergence is usually obtained by using the highest CFL number for which the flow solver is stable, and the linear systems still reasonably economic to solve.
+For example central schemes like JST allow very high CFL values, however at some point (100-400 for RANS grids) the linear systems become too expensive to solve and performance starts decreasing.
+Upwind schemes are less plagued by this as stability considerations usually put a lower limit on CFL, and the linear systems are better conditioned to begin with.</p>
+
+<p>Like CFL, the linear solver tolerance should be the highest (i.e. less accurate) possible for which the flow solver is still stable, usually in the 0.05-0.001 range, having to go lower is often a sign of poor mesh quality resulting in localized high residuals.
+A high linear tolerance does not reduce the accuracy of the final results since the solution is iterative, and on each iteration of the flow solver the right hand side of the linear system is the nonlinear residual, only this residual needs to be low for accurate solution of the discretized nonlinear equations.</p>
+
+<p>The maximum number of iterations should allow the linear solver to converge, however the memory footprint of <code class="language-plaintext highlighter-rouge">FGMRES</code> (which should be your default solver) is proportional to that number, if that becomes a problem you can switch to <code class="language-plaintext highlighter-rouge">RESTARTED_FGMRES</code> or <code class="language-plaintext highlighter-rouge">BCGSTAB</code>, the latter may perform better for stiff systems like those resulting from central schemes at high CFL.
+For a typical problem with an upwind scheme 10 iterations should be sufficient, for central schemes up to 50 may be required.</p>
+
+<p>High CFL cases will usually require the <code class="language-plaintext highlighter-rouge">ILU</code> preconditioner, while low CFL cases may run better with <code class="language-plaintext highlighter-rouge">LU_SGS</code> as even if more linear iterations are required, <code class="language-plaintext highlighter-rouge">LU_SGS</code> has no setup cost.</p>
+
+<p>Finally, the concept of high/low CFL is somewhat case dependent, for RANS meshes (stretched close to walls) and upwind schemes, high is greater than 100 and low less than 20, central schemes move the limits down, time domain and less stretched meshes (e.g. for Euler or Navier-Stokes simulations) move the limits up.</p>
+
+<h3 id="structural-simulations">Structural Simulations</h3>
+
+<p>At scale these become the most difficult systems to solve in SU2 due to their elliptical nature, they are easier for time-domain problems nonetheless always start with the <code class="language-plaintext highlighter-rouge">ILU</code> preconditioner.
+A much larger number of linear iterations is required (&gt;100) <code class="language-plaintext highlighter-rouge">RESTARTED_FGMRES</code> or <code class="language-plaintext highlighter-rouge">CONJUGATE_GRADIENT</code> should therefore be used.
+For linear elasticity an error of at most 1e-8 should be targeted as contrary to fluid problems there are no outer iterations, for nonlinear elasticity 1e-6 may suffice as a few nonlinear iterations are required.</p>
+
+<p><strong>Note</strong>: If the solution becomes challenging, and the problem is 2D or you have RAM to spare, consider using the external direct solvers.</p>
+
+<h3 id="mesh-deformation">Mesh Deformation</h3>
+
+<p>For elasticity-based mesh deformation the advice is the same as for structural simulations.</p>
+
+<h3 id="discrete-adjoint">Discrete Adjoint</h3>
+
+<p>Discrete adjoint applications respond well to high CFL values, the advice is generally the same as for the primal counterpart (fluid or structural).
+The <code class="language-plaintext highlighter-rouge">ILU</code> preconditioner should be used as <code class="language-plaintext highlighter-rouge">JACOBI</code> will only give an advantage for very low CFL values.</p>
+
+<p><strong>Note</strong>: For steady-state discrete adjoint problems the system matrix does not change, therefore the external direct solvers may achieve the shortest solution time for 2D and medium scale (&lt;1M nodes) 3D problems.</p>
+
+</div>
+            <hr>
+                   
+            <p class="text-center">
+              <br />
+              <a target="_blank" href="https://github.com/su2code/su2code.github.io/blob/master/_docs_v7/Linear-Solvers-and-Preconditioners.md" class="btn btn-default githubEditButton" role="button">
+                <i class="fa fa-pencil fa-lg"></i> Improve this page
+              </a>
+            </p>
+            
+
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            SU2 | Multiphysics Simulation and Design Software 2026 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a> | 
+            <a href="https://www.iubenda.com/privacy-policy/93470831" class="iubenda-white iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+</body>
+
+</html>

@@ -33,6 +33,7 @@ SUITES={
     'comparison':('.venv','work/workflow/rank_candidates.py','outputs/reports/candidate_comparison.json'),
     'profile-cfd':('.venv-cad','work/qualification/profile_cfd.py','outputs/reports/profile_cfd_results.json'),
     'aerostruct':('.venv','work/openaerostruct/run_examples.py','outputs/reports/openaerostruct_examples.json'),
+    'reliability':('.venv','work/reliability/advisor.py','outputs/reports/reliability_audit.json'),
 }
 def now(): return datetime.now(timezone.utc).isoformat()
 def read(path): return json.loads(Path(path).read_text(encoding='utf-8-sig'))
@@ -158,6 +159,9 @@ def run_suite(name,project_id='qualification'):
         for path in [case,ROOT/cfg['airfoil']]:manifest['inputs'][str(path.relative_to(ROOT))]=digest(path)
     if name=='cfd': manifest['inputs']['source_manifest']=digest(ROOT/'work/qualification/sources/source_manifest.json')
     if name=='aerostruct':manifest['inputs']['source_manifest']=digest(ROOT/'work/openaerostruct/sources/manifest.json')
+    if name=='reliability':
+        case=output_root/'data/reliability_case.json'
+        manifest['inputs'][str(case.relative_to(ROOT))]=digest(case)
     write(folder/'manifest.json',manifest)
     environment=dict(os.environ);environment.update(UAV_OUTPUT_ROOT=str(output_root),UAV_PROJECT_ID=project_id)
     with (folder/'run.log').open('w',encoding='utf-8') as log:
@@ -215,6 +219,10 @@ def launch(task_path,dry=False):
             'yalnız kapsamı uyan ders kimliklerini applied_lesson_ids alanına kaydet. '
             'Hata veya yeniden denemede aynı klasördeki learning_loop.md protokolünü uygula; '
             'kanıtlanmış hata ile fiziksel neden hipotezini ayır. Bu normal oturum geçmiş deney sonuçlarını okuyabilir; kör sınama diye etiketleme.')
+    if learning_snapshot.get('reliability_policy_version'):
+        prompt+=(' Ek süreç/gösterge politikası '+learning_snapshot['reliability_policy_version']+
+                 ': work/reliability/protocol_v1.json dosyasını oku; yalnız kapsamı uyan R01–R03 maddelerini uygula. '
+                 'Deney seçimi ve prototip gösterge doğruluk garantisi değildir.')
     command=[str(cli),'--cd',str(ROOT),'--search','--sandbox','workspace-write','--ask-for-approval','on-request',prompt]
     if dry: return {'executable':str(cli),'cwd':str(ROOT),'task':str(path),'prompt':prompt,'instruction_snapshot':learning_snapshot}
     task['agent_instruction_snapshot']=learning_snapshot

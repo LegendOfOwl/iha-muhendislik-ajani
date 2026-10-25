@@ -1,0 +1,217 @@
+{
+  "id": "20261025-011533-2114a3",
+  "request": "Resmî TMR ONERA M6 üreteci: taşınabilir derleme, kaynak geometri ve üç sistematik ağ kontrolü; bütçeli native SU2 kaynak vaka sınaması",
+  "kind": "qualification",
+  "created_utc": "2026-10-24T22:15:33.159414+00:00",
+  "status": "tamamlandı",
+  "phase": "sınırlı kaynak ve yöntem denemesi kapandı",
+  "acceptance": [
+    "Özgün kaynak programların yerel derlenmesi ve gerçek çalışması",
+    "Üç sistematik kaynak ağının topoloji/geometri/bölgesel ölçüleri",
+    "Bütçeli native çözümler ve dondurulmuş ham çıktılar",
+    "Kaynak koşullarına bağlı karşılaştırma ve açık kabullerle rapor"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_source_case_review_20261025.json",
+      "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\00_tmr_source_case_review_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_mesh_family_20261025.json",
+      "sha256": "6fe14e82659f3c54e16cc82142288ffebe856d8178a18aa806af5c4f48c42759",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\01_tmr_mesh_family_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_source_CAD_boundary_v2_20261025.json",
+      "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\02_tmr_source_CAD_boundary_v2_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_integrity_20261025.json",
+      "sha256": "c9a70706168653d78ba339bb8c2b7916b3a5276fc9481018d3c4f3de18a073cd",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\03_tmr_integrity_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_MG_control_20261025.json",
+      "sha256": "cb5d350850de0087956864893839d87c9d946a16b03d002777fdae26a4d11cb0",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\04_tmr_MG_control_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_nested_initialization_20261025.json",
+      "sha256": "e94c5b59efcc73cbe45c15552aae31a453050152aad1c61024dd69ad3f75ad7c",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\05_tmr_nested_initialization_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_linelet_control_20261025.json",
+      "sha256": "39314717898d067bfe60497bbcdd72f1ee540ef356747859a85ae38fe3794ea6",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\06_tmr_linelet_control_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\contract.json",
+      "sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\07_contract.json"
+    },
+    {
+      "path": "work\\setup\\tmr_m6_install.json",
+      "sha256": "1afdb4c124f99a5471e7ef6e9d1fcf5b81520a01885c0c09ead082f42fdf375d",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\08_tmr_m6_install.json"
+    },
+    {
+      "path": "work\\tmr_m6_20261025\\sources_current_inventory.json",
+      "sha256": "37020655cb6286ab97dc45db7353e25b50025fc442ad878cdc9982a68816dd1f",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\09_sources_current_inventory.json"
+    },
+    {
+      "path": "outputs\\data\\agent_learning\\reviewer_ledger_tmr_surface_20261025.json",
+      "sha256": "17612ff379798cba3ac774ba9d2fb363d4dccbe80007b631bfb3bfdf70fce9d5",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\10_reviewer_ledger_tmr_surface_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_coarse_field_checks_v3_20261025.json",
+      "sha256": "6c5ff13c91933854c97460687ace1a13c1326971bf9242a8d650546e1a04bb72",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\11_tmr_coarse_field_checks_v3_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\coarse\\experiment_comparison.csv",
+      "sha256": "ea29dd03e990283a995aa52a7234296abfc36374a18d04d9ce8ebefc6f0ed114",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\12_experiment_comparison.csv"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_coarse\\prediction_frozen.json",
+      "sha256": "f9a9351d00ab9d408e8565bb339a09a90b9dd2d262c72dfbc1e975383ec19b2f",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\13_prediction_frozen.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_medium_field_checks_v3_20261025.json",
+      "sha256": "60531491d95a55689aa94929287c38088283ca823205a99d34908ead0a9e56d4",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\14_tmr_medium_field_checks_v3_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\medium\\experiment_comparison.csv",
+      "sha256": "3666d21032fb7cae84d98fd33949ae6d24fd3659cfeb8f0423e8247e1cb888f4",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\15_experiment_comparison.csv"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_medium\\prediction_frozen.json",
+      "sha256": "ab2d34a333309f2ab25d2f40435f7afa7a0abf865ba1db9dc66fd8815ab98466",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\16_prediction_frozen.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_fine_field_checks_v3_20261025.json",
+      "sha256": "9a9ee8928bcca91479d84fa2d05de7466aa30170ee05887f6dfada6e58ef23ed",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\17_tmr_fine_field_checks_v3_20261025.json"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\data\\tmr_sharp_20261025_v1\\fine\\experiment_comparison.csv",
+      "sha256": "ee34629316f35b6537a491dcc75dcd9cc4fd6ff43a0a044c0fab0a3d728fdafa",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\18_experiment_comparison.csv"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_fine\\prediction_frozen.json",
+      "sha256": "0872be1f3d4d22d79633686164eb1bf8ce0d884e82d619be2b269c574e49fa99",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\19_prediction_frozen.json"
+    },
+    {
+      "path": "outputs\\reports\\tmr_m6_kaynak_ve_yontem_20261025.html",
+      "sha256": "17552eeb7089fa11d6d6dfeb7d965c464f035189bea44bc5eba33db1a16e8192",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\20_tmr_m6_kaynak_ve_yontem_20261025.html"
+    },
+    {
+      "path": "outputs\\reports\\tmr_m6_kaynak_ve_yontem_20261025.md",
+      "sha256": "45ea1e3a97eef31e1354b45c688546e5b3756deb31f0d3a832ff331aa0c6ee20",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\21_tmr_m6_kaynak_ve_yontem_20261025.md"
+    },
+    {
+      "path": "outputs\\projects\\proje-e9319baef1\\reports\\tmr_source_batch_closed_20261025.json",
+      "sha256": "bc9482297b895964f4d0c89ce2cb1b1f1a083614e1547a25ae15fcee3f15ceb6",
+      "archived": "outputs\\data\\task_evidence\\20261025-011533-2114a3\\22_tmr_source_batch_closed_20261025.json"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\conceptual_steps.json": "4a9cd2874aa0dc3d485b50bfa810ec7e8a80f560f08941c33d56e6c2e791f50a",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mass_budget.json": "dfa784d4e82478a97749865271dfe4a3ba14e3750b18fa82e5b58b3015ca0605",
+    "outputs\\projects\\proje-e9319baef1\\data\\project\\mission.json": "84cb954b990bafac5b6327553b236ec2322acfd10ceb62efd1a9dfedcd8f9d85",
+    "outputs\\data\\projects\\proje-e9319baef1.json": "e1a0d73c583c8bd2fda2a5af1994e5fb4eb0ca7803a40aeda7d46443a2ecc516"
+  },
+  "project_id": "proje-e9319baef1",
+  "project_manifest": "outputs\\data\\projects\\proje-e9319baef1.json",
+  "project_data_root": "outputs/projects/proje-e9319baef1/data/project",
+  "project_output_root": "outputs/projects/proje-e9319baef1",
+  "project_snapshot": {
+    "id": "proje-e9319baef1",
+    "name": "NASA ONERA M6 CFD doğrulaması",
+    "kind": "qualification",
+    "artifact_root": "outputs/projects/proje-e9319baef1",
+    "data_root": "outputs/projects/proje-e9319baef1/data/project",
+    "created_utc": "2026-10-19T08:02:06.291509+00:00",
+    "active_cad": null
+  },
+  "applied_lesson_ids": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "R01",
+    "R03",
+    "L10",
+    "L11"
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-24.1",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "contract": "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\contract.json",
+  "contract_sha256": "f124fca9d1361ac3ea36a8e1d4507fffa04ca298d89f2166c905bc5555856198",
+  "agent_instruction_snapshot_after_correction": {
+    "version": "2026-10-25.1",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "5889934b15f273ec8e285dd0039e3aac77d6b3c571d501cd27c7aa2d499b7a2d",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "agent_instruction_snapshot_after_surface_correction": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "completed_utc": "2026-10-25T18:58:57.506946+00:00",
+  "result_scope": "Bounded integration and diagnostic batch; physical qualification false",
+  "minimum_physical_qualification_passed": false,
+  "open_engineering_checks": [
+    "iterative convergence",
+    "regional BL/TE/tip/wake",
+    "separate farfield sensitivity",
+    "experimental acceptance",
+    "independent-code grid-asymptotic comparison"
+  ]
+}

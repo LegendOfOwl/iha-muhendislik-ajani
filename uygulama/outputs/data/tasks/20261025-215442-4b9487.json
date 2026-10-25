@@ -1,0 +1,225 @@
+{
+  "id": "20261025-215442-4b9487",
+  "request": "NASA TMR kaynak düz plaka ağlarıyla SA-neg uygulama kontrolü: üç küçük ağ, gerçek SU2 ve kaynak Cf/profil karşılaştırması",
+  "kind": "qualification",
+  "created_utc": "2026-10-25T18:54:42.627618+00:00",
+  "status": "tamamlandı",
+  "phase": "sınırlı SA kaynak kontrolü kapandı",
+  "acceptance": [
+    "Özgün kaynak ağ ve koşulları koru",
+    "Üç sistematik ağda native çözüm ve eşlenmiş alan/geçmiş mühürleri",
+    "Referans Cf ve profil farklarını bütün noktalarla raporla; deney ve kod doğrulamasını ayır"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\flatplate_comparison_20261025.json",
+      "sha256": "f27659ccce85a2ba1404d2649b9382848673b60847fc3d7ed557c9e5653e5c6e",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\00_flatplate_comparison_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_integrity_20261025.json",
+      "sha256": "e00c4c7e93e2ce12fa46b4b681789389082fa048d212d2d0a9cf795907ca1037",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\01_flatplate_integrity_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_ILU_control_20261025.json",
+      "sha256": "ed7d5989681813c6d52771eee1a1bdb0c479ac5771ab441ed12bc588c480cf0b",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\02_flatplate_ILU_control_20261025.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\contract.json",
+      "sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\03_contract.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_seed\\contract.json",
+      "sha256": "e58994761bd9b176ef378c70677327e5551bd737959481b1fd3d1238e4b7df9f",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\04_contract.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_seed\\transfer.json",
+      "sha256": "b40659c280bd9d46890877ac4f7b79cee13ccaec488954f09a19ce56719a3dd2",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\05_transfer.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\nested_seed\\support_check_v4.json",
+      "sha256": "205819da19767777fb68bc7baac45723c1000b902adfc9db3a113f0860404632",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\06_support_check_v4.json"
+    },
+    {
+      "path": "work\\flatplate_20261025\\sources\\input_sources_manifest.json",
+      "sha256": "652d70e8548d4b8918de66514cc1af9ff80b0b804cfa06cddcef2d4524430e7e",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\07_input_sources_manifest.json"
+    },
+    {
+      "path": "work\\flatplate_20261025\\sources\\reference_manifest.json",
+      "sha256": "c8e529cb92f33921178bf7c96ec0279e293e81fd7600e8001ce4924d1d205277",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\08_reference_manifest.json"
+    },
+    {
+      "path": "work\\flatplate_20261025\\postprocessing_v1_nearest\\manifest.json",
+      "sha256": "28555fd5ce92fb05b3116a33cd5cff0316cf0bf901af1362a029d00b38c20ff3",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\09_manifest.json"
+    },
+    {
+      "path": "outputs\\data\\agent_learning\\reviewer_ledger_flatplate_20261025.json",
+      "sha256": "5d77542c077ecce20826e679984bc25f49958fa0e192f04d06efa46a1b02f2a8",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\10_reviewer_ledger_flatplate_20261025.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_coarse_field_audit_20261025.json",
+      "sha256": "58d33d329f42944760ad54f7b77f44e4ca144c60b71bf554af754af75cd212e3",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\11_flatplate_coarse_field_audit_20261025.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\coarse\\prediction_frozen.json",
+      "sha256": "3a88d22b3329b95a142838bc47aff914ef6593a4c9648f626bd2480b4aef5bb5",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\12_prediction_frozen.json"
+    },
+    {
+      "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\Cf_vs_CFL3D.csv",
+      "sha256": "552719b0d60a1d86fbeac698af81a3f882be9b7b89b6f7cf05b27208afc2c740",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\13_Cf_vs_CFL3D.csv"
+    },
+    {
+      "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\coarse\\velocity_1.90334.csv",
+      "sha256": "3ea9592c7666018aa5b255595a9968a427831cf39cc9191f694a4946b3e01327",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\14_velocity_1.90334.csv"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_medium_field_audit_20261025.json",
+      "sha256": "69a7bee275f1171bd1faee64973aadeff9e1ca95fa151d8f7e1b9cd25501187b",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\15_flatplate_medium_field_audit_20261025.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\medium\\prediction_frozen.json",
+      "sha256": "9b099506c51dc3a9f7122ce129a06df1b69cd3084b9ec101f00ad3765a4f07e9",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\16_prediction_frozen.json"
+    },
+    {
+      "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\Cf_vs_CFL3D.csv",
+      "sha256": "cc8078e03ecccca31467ebf4bcceee8def5def959f50bc4ee1fb531a1a7d5d8e",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\17_Cf_vs_CFL3D.csv"
+    },
+    {
+      "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\medium\\velocity_1.90334.csv",
+      "sha256": "67bf31c7726cff7419015ade29c940f67500406cdfc1ea3091548beccf715ef8",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\18_velocity_1.90334.csv"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_fine_field_audit_20261025.json",
+      "sha256": "7911e342b61ab36ad94bf16059749107b6d05c6f1064a19b9e0874e1c7678be1",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\19_flatplate_fine_field_audit_20261025.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine\\prediction_frozen.json",
+      "sha256": "9255ba9a4aec875ea2d4fff727d559b7afe724ea92df27c428e20943dc8d5a05",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\20_prediction_frozen.json"
+    },
+    {
+      "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\Cf_vs_CFL3D.csv",
+      "sha256": "9fb17c4e123c58ef0ae8b856c8b527c140b53d357eacc0c156bb2dee44cd29e8",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\21_Cf_vs_CFL3D.csv"
+    },
+    {
+      "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine\\velocity_1.90334.csv",
+      "sha256": "ec36846a03f03f958300670f20f6ae5e4328fd17925e1d2334071e771b7a9e91",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\22_velocity_1.90334.csv"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_fine_nested_field_audit_20261025.json",
+      "sha256": "2aa958bf6baa1be63579943e03d08c80a6b0e87d06ce46386ebf44d7faf5ad56",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\23_flatplate_fine_nested_field_audit_20261025.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine_nested\\prediction_frozen.json",
+      "sha256": "ae2e36012b1cf2bda674f8aa644acdc7d6408fa952b019f3afa47fb03e2cc8f8",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\24_prediction_frozen.json"
+    },
+    {
+      "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\Cf_vs_CFL3D.csv",
+      "sha256": "474e460c2bc4a67312717a32a47d00c9e0e5f459faa4d11a9d574d098334a53f",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\25_Cf_vs_CFL3D.csv"
+    },
+    {
+      "path": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\fine_nested\\velocity_1.90334.csv",
+      "sha256": "b5cc903baf6bdf88beddce1bf207199300053ef281124f043cd484082e539ff3",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\26_velocity_1.90334.csv"
+    },
+    {
+      "path": "outputs\\reports\\cfd_duz_plaka_ve_m6_20261025.html",
+      "sha256": "c03d2cfa61d690b7d1ccbaeffacedb5de530b526b2c7edce4b91c047e248bef8",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\27_cfd_duz_plaka_ve_m6_20261025.html"
+    },
+    {
+      "path": "outputs\\reports\\cfd_duz_plaka_ve_m6_20261025.md",
+      "sha256": "74d8dd4e1eec689fad40fcbb08944a0527e9a85e19de8339d255b1c526bd16ba",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\28_cfd_duz_plaka_ve_m6_20261025.md"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\batch_closed.json",
+      "sha256": "c4d6eb814dcb5e310c8c05c10e8af7e288c7f60c600226a880b6022761a66282",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\29_batch_closed.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_code_snapshot_20261025.json",
+      "sha256": "96ac9fac3e3754dc49f9acd3566773301c5b864e7fb9091eb13a86ec6caf9292",
+      "archived": "outputs\\data\\task_evidence\\20261025-215442-4b9487\\flatplate_code_snapshot_20261025.json"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+  },
+  "project_id": "qualification",
+  "project_manifest": "outputs\\data\\projects\\qualification.json",
+  "project_data_root": "outputs/data/qualification",
+  "project_output_root": "outputs",
+  "project_snapshot": {
+    "id": "qualification",
+    "name": "Araç doğrulama örnekleri",
+    "kind": "qualification",
+    "artifact_root": "outputs",
+    "data_root": "outputs/data/qualification",
+    "created_utc": "2026-10-19T07:06:12.206479+00:00",
+    "active_cad": null
+  },
+  "applied_lesson_ids": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "R01",
+    "R03"
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "contract": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\contract.json",
+  "contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "completed_utc": "2026-10-25T19:23:31.251183+00:00",
+  "result_scope": "Source-code agreement diagnostic; family numerical qualification false, M6 false",
+  "scoped_qualification_passed": false,
+  "open_engineering_checks": [
+    "medium and fine iterative convergence",
+    "three converged meshes and asymptotic comparison",
+    "dimensional constant identity limitation",
+    "general3D/M6/experiment qualification remains separate"
+  ]
+}

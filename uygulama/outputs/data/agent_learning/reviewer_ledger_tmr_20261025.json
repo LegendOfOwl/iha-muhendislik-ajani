@@ -1,0 +1,36 @@
+{
+  "version": "2026-10-25.tmr1",
+  "created_utc": "2026-10-24T22:47:58.105072+00:00",
+  "scope": "One configuration mapping defect and postprocessing distinctions; no expert or unseen LLM improvement claim",
+  "previous_ledger": "outputs/data/agent_learning/reviewer_ledger_v2_20261025.json",
+  "observed_error": "Intended standard SA-neg configured as NEGATIVE alone; native parser refused before any flow field.",
+  "behavioural_cause_inference": "Mapped model name to one option without checking the coupled ft2 requirement before the first parser test.",
+  "correction": "Official variant definition matched with NEGATIVE,WITHFT2; no EXPERIMENTAL override; rejected config and seal retained.",
+  "counterexample": "Same20step mesh/physics/config except SA_OPTIONS; old rejected, corrected native run exited0 and produced matched field19.",
+  "evidence": {
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_smoke\\prediction_frozen.json": "7737601d59fb4a2200c9b2c74a3150b6c87852f4fc0b8fc137fb9c89f28d0f9e",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\tmr_sharp_20261025_v1\\flow_v2_smoke\\prediction_frozen.json": "7dd98412cbd367491739a5bb7a466152379b0f967648804b9f7a226ef671ac68",
+    "outputs\\projects\\proje-e9319baef1\\reports\\tmr_mesh_guards_20261025.json": "27a359330648374e32ab98cd116891842e5936d15c3969e34b572824f665f9a6",
+    "work\\tmr_m6_20261025\\sources\\SU2_physical_definition.html": "6e2488a2181223d0903443910195fef1508304ee12b2ea057c11cc08b9e9c847"
+  },
+  "lesson_id": "L10",
+  "instructions_before_sha256": "2289f15b4ffbc47b8fa26e8f8a3387f069056ce4ce90e7c53ec6fbed1e979f22",
+  "instructions_after_sha256": "5889934b15f273ec8e285dd0039e3aac77d6b3c571d501cd27c7aa2d499b7a2d",
+  "additional_records": [
+    {
+      "type": "visualization",
+      "observed": "Default VTK cutter introduced triangle diagonals in a hex cut view. Original figure retained; polygon cuts selected and unit-cube4vs5edge counterexample passed."
+    },
+    {
+      "type": "force_postprocessing",
+      "observed": "Quad face diagonal integration and bilinear interpolation define different surface quadrature; all estimates retained. No native field changed."
+    },
+    {
+      "type": "wrapper",
+      "observed": "Coarsener succeeded; summary expected an uncopied fine SU2 file. Finalization recovered from completed outputs without rerunning native coarsening."
+    }
+  ],
+  "physical_root_cause_identified": false,
+  "LLM_behaviour_improvement_tested": false,
+  "expert_status": false
+}

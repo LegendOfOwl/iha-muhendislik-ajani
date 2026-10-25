@@ -1,0 +1,178 @@
+{
+  "version": "2026-10-25.flatplate1",
+  "created_utc": "2026-10-25T18:56:17.319731+00:00",
+  "scope": "2D compressible SA-neg implementation comparison; not experimental model validation or M6 qualification",
+  "not_blind": true,
+  "source": "NASA TMR VERIF/2DZP; SU2 official tutorial as numerical starting recipe",
+  "physical": {
+    "Mach": 0.2,
+    "Re_per_m": 5000000.0,
+    "T_K": 300,
+    "wall_length_m": 2,
+    "domain_height_m": 1,
+    "SA_variant": "SA-neg standard NEGATIVE,WITHFT2",
+    "nu_tilde_inflow_over_nu": 3,
+    "wall": "adiabatic no slip"
+  },
+  "gates_registered_before_flow": {
+    "density_log10_max": -10,
+    "nu_tilde_log10_max": -11,
+    "last100_CD_range_max": 1e-07,
+    "fine_max_yplus": 1,
+    "fine_Cf_x0p97008_relative_difference_each_code_max": 0.02,
+    "fine_Cf_curve_relative_RMS_each_code_max": 0.03,
+    "curve_scoring_window_m": [
+      0.1,
+      1.9
+    ],
+    "all_curve_points_outside_window_retained_and_reported": true,
+    "velocity_profile_relative_L2_max": 0.03,
+    "mut_profile_relative_L2_max": 0.05,
+    "three_iterative_gates_required": true,
+    "medium_fine_Cf_change_max": 0.01,
+    "medium_fine_CD_change_max": 0.02
+  },
+  "limits": [
+    "Leading-edge singularity: global total drag may not admit formal order; no automatic GCI.",
+    "Finite volume discretizations differ.",
+    "No experimental force substituted.",
+    "No absolute turbulence-model proof from one case."
+  ],
+  "budgets": {
+    "threads": 4,
+    "max_iterations": 8000,
+    "seconds": {
+      "smoke": 60,
+      "coarse": 180,
+      "medium": 300,
+      "fine": 600
+    },
+    "sampled_working_set_GiB": 2.5
+  },
+  "levels": {
+    "coarse": {
+      "nodes": 3381,
+      "cells": 3264,
+      "dimensions": [
+        69,
+        49
+      ],
+      "positive_corner_cross_min": 3.2540480737491457e-08,
+      "boundary_edges": {
+        "wall": 56,
+        "symmetry": 12,
+        "inlet": 48,
+        "outlet": 48,
+        "farfield": 68
+      },
+      "source_coordinate_roundtrip_bitwise": true,
+      "wall_first_y_m": 4.03918221115e-06,
+      "normal_growth_max": 1.2763423348301903,
+      "wall_dx_min_max_m": [
+        0.00805620520068,
+        0.08591693738000017
+      ],
+      "extent_m": {
+        "min": [
+          -0.33333,
+          0.0
+        ],
+        "max": [
+          2.0,
+          1.0
+        ]
+      },
+      "source_archive_member": "u/piyer/nasa_tmr/gitlab/turbmodels/FlatPlate/Grids/flatplate_clust2_3levelsdown_69x49.p2dfmt",
+      "source_member_sha256": "18c1d1c82cf91bdad89b2c2963129fc992fcd8b98fda4b3e79b7397ee52ba223",
+      "mesh_sha256": "bbb7b5e95ac8fe17bafa158948adc2427a740114d9772dc412c4c0cf82882eff"
+    },
+    "medium": {
+      "nodes": 13289,
+      "cells": 13056,
+      "dimensions": [
+        137,
+        97
+      ],
+      "positive_corner_cross_min": 8.038973098035795e-09,
+      "boundary_edges": {
+        "wall": 112,
+        "symmetry": 24,
+        "inlet": 96,
+        "outlet": 96,
+        "farfield": 136
+      },
+      "source_coordinate_roundtrip_bitwise": true,
+      "wall_first_y_m": 2.00465414779e-06,
+      "normal_growth_max": 1.1297532185677743,
+      "wall_dx_min_max_m": [
+        0.00401188759785,
+        0.042958468690000196
+      ],
+      "extent_m": {
+        "min": [
+          -0.33333,
+          0.0
+        ],
+        "max": [
+          2.0,
+          1.0
+        ]
+      },
+      "source_archive_member": "u/piyer/nasa_tmr/gitlab/turbmodels/FlatPlate/Grids/flatplate_clust2_2levelsdown_137x97.p2dfmt",
+      "source_member_sha256": "55ae965f2151e5644e3c7c1b6fecea7ce0a16cf4c34eae6997f27683a4e2ac44",
+      "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6"
+    },
+    "fine": {
+      "nodes": 52689,
+      "cells": 52224,
+      "dimensions": [
+        273,
+        193
+      ],
+      "positive_corner_cross_min": 2.0019456266000266e-09,
+      "boundary_edges": {
+        "wall": 224,
+        "symmetry": 48,
+        "inlet": 192,
+        "outlet": 192,
+        "farfield": 272
+      },
+      "source_coordinate_roundtrip_bitwise": true,
+      "wall_first_y_m": 1.00046515517e-06,
+      "normal_growth_max": 1.0628984987479582,
+      "wall_dx_min_max_m": [
+        0.00200196836704,
+        0.021479234350000098
+      ],
+      "extent_m": {
+        "min": [
+          -0.33333,
+          0.0
+        ],
+        "max": [
+          2.0,
+          1.0
+        ]
+      },
+      "source_archive_member": "u/piyer/nasa_tmr/gitlab/turbmodels/FlatPlate/Grids/flatplate_clust2_1leveldown_273x193.p2dfmt.gz",
+      "source_member_sha256": "40be4c0a92b75892189263a5c3efb63fa112030912480427e1e0787c6cb97955",
+      "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252"
+    }
+  },
+  "numerical_changes_from_tutorial": {
+    "SA_options": "Use standard SA-neg with ft2 explicitly, compare standard-SA references where passive for positive states",
+    "inflow_nu": "Explicit3nu as NASA input tur10=3",
+    "pressure": "Derived consistently from chosen SI Sutherland/Re instead of rounded tutorial pressure",
+    "CFL": "Same tutorial recipe; expand adaptive parameter syntax for installed8.5",
+    "linear": "FGMRES/LUSGS40,tolerance1e-6 explicitly",
+    "convergence": "Target-13 for both density/SA with8000iteration/time cap; separate registered gates",
+    "outputs": "Non-overwritten checkpoints every200"
+  },
+  "derived_freestream": {
+    "mu_Pa_s": 1.8459162511975804e-05,
+    "U_m_s": 69.44475790151479,
+    "rho_kg_m3": 1.3290537018038302,
+    "p_Pa": 114454.64925972116,
+    "inlet_Ttotal_K": 302.4
+  }
+}

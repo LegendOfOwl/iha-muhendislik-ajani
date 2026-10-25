@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"enableRemoteConsent":true,"lang":"en","siteId":1608752,"cookiePolicyId":93470831,"cookiePolicyUrl":"https://su2code.github.io/cookie_declaration.html", "banner":{ "position":"float-bottom-left","textColor":"white","backgroundColor":"#333333" }};
+</script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-28187985-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Physical Definition</title>
+    <meta name="description" content="The physical definition of a case includes the definition of the free-stream, the reference values and the non-dimensionalization. SU2 offers different ways ...">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico?1">
+
+    <link rel="canonical" href="/docs_v7/Physical-Definition/">
+    <link rel="alternate" type="application/rss+xml" title="SU2 | Multiphysics Simulation and Design Software" href="/feed.xml" />
+
+    <!-- Load Font Awesome 5 or 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous">
+
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/f17953d81d.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logos/logonav.png"></span>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/download.html">Download</a></li>
+                <li ><a href="/publications.html">Publications</a></li>
+                <li ><a href="/docs_v7/home/">Docs</a></li>
+                <li ><a href="/tutorials/home/">Tutorials</a></li>
+                <li ><a href="/vandv/home/">V&V</a></li>
+                <li ><a href="https://www.cfd-online.com/Forums/su2/">User Forum</a></li>
+                <li ><a href="https://join.slack.com/t/su2devteam/shared_invite/zt-af0uuqf8-8XNExKMV9G~UVsnkvi5uVA">Slack</a></li>
+                <li ><a href="/develop.html">Develop</a></li>
+                <li ><a href="/su2gui/Introduction">GUI</a></li>
+                <li ><a href="/gsoc/Introduction">GSOC</a></li>
+            </ul>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://www.youtube.com/channel/UCxv_00gWLAQPBUnl9mGRQjA"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/su2code/SU2.git"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/su2code/"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/su2code/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+          Introduction to SU2
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/home/">SU2, Multiphysics Simulation and Design Software</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/contribute/">Contribute</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          New in Version 7
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Guide-to-v7/">Guide to Version v7</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+          Quick Start
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Quick-Start/">Quick Start</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+          Installation
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Download/">Download</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Software-Components/">Software Components</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Installation/">Installation</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/SU2-Linux-MacOS/">SU2 on Linux/MacOS</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/SU2-Windows/">SU2 on Windows</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Test-Cases/">Test Cases</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+          Build From Source
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Build-SU2-Linux-MacOS/">Build SU2 on Linux/MacOS</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Build-SU2-Windows/">Build SU2 on Windows</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Running-Unit-Tests/">Running Unit Tests</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+          Theory
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Theory/">Governing Equations in SU2</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Streamwise-Periodicity/">Streamwise Periodicity</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Thermochemical-Nonequilibrium/">Thermochemical Nonequilibrium</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+          Users Guide
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Configuration-File/">Configuration File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Mesh-File/">Mesh File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Restart-File/">Restart File</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Solver-Setup/">Solver Setup</a>
+        
+          
+          
+          <a class="list-group-item active" href="/docs_v7/Physical-Definition/">Physical Definition</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Markers-and-BC/">Markers and Boundary Conditions</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Convective-Schemes/">Convective Schemes</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Slope-Limiters-and-Shock-Resolution/">Slope Limiters and Shock Resolution</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Custom-Output/">History and Solution Output</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Linear-Solvers-and-Preconditioners/">Linear Solvers and Preconditioners</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Multizone/">Basics of Multi-Zone Computations</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Execution/">Execution</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+          Developer Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Gitting-Started/">GIT-ting Started</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Developing-SU2-on-GitHub-(Internal-Developers)/">Developing SU2 on GitHub (Internal Developers)</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Running-Regression-Tests/">Running Regression Tests</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Code-Review/">Code Review</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Code-Structure/">Code Structure</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Style-Guide/">Style Guide</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Advanced-AD-Techniques/">Advanced AD Techniques</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Container-Development/">Containers for Development</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Writing-Unit-Tests/">Writing Unit Tests</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Tracy-Integration/">Integrating Tracy Profiler with SU2</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+          FAQ
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/FAQ/">FAQ</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
+          Contact
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/docs_v7/Contact/">Contact</a>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Physical Definition</h1>
+            <div id="markdown-content-container"><p>The physical definition of a case includes the definition of the free-stream, the reference values and the non-dimensionalization. 
+SU2 offers different ways of setting and computing this definition. This document gives a short overview on the config options and their physical relation.</p>
+
+<hr />
+
+<ul>
+  <li><a href="#fluid-model">Fluid Model</a></li>
+  <li><a href="#reference-values">Reference Values</a></li>
+  <li><a href="#free-stream-definition-compressible">Free-Stream Definition (Compressible)</a>
+    <ul>
+      <li><a href="#thermodynamic-state">Thermodynamic State</a></li>
+      <li><a href="#mach-number-and-velocity">Mach Number and Velocity</a></li>
+      <li><a href="#reynolds-number-and-viscosity">Reynolds Number and Viscosity</a></li>
+      <li><a href="#non-dimensionalization">Non-Dimensionalization</a></li>
+    </ul>
+  </li>
+  <li><a href="#free-stream-definition-thermochemical-nonequilibrium">Free-Stream Definition (Thermochemical Nonequilibrium)</a>
+    <ul>
+      <li><a href="#free-stream-temperatures">Free-Stream Temperatures</a></li>
+      <li><a href="#chemical-composition-and-mass-fractions">Chemical Composition and Mass Fractions</a></li>
+    </ul>
+  </li>
+  <li><a href="#transport-coefficient-model-thermochemical-nonequilibrium">Transport Coefficient Model (Thermochemical Nonequilibrium)</a></li>
+  <li><a href="#flow-condition-incompressible">Flow Condition (Incompressible)</a>
+    <ul>
+      <li><a href="#thermodynamic-and-gauge-pressure">Thermodynamic and Gauge Pressure</a></li>
+      <li><a href="#initial-state-and-non-dimensionalization">Initial State and Non-Dimensionalization</a></li>
+    </ul>
+  </li>
+  <li><a href="#turbulence-models">Turbulence Models</a>
+    <ul>
+      <li><a href="#spalart-allmaras-model">Spalart-Allmaras (SA)</a></li>
+      <li><a href="#shear-stress-transport">Shear Stress Transport (SST)</a></li>
+    </ul>
+  </li>
+  <li><a href="#transition-models">Transition Models</a></li>
+</ul>
+
+<hr />
+
+<h2 id="fluid-model">Fluid Model</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">EULER</code>, <code class="language-plaintext highlighter-rouge">NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">RANS</code>, <code class="language-plaintext highlighter-rouge">NEMO_EULER</code>, <code class="language-plaintext highlighter-rouge">NEMO_NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">INC_EULER</code>, <code class="language-plaintext highlighter-rouge">INC_NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">INC_RANS</code>, <code class="language-plaintext highlighter-rouge">FEM_EULER</code>, <code class="language-plaintext highlighter-rouge">FEM_NAVIER_STOKES</code></td>
+      <td>7.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For fluid simulations, a model defining the equation of state and thermodynamic properties of the fluid or mixture is required. This is selected using the <code class="language-plaintext highlighter-rouge">FLUID_MODEL</code> option in the config. Available fluid models in SU2 include:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">STANDARD_AIR</code></td>
+      <td><strong>Air model with ideal gas EOS</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">IDEAL_GAS</code></td>
+      <td><strong>Arbitrary fluid with ideal gas EOS</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">VW_GAS</code></td>
+      <td><strong>Arbitrary fluid with Vander-Waals EOS</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PR_GAS</code></td>
+      <td><strong>Arbitrary fluid with Peng-Robinson EOS</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CONSTANT_DENSITY</code></td>
+      <td><strong>Constant density</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">INC_IDEAL_GAS</code></td>
+      <td><strong>Incompressible fluid constant specific heat</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">INC_IDEAL_GAS_POLY</code></td>
+      <td><strong>Incompressible fluid polynomial specific heat</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">FLUID_MIXTURE</code></td>
+      <td><strong>Incompressible ideal gas mixing laws for multicomponent flow</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SU2_NONEQ</code></td>
+      <td><strong>SU2 nonequilibrium thermochemical library</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">MUTATIONPP</code></td>
+      <td><strong>Mutation++ nonequilibrium thermochemical library</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Some fluid models require the specification of additional parameters, with the full set of required options available in the configuration file template.</p>
+
+<h2 id="reference-values">Reference Values</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">EULER</code>, <code class="language-plaintext highlighter-rouge">NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">RANS</code>, <code class="language-plaintext highlighter-rouge">INC_EULER</code>, <code class="language-plaintext highlighter-rouge">INC_NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">INC_RANS</code>, <code class="language-plaintext highlighter-rouge">FEM_EULER</code>, <code class="language-plaintext highlighter-rouge">FEM_NAVIER_STOKES</code></td>
+      <td>7.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table depicts the reference values used by most of the solvers in SU2. The highlighted variables vary depending on the actual solver and the user input.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Unit</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Length</td>
+      <td>\(m\)</td>
+      <td>\(l_{ref} = 1\)</td>
+    </tr>
+    <tr>
+      <td><strong>Density</strong></td>
+      <td>\(\frac{kg}{m^3}\)</td>
+      <td>\(\rho_{ref}\) (based on user input)</td>
+    </tr>
+    <tr>
+      <td><strong>Velocity</strong></td>
+      <td>\(\frac{m}{s}\)</td>
+      <td>\(v_{ref}\) (based on user input)</td>
+    </tr>
+    <tr>
+      <td><strong>Temperature</strong></td>
+      <td>\(K\)</td>
+      <td>\(T_{ref}\) (based on user input)</td>
+    </tr>
+    <tr>
+      <td><strong>Pressure</strong></td>
+      <td>\(Pa\)</td>
+      <td>\(p_{ref}\) (based on user input)</td>
+    </tr>
+    <tr>
+      <td>Viscosity</td>
+      <td>\(\frac{kg}{ms}\)</td>
+      <td>\(\mu_{ref} = \rho_{ref}v_{ref}l_{ref}\)</td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td>\(s\)</td>
+      <td>\(t_{ref} = \frac{l_{ref}}{v_{ref}}\)</td>
+    </tr>
+    <tr>
+      <td>Heatflux</td>
+      <td>\(\frac{W}{m^2}\)</td>
+      <td>\(Q_{ref} = \rho_{ref}v^3_{ref}\)</td>
+    </tr>
+    <tr>
+      <td>Gas Constant</td>
+      <td>\(\frac{m^2}{s^2 K}\)</td>
+      <td>\(R_{ref} = \frac{v^2_{ref}}{T_{ref}}\)</td>
+    </tr>
+    <tr>
+      <td>Conductivity</td>
+      <td>\(\frac{W}{mK}\)</td>
+      <td>\(k_{ref} = \mu_{ref}R_{ref}\)</td>
+    </tr>
+    <tr>
+      <td>Force</td>
+      <td>\(N\)</td>
+      <td>\(F_{ref} = \rho_{ref}v^2_{ref}l^2_{ref}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="free-stream-definition-compressible">Free-Stream Definition (Compressible)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">EULER</code>, <code class="language-plaintext highlighter-rouge">NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">RANS</code>,<code class="language-plaintext highlighter-rouge">FEM_EULER</code>, <code class="language-plaintext highlighter-rouge">FEM_NAVIER_STOKES</code></td>
+      <td>7.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The physical definition for the compressible solvers in SU2 based around the definition of the free-stream. The free-stream values are not only used as boundary conditions for the <code class="language-plaintext highlighter-rouge">MARKER_FAR</code> option, but also for initialization and non-dimensionalization. That means even if you don’t have any farfield BCs in your problem, it might be important to prescribe physically meaningful values for the options.</p>
+
+<h3 id="thermodynamic-state">Thermodynamic State</h3>
+
+<p>The thermodynamic state of the free-stream is defined by the pressure \(p_{\infty}\), the density \(\rho_{\infty}\) and the temperature \(T_{\infty}\). Since these quantities are not independent, only two of these values have to be described and the third one can be computed by an equation of state, depending on the fluid model used. There are two possible ways implemented that can be set using <code class="language-plaintext highlighter-rouge">FREESTREAM_OPTION</code>:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">TEMPERATURE_FS</code> (default): Density \(\rho_{\infty}\) is computed using the specified pressure \(p_{\infty}\) (<code class="language-plaintext highlighter-rouge">FREESTREAM_PRESSURE</code>) and temperature \(T_{\infty}\) (<code class="language-plaintext highlighter-rouge">FREESTREAM_TEMPERATURE</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">DENSITY_FS</code>: Temperature \(T_{\infty}\) is computed using the specified pressure \(p_{\infty}\) (<code class="language-plaintext highlighter-rouge">FREESTREAM_PRESSURE</code>) and density \(\rho_{\infty}\) (<code class="language-plaintext highlighter-rouge">FREESTREAM_DENSITY</code>).</li>
+</ul>
+
+<h3 id="mach-number-and-velocity">Mach Number and Velocity</h3>
+
+<p>The free-stream velocity \(v_{\infty}\) is always computed from the specified Mach number \(Ma_{\infty}\) (<code class="language-plaintext highlighter-rouge">MACH_NUMBER</code>) and the computed thermodynamic state. The flow direction is based on the angle of attack (<code class="language-plaintext highlighter-rouge">AOA</code>) and the side-slip angle (<code class="language-plaintext highlighter-rouge">SIDESLIP_ANGLE</code>, for 3D).</p>
+
+<h3 id="reynolds-number-and-viscosity">Reynolds Number and Viscosity</h3>
+
+<p>If it is a viscous computation, by default the pressure \(p_{\infty}\) will be recomputed from a density \(\rho_{\infty}\) that is found from the specified Reynolds number \(Re\) (<code class="language-plaintext highlighter-rouge">REYNOLDS_NUMBER</code>). Note that for an ideal gas this does not change the Mach number \(Ma_{\infty}\) as it is only a function of the temperature \(T_{\infty}\). If you still want to use the thermodynamic state for the free-stream definition, set the option <code class="language-plaintext highlighter-rouge">INIT_OPTION</code> to <code class="language-plaintext highlighter-rouge">TD_CONDITIONS</code> (default: <code class="language-plaintext highlighter-rouge">REYNOLDS</code>). In both cases, the viscosity is computed from the dimensional version of Sutherland’s law or the constant viscosity (<code class="language-plaintext highlighter-rouge">FREESTREAM_VISCOSITY</code>), depending on the <code class="language-plaintext highlighter-rouge">VISCOSITY_MODEL</code> option.</p>
+
+<h3 id="non-dimensionalization">Non-Dimensionalization</h3>
+
+<p>For all schemes, as reference values for the density and temperature the free-stream values are used, i.e. \(\rho_{ref} = \rho_{\infty}, T_{ref} = T_{\infty}\). The reference velocity is based on the speed of sound defined by the reference state: \(v_{ref} = \sqrt{\frac{p_{ref}}{\rho_{ref}}}\). The dimensionalization scheme can be set using the option <code class="language-plaintext highlighter-rouge">REF_DIMENSIONALIZATION</code> and defines how the reference pressure \(p_{ref}\) is computed:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">DIMENSIONAL</code>: All reference values are set to <code class="language-plaintext highlighter-rouge">1.0</code>, i.e. the computation is dimensional.</li>
+  <li><code class="language-plaintext highlighter-rouge">FREESTREAM_PRESS_EQ_ONE</code>: Reference pressure equals free-stream pressure, \(p_{ref} = p_{\infty}\).</li>
+  <li><code class="language-plaintext highlighter-rouge">FREESTREAM_VEL_EQ_MACH</code>: Reference pressure is chosen such that the non-dimensional free-stream velocity equals the Mach number: \(p_{ref} = \gamma p_{\infty}\).</li>
+  <li><code class="language-plaintext highlighter-rouge">FREESTREAM_VEL_EQ_ONE</code>: Reference pressure is chosen such that the non-dimensional free-stream velocity equals <code class="language-plaintext highlighter-rouge">1.0</code>: \(p_{ref} = Ma^2_{\infty} \gamma p_{\infty}\).</li>
+</ul>
+
+<h2 id="free-stream-definition-thermochemical-nonequilibrium">Free-Stream Definition (Thermochemical Nonequilibrium)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">NEMO_EULER</code>, <code class="language-plaintext highlighter-rouge">NEMO_NAVIER_STOKES</code></td>
+      <td>7.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The physical definition for the thermochemical nonequilibrium (NEMO) solvers is similar to the compressible solvers, but with additional parameters to specify. The free-stream values are not only used as boundary conditions for the <code class="language-plaintext highlighter-rouge">MARKER_FAR</code> option, but also for initialization and non-dimensionalization. That means even if you don’t have any farfield BCs in your problem, it might be important to prescribe physically meaningful values for the options.</p>
+
+<h3 id="free-stream-temperatures">Free-Stream Temperatures</h3>
+
+<p>Thermodynamic state is specified using the same options as the compressible solver, with the addition of the free-stream electronic temperature. This can be specified using the <code class="language-plaintext highlighter-rouge">FREESTREAM_TEMPERATURE_VE</code> option in the config file. For a free-stream in equilibrium, this is typically the same value as specified in the <code class="language-plaintext highlighter-rouge">FREESTREAM_TEMPERATURE</code> option.</p>
+
+<h3 id="chemical-composition-and-mass-fractions">Chemical Composition and Mass Fractions</h3>
+
+<p>The NEMO solvers require a specification of thermochemical nonequilibrium library using the <code class="language-plaintext highlighter-rouge">FLUID_MODEL</code> option, either <code class="language-plaintext highlighter-rouge">SU2_NONEQ</code> if using the SU2 built-in thermochemical library, or <code class="language-plaintext highlighter-rouge">MUTATIONPP</code> if using the Mutation++ thermochemical library.</p>
+
+<p>A chemistry model, consisting of a set of flow species, thermochemical properties, and chemical reactions, is specified using <code class="language-plaintext highlighter-rouge">GAS_MODEL</code>. The names of these models are specific to the thermochemical library. If using the <code class="language-plaintext highlighter-rouge">SU2_NONEQ</code> option the choices are <code class="language-plaintext highlighter-rouge">ARGON</code>, <code class="language-plaintext highlighter-rouge">N2</code>, <code class="language-plaintext highlighter-rouge">AIR-5</code>, and <code class="language-plaintext highlighter-rouge">AIR-7</code>.</p>
+
+<p>Free-stream mass fractions must also be specified in list using the option <code class="language-plaintext highlighter-rouge">GAS_COMPOSITION</code>. The mass fractions are specified as decimal values in the order of the species in the gas model. For example, an AIR-5 mixture of 77% oxygen and 23% nitrogen would be expressed as (0.77, 0.23, 0.00, 0.00, 0.00).</p>
+
+<h2 id="transport-coefficient-model-thermochemical-nonequilibrium">Transport Coefficient Model (Thermochemical Nonequilibrium)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">NEMO_NAVIER_STOKES</code></td>
+      <td>7.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A transport coefficient model must be specified for viscous simulations with the NEMO solver, using the <code class="language-plaintext highlighter-rouge">TRANSPORT_COEFF_MODEL</code> config option. Available options when using the SU2TCLib thermochemical library are the Wilkes-Blottner-Eucken, Gupta-Yos, and Sutherland viscosity models, specified by <code class="language-plaintext highlighter-rouge">WILKE</code>, <code class="language-plaintext highlighter-rouge">GUPTA-YOS</code>, and <code class="language-plaintext highlighter-rouge">SUTHERLAND</code>, respectively. The default option for transport coefficient model is Wilkes-Blottner-Eucken.</p>
+
+<p>It should be noted the Sutherland model is only used to evaluate viscosity, and the Wilkes-Blottner-Eucken model is used to evaluate diffusion coefficient and thermal conductivity.</p>
+
+<hr />
+
+<h2 id="flow-condition-incompressible">Flow Condition (Incompressible)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">INC_EULER</code>, <code class="language-plaintext highlighter-rouge">INC_NAVIER_STOKES</code>, <code class="language-plaintext highlighter-rouge">INC_RANS</code></td>
+      <td>7.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The physical definition of the incompressible solvers is accomplished by setting an appropriate flow condition for initialization and non-dimensionalization. SU2 solves the <a href="/docs_v7/Theory/#incompressible-navier-stokes">incompressible Navier-Stokes equations</a> in a general form allowing for variable density due to heat transfer through the low-Mach approximation (or incompressible ideal gas formulation).</p>
+
+<h3 id="thermodynamic-and-gauge-pressure">Thermodynamic and Gauge Pressure</h3>
+
+<p>In the incompressible problem the thermodynamic pressure is decoupled from the governing equations and density is therefore only a function of temperature variations. The absolute value of the pressure is not important and any reference to the pressure \(p\) is considered as the gauge value, i.e. it is zero-referenced against ambient air pressure, so it is equal to absolute pressure minus (an arbitrary) atmospheric pressure.</p>
+
+<h3 id="initial-state-and-non-dimensionalization">Initial State and Non-Dimensionalization</h3>
+
+<p>The initial state, i.e. the initial values of density \(\rho_0\), velocity vector \(\bar{v}_{0}\) and temperature \(T_0\) are set with <code class="language-plaintext highlighter-rouge">INC_DENSITY_INIT</code>, <code class="language-plaintext highlighter-rouge">INC_VELOCITY_INIT</code> and <code class="language-plaintext highlighter-rouge">INC_TEMPERATURE_INIT</code>, respectively. The initial pressure \(p_0\) is always set to <code class="language-plaintext highlighter-rouge">0.0</code>.</p>
+
+<p>The reference values \(\rho_{ref}, T_{ref}, v_{ref}\) equal the initial state values by default (or if <code class="language-plaintext highlighter-rouge">INC_NONDIM= INITIAL_VALUES</code>). If <code class="language-plaintext highlighter-rouge">INC_NONDIM</code> is set to <code class="language-plaintext highlighter-rouge">REFERENCE_VALUES</code> you can define different values for them using the options <code class="language-plaintext highlighter-rouge">INC_DENSITY_REF</code>, <code class="language-plaintext highlighter-rouge">INC_VELOCITY_REF</code> and <code class="language-plaintext highlighter-rouge">INC_TEMPERATURE_REF</code>. The reference pressure is always computed by \(p_{ref} = \rho_{ref}v^2_{ref}\).</p>
+
+<p><strong>Note:</strong> The initial state is also used as boundary conditions for <code class="language-plaintext highlighter-rouge">MARKER_FAR</code>.</p>
+
+<h2 id="turbulence-models">Turbulence Models</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*_RANS</code></td>
+      <td>7.4.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This section describes how to setup turbulence models for RANS simulations. Turbulence is activated using the option <code class="language-plaintext highlighter-rouge">KIND_SOLVER= RANS</code>, or <code class="language-plaintext highlighter-rouge">KIND_SOLVER= INC_RANS</code>
+A turbulence model can then be selected via the option <code class="language-plaintext highlighter-rouge">KIND_TURB_MODEL</code>
+Different submodels and parameters are specified via the different options listed below.
+The turbulent Prandtl number can be modified with the option <code class="language-plaintext highlighter-rouge">PRANDTL_TURB</code> (the default is 0.9).</p>
+
+<h3 id="spalart-allmaras-sa">Spalart-Allmaras (SA)</h3>
+
+<p>SU2 implements several versions and corrections of the SA model.
+The model is selected using <code class="language-plaintext highlighter-rouge">KIND_TURB_MODEL= SA</code> and the modifications via the <code class="language-plaintext highlighter-rouge">SA_OPTIONS</code> list. If this list is empty, then SU2 defaults to <code class="language-plaintext highlighter-rouge">SA-noft2</code>.
+The freestream and inlet conditions are specified via the option <code class="language-plaintext highlighter-rouge">FREESTREAM_NU_FACTOR= 3</code> (ratio of SA variable to freestream kinematic viscosity).</p>
+
+<p>The following modifications are allowed (refer to <a href="https://turbmodels.larc.nasa.gov/spalart.html">NASA’s TMR</a> for further info):</p>
+<ul>
+  <li>Versions:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">NEGATIVE</code> - Negative SA model.</li>
+      <li><code class="language-plaintext highlighter-rouge">EDWARDS</code> - Edwards modification.</li>
+      <li><code class="language-plaintext highlighter-rouge">BCM</code> - BCM transitional model.</li>
+      <li><code class="language-plaintext highlighter-rouge">WITHFT2</code> - SA model <strong>with</strong> ft2 term, note that by default we omit this term.</li>
+    </ul>
+  </li>
+  <li>Corrections:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">QCR2000</code> - Quadratic contitutive relation used in the stress tensor.</li>
+      <li><code class="language-plaintext highlighter-rouge">COMPRESSIBILITY</code> - Mixing layer compressibility correction.</li>
+      <li><code class="language-plaintext highlighter-rouge">ROTATION</code> - Dacles-Mariani et al. rotation correction.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>All the modifications can be combined with each other expect <code class="language-plaintext highlighter-rouge">NEGATIVE</code> and <code class="language-plaintext highlighter-rouge">EDWARDS</code>.
+For example, to specify <code class="language-plaintext highlighter-rouge">SA-neg-R-comp-QCR2000</code> use <code class="language-plaintext highlighter-rouge">SA_OPTIONS= NEGATIVE, WITHFT2, ROTATION, COMPRESSIBILITY, QCR2000</code>.
+<strong>However, some combinations are not considered standard</strong>, e.g. <code class="language-plaintext highlighter-rouge">SA-neg</code> should have the ft2 term, whereas <code class="language-plaintext highlighter-rouge">SA-noft2-Edwards</code> and <code class="language-plaintext highlighter-rouge">SA-noft2-BCM</code> should not have the ft2 term, and they are usually not combined with other corrections (see TMR for more details). To use non-standard combinations it is necessary to add <code class="language-plaintext highlighter-rouge">EXPERIMENTAL</code> to the option list, e.g. <code class="language-plaintext highlighter-rouge">SA_OPTIONS= NEGATIVE, BCM, EXPERIMENTAL</code>.</p>
+
+<p>The rough wall correction is implicitly turned on by specifying roughness values for wall markers via the <code class="language-plaintext highlighter-rouge">WALL_ROUGHNESS</code> option.</p>
+
+<h3 id="shear-stress-transport-sst">Shear Stress Transport (SST)</h3>
+
+<p>SU2 implements the “Standard” (1994) and 2003 versions of the SST model along with several modifications.</p>
+
+<p><strong>Note:</strong> Currently all versions are “modified” i.e. the turbulence kinetic energy (TKE) is not included in the viscous stress tensor.</p>
+
+<p>The main model is selected using <code class="language-plaintext highlighter-rouge">KIND_TURB_MODEL= SST</code> and the version and modifications via the <code class="language-plaintext highlighter-rouge">SST_OPTIONS</code> list. If this list is empty SU2 defaults to the baseline 1994 model, <code class="language-plaintext highlighter-rouge">V1994m</code> (see warning below). The options allow for a version and a set of modifiers to the version. 
+The freestream and inlet conditions are specified via the options <code class="language-plaintext highlighter-rouge">FREESTREAM_TURBULENCEINTENSITY= 0.05</code> (5%) and <code class="language-plaintext highlighter-rouge">FREESTREAM_TURB2LAMVISCRATIO= 10</code> (ratio of turbulent to laminar viscosity).</p>
+
+<p><strong>Note:</strong> The default values for these options are suitable for internal flows but may be too high for external aerodynamics problems.</p>
+
+<p>The following modifications are allowed:</p>
+<ul>
+  <li>Versions:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">V1994m</code> - SSTm <strong>WARNING:</strong> Our implementation has a small <a href="https://github.com/su2code/SU2/issues/1551">inconsistency with the literature</a>, which will be resolved in the next major SU2 update (i.e. version 8).</li>
+      <li><code class="language-plaintext highlighter-rouge">V2003m</code> - SST-2003m (no known inconsistencies).</li>
+    </ul>
+  </li>
+  <li>Production modifications:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">VORTICITY</code> - Uses vorticity to compute the source term instead of strain-rate magnitude.</li>
+      <li><code class="language-plaintext highlighter-rouge">KATO_LAUNDER</code> - Uses the Kato-Launder modification (vorticity times strain-rate).</li>
+      <li><code class="language-plaintext highlighter-rouge">UQ</code> - Production is computed using a modified stress tensor for <a href="https://su2code.github.io/tutorials/UQ_NACA0012/">uncertainty quantification</a>. <strong>Note</strong> with this modification TKE is always included in the stress tensor.</li>
+    </ul>
+  </li>
+  <li>Corrections:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">SUSTAINING</code> - SST with controlled decay.</li>
+      <li>Curvature corrections are currently not implemented.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Modifications from each of these three groups can be combined, for example <code class="language-plaintext highlighter-rouge">SST_OPTIONS= V2003m, VORTICITY, SUSTAINING</code></p>
+
+<h2 id="transition-models">Transition Models</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solver</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*_RANS</code></td>
+      <td>7.5.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This section describes how to setup transition models for RANS simulations. Transition is activated using the option <code class="language-plaintext highlighter-rouge">KIND_SOLVER= RANS</code>, or <code class="language-plaintext highlighter-rouge">KIND_SOLVER= INC_RANS</code> together with a choice of <code class="language-plaintext highlighter-rouge">KIND_TRANS_MODEL</code> (different from <code class="language-plaintext highlighter-rouge">NONE</code>).
+Currently, the only valid option for <code class="language-plaintext highlighter-rouge">KIND_TRANS_MODEL</code> is <code class="language-plaintext highlighter-rouge">LM</code>, for Langtry-Menter transition models.
+Different submodels and correlations are then specified via <code class="language-plaintext highlighter-rouge">LM_OPTIONS</code> (for example <code class="language-plaintext highlighter-rouge">LM_OPTIONS= LM2015, MENTER_LANGTRY</code>).</p>
+
+<p>The following modifications are allowed:</p>
+<ul>
+  <li>Versions:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">LM2015</code> - Correction to include stationary crossflow instabilities. It has to be used only in 3D problems. The RMS of roughness used in this model has to be set through the separate option <code class="language-plaintext highlighter-rouge">HROUGHNESS</code>.</li>
+    </ul>
+  </li>
+  <li>Correlations (only one can be specified):
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">MALAN</code> - This is the default correlation when the LM model is coupled with the <code class="language-plaintext highlighter-rouge">SA</code> turbulence model.</li>
+      <li><code class="language-plaintext highlighter-rouge">SULUKSNA</code> - This should be used only if the <code class="language-plaintext highlighter-rouge">SST</code> model is used. It should require a formulation of the Re_theta_t correlation that omits the pressure gradient parameter, however it is not clear.</li>
+      <li><code class="language-plaintext highlighter-rouge">KRAUSE</code> - This correlation should be used for hypersonic flows. Its implementation at the moment is unclear due to inconsistencies in the literature.</li>
+      <li><code class="language-plaintext highlighter-rouge">KRAUSE_HYPER</code> - This correlation should be used for hypersonic flows. Its implementation at the moment is unclear due to inconsistencies in the literature.</li>
+      <li><code class="language-plaintext highlighter-rouge">MEDIDA</code> - Designed for <code class="language-plaintext highlighter-rouge">SA</code> turbulence model. Has problems when dealing with separation induced transition.</li>
+      <li><code class="language-plaintext highlighter-rouge">MEDIDA_BAEDER</code> - Designed for <code class="language-plaintext highlighter-rouge">SA</code> turbulence model. Has problems when dealing with separation induced transition.</li>
+      <li><code class="language-plaintext highlighter-rouge">MENTER_LANGTRY</code> - This is the default correlation when the LM model is coupled with the <code class="language-plaintext highlighter-rouge">SST</code> turbulence model.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+            <hr>
+                   
+            <p class="text-center">
+              <br />
+              <a target="_blank" href="https://github.com/su2code/su2code.github.io/blob/master/_docs_v7/Physical-Definition.md" class="btn btn-default githubEditButton" role="button">
+                <i class="fa fa-pencil fa-lg"></i> Improve this page
+              </a>
+            </p>
+            
+
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            SU2 | Multiphysics Simulation and Design Software 2026 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a> | 
+            <a href="https://www.iubenda.com/privacy-policy/93470831" class="iubenda-white iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+</body>
+
+</html>

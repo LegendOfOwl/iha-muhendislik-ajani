@@ -1,0 +1,57 @@
+{
+  "frozen_utc": "2026-10-24T21:24:41.212743+00:00",
+  "contract_sha256": "f6306492f3ebac69aeed006394154cf959f9db03268afb31dcce1b5c4776f01c",
+  "matched": {
+    "field_iteration": 599,
+    "terminal_history_iteration": 599.0,
+    "CL": 0.2961135147,
+    "CD": 0.02676924124,
+    "rms[Rho]": -6.687008991,
+    "iteration_checks": {
+      "density_log10": false,
+      "CL_last100_range": true,
+      "CD_last100_range": true
+    }
+  },
+  "iterative_gate": {
+    "passed": false,
+    "observed": {
+      "density_log10": -6.687008991,
+      "CL_last100_range": 1.9343999999588135e-06,
+      "CD_last100_range": 5.3700000002265824e-08
+    },
+    "checks": {
+      "density_log10": false,
+      "CL_last100_range": true,
+      "CD_last100_range": true
+    },
+    "selected_iteration": 599
+  },
+  "no_new_experimental_score_yet": true,
+  "not_blind": true,
+  "files_sha256": {
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\case.cfg": "470c8976ed1cab6b9c13f2a08b041f98754818324f4b4682c233c07ed10fda41",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\flow.vtu": "da77334e8c50444d6222df5d686faaa81c3f83e2997035936e2edc611041ad8f",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\flow_000200.vtu": "eb6ff4b882c3a3ddbff3cc346a6039d6ef06515717c7afa7a6ee9cee2e405abd",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\flow_000400.vtu": "ea8b1b0ac1361247ce6b1d9b354f7e05818bbdaea828afdd6ed6697c36cfbe7a",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\flow_000599.vtu": "da77334e8c50444d6222df5d686faaa81c3f83e2997035936e2edc611041ad8f",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\history.csv": "773427f2ab1e6e7a5a2678525679d611d39e9b4557a394ea09bfe9911705c626",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\mesh.su2": "5ae0e002f1c06c0add413fa9d69c655764b2531109bd18044a3d870220e77914",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\process.json": "b1230394821f389334c737f3c1cc2344f9871fc7a5584277792552e44714bf2d",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\restart_flow.dat": "4711ec2f1eebce0b9a26600671493934d16b179700172f6fa6d30f2b58c3467e",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\restart_flow_000200.dat": "73cb5138a5b14c0966298bd3eb23d57f5dded01452a4239a0bcbf984bf7f6d72",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\restart_flow_000400.dat": "ae8e6d6a91f3d09f8dcd7b5b1931d696632d82c8699c03661deb5e90633850aa",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\restart_flow_000599.dat": "4711ec2f1eebce0b9a26600671493934d16b179700172f6fa6d30f2b58c3467e",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\run_status.json": "7fdd67333df85343ecaf729a277520b3292682429b78d0f9d1cc3a66157a254a",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\seed.dat": "a96d4f73d45faf14b9b2ea225c156ae0fb0d8a6a3b9caaade273c745e8efc343",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\solver.log": "479e1fd0ee240f89026bbdc353895feaf9edc4e233e25e272004a712463b495e",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\surface_flow.csv": "3ae31423f90f7aabf3b27693170fccfb58d58a536b385ee076af56a93a8a4a53",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\surface_flow.vtu": "1bf70f1713c1e0b2dc5a1466e8d06d5f7be0f564011ee63f92aff71f576e6ebe",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\surface_flow_000200.csv": "185959e67f18e222230a52cbbd8396319f5aeb2df70ff2172c21838eb1c52933",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\surface_flow_000200.vtu": "843dad218b1310923c2b17c4d67dcf86d7be848f67c801f224a7397bfde0ab59",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\surface_flow_000400.csv": "63360275da589af8c1acc18ccc2329dba90fb0d5be6e07a10f30bdbaaad48fd5",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\surface_flow_000400.vtu": "7098b87bea6a14d81ba08edd70af6354bc15f5539160d9a3f290238443b38ac0",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\surface_flow_000599.csv": "3ae31423f90f7aabf3b27693170fccfb58d58a536b385ee076af56a93a8a4a53",
+    "outputs\\projects\\proje-e9319baef1\\simulations\\m6_cfl_feedback_20261025\\adaptive\\surface_flow_000599.vtu": "1bf70f1713c1e0b2dc5a1466e8d06d5f7be0f564011ee63f92aff71f576e6ebe"
+  }
+}

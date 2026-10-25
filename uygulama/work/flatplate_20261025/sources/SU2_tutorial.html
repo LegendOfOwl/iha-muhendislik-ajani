@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"enableRemoteConsent":true,"lang":"en","siteId":1608752,"cookiePolicyId":93470831,"cookiePolicyUrl":"https://su2code.github.io/cookie_declaration.html", "banner":{ "position":"float-bottom-left","textColor":"white","backgroundColor":"#333333" }};
+</script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-28187985-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Turbulent Flat Plate</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico?1">
+
+    <link rel="canonical" href="/tutorials/Turbulent_Flat_Plate/">
+    <link rel="alternate" type="application/rss+xml" title="SU2 | Multiphysics Simulation and Design Software" href="/feed.xml" />
+
+    <!-- Load Font Awesome 5 or 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous">
+
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/f17953d81d.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logos/logonav.png"></span>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/download.html">Download</a></li>
+                <li ><a href="/publications.html">Publications</a></li>
+                <li ><a href="/docs_v7/home/">Docs</a></li>
+                <li  class="active" ><a href="/tutorials/home/">Tutorials</a></li>
+                <li ><a href="/vandv/home/">V&V</a></li>
+                <li ><a href="https://www.cfd-online.com/Forums/su2/">User Forum</a></li>
+                <li ><a href="https://join.slack.com/t/su2devteam/shared_invite/zt-af0uuqf8-8XNExKMV9G~UVsnkvi5uVA">Slack</a></li>
+                <li ><a href="/develop.html">Develop</a></li>
+                <li ><a href="/su2gui/Introduction">GUI</a></li>
+                <li ><a href="/gsoc/Introduction">GSOC</a></li>
+            </ul>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://www.youtube.com/channel/UCxv_00gWLAQPBUnl9mGRQjA"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/su2code/SU2.git"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/su2code/"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/su2code/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+          Getting Started
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/home/">The SU2 Tutorial Collection</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/contribute/">Contribute</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          Compressible Flow
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inviscid_Bump/">Inviscid Bump in a Channel</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inviscid_Wedge/">Inviscid Supersonic Wedge</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inviscid_ONERAM6/">Inviscid ONERA M6</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Laminar_Flat_Plate/">Laminar Flat Plate</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Laminar_Cylinder/">Laminar Cylinder</a>
+        
+          
+          
+          <a class="list-group-item active" href="/tutorials/Turbulent_Flat_Plate/">Turbulent Flat Plate</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Transitional_Flat_Plate/">Transitional Flat Plate</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Transitional_Flat_Plate_T3A/">Transitional Flat Plate for T3A and T3A-</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Turbulent_ONERAM6/">Turbulent ONERA M6</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Unsteady_NACA0012/">Unsteady NACA0012</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/UQ_NACA0012/">Epistemic Uncertainty Quantification of RANS predictions of NACA 0012 airfoil</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/NICFD_nozzle/">Non-ideal compressible flow in a supersonic nozzle</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/NICFD_nozzle_datadriven/">Non-ideal compressible flows with physics-informed neural networks</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Aachen_Turbine/">Aachen turbine stage with Mixing-plane</a>
+        
+          
+          
+          <a class="list-group-item " href=""></a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+          Incompressible Flow
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Inviscid_Hydrofoil/">Inviscid Hydrofoil</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Laminar_Flat_Plate/">Laminar Flat Plate with Heat Transfer</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Turbulent_Flat_Plate/">Turbulent Flat Plate</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Turbulent_NACA0012/">Turbulent NACA 0012</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Laminar_Step/">Laminar Backward-facing Step</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Laminar_Cavity/">Laminar Buoyancy-driven Cavity</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Streamwise_Periodic/">Streamwise Periodic Flow</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Species_Transport/">Species Transport</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Species_Transport_Composition_Dependent_Model/">Composition-Dependent model for Species Transport equations</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Von_Karman/">Unsteady von Karman vortex shedding</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Turbulent_Bend/">Turbulent Bend with wall functions</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Urban_City/">Wind velocity and pollutant dispersion in a city</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Lid_Driven_Cavity/">Incompressible, Lid Driven Cavity Flow</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+          Structural Mechanics
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Linear_Elasticity/">Linear Elasticity</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Linear_Dynamics/">Linear Dynamics</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Nonlinear_Elasticity/">Non-linear Elasticity</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Multiple_Material/">Non-linear Elasticity with Multiple Materials</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+          Multiphysics
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Static_FSI/">Static Fluid-Structure Interaction (FSI)</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Dynamic_FSI_Python/">Dynamic Fluid-Structure Interaction (FSI) using the Python wrapper and a Nastran structural model</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Static_CHT/">Static Conjugate Heat Transfer (CHT)</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Heated_Cylinders_Unsteady/">Unsteady Conjugate Heat Transfer</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/SS_CR_CHT/">Solid-to-Solid Conjugate Heat Transfer with Contact Resistance</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Laminar_Diffusion_Flame/">Incompressible, Laminar counterflow diffusion flame</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Combustion/">Incompressible, Laminar Combustion Simulation</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/TFC_python/">User Defined combustion model with Python</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+          Design Features
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inviscid_2D_Unconstrained_NACA0012/">Unconstrained shape design of a transonic inviscid airfoil at a cte. AoA</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Turbulent_2D_Constrained_RAE2822/">Constrained shape design of a transonic turbulent airfoil at a cte. C<sub>L</sub></a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inviscid_3D_Constrained_ONERAM6/">Constrained shape design of a transonic inviscid wing at a cte. C<sub>L</sub></a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Multi_Objective_Shape_Design/">Shape Design With Multiple Objectives and Penalty Functions</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Unsteady_Shape_Opt_NACA0012/">Unsteady Shape Optimization NACA0012</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Species_Transport/">Unconstrained shape design of a two way mixing channel</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Inc_Turbulent_Bend_Opt/">Adjoint design optimization of a turbulent 3D pipe bend</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+          Workflow Setup
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/paraview_live/">Realtime update of residuals and solution in paraview</a>
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/Aeroacoustic_Pressure_Spectrum/">Aeroacoustic Pressure Spectrum</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+          Event Content
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/tutorials/event_content/">Meeting and Workshop Material</a>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Turbulent Flat Plate</h1>
+
+            <div id="markdown-content-container"><table>
+              <thead>
+                <tr>
+                  <th>Written by</th>
+                  <th>for Version</th>
+                  <th>Revised by</th>
+                  <th>Revision date</th>
+                  <th>Revised version</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="https://github.com/economon">@economon</a></td>
+                  <td>7.0.0</td>
+                  <td><a href="https://github.com/talbring">@talbring</a></td>
+                  <td>2020-03-03</td>
+                  <td>7.0.2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+            <div id="markdown-content-container">
+              <strong>At one glance:</strong>
+              <table style="width:50%">
+                <tbody>
+                  <tr>
+                    <td> <h6 id="solver-elasticity">Solver:</h6></td>
+                    <td> <h6><code style="text-transform: uppercase;" class="language-plaintext highlighter-rouge">RANS</code></h6></td>
+                  </tr>
+                  <tr>
+                    <td> <h6 id="solver-elasticity">Uses:</h6></td>
+                    <td> <h6><code style="text-transform: uppercase;" class="language-plaintext highlighter-rouge">SU2_CFD</code></h6></td>
+                  </tr>
+                  
+                  <tr>
+                    <td> <h6 id="solver-elasticity">Prerequisites:</h6></td>
+                    <td> <h6>                
+                      <strong>None</strong>
+                       </h6> </td>
+                  </tr>
+                  
+                  <tr>
+                    <td> <h6 id="solver-elasticity">Complexity:</h6></td>
+                    <td> <h6>
+                      <span style="color: green;"><strong>Basic</strong></span>
+                     </h6></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+
+            <div id="markdown-content-container"><p><img src="../../tutorials_files/compressible_flow/Turbulent_Flat_Plate/images/turb_plate_uplus_vs_yplus.png" alt="Turb Plate Uplus v Yplus" /></p>
+
+<h2 id="goals">Goals</h2>
+
+<p>Upon completing this tutorial, the user will be familiar with performing a simulation of external, turbulent flow over a flat plate. Consequently, the following capabilities of SU2 will be verified against other codes and theoretical results in this tutorial:</p>
+<ul>
+  <li>Steady, 2D RANS Navier-Stokes equations</li>
+  <li>Spalart-Allmaras turbulence model</li>
+  <li>Roe convective scheme in space (2nd-order, upwind)</li>
+  <li>Corrected average-of-gradients viscous scheme</li>
+  <li>Euler implicit time integration</li>
+  <li>Inlet, Outlet, and Navier-Stokes Wall boundary conditions</li>
+</ul>
+
+<p>In this tutorial, we perform our first RANS simulation with the Spalart-Allmaras (SA) turbulence model.</p>
+
+<h2 id="resources">Resources</h2>
+
+<p>The resources for this tutorial can be found in the <a href="https://github.com/su2code/Tutorials/tree/master/compressible_flow/Turbulent_Flat_Plate">compressible_flow/Turbulent_Flat_Plate</a> directory in the <a href="https://github.com/su2code/Tutorials">tutorial website repository</a>. You will need the configuration file (<a href="https://github.com/su2code/Tutorials/tree/master/compressible_flow/Turbulent_Flat_Plate/turb_SA_flatplate.cfg">turb_SA_flatplate.cfg</a>) and either of the two available mesh files (<a href="https://github.com/su2code/Tutorials/tree/master/compressible_flow/Turbulent_Flat_Plate/mesh_flatplate_turb_137x97.su2">mesh_flatplate_turb_137x97.su2</a> or <a href="https://github.com/su2code/Tutorials/tree/master/compressible_flow/Turbulent_Flat_Plate/mesh_flatplate_turb_545x385.su2">mesh_flatplate_turb_545x385.su2</a>).</p>
+
+<p>Additionally, skin friction and velocity profiles corresponding to this testcase (obtained from the Langley Research Center Turbulence Modeling Resource website shown below) are used for later comparison with SU2 results. These files can be found on the following website: http://turbmodels.larc.nasa.gov/flatplate.html.</p>
+
+<h2 id="tutorial">Tutorial</h2>
+
+<p>The following tutorial will walk you through the steps required when solving for the turbulent flow over a flat plate using SU2. It is assumed you have already obtained and compiled the SU2_CFD code for a serial computation or both the SU2_CFD and SU2_SOL codes for a parallel computation. If you have yet to complete these requirements, please see the <a href="/docs_v7/Download/">Download</a> and <a href="/docs_v7/Installation/">Installation</a> pages.</p>
+
+<h3 id="background">Background</h3>
+
+<p>Turbulent flow over a zero pressure gradient flat plate is a common test case for the verification of turbulence models in CFD solvers. The flow is everywhere turbulent and a boundary layer develops over the surface of the flat plate. The lack of separation or other more complex flow phenomena allows turbulence models to predict the flow with a high level of accuracy. Due to the choice of a low Mach number of 0.2 for this case, compressibility effects are essentially negligible.</p>
+
+<p>For verification, we will be comparing SU2 results against those from the NASA codes FUN3D and CFL3D. We will also compare profiles of u+ vs. y+ against theoretical profiles of the viscous sublayer and log law region.</p>
+
+<h3 id="problem-setup">Problem Setup</h3>
+
+<p>The length of the flat plate is 2 meters, and it is represented by an adiabatic no-slip wall boundary condition. Also part of the domain is a symmetry plane located before the leading edge of the flat plate. Inlet and outlet boundary conditions are used on the left and right boundaries of the domain, and an outlet boundary condition is used over the top region of the domain, which is located 1 meter away from the flat plate. The Reynolds number based on a length of 1 meter is 5 million, and the Mach number is 0.2.</p>
+
+<h3 id="mesh-description">Mesh Description</h3>
+
+<p>The mesh used for this tutorial, which consists of 13,056 quadrilateral elements (the 137x97 grid), is shown below. A finer 545x385 grid file is also available. Additional grids for the flat plate in this same family can be obtained from the NASA Turbulence Modeling resource page.</p>
+
+<p><img src="../../tutorials_files/compressible_flow/Turbulent_Flat_Plate/images/turb_plate_mesh_bcs.png" alt="Turb Plate Mesh" />
+Figure (1): Mesh with boundary conditions: inlet (red), outlet (blue), symmetry (purple), wall (green).</p>
+
+<h3 id="configuration-file-options">Configuration File Options</h3>
+
+<p>Several of the key configuration file options for this simulation are highlighted here. For the first time in the tutorials, we will use a turbulence model:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% ------------- DIRECT, ADJOINT, AND LINEARIZED PROBLEM DEFINITION ------------%
+%
+% Physical governing equations
+SOLVER= RANS
+%
+% Specify turbulence model (NONE, SA, SA_NEG, SST)
+KIND_TURB_MODEL= SA
+</code></pre></div></div>
+
+<p>The governing equations are first set to the Reynolds-averaged Navier-Stokes equations, and by entering <code class="language-plaintext highlighter-rouge">KIND_TURB_MODEL= SA</code> we activate the Spalart-Allmaras (SA) turbulence model. The SA model is a 1-equation model for a turbulence field variable that is directly related to the turbulent eddy viscosity. It is a popular choice for external aerodynamic flows, such as those around airfoils and wings. The SA Negative model (SA_NEG), other SA variants, and the Shear Stress Transport model (SST) of Menter are also available in SU2.</p>
+
+<p>We must also specify suitable numerical methods for the solution of any additional turbulence equations:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% -------------------- TURBULENT NUMERICAL METHOD DEFINITION ------------------%
+%
+% Convective numerical method (SCALAR_UPWIND)
+CONV_NUM_METHOD_TURB= SCALAR_UPWIND
+%
+% Monotonic Upwind Scheme for Conservation Laws (TVD) in the turbulence equations.
+%           Required for 2nd order upwind schemes (NO, YES)
+MUSCL_TURB= NO
+%
+% Slope limiter (NONE, VENKATAKRISHNAN, VENKATAKRISHNAN_WANG,
+%                BARTH_JESPERSEN, VAN_ALBADA_EDGE)
+SLOPE_LIMITER_TURB= VENKATAKRISHNAN
+%
+% Time discretization (EULER_IMPLICIT)
+TIME_DISCRE_TURB= EULER_IMPLICIT
+</code></pre></div></div>
+
+<p>A scalar upwind method and the corrected average-of-gradients method are the default schemes for the turbulent convective and viscous fluxes, respectively. However, the user has the option to compute the convective flux to 1st-order (<code class="language-plaintext highlighter-rouge">MUSCL_TURB= NO</code>), 2nd-order (<code class="language-plaintext highlighter-rouge">MUSCL_TURB= YES</code> and <code class="language-plaintext highlighter-rouge">SLOPE_LIMITER_TURB= NONE</code>), or 2nd-order with slope limiting (<code class="language-plaintext highlighter-rouge">MUSCL_TURB= YES</code> and <code class="language-plaintext highlighter-rouge">SLOPE_LIMITER_TURB</code> chosen from an option other than <code class="language-plaintext highlighter-rouge">NONE</code>).</p>
+
+<h3 id="running-su2">Running SU2</h3>
+
+<p>To run this test case, follow these steps at a terminal command line:</p>
+<ol>
+  <li>Copy the config file (<a href="https://github.com/su2code/Tutorials/tree/master/compressible_flow/Turbulent_Flat_Plate/turb_SA_flatplate.cfg">turb_SA_flatplate.cfg</a>) and/or the mesh file (<a href="https://github.com/su2code/Tutorials/tree/master/compressible_flow/Turbulent_Flat_Plate/mesh_flatplate_turb_137x97.su2">mesh_flatplate_turb_137x97.su2</a>) so that they are in the same directory. Move to the directory containing the config file and the mesh file. Make sure that the SU2 tools were compiled, installed, and that their install location was added to your path.</li>
+  <li>
+    <p>Run the executable by entering</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ SU2_CFD turb_SA_flatplate.cfg
+</code></pre></div>    </div>
+
+    <p>at the command line.</p>
+  </li>
+  <li>SU2 will print residual updates with each iteration of the flow solver, and the simulation will finish upon reaching the specified convergence criteria.</li>
+  <li>Files containing the results will be written upon exiting SU2. The flow solution can be visualized in ParaView (.vtk) or Tecplot (.dat for ASCII).</li>
+</ol>
+
+<h3 id="results">Results</h3>
+
+<p>The figures below show results obtained from SU2 and compared to several results from NASA codes. Note that the SU2 results for the skin friction correspond to the coarser mesh (<a href="https://github.com/su2code/Tutorials/tree/master/compressible_flow/Turbulent_Flat_Plate/mesh_flatplate_turb_137x97.su2">mesh_flatplate_turb_137x97.su2</a>) while the NASA results are based on the finer mesh (<a href="https://github.com/su2code/Tutorials/tree/master/compressible_flow/Turbulent_Flat_Plate/mesh_flatplate_turb_545x385.su2">mesh_flatplate_turb_545x385.su2</a>). SU2 still matches very closely.</p>
+
+<p><img src="../../tutorials_files/compressible_flow/Turbulent_Flat_Plate/images/turb_plate_nu_tilde.png" alt="Turb Plate Nu Tilde" />
+Figure (2): Contour of turbulence variable (nu-hat).</p>
+
+<p><img src="../../tutorials_files/compressible_flow/Turbulent_Flat_Plate/images/turb_plate_skin_friction.png" alt="Turb Plate Cf" />
+Figure (3): Profile for the skin friction coefficient.</p>
+
+<p><img src="../../tutorials_files/compressible_flow/Turbulent_Flat_Plate/images/turb_plate_uplus_vs_yplus.png" alt="Turb Plate Uplus v Yplus" />
+Figure (4): Velocity profile comparison against law of the wall.</p>
+</div>
+            <hr>
+                
+
+            <p class="text-center">
+              <br />
+              <a target="_blank" href="https://github.com/su2code/su2code.github.io/blob/master/_tutorials/compressible_flow/Turbulent_Flat_Plate/Turbulent_Flat_Plate.md" class="btn btn-default githubEditButton" role="button">
+                <i class="fa fa-pencil fa-lg"></i> Improve this page
+              </a>
+            </p>
+            <hr>
+            
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <ul class="pager">
+      
+        
+        
+        <li class="previous">
+          <a href="/tutorials/Laminar_Cylinder/">
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/tutorials/Transitional_Flat_Plate/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+    </div>
+    <div class="clear"></div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            SU2 | Multiphysics Simulation and Design Software 2026 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a> | 
+            <a href="https://www.iubenda.com/privacy-policy/93470831" class="iubenda-white iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+</body>
+
+</html>

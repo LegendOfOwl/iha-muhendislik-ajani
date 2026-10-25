@@ -1,0 +1,30 @@
+{
+  "version": "2026-10-25.1",
+  "scope": "Süreç kurtarma, yerel türev/gösterge desteği ve ayırt edici sayısal deney seçimi; fiziksel doğruluk veya LLM uzmanlığı kanıtı değildir.",
+  "lessons": [
+    {
+      "id": "R01",
+      "trigger": "Native çözücü başladıktan sonra Python/sarmalayıcı hatası",
+      "action": "Önce kayıtlı PID, executable yolu ve gerçek süreç oluşturma zamanını doğrula. Aynı işi tekrar başlatma. Çalışan süreci süre bütçesiyle izle, gerçek OS çıkış kodunu kaydet; PID veya alan durumu kanıtlanamıyorsa sonucu belirsiz bırak.",
+      "status": "confirmed_error_and_scoped_recovery_tested",
+      "checks": "test_wrapper_recovery_preserves_nonzero_exit; başarısız çıkış başarılıya çevrilmez"
+    },
+    {
+      "id": "R02",
+      "trigger": "Yerel Hessian/eğrilik veya benzeri regresyonla mesh önceliği üretimi",
+      "action": "Analitik testten sonra gerçek hücrenin şablon desteğini de denetle. Dejenere ve kötü koşullu fitleri maskele; hücre köşelerinin şablonun konveks zarfında kaldığını kontrol et. İki komşuluk ölçeğinin tutarsızlığını ve fit hatasını görünür tut. Desteksiz türevi hata bandı veya üretim mesh kararı sayma.",
+      "status": "confirmed_prototype_limitation_with_new_guards",
+      "checks": "test_cell_outside_fit_support_is_rejected; m/mm ve analitik ikinci derece alan"
+    },
+    {
+      "id": "R03",
+      "trigger": "Bir yakınsama ayarı neden olarak önerildiğinde",
+      "action": "İpuçlarını nedensel kanıt sayma. Aynı seed/mesh/fizikle tek anahtarı değiştir, etki ölçütünü önceden kaydet. Desteklenmeyen hipotezi dar vakada desteklenmedi diye kaydet; aynı ayarın daha çok değerini gerekçesiz tarama. Yeni mekanizma için ayrı koşullu bütçe ve sözleşme kur.",
+      "status": "controlled_test_policy",
+      "checks": "test_precedence_and_no_repeat_sweep; eski L09 ile birlikte uygula"
+    }
+  ],
+  "experimental_answers_included": false,
+  "reviewer_ledger": "Değerlendirici kanıtları normal incelemede ayrı tutulur; kör analiz girdisine aktarılmaz.",
+  "unseen_llm_behaviour_validated": false
+}

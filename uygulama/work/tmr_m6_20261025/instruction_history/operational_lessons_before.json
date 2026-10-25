@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "version": "2026-10-24.1",
+  "scope": "Bu mühendislik çalışma alanının araç ve değerlendirme süreci; uzmanlık sertifikası değildir.",
+  "lessons": [
+    {
+      "id": "L01",
+      "trigger": "SU2 metin ağı içe aktarma",
+      "scope": "SU2 sınır elemanı tipleri ve kurulu biçimin düğüm sayıları",
+      "action": "Satırı eleman tipine göre oku; sonda eleman kimliği varsa düğüm sayma. Düğüm aralığı, benzersizlik ve sınır komşuluğunu kontrol et. Geçerli düğüm aralığına düşen sonda kimlik ile karşı örnek kur.",
+      "knowledge_status": "confirmed_error"
+    },
+    {
+      "id": "L02",
+      "trigger": "Prizma veya başka referans hücrede Jacobian işareti",
+      "scope": "İlgili çözücünün düğüm/yüz sırası ve kullanılan referans eleman",
+      "action": "Önce geçerli analitik hücre ve ters/katlanmış hücre ile denetçiyi doğrula. Kaynak sözleşmesine dayanan tek sabit dönüşümü tüm hücrelere uygula; hücre başına işaret değiştirme veya mutlak değer ile bozuk hücreyi gizleme.",
+      "knowledge_status": "confirmed_error"
+    },
+    {
+      "id": "L03",
+      "trigger": "SU2 akı/yöntem politikası değişikliği",
+      "scope": "Native SU2 8.5.0 merkezi JST/JST_MAT yapılandırması",
+      "action": "Bu sürümde merkezi akıda MUSCL_FLOW=NO açık olmalı. Etkin limiter/MG bağımlılıklarını kaydet ve pahalı koşudan önce küçük native yapılandırma denemesi yap. Bu koşulu diğer sürümlere veya yöntemlere evrenselleştirme.",
+      "knowledge_status": "confirmed_error"
+    },
+    {
+      "id": "L04",
+      "trigger": "Ara alan seçimi veya kesilmiş/yeniden başlatılmış koşu",
+      "scope": "Alan, yüzey, restart ve history eşlemesi",
+      "action": "Aynı koşuya ait doğrulanmış dosyaların ortak iterasyonunu seç ve hash'le. Sürecin kaybolmasını başarılı çıkış sayma. Son history satırı başka iterasyondaysa ona eski alanın Cp/y+ değerini atama; eksik değeri açıklamalı null bırak.",
+      "knowledge_status": "prevented_failure"
+    },
+    {
+      "id": "L05",
+      "trigger": "Kabul tablosu, özet veya aday sıralaması",
+      "scope": "Önceden kaydedilmiş zorunlu kalite kapıları",
+      "action": "Kararı yuvarlanmamış değerlerle ver. Eksik, sonlu olmayan veya başarısız tek zorunlu kapı genel kabulü kapatır. Yazılım çıkışı ve tek ağ/y+ başarısı fiziksel doğrulama değildir. Eksik deney/mesh çalışmasını geçmiş sayma.",
+      "knowledge_status": "prevented_failure"
+    },
+    {
+      "id": "L06",
+      "trigger": "Kaynak noktadan eğri, CAD veya ağ temsili üretimi",
+      "scope": "Kaynak birimi/ekseni ve hücum-firar kenarı gibi kritik birleşimler",
+      "action": "Nokta uzaklığına ek olarak tek taraflı teğet, uç biçimi, taşma ve eğrilik davranışını ölç. Temsil düzeltmesi yeni geometri sürümüdür; kaynak noktalar sabit olsa da eski/yeni ağları tek sistematik aile diye birleştirme.",
+      "knowledge_status": "confirmed_error"
+    },
+    {
+      "id": "L07",
+      "trigger": "Yerel ağ düzeltmesi veya çözünürlük iddiası",
+      "scope": "Duvar normal/teğetsel, uç, iz ve ara blok birleşimleri",
+      "action": "Hücre sayısından önce konum bazında gerçek aralık/büyüme/katman ve Jacobian ölç. Son segment dahil bütün komşu oranlarını denetle. Şok bölgesini beklenen cevaptan alma. İlk y+ başarısını bütün sınır tabakasının çözülmesi sayma.",
+      "knowledge_status": "confirmed_error"
+    },
+    {
+      "id": "L08",
+      "trigger": "Alan dizisini yakınsama ölçüsü veya referans olarak yorumlama",
+      "scope": "İlgili çözücü sürümünün alan semantiği ve bağımsız kaynak verisi",
+      "action": "Alan adının yanı sıra yazıldığı aşama, normalizasyon, birim, işaret ve yüzey sırasını kaynakla doğrula. Örnekleme geçerlilik maskesini integrale kadar uygula. Şüpheli kaynak değerini çözüme uysun diye düzeltme; özgün tablo kanıtı ve ayrı revizyon gerekir.",
+      "knowledge_status": "confirmed_error"
+    },
+    {
+      "id": "L09",
+      "trigger": "Yakınsama veya deney uyuşmazlığının nedenini belirleme",
+      "scope": "Kontrollü sayısal/fiziksel neden araştırması",
+      "action": "Belirtiyi nedenden ayır. Aynı girdi/başlangıçla tek değişkenli karşılaştırma tasarla; hedefe uydurmak için fiziksel koşulu veya eşiği değiştirme. Daha fazla doğrusal iterasyon ya da daha çok hücreyi henüz sınanmadan çözüm diye kaydetme.",
+      "knowledge_status": "hypothesis"
+    }
+  ]
+}
