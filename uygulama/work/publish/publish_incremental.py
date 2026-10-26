@@ -2,7 +2,7 @@ from incremental_export import ROOT,DEST,RUN,VERSION,read,dump,digest,now,BASE_H
 from pathlib import Path
 import os,subprocess,json,zipfile
 REPO='LegendOfOwl/iha-muhendislik-ajani'
-TITLE='CFD yakınsama kontrolleri ve birim denetimi'
+TITLE='CFD iç çözüm maliyeti ve üç kaynak ağ denetimi'
 ENV=dict(os.environ,GH_CONFIG_DIR=str(ROOT/'tools/github-cli/auth'),GH_PROMPT_DISABLED='1',GIT_TERMINAL_PROMPT='0')
 n=int(ENV.get('GIT_CONFIG_COUNT','0'));ENV.update({f'GIT_CONFIG_KEY_{n}':'safe.directory',f'GIT_CONFIG_VALUE_{n}':str(DEST),'GIT_CONFIG_COUNT':str(n+1)})
 GH=read(ROOT/'work/publish/github_cli_install.json')['executable']
@@ -69,7 +69,7 @@ def publish():
         state['uploaded']=[r for r in state['uploaded'] if r['name']!=a['name']]+[record];dump(statepath,state);print({'verified':a['name']},flush=True)
     assert run(['git','ls-remote','origin','refs/heads/main']).split()[0]==head
     assert run(['git','ls-remote','origin','refs/tags/'+VERSION+'^{}']).split()[0]==head
-    releases=api('repos/'+REPO+'/releases?per_page=100');assert {f'v0.{i}.0' for i in range(1,12)}.issubset({r['tag_name'] for r in releases})
+    releases=api('repos/'+REPO+'/releases?per_page=100');assert {f'v0.{i}.0' for i in range(1,int(VERSION.split('.')[1]))}.issubset({r['tag_name'] for r in releases})
     state.update(status='published_verified',finished_utc=now(),release_url=URL+'/releases/tag/'+VERSION,remote_head_matches=True,old_release_count_retained=len([r for r in releases if r['tag_name']!=VERSION]))
     dump(statepath,state);dump(ROOT/('outputs/reports/github_publication_'+VERSION+'.json'),state)
     print({'published':state['release_url'],'head':head,'verified_assets':len(state['uploaded'])},flush=True)

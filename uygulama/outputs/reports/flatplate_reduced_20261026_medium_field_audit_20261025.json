@@ -1,0 +1,102 @@
+{
+  "postprocessing_version": 2,
+  "role": "medium",
+  "output_label": "reduced_20261026_medium",
+  "matched": {
+    "field_iteration": 3999,
+    "terminal_history_iteration": 3999,
+    "rms[Rho]": -11.461535318033429,
+    "rms[RhoU]": -10.092985965486548,
+    "rms[RhoV]": -11.530453085486547,
+    "rms[RhoE]": -8.456598362939669,
+    "rms[nu]": -12.648458314906241,
+    "CL": -0.0006416935054,
+    "CD": 0.002846298571,
+    "LinSolRes": -3.274937581,
+    "Linear_Solver_Iterations": 13.0,
+    "last100_samples": 100,
+    "CD_last100_range": 9.999999960041972e-13
+  },
+  "normalization_to_SI": {
+    "mu_Pa_s": 1.8459162511975804e-05,
+    "U_m_s": 69.44475790151479,
+    "rho_kg_m3": 1.3290537018038302,
+    "p_Pa": 114454.64925972116,
+    "inlet_Ttotal_K": 302.4
+  },
+  "native_status": {
+    "started_utc": "2026-10-26T15:25:30.274325+00:00",
+    "ended_utc": "2026-10-26T15:27:16.868009+00:00",
+    "exit_code": 0,
+    "seconds": 106.59400000004098,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.08061981201171875,
+    "budget_s": 360,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "wall_points": 113,
+  "max_yplus": 0.482212096452713,
+  "all_wall_yplus_below1": true,
+  "Cf_x0p97008": 0.00271529219477103,
+  "CD_independent_trapezoid": 0.002846298576897701,
+  "CD_integration_relative_difference": 2.0720598570278526e-09,
+  "iterative_gate": true,
+  "profiles": [
+    {
+      "requested_x_m": 0.97008,
+      "actual_x_m": 0.97008,
+      "columns": [
+        111,
+        112
+      ],
+      "source_column_x_m": [
+        0.930941943112,
+        0.970084048409
+      ],
+      "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+      "invalid_samples": 0,
+      "coordinate_mapping_max_m": 3.630594873179859e-08,
+      "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\reduced_20261026_medium\\profile_x0.97008.csv"
+    },
+    {
+      "requested_x_m": 1.90334,
+      "actual_x_m": 1.90334,
+      "columns": [
+        133,
+        134
+      ],
+      "source_column_x_m": [
+        1.87112459393,
+        1.91408306262
+      ],
+      "sampling_method": "positive two-column interpolation at requested x; both native-node validity masks required",
+      "invalid_samples": 0,
+      "coordinate_mapping_max_m": 6.509348286129906e-08,
+      "csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\reduced_20261026_medium\\profile_x1.90334.csv"
+    }
+  ],
+  "negative_nu_tilde_nodes": 0,
+  "native_arrays": [
+    "Density",
+    "Momentum",
+    "Energy",
+    "Nu_Tilde",
+    "Pressure",
+    "Temperature",
+    "Mach",
+    "Pressure_Coefficient",
+    "Velocity",
+    "Laminar_Viscosity",
+    "Skin_Friction_Coefficient",
+    "Heat_Flux",
+    "Y_Plus",
+    "Eddy_Viscosity"
+  ],
+  "source_field_sha256": "eb8bccb2b1435a7f812e95ff40ee5ba5922eea4516e347df205e78c378885c64",
+  "source_surface_sha256": "267576d9ee8f9ee68f50c4545199c938ff84da05081954a8c2bf8395a4376713"
+}

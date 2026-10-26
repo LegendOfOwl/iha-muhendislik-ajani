@@ -1,0 +1,29 @@
+{
+  "nodes": 3381,
+  "source_coordinates_bitwise_preserved": true,
+  "SI_roundtrip_relative_errors": {
+    "density": 1.669990521564212e-16,
+    "velocity": 1.9405383347625932e-16,
+    "pressure": 2.5416440734683843e-16
+  },
+  "positive_density_and_pressure": true,
+  "solution_divisors": [
+    1.0,
+    1.0,
+    1.3290537018038302,
+    461.4790627993951,
+    461.4790627993951,
+    160236.50896360967,
+    347.22378950757394
+  ],
+  "residual_multipliers_2D_integrated_flux": {
+    "rms[Rho]": 461.4790627993951,
+    "rms[RhoU]": 160236.50896360967,
+    "rms[RhoV]": 160236.50896360967,
+    "rms[RhoE]": 55637927.859808885,
+    "rms[nu]": 120564.36000000002
+  },
+  "density_reference": 1.3290537018038302,
+  "velocity_reference_m_s": 347.22378950757394,
+  "limits": "Specific7-field native binary layout; length reference1m; no general restart conversion."
+}

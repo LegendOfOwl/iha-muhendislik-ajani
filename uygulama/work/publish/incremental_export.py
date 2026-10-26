@@ -5,10 +5,10 @@ from collections import Counter
 import os,json,hashlib,zipfile,shutil,subprocess
 from build_export import ROOT,DEST,STATE,ASSETS,URL,digest,dump,excluded,is_bulk,secret_findings
 
-VERSION='v0.12.0'
+VERSION='v0.13.0'
 RUN=STATE/VERSION
 PLAN=RUN/'plan.json'
-BASE_HEAD='f06d1524c390646e0659d2e72327f30d8bd59dff'
+BASE_HEAD='5deed03fa03dfb3eb025326c548018f94235c5ae'
 def now():return datetime.now(timezone.utc).isoformat()
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 
@@ -92,7 +92,7 @@ def build():
         if r['storage']=='git':
             src=ROOT/r['source_path'];assert digest(src)==r['sha256'];out=DEST/r['repository_path'];out.parent.mkdir(parents=True,exist_ok=True)
             shutil.copy2(src,out);assert digest(out)==r['sha256'];copied+=1
-    summary={'created_utc':now(),'version':VERSION,'repository_url':URL,'history_kind':'v0.1-v0.10 retrospective; v0.11 genuine incremental release',
+    summary={'created_utc':now(),'version':VERSION,'repository_url':URL,'history_kind':'v0.1-v0.10 retrospective; v0.11 onward genuine incremental releases',
        'files':len(records),'storage_counts':dict(Counter(r['storage'] for r in records)),
        'expert_or_physical_qualification_claimed':False,'new_release_summary':p['summary'],
        'external_reference_policy':'Full third-party papers retained as source URL and SHA256, not republished.'}

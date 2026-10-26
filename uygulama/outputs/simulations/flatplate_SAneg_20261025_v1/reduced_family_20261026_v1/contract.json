@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-10-26T15:25:13.163950+00:00",
+  "not_blind": true,
+  "scope": "Fixed NASA TMR2DZP SA-neg three-source-grid implementation comparison; no experimental or M6 qualification",
+  "accepted_work_control_report_sha256": "185ba29738ed8e1d2d0b00145d15ac6be182cd406359f2c97a1482b69ec4bb57",
+  "physical_source_contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "physical_source_contract": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\contract.json",
+  "unchanged_acceptance": {
+    "density_log10_max": -10,
+    "nu_tilde_log10_max": -11,
+    "last100_CD_range_max": 1e-07,
+    "fine_max_yplus": 1,
+    "fine_Cf_x0p97008_relative_difference_each_code_max": 0.02,
+    "fine_Cf_curve_relative_RMS_each_code_max": 0.03,
+    "curve_scoring_window_m": [
+      0.1,
+      1.9
+    ],
+    "all_curve_points_outside_window_retained_and_reported": true,
+    "velocity_profile_relative_L2_max": 0.03,
+    "mut_profile_relative_L2_max": 0.05,
+    "three_iterative_gates_required": true,
+    "medium_fine_Cf_change_max": 0.01,
+    "medium_fine_CD_change_max": 0.02
+  },
+  "cases": {
+    "coarse": {
+      "source": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\coarse\\restart_flow_000400.dat",
+      "source_sha256": "0d681d909c1b4ae9249d290fe6c42ee77c869c49f4071d75b2b81e981a458914",
+      "source_iteration": 400,
+      "seed_sha256": "800fd73e917de3d23b35217a30ed6a856084f09c977b8b70d18ec1ae373ccce0",
+      "config_sha256": "3ba8332f3443256799548654658a0f352592a16458b0b835f2c1b8f095d682ac",
+      "mesh_sha256": "bbb7b5e95ac8fe17bafa158948adc2427a740114d9772dc412c4c0cf82882eff",
+      "iterations": 200,
+      "seconds": 120
+    },
+    "medium": {
+      "source": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\medium\\restart_flow_003600.dat",
+      "source_sha256": "6a28400bafb53a4e59c3d26754f7313766cf7aee4489d2bce0adc48708d46468",
+      "source_iteration": 3600,
+      "seed_sha256": "53f7a71d0f1a9350a63071b2ada6fb794388bdb65bf1ced927512a67cc3b8af4",
+      "config_sha256": "88c294ee8d97a1ab02102a30fb7bc14ebb28c34a3baa7cea62f97a687983f7f2",
+      "mesh_sha256": "770adc50a13075cc35c8ff7837d292c55782545ed07d46f37ed340361dce9df6",
+      "iterations": 4000,
+      "seconds": 360
+    },
+    "fine": {
+      "source": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\fine\\restart_flow_002000.dat",
+      "source_sha256": "1bc09d9996708fd3bcd9bf198744c33be52ab3a99e536d2fbadd9675483895b6",
+      "source_iteration": 2000,
+      "seed_sha256": "8bacc2bab6e6a7bbb5400766e695e9d7b990bdcfbb33b8e0c2844d83ef158776",
+      "config_sha256": "666d936523e60f20634c866615c18181075f1eb84f6ea4387de5beb241ab1d08",
+      "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+      "iterations": 4000,
+      "seconds": 900
+    }
+  },
+  "threads": 4,
+  "numerical_policy": "Same Roe2/MUSCL-flow, SA1, WLS, FGMRES/LUSGS40, noMG; source adaptiveCFL100..1e5; ND scaling; inner tolerance1e-3.",
+  "stopping": "Fixed registered iterations with budgets; CONV_STARTITER100000 prevents premature common ND residual threshold from stopping before SI gates. No automatic retry/extension.",
+  "field_selection": "Each mesh uses its final complete registered iteration; an incomplete run cannot pass the family.",
+  "fine_role": "Original uniform-initialized fine checkpoint2000, not the reference-better diagnostic nested seed.",
+  "mesh_family": "Exact original source coordinates/connectivity, common physical domain; different evolved seed states are numerical initial conditions only.",
+  "GCI": "Not automatically inferred; global leading-edge drag singularity and iterative/asymptotic requirements retained.",
+  "physical_changes": null,
+  "general_CFD_qualification_claimed": false
+}

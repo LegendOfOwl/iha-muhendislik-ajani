@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-26T15:44:57.222262+00:00",
+  "status": "registered_not_run",
+  "scope": "Fine-grid inner cap diagnosis, not another physical fit or automatic extension",
+  "source": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/",
+  "observation": {
+    "final_flow_Krylov_iterations": 40,
+    "final_flow_linear_log_residual": -2.037693767,
+    "inner_tolerance": 0.001,
+    "final500_fraction_at40_cap": 0.066
+  },
+  "hypothesis": "A binding inner cap can restrict adaptive nonlinear progress; one endpoint and cap frequency do not establish causality.",
+  "seed": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\fine\\restart_flow_003999.dat",
+  "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+  "seed_normalization": "FREESTREAM_VEL_EQ_MACH",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "only_config_change": "LINEAR_SOLVER_ITER40→80; both fresh arms use the identical final ND restart and all other options",
+  "per_arm_iterations": 200,
+  "per_arm_seconds": 180,
+  "threads": 4,
+  "effect": {
+    "SI_density_log10_gain_min": 0.3,
+    "SI_SA_log10_worsening_max": 0.1,
+    "total_Krylov_work_ratio_max": 1.5
+  },
+  "physical_gates_unchanged": true,
+  "no_automatic_sweep_extension_or_acceptance": true,
+  "rejected_old_hypotheses_retained": true
+}

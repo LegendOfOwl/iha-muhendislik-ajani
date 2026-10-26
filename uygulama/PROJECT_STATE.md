@@ -206,3 +206,16 @@ Kurulum/araç entegrasyonu ve son model araştırması/yetenek raporu görev kay
 - NativeMG kaba CFL ve sönümü kendiliğinden uyarlıyor; CFL_ADAPT=NO bütün seviyeleri sabitlemiyor. Ön sözleşmedeki0,5 başlangıç değerleri ayrı native_policy_note.json ile açıklığa kavuşturuldu, sözleşme yeniden yazılmadı.
 - Rapor outputs/reports/cfd_yakinsama_arastirmasi_20261025.html ve.md.9 alanın CSV/Cf/hız/viskozite/y+ ve bağımsız kuvvet integrasyonu çıkarıldı. Bütün yeni iteratif kapılar açık; gelişmiş orta Newton yoğunluğu−9,9730285,−10 eşiğini geçmez.187 yeni mühür kaydı+40 ön-native kod arşiv hash'i+230 eski CFD hash'i doğrulandı. Temel26/26 regresyon geçti. Gerçek İHA3girdi dosyası v0.11 yayınıyla aynı.
 - Sıradaki yalnız kayıtlı deney next_linear_work_control_not_run.json: aynı gelişmiş orta ağ/seed, iç tolerans1e-6→1e-3,200adım/120s; toplam Krylov işi en az%30 azalsın, SI kalıntıları en fazla0,05log kötüleşsin,CD farkı<1e-7. Henüz çalışılmadı; bu maliyet hipotezidir, fizik eşiği değişmez. L08/L09/R03 mevcut dersleri yeterli olduğundan yeni kopya prompt kuralı eklenmedi; LLM davranış iyileşmesi ölçülmedi.
+
+
+## 25 Ekim: v0.12.0 yayın doğrulandı
+
+- Public main/tag5deed03fa03dfb3eb025326c548018f94235c5ae;12sürüm/26varlık. Üç yeni varlığın sunucu SHA256/boyutu eşleşti; eski11sürüm/23varlık/etiket korundu. 5786kaynak blobu ve47yeni ham dosyanın geri yüklenmesi doğrulandı. Rapor github_yayini_v0.12.0.md; yerel yayın makbuzu sonraki artımlı sürümde taşınır. Son bilimsel kabul false kalır.
+
+
+## 26 Ekim: daha az iç çözüm işi ve üç kaynak ağ
+
+- Dört yeni native SU2 koşusu kapandı; rapor outputs/reports/cfd_ic_cozum_ve_uc_ag_20261026.html. Aynı orta seed/ağda yalnız tolerans1e-6→1e-3: toplam Krylov11144→6451 (%42,1123 azalma); SI yoğunluk/SA kötüleşmesi0,00143916/0,00121123log, |CD farkı|2,3e-11. Kayıtlı maliyet etkisi geçti; tek süre gözleminden genel hızlanma çıkarılmadı.
+- Kaynak üç ağda yeni sonlu bütçe/seed/sayısal reçete ön kaydedildi.2B sayısal şartların tümü=False; tek-tek sonuçlar reduced_family_review_20261026.json. İnce rolü özgün fine2000den korunur. HamND kalıntılar eskiSI eşikleriyle karıştırılmadı; alan/terminal adımları ve OS çıkışı ayrı.
+- 215 yeni ham hash, 25 ön-native kod ve 417 eski hash doğrulandı.8 maliyet+12 aile karar kontrolü geçti. Son işlem çıktı adı gölgelenmesi düzeltildi; ham alan/mühürler aynı. GerçekİHA 3girdisi v0.12 ile aynı.
+- Genel fizik/M6/RAE/VLM/İHA kabulleri false, GCI null; referanslar sayısal kod sonuçlarıdır. Yeni körLLM/prompt uzmanlığı ölçülmedi. Kayıtlı bütçe dışında otomatik uzatma yapılmadı. Görev 20261026-182125-8e3de6 sınırlı test/rapor paketi olarak kapandı.

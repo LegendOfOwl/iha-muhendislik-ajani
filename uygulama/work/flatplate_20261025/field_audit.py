@@ -65,9 +65,9 @@ def audit(role,meshrole=None,*,folder=None,output_label=None,normalization=None)
             'source_column_x_m':[float(left[0,0]),float(right[0,0])],'sampling_method':'positive two-column interpolation at requested x; both native-node validity masks required',
             'invalid_samples':int((~valid).sum()),
             'coordinate_mapping_max_m':float(distance.max()),'csv':str(path.relative_to(ROOT))})
-        label=f'x={pts[0,0]:.5f}'
-        axes[0].plot(vel/free['U_m_s'],y,color=color,label=label);axes[1].plot(mut,y,color=color,label=label)
-        axes[2].semilogx(yplus[1:],uplus[1:],color=color,label=label)
+        station_label=f'x={pts[0,0]:.5f}'
+        axes[0].plot(vel/free['U_m_s'],y,color=color,label=station_label);axes[1].plot(mut,y,color=color,label=station_label)
+        axes[2].semilogx(yplus[1:],uplus[1:],color=color,label=station_label)
     axes[0].set(xlabel='u/Uinf',ylabel='y [m]',ylim=(0,.06));axes[1].set(xlabel='mu_t/mu_inf',ylabel='y [m]',ylim=(0,.06));axes[2].set(xlabel='y+',ylabel='u+',xlim=(.1,1e4),ylim=(0,35))
     for ax in axes:ax.grid(alpha=.2);ax.legend()
     fig.suptitle(f'{label}: native two-column interpolation at exact requested x, field{i}');fig.tight_layout()

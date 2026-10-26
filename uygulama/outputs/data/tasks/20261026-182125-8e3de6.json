@@ -1,0 +1,112 @@
+{
+  "id": "20261026-182125-8e3de6",
+  "request": "Ön kayıtlı iç doğrusal tolerans kontrolü: aynı seed/ağda Krylov işi ve SI kalıntı farkı",
+  "kind": "qualification",
+  "created_utc": "2026-10-26T15:21:25.696260+00:00",
+  "status": "tamamlandı",
+  "phase": "sınırlı iç-iş ve üç-ağ paketi kapandı",
+  "acceptance": [
+    "Yalnız LINEAR_SOLVER_ERROR değişsin; eski mühürler korunsun",
+    "200 ortak adım ve gerçek OS çıkışı",
+    "Krylov işi≤%70; SI kalıntı kötüleşmesi≤0.05log; |CD farkı|<1e-7"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\cfd_ic_cozum_ve_uc_ag_20261026.md",
+      "sha256": "6076ac835f6a8e587def75609e696467d0d962d5212c91e38335419119444ca4",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\00_cfd_ic_cozum_ve_uc_ag_20261026.md"
+    },
+    {
+      "path": "outputs\\reports\\cfd_ic_cozum_ve_uc_ag_20261026.html",
+      "sha256": "d02b789faa64d6579e6eb26d213ff2432fd69dd05314d38dfe7d555bf7e132bf",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\01_cfd_ic_cozum_ve_uc_ag_20261026.html"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\batch_closed.json",
+      "sha256": "891160596b675dc425d7ce8f9bc38d6bf72ae95aefb544ff37f03b87172d6a35",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\02_batch_closed.json"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\next_inner_cap_control_not_run_20261026.json",
+      "sha256": "59031a4e32d12e6f6a4362ca1be6e4636769f4bf9bee579a39f4fc271399f79f",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\03_next_inner_cap_control_not_run_20261026.json"
+    },
+    {
+      "path": "outputs\\reports\\flatplate_linear_work_20261026.json",
+      "sha256": "185ba29738ed8e1d2d0b00145d15ac6be182cd406359f2c97a1482b69ec4bb57",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\04_flatplate_linear_work_20261026.json"
+    },
+    {
+      "path": "outputs\\reports\\linear_work_guards_20261026.json",
+      "sha256": "237e24bde6db1c99606019988b8dbc2071686ada3bddeb9982a34e9484f6bc1d",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\05_linear_work_guards_20261026.json"
+    },
+    {
+      "path": "outputs\\reports\\reduced_family_review_20261026.json",
+      "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\06_reduced_family_review_20261026.json"
+    },
+    {
+      "path": "outputs\\reports\\reduced_family_guards_20261026.json",
+      "sha256": "77f6649ca6bdab46cebd455fd56d51069da31e6cf55517bec3ed16a6c2ebc7e1",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\07_reduced_family_guards_20261026.json"
+    },
+    {
+      "path": "outputs\\reports\\reduced_family_integrity_20261026.json",
+      "sha256": "2d1081e82c4d2189003b179d25faab75857327c0497d52abf41bb6343823f365",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\08_reduced_family_integrity_20261026.json"
+    },
+    {
+      "path": "outputs\\data\\agent_learning\\reviewer_ledger_reduced_family_20261026.json",
+      "sha256": "f2026478c01b0290abb4d6181f92684c838c7432303c2b8e3d6a7111d58c1d59",
+      "archived": "outputs\\data\\task_evidence\\20261026-182125-8e3de6\\closure\\09_reviewer_ledger_reduced_family_20261026.json"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+  },
+  "project_id": "qualification",
+  "project_manifest": "outputs\\data\\projects\\qualification.json",
+  "project_data_root": "outputs/data/qualification",
+  "project_output_root": "outputs",
+  "project_snapshot": {
+    "id": "qualification",
+    "name": "Araç doğrulama örnekleri",
+    "kind": "qualification",
+    "artifact_root": "outputs",
+    "data_root": "outputs/data/qualification",
+    "created_utc": "2026-10-19T07:06:12.206479+00:00",
+    "active_cad": null
+  },
+  "applied_lesson_ids": [
+    "L04",
+    "L05",
+    "L08",
+    "L09",
+    "L10",
+    "R01",
+    "R03"
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "contract": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\linear_work_20261026_v1\\contract.json",
+  "contract_sha256": "4cdfd00cf2efe4d8e7d8da80f8ab28c3cb2b6fd8fa990ff0147f837b95a91983",
+  "family_contract": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\contract.json",
+  "family_contract_sha256": "a73c6586995dd4b377a41cb28de3a0ecb0ac9a58cff264d1840de57d79ef4cac",
+  "completed_utc": "2026-10-26T15:44:57.509450+00:00",
+  "registered_cost_effect_passed": true,
+  "registered_2D_numerical_screens_passed": false,
+  "physical_qualification_passed": false
+}

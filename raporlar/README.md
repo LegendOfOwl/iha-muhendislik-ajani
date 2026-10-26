@@ -15,3 +15,5 @@ Asıl dosyalar uygulamanın bağıl yolları korunarak `uygulama/` içinde sakla
 - [v0.11.0 —GitHub’da okunabilir güncel CFD ve güvenilirlik sonuçları](v0.11.0/README.md)
 
 - [v0.12.0](v0.12.0/README.md)
+
+- [v0.13.0](v0.13.0/README.md)

@@ -3,6 +3,12 @@
 v0.1.0–v0.10.0 geriye dönük içe aktarım; v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.
 
 
+## v0.13.0 —26 Ekim2026: CFD iç çözüm işi ve üç ağ
+
+26 Ekim2026. Aynı seed/ağda iç doğrusal tolerans1e-6→1e-3 testi toplam Krylov iterasyonunu%42,1123 azalttı; SI kalıntı/CD farkları ön kayıtlı sınırlar içinde kaldı. Üç kaynak ağda ayrı ve sonlu bütçeli native devam koşuları yapıldı. Kayıtlı2B sayısal şartların tamamı geçmedi; açık kapılar raporlandı. Genel fizik/M6/İHA kabulü false; GCI null.
+
+8 maliyet ve12 aile karar kontrolü geçti. Yeni/önceki mühürler, gerçekİHA girdileri ve ön-native kodlar denetlendi. Son işlem çıktı adı gölgelenmesi düzeltildi; ham alanlar korunur. Bu kontrollü kod kıyası deney veya LLM uzmanlığı doğrulaması değildir.
+
 ## v0.12.0 —25 Ekim2026: CFD kontrol deneyleri ve birim denetimi
 
 25 Ekim2026. 11yeni native SU2 koşusu; beş tamamlanmış eşli kıyasta ön kayıtlı ortak etki geçmedi, MG2 süre sınırında eksik kaldı. Fiziksel kabul false.

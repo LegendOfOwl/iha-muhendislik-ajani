@@ -1,0 +1,673 @@
+
+-------------------------------------------------------------------------
+|    ___ _   _ ___                                                      |
+|   / __| | | |_  )   Release 8.5.0 "Harrier"                           |
+|   \__ \ |_| |/ /                                                      |
+|   |___/\___//___|   Suite (Computational Fluid Dynamics Code)         |
+|                                                                       |
+-------------------------------------------------------------------------
+| SU2 Project Website: https://su2code.github.io                        |
+|                                                                       |
+| The SU2 Project is maintained by the SU2 Foundation                   |
+| (http://su2foundation.org)                                            |
+-------------------------------------------------------------------------
+| Copyright 2012-2026, SU2 Contributors                                 |
+|                                                                       |
+| SU2 is free software; you can redistribute it and/or                  |
+| modify it under the terms of the GNU Lesser General Public            |
+| License as published by the Free Software Foundation; either          |
+| version 2.1 of the License, or (at your option) any later version.    |
+|                                                                       |
+| SU2 is distributed in the hope that it will be useful,                |
+| but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+| Lesser General Public License for more details.                       |
+|                                                                       |
+| You should have received a copy of the GNU Lesser General Public      |
+| License along with SU2. If not, see <http://www.gnu.org/licenses/>.   |
+-------------------------------------------------------------------------
+
+Parsing config file for zone 0
+
+----------------- Physical Case Definition ( Zone 0 ) -------------------
+Compressible RANS equations.
+Turbulence model: Negative-Spalart-Allmaras
+Hybrid RANS/LES: No Hybrid RANS/LES
+Mach number: 0.2.
+Angle of attack (AoA): 0 deg, and angle of sideslip (AoS): 0 deg.
+Reynolds number: 5e+06. Reference length 1.
+Reading and writing binary SU2 native restart files.
+Read flow solution from: seed.
+Non-Dimensional simulation (V=Mach, Rho=1.0, T=1.0 at the farfield).
+The reference area is 2 m^2.
+The semi-span will be computed using the max y(3D) value.
+The reference length is 2 m.
+Reference origin for moment evaluation is (0, 0, 0).
+Surface(s) where the force coefficients are evaluated: wall.
+
+Surface(s) plotted in the output file: wall.
+Input mesh file name: ../../meshes/coarse.su2
+
+--------------- Space Numerical Integration ( Zone 0 ) ------------------
+Roe (with entropy fix = 0.001) solver for the flow inviscid terms.
+Standard Roe without low-dissipation function.
+Second order integration in space, with slope limiter.
+No slope-limiting method. 
+Scalar upwind solver for the turbulence model.
+First order integration in space.
+Average of gradients with correction (viscous flow terms).
+Average of gradients with correction (viscous turbulence terms).
+Gradient for upwind reconstruction: inverse-distance weighted Least-Squares.
+Gradient for viscous and source terms: inverse-distance weighted Least-Squares.
+
+--------------- Time Numerical Integration  ( Zone 0 ) ------------------
+Local time stepping (steady state simulation).
+Euler implicit method for the flow equations.
+FGMRES is used for solving the linear system.
+Using a LU-SGS preconditioning.
+Convergence criteria of the linear solver: 0.001.
+Max number of linear iterations: 40.
+CFL adaptation. Factor down: 0.1, factor up: 2,
+                lower limit: 100, upper limit: 100000,
+                acceptable linear residual: 0.001'
+                starting iteration: 50.
+Courant-Friedrichs-Lewy number:      100
+Euler implicit time integration for the turbulence model.
+
+------------------ Convergence Criteria  ( Zone 0 ) ---------------------
+Maximum number of solver subiterations: 200.
+Begin convergence monitoring at iteration 100000.
+Residual minimum value: 1e-13.
+Cauchy series min. value: 1e-10.
+Number of Cauchy elements: 100.
+Begin windowed time average at iteration 0.
+
+-------------------- Output Information ( Zone 0 ) ----------------------
+File writing frequency: 
++------------------------------------+
+|                     File| Frequency|
++------------------------------------+
+|                  RESTART|       200|
+|                 PARAVIEW|       200|
+|         SURFACE_PARAVIEW|       200|
+|              SURFACE_CSV|       200|
++------------------------------------+
+Writing the convergence history file every 1 inner iterations.
+Writing the screen convergence history every 1 inner iterations.
+The tabular file format is CSV (.csv).
+Convergence history file name: history.
+Forces breakdown file name: forces_breakdown.dat.
+Surface file name: surface_flow.
+Volume file name: flow.
+Restart file name: restart_flow.
+
+------------- Config File Boundary Information ( Zone 0 ) ---------------
++-----------------------------------------------------------------------+
+|                        Marker Type|                        Marker Name|
++-----------------------------------------------------------------------+
+|                     Symmetry plane|                           symmetry|
++-----------------------------------------------------------------------+
+|                     Inlet boundary|                              inlet|
++-----------------------------------------------------------------------+
+|                    Outlet boundary|                             outlet|
+|                                   |                           farfield|
++-----------------------------------------------------------------------+
+|                     Heat flux wall|                               wall|
++-----------------------------------------------------------------------+
+
+-------------------- Output Preprocessing ( Zone 0 ) --------------------
+
+WARNING: SURFACE_PRESSURE_DROP can only be computed for at least 2 surfaces (outlet, inlet, ...)
+
+Screen output fields: INNER_ITER, RMS_DENSITY, RMS_NU_TILDE, DRAG
+History output group(s): ITER, RMS_RES, AERO_COEFF, LINSOL, CFL_NUMBER
+Convergence field(s): RMS_DENSITY, RMS_NU_TILDE
+Warning: No (valid) fields chosen for time convergence monitoring. Time convergence monitoring inactive.
+Volume output fields: COORDINATES, SOLUTION, PRIMITIVE
+
+------------------- Geometry Preprocessing ( Zone 0 ) -------------------
+Two dimensional problem.
+3381 grid points.
+3264 volume elements.
+5 surface markers.
+56 boundary elements in index 0 (Marker = wall).
+12 boundary elements in index 1 (Marker = symmetry).
+48 boundary elements in index 2 (Marker = inlet).
+48 boundary elements in index 3 (Marker = outlet).
+68 boundary elements in index 4 (Marker = farfield).
+3264 quadrilaterals.
+Setting point connectivity.
+Renumbering points (Reverse Cuthill McKee Ordering).
+Recomputing point connectivity.
+Setting element connectivity.
+Checking the numerical grid orientation.
+All volume elements are correctly oriented.
+There has been a re-orientation of 116 LINE surface elements.
+Identifying edges and vertices.
+Setting the control volume structure.
+Area of the computational grid: 2.33333.
+Searching for the closest normal neighbors to the surfaces.
+Storing a mapping from global to local point index.
+Compute the surface curvature.
+Max K: 26.5371. Mean K: 0.583945. Standard deviation K: 3.38337.
+Computing mesh quality statistics for the dual control volumes.
++--------------------------------------------------------------+
+|           Mesh Quality Metric|        Minimum|        Maximum|
++--------------------------------------------------------------+
+|    Orthogonality Angle (deg.)|             90|             90|
+|     CV Face Area Aspect Ratio|        1.00044|        42541.7|
+|           CV Sub-Volume Ratio|              1|        1.64371|
++--------------------------------------------------------------+
+Finding max control volume width.
+Wetted area = 2 m.
+Area projection in the x-plane = 0 m, y-plane = 0 m.
+Max. coordinate in the x-direction = 2 m, y-direction = 0 m.
+Min. coordinate in the x-direction = 0 m, y-direction = 0 m.
+Computing wall distances.
+
+-------------------- Solver Preprocessing ( Zone 0 ) --------------------
+Viscous flow: Computing pressure using the ideal gas law
+based on the free-stream temperature and a density computed
+from the Reynolds number.
+Force coefficients computed using free-stream values.
+
+-- Models:
++------------------------------------------------------------------------------+
+|          Viscosity Model|        Conductivity Model|              Fluid Model|
++------------------------------------------------------------------------------+
+|               SUTHERLAND|          CONSTANT_PRANDTL|             STANDARD_AIR|
++------------------------------------------------------------------------------+
+-- Fluid properties:
++------------------------------------------------------------------------------+
+|                  Name|    Dim. value|    Ref. value|      Unit|Non-dim. value|
++------------------------------------------------------------------------------+
+|        Ref. Viscosity|     1.716e-05|       461.479|   N.s/m^2|   3.71848e-08|
+|      Sutherland Temp.|        273.15|           300|         K|        0.9105|
+|     Sutherland Const.|         110.4|           300|         K|         0.368|
++------------------------------------------------------------------------------+
+|        Prandtl (Lam.)|             -|             -|         -|          0.72|
+|       Prandtl (Turb.)|             -|             -|         -|           0.9|
++------------------------------------------------------------------------------+
+|          Gas Constant|       287.058|       401.881|  N.m/kg.K|      0.714286|
+|      Spec. Heat Ratio|             -|             -|         -|           1.4|
++------------------------------------------------------------------------------+
+-- Initial and free-stream conditions:
++------------------------------------------------------------------------------+
+|                  Name|    Dim. value|    Ref. value|      Unit|Non-dim. value|
++------------------------------------------------------------------------------+
+|       Static Pressure|        114455|        160237|        Pa|      0.714286|
+|               Density|       1.32905|       1.32905|    kg/m^3|             1|
+|           Temperature|           300|           300|         K|             1|
+|          Total Energy|        217705|        120564|   m^2/s^2|       1.80571|
+|            Velocity-X|       69.4448|       347.224|       m/s|           0.2|
+|            Velocity-Y|             0|       347.224|       m/s|             0|
+|    Velocity Magnitude|       69.4448|       347.224|       m/s|           0.2|
++------------------------------------------------------------------------------+
+|             Viscosity|   1.84592e-05|       461.479|   N.s/m^2|         4e-08|
+|          Conductivity|             -|        185460|   W/m^2.K|             -|
+|     Turb. Kin. Energy|       18.0847|        120564|   m^2/s^2|       0.00015|
+|     Spec. Dissipation|        130209|       347.224|       1/s|           375|
++------------------------------------------------------------------------------+
+|           Mach Number|             -|             -|         -|           0.2|
+|       Reynolds Number|             -|             -|         -|         5e+06|
++------------------------------------------------------------------------------+
+WARNING: On 1 MPI ranks the coloring efficiency was less than 0.875 (min value was 0.811035).
+         Those ranks will now use a fallback strategy, better performance may be possible
+         with a different value of config option EDGE_COLORING_GROUP_SIZE (default 512).
+Initialize Jacobian structure (Navier-Stokes). MG level: 0.
+Initialize Jacobian structure (SA model).
+
+------------------- Numerics Preprocessing ( Zone 0 ) -------------------
+
+----------------- Integration Preprocessing ( Zone 0 ) ------------------
+
+------------------- Iteration Preprocessing ( Zone 0 ) ------------------
+Euler/Navier-Stokes/RANS fluid iteration.
+
+------------------------------ Begin Solver -----------------------------
+
+Simulation Run using the Single-zone Driver
+CSysSolve::FGMRES(): system solved by initial guess.
++---------------------------------------------------+
+|  Inner_Iter|    rms[Rho]|     rms[nu]|          CD|
++---------------------------------------------------+
+|           0|  -15.746580|  -21.173080|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           1|  -15.895439|  -21.196952|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           2|  -15.995101|  -21.189872|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           3|  -16.043976|  -21.160474|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           4|  -16.075469|  -21.123759|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           5|  -16.088828|  -21.086639|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           6|  -16.100329|  -21.052723|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           7|  -16.105602|  -21.021964|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           8|  -16.112559|  -20.994554|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|           9|  -16.117672|  -20.970515|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          10|  -16.121473|  -20.948901|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          11|  -16.122612|  -20.929256|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          12|  -16.126310|  -20.911197|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          13|  -16.136840|  -20.894957|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          14|  -16.143506|  -20.880182|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          15|  -16.157482|  -20.866339|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          16|  -16.177229|  -20.853625|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          17|  -16.193317|  -20.841716|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          18|  -16.212731|  -20.830411|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          19|  -16.235051|  -20.820154|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          20|  -16.246074|  -20.810480|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          21|  -16.259464|  -20.801245|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          22|  -16.278018|  -20.792445|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          23|  -16.278136|  -20.784066|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          24|  -16.276181|  -20.776230|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          25|  -16.276872|  -20.768927|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          26|  -16.277382|  -20.761980|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          27|  -16.276527|  -20.755409|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          28|  -16.280456|  -20.749151|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          29|  -16.293144|  -20.743356|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          30|  -16.304324|  -20.737824|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          31|  -16.320010|  -20.732599|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          32|  -16.331340|  -20.727635|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          33|  -16.350334|  -20.723249|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          34|  -16.385036|  -20.718936|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          35|  -16.403911|  -20.714890|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          36|  -16.436115|  -20.711498|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          37|  -16.444692|  -20.708018|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          38|  -16.470976|  -20.704671|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          39|  -16.480179|  -20.701791|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          40|  -16.490500|  -20.699182|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          41|  -16.490958|  -20.696783|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          42|  -16.491512|  -20.694424|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          43|  -16.506710|  -20.692278|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          44|  -16.503536|  -20.690217|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          45|  -16.518541|  -20.688363|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          46|  -16.517612|  -20.686723|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          47|  -16.533473|  -20.685123|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          48|  -16.560921|  -20.683583|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          49|  -16.574664|  -20.682159|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          50|  -16.591234|  -20.680673|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          51|  -16.604259|  -20.677909|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          52|  -16.598623|  -20.673875|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          53|  -16.587885|  -20.668388|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          54|  -16.575389|  -20.663008|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          55|  -16.570765|  -20.658052|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          56|  -16.578435|  -20.648125|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          57|  -16.562945|  -20.626455|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          58|  -16.598591|  -20.624447|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          59|  -16.629377|  -20.617615|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          60|  -16.642253|  -20.604958|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          61|  -16.655962|  -20.589011|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          62|  -16.641065|  -20.586837|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          63|  -16.703121|  -20.583015|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          64|  -16.655849|  -20.577257|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          65|  -16.669820|  -20.570226|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          66|  -16.674733|  -20.562867|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          67|  -16.693345|  -20.561619|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          68|  -16.696458|  -20.559467|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          69|  -16.713934|  -20.556295|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          70|  -16.716590|  -20.552628|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          71|  -16.717112|  -20.549826|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          72|  -16.727196|  -20.547546|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          73|  -16.719707|  -20.545719|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          74|  -16.718258|  -20.545032|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          75|  -16.719363|  -20.544349|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          76|  -16.721155|  -20.544388|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          77|  -16.737144|  -20.544910|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          78|  -16.765162|  -20.545167|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          79|  -16.753902|  -20.545654|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          80|  -16.729138|  -20.546025|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          81|  -16.781909|  -20.546167|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          82|  -16.753036|  -20.546241|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          83|  -16.753184|  -20.546221|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          84|  -16.772026|  -20.546297|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          85|  -16.785312|  -20.546191|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          86|  -16.770038|  -20.545939|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          87|  -16.800524|  -20.545797|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          88|  -16.794081|  -20.545996|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          89|  -16.767597|  -20.545958|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          90|  -16.736947|  -20.545630|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          91|  -16.770310|  -20.545510|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          92|  -16.766145|  -20.545731|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          93|  -16.765366|  -20.545382|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          94|  -16.775612|  -20.545239|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          95|  -16.767892|  -20.545284|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          96|  -16.779439|  -20.545207|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          97|  -16.759051|  -20.545249|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          98|  -16.775802|  -20.545672|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|          99|  -16.770172|  -20.545982|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         100|  -16.780703|  -20.545870|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         101|  -16.782002|  -20.545938|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         102|  -16.780856|  -20.546110|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         103|  -16.791430|  -20.545879|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         104|  -16.772490|  -20.545838|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         105|  -16.787388|  -20.545917|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         106|  -16.779587|  -20.545801|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         107|  -16.793244|  -20.545837|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         108|  -16.791488|  -20.545974|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         109|  -16.804963|  -20.545793|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         110|  -16.767345|  -20.545708|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         111|  -16.745164|  -20.545714|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         112|  -16.762582|  -20.545874|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         113|  -16.793831|  -20.545755|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         114|  -16.800755|  -20.545725|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         115|  -16.789925|  -20.545526|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         116|  -16.769248|  -20.545374|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         117|  -16.776403|  -20.545590|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         118|  -16.777336|  -20.545582|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         119|  -16.804137|  -20.545647|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         120|  -16.803523|  -20.545536|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         121|  -16.802409|  -20.545574|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         122|  -16.819735|  -20.545567|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         123|  -16.825727|  -20.545577|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         124|  -16.798143|  -20.545565|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         125|  -16.797915|  -20.545532|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         126|  -16.801908|  -20.545532|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         127|  -16.803715|  -20.545547|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         128|  -16.815008|  -20.545551|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         129|  -16.785411|  -20.545604|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         130|  -16.794842|  -20.545599|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         131|  -16.805794|  -20.545526|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         132|  -16.784599|  -20.545623|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         133|  -16.811089|  -20.545631|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         134|  -16.807274|  -20.545641|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         135|  -16.820166|  -20.545617|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         136|  -16.801202|  -20.545610|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         137|  -16.819257|  -20.545657|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         138|  -16.803407|  -20.545658|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         139|  -16.806491|  -20.545632|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         140|  -16.787892|  -20.545679|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         141|  -16.795365|  -20.545640|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         142|  -16.810127|  -20.545726|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         143|  -16.787296|  -20.545656|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         144|  -16.821549|  -20.545645|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         145|  -16.802403|  -20.545747|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         146|  -16.795983|  -20.545617|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         147|  -16.779582|  -20.545655|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         148|  -16.813959|  -20.545698|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         149|  -16.817152|  -20.545718|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         150|  -16.817362|  -20.545757|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         151|  -16.799544|  -20.545783|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         152|  -16.805611|  -20.545756|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         153|  -16.809778|  -20.545745|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         154|  -16.800028|  -20.545711|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         155|  -16.799147|  -20.545682|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         156|  -16.798997|  -20.545727|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         157|  -16.776973|  -20.545853|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         158|  -16.814991|  -20.545759|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         159|  -16.819638|  -20.545809|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         160|  -16.806289|  -20.545847|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         161|  -16.804429|  -20.545694|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         162|  -16.802143|  -20.545703|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         163|  -16.813638|  -20.545834|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         164|  -16.846065|  -20.545867|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         165|  -16.833769|  -20.545870|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         166|  -16.827326|  -20.545828|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         167|  -16.816078|  -20.545704|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         168|  -16.797953|  -20.545824|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         169|  -16.795906|  -20.545821|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         170|  -16.819061|  -20.545855|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         171|  -16.816731|  -20.545957|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         172|  -16.795889|  -20.545863|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         173|  -16.800152|  -20.545822|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         174|  -16.809234|  -20.545773|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         175|  -16.802996|  -20.545831|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         176|  -16.808964|  -20.545904|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         177|  -16.804311|  -20.545831|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         178|  -16.790158|  -20.545833|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         179|  -16.783628|  -20.545849|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         180|  -16.803152|  -20.545823|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         181|  -16.813988|  -20.545788|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         182|  -16.817549|  -20.545784|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         183|  -16.815281|  -20.545850|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         184|  -16.808739|  -20.545797|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         185|  -16.791283|  -20.545779|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         186|  -16.804006|  -20.545765|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         187|  -16.799388|  -20.545806|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         188|  -16.794715|  -20.545771|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         189|  -16.813624|  -20.545714|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         190|  -16.815144|  -20.545819|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         191|  -16.796192|  -20.545681|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         192|  -16.781857|  -20.545678|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         193|  -16.820962|  -20.545617|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         194|  -16.814838|  -20.545716|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         195|  -16.829729|  -20.545710|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         196|  -16.810423|  -20.545632|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         197|  -16.814792|  -20.545669|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         198|  -16.816156|  -20.545649|    0.002858|
+CSysSolve::FGMRES(): system solved by initial guess.
+|         199|  -16.827529|  -20.545654|    0.002858|
+
+----------------------------- Solver Exit -------------------------------
+
+Maximum number of iterations reached (ITER = 200) before convergence.
++-----------------------------------------------------------------------+
+|      Convergence Field     |     Value    |   Criterion  |  Converged |
++-----------------------------------------------------------------------+
+|                    rms[Rho]|      -16.8275|         < -13|         Yes|
+|                     rms[nu]|      -20.5457|         < -13|         Yes|
++-----------------------------------------------------------------------+
+-------------------------------------------------------------------------
++-----------------------------------------------------------------------+
+|        File Writing Summary       |              Filename             |
++-----------------------------------------------------------------------+
+|SU2 binary restart                 |restart_flow.dat                   |
+|SU2 binary restart + iter          |restart_flow_000199.dat            |
+|Paraview                           |flow.vtu                           |
+|Paraview + iter                    |flow_000199.vtu                    |
+|Paraview surface                   |surface_flow.vtu                   |
+|Paraview surface + iter            |surface_flow_000199.vtu            |
+|CSV file                           |surface_flow.csv                   |
+|CSV file + iter                    |surface_flow_000199.csv            |
++-----------------------------------------------------------------------+
+
+--------------------------- Finalizing Solver ---------------------------
+Deleted CNumerics container.
+Deleted CIntegration container.
+Deleted CSolver container.
+Deleted CIteration container.
+Deleted CInterface container.
+Deleted CGeometry container.
+Deleted CFreeFormDefBox class.
+Deleted CSurfaceMovement class.
+Deleted CVolumetricMovement class.
+Deleted CConfig container.
+Deleted nInst container.
+Deleted COutput class.
+-------------------------------------------------------------------------
+
+------------------------- Exit Success (SU2_CFD) ------------------------
+
