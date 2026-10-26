@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-26T16:29:27.572494+00:00",
+  "type": "wrapper_auxiliary_semantics_error",
+  "native_exit_code": 0,
+  "original_wrapper": "prepare_residual_probe.py run -> cfl_control.freeze_folder assert(all matched finite)",
+  "observation": "Explicit solver has no linear solve; raw history LinSolRes/LinSolResTurb=-inf. All10 required nonlinear RMS/MAX values are finite.",
+  "correction": "Scoped explicit seal omits undefined implicit linear solver auxiliary from required finite measurements; raw files unchanged, no native retry.",
+  "not_a_physical_gate_relaxation": true
+}

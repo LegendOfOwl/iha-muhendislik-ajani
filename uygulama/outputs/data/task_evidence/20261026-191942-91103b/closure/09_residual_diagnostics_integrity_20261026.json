@@ -1,0 +1,157 @@
+{
+  "checked_utc": "2026-10-26T16:43:47.207480+00:00",
+  "new_native_runs": [
+    {
+      "folder": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\inner_cap_20261026_v1\\cap40",
+      "seal_sha256": "84e6b3c70ca99d81afba1d2119d47e95c9eeed468e7258d12ba2d45960febf4b",
+      "native_status": {
+        "started_utc": "2026-10-26T16:19:43.328698+00:00",
+        "ended_utc": "2026-10-26T16:20:23.898600+00:00",
+        "exit_code": 0,
+        "seconds": 40.57799999997951,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.2846221923828125,
+        "budget_s": 180,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "matched": {
+        "field_iteration": 199,
+        "terminal_history_iteration": 199,
+        "rms[Rho]": -12.45813723,
+        "rms[RhoU]": -12.88817457,
+        "rms[RhoV]": -14.68728525,
+        "rms[RhoE]": -13.60771076,
+        "rms[nu]": -17.38103373,
+        "CL": -0.0006404626242,
+        "CD": 0.002848053098,
+        "LinSolRes": -3.013647918,
+        "Linear_Solver_Iterations": 21.0,
+        "last100_samples": 100,
+        "CD_last100_range": 2.5899999996255307e-09
+      }
+    },
+    {
+      "folder": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\inner_cap_20261026_v1\\cap80",
+      "seal_sha256": "370631ee2934ba838383341048152b1fe652d197ade25c7540dc5e47f4eed383",
+      "native_status": {
+        "started_utc": "2026-10-26T16:20:48.991947+00:00",
+        "ended_utc": "2026-10-26T16:22:08.556736+00:00",
+        "exit_code": 0,
+        "seconds": 79.56299999996554,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.441741943359375,
+        "budget_s": 180,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "matched": {
+        "field_iteration": 199,
+        "terminal_history_iteration": 199,
+        "rms[Rho]": -12.54961795,
+        "rms[RhoU]": -12.99796314,
+        "rms[RhoV]": -14.38344151,
+        "rms[RhoE]": -13.59724042,
+        "rms[nu]": -17.47656612,
+        "CL": -0.0006404671517,
+        "CD": 0.002848047268,
+        "LinSolRes": -2.26888192,
+        "Linear_Solver_Iterations": 80.0,
+        "last100_samples": 100,
+        "CD_last100_range": 4.886999999988151e-09
+      }
+    },
+    {
+      "folder": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\linelet_20261026_v1\\linelet",
+      "seal_sha256": "b03b74f1068eb7a4d1849fd8d9e1dcf4db957110d7f1ad18c33553f90d46936b",
+      "native_status": {
+        "started_utc": "2026-10-26T16:37:18.518619+00:00",
+        "ended_utc": "2026-10-26T16:38:14.101813+00:00",
+        "exit_code": 0,
+        "seconds": 55.59399999998277,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.2919731140136719,
+        "budget_s": 180,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "matched": {
+        "field_iteration": 199,
+        "terminal_history_iteration": 199,
+        "rms[Rho]": -12.42583086,
+        "rms[RhoU]": -12.84066666,
+        "rms[RhoV]": -13.80384991,
+        "rms[RhoE]": -13.29266472,
+        "rms[nu]": -17.32565696,
+        "CL": -0.0006404599202,
+        "CD": 0.002848056245,
+        "LinSolRes": -0.922353669,
+        "Linear_Solver_Iterations": 40.0,
+        "last100_samples": 100,
+        "CD_last100_range": 1.3939999996340213e-09
+      }
+    },
+    {
+      "folder": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit",
+      "seal_sha256": "d9ceb51058cc9f662f557fac833aea5ea632a8b6af1ed73107d1ec93e8ff3cbd",
+      "native_status": {
+        "started_utc": "2026-10-26T16:28:30.359837+00:00",
+        "ended_utc": "2026-10-26T16:28:31.367313+00:00",
+        "exit_code": 0,
+        "seconds": 1.0150000000139698,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.0694580078125,
+        "budget_s": 60,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "matched": {
+        "field_iteration": 0,
+        "terminal_history_iteration": 0,
+        "rms[Rho]": -12.38121851,
+        "rms[RhoU]": -12.7876024,
+        "rms[RhoV]": -14.40020272,
+        "rms[RhoE]": -13.45077818,
+        "rms[nu]": -17.27642012,
+        "max[Rho]": -11.60382319,
+        "max[RhoU]": -11.22856107,
+        "max[RhoV]": -13.03471119,
+        "max[RhoE]": -12.03190709,
+        "max[nu]": -16.31506337,
+        "CD": 0.002848059129,
+        "CL": -0.0006404567283,
+        "Linear_Solver_Iterations": 0,
+        "LinSolRes": null,
+        "LinSolResTurb": null,
+        "last100_samples": 1,
+        "CD_last100_range": 0.0,
+        "undefined_auxiliary_reason": "No implicit linear system solved in EULER_EXPLICIT diagnostic."
+      }
+    }
+  ],
+  "new_raw_hash_records_verified": 61,
+  "old_raw_hash_records_verified": 632,
+  "pre_native_code_hash_records_verified": 31,
+  "real_UAV_inputs_unchanged_vs_v0_13": {
+    "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "no_native_retry_after_probe_wrapper_error": true
+}

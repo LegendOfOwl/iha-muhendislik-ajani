@@ -219,3 +219,19 @@ Kurulum/araç entegrasyonu ve son model araştırması/yetenek raporu görev kay
 - Kaynak üç ağda yeni sonlu bütçe/seed/sayısal reçete ön kaydedildi.2B sayısal şartların tümü=False; tek-tek sonuçlar reduced_family_review_20261026.json. İnce rolü özgün fine2000den korunur. HamND kalıntılar eskiSI eşikleriyle karıştırılmadı; alan/terminal adımları ve OS çıkışı ayrı.
 - 215 yeni ham hash, 25 ön-native kod ve 417 eski hash doğrulandı.8 maliyet+12 aile karar kontrolü geçti. Son işlem çıktı adı gölgelenmesi düzeltildi; ham alan/mühürler aynı. GerçekİHA 3girdisi v0.12 ile aynı.
 - Genel fizik/M6/RAE/VLM/İHA kabulleri false, GCI null; referanslar sayısal kod sonuçlarıdır. Yeni körLLM/prompt uzmanlığı ölçülmedi. Kayıtlı bütçe dışında otomatik uzatma yapılmadı. Görev 20261026-182125-8e3de6 sınırlı test/rapor paketi olarak kapandı.
+
+
+## 26 Ekim: v0.13.0 yayın doğrulandı
+
+- Public main/tag b7b0850cb292762de776c68598426e43de692596;13 sürüm/29 varlık. Üç yeni dosyanın sunucu SHA256/boyutu eşleşti. Önceki12 sürüm/26 varlık ve24 eski tag referansı değişmedi.
+- 6044 kaynak blobu,14 geri yükleme kontrolü,68 gerçek ham hedef yolu ve44 yerel belge bağlantısı doğrulandı. İlk DNS kesintisinden sonra mevcut arşiv korunarak yükleme tamamlandı. Yerel yayın deposu temiz; global DNS/Git ayarı değiştirilmedi.
+- Makbuz outputs/reports/github_yayini_v0.13.0.md; güncel yayın durumu work/publish/github_publication_state.json. Bilimsel kabul false kalır; yeni yayın metadata raporları sonraki artımlı dışa aktarımda alınır.
+
+
+## 26 Ekim: konumsal artık gözlemi ve iki kontrollü hipotez
+
+- Görev 20261026-191942-91103b:4 yeni native koşu.40→80 ortak tavan kıyası yoğunluk kazancı0,09148072log/Krylov1,50447718 ile ön kayıtlı0,3/1,5 şartını geçmedi. Yalnız40→80 ayarı akış+SA ve adaptiveCFL geri beslemesini etkiler.
+- Kaynakla gerekçeli tek explicit adımda exported RHS5RMS/MAX ile≤1,14e-8log uyuştu.52689 nokta bijektif; native konservatif driftmax4,67e-12. Rho kareartıkpayı aftBL%99,626,leadingedge%0,055924; bu konum ölçümüdür, ağ hata bandı veya neden kanıtı değildir. Sıralı flow/SA aşaması artığı; finalfieldin yeniden hesaplanan artığı değil.
+- Konuma dayalı tekLINELET kolu nativeortalama32 noktalı lineletlerle gerçekten çalıştı; gain−0,03230637log/Krylov2,310803 ile başarısız. Kaynak32noktalı sınır tüm193normalnoktayı kapsamaz. Eski3Dsonucu genellenmedi. Yeni tarama/otomatik uzatma yok.
+- ExplicitLinSolRes−inf yardımcı sütunu genel mühürleyicide hata verdi; özgün kayıt korundu, aynı completednativeişi yeniden koşmadan explicit null-semantiğiyle mühürlendi. Testkayıtçısının Pathhatası da korundu/düzeltildi.9+28=37yazılım kontrolü geçti. 61 yeni ham/31 ön-nativekod/632 eskihash doğrulandı; gerçekİHA3girdisi v0.13 ile aynı.
+- Rapor outputs/reports/cfd_kalan_artik_20261026.html. Eski fine3999 rolü/üç-ağ minimum ve genelM6/RAE/VLM/İHA kabulü false,GCI null. Yeni körLLM/promptuzmanlığı ölçülmedi.

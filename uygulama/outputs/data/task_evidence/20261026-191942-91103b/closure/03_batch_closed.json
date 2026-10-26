@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-26T16:43:47.549035+00:00",
+  "scope": "Bounded4-native diagnostic batch; no replacement of frozen fine role",
+  "inner_cap_effect_passed": false,
+  "linelet_effect_passed": false,
+  "verified_RHS_measurement_accepted": true,
+  "new_native_runs": 4,
+  "new_software_guard_checks": 37,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_behaviour_improvement_measured": false,
+  "hypotheses": [
+    {
+      "name": "Inner cap is sufficient to improve at registered cost",
+      "status": "not_supported_in_this_pair"
+    },
+    {
+      "name": "Normal-line preconditioner improves at registered cost",
+      "status": "not_supported_in_this_pair"
+    },
+    {
+      "name": "LE Cf error is the same issue as the dominant density residual",
+      "status": "not_established; spatial observations differ"
+    },
+    {
+      "name": "Localized residual proves local mesh error",
+      "status": "not_established"
+    }
+  ]
+}

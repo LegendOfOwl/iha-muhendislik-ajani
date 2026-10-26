@@ -1,0 +1,71 @@
+{
+  "frozen_utc": "2026-10-26T16:29:27.573498+00:00",
+  "not_blind": true,
+  "contract_sha256": "e9d3d0690b6c0bb9b4a18ebbb60d5a55a6451f8cabcf96ce19dd14fa9b6e2bc4",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "matched": {
+    "field_iteration": 0,
+    "terminal_history_iteration": 0,
+    "rms[Rho]": -12.38121851,
+    "rms[RhoU]": -12.7876024,
+    "rms[RhoV]": -14.40020272,
+    "rms[RhoE]": -13.45077818,
+    "rms[nu]": -17.27642012,
+    "max[Rho]": -11.60382319,
+    "max[RhoU]": -11.22856107,
+    "max[RhoV]": -13.03471119,
+    "max[RhoE]": -12.03190709,
+    "max[nu]": -16.31506337,
+    "CD": 0.002848059129,
+    "CL": -0.0006404567283,
+    "Linear_Solver_Iterations": 0,
+    "LinSolRes": null,
+    "LinSolResTurb": null,
+    "last100_samples": 1,
+    "CD_last100_range": 0.0,
+    "undefined_auxiliary_reason": "No implicit linear system solved in EULER_EXPLICIT diagnostic."
+  },
+  "native_status": {
+    "started_utc": "2026-10-26T16:28:30.359837+00:00",
+    "ended_utc": "2026-10-26T16:28:31.367313+00:00",
+    "exit_code": 0,
+    "seconds": 1.0150000000139698,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.0694580078125,
+    "budget_s": 60,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "freeze_recovery": {
+    "recorded_utc": "2026-10-26T16:29:27.572494+00:00",
+    "type": "wrapper_auxiliary_semantics_error",
+    "native_exit_code": 0,
+    "original_wrapper": "prepare_residual_probe.py run -> cfl_control.freeze_folder assert(all matched finite)",
+    "observation": "Explicit solver has no linear solve; raw history LinSolRes/LinSolResTurb=-inf. All10 required nonlinear RMS/MAX values are finite.",
+    "correction": "Scoped explicit seal omits undefined implicit linear solver auxiliary from required finite measurements; raw files unchanged, no native retry.",
+    "not_a_physical_gate_relaxation": true
+  },
+  "not_convergence_qualification": true,
+  "files_sha256": {
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\case.cfg": "56cc9236f007585fbf97a6f87fd1fb2829d52aa275e36c4e3f9a6a28d74da5c9",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\code_before_native.json": "92f065afa16bbca02960206ca53cdcaead1d6681929024c13671fa2a43d391f7",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\flow.vtu": "8ef21e55aa52457298c3384031696d688b8da708f2fb4d20fb908263ce88de2d",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\flow_000000.vtu": "8ef21e55aa52457298c3384031696d688b8da708f2fb4d20fb908263ce88de2d",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\history.csv": "2ab5b0d5126058cd9c517ba5051ffc53fb3d011c0b6d7b50dea08186aef9ee50",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\restart_flow.dat": "13978b77ff5bca783c6ae8a5660fcb51423a1b2453a9cab5d98ad13c1d6a723c",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\restart_flow_000000.dat": "13978b77ff5bca783c6ae8a5660fcb51423a1b2453a9cab5d98ad13c1d6a723c",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\seed.dat": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\solver.log": "488f6f74a899fbc64cb6ccd8a12814464d88bb770ba95dadb3577874cc06d1a7",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\solver.process.json": "d2bd2a66b631991490da145d54aac42fc9eda66b3be50a976ed9e933529aabac",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\solver.status.json": "4da0262bdfaa9e7d8446f884cd9f02e1d88c2af145450e66581bcf096d15ec73",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\surface_flow.csv": "a0476b5a405dbf09d6d525215fa738c4591447ad38f262cf236731350fa5fcc5",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\surface_flow.vtu": "2eb1f0fb0df4d5ef959ea8d43f2c23159fd3b0bed05972e0dc94d5e5f3af190e",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\surface_flow_000000.csv": "a0476b5a405dbf09d6d525215fa738c4591447ad38f262cf236731350fa5fcc5",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\surface_flow_000000.vtu": "2eb1f0fb0df4d5ef959ea8d43f2c23159fd3b0bed05972e0dc94d5e5f3af190e",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\wrapper_freeze_failure.json": "0a96615fe762a5c6b3fd991772022098ca5534e2c3fba20ccfccdd40fba39fca"
+  }
+}

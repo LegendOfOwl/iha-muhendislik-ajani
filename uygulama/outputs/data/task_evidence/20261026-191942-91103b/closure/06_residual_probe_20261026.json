@@ -1,0 +1,484 @@
+{
+  "created_utc": "2026-10-26T16:31:39.632154+00:00",
+  "algorithm_version": 1,
+  "gates_unchanged": {
+    "residual_log10_error_max": 1e-06,
+    "coordinate_mapping_max_m": 2e-07,
+    "conservative_global_relative_drift_max": 2e-06,
+    "expected_points": 52689,
+    "all5_RMS_and_MAX_required": true
+  },
+  "contract_sha256": "e9d3d0690b6c0bb9b4a18ebbb60d5a55a6451f8cabcf96ce19dd14fa9b6e2bc4",
+  "source_files_sha256_before": {
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\contract.json": "e9d3d0690b6c0bb9b4a18ebbb60d5a55a6451f8cabcf96ce19dd14fa9b6e2bc4",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\prediction_frozen.json": "d9ceb51058cc9f662f557fac833aea5ea632a8b6af1ed73107d1ec93e8ff3cbd",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\fine\\restart_flow_003999.dat": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\meshes\\fine.su2": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\case.cfg": "56cc9236f007585fbf97a6f87fd1fb2829d52aa275e36c4e3f9a6a28d74da5c9",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\history.csv": "2ab5b0d5126058cd9c517ba5051ffc53fb3d011c0b6d7b50dea08186aef9ee50",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\flow_000000.vtu": "8ef21e55aa52457298c3384031696d688b8da708f2fb4d20fb908263ce88de2d",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\restart_flow_000000.dat": "13978b77ff5bca783c6ae8a5660fcb51423a1b2453a9cab5d98ad13c1d6a723c",
+    "work\\flatplate_20261025\\probe_residual_analysis.py": "68cc7533aaa44cdfaea22040eecf8c29fd84b56713de2e7cc2ca9de5dbd24385",
+    "work\\flatplate_20261025\\test_probe_residual_analysis.py": "a15f8e321fb10e9ca91a52be6cf1fc4e0cbacc653af714e945052c766134d477",
+    "work\\flatplate_20261026\\residual_sources\\manifest.json": "a8fb89acd37c84fb006a109eb45ff14615c32c4a6413011c1c10e290942834b0",
+    "work\\flatplate_20261026\\residual_sources\\CFVMFlowSolverBase.hpp": "ff00be37735ec54fab8969bd1db716ace6a3bb4b8fc68745179ee0e4501d9f65",
+    "work\\flatplate_20261026\\residual_sources\\CScalarSolver.inl": "cb394bab2ccdba970a59ccfa5fd81ae561e110e0a1ddcfd102270f0eb8426112",
+    "work\\flatplate_20261026\\residual_sources\\CSolver.cpp": "339109418c4efe28c65ed91e229b3b41dda747566adcc80e474a91e0f96e3c84",
+    "work\\flatplate_20261026\\residual_sources\\CFlowCompOutput.cpp": "bfdd613fda3f70c11d17f63ecc5e8982741087f13b3a77dc90fe1b523374f182",
+    "work\\flatplate_20261026\\residual_sources\\CConfig.cpp": "d6a00ab96d177ab29274f090292a3806d62452fd1883f54f599756b5eec15c9f",
+    "work\\flatplate_20261026\\residual_sources\\CSysSolve.cpp": "767ff544d658baffcadf3ed2fa9cd2b3a83c0f696ebecd4765704d368cf136b6",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\fine\\prediction_frozen.json": "c2e46094b46bae96daca4dcfb6fc6e7c3d441d7eef79056c501d5c155b59ed31",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\contract.json": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623"
+  },
+  "measurement_accepted": true,
+  "map_authorized": true,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false,
+  "rejected_because": [],
+  "scope": "Single source-grid one-step explicit observation of sequential flow and SA residual stages; not a residual recomputation on the final exported solution.",
+  "norm_definition": "sqrt(sum_i R_i^2 / N_owned); every registered owned node including walls and BC nodes, no volume weighting, no masks or removed points; single OpenMP process, no halo nodes.",
+  "limits": [
+    "Export/history identity is a measurement check, not convergence or physical acceptance.",
+    "Native binary restart determines drift; float32 VTU solution drift is reported separately.",
+    "Regions can overlap and their shares must not be added as a partition.",
+    "Flow and SA evaluation stages are sequential; this is not a new accepted CFD solution."
+  ],
+  "coordinate_mapping": {
+    "passed": true,
+    "rejected_because": [],
+    "maximum_distance_m": 6.509348286129906e-08,
+    "reference_points": 52689,
+    "observed_points": 52689,
+    "unique_matches": 52689
+  },
+  "seed_coordinate_mapping": {
+    "passed": true,
+    "rejected_because": [],
+    "maximum_distance_m": 0.0,
+    "reference_points": 52689,
+    "observed_points": 52689,
+    "unique_matches": 52689
+  },
+  "output_coordinate_mapping": {
+    "passed": true,
+    "rejected_because": [],
+    "maximum_distance_m": 0.0,
+    "reference_points": 52689,
+    "observed_points": 52689,
+    "unique_matches": 52689
+  },
+  "components": {
+    "Rho": {
+      "passed": true,
+      "rejected_because": [],
+      "points": 52689,
+      "computed_log10_RMS": -12.38121850902437,
+      "computed_log10_MAX": -11.603823201432293,
+      "native_log10_RMS": -12.38121851,
+      "native_log10_MAX": -11.60382319,
+      "RMS_log10_error": 9.75630243260639e-10,
+      "MAX_log10_error": 1.1432293334223687e-08
+    },
+    "RhoU": {
+      "passed": true,
+      "rejected_because": [],
+      "points": 52689,
+      "computed_log10_RMS": -12.787602403193478,
+      "computed_log10_MAX": -11.228561059477896,
+      "native_log10_RMS": -12.7876024,
+      "native_log10_MAX": -11.22856107,
+      "RMS_log10_error": 3.1934774824549095e-09,
+      "MAX_log10_error": 1.0522104076926553e-08
+    },
+    "RhoV": {
+      "passed": true,
+      "rejected_because": [],
+      "points": 52689,
+      "computed_log10_RMS": -14.400202722572045,
+      "computed_log10_MAX": -13.034711194990805,
+      "native_log10_RMS": -14.40020272,
+      "native_log10_MAX": -13.03471119,
+      "RMS_log10_error": 2.572045687543323e-09,
+      "MAX_log10_error": 4.990805990701119e-09
+    },
+    "RhoE": {
+      "passed": true,
+      "rejected_because": [],
+      "points": 52689,
+      "computed_log10_RMS": -13.450778175513452,
+      "computed_log10_MAX": -12.031907080570567,
+      "native_log10_RMS": -13.45077818,
+      "native_log10_MAX": -12.03190709,
+      "RMS_log10_error": 4.486548021986891e-09,
+      "MAX_log10_error": 9.42943323423151e-09
+    },
+    "nu": {
+      "passed": true,
+      "rejected_because": [],
+      "points": 52689,
+      "computed_log10_RMS": -17.276420118843525,
+      "computed_log10_MAX": -16.315063365881116,
+      "native_log10_RMS": -17.27642012,
+      "native_log10_MAX": -16.31506337,
+      "RMS_log10_error": 1.1564758040094603e-09,
+      "MAX_log10_error": 4.118884788795185e-09
+    }
+  },
+  "all_five_RMS_and_MAX_match": true,
+  "native_binary_drift": {
+    "passed": true,
+    "rejected_because": [],
+    "relative_L2_by_field": {
+      "Density": 4.846909305656639e-19,
+      "Momentum_x": 1.66774035760784e-16,
+      "Momentum_y": 4.6733943950293875e-12,
+      "Energy": 1.3164012950900319e-18
+    },
+    "Nu_Tilde_relative_L2_observation": 3.6481917314466747e-16,
+    "density_min": 0.991980885164276,
+    "pressure_min": 0.7142700344802565,
+    "positive_density_and_pressure": true,
+    "maximum_conservative_relative_L2": 4.6733943950293875e-12
+  },
+  "component_map_authorized": {
+    "Rho": true,
+    "RhoU": true,
+    "RhoV": true,
+    "RhoE": true,
+    "nu": true
+  },
+  "native_array_names": [
+    "Density",
+    "Momentum",
+    "Energy",
+    "Nu_Tilde",
+    "Pressure",
+    "Temperature",
+    "Mach",
+    "Pressure_Coefficient",
+    "Velocity",
+    "Laminar_Viscosity",
+    "Skin_Friction_Coefficient",
+    "Heat_Flux",
+    "Y_Plus",
+    "Eddy_Viscosity",
+    "Residual_Density",
+    "Residual_Momentum",
+    "Residual_Energy",
+    "Residual_Nu_Tilde"
+  ],
+  "native_history_iteration0": {
+    "Time_Iter": 0.0,
+    "Outer_Iter": 0.0,
+    "Inner_Iter": 0.0,
+    "rms[Rho]": -12.38121851,
+    "rms[RhoU]": -12.7876024,
+    "rms[RhoV]": -14.40020272,
+    "rms[RhoE]": -13.45077818,
+    "rms[nu]": -17.27642012,
+    "max[Rho]": -11.60382319,
+    "max[RhoU]": -11.22856107,
+    "max[RhoV]": -13.03471119,
+    "max[RhoE]": -12.03190709,
+    "max[nu]": -16.31506337,
+    "Linear_Solver_Iterations": 0.0,
+    "LinSolRes": null,
+    "LinSolIterTurb": 0.0,
+    "LinSolResTurb": null,
+    "Min DT": 1.329153193e-13,
+    "Max DT": 6.82250919e-09,
+    "Min CFL": 1e-06,
+    "Max CFL": 1e-06,
+    "Avg CFL": 1e-06,
+    "RefForce": 0.04,
+    "CD": 0.002848059129,
+    "CL": -0.0006404567283,
+    "CSF": 0.0,
+    "CMx": 0.0,
+    "CMy": 0.0,
+    "CMz": -8.340298579e-05,
+    "CFx": 0.002848059129,
+    "CFy": -0.0006404567283,
+    "CFz": 0.0,
+    "CEff": -0.2248748005,
+    "Buffet": null
+  },
+  "native_history_nonfinite_columns": [
+    "LinSolRes",
+    "LinSolResTurb",
+    "Buffet"
+  ],
+  "all_points_csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\all_owned_nodes.csv",
+  "CSV_scope": "Every owned node retained; raw diagnostic values are not an authorized map unless map_authorized=true.",
+  "spatial": {
+    "Rho": {
+      "points": 52689,
+      "peak_mesh_node": 271,
+      "peak_coordinate_m": [
+        1.97852076566,
+        0.0
+      ],
+      "peak_signed_residual_ND": -2.48987072279383e-12,
+      "peak_square_share": 0.0006808801279753529,
+      "nodes_carrying_90_percent_of_squared_residual": 3964,
+      "fraction_of_nodes_carrying_90_percent": 0.07523391979350529,
+      "regions_overlap_and_must_not_be_summed_as_a_partition": true,
+      "regions": [
+        {
+          "name": "leading_edge",
+          "registered_definition": {
+            "name": "leading_edge",
+            "x_min": -0.02,
+            "x_max": 0.05,
+            "y_min": 0,
+            "y_max": 0.05
+          },
+          "nodes": 4719,
+          "squared_residual_share": 0.000559240792009729
+        },
+        {
+          "name": "near_wall",
+          "registered_definition": {
+            "name": "near_wall",
+            "x_min": 0,
+            "x_max": 2,
+            "y_min": 0,
+            "y_max": 0.02
+          },
+          "nodes": 28740,
+          "squared_residual_share": 0.9997235986969695
+        },
+        {
+          "name": "upstream",
+          "registered_definition": {
+            "name": "upstream",
+            "x_min": -0.33333,
+            "x_max": 0,
+            "y_min": 0,
+            "y_max": 1
+          },
+          "nodes": 9386,
+          "squared_residual_share": 0.00017187665720586878
+        },
+        {
+          "name": "inlet_strip",
+          "registered_definition": {
+            "name": "inlet_strip",
+            "x_min": -0.33333,
+            "x_max": -0.32333,
+            "y_min": 0,
+            "y_max": 1
+          },
+          "nodes": 193,
+          "squared_residual_share": 0.00010336138744042306
+        },
+        {
+          "name": "outlet_strip",
+          "registered_definition": {
+            "name": "outlet_strip",
+            "x_min": 1.98,
+            "x_max": 2,
+            "y_min": 0,
+            "y_max": 1
+          },
+          "nodes": 193,
+          "squared_residual_share": 0.009417694723287951
+        },
+        {
+          "name": "top_strip",
+          "registered_definition": {
+            "name": "top_strip",
+            "x_min": -0.33333,
+            "x_max": 2,
+            "y_min": 0.98,
+            "y_max": 1
+          },
+          "nodes": 273,
+          "squared_residual_share": 5.813556289568596e-05
+        },
+        {
+          "name": "aft_boundary_layer",
+          "registered_definition": {
+            "name": "aft_boundary_layer",
+            "x_min": 0.5,
+            "x_max": 2,
+            "y_min": 0,
+            "y_max": 0.05
+          },
+          "nodes": 12298,
+          "squared_residual_share": 0.9962635018212537
+        },
+        {
+          "name": "outer_core",
+          "registered_definition": {
+            "name": "outer_core",
+            "x_min": 0,
+            "x_max": 1.98,
+            "y_min": 0.05,
+            "y_max": 0.98
+          },
+          "nodes": 10958,
+          "squared_residual_share": 2.8503191804808904e-06
+        }
+      ]
+    },
+    "nu": {
+      "points": 52689,
+      "peak_mesh_node": 320,
+      "peak_coordinate_m": [
+        -0.0020010148442,
+        1.00046515517e-06
+      ],
+      "peak_signed_residual_ND": 4.841017294068206e-17,
+      "peak_square_share": 0.001588523155742268,
+      "nodes_carrying_90_percent_of_squared_residual": 2791,
+      "fraction_of_nodes_carrying_90_percent": 0.05297120841162292,
+      "regions_overlap_and_must_not_be_summed_as_a_partition": true,
+      "regions": [
+        {
+          "name": "leading_edge",
+          "registered_definition": {
+            "name": "leading_edge",
+            "x_min": -0.02,
+            "x_max": 0.05,
+            "y_min": 0,
+            "y_max": 0.05
+          },
+          "nodes": 4719,
+          "squared_residual_share": 0.23447208582023837
+        },
+        {
+          "name": "near_wall",
+          "registered_definition": {
+            "name": "near_wall",
+            "x_min": 0,
+            "x_max": 2,
+            "y_min": 0,
+            "y_max": 0.02
+          },
+          "nodes": 28740,
+          "squared_residual_share": 0.19993269620156945
+        },
+        {
+          "name": "upstream",
+          "registered_definition": {
+            "name": "upstream",
+            "x_min": -0.33333,
+            "x_max": 0,
+            "y_min": 0,
+            "y_max": 1
+          },
+          "nodes": 9386,
+          "squared_residual_share": 0.7199901217321424
+        },
+        {
+          "name": "inlet_strip",
+          "registered_definition": {
+            "name": "inlet_strip",
+            "x_min": -0.33333,
+            "x_max": -0.32333,
+            "y_min": 0,
+            "y_max": 1
+          },
+          "nodes": 193,
+          "squared_residual_share": 1.5126975526666206e-08
+        },
+        {
+          "name": "outlet_strip",
+          "registered_definition": {
+            "name": "outlet_strip",
+            "x_min": 1.98,
+            "x_max": 2,
+            "y_min": 0,
+            "y_max": 1
+          },
+          "nodes": 193,
+          "squared_residual_share": 0.004389068442377304
+        },
+        {
+          "name": "top_strip",
+          "registered_definition": {
+            "name": "top_strip",
+            "x_min": -0.33333,
+            "x_max": 2,
+            "y_min": 0.98,
+            "y_max": 1
+          },
+          "nodes": 273,
+          "squared_residual_share": 2.668297045366287e-09
+        },
+        {
+          "name": "aft_boundary_layer",
+          "registered_definition": {
+            "name": "aft_boundary_layer",
+            "x_min": 0.5,
+            "x_max": 2,
+            "y_min": 0,
+            "y_max": 0.05
+          },
+          "nodes": 12298,
+          "squared_residual_share": 0.26583466786069265
+        },
+        {
+          "name": "outer_core",
+          "registered_definition": {
+            "name": "outer_core",
+            "x_min": 0,
+            "x_max": 1.98,
+            "y_min": 0.05,
+            "y_max": 0.98
+          },
+          "nodes": 10958,
+          "squared_residual_share": 6.871510644728196e-10
+        }
+      ]
+    }
+  },
+  "VTU_float32_solution_drift_observation_only": {
+    "passed": true,
+    "rejected_because": [],
+    "relative_L2_by_field": {
+      "Density": 2.7456386817228636e-08,
+      "Momentum_x": 2.262914539264992e-08,
+      "Momentum_y": 2.5300876284893165e-08,
+      "Energy": 1.9200915247724262e-08
+    },
+    "Nu_Tilde_relative_L2_observation": 2.4319003044923307e-08,
+    "density_min": 0.9919809103012085,
+    "pressure_min": 0.7142700195312498,
+    "positive_density_and_pressure": true,
+    "maximum_conservative_relative_L2": 2.7456386817228636e-08
+  },
+  "source_files_sha256_after": {
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\contract.json": "e9d3d0690b6c0bb9b4a18ebbb60d5a55a6451f8cabcf96ce19dd14fa9b6e2bc4",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\prediction_frozen.json": "d9ceb51058cc9f662f557fac833aea5ea632a8b6af1ed73107d1ec93e8ff3cbd",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\fine\\restart_flow_003999.dat": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\meshes\\fine.su2": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\case.cfg": "56cc9236f007585fbf97a6f87fd1fb2829d52aa275e36c4e3f9a6a28d74da5c9",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\history.csv": "2ab5b0d5126058cd9c517ba5051ffc53fb3d011c0b6d7b50dea08186aef9ee50",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\flow_000000.vtu": "8ef21e55aa52457298c3384031696d688b8da708f2fb4d20fb908263ce88de2d",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\residual_probe_20261026_v1\\explicit\\restart_flow_000000.dat": "13978b77ff5bca783c6ae8a5660fcb51423a1b2453a9cab5d98ad13c1d6a723c",
+    "work\\flatplate_20261025\\probe_residual_analysis.py": "68cc7533aaa44cdfaea22040eecf8c29fd84b56713de2e7cc2ca9de5dbd24385",
+    "work\\flatplate_20261025\\test_probe_residual_analysis.py": "a15f8e321fb10e9ca91a52be6cf1fc4e0cbacc653af714e945052c766134d477",
+    "work\\flatplate_20261026\\residual_sources\\manifest.json": "a8fb89acd37c84fb006a109eb45ff14615c32c4a6413011c1c10e290942834b0",
+    "work\\flatplate_20261026\\residual_sources\\CFVMFlowSolverBase.hpp": "ff00be37735ec54fab8969bd1db716ace6a3bb4b8fc68745179ee0e4501d9f65",
+    "work\\flatplate_20261026\\residual_sources\\CScalarSolver.inl": "cb394bab2ccdba970a59ccfa5fd81ae561e110e0a1ddcfd102270f0eb8426112",
+    "work\\flatplate_20261026\\residual_sources\\CSolver.cpp": "339109418c4efe28c65ed91e229b3b41dda747566adcc80e474a91e0f96e3c84",
+    "work\\flatplate_20261026\\residual_sources\\CFlowCompOutput.cpp": "bfdd613fda3f70c11d17f63ecc5e8982741087f13b3a77dc90fe1b523374f182",
+    "work\\flatplate_20261026\\residual_sources\\CConfig.cpp": "d6a00ab96d177ab29274f090292a3806d62452fd1883f54f599756b5eec15c9f",
+    "work\\flatplate_20261026\\residual_sources\\CSysSolve.cpp": "767ff544d658baffcadf3ed2fa9cd2b3a83c0f696ebecd4765704d368cf136b6",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\fine\\prediction_frozen.json": "c2e46094b46bae96daca4dcfb6fc6e7c3d441d7eef79056c501d5c155b59ed31",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\contract.json": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623"
+  },
+  "raw_inputs_unchanged": true,
+  "plot": "outputs\\plots\\residual_probe_20261026.png",
+  "output_files_sha256": {
+    "outputs\\plots\\residual_probe_20261026.png": "e03a0bc535f245af8f56755b042d6d73020cb5df29ed4ac65375fbeac75d91f3",
+    "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\all_owned_nodes.csv": "fe1cd8df6820794b792d5c71b0c4ee065f38e42233f7ad611fc68bb56f581b03",
+    "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\nu_x_marginal.csv": "8bd4a17769676996268d5f52206b9d672be527c356e12030cb914a2a4bf6ecfa",
+    "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\nu_y_marginal.csv": "150afe69b968145e01be9a9feeff19ed99ef70978035e255b740c075367cd032",
+    "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\Rho_x_marginal.csv": "ade4a10b99e37bcabc90d72b1d8104b6e8bb31f1f3b87653ec6a03ca10083d61",
+    "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\Rho_y_marginal.csv": "b9ce9f52ae5e3f7733f832843da8253c6b3d78f8d0dc2febd9a7e65ae475be23"
+  }
+}

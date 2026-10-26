@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-10-26T16:19:42.235685+00:00",
+  "registered_plan": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\next_inner_cap_control_not_run_20261026.json",
+  "registered_plan_sha256": "59031a4e32d12e6f6a4362ca1be6e4636769f4bf9bee579a39f4fc271399f79f",
+  "registered": {
+    "created_utc": "2026-10-26T15:44:57.222262+00:00",
+    "status": "registered_not_run",
+    "scope": "Fine-grid inner cap diagnosis, not another physical fit or automatic extension",
+    "source": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/",
+    "observation": {
+      "final_flow_Krylov_iterations": 40,
+      "final_flow_linear_log_residual": -2.037693767,
+      "inner_tolerance": 0.001,
+      "final500_fraction_at40_cap": 0.066
+    },
+    "hypothesis": "A binding inner cap can restrict adaptive nonlinear progress; one endpoint and cap frequency do not establish causality.",
+    "seed": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\fine\\restart_flow_003999.dat",
+    "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+    "seed_normalization": "FREESTREAM_VEL_EQ_MACH",
+    "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+    "only_config_change": "LINEAR_SOLVER_ITER40→80; both fresh arms use the identical final ND restart and all other options",
+    "per_arm_iterations": 200,
+    "per_arm_seconds": 180,
+    "threads": 4,
+    "effect": {
+      "SI_density_log10_gain_min": 0.3,
+      "SI_SA_log10_worsening_max": 0.1,
+      "total_Krylov_work_ratio_max": 1.5
+    },
+    "physical_gates_unchanged": true,
+    "no_automatic_sweep_extension_or_acceptance": true,
+    "rejected_old_hypotheses_retained": true
+  },
+  "cases": {
+    "cap40": {
+      "config_sha256": "79aabc17fdc3a7a7a7d9c47154b9a3ae8459eb0b62ab3e917267aaf7a7860465",
+      "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee"
+    },
+    "cap80": {
+      "config_sha256": "68bfddf6d3fe880f737d2cd7b5fc08ce13d8f0fdc42e4bbff129798b80bfa667",
+      "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee"
+    }
+  },
+  "only_config_difference": [
+    [
+      "LINEAR_SOLVER_ITER= 40",
+      "LINEAR_SOLVER_ITER= 80"
+    ]
+  ],
+  "same_seed_bytes": true,
+  "same_mesh_and_physics": true,
+  "physical_contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "parent_seal_sha256": "c2e46094b46bae96daca4dcfb6fc6e7c3d441d7eef79056c501d5c155b59ed31",
+  "common_parent_changes": {
+    "ITER": "4000→200",
+    "seed": "parent complete field3999, same ND bytes for both arms"
+  },
+  "adaptive_policy": "Same policy and starting CFL; cap changes may mediate later CFL trajectories. This is not a fixed-CFL cap-only mechanism proof.",
+  "not_blind": true,
+  "no_automatic_extension": true
+}

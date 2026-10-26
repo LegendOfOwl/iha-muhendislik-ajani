@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-10-26T16:37:17.548780+00:00",
+  "not_blind": true,
+  "baseline": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\inner_cap_20261026_v1\\cap40",
+  "baseline_seal_sha256": "84e6b3c70ca99d81afba1d2119d47e95c9eeed468e7258d12ba2d45960febf4b",
+  "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "config_sha256": "d9e289f9c0df52ef976e2c4f5324e4a30f635f23669c77bbfaa68e47f7d0f523",
+  "source_manifest_sha256": "a63ce55c9fa48aa5f17968a084ef4dc5859b84fb8a97b3a9dfcb3c89679e5823",
+  "probe_report_sha256": "24f02c9316cf51204ce60742ea9ffea97c0db947ead9e6db47c83d34664c438d",
+  "observation": "Verified density residual squared share99.626% in x.5..2,y0..0.05; stretched wall-normal cells. Localization is not mesh-error or causal proof.",
+  "hypothesis": "Normal-line implicit coupling may improve the localized convergence at bounded cost; may lose beneficial off-line LU_SGS coupling.",
+  "only_config_change": "LINEAR_SOLVER_PREC LU_SGS→LINELET",
+  "iterations": 200,
+  "seconds": 180,
+  "threads": 4,
+  "effect": {
+    "SI_density_log10_gain_min": 0.3,
+    "SI_SA_log10_worsening_max": 0.1,
+    "total_Krylov_work_ratio_max": 1.5
+  },
+  "activation": "Native preconditioner message plus computed mean line length>1",
+  "source_algorithm_limit": "SU2v8.5 MAX_LINELET_POINTS32; not all193 wall-normal nodes and not full BL resolution.",
+  "same_adaptive_policy_not_trajectory": true,
+  "no_automatic_extension_or_parameter_sweep": true,
+  "old_M6_result": "Prior3D source-M6 LINELET effect failed; not generalized to this measured2D source grid.",
+  "physical_qualification_passed": false
+}

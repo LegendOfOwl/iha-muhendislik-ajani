@@ -65,3 +65,5 @@ Kütlesi bilinmeyen bileşenler: yapı, motor_ve_pervane, enerji_sistemi, aviyon
 - 20261025-011533-2114a3: Resmî TMR ONERA M6 üreteci: taşınabilir derleme, kaynak geometri ve üç sistematik ağ kontrolü; bütçeli native SU2 kaynak vaka sınaması — tamamlandı
 - 20261025-215442-4b9487: NASA TMR kaynak düz plaka ağlarıyla SA-neg uygulama kontrolü: üç küçük ağ, gerçek SU2 ve kaynak Cf/profil karşılaştırması — tamamlandı
 - 20261025-230529-b41cb0: Düz plaka yakınsaması: ön kayıtlı sabit CFL100/10 kontrolü ve kaynaklı neden araştırması — tamamlandı
+- 20261026-182125-8e3de6: Ön kayıtlı iç doğrusal tolerans kontrolü: aynı seed/ağda Krylov işi ve SI kalıntı farkı — tamamlandı
+- 20261026-191942-91103b: İnce kaynak ağda ön kayıtlı iç çözücü40/80 kontrolü ve bağımsız kaynak incelemesi — tamamlandı

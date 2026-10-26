@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-10-26T16:43:47.549035+00:00",
+  "instruction_snapshot": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "events": [
+    {
+      "name": "Inner cap is sufficient to improve at registered cost",
+      "status": "not_supported_in_this_pair"
+    },
+    {
+      "name": "Normal-line preconditioner improves at registered cost",
+      "status": "not_supported_in_this_pair"
+    },
+    {
+      "name": "LE Cf error is the same issue as the dominant density residual",
+      "status": "not_established; spatial observations differ"
+    },
+    {
+      "name": "Localized residual proves local mesh error",
+      "status": "not_established"
+    }
+  ],
+  "confirmed_process_errors": [
+    {
+      "kind": "explicit_auxiliary_semantics",
+      "evidence": "wrapper_freeze_failure.json",
+      "resolved_without_new_native_run": true
+    },
+    {
+      "kind": "guard_recorder_Path_type",
+      "preserved_source": "work/flatplate_20261026/failed_guard_recorder_v1.py",
+      "native_outputs_affected": false
+    }
+  ],
+  "new_prompt_version": false,
+  "new_blind_LLM_test": false,
+  "not_blind": true,
+  "operational_lessons": "Existing L04/L05/L08/L09/R01/R03 cover these events; benchmark values not copied into analyst lessons."
+}

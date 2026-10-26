@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-26T16:28:29.224924+00:00",
+  "purpose": "Check that explicit exported RHS matches cached native RMS/MAX before using spatial residual diagnostics.",
+  "not_blind": true,
+  "not_a_convergence_control": true,
+  "native_folder": "explicit",
+  "seed_path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\reduced_family_20261026_v1\\fine\\restart_flow_003999.dat",
+  "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+  "mesh_path": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\meshes\\fine.su2",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "config_sha256": "56cc9236f007585fbf97a6f87fd1fb2829d52aa275e36c4e3f9a6a28d74da5c9",
+  "source_manifest": "work\\flatplate_20261026\\residual_sources\\manifest.json",
+  "source_manifest_sha256": "a8fb89acd37c84fb006a109eb45ff14615c32c4a6413011c1c10e290942834b0",
+  "parent_seal_sha256": "c2e46094b46bae96daca4dcfb6fc6e7c3d441d7eef79056c501d5c155b59ed31",
+  "physical_contract_sha256": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623",
+  "native_executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+  "native_version": "8.5.0",
+  "parent_changes": {
+    "ITER= 4000": "ITER= 1",
+    "CFL_NUMBER= 100": "CFL_NUMBER= 1e-6",
+    "CFL_ADAPT= YES": "CFL_ADAPT= NO",
+    "TIME_DISCRE_FLOW= EULER_IMPLICIT": "TIME_DISCRE_FLOW= EULER_EXPLICIT",
+    "TIME_DISCRE_TURB= EULER_IMPLICIT": "TIME_DISCRE_TURB= EULER_EXPLICIT",
+    "OUTPUT_WRT_FREQ= (200,200,200,200)": "OUTPUT_WRT_FREQ= (1,1,1,1)",
+    "HISTORY_OUTPUT= (ITER,RMS_RES,AERO_COEFF,LINSOL,CFL_NUMBER)": "HISTORY_OUTPUT= (ITER,RMS_RES,MAX_RES,AERO_COEFF,LINSOL,CFL_NUMBER)",
+    "VOLUME_OUTPUT= (COORDINATES,SOLUTION,PRIMITIVE)": "VOLUME_OUTPUT= (COORDINATES,SOLUTION,PRIMITIVE,RESIDUAL)"
+  },
+  "iterations": 1,
+  "seconds": 60,
+  "threads": 4,
+  "CFL": 1e-06,
+  "MGLEVEL": 0,
+  "no_automatic_retry": true,
+  "gates": {
+    "residual_log10_error_max": 1e-06,
+    "coordinate_mapping_max_m": 2e-07,
+    "conservative_global_relative_drift_max": 2e-06,
+    "expected_points": 52689,
+    "all5_RMS_and_MAX_required": true
+  },
+  "gate_rationale": "Same native RHS exported float32 vs cached double reductions;1e-6log margin exceeds float32 normal rounding and history decimal print. Drift uses per-variable L2 ratio from native double restart, not VTU quantization.",
+  "owned_domain": "Native one-rank OpenMP sourceSU2 mesh has52689 domain points and no halos; owned wall/BC nodes included, no volume weighting.",
+  "drift_definition": "Native restart0 vs seed: each density,momentum_x,momentum_y,energy L2 difference divided by its seed L2. Max of4 must be below bound; nu_tilde separately reported.",
+  "regions": [
+    {
+      "name": "leading_edge",
+      "x_min": -0.02,
+      "x_max": 0.05,
+      "y_min": 0,
+      "y_max": 0.05
+    },
+    {
+      "name": "near_wall",
+      "x_min": 0,
+      "x_max": 2,
+      "y_min": 0,
+      "y_max": 0.02
+    },
+    {
+      "name": "upstream",
+      "x_min": -0.33333,
+      "x_max": 0,
+      "y_min": 0,
+      "y_max": 1
+    },
+    {
+      "name": "inlet_strip",
+      "x_min": -0.33333,
+      "x_max": -0.32333,
+      "y_min": 0,
+      "y_max": 1
+    },
+    {
+      "name": "outlet_strip",
+      "x_min": 1.98,
+      "x_max": 2,
+      "y_min": 0,
+      "y_max": 1
+    },
+    {
+      "name": "top_strip",
+      "x_min": -0.33333,
+      "x_max": 2,
+      "y_min": 0.98,
+      "y_max": 1
+    },
+    {
+      "name": "aft_boundary_layer",
+      "x_min": 0.5,
+      "x_max": 2,
+      "y_min": 0,
+      "y_max": 0.05
+    },
+    {
+      "name": "outer_core",
+      "x_min": 0,
+      "x_max": 1.98,
+      "y_min": 0.05,
+      "y_max": 0.98
+    }
+  ],
+  "regions_overlap": true,
+  "stage_semantics": "Flow RHS precedes flow explicit update; SA RHS follows flow update and precedes SA update. Cached stage observation, not recomputed residual of final output state.",
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false
+}

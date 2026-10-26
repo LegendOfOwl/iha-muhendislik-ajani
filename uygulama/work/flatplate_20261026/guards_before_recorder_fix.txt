@@ -1,0 +1,33 @@
+test_analytic_norm_and_max (test_probe_residual_analysis.ProbeGuards.test_analytic_norm_and_max) ... ok
+test_coordinate_corruption_reject (test_probe_residual_analysis.ProbeGuards.test_coordinate_corruption_reject) ... ok
+test_duplicate_coordinates_reject (test_probe_residual_analysis.ProbeGuards.test_duplicate_coordinates_reject) ... ok
+test_max_mismatch_rejects_even_correct_rms (test_probe_residual_analysis.ProbeGuards.test_max_mismatch_rejects_even_correct_rms) ... ok
+test_missing_component_rejects_every_map (test_probe_residual_analysis.ProbeGuards.test_missing_component_rejects_every_map) ... ok
+test_missing_max_history_rejects (test_probe_residual_analysis.ProbeGuards.test_missing_max_history_rejects) ... ok
+test_native_grouped_vector_names_supported (test_probe_residual_analysis.ProbeGuards.test_native_grouped_vector_names_supported) ... ok
+test_nonfinite_coordinate_reject (test_probe_residual_analysis.ProbeGuards.test_nonfinite_coordinate_reject) ... ok
+test_nonfinite_node_is_not_filtered (test_probe_residual_analysis.ProbeGuards.test_nonfinite_node_is_not_filtered) ... ok
+test_nonpositive_density_rejects (test_probe_residual_analysis.ProbeGuards.test_nonpositive_density_rejects) ... ok
+test_nonpositive_pressure_rejects (test_probe_residual_analysis.ProbeGuards.test_nonpositive_pressure_rejects) ... ok
+test_out_of_plane_coordinate_reject (test_probe_residual_analysis.ProbeGuards.test_out_of_plane_coordinate_reject) ... ok
+test_permutation_is_bijective (test_probe_residual_analysis.ProbeGuards.test_permutation_is_bijective) ... ok
+test_registered_count_required (test_probe_residual_analysis.ProbeGuards.test_registered_count_required) ... ok
+test_reversed_or_unsupported_regions_reject (test_probe_residual_analysis.ProbeGuards.test_reversed_or_unsupported_regions_reject) ... ok
+test_rms_mismatch_rejects_even_correct_max (test_probe_residual_analysis.ProbeGuards.test_rms_mismatch_rejects_even_correct_max) ... ok
+test_sa_drift_separate_from_conservative_gate (test_probe_residual_analysis.ProbeGuards.test_sa_drift_separate_from_conservative_gate) ... ok
+test_squared_share_peak_n90_and_overlapping_regions (test_probe_residual_analysis.ProbeGuards.test_squared_share_peak_n90_and_overlapping_regions) ... ok
+test_tiny_norm_is_numerically_stable (test_probe_residual_analysis.ProbeGuards.test_tiny_norm_is_numerically_stable) ... ok
+test_too_much_native_drift_rejects (test_probe_residual_analysis.ProbeGuards.test_too_much_native_drift_rejects) ... ok
+test_valid_all_five_is_measurement_only (test_probe_residual_analysis.ProbeGuards.test_valid_all_five_is_measurement_only) ... ok
+test_zero_reference_momentum_new_drift_rejects (test_probe_residual_analysis.ProbeGuards.test_zero_reference_momentum_new_drift_rejects) ... ok
+test_zero_vector_is_not_invented_share_map (test_probe_residual_analysis.ProbeGuards.test_zero_vector_is_not_invented_share_map) ... ok
+test_explicit_undefined_auxiliary_is_not_nonlinear_failure (test_explicit_freeze.ExplicitFreezeGuards.test_explicit_undefined_auxiliary_is_not_nonlinear_failure) ... ok
+test_failed_native_is_rejected (test_explicit_freeze.ExplicitFreezeGuards.test_failed_native_is_rejected) ... ok
+test_implicit_may_not_use_explicit_exception (test_explicit_freeze.ExplicitFreezeGuards.test_implicit_may_not_use_explicit_exception) ... ok
+test_missing_component_is_rejected (test_explicit_freeze.ExplicitFreezeGuards.test_missing_component_is_rejected) ... ok
+test_nonfinite_required_residual_is_rejected (test_explicit_freeze.ExplicitFreezeGuards.test_nonfinite_required_residual_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.445s
+
+OK

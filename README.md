@@ -1,15 +1,17 @@
 # İHA mühendislik ajanı
 
-Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve kanıtlı rapor iş akışı. Güncel dağıtım **v0.13.0**. Üniversite düzeyindeki çalışmalar için geliştirilen ve sınanan bir araç bütünüdür; genel mühendislik/CFD yeterliliği tamamlanmış veya uçuşa hazır tasarım değildir.
+Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve kanıtlı rapor iş akışı. Güncel dağıtım **v0.14.0**. Üniversite düzeyindeki çalışmalar için geliştirilen ve sınanan bir araç bütünüdür; genel mühendislik/CFD yeterliliği tamamlanmış veya uçuşa hazır tasarım değildir.
 
 
-## Güncel sürüm —26 Ekim2026
+## Güncel sürüm — 26 Ekim 2026
 
-[**v0.13.0 sonuçları: GitHub’da okunabilir rapor**](raporlar/v0.13.0/README.md) · [Release dosyaları](https://github.com/LegendOfOwl/iha-muhendislik-ajani/releases/tag/v0.13.0) · [Sürümleme politikası](SURUMLEME.md).
+[**v0.14.0 sonuçları: GitHub’da okunabilir rapor**](raporlar/v0.14.0/README.md) · [Release dosyaları](https://github.com/LegendOfOwl/iha-muhendislik-ajani/releases/tag/v0.14.0) · [Sürümleme politikası](SURUMLEME.md).
 
-26 Ekim2026. Aynı seed/ağda iç doğrusal tolerans1e-6→1e-3 testi toplam Krylov iterasyonunu%42,1123 azalttı; SI kalıntı/CD farkları ön kayıtlı sınırlar içinde kaldı. Üç kaynak ağda ayrı ve sonlu bütçeli native devam koşuları yapıldı. Kayıtlı2B sayısal şartların tamamı geçmedi; açık kapılar raporlandı. Genel fizik/M6/İHA kabulü false; GCI null.
+26 Ekim 2026. Aynı ince ağ ve başlangıç alanında iç doğrusal çözüm sınırı 40→80 olarak değiştirildi. 200 adımlık eşli kontrolde yoğunluk kalıntısındaki kazanç 0.09148072 log10, SA kalıntısındaki değişim -0.09553239 log10 ve toplam Krylov işi oranı 1.50447718 oldu. Önceden belirlenen ortak etki kabulü geçmedi; başarısız deneme ve ham çıktılar korundu.
 
-8 maliyet ve12 aile karar kontrolü geçti. Yeni/önceki mühürler, gerçekİHA girdileri ve ön-native kodlar denetlendi. Son işlem çıktı adı gölgelenmesi düzeltildi; ham alanlar korunur. Bu kontrollü kod kıyası deney veya LLM uzmanlığı doğrulaması değildir.
+Kalan kalıntının yerini araştırmak için kaynak koduna dayalı, bir adımlık açık RHS ölçümü çalıştırıldı. Akış ve SA aşamalarının sıralı hesaplandığı bu tanıda beş RMS/MAX eşlemesi geçti: en büyük fark 1.14e-08 log10, native konservatif alan drift’i 4.67e-12. Haritanın yönlendirdiği LINELET kontrolü gerçekten etkinleşti; yoğunluk kazancı -0.03230637 log10, SA kötüleşmesi 0.05537677 log10 ve Krylov işi oranı 2.31080300 ile ortak etkiyi geçemedi. Norm ve konum bulguları ile sınırlamalar ayrıntılı raporda gösterilir. Bu çalışma yeni bir yakınsamış çözüm, deney doğrulaması veya genel CFD yeterliliği değildir. 37 yeni yazılım kontrolü geçti. Genel fizik, RAE2822, ONERA M6 ve gerçek İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
+
+Tam izlenen uygulama/kaynak ağacı Release sayfasındaki otomatik **Source code (zip)** tag arşivinden indirilir. Yeni büyük CFD alanları `analiz-arsivi-*.zip` varlığındadır; dosya kataloğu ve geri yükleme aracı özgün yolları ve SHA256 değerlerini denetler. `KAYNAK_INDIRME.md` indirme açıklamasını, `SHA256SUMS.txt` bu sürümün yüklenen varlık mühürlerini taşır. Önceki sürümlerin varlıkları korunur.
 
 ## Nereden başlanır?
 
@@ -21,13 +23,13 @@ Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve ka
 | [analizler](analizler/) | CFD/FEM/model çalışma kayıtları, büyük alan arşivleri ve tam SHA256 kataloğu |
 | [testler](testler/) | Test kodları, kabul ölçütleri, başarısızlık ve doğrulama kayıtları |
 | [kurulum](kurulum/) | Ortam hazırlığı, mevcut yerel araçlara bağlanma ve arşiv geri yükleme |
-| [surumler](surumler/) | v0.1.0 → v0.13.0 sürüm ve kanıt notları ve dosya manifestleri |
+| [surumler](surumler/) | v0.1.0 → v0.14.0 sürüm ve kanıt notları ve dosya manifestleri |
 
 Hazır Windows ortamında [BASLAT.cmd](BASLAT.cmd), `uygulama/outputs/Muhendislik-Merkezi.exe` açar. EXE başlatıcıdır; Python ortamları ve haricî araçlar yanında gerekir. [Kurulum açıklaması](kurulum/README.md) önce okunmalıdır. Mevcut çalışma klasörünü değiştirmeden ona yerel junction'larla bağlanmak mümkündür.
 
 ## Sürüm geçmişinin anlamı
 
-Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyaları, tarihli çıktılar ve korunmuş başarısız denemelerden **geriye dönük gruplandırılarak** oluşturuldu. Eski tag'ler özgün tarihteki tam çalışan uygulama kopyası değildir. v0.1.0–v0.10.0 bu geriye dönük içe aktarımdır. **v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.** Tam güncel içerik için `main` veya `v0.13.0` kullanın. Git commit/yayın tarihleri bugün oluşturulan arşivin tarihidir; kaynak dosyaların gözlenen değiştirme tarihleri ayrıca katalogdadır.
+Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyaları, tarihli çıktılar ve korunmuş başarısız denemelerden **geriye dönük gruplandırılarak** oluşturuldu. Eski tag'ler özgün tarihteki tam çalışan uygulama kopyası değildir. v0.1.0–v0.10.0 bu geriye dönük içe aktarımdır. **v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.** Tam güncel içerik için `main` veya `v0.14.0` kullanın. Git commit/yayın tarihleri bugün oluşturulan arşivin tarihidir; kaynak dosyaların gözlenen değiştirme tarihleri ayrıca katalogdadır.
 
 | Sürüm | Kanıt grubu |
 |---|---|
@@ -44,6 +46,7 @@ Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyalar�
 | [v0.11.0](surumler/v0.11.0/README.md) | Kaynak TMR M6, düz plaka, güvenilirlik politikası; gerçek artımlı sürüm |
 | [v0.12.0](surumler/v0.12.0/README.md) | 11 yeni CFD kontrolü, Newton–Krylov ve kalıntı birim denetimi |
 | [v0.13.0](surumler/v0.13.0/README.md) | İç çözümde%42 daha az Krylov iterasyonu ve üç kaynak ağda kabul denetimi |
+| [v0.14.0](surumler/v0.14.0/README.md) | İç çözüm sınırı kıyası ve kaynak koduna dayalı kalıntı konum tanısı |
 
 ## Dosyalar ve yeniden üretim
 
@@ -59,7 +62,7 @@ Bütün özgün proje dosyaları `uygulama/work` ve `uygulama/outputs` düzenind
 - RAE2822 ve ONERA M6 genel fizik kabulleri geçmedi. y+ veya kuvvet ekranının tek başına geçmesi bütün CFD doğrulamasını kapatmaz.
 - Gerçek İHA girdileri ile araç yeterlilik örnekleri ayrı tutulur. ANSYS ve OpenFOAM kurulmuş değildir; Fusion yalnız OAuth aşamasında doğrulanmıştır.
 
-[GitHub’da okunabilir güncel sonuçlar](raporlar/v0.13.0/README.md) · [Yerel HTML proje özeti](uygulama/outputs/Proje-Ozeti.html) · [Ajan dersleri](uygulama/outputs/reports/ajan_talimat_gelisimi_20261024.html) · [M6 sonuçları](raporlar/v0.11.0/README.md#onera-m6) · [Üçüncü taraf kaynakları](THIRD_PARTY_NOTICES.md)
+[GitHub’da okunabilir güncel sonuçlar](raporlar/v0.14.0/README.md) · [Yerel HTML proje özeti](uygulama/outputs/Proje-Ozeti.html) · [Ajan dersleri](uygulama/outputs/reports/ajan_talimat_gelisimi_20261024.html) · [M6 sonuçları](raporlar/v0.11.0/README.md#onera-m6) · [Üçüncü taraf kaynakları](THIRD_PARTY_NOTICES.md)
 
 Dosya/arşiv dağıtım sınırları için [GitHub büyük dosya belgeleri](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) ve [Releases belgeleri](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) esas alındı. Başarısız sonuçlar gizlenmedi; eşikler yayın için değiştirilmedi.
 
@@ -69,7 +72,7 @@ Proje sahibi hedefleri, kısıtları, araç tercihlerini ve ilerleme sırasını
 
 ## English summary
 
-A Windows CAD/aerodynamic/CFD workflow with frozen outputs and source provenance. Version0.13.0 reduced total flow+SA Krylov iterations by42.1123% in one preregistered same-seed200-step tolerance control, while keeping residual/CD differences within registered limits. A separate bounded three-source-grid flat-plate follow-up is fully reported, including failed or incomplete gates. General physical/M6/UAV qualification remains false; no universal speedup, GCI or LLM expertise is claimed. Earlier tags through0.10.0 are retrospective evidence groups;0.11.0 onward are genuine incremental releases. Code and reports were developed with substantial Codex assistance.
+A Windows CAD/aerodynamic/CFD workflow with frozen outputs and source provenance. Version 0.14.0 reports a preregistered 40-to-80 inner iteration-cap control: the density residual improved by 0.09148072 log10, while total flow+SA Krylov work increased to 1.50447718 times the baseline. The joint effect gate failed. A source-based one-step explicit RHS probe examines residual localization; its sequential flow and SA stages matched all five RMS/MAX norms within 1.14e-08 log10, with conservative native restart drift at most 4.67e-12. The map-guided LINELET control was active but failed the joint effect gate at 2.31080300 times the baseline Krylov work. All 37 new software checks passed. This probe is not a new converged solution or physical qualification. General physical, RAE2822, M6 and UAV gates remain open, and improved LLM behaviour has not been measured. The complete tracked source/application tree is provided by GitHub’s automatic Source code (zip) tag archive; raw CFD assets are restored using the catalogue and hash-checking restore tool. Prior release assets remain available. Earlier tags through 0.10.0 are retrospective evidence groups; 0.11.0 onward are genuine incremental releases. Code and reports were developed with substantial Codex assistance.
 
 ## EXE ve lisans durumu
 
