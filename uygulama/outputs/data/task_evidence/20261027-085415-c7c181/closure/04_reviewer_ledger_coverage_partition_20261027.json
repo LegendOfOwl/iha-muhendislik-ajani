@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-27T06:27:24.859191+00:00",
+  "instruction_snapshot": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "observations": [
+    "Native graph colors are not individual line IDs",
+    "Measured union7200 of52689 nodes, separate-stage squared residual shares retained",
+    "Default-to-single LU_SGS partition failed preregistered residual/work/time gates"
+  ],
+  "behavioral_risks": [
+    "Confusing source length cap with observed spatial coverage",
+    "Calling fewer additive domains unconditionally stronger or faster",
+    "Treating Euler/M6 paper results as validation of SA-neg flatplate",
+    "Selecting near-threshold diagnostic output as replacement fine-family role"
+  ],
+  "physical_hypotheses": [
+    {
+      "name": "Length cap contributes to incomplete coupling",
+      "status": "unproven"
+    },
+    {
+      "name": "One LU_SGS domain is sufficient at acceptable cost",
+      "status": "not_supported_in_this_pair"
+    }
+  ],
+  "lessons": "ExistingL04/L05/L08/L09/R01/R03 cover these risks; no duplicate prompt rule and no benchmark targets copied to analyst memory",
+  "process_error": {
+    "kind": "generic_test_module_name_import_collision",
+    "retained_failure_log": "work/flatplate_20261027/guard_results_v1_import_collision.txt",
+    "correction": "Use unique test_coverage_partition module name",
+    "native_outputs_affected": false
+  },
+  "new_prompt_version": false,
+  "new_blind_LLM_test": false
+}

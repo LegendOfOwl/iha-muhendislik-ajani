@@ -1,0 +1,53 @@
+{
+  "frozen_utc": "2026-10-27T06:10:23.774184+00:00",
+  "not_blind": true,
+  "contract_sha256": "38be83a586bdb1d592d5b05ecd1c54086223afd6697a6c9721117a10631c1b53",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "matched": {
+    "field_iteration": 199,
+    "terminal_history_iteration": 199,
+    "rms[Rho]": -12.45813723,
+    "rms[RhoU]": -12.88817457,
+    "rms[RhoV]": -14.68728525,
+    "rms[RhoE]": -13.60771076,
+    "rms[nu]": -17.38103373,
+    "CL": -0.0006404626242,
+    "CD": 0.002848053098,
+    "LinSolRes": -3.013647918,
+    "Linear_Solver_Iterations": 21.0,
+    "last100_samples": 100,
+    "CD_last100_range": 2.5899999996255307e-09
+  },
+  "native_status": {
+    "started_utc": "2026-10-27T06:09:18.707218+00:00",
+    "ended_utc": "2026-10-27T06:10:23.766908+00:00",
+    "exit_code": 0,
+    "seconds": 65.04700000002049,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.287994384765625,
+    "budget_s": 240,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "files_sha256": {
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\case.cfg": "f7f2d08928bd725e1b1d730488c9ee33e333ee6ed55f679603d79a6e79ecc43a",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\code_before_native.json": "49df65c53842c4c7c74619bc2823af3b9d6708699ecaeb1b93da865749199e23",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\flow.vtu": "3b5cc176a4c23db85864c569fe11a74cd42f308febfcbac3fc2f78aa4ba9e12e",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\flow_000199.vtu": "3b5cc176a4c23db85864c569fe11a74cd42f308febfcbac3fc2f78aa4ba9e12e",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\history.csv": "37cd700390a73eb92df0ef21f167ef017c418bc371ce96317bd2132a42ae0452",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\restart_flow.dat": "071ad0d427486371c2c8e5967f643c8a08e6407b6d46d6cd14bf0bc00af0b3b2",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\restart_flow_000199.dat": "071ad0d427486371c2c8e5967f643c8a08e6407b6d46d6cd14bf0bc00af0b3b2",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\seed.dat": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\solver.log": "b17260e3ae80c96e0c63eadb4b277c39e52d6c7b99a2753cb34ac87d227e2311",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\solver.process.json": "1f5c0810251b4e31898a07402ed59e6e5883b847a416a6a30c8822a014e39a58",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\solver.status.json": "157362eb1f815d3ca73950961cf5586debf43ee810e346560990829598953001",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\surface_flow.csv": "553fce297323771ac674f88318e28e5235de3c034db4f49964858109d672deec",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\surface_flow.vtu": "4bf837745d496456e285e1a206e4b529886fc564f653e142e725b5e71b44825d",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\surface_flow_000199.csv": "553fce297323771ac674f88318e28e5235de3c034db4f49964858109d672deec",
+    "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4\\surface_flow_000199.vtu": "4bf837745d496456e285e1a206e4b529886fc564f653e142e725b5e71b44825d"
+  }
+}

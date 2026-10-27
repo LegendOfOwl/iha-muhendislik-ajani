@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-27T06:09:17.524283+00:00",
+  "not_blind": true,
+  "source_config": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\inner_cap_20261026_v1\\cap40\\case.cfg",
+  "source_seal_sha256": "84e6b3c70ca99d81afba1d2119d47e95c9eeed468e7258d12ba2d45960febf4b",
+  "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+  "mesh": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\meshes\\fine.su2",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "cases": {
+    "auto4": {
+      "config_sha256": "f7f2d08928bd725e1b1d730488c9ee33e333ee6ed55f679603d79a6e79ecc43a",
+      "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee"
+    },
+    "single": {
+      "config_sha256": "019a02918f8cbfce335f2cc999de6dbe5c551275c667b1373267ac72ac9b1a01",
+      "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee"
+    }
+  },
+  "only_config_difference": [
+    [
+      "LINEAR_SOLVER_PREC_THREADS= 0",
+      "LINEAR_SOLVER_PREC_THREADS= 1"
+    ]
+  ],
+  "source_anchors_sha256": {
+    "work\\flatplate_20261026\\residual_sources\\CConfig.cpp": "d6a00ab96d177ab29274f090292a3806d62452fd1883f54f599756b5eec15c9f",
+    "work\\flatplate_20261026\\linelet_sources\\CSysMatrix.cpp": "337e7ed8aa3891c0af487889647cb3c7bc943014a071389c9a1b8903abfe5d80"
+  },
+  "source_coverage_report_sha256": "46ed63fdd6ec35cd358eeec3a4f56c6852a1af85e2fad1e979cb79418181632b",
+  "hypothesis": "Removing additive LU_SGS thread partitions may recover neglected cross-partition triangular coupling; localization/linelet coverage alone does not prove this cause.",
+  "source_semantics": "CSysMatrix uses maxOpenMPThreads when PREC_THREADS=0, value1 gives one triangular domain; LowerProduct/UpperProduct are bounded by partition begin/end.",
+  "unchanged": "Native-t4 and OMP_NUM_THREADS4, LU_SGS40, inner1e-3, same adaptive policy, source geometry/mesh/physics, fresh sameNDseed. Applies flow andSA.",
+  "common_mesh_path_alias": "Relative filename remap only; mesh bytes unchanged.",
+  "iterations": 200,
+  "comparison_iteration": 199,
+  "seconds_each": 240,
+  "threads_each": 4,
+  "max_working_set_GiB": 2.5,
+  "effect": {
+    "density_gain_min": 0.3,
+    "SA_worsening_max": 0.1,
+    "work_ratio_max": 1.5,
+    "observed_time_ratio_max": 1.5
+  },
+  "cost_rationale": "Serializing triangular sweeps can reduce iteration count but increase elapsed time; both cost gates registered before native runs. Single pair timing only, no general speedup claim.",
+  "no_parameter_sweep_or_automatic_extension": true,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false
+}

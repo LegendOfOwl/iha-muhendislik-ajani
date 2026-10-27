@@ -3,6 +3,12 @@
 v0.1.0–v0.10.0 geriye dönük içe aktarım; v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.
 
 
+## v0.15.0 — 27 Ekim 2026: çizgi kapsamı ve bölünme kontrolü
+
+27 Ekim 2026. Üç yeni native SU2 koşusu tamamlandı. Gerçek LINELET alanında 52689 düğümün 7200 tanesi çizgilerde; önceki doğrulanmış aşama artığının yoğunluk kare toplamının %53.8965’i bu birliğin içinde. Bu konumsal kapsam ölçümüdür; yeni alanın yeniden hesaplanan artığı, nedensellik veya ağ hata bandı değildir.
+
+Aynı kaynak ağ ve başlangıç dosyasıyla, toplam dört iş parçacığı korunarak yalnız LU-SGS önkoşullayıcısının bölünmesi 0→1 değiştirildi. 200 adımlık çiftte yoğunluk kazancı 0.14072006 log10, toplam Krylov işi oranı 1.54404968, gözlenen süre oranı 3.62357987 oldu. Ön kayıtlı ortak etki ve maliyet kabulü geçmedi. 17 yeni yazılım kontrolü geçti; başarısız denemeler ve ham çıktılar korundu. Uzun çizgili kaynak derlemesi sonraki yöntem adayıdır; henüz derlenmedi veya çalıştırılmadı. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
+
 ## v0.14.0 — 26 Ekim 2026: iç çözüm sınırı ve kalıntı tanısı
 
 26 Ekim 2026. Aynı ince ağ ve başlangıç alanında iç doğrusal çözüm sınırı 40→80 olarak değiştirildi. 200 adımlık eşli kontrolde yoğunluk kalıntısındaki kazanç 0.09148072 log10, SA kalıntısındaki değişim -0.09553239 log10 ve toplam Krylov işi oranı 1.50447718 oldu. Önceden belirlenen ortak etki kabulü geçmedi; başarısız deneme ve ham çıktılar korundu.

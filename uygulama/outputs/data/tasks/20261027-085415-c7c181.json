@@ -1,0 +1,132 @@
+{
+  "id": "20261027-085415-c7c181",
+  "request": "LINELET gerçek kapsamı ve bölgesel artıkla kaynaklı sayısal kontrol",
+  "kind": "qualification",
+  "created_utc": "2026-10-27T05:54:15.238090+00:00",
+  "status": "tamamlandı",
+  "phase": "üç koşuluk kapsam ve bölünme paketi kapandı",
+  "acceptance": [
+    "Native çizgi kapsamını gerçek ağ düğümleriyle kanıtla",
+    "Önceki doğrulanmış stageRHS ile konum/kapsamı karşılaştır",
+    "Sonraki tek sayısal değişkeni gerekçe,bütçe,eşikle ön kaydet; fiziksel kabulleri koru"
+  ],
+  "blocked_by": [],
+  "evidence": [
+    {
+      "path": "outputs\\reports\\cfd_cizgi_kapsami_20261027.md",
+      "sha256": "9fdf201e2d27d631681cd5c5bb3e28937b8bf5e993c7dcb048612a3911a512bf",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\00_cfd_cizgi_kapsami_20261027.md",
+      "previous_editorial_sha256": "20ee04022cee8357274bd1f003281d77c2e8d9b41db29adedf14cc80b7bd6729"
+    },
+    {
+      "path": "outputs\\reports\\cfd_cizgi_kapsami_20261027.html",
+      "sha256": "001eb7eea8bdee43b5313f9a58e04c71ac0d0942c6e9652991451831b29554fe",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\01_cfd_cizgi_kapsami_20261027.html",
+      "previous_editorial_sha256": "759ff6c98f2b272972b2a83267b8ddf1dad29680f76945b8755f7e1e64b4d8c6"
+    },
+    {
+      "path": "outputs\\simulations\\flatplate_20261027_v1\\batch_closed.json",
+      "sha256": "058251c13fb16dd24943a470790c2e11afc2ef19f7bf5c055048b0728bfb3414",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\02_batch_closed.json"
+    },
+    {
+      "path": "work\\flatplate_20261027\\next_method_plan_not_run.json",
+      "sha256": "d087704af3058a0e0fa07dfebff3b5da4c62a910a333845eec3c6e6701af67ce",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\03_next_method_plan_not_run.json"
+    },
+    {
+      "path": "outputs\\data\\agent_learning\\reviewer_ledger_coverage_partition_20261027.json",
+      "sha256": "817f5caa17cb6971f497847a78a2176d834c00e5c9778bf66f00a07a625d8b4d",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\04_reviewer_ledger_coverage_partition_20261027.json"
+    },
+    {
+      "path": "outputs\\reports\\linelet_coverage_20261027.json",
+      "sha256": "46ed63fdd6ec35cd358eeec3a4f56c6852a1af85e2fad1e979cb79418181632b",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\05_linelet_coverage_20261027.json"
+    },
+    {
+      "path": "outputs\\reports\\linelet_coverage_audit_20261027.json",
+      "sha256": "5acec7a0aa0fa4836895796f423fd3e0d72132ceb914d3f4004bfbbf3c8817c9",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\06_linelet_coverage_audit_20261027.json"
+    },
+    {
+      "path": "outputs\\reports\\prec_partition_control_20261027.json",
+      "sha256": "94cf67dd7166866aebb25a93149927cb6db8d00d1c7f57f5ec10e2f78728d31b",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\07_prec_partition_control_20261027.json"
+    },
+    {
+      "path": "outputs\\reports\\coverage_partition_guards_20261027.json",
+      "sha256": "7653256efa00adb09a92006e1054354ec03e9eb527865214d55093d21ee4363d",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\08_coverage_partition_guards_20261027.json"
+    },
+    {
+      "path": "outputs\\reports\\coverage_partition_integrity_20261027.json",
+      "sha256": "e0a78b9e78d54501c97df2a9083b37a74976dc47fdc04d3f0045dd25ea1e4095",
+      "archived": "outputs\\data\\task_evidence\\20261027-085415-c7c181\\closure\\09_coverage_partition_integrity_20261027.json"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+  },
+  "project_id": "qualification",
+  "project_manifest": "outputs\\data\\projects\\qualification.json",
+  "project_data_root": "outputs/data/qualification",
+  "project_output_root": "outputs",
+  "project_snapshot": {
+    "id": "qualification",
+    "name": "Araç doğrulama örnekleri",
+    "kind": "qualification",
+    "artifact_root": "outputs",
+    "data_root": "outputs/data/qualification",
+    "created_utc": "2026-10-19T07:06:12.206479+00:00",
+    "active_cad": null
+  },
+  "applied_lesson_ids": [
+    "L04",
+    "L05",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "R01",
+    "R03"
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "coverage_contract": "outputs\\simulations\\flatplate_20261027_v1\\linelet_coverage\\contract.json",
+  "coverage_contract_sha256": "2176f5ef30dbe9ad2619c0615033d106da73a8f7b2f924513b51e0b5f95fa6c9",
+  "partition_contract": "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\contract.json",
+  "partition_contract_sha256": "38be83a586bdb1d592d5b05ecd1c54086223afd6697a6c9721117a10631c1b53",
+  "completed_utc": "2026-10-27T06:27:25.083436+00:00",
+  "physical_qualification_passed": false,
+  "native_membership_accepted": true,
+  "partition_effect_passed": false,
+  "next_method_implemented": false,
+  "editorial_revision": {
+    "created_utc": "2026-10-27T06:35:24.392361+00:00",
+    "changes": [
+      {
+        "path": "outputs\\reports\\cfd_cizgi_kapsami_20261027.md",
+        "before": "20ee04022cee8357274bd1f003281d77c2e8d9b41db29adedf14cc80b7bd6729",
+        "after": "9fdf201e2d27d631681cd5c5bb3e28937b8bf5e993c7dcb048612a3911a512bf"
+      },
+      {
+        "path": "outputs\\reports\\cfd_cizgi_kapsami_20261027.html",
+        "before": "759ff6c98f2b272972b2a83267b8ddf1dad29680f76945b8755f7e1e64b4d8c6",
+        "after": "001eb7eea8bdee43b5313f9a58e04c71ac0d0942c6e9652991451831b29554fe"
+      }
+    ],
+    "native_or_numerical_results_changed": false
+  }
+}

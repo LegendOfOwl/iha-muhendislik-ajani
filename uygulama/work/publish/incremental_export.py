@@ -5,10 +5,10 @@ from collections import Counter
 import os,json,hashlib,zipfile,shutil,subprocess
 from build_export import ROOT,DEST,STATE,ASSETS,URL,digest,dump,excluded,is_bulk,secret_findings
 
-VERSION='v0.14.0'
+VERSION='v0.15.0'
 RUN=STATE/VERSION
 PLAN=RUN/'plan.json'
-BASE_HEAD='b7b0850cb292762de776c68598426e43de692596'
+BASE_HEAD='d6eb54a79d2c6eec7e4f54c977561e0f7cd14fed'
 def now():return datetime.now(timezone.utc).isoformat()
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 

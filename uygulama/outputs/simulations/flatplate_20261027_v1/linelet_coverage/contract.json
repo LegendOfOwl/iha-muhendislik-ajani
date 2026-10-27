@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-27T05:58:43.187018+00:00",
+  "not_blind": true,
+  "purpose": "Native static linelet membership vs separately verified sequential-stage nonlinear RHS; no convergence claim",
+  "config_sha256": "0b3fc1fbea3c5679f0f4a65f424b6782a6a959077c5f429c00687c6c64462403",
+  "seed_sha256": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+  "mesh": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\meshes\\fine.su2",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "sources_manifest_sha256": "90dddb28f84bc9aa71e056c31519e33185603c388298b0f2385e8043743132c3",
+  "source_probe_report_sha256": "24f02c9316cf51204ce60742ea9ffea97c0db947ead9e6db47c83d34664c438d",
+  "source_probe_csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\all_owned_nodes.csv",
+  "source_probe_csv_sha256": "fe1cd8df6820794b792d5c71b0c4ee065f38e42233f7ad611fc68bb56f581b03",
+  "changes_from_parent": {
+    "ITER= 200": "ITER= 1",
+    "MESH_FILENAME= ../../meshes/fine.su2": "MESH_FILENAME= ../../../flatplate_SAneg_20261025_v1/meshes/fine.su2",
+    "OUTPUT_WRT_FREQ= (200,200,200,200)": "OUTPUT_WRT_FREQ= (1,1,1,1)",
+    "VOLUME_OUTPUT= (COORDINATES,SOLUTION,PRIMITIVE)": "VOLUME_OUTPUT= (COORDINATES,SOLUTION,PRIMITIVE,LINELET)"
+  },
+  "source_semantics": "CFVMOutput loads geometry.GetLineletInfo(config).lineletColor; zero means no linelet, positive integers are graph colors, not individual line IDs.",
+  "gates": {
+    "expected_points": 52689,
+    "coordinate_mapping_max_m": 2e-07,
+    "finite_nonnegative_integer_colors": true,
+    "positive_membership_required": true
+  },
+  "iterations": 1,
+  "seconds": 60,
+  "threads": 4,
+  "physical_conditions_unchanged": true,
+  "physical_qualification_passed": false
+}

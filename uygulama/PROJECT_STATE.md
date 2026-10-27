@@ -235,3 +235,18 @@ Kurulum/araç entegrasyonu ve son model araştırması/yetenek raporu görev kay
 - Konuma dayalı tekLINELET kolu nativeortalama32 noktalı lineletlerle gerçekten çalıştı; gain−0,03230637log/Krylov2,310803 ile başarısız. Kaynak32noktalı sınır tüm193normalnoktayı kapsamaz. Eski3Dsonucu genellenmedi. Yeni tarama/otomatik uzatma yok.
 - ExplicitLinSolRes−inf yardımcı sütunu genel mühürleyicide hata verdi; özgün kayıt korundu, aynı completednativeişi yeniden koşmadan explicit null-semantiğiyle mühürlendi. Testkayıtçısının Pathhatası da korundu/düzeltildi.9+28=37yazılım kontrolü geçti. 61 yeni ham/31 ön-nativekod/632 eskihash doğrulandı; gerçekİHA3girdisi v0.13 ile aynı.
 - Rapor outputs/reports/cfd_kalan_artik_20261026.html. Eski fine3999 rolü/üç-ağ minimum ve genelM6/RAE/VLM/İHA kabulü false,GCI null. Yeni körLLM/promptuzmanlığı ölçülmedi.
+
+
+## 26 Ekim: v0.14.0 yayın doğrulandı
+
+- Public main/tag d6eb54a79d2c6eec7e4f54c977561e0f7cd14fed;14 sürüm/33 varlık. Dört yeni varlığın sunucu SHA256/boyutu eşleşti. Önceki13 sürüm/29 varlık ve26 eski tag referansı değişmedi.6192 kaynak blobu,14 restore kontrolü,21 gerçek ham hedef yolu ve47 belge bağlantısı denetlendi; yayın deposu temiz.
+- Tam takipli uygulama/kaynak için otomatik GitHubSourcecodeZIP kullanılır; aynı eski kaynakların253MB kopyası tekrar yüklenmedi. Yeni27,7MiBham arşiv+indirme açıklaması+SHA listesi ve SU2 lisansının özgün kopyası Release dosyalarıdır. Proje koduna yeni lisans atanmadı.
+- Makbuz outputs/reports/github_yayini_v0.14.0.md; güncel durum work/publish/github_publication_state.json. Kaynak lisansının aynıbytesyerelkopyası work/flatplate_20261026/third_party altında sonraki artımlı yayına hazır; bu ve son metadata raporları sonraki katalogda alınır. Genel fizik/M6/LLM kabulü değişmedi.
+
+
+## 27 Ekim: gerçek LINELET kapsamı ve tek bölge kontrolü
+
+- Görev20261027-085415-c7c181:3yeni nativeSU2 koşusu. NativeLINELET alanı ile7200/52689düğüm (%13,6651),ymax53,1µm ölçüldü. Eski doğrulanmış sıralı aşamaRHS yoğunluk kare payının%53,8965'i kapsandı; SA%0,014798. Renkler çizgiID değil, yeniimplicit alanın yeniden hesaplanan artığı değil; nedensellik/ağ hata bandı yok.
+- Kaynakla gerekçeli PREC_THREADS0→1 tek değişkeni, toplam-t4 korunarak200adım/240s iki taze kolda sınandı. Yoğunluk kazancı0,14072006log<0,3; SA kötüleşmesi−0,18100537log; Krylov6924→10691,oran1,54404968>1,5; gözlenen süre65,047→235,703s,oran3,62357987>1,5. Ortak etki false, genel hızlanma iddiası yok.
+- İki alan/geçmiş199 eşleşti. Tek bölge SIyoğunluk−9,93470529,−10 hedefini geçmez. Eski fine3999 rolü/fizik/M6/RAE/VLM/İHA kabulleri false,GCI null.17yeni kod karşı örneği geçti;45 yeni ham/21 ön-nativekod/693 eski hash ve gerçekİHA3girdi doğrulandı.
+- Rapor outputs/reports/cfd_cizgi_kapsami_20261027.html. Literatür Euler/Cart3D ile SA-negRANS kapsamını ayırır; arXiv artık yumuşatması nativeNK diye sunulmadı. Uzun çizgili kaynak derlemesi sonraki aday, önce değişmemişbinarykontrolü gerekli; henüz derlenmedi/çalışmadı. Yeni körLLM/promptuzmanlığı ölçülmedi.

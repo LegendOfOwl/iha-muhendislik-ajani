@@ -1,0 +1,116 @@
+{
+  "checked_utc": "2026-10-27T06:27:23.112740+00:00",
+  "new_native_runs": [
+    {
+      "folder": "outputs\\simulations\\flatplate_20261027_v1\\linelet_coverage\\native",
+      "seal_sha256": "1198f76f372800e8136b871b4563e6fd73df13918d69f1883c5da795f4a05e85",
+      "native_status": {
+        "started_utc": "2026-10-27T05:58:44.578466+00:00",
+        "ended_utc": "2026-10-27T05:58:46.139415+00:00",
+        "exit_code": 0,
+        "seconds": 1.5630000000237487,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.293609619140625,
+        "budget_s": 60,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "matched": {
+        "field_iteration": 0,
+        "terminal_history_iteration": 0,
+        "rms[Rho]": -12.38121851,
+        "rms[RhoU]": -12.7876024,
+        "rms[RhoV]": -14.40020281,
+        "rms[RhoE]": -13.45077817,
+        "rms[nu]": -17.27299216,
+        "CL": -0.0006404588298,
+        "CD": 0.002848059115,
+        "LinSolRes": -0.9487828963,
+        "Linear_Solver_Iterations": 40.0,
+        "last100_samples": 1,
+        "CD_last100_range": 0.0
+      }
+    },
+    {
+      "folder": "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\auto4",
+      "seal_sha256": "0802349b922ee9bcc5d715cbae7d625949a3ff2f59b7e40a4e541d3acd0b7b9d",
+      "native_status": {
+        "started_utc": "2026-10-27T06:09:18.707218+00:00",
+        "ended_utc": "2026-10-27T06:10:23.766908+00:00",
+        "exit_code": 0,
+        "seconds": 65.04700000002049,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.287994384765625,
+        "budget_s": 240,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "matched": {
+        "field_iteration": 199,
+        "terminal_history_iteration": 199,
+        "rms[Rho]": -12.45813723,
+        "rms[RhoU]": -12.88817457,
+        "rms[RhoV]": -14.68728525,
+        "rms[RhoE]": -13.60771076,
+        "rms[nu]": -17.38103373,
+        "CL": -0.0006404626242,
+        "CD": 0.002848053098,
+        "LinSolRes": -3.013647918,
+        "Linear_Solver_Iterations": 21.0,
+        "last100_samples": 100,
+        "CD_last100_range": 2.5899999996255307e-09
+      }
+    },
+    {
+      "folder": "outputs\\simulations\\flatplate_20261027_v1\\prec_partition\\single",
+      "seal_sha256": "7d31c1c8f8a53fa43db74a873acfbfaf2eb0be107db46ee35e7e9c5fe99e2f4c",
+      "native_status": {
+        "started_utc": "2026-10-27T06:12:06.167082+00:00",
+        "ended_utc": "2026-10-27T06:16:01.868585+00:00",
+        "exit_code": 0,
+        "seconds": 235.70300000003772,
+        "stop_reason": null,
+        "peak_working_set_GiB": 0.2852134704589844,
+        "budget_s": 240,
+        "command": [
+          "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+          "case.cfg",
+          "-t",
+          "4"
+        ]
+      },
+      "matched": {
+        "field_iteration": 199,
+        "terminal_history_iteration": 199,
+        "rms[Rho]": -12.59885729,
+        "rms[RhoU]": -13.08472972,
+        "rms[RhoV]": -14.58921587,
+        "rms[RhoE]": -13.72536307,
+        "rms[nu]": -17.5620391,
+        "CL": -0.0006404695876,
+        "CD": 0.002848045076,
+        "LinSolRes": -2.94627674,
+        "Linear_Solver_Iterations": 40.0,
+        "last100_samples": 100,
+        "CD_last100_range": 8.22099999967657e-09
+      }
+    }
+  ],
+  "new_raw_hash_records_verified": 45,
+  "old_raw_hash_records_verified": 693,
+  "pre_native_code_hash_records_verified": 21,
+  "real_UAV_inputs_unchanged_vs_v0_14": {
+    "outputs\\data\\project\\conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+    "outputs\\data\\project\\mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+    "outputs\\data\\project\\mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+  },
+  "source_manifest_sha256": "90dddb28f84bc9aa71e056c31519e33185603c388298b0f2385e8043743132c3"
+}

@@ -1,0 +1,36 @@
+{
+  "reviewed_utc": "2026-10-27T05:59:10.429610+00:00",
+  "contract_sha256": "2176f5ef30dbe9ad2619c0615033d106da73a8f7b2f924513b51e0b5f95fa6c9",
+  "mapping": {
+    "passed": true,
+    "rejected_because": [],
+    "maximum_distance_m": 6.509348286129906e-08,
+    "reference_points": 52689,
+    "observed_points": 52689,
+    "unique_matches": 52689
+  },
+  "native_membership_accepted": true,
+  "nodes": 52689,
+  "linelet_nodes": 7200,
+  "linelet_node_fraction": 0.1366509138529864,
+  "unique_positive_graph_colors": [
+    1,
+    2,
+    3
+  ],
+  "covered_y_extent_m": [
+    0.0,
+    5.30657880686e-05
+  ],
+  "covered_Rho_squared_share": 0.5389652682624415,
+  "covered_nu_squared_share": 0.00014797887542125407,
+  "uncovered_Rho_squared_share": 0.46103473173755855,
+  "uncovered_nu_squared_share": 0.9998520211245789,
+  "data_csv": "outputs\\data\\qualification\\flatplate_20261027\\linelet_coverage\\all_nodes.csv",
+  "data_csv_sha256": "3404e4f713967aae9043df9ae3df908426d91f11ac9b62ea6c64402290c375e0",
+  "source_RHS": "Verified explicit sequential-stage snapshot from original fine3999; not recomputed from this new implicit field.",
+  "colors_are_not_individual_line_IDs": true,
+  "coverage_is_not_causal_or_mesh_error_proof": true,
+  "physical_qualification_passed": false,
+  "plot": "outputs\\plots\\linelet_coverage_20261027.png"
+}

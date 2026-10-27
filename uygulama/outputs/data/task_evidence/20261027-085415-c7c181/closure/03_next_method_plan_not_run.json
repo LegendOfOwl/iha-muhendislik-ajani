@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-27T06:27:24.857016+00:00",
+  "status": "proposed_not_built_not_run",
+  "basis": [
+    "Measured native linelet coverage leaves46.1% density squared RHS outside",
+    "A single LU_SGS partition failed registered benefit and cost gates",
+    "Longer lines retain line-implicit Jacobi semantics; no proof they fix missing transverse coupling"
+  ],
+  "next_method": "Controlled source-build feasibility, then one length-cap mechanism test; no parameter sweep",
+  "required_order": [
+    "Pin pristineSU2v8.5.0 source/compiler/dependencies/build options; retain LGPL notice and source hashes",
+    "Reproduce unchanged32-point binary result on the same source grid and original fine3999 seed before attributing any modified-binary difference to the cap",
+    "Register reproducibility limits, activation checks, matched200-step comparison and both timing/Krylov budgets before native runs",
+    "If the build-control passes, modify only MAX_LINELET_POINTS32->256;193 normal nodes on this grid do not imply the algorithm follows a full normal column",
+    "Export native LINELET union again; require increased actual coverage, not a claim from the constant alone",
+    "Freeze all successful/failed predictions; compare density/SA effect and observed elapsed cost; never promote into old three-grid family"
+  ],
+  "not_implemented": [
+    "No modifiedSU2binary",
+    "No full-line/SGS hybrid",
+    "No arXiv residual-smoothing source term"
+  ],
+  "physical_qualification_passed": false,
+  "sources": [
+    "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/Common/include/geometry/CGeometry.hpp",
+    "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/Common/src/geometry/CGeometry.cpp",
+    "https://web.stanford.edu/group/ctr/ResBriefs/2011/26_palacios.pdf",
+    "https://arxiv.org/abs/1805.03756"
+  ]
+}
