@@ -1,0 +1,62 @@
+{
+  "recorded_utc": "2026-10-27T13:42:21.901766+00:00",
+  "scope": "Independent read-only source, decision and registered-method review. No CFD or build executed.",
+  "files_reviewed_sha256": {
+    "work/su2_build_20261027/method_design.json": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44",
+    "work/su2_build_20261027/decisions.py": "908250abd83f4dd775fe1d44e70525656e918de8172b9f286d269f67fc0c7327",
+    "work/su2_build_20261027/test_linecap_decisions.py": "4adef0573fc68965a20ce8a0e8f5dc8f53f1277c9886a9c7994d0bfcc19a5256",
+    "work/su2_build_20261027/accepted_archives.json": "dd25b4d6935ef62c49c1ba436e9cb65d42132ca4bd3748961ec29c5aeeb469c3",
+    "work/su2_build_20261027/setup_plan.json": "b167456424fddde9839222db04a5ee848d432ea6f32ad2bb5c3dad698d6ed34f",
+    "tools/su2-build/v8.5.0/source/Common/include/geometry/CGeometry.hpp": "7e2688026c886ff2586cd2ec115b9cc4487ed512c6cdf1234a31c29b83cde54f",
+    "tools/su2-build/v8.5.0/source/Common/src/geometry/CGeometry.cpp": "af479d996b6493cb2ac11c031b17f99511806ac94afd2d7ee05c5a4f6d54e79f",
+    "tools/su2-build/v8.5.0/source/Common/src/linear_algebra/CSysMatrix.cpp": "337e7ed8aa3891c0af487889647cb3c7bc943014a071389c9a1b8903abfe5d80",
+    "tools/su2-build/v8.5.0/source/SU2_CFD/src/output/CFVMOutput.cpp": "eb755a656abf95aa2774bd79930666523d2febc7936eef8c954bf1b2611489ed",
+    "tools/su2-build/v8.5.0/source/meson.build": "719c13c3fbc06f332532df948173ef9255d7a7b72515e757a82d9d583aabe6c8",
+    "tools/su2-build/v8.5.0/source/meson_options.txt": "a9abca79e9e8b93d0ba371287105265bf401f09b07435ff5607da38e84c1d083",
+    "tools/su2-build/v8.5.0/source/meson_scripts/init.py": "695719599109d1a00a908743e26cea3882186487b67a0f18f615959bc6c2b1ea",
+    "tools/su2-build/v8.5.0/source/.github/workflows/release-management.yml": "019f62cbf146e732145c8ed0828357a162175ebd15ae22241c67b122e2156d35",
+    "outputs/simulations/flatplate_SAneg_20261025_v1/linelet_20261026_v1/linelet/case.cfg": "d9e289f9c0df52ef976e2c4f5324e4a30f635f23669c77bbfaa68e47f7d0f523"
+  },
+  "material_blockers_found": [],
+  "observations": [
+    "The registered .03 log10,1e-8 CD and5 percent Krylov reproduction tolerances are explicitly local operational screens. They are not physical accuracy bounds.",
+    "The decision helper requires all five RMS curves for200 samples, exact native membership, bijective52689-node mapping, matched final field/history and stable final CD window before reproduction can pass.",
+    "The effect gate binds reproduction to the exact build32 payload and contract; it independently requires registered density/SA/cost criteria, increased member count and increased coverage of the same fixed old-stage RHS.",
+    "The helper consumes authenticated caller evidence and does not prove archive, binary, native field or configuration provenance by itself. Actual extraction, build and payload records remain required; none is inferred by this review.",
+    "The source contains exactly3 MAX_LINELET_POINTS occurrences:32 declaration, geometry line-growth stopping condition, and per-thread work-vector sizing. Isotropy, direction and valid-neighbor stopping conditions remain unchanged by a cap-only patch.",
+    "Native Linelet output is a graph color, with0 outside membership. It is not a unique line identifier. The decision schema intentionally compares Boolean masks.",
+    "Pinned Eigen and MEL commit identities in accepted_archives match upstream meson_scripts/init.py.",
+    "The Meson source matches the planned C++17,Haswell,OpenMP-enabled,MPI-disabled build and has optional TecIO/CGNS switches. The upstream WIN64OMP workflow usesHaswell andOpenMP; local GNU16/UCRT remains different from the installed official binary toolchain.",
+    "Adding LINELET to VOLUME_OUTPUT in all3 fresh runs is documented; the original200-step field without Linelet output is not silently substituted."
+  ],
+  "archive_byte_verification": [
+    {
+      "path": "tools\\su2-build\\v8.5.0\\SU2-source-transport3.tar.gz.partial",
+      "sha256_matches_record": true,
+      "root_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+      "upstream_files_compared": 2542,
+      "missing_files": 0,
+      "differing_files": 0
+    },
+    {
+      "path": "tools\\su2-build\\v8.5.0\\Eigen-transport3.tar.gz.partial",
+      "sha256_matches_record": true,
+      "root_commit": "d71c30c47858effcbd39967097a2d99ee48db464",
+      "upstream_files_compared": 1806,
+      "missing_files": 0,
+      "differing_files": 0
+    },
+    {
+      "path": "tools\\su2-build\\v8.5.0\\MEL-transport4.tar.gz.partial",
+      "sha256_matches_record": true,
+      "root_commit": "46205ab019e5224559091375a6d71aabae6bc5b9",
+      "upstream_files_compared": 9,
+      "missing_files": 0,
+      "differing_files": 0
+    }
+  ],
+  "qualification_decision_made": false,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false
+}

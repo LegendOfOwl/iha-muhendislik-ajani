@@ -1,0 +1,67 @@
+{
+  "label": "p32b",
+  "variant": "pristine32",
+  "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+  "cap": 32,
+  "source_tree_sha256": "9da2580a4529285e9e1c52ddac9aa39f91b593ddcc822fb8e6a385db5b51a689",
+  "pristine_archive_tree_sha256": "40fd271c28fddde1fb845231070a06159a3456fe3e946f0c0ed5f0d06d5cbcbc",
+  "dependency_tree_sha256": {
+    "eigen": "aa47956351140cdb175ef15130e007b4518b828eb7b231354351d84b78fc7a2b",
+    "mel": "742a680db02cce20e5b6d2a54f091361aa1ab5bc5d0fd0bea5598d0f44976166"
+  },
+  "compiler_manifest_sha256": "aba35400adeaa04c532bbd0638589235c9495a514bcd2788df2845235e0e4cf3",
+  "runtime_manifest_sha256": "54c11cdfa5d0c906ca757df4d774772618f239b3c6889fdfe6b2077704f2ceb7",
+  "source_hash_definition": "All copied upstream files plus exact Eigen/MEL files, byte hashes and sizes; archive_origin.json and generated su2preconfig.timestamp excluded",
+  "physical_qualification_passed": false,
+  "succeeded": false,
+  "phases": [
+    {
+      "label": "p32b-preconfigure",
+      "prepared_utc": "2026-10-27T17:56:09.169010+00:00",
+      "ended_utc": "2026-10-27T17:56:09.171673+00:00",
+      "command": [
+        "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p32b\\source\\preconfigure.py",
+        "--no-codi",
+        "--no-medi",
+        "--no-opdi",
+        "--no-mpp",
+        "--no-coolprop",
+        "--no-mel",
+        "--no-fado",
+        "--no-mlpcpp",
+        "--no-eigen"
+      ],
+      "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p32b\\source",
+      "build_started": false,
+      "assigned_to_private_job": false,
+      "exit_code": null,
+      "stop_reason": "system_available_memory_below_minimum_before_launch",
+      "runner_error": null,
+      "seconds": 0.0,
+      "budget_s": 1800.0,
+      "peak_process_tree_working_set_GiB": 0.0,
+      "minimum_system_available_GiB": 0.8042335510253906,
+      "sample_count": 0,
+      "sampling_seconds": 0.1,
+      "observed_process_count": 0,
+      "job_termination_requested": false,
+      "requested_termination_exit_code": null,
+      "job_active_pids_before_final_close": null,
+      "all_observed_processes_confirmed_exited": true,
+      "cleanup_confirmed": true,
+      "cleanup_errors": [],
+      "succeeded": false,
+      "working_set_policy": "Sum of current working sets of all job-member processes sampled every0.1s; shared pages may count in multiple processes; transient peaks between samples are not guaranteed observed.",
+      "physical_qualification_passed": false
+    }
+  ],
+  "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "contract_sha256": "efd7b99637d434cc16aafca506ef3d7c1a07d71221cc5efb169de072da4f637b",
+  "error": {
+    "type": "ValueError",
+    "message": "Native phase failed: preconfigure"
+  },
+  "seconds": 0.062000000034458935
+}

@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-10-27T17:53:27.743262+00:00",
+  "old_build": "p32a",
+  "old_status_sha256": "2254c6dafe2c55ce6d9adbbfb3e7fb152fb947e0c8b33134885fec994867a53e",
+  "old_log_sha256": "01a0154b5b8a05e586118f1e289fc7ee25330c3a3eeb87ea9bc3ed954afd8a33",
+  "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+  "observed_error": "CFlowTractionInterface.cpp:34 cannot find quoted ../../../Common/include/interface_interpolation/CInterpolator.hpp",
+  "source_cpp_sha256": "8f66c8c07c829a78088ad4ee1658eca3685a53ad389a91d6e75540836ba41c3f",
+  "header_sha256": "e67561f2bba32493e8f2ed8bd12061a2bf5d831fd3490e7b4ee3cb1c1709b9d6",
+  "failed_direct_resolution": "tools\\su2-build\\v8.5.0\\source\\SU2_CFD\\Common\\include\\interface_interpolation\\CInterpolator.hpp",
+  "additional_search_resolution": "tools\\su2-build\\v8.5.0\\source\\Common\\include\\interface_interpolation\\CInterpolator.hpp",
+  "common_build_option": {
+    "cpp_args": [
+      "-I../source/SU2_CFD/src/interfaces"
+    ]
+  },
+  "scope": "Additional search directory in both pristine32 and cap256; upstream source bytes unchanged. Native reproduction still mandatory.",
+  "diagnosis": "This quoted relative include uses the interfaces-depth path from a file one level deeper in interfaces/fsi; no matching include search directory was in the failed compile command.",
+  "not_a_solver_physics_change": true,
+  "source_file_patch_applied": false,
+  "global_settings_changed": false,
+  "method_design_sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44",
+  "CFD_already_run": false,
+  "physical_qualification_passed": false
+}

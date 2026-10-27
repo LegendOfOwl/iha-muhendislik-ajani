@@ -1,0 +1,110 @@
+{
+  "label": "compiler_preflight_v1",
+  "prepared_utc": "2026-10-27T13:15:25.054181+00:00",
+  "command": [
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\fortran_msys2\\ucrt64\\bin\\g++.exe",
+    "-std=c++17",
+    "-O3",
+    "-march=haswell",
+    "-fopenmp",
+    "-ffast-math",
+    "-fno-finite-math-only",
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027\\omp_preflight.cpp",
+    "-o",
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027\\omp_preflight.exe"
+  ],
+  "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027",
+  "environment_sha256": "e8c06f6e2101a3013bbab3affe3862f4e31240cfd1a50a0de9c09172ccfdf1c2",
+  "runner_sha256": "9560c7ebace49031cced0bc2cf733268395b4c4fda20429d9f97554ada1b46e6",
+  "created_suspended": true,
+  "assigned_to_private_job": true,
+  "resumed": true,
+  "job_policy": "JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE; job handle is not inherited",
+  "resource_policy": {
+    "seconds": 30,
+    "max_tree_working_set_GiB": 3,
+    "min_system_available_GiB": 1,
+    "sampling_seconds": 0.1
+  },
+  "observed_processes": [
+    {
+      "pid": 39580,
+      "creation_filetime_100ns": 134375805250567076,
+      "creation_time_unix": 1793106925.0567074,
+      "creation_time_utc": "2026-10-27T13:15:25.056707+00:00",
+      "role": "root",
+      "first_observed_utc": "2026-10-27T13:15:25.062120+00:00",
+      "sampled_peak_working_set_bytes": 6955008,
+      "exit_code": 1,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 23564,
+      "creation_filetime_100ns": 134375805250649553,
+      "creation_time_unix": 1793106925.0649548,
+      "creation_time_utc": "2026-10-27T13:15:25.064955+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:15:25.164275+00:00",
+      "sampled_peak_working_set_bytes": 7933952,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 30404,
+      "creation_filetime_100ns": 134375805273113785,
+      "creation_time_unix": 1793106927.3113785,
+      "creation_time_utc": "2026-10-27T13:15:27.311378+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:15:27.378837+00:00",
+      "sampled_peak_working_set_bytes": 72507392,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 40472,
+      "creation_filetime_100ns": 134375805293921415,
+      "creation_time_unix": 1793106929.3921413,
+      "creation_time_utc": "2026-10-27T13:15:29.392141+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:15:29.491854+00:00",
+      "sampled_peak_working_set_bytes": 4169728,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 25668,
+      "creation_filetime_100ns": 134375805296055705,
+      "creation_time_unix": 1793106929.6055717,
+      "creation_time_utc": "2026-10-27T13:15:29.605572+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:15:29.693345+00:00",
+      "sampled_peak_working_set_bytes": 6176768,
+      "exit_code": 1,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 21008,
+      "creation_filetime_100ns": 134375805296769385,
+      "creation_time_unix": 1793106929.676939,
+      "creation_time_utc": "2026-10-27T13:15:29.676939+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:15:29.693345+00:00",
+      "sampled_peak_working_set_bytes": 14757888,
+      "exit_code": 1,
+      "confirmed_exited": true
+    }
+  ],
+  "unobserved_exited_before_open": 0,
+  "root_identity": {
+    "pid": 39580,
+    "creation_filetime_100ns": 134375805250567076,
+    "creation_time_unix": 1793106925.0567074,
+    "creation_time_utc": "2026-10-27T13:15:25.056707+00:00",
+    "role": "root",
+    "first_observed_utc": "2026-10-27T13:15:25.062120+00:00",
+    "sampled_peak_working_set_bytes": 0,
+    "exit_code": null
+  },
+  "resumed_utc": "2026-10-27T13:15:25.063155+00:00",
+  "finished_utc": "2026-10-27T13:15:29.994928+00:00"
+}

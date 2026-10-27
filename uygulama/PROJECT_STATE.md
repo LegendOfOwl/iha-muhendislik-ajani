@@ -250,3 +250,16 @@ Kurulum/araç entegrasyonu ve son model araştırması/yetenek raporu görev kay
 - Kaynakla gerekçeli PREC_THREADS0→1 tek değişkeni, toplam-t4 korunarak200adım/240s iki taze kolda sınandı. Yoğunluk kazancı0,14072006log<0,3; SA kötüleşmesi−0,18100537log; Krylov6924→10691,oran1,54404968>1,5; gözlenen süre65,047→235,703s,oran3,62357987>1,5. Ortak etki false, genel hızlanma iddiası yok.
 - İki alan/geçmiş199 eşleşti. Tek bölge SIyoğunluk−9,93470529,−10 hedefini geçmez. Eski fine3999 rolü/fizik/M6/RAE/VLM/İHA kabulleri false,GCI null.17yeni kod karşı örneği geçti;45 yeni ham/21 ön-nativekod/693 eski hash ve gerçekİHA3girdi doğrulandı.
 - Rapor outputs/reports/cfd_cizgi_kapsami_20261027.html. Literatür Euler/Cart3D ile SA-negRANS kapsamını ayırır; arXiv artık yumuşatması nativeNK diye sunulmadı. Uzun çizgili kaynak derlemesi sonraki aday, önce değişmemişbinarykontrolü gerekli; henüz derlenmedi/çalışmadı. Yeni körLLM/promptuzmanlığı ölçülmedi.
+
+
+## 27 Ekim: v0.15.0 yayın doğrulandı
+
+- Public main/tag c4cbc871cb7c8dbfddd78782dcc71d67d0d8f821;15 sürüm/36 varlık. Üç yeni varlığın sunucu SHA256/boyutu eşleşti. Önceki14 sürüm/33 varlık/28 tag referansı değişmedi.6307 kaynak blobu,14 restore kontrolü,16 gerçek ham hedef yolu,49 bağlantı ve6405 dosya/gizli bilgi taraması denetlendi; yerel çalışma ağacı ve tracking ref eşleşiyor.
+- Yerel Git DNS/TLS kesintisi sonrası resmî REST API ile aynı dosya ağacı/commit/annotatedtag SHA'sı korunarak aktarım yapıldı. Son API kesintisinde bağlı GitHub servisiyle15 tag nesnesi,main ve bütünRelease/asset JSON'ları alınıp önceki anlık kayıtla kıyaslandı; raw cloud_remote_snapshot.json ve hash makbuzda. Sistem/globalDNS/TLS ayarı değişmedi.
+- Makbuz outputs/reports/github_yayini_v0.15.0.md; güncel durum work/publish/github_publication_state.json. Genel fizik/M6/LLM kabulü değişmedi. Son yayın metadata'sı sonraki artımlı kataloğa kalır.
+
+
+## 27 Ekim: sabit kaynak derlemesi ve karşılaştırma korumaları
+
+- Sabit SU2 v8.5.0, Eigen ve MEL kaynakları indirildi; 4357 kaynak dosyası arşivlerle birebir doğrulandı. C++17/Haswell/OpenMP dört iş parçacığı derleyici denemesi geçti. İlk gerçek SU2 derlemesi 259. hedefte başlık arama yolu hatasıyla durdu; kaynak baytlarını koruyan ortak arama yolu düzeltmesi kaydedildi. İkinci deneme kullanılabilir RAM 1 GiB sınırının altındayken native süreci başlatmadan reddedildi. 70 yeni yazılım kontrolü geçti; önceki 14 süreç kontrolünün kanıtı ayrıca denetlendi. Yeni CFD çalıştırılmadı; pristine32 yeniden üretimi ve cap256 etki/maliyet sınaması bekliyor. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
+- Rapor outputs/reports/su2_kaynak_kontrolu_20261027.html. Kaynak/ağaç kimlikleri, eski başarısız derleme ve RAM reddi korundu. Yöntem limitleri method_design.json içinde native öncesi donduruldu; hiçbir yeni CFD sonucu yok. Sonraki derleme ortak ek include yoluyla ve kaynak baytları korunarak yapılmalı.

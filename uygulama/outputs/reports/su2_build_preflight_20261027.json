@@ -1,0 +1,100 @@
+{
+  "checked_utc": "2026-10-27T13:23:26.214382+00:00",
+  "passed": true,
+  "scope": "Compiler C++17+Haswell+OpenMP four-thread probe only; no SU2 source built yet",
+  "installed_packages": {
+    "meson": "1.8.2",
+    "ninja": "1.13.0",
+    "psutil": "7.1.0"
+  },
+  "wheels": [
+    {
+      "path": "tools\\su2-build\\packages\\meson-1.8.2-py3-none-any.whl",
+      "bytes": 1013517,
+      "sha256": "274b49dbe26e00c9a591442dd30f4ae9da8ce11ce53d0f4682cd10a45d50f6fd"
+    },
+    {
+      "path": "tools\\su2-build\\packages\\ninja-1.13.0-py3-none-win_amd64.whl",
+      "bytes": 309975,
+      "sha256": "fb8ee8719f8af47fed145cced4a85f0755dd55d45b2bddaf7431fa89803c5f3e"
+    },
+    {
+      "path": "tools\\su2-build\\packages\\psutil-7.1.0-cp37-abi3-win_amd64.whl",
+      "bytes": 247965,
+      "sha256": "57f5e987c36d3146c0dd2528cd42151cf96cd359b9d67cfff836995cc5df9a3d"
+    }
+  ],
+  "compiler": {
+    "path": "tools\\fortran_msys2\\ucrt64\\bin\\g++.exe",
+    "sha256": "5f30e02408ab97050fcbfa39bb391b0923cf9402063920b849ab8491e63334b3",
+    "cc1plus_path": "tools\\fortran_msys2\\ucrt64\\lib\\gcc\\x86_64-w64-mingw32\\16.2.0\\cc1plus.exe",
+    "cc1plus_sha256": "29345184cd6a51badfaa90e0de5a0de060105b3017fe2495da1c39ff15bebf46",
+    "version_output_sha256": "112ba7a8ee92b063a7448c69deafd4e59ff8a2ceb9626965ec5a05d55fe9a814"
+  },
+  "runtime_DLL_sha256": {
+    "tools\\fortran_msys2\\ucrt64\\bin\\libgcc_s_seh-1.dll": "791ebf66e99c7c1b4ed3666468cec45a0172b4c8942ac6c84c3e9cab3e1b5270",
+    "tools\\fortran_msys2\\ucrt64\\bin\\libgomp-1.dll": "ccaf59dc8cff15ace88ab47acd68a5b014167cad8f960e7683466a4c821e41c4",
+    "tools\\fortran_msys2\\ucrt64\\bin\\libstdc++-6.dll": "4e4822dc4aaa99383f581dae7ab9464ae89346c5ca742f7efbcdebe20b0fe7b5",
+    "tools\\fortran_msys2\\ucrt64\\bin\\libwinpthread-1.dll": "d837ef67644c195210daebe7612ccebebc47773f66085eeedd4892800dac8634"
+  },
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-march=haswell",
+    "-fopenmp",
+    "-ffast-math",
+    "-fno-finite-math-only"
+  ],
+  "OpenMP_probe": {
+    "threads": 4,
+    "openmp_macro": 202111,
+    "double_bytes": 8
+  },
+  "compile_status": {
+    "label": "compiler_preflight_v2",
+    "prepared_utc": "2026-10-27T13:23:25.252018+00:00",
+    "ended_utc": "2026-10-27T13:23:25.661603+00:00",
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\fortran_msys2\\ucrt64\\bin\\g++.exe",
+      "-std=c++17",
+      "-O3",
+      "-march=haswell",
+      "-fopenmp",
+      "-ffast-math",
+      "-fno-finite-math-only",
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027\\omp_preflight.cpp",
+      "-o",
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027\\omp_preflight.exe"
+    ],
+    "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027",
+    "build_started": true,
+    "assigned_to_private_job": true,
+    "exit_code": 0,
+    "stop_reason": null,
+    "runner_error": null,
+    "seconds": 0.42199999996228144,
+    "budget_s": 30,
+    "peak_process_tree_working_set_GiB": 0.07541656494140625,
+    "minimum_system_available_GiB": 3.6210556030273438,
+    "sample_count": 5,
+    "sampling_seconds": 0.1,
+    "observed_process_count": 5,
+    "job_termination_requested": false,
+    "requested_termination_exit_code": null,
+    "job_active_pids_before_final_close": [],
+    "all_observed_processes_confirmed_exited": true,
+    "cleanup_confirmed": true,
+    "cleanup_errors": [],
+    "succeeded": true,
+    "working_set_policy": "Sum of current working sets of all job-member processes sampled every0.1s; shared pages may count in multiple processes; transient peaks between samples are not guaranteed observed.",
+    "physical_qualification_passed": false
+  },
+  "source_sha256": "fce255010e40d938f85c0af20be2e627ef42b8db2c1933a5451daaca17f9498c",
+  "executable_sha256": "1f235aa54a0065e120870428081cdf9229abf5110c7576c61c03ba0b2ae69152",
+  "memory": {
+    "total_GiB": 15.625694274902344,
+    "available_GiB": 3.648303985595703
+  },
+  "global_environment_changed": false,
+  "physical_qualification_passed": false
+}

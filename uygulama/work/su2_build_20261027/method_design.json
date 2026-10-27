@@ -1,0 +1,72 @@
+{
+  "registered_utc": "2026-10-27T13:38:26.092623+00:00",
+  "state": "limits_frozen; actual pristine source identity must be bound before CFD",
+  "not_blind": true,
+  "purpose": "One line-length-cap mechanism, with pristine source-build reproduction before modification.",
+  "decision_contract_limits": {
+    "normalization": "SI2D",
+    "iterations": 200,
+    "comparison_iteration": 199,
+    "last_window_samples": 100,
+    "CD_window_range_max": 1e-07,
+    "rms_components": [
+      "Rho",
+      "RhoU",
+      "RhoV",
+      "RhoE",
+      "nu"
+    ],
+    "reproduction_max_abs_log10_difference": 0.03,
+    "reproduction_final_CD_abs_difference_max": 1e-08,
+    "reproduction_Krylov_relative_difference_max": 0.05,
+    "membership_expected_nodes": 52689,
+    "coordinate_mapping_max_m": 2e-07,
+    "density_gain_min": 0.3,
+    "SA_worsening_max": 0.1,
+    "work_ratio_max": 1.5,
+    "elapsed_ratio_max": 1.5,
+    "Rho_share_gain_min": 1e-12,
+    "reference_cap": 32,
+    "candidate_cap": 256
+  },
+  "tolerance_basis": {
+    "reproduction_log10": ".03 is an operational numerical-reproduction screen, one tenth of the .3 effect threshold; not a universal floating-point or physical accuracy bound.",
+    "reproduction_CD": "1e-8 absolute difference, below the unchanged1e-7 last-window stability screen.",
+    "reproduction_Krylov": ".05 relative combined flow+SA work; compiler differences cannot be silently assigned to the cap.",
+    "effect": ".3 density gain, <=.1 SA worsening, <=1.5 Krylov and observed elapsed ratios retained from the preceding registered mechanism test.",
+    "coverage": "Strictly greater old-RHS coverage by >1e-12 numerical noise floor, plus increased native member count; no exact line ID claims."
+  },
+  "inputs": {
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\meshes\\fine.su2": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\linelet_20261026_v1\\linelet\\seed.dat": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\linelet_20261026_v1\\linelet\\case.cfg": "d9e289f9c0df52ef976e2c4f5324e4a30f635f23669c77bbfaa68e47f7d0f523",
+    "outputs\\reports\\residual_probe_20261026.json": "24f02c9316cf51204ce60742ea9ffea97c0db947ead9e6db47c83d34664c438d",
+    "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\all_owned_nodes.csv": "fe1cd8df6820794b792d5c71b0c4ee065f38e42233f7ad611fc68bb56f581b03",
+    "outputs\\simulations\\flatplate_SAneg_20261025_v1\\contract.json": "dc5841ba935d02220dd1bf3e05a5f78f8a7caa13ec1e1ca320c8b6cdcb215623"
+  },
+  "mesh": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\meshes\\fine.su2",
+  "seed": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\linelet_20261026_v1\\linelet\\seed.dat",
+  "parent_config": "outputs\\simulations\\flatplate_SAneg_20261025_v1\\linelet_20261026_v1\\linelet\\case.cfg",
+  "fixed_RHS_csv": "outputs\\data\\qualification\\flatplate_SAneg_20261025_v1\\residual_probe_20261026\\all_owned_nodes.csv",
+  "common_config_changes": {
+    "VOLUME_OUTPUT": "Add LINELET to COORDINATES,SOLUTION,PRIMITIVE in all three arms; old200 field has no Linelet array.",
+    "MESH_FILENAME": "Path alias to the exact same mesh; no physical/numerical input change."
+  },
+  "arms": [
+    "fresh release32",
+    "fresh pristine source32",
+    "fresh source256 only after accepted pristine reproduction"
+  ],
+  "native_resources": {
+    "iterations": 200,
+    "seconds_each": 240,
+    "threads": 4,
+    "working_set_GiB_max": 2.5
+  },
+  "source_plan_sha256": "b167456424fddde9839222db04a5ee848d432ea6f32ad2bb5c3dad698d6ed34f",
+  "no_automatic_extension_or_sweep": true,
+  "old_fine3999_role_preserved": true,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false
+}

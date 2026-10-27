@@ -1,0 +1,116 @@
+{
+  "commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+  "transport": "Node built-in https, default certificate verification",
+  "node": "v24.18.0",
+  "started_utc": "2026-10-27T13:17:27.616Z",
+  "byte_cap": 262144000,
+  "per_attempt_wall_seconds": 90,
+  "certificate_checks_disabled": false,
+  "global_settings_changed": false,
+  "extracted": false,
+  "attempts": [
+    {
+      "number": 1,
+      "url": "https://codeload.github.com/su2code/SU2/zip/12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+      "started_utc": "2026-10-27T13:17:27.621Z",
+      "request_chain": [
+        "https://codeload.github.com/su2code/SU2/zip/12eb826f049ef7f67df974dfcb44cf36ee07c0f8"
+      ],
+      "bytes_received": 0,
+      "success": false,
+      "completed_utc": "2026-10-27T13:17:27.822Z",
+      "error": {
+        "name": "Error",
+        "code": "EACCES",
+        "message": "connect EACCES 140.82.121.10:443"
+      }
+    },
+    {
+      "number": 2,
+      "url": "https://api.github.com/repos/su2code/SU2/zipball/12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+      "started_utc": "2026-10-27T13:17:27.822Z",
+      "request_chain": [
+        "https://api.github.com/repos/su2code/SU2/zipball/12eb826f049ef7f67df974dfcb44cf36ee07c0f8"
+      ],
+      "bytes_received": 0,
+      "success": false,
+      "completed_utc": "2026-10-27T13:17:27.850Z",
+      "error": {
+        "name": "Error",
+        "code": "EACCES",
+        "message": "connect EACCES 140.82.121.5:443"
+      }
+    },
+    {
+      "number": 3,
+      "url": "https://codeload.github.com/su2code/SU2/zip/12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+      "started_utc": "2026-10-27T13:18:10.151Z",
+      "request_chain": [
+        "https://codeload.github.com/su2code/SU2/zip/12eb826f049ef7f67df974dfcb44cf36ee07c0f8"
+      ],
+      "execution_network_permission": true,
+      "http_status": 200,
+      "final_url": "https://codeload.github.com/su2code/SU2/zip/12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+      "content_type": "application/zip",
+      "content_length": null,
+      "bytes_received": 1265595,
+      "success": false,
+      "completed_utc": "2026-10-27T13:19:40.158Z",
+      "error": {
+        "name": "Error",
+        "code": null,
+        "message": "90 second deadline"
+      }
+    },
+    {
+      "number": 4,
+      "url": "https://api.github.com/repos/su2code/SU2/zipball/12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+      "started_utc": "2026-10-27T13:19:40.158Z",
+      "request_chain": [
+        "https://api.github.com/repos/su2code/SU2/zipball/12eb826f049ef7f67df974dfcb44cf36ee07c0f8"
+      ],
+      "execution_network_permission": true,
+      "bytes_received": 0,
+      "success": false,
+      "completed_utc": "2026-10-27T13:19:51.272Z",
+      "error": {
+        "name": "Error",
+        "code": "ENOTFOUND",
+        "message": "getaddrinfo ENOTFOUND api.github.com"
+      }
+    },
+    {
+      "number": 5,
+      "url": "https://codeload.github.com/su2code/SU2/zip/12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+      "transport": "Node https Range continuation, normal TLS",
+      "started_utc": "2026-10-27T13:26:51.698Z",
+      "requested_range": "bytes=1265595-",
+      "initial_partial_bytes": 1265595,
+      "deadline_seconds": 480,
+      "success": false,
+      "completed_utc": "2026-10-27T13:27:07.067Z",
+      "bytes_received": 0,
+      "error": {
+        "name": "Error",
+        "code": "ECONNRESET",
+        "message": "Client network socket disconnected before secure TLS connection was established"
+      }
+    }
+  ],
+  "success": false,
+  "finished_utc": "2026-10-27T13:27:07.067Z",
+  "network_retrial": "Same normal TLS transport with execution network permission; previous EACCES preserved",
+  "preserved_partial": {
+    "path": "tools\\su2-build\\v8.5.0\\transport2\\SU2-source.attempt3.partial",
+    "bytes": 1265595,
+    "sha256": "171c5b162f6c0dd1fc18f7677a028765d51867c1ac6874990036b957816d7ed6",
+    "not_a_complete_archive": true
+  },
+  "browser_inventory": {
+    "apps": 0,
+    "browsers": 0,
+    "scope": "Available CUA surfaces in this subagent task; not an installed-browser audit"
+  },
+  "conclusion": "No completed archive. One normal-TLS HTTP200 partial response proves a working body transfer path; completion and Range support were not established.",
+  "metadata_updated_utc": "2026-10-27T13:28:10.696314+00:00"
+}

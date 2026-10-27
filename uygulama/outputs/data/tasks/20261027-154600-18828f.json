@@ -1,0 +1,81 @@
+{
+  "id": "20261027-154600-18828f",
+  "request": "SU2 kaynak derlemesi ve uzun LINELET mekanizmasının kontrollü sınaması",
+  "kind": "qualification",
+  "created_utc": "2026-10-27T12:46:00.247109+00:00",
+  "status": "bekliyor",
+  "phase": "sınırlı derleme/hazırlık paketi kapandı; RAM ve pristine yeniden üretimi bekliyor",
+  "acceptance": [
+    "Pinned source and dependencies, compiler/OpenMP/runtime manifest",
+    "Pristine32 control before cap256; no compiler difference attributed to cap",
+    "Preregister all numerical, spatial membership and cost gates; preserve failures",
+    "No promotion into old three-grid family; general physical qualification remains false"
+  ],
+  "blocked_by": [
+    "Successful pristine source build and release reproduction not established; last resource gate refused launch."
+  ],
+  "evidence": [
+    {
+      "path": "outputs/reports/su2_build_preflight_20261027.json",
+      "sha256": "9548add9dd24dce5bbefedd94f8bbeaddb9f911c9f3db6c6bf7b55bfecdb6b49"
+    },
+    {
+      "path": "work/su2_build_20261027/accepted_archives.json",
+      "sha256": "dd25b4d6935ef62c49c1ba436e9cb65d42132ca4bd3748961ec29c5aeeb469c3"
+    },
+    {
+      "path": "work/su2_build_20261027/method_design.json",
+      "sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44"
+    },
+    {
+      "path": "outputs\\reports\\su2_kaynak_kontrolu_20261027.json",
+      "sha256": "d0512b4ca587510ea9faef5c8708b5b891b507a01e055381169e2f7df7a7c407"
+    },
+    {
+      "path": "outputs\\reports\\su2_kaynak_kontrolu_20261027.html",
+      "sha256": "1f3ee233d365ba597e999eb83288ce8a258e63313d82dafb713a05c9d7e57c30"
+    }
+  ],
+  "input_sha256": {
+    "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+  },
+  "project_id": "qualification",
+  "project_manifest": "outputs\\data\\projects\\qualification.json",
+  "project_data_root": "outputs/data/qualification",
+  "project_output_root": "outputs",
+  "project_snapshot": {
+    "id": "qualification",
+    "name": "Araç doğrulama örnekleri",
+    "kind": "qualification",
+    "artifact_root": "outputs",
+    "data_root": "outputs/data/qualification",
+    "created_utc": "2026-10-19T07:06:12.206479+00:00",
+    "active_cad": null
+  },
+  "applied_lesson_ids": [
+    "L04",
+    "L05",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "R01",
+    "R03"
+  ],
+  "agent_instruction_snapshot": {
+    "version": "2026-10-25.2",
+    "files": {
+      "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+      ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+    },
+    "expert_qualification": "not_established",
+    "blind_analysis_safe": false,
+    "reliability_policy_version": "2026-10-25.1"
+  },
+  "method_design_sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44",
+  "physical_qualification_passed": false,
+  "editorial_updated_utc": "2026-10-27T18:01:56.330315+00:00"
+}

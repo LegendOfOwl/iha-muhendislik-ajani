@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-10-27T18:05:27.954201+00:00",
+  "old_driver_sha256": "2ce4ba6bf5d0b49578e4d785aa063ea185c644f6421ba40c97eae71904d705ec",
+  "new_driver_sha256": "c394b9e37d846fa93e8fbf2aa0603c689a6ce2219e14808118d45572d1633b62",
+  "only_driver_change": "Common cpp_args include search directory",
+  "old_recipe_exactly_recovered": true,
+  "source_files_changed": false,
+  "new_recipe_rerun_tests": {
+    "observed_in_tool_output": true,
+    "command": ".venv/Scripts/python.exe -B -X utf8 -m unittest discover -s work/su2_build_20261027 -p test_build_su2_guards.py -v",
+    "native_exit_code": 0,
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "seconds_reported": 0.09,
+    "scope": "Same9 tests rerun after one compiler-option change, not9 additional distinct checks."
+  }
+}

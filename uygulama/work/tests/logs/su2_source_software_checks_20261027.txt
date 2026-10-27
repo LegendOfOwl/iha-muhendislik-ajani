@@ -1,0 +1,75 @@
+test_SA_degradation_over_limit_fails (test_linecap_decisions.EffectTests.test_SA_degradation_over_limit_fails) ... ok
+test_changed_compiler_runtime_inputs_and_source_are_separate_failures (test_linecap_decisions.EffectTests.test_changed_compiler_runtime_inputs_and_source_are_separate_failures) ... ok
+test_each_cost_is_independently_mandatory (test_linecap_decisions.EffectTests.test_each_cost_is_independently_mandatory) ... ok
+test_failed_missing_or_fabricated_reproduction_never_accepts (test_linecap_decisions.EffectTests.test_failed_missing_or_fabricated_reproduction_never_accepts) ... ok
+test_fixed_old_RHS_identity_is_mandatory (test_linecap_decisions.EffectTests.test_fixed_old_RHS_identity_is_mandatory) ... ok
+test_larger_mask_without_more_fixed_RHS_share_fails (test_linecap_decisions.EffectTests.test_larger_mask_without_more_fixed_RHS_share_fails) ... ok
+test_missing_values_fail_closed_without_exception (test_linecap_decisions.EffectTests.test_missing_values_fail_closed_without_exception) ... ok
+test_more_share_without_more_membership_nodes_fails (test_linecap_decisions.EffectTests.test_more_share_without_more_membership_nodes_fails) ... ok
+test_nonfinite_boolean_negative_or_zero_cost_fails (test_linecap_decisions.EffectTests.test_nonfinite_boolean_negative_or_zero_cost_fails) ... ok
+test_reproduction_from_changed_contract_fails (test_linecap_decisions.EffectTests.test_reproduction_from_changed_contract_fails) ... ok
+test_share_must_be_finite_nonnegative_bounded_and_not_boolean (test_linecap_decisions.EffectTests.test_share_must_be_finite_nonnegative_bounded_and_not_boolean) ... ok
+test_small_or_wrong_sign_density_gain_is_not_success (test_linecap_decisions.EffectTests.test_small_or_wrong_sign_density_gain_is_not_success) ... ok
+test_successful_reproduction_cannot_be_transferred_to_another_baseline (test_linecap_decisions.EffectTests.test_successful_reproduction_cannot_be_transferred_to_another_baseline) ... ok
+test_tiny_share_change_does_not_pass_strict_threshold (test_linecap_decisions.EffectTests.test_tiny_share_change_does_not_pass_strict_threshold) ... ok
+test_unverified_wrong_or_missing_patch_fails (test_linecap_decisions.EffectTests.test_unverified_wrong_or_missing_patch_fails) ... ok
+test_valid_effect_at_both_cost_boundaries_without_subset_requirement (test_linecap_decisions.EffectTests.test_valid_effect_at_both_cost_boundaries_without_subset_requirement) ... ok
+test_color_ids_do_not_define_membership (test_linecap_decisions.ReproductionTests.test_color_ids_do_not_define_membership) ... ok
+test_combined_work_includes_SA_and_checks_five_percent (test_linecap_decisions.ReproductionTests.test_combined_work_includes_SA_and_checks_five_percent) ... ok
+test_each_of_five_components_is_checked_at_every_iteration (test_linecap_decisions.ReproductionTests.test_each_of_five_components_is_checked_at_every_iteration) ... ok
+test_exit_field_window_and_boolean_validity_are_required (test_linecap_decisions.ReproductionTests.test_exit_field_window_and_boolean_validity_are_required) ... ok
+test_final_CD_difference_has_its_own_gate (test_linecap_decisions.ReproductionTests.test_final_CD_difference_has_its_own_gate) ... ok
+test_map_must_be_bijective_and_all_nodes_retained (test_linecap_decisions.ReproductionTests.test_map_must_be_bijective_and_all_nodes_retained) ... ok
+test_missing_duplicate_or_nonfinite_history_fails_closed (test_linecap_decisions.ReproductionTests.test_missing_duplicate_or_nonfinite_history_fails_closed) ... ok
+test_missing_invalid_contract_has_no_hidden_default (test_linecap_decisions.ReproductionTests.test_missing_invalid_contract_has_no_hidden_default) ... ok
+test_mixed_normalization_and_different_seed_fail (test_linecap_decisions.ReproductionTests.test_mixed_normalization_and_different_seed_fail) ... ok
+test_positive_numeric_masks_are_not_boolean_membership_proof (test_linecap_decisions.ReproductionTests.test_positive_numeric_masks_are_not_boolean_membership_proof) ... ok
+test_reproduction_log_boundary_is_inclusive_and_not_rounded (test_linecap_decisions.ReproductionTests.test_reproduction_log_boundary_is_inclusive_and_not_rounded) ... ok
+test_same_count_different_native_mask_fails (test_linecap_decisions.ReproductionTests.test_same_count_different_native_mask_fails) ... ok
+test_unrepresentably_large_numbers_fail_closed (test_linecap_decisions.ReproductionTests.test_unrepresentably_large_numbers_fail_closed) ... ok
+test_valid_reproduction_not_physical_or_binary_identity (test_linecap_decisions.ReproductionTests.test_valid_reproduction_not_physical_or_binary_identity) ... ok
+test_window_range_recomputed_instead_of_trusting_metadata (test_linecap_decisions.ReproductionTests.test_window_range_recomputed_instead_of_trusting_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.199s
+
+OK
+test_RHS_shares_are_recomputed_from_fixed_raw_Rho (test_linecap_payload.PayloadTests.test_RHS_shares_are_recomputed_from_fixed_raw_Rho) ... ok
+test_all_missing_files_return_explicit_false_payload (test_linecap_payload.PayloadTests.test_all_missing_files_return_explicit_false_payload) ... ok
+test_complete_payload_converts_all_five_curves_and_both_work_counts (test_linecap_payload.PayloadTests.test_complete_payload_converts_all_five_curves_and_both_work_counts) ... ok
+test_contract_mesh_seed_and_fixed_RHS_hashes_are_bound (test_linecap_payload.PayloadTests.test_contract_mesh_seed_and_fixed_RHS_hashes_are_bound) ... ok
+test_duplicate_config_key_is_not_silently_overwritten (test_linecap_payload.PayloadTests.test_duplicate_config_key_is_not_silently_overwritten) ... ok
+test_fractional_work_missing_SA_or_extra_history_row_fails (test_linecap_payload.PayloadTests.test_fractional_work_missing_SA_or_extra_history_row_fails) ... ok
+test_missing_bad_or_boolean_SI_factors_fail_without_guessing (test_linecap_payload.PayloadTests.test_missing_bad_or_boolean_SI_factors_fail_without_guessing) ... ok
+test_missing_coeval_surface_or_wrong_raw_hash_fails (test_linecap_payload.PayloadTests.test_missing_coeval_surface_or_wrong_raw_hash_fails) ... ok
+test_missing_primary_array_is_not_reconstructed (test_linecap_payload.PayloadTests.test_missing_primary_array_is_not_reconstructed) ... ok
+test_native_double_pressure_is_checked_independently_of_positive_VTU (test_linecap_payload.PayloadTests.test_native_double_pressure_is_checked_independently_of_positive_VTU) ... ok
+test_native_field_order_is_mapped_to_explicit_canonical_node_ids (test_linecap_payload.PayloadTests.test_native_field_order_is_mapped_to_explicit_canonical_node_ids) ... ok
+test_native_nonzero_exit_or_missing_process_identity_fails (test_linecap_payload.PayloadTests.test_native_nonzero_exit_or_missing_process_identity_fails) ... ok
+test_negative_fractional_or_nonfinite_colors_are_not_membership (test_linecap_payload.PayloadTests.test_negative_fractional_or_nonfinite_colors_are_not_membership) ... ok
+test_new_or_reordered_RHS_rows_cannot_replace_original_indices (test_linecap_payload.PayloadTests.test_new_or_reordered_RHS_rows_cannot_replace_original_indices) ... ok
+test_nonfinite_primary_or_auxiliary_arrays_are_not_masked (test_linecap_payload.PayloadTests.test_nonfinite_primary_or_auxiliary_arrays_are_not_masked) ... ok
+test_old_field_without_linelet_is_not_backfilled (test_linecap_payload.PayloadTests.test_old_field_without_linelet_is_not_backfilled) ... ok
+test_opaque_source_identities_are_not_fabricated (test_linecap_payload.PayloadTests.test_opaque_source_identities_are_not_fabricated) ... ok
+test_partial_duplicate_out_of_plane_or_shifted_coordinates_fail (test_linecap_payload.PayloadTests.test_partial_duplicate_out_of_plane_or_shifted_coordinates_fail) ... ok
+test_path_aliases_only_have_equal_canonical_config (test_linecap_payload.PayloadTests.test_path_aliases_only_have_equal_canonical_config) ... ok
+test_terminal_row_and_sealed_iteration_must_be_the_same_199 (test_linecap_payload.PayloadTests.test_terminal_row_and_sealed_iteration_must_be_the_same_199) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.698s
+
+OK
+test_archive_safety_rejects_path_and_duplicate (test_build_su2_guards.FixedBuildGuards.test_archive_safety_rejects_path_and_duplicate) ... ok
+test_containment_absolute_escape_parent_equality (test_build_su2_guards.FixedBuildGuards.test_containment_absolute_escape_parent_equality) ... ok
+test_fixed_commands_single_target_and_offline_flags (test_build_su2_guards.FixedBuildGuards.test_fixed_commands_single_target_and_offline_flags) ... ok
+test_options_match_and_detect_hidden_optional_toggle (test_build_su2_guards.FixedBuildGuards.test_options_match_and_detect_hidden_optional_toggle) ... ok
+test_patch_changes_only_cap_digits (test_build_su2_guards.FixedBuildGuards.test_patch_changes_only_cap_digits) ... ok
+test_retained_archive_matches_tree_and_detects_source_edit (test_build_su2_guards.FixedBuildGuards.test_retained_archive_matches_tree_and_detects_source_edit) ... ok
+test_unintended_patch_added_or_missing_file_rejected (test_build_su2_guards.FixedBuildGuards.test_unintended_patch_added_or_missing_file_rejected) ... ok
+test_windows_target_requires_one_contained_executable (test_build_su2_guards.FixedBuildGuards.test_windows_target_requires_one_contained_executable) ... ok
+test_wrong_duplicate_or_missing_cap_rejected (test_build_su2_guards.FixedBuildGuards.test_wrong_duplicate_or_missing_cap_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.099s
+
+OK

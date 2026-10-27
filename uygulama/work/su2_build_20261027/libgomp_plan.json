@@ -1,0 +1,12 @@
+{
+  "NAME": "mingw-w64-ucrt-x86_64-libgomp",
+  "VERSION": "16.2.0-6",
+  "FILENAME": "mingw-w64-ucrt-x86_64-libgomp-16.2.0-6-any.pkg.tar.zst",
+  "CSIZE": "311245",
+  "ISIZE": "1467414",
+  "SHA256SUM": "809b95086d8d3ba145e041bb36d5756b4407d1d97c0524ef731d3b94548faa69",
+  "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libgomp-16.2.0-6-any.pkg.tar.zst",
+  "db_sha256": "5f513c54a8e1b86c8014ef941fabf596664f848d624c2e2fbd3b86a7a61505c9",
+  "created_utc": "2026-10-27T13:18:27.749727+00:00",
+  "reason": "Actual -fopenmp compiler test failed to link -lgomp; no OpenMP runtime was installed with prior Fortran-only package set"
+}

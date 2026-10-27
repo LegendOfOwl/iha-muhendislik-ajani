@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-27T12:52:18.304015+00:00",
+  "memory": {
+    "total_GiB": 15.625694274902344,
+    "available_GiB": 3.6868209838867188
+  },
+  "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+  "scope": "Standalone native Windows OpenMP CFD executable, no global setup changes",
+  "pristine_definition": "Upstream source and fixed Eigen/MEL commits; no engineering-source patch",
+  "compiler": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\fortran_msys2\\ucrt64\\bin\\g++.exe",
+  "compiler_sha256": "5f30e02408ab97050fcbfa39bb391b0923cf9402063920b849ab8491e63334b3",
+  "release_executable_sha256": "3cb60646b31c08e468441be9f3497601960d4bb31349e6329982bcdeed599248",
+  "build_resources": {
+    "parallel_jobs": 1,
+    "seconds_each_build_budget": 1800,
+    "process_tree_working_set_sum_GiB_max": 3.0,
+    "system_free_GiB_min": 1.0
+  },
+  "native_resources": {
+    "iterations": 200,
+    "seconds_each": 240,
+    "threads": 4,
+    "working_set_GiB_max": 2.5
+  },
+  "download_byte_cap_each": 262144000,
+  "expanded_source_byte_cap_each": 734003200,
+  "large_system_installation": false,
+  "physical_qualification_passed": false
+}

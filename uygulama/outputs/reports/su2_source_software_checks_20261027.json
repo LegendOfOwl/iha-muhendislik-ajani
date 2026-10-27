@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-27T13:45:28.489461+00:00",
+  "finished_utc": "2026-10-27T13:45:31.954526+00:00",
+  "seconds": 3.4646501999814063,
+  "python_executable": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv-cad\\Scripts\\python.exe",
+  "fresh_logic_checks": {
+    "tests_run": 60,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": [
+      {
+        "module": "test_linecap_decisions",
+        "discovered": 31,
+        "tests_run": 31,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "passed": true,
+        "seconds": 0.1992292000213638,
+        "failure_details": [],
+        "error_details": []
+      },
+      {
+        "module": "test_linecap_payload",
+        "discovered": 20,
+        "tests_run": 20,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "passed": true,
+        "seconds": 2.6984503000276163,
+        "failure_details": [],
+        "error_details": []
+      },
+      {
+        "module": "test_build_su2_guards",
+        "discovered": 9,
+        "tests_run": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "passed": true,
+        "seconds": 0.09937740000896156,
+        "failure_details": [],
+        "error_details": []
+      }
+    ],
+    "log": "work/tests/logs/su2_source_software_checks_20261027.txt",
+    "log_sha256": "06c60806de3574502b37cb4fd1e2f71cf4971b54dc4f4b9fd6e5572c915fd18c",
+    "scope": "Decision logic, payload fixture extraction and offline build/archive guards; no native CFD or compiler invoked."
+  },
+  "prior_process_guard_evidence": {
+    "reported_previous_tests_run": 14,
+    "current_test_definitions": 14,
+    "pure_guard_definitions": 9,
+    "Windows_OS_smoke_definitions": 5,
+    "rerun_in_this_record": false,
+    "basis": "Prior successful14-test run reported by parent; five retained real OS scenario records independently checked, and their runner_sha256 matches current unchanged code. Test definitions loaded, not executed.",
+    "retained_real_scenarios_verified": 5,
+    "scenarios": [
+      {
+        "scenario": "success",
+        "label": "guard-success-60e8ee0a18",
+        "ended_utc": "2026-10-27T13:04:12.525029+00:00",
+        "checks": {
+          "runner_code_unchanged": true,
+          "same_label": true,
+          "cleanup_confirmed": true,
+          "observed_processes_exited": true,
+          "no_active_job_children": true,
+          "expected_case": true
+        },
+        "verified": true,
+        "files_sha256": {
+          "work/su2_build_20261027/guard-success-60e8ee0a18.status.json": "d118e6b04e3e87df798851da79c272a56be2b76eb51f91d8a4f0294948a71047",
+          "work/su2_build_20261027/guard-success-60e8ee0a18.process.json": "f920f702e3b0559c14c5e189f5cc2c4ea3d46815f4d23928b7dc5aa95f348eba",
+          "work/su2_build_20261027/guard-success-60e8ee0a18.log": "724c534e917b68ad7e3367e44fd8329a2b145c76bd0befe91611d2e369160759"
+        }
+      },
+      {
+        "scenario": "timeout",
+        "label": "guard-timeout-72b52d34c9",
+        "ended_utc": "2026-10-27T13:04:13.791373+00:00",
+        "checks": {
+          "runner_code_unchanged": true,
+          "same_label": true,
+          "cleanup_confirmed": true,
+          "observed_processes_exited": true,
+          "no_active_job_children": true,
+          "expected_case": true
+        },
+        "verified": true,
+        "files_sha256": {
+          "work/su2_build_20261027/guard-timeout-72b52d34c9.status.json": "dd2fcc0a28cc11db93de06d2a6636e26ec4a9b662d3c85489f67f1511977953e",
+          "work/su2_build_20261027/guard-timeout-72b52d34c9.process.json": "cdb37947af69987619eba1a1cac8e758ea60c895f7968267ca2003c5cf82fb16",
+          "work/su2_build_20261027/guard-timeout-72b52d34c9.log": "2fc84047de941923a81a4dd427083afc89605c9cb12e91423297cee76b96ce86"
+        }
+      },
+      {
+        "scenario": "orphan",
+        "label": "guard-orphan-57f3144a7b",
+        "ended_utc": "2026-10-27T13:04:11.904006+00:00",
+        "checks": {
+          "runner_code_unchanged": true,
+          "same_label": true,
+          "cleanup_confirmed": true,
+          "observed_processes_exited": true,
+          "no_active_job_children": true,
+          "expected_case": true
+        },
+        "verified": true,
+        "files_sha256": {
+          "work/su2_build_20261027/guard-orphan-57f3144a7b.status.json": "7ecd2c01a7f650fc6e9897ec72a578e4a49b46377d7ab6c035690ae8c136f94c",
+          "work/su2_build_20261027/guard-orphan-57f3144a7b.process.json": "175a54eb759ed4d5945f0ffb16870309260d3178695b221eb2acfee7e4ef81d7",
+          "work/su2_build_20261027/guard-orphan-57f3144a7b.log": "893878a572a0aea0d08d4bffb3ad237c01935689512778e4ec9d4815283b6913"
+        }
+      },
+      {
+        "scenario": "assignment_failure",
+        "label": "guard-assignment-fail-11acb7bad0",
+        "ended_utc": "2026-10-27T13:04:11.274931+00:00",
+        "checks": {
+          "runner_code_unchanged": true,
+          "same_label": true,
+          "cleanup_confirmed": true,
+          "observed_processes_exited": true,
+          "no_active_job_children": true,
+          "expected_case": true
+        },
+        "verified": true,
+        "files_sha256": {
+          "work/su2_build_20261027/guard-assignment-fail-11acb7bad0.status.json": "4c185f30cd4dad3e631b306e9016768106c466f5648ec1c6939624cb754b721b",
+          "work/su2_build_20261027/guard-assignment-fail-11acb7bad0.process.json": "fbef3941fb3a437b57452e4c306559ab351c291c9e2c5aebf20ab8b9b1e5f263",
+          "work/su2_build_20261027/guard-assignment-fail-11acb7bad0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      {
+        "scenario": "nonzero_exit",
+        "label": "guard-exit7-9d68e02646",
+        "ended_utc": "2026-10-27T13:04:11.385313+00:00",
+        "checks": {
+          "runner_code_unchanged": true,
+          "same_label": true,
+          "cleanup_confirmed": true,
+          "observed_processes_exited": true,
+          "no_active_job_children": true,
+          "expected_case": true
+        },
+        "verified": true,
+        "files_sha256": {
+          "work/su2_build_20261027/guard-exit7-9d68e02646.status.json": "67132962b8998c8b0d692d6db931961ed6ee471b5b22951e89c3045109c848a8",
+          "work/su2_build_20261027/guard-exit7-9d68e02646.process.json": "cc5ba1aea75841eb5135a573878717fe33d0c5fae748ff0cfac75aa2a6028a24",
+          "work/su2_build_20261027/guard-exit7-9d68e02646.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    ]
+  },
+  "real_UAV_inputs_vs_latest_public_catalog": {
+    "task_id": "20261027-154600-18828f",
+    "task_context": "qualification task; real UAV input files audited separately without editing them",
+    "catalog_version": "v0.15.0",
+    "catalog_path": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\iha-muhendislik-ajani\\analizler\\dosya_katalogu.json",
+    "catalog_sha256": "a99fa5cd548b5721200092826934fc7241d0fb3ec0070c08a51793895e8662c2",
+    "files": [
+      {
+        "source_path": "outputs/data/project/conceptual_steps.json",
+        "current_sha256": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+        "v0_15_catalog_sha256": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+        "catalog_repository_path": "uygulama/outputs/data/project/conceptual_steps.json",
+        "repository_copy_sha256": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+        "unchanged": true
+      },
+      {
+        "source_path": "outputs/data/project/mass_budget.json",
+        "current_sha256": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+        "v0_15_catalog_sha256": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+        "catalog_repository_path": "uygulama/outputs/data/project/mass_budget.json",
+        "repository_copy_sha256": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+        "unchanged": true
+      },
+      {
+        "source_path": "outputs/data/project/mission.json",
+        "current_sha256": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3",
+        "v0_15_catalog_sha256": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3",
+        "catalog_repository_path": "uygulama/outputs/data/project/mission.json",
+        "repository_copy_sha256": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3",
+        "unchanged": true
+      }
+    ],
+    "all_three_unchanged": true
+  },
+  "code_sha256_before": {
+    "work/su2_build_20261027/decisions.py": "908250abd83f4dd775fe1d44e70525656e918de8172b9f286d269f67fc0c7327",
+    "work/su2_build_20261027/payload.py": "0fff51547e5345d8a6065bc5aa61425aab9769ab9a296b20fe2385e35f46b214",
+    "work/su2_build_20261027/build_su2.py": "2ce4ba6bf5d0b49578e4d785aa063ea185c644f6421ba40c97eae71904d705ec",
+    "work/su2_build_20261027/test_linecap_decisions.py": "4adef0573fc68965a20ce8a0e8f5dc8f53f1277c9886a9c7994d0bfcc19a5256",
+    "work/su2_build_20261027/test_linecap_payload.py": "4b6c61550746d121930702f208b80f9bd46ce83c76965c11e51f86abadd3dab8",
+    "work/su2_build_20261027/test_build_su2_guards.py": "c7d4f845aed661acede35c15d2a421396e4f96063b5723a5d578717681db0ef6",
+    "work/su2_build_20261027/build_runner.py": "9560c7ebace49031cced0bc2cf733268395b4c4fda20429d9f97554ada1b46e6",
+    "work/su2_build_20261027/test_build_process_guard.py": "8e8f341827a44ab688aa1cad56dbf3850fdc03817efef7f4fbdeabb566667602",
+    "work/flatplate_20261025/probe_residual_analysis.py": "68cc7533aaa44cdfaea22040eecf8c29fd84b56713de2e7cc2ca9de5dbd24385",
+    "work/flatplate_20261025/scaled_restart.py": "0d8dcc920c16e33b2473889030f1454adcc0d5d4019ccd65e05bdc6daa4c9efb"
+  },
+  "code_sha256_after": {
+    "work/su2_build_20261027/decisions.py": "908250abd83f4dd775fe1d44e70525656e918de8172b9f286d269f67fc0c7327",
+    "work/su2_build_20261027/payload.py": "0fff51547e5345d8a6065bc5aa61425aab9769ab9a296b20fe2385e35f46b214",
+    "work/su2_build_20261027/build_su2.py": "2ce4ba6bf5d0b49578e4d785aa063ea185c644f6421ba40c97eae71904d705ec",
+    "work/su2_build_20261027/test_linecap_decisions.py": "4adef0573fc68965a20ce8a0e8f5dc8f53f1277c9886a9c7994d0bfcc19a5256",
+    "work/su2_build_20261027/test_linecap_payload.py": "4b6c61550746d121930702f208b80f9bd46ce83c76965c11e51f86abadd3dab8",
+    "work/su2_build_20261027/test_build_su2_guards.py": "c7d4f845aed661acede35c15d2a421396e4f96063b5723a5d578717681db0ef6",
+    "work/su2_build_20261027/build_runner.py": "9560c7ebace49031cced0bc2cf733268395b4c4fda20429d9f97554ada1b46e6",
+    "work/su2_build_20261027/test_build_process_guard.py": "8e8f341827a44ab688aa1cad56dbf3850fdc03817efef7f4fbdeabb566667602",
+    "work/flatplate_20261025/probe_residual_analysis.py": "68cc7533aaa44cdfaea22040eecf8c29fd84b56713de2e7cc2ca9de5dbd24385",
+    "work/flatplate_20261025/scaled_restart.py": "0d8dcc920c16e33b2473889030f1454adcc0d5d4019ccd65e05bdc6daa4c9efb"
+  },
+  "all_tested_code_unchanged": true,
+  "passed": true,
+  "fresh_tests_count_excludes_prior14": true,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false,
+  "summary_tr": "60 yeni mantık kontrolü; önceki14 süreç koruması yeniden çalıştırılmadan ayrı kanıt olarak denetlendi. Gerçek İHA3 girdisi v0.15 kataloğuyla aynı. Bu kayıt CFD fiziği veya LLM iyileşme kanıtı değildir."
+}

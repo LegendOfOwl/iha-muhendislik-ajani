@@ -1,0 +1,32 @@
+{
+  "label": "guard-orphan-57f3144a7b",
+  "prepared_utc": "2026-10-27T13:04:11.386592+00:00",
+  "ended_utc": "2026-10-27T13:04:11.904006+00:00",
+  "command": [
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+    "-c",
+    "import subprocess,sys,time; p=subprocess.Popen([sys.executable,'-c','import time; time.sleep(60)']); print('CHILD',p.pid,flush=True); time.sleep(.4); raise SystemExit(7)"
+  ],
+  "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027",
+  "build_started": true,
+  "assigned_to_private_job": true,
+  "exit_code": 7,
+  "stop_reason": "root_exited_with_live_job_children",
+  "runner_error": null,
+  "seconds": 0.5149999999557622,
+  "budget_s": 10,
+  "peak_process_tree_working_set_GiB": 0.04001617431640625,
+  "minimum_system_available_GiB": 3.6839218139648438,
+  "sample_count": 6,
+  "sampling_seconds": 0.1,
+  "observed_process_count": 5,
+  "job_termination_requested": true,
+  "requested_termination_exit_code": 125,
+  "job_active_pids_before_final_close": [],
+  "all_observed_processes_confirmed_exited": true,
+  "cleanup_confirmed": true,
+  "cleanup_errors": [],
+  "succeeded": false,
+  "working_set_policy": "Sum of current working sets of all job-member processes sampled every0.1s; shared pages may count in multiple processes; transient peaks between samples are not guaranteed observed.",
+  "physical_qualification_passed": false
+}

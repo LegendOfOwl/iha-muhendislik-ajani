@@ -1,17 +1,15 @@
 # İHA mühendislik ajanı
 
-Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve kanıtlı rapor iş akışı. Güncel dağıtım **v0.15.0**. Üniversite düzeyindeki çalışmalar için geliştirilen ve sınanan bir araç bütünüdür; genel mühendislik/CFD yeterliliği tamamlanmış veya uçuşa hazır tasarım değildir.
+Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve kanıtlı rapor iş akışı. Güncel dağıtım **v0.16.0**. Üniversite düzeyindeki çalışmalar için geliştirilen ve sınanan bir araç bütünüdür; genel mühendislik/CFD yeterliliği tamamlanmış veya uçuşa hazır tasarım değildir.
 
 
 ## Güncel sürüm — 27 Ekim 2026
 
-[**v0.15.0 sonuçları: GitHub’da okunabilir rapor**](raporlar/v0.15.0/README.md) · [Release dosyaları](https://github.com/LegendOfOwl/iha-muhendislik-ajani/releases/tag/v0.15.0) · [Sürümleme politikası](SURUMLEME.md).
+[**v0.16.0 sonuçları: GitHub’da okunabilir rapor**](raporlar/v0.16.0/README.md) · [Release dosyaları](https://github.com/LegendOfOwl/iha-muhendislik-ajani/releases/tag/v0.16.0) · [Sürümleme politikası](SURUMLEME.md).
 
-27 Ekim 2026. Üç yeni native SU2 koşusu tamamlandı. Gerçek LINELET alanında 52689 düğümün 7200 tanesi çizgilerde; önceki doğrulanmış aşama artığının yoğunluk kare toplamının %53.8965’i bu birliğin içinde. Bu konumsal kapsam ölçümüdür; yeni alanın yeniden hesaplanan artığı, nedensellik veya ağ hata bandı değildir.
+Sabit SU2 v8.5.0, Eigen ve MEL kaynakları indirildi; 4357 kaynak dosyası arşivlerle birebir doğrulandı. C++17/Haswell/OpenMP dört iş parçacığı derleyici denemesi geçti. İlk gerçek SU2 derlemesi 259. hedefte başlık arama yolu hatasıyla durdu; kaynak baytlarını koruyan ortak arama yolu düzeltmesi kaydedildi. İkinci deneme kullanılabilir RAM 1 GiB sınırının altındayken native süreci başlatmadan reddedildi. 70 yeni yazılım kontrolü geçti; önceki 14 süreç kontrolünün kanıtı ayrıca denetlendi. Yeni CFD çalıştırılmadı; pristine32 yeniden üretimi ve cap256 etki/maliyet sınaması bekliyor. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
 
-Aynı kaynak ağ ve başlangıç dosyasıyla, toplam dört iş parçacığı korunarak yalnız LU-SGS önkoşullayıcısının bölünmesi 0→1 değiştirildi. 200 adımlık çiftte yoğunluk kazancı 0.14072006 log10, toplam Krylov işi oranı 1.54404968, gözlenen süre oranı 3.62357987 oldu. Ön kayıtlı ortak etki ve maliyet kabulü geçmedi. 17 yeni yazılım kontrolü geçti; başarısız denemeler ve ham çıktılar korundu. Uzun çizgili kaynak derlemesi sonraki yöntem adayıdır; henüz derlenmedi veya çalıştırılmadı. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
-
-Tam izlenen uygulama/kaynak ağacı otomatik **Source code (zip)** tag arşivinde; yeni büyük alanlar `analiz-arsivi-*.zip` dosyasındadır. `KAYNAK_INDIRME.md`, `SHA256SUMS.txt`, dosya kataloğu ve geri yükleme aracı özgün yolları ve dosya mühürlerini açıklar. Önceki sürümlerin varlıkları korunur.
+Tam izlenen uygulama/kaynak ağacı otomatik **Source code (zip)** tag arşivinde; ayrı büyük analiz dosyaları sürümün `analiz-arsivi-*.zip` varlıklarından katalog ve geri yükleme aracıyla özgün yollarına getirilir. `KAYNAK_INDIRME.md` ve `SHA256SUMS.txt` indirme ve dosya mühürlerini açıklar. Kurulu araçlar, üretilen harici programlar ve üçüncü taraf kaynak arşivleri dağıtıma dahil edilmez; kaynak kimliği, mevcut yama/lisans manifestleri ve derleme kayıtları korunur. Önceki sürümlerin varlıkları değiştirilmez.
 
 ## Nereden başlanır?
 
@@ -23,13 +21,13 @@ Tam izlenen uygulama/kaynak ağacı otomatik **Source code (zip)** tag arşivind
 | [analizler](analizler/) | CFD/FEM/model çalışma kayıtları, büyük alan arşivleri ve tam SHA256 kataloğu |
 | [testler](testler/) | Test kodları, kabul ölçütleri, başarısızlık ve doğrulama kayıtları |
 | [kurulum](kurulum/) | Ortam hazırlığı, mevcut yerel araçlara bağlanma ve arşiv geri yükleme |
-| [surumler](surumler/) | v0.1.0 → v0.15.0 sürüm ve kanıt notları ve dosya manifestleri |
+| [surumler](surumler/) | v0.1.0 → v0.16.0 sürüm ve kanıt notları ve dosya manifestleri |
 
 Hazır Windows ortamında [BASLAT.cmd](BASLAT.cmd), `uygulama/outputs/Muhendislik-Merkezi.exe` açar. EXE başlatıcıdır; Python ortamları ve haricî araçlar yanında gerekir. [Kurulum açıklaması](kurulum/README.md) önce okunmalıdır. Mevcut çalışma klasörünü değiştirmeden ona yerel junction'larla bağlanmak mümkündür.
 
 ## Sürüm geçmişinin anlamı
 
-Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyaları, tarihli çıktılar ve korunmuş başarısız denemelerden **geriye dönük gruplandırılarak** oluşturuldu. Eski tag'ler özgün tarihteki tam çalışan uygulama kopyası değildir. v0.1.0–v0.10.0 bu geriye dönük içe aktarımdır. **v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.** Tam güncel içerik için `main` veya `v0.15.0` kullanın. Git commit/yayın tarihleri bugün oluşturulan arşivin tarihidir; kaynak dosyaların gözlenen değiştirme tarihleri ayrıca katalogdadır.
+Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyaları, tarihli çıktılar ve korunmuş başarısız denemelerden **geriye dönük gruplandırılarak** oluşturuldu. Eski tag'ler özgün tarihteki tam çalışan uygulama kopyası değildir. v0.1.0–v0.10.0 bu geriye dönük içe aktarımdır. **v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.** Tam güncel içerik için `main` veya `v0.16.0` kullanın. Git commit/yayın tarihleri bugün oluşturulan arşivin tarihidir; kaynak dosyaların gözlenen değiştirme tarihleri ayrıca katalogdadır.
 
 | Sürüm | Kanıt grubu |
 |---|---|
@@ -48,6 +46,7 @@ Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyalar�
 | [v0.13.0](surumler/v0.13.0/README.md) | İç çözümde%42 daha az Krylov iterasyonu ve üç kaynak ağda kabul denetimi |
 | [v0.14.0](surumler/v0.14.0/README.md) | İç çözüm sınırı kıyası ve kaynak koduna dayalı kalıntı konum tanısı |
 | [v0.15.0](surumler/v0.15.0/README.md) | Gerçek LINELET kapsamı ve tek bölge LU-SGS kontrolü |
+| [v0.16.0](surumler/v0.16.0/README.md) | Kaynak derleme altyapısı ve karşılaştırma kontrolleri |
 
 ## Dosyalar ve yeniden üretim
 
@@ -63,7 +62,7 @@ Bütün özgün proje dosyaları `uygulama/work` ve `uygulama/outputs` düzenind
 - RAE2822 ve ONERA M6 genel fizik kabulleri geçmedi. y+ veya kuvvet ekranının tek başına geçmesi bütün CFD doğrulamasını kapatmaz.
 - Gerçek İHA girdileri ile araç yeterlilik örnekleri ayrı tutulur. ANSYS ve OpenFOAM kurulmuş değildir; Fusion yalnız OAuth aşamasında doğrulanmıştır.
 
-[GitHub’da okunabilir güncel sonuçlar](raporlar/v0.15.0/README.md) · [Yerel HTML proje özeti](uygulama/outputs/Proje-Ozeti.html) · [Ajan dersleri](uygulama/outputs/reports/ajan_talimat_gelisimi_20261024.html) · [M6 sonuçları](raporlar/v0.11.0/README.md#onera-m6) · [Üçüncü taraf kaynakları](THIRD_PARTY_NOTICES.md)
+[GitHub’da okunabilir güncel sonuçlar](raporlar/v0.16.0/README.md) · [Yerel HTML proje özeti](uygulama/outputs/Proje-Ozeti.html) · [Ajan dersleri](uygulama/outputs/reports/ajan_talimat_gelisimi_20261024.html) · [M6 sonuçları](raporlar/v0.11.0/README.md#onera-m6) · [Üçüncü taraf kaynakları](THIRD_PARTY_NOTICES.md)
 
 Dosya/arşiv dağıtım sınırları için [GitHub büyük dosya belgeleri](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) ve [Releases belgeleri](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) esas alındı. Başarısız sonuçlar gizlenmedi; eşikler yayın için değiştirilmedi.
 
@@ -73,7 +72,11 @@ Proje sahibi hedefleri, kısıtları, araç tercihlerini ve ilerleme sırasını
 
 ## English summary
 
-A Windows CAD/aerodynamic/CFD workflow with frozen evidence. Version 0.15.0 measures native LINELET membership: 7,200 of 52,689 nodes, covering 53.8965% of a separately verified sequential-stage density squared residual. This is static membership against a prior RHS snapshot, not a recomputed residual or causal error estimate. A single-domain LU-SGS control with four total threads achieved 0.14072006 log10 density gain at 1.54404968 times the Krylov work and 3.62357987 times the observed elapsed time. The preregistered joint effect/cost gate failed. All 17 new software checks passed. A longer-line source build is proposed but has not been built or run. Physical/RAE/M6/UAV gates remain open; improved LLM behaviour has not been demonstrated. GitHub’s automatic tag archive provides tracked sources; separate raw assets use the hash-checking restore tool. Tags through 0.10.0 are retrospective evidence groups; 0.11.0 onward are incremental releases. Code and reports were developed with substantial Codex assistance.
+A Windows CAD/aerodynamic/CFD workflow with frozen evidence.
+
+Pinned SU2 8.5.0, Eigen and MEL archives were acquired and all 4,357 source files matched their archives. A native C++17/Haswell/OpenMP four-thread compiler probe passed. The first actual solver build stopped at target 259 on a missing relative include; a common source-preserving include-search option was registered. A second attempt was refused before native launch because available RAM was below the 1 GiB safety floor. All 70 new software checks passed; evidence from 14 earlier process checks was audited separately. No new CFD run or cap effect has been demonstrated. Pristine reproduction remains mandatory. Physical/RAE/M6/UAV qualification and LLM improvement remain unestablished.
+
+GitHub’s automatic Source code (zip) tag archive provides tracked sources; separate raw analysis assets use the catalogue and hash-checking restore tool. Downloaded third-party source archives and generated external programs are excluded; source identities, available patch/license manifests and build records are retained. Earlier release assets remain available. Tags through 0.10.0 are retrospective evidence groups; 0.11.0 onward are incremental releases. Code and reports were developed with substantial Codex assistance.
 
 ## EXE ve lisans durumu
 

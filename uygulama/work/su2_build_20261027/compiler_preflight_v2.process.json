@@ -1,0 +1,99 @@
+{
+  "label": "compiler_preflight_v2",
+  "prepared_utc": "2026-10-27T13:23:25.252018+00:00",
+  "command": [
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\fortran_msys2\\ucrt64\\bin\\g++.exe",
+    "-std=c++17",
+    "-O3",
+    "-march=haswell",
+    "-fopenmp",
+    "-ffast-math",
+    "-fno-finite-math-only",
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027\\omp_preflight.cpp",
+    "-o",
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027\\omp_preflight.exe"
+  ],
+  "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027",
+  "environment_sha256": "421454b00afc7384e6d8ffb981d930e3ab3c50a35c3bcbca2eb7d91c267191d8",
+  "runner_sha256": "9560c7ebace49031cced0bc2cf733268395b4c4fda20429d9f97554ada1b46e6",
+  "created_suspended": true,
+  "assigned_to_private_job": true,
+  "resumed": true,
+  "job_policy": "JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE; job handle is not inherited",
+  "resource_policy": {
+    "seconds": 30,
+    "max_tree_working_set_GiB": 3,
+    "min_system_available_GiB": 1,
+    "sampling_seconds": 0.1
+  },
+  "observed_processes": [
+    {
+      "pid": 27356,
+      "creation_filetime_100ns": 134375810052550730,
+      "creation_time_unix": 1793107405.2550735,
+      "creation_time_utc": "2026-10-27T13:23:25.255074+00:00",
+      "role": "root",
+      "first_observed_utc": "2026-10-27T13:23:25.257182+00:00",
+      "sampled_peak_working_set_bytes": 6676480,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 10044,
+      "creation_filetime_100ns": 134375810052619952,
+      "creation_time_unix": 1793107405.2619953,
+      "creation_time_utc": "2026-10-27T13:23:25.261995+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:23:25.359542+00:00",
+      "sampled_peak_working_set_bytes": 7925760,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 37628,
+      "creation_filetime_100ns": 134375810052769857,
+      "creation_time_unix": 1793107405.2769852,
+      "creation_time_utc": "2026-10-27T13:23:25.276985+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:23:25.359542+00:00",
+      "sampled_peak_working_set_bytes": 66445312,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 30584,
+      "creation_filetime_100ns": 134375810055154009,
+      "creation_time_unix": 1793107405.5154018,
+      "creation_time_utc": "2026-10-27T13:23:25.515402+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:23:25.560731+00:00",
+      "sampled_peak_working_set_bytes": 6172672,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 42816,
+      "creation_filetime_100ns": 134375810055415606,
+      "creation_time_unix": 1793107405.5415592,
+      "creation_time_utc": "2026-10-27T13:23:25.541559+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:23:25.560731+00:00",
+      "sampled_peak_working_set_bytes": 6549504,
+      "exit_code": 0,
+      "confirmed_exited": true
+    }
+  ],
+  "unobserved_exited_before_open": 0,
+  "root_identity": {
+    "pid": 27356,
+    "creation_filetime_100ns": 134375810052550730,
+    "creation_time_unix": 1793107405.2550735,
+    "creation_time_utc": "2026-10-27T13:23:25.255074+00:00",
+    "role": "root",
+    "first_observed_utc": "2026-10-27T13:23:25.257182+00:00",
+    "sampled_peak_working_set_bytes": 0,
+    "exit_code": null
+  },
+  "resumed_utc": "2026-10-27T13:23:25.258519+00:00",
+  "finished_utc": "2026-10-27T13:23:25.661603+00:00"
+}

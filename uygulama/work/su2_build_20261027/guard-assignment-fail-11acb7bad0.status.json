@@ -1,0 +1,36 @@
+{
+  "label": "guard-assignment-fail-11acb7bad0",
+  "prepared_utc": "2026-10-27T13:04:11.262434+00:00",
+  "ended_utc": "2026-10-27T13:04:11.274931+00:00",
+  "command": [
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+    "-c",
+    "print('MUST_NOT_RUN',flush=True)"
+  ],
+  "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027",
+  "build_started": false,
+  "assigned_to_private_job": false,
+  "exit_code": 125,
+  "stop_reason": "job_assignment_or_suspended_setup_failed",
+  "runner_error": {
+    "type": "OSError",
+    "message": "injected job assignment denial",
+    "recorded_utc": "2026-10-27T13:04:11.272967+00:00"
+  },
+  "seconds": 0.014999999955762178,
+  "budget_s": 10,
+  "peak_process_tree_working_set_GiB": 0.0,
+  "minimum_system_available_GiB": 3.701038360595703,
+  "sample_count": 0,
+  "sampling_seconds": 0.1,
+  "observed_process_count": 1,
+  "job_termination_requested": false,
+  "requested_termination_exit_code": null,
+  "job_active_pids_before_final_close": [],
+  "all_observed_processes_confirmed_exited": true,
+  "cleanup_confirmed": true,
+  "cleanup_errors": [],
+  "succeeded": false,
+  "working_set_policy": "Sum of current working sets of all job-member processes sampled every0.1s; shared pages may count in multiple processes; transient peaks between samples are not guaranteed observed.",
+  "physical_qualification_passed": false
+}

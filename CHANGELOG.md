@@ -3,6 +3,10 @@
 v0.1.0–v0.10.0 geriye dönük içe aktarım; v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.
 
 
+## v0.16.0 — 27 Ekim 2026: kaynak derlemesi ve LINELET kontrolü
+
+Sabit SU2 v8.5.0, Eigen ve MEL kaynakları indirildi; 4357 kaynak dosyası arşivlerle birebir doğrulandı. C++17/Haswell/OpenMP dört iş parçacığı derleyici denemesi geçti. İlk gerçek SU2 derlemesi 259. hedefte başlık arama yolu hatasıyla durdu; kaynak baytlarını koruyan ortak arama yolu düzeltmesi kaydedildi. İkinci deneme kullanılabilir RAM 1 GiB sınırının altındayken native süreci başlatmadan reddedildi. 70 yeni yazılım kontrolü geçti; önceki 14 süreç kontrolünün kanıtı ayrıca denetlendi. Yeni CFD çalıştırılmadı; pristine32 yeniden üretimi ve cap256 etki/maliyet sınaması bekliyor. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
+
 ## v0.15.0 — 27 Ekim 2026: çizgi kapsamı ve bölünme kontrolü
 
 27 Ekim 2026. Üç yeni native SU2 koşusu tamamlandı. Gerçek LINELET alanında 52689 düğümün 7200 tanesi çizgilerde; önceki doğrulanmış aşama artığının yoğunluk kare toplamının %53.8965’i bu birliğin içinde. Bu konumsal kapsam ölçümüdür; yeni alanın yeniden hesaplanan artığı, nedensellik veya ağ hata bandı değildir.

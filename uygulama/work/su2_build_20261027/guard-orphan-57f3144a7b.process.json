@@ -1,0 +1,92 @@
+{
+  "label": "guard-orphan-57f3144a7b",
+  "prepared_utc": "2026-10-27T13:04:11.386592+00:00",
+  "command": [
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+    "-c",
+    "import subprocess,sys,time; p=subprocess.Popen([sys.executable,'-c','import time; time.sleep(60)']); print('CHILD',p.pid,flush=True); time.sleep(.4); raise SystemExit(7)"
+  ],
+  "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027",
+  "environment_sha256": "b8eeb09c79a8e2f2293f5f860e31e504cc9f15c8040fc1444fdf5ddeeeb7df1e",
+  "runner_sha256": "9560c7ebace49031cced0bc2cf733268395b4c4fda20429d9f97554ada1b46e6",
+  "created_suspended": true,
+  "assigned_to_private_job": true,
+  "resumed": true,
+  "job_policy": "JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE; job handle is not inherited",
+  "resource_policy": {
+    "seconds": 10,
+    "max_tree_working_set_GiB": 3,
+    "min_system_available_GiB": 1,
+    "sampling_seconds": 0.1
+  },
+  "observed_processes": [
+    {
+      "pid": 32028,
+      "creation_filetime_100ns": 134375798513883497,
+      "creation_time_unix": 1793106251.3883495,
+      "creation_time_utc": "2026-10-27T13:04:11.388350+00:00",
+      "role": "root",
+      "first_observed_utc": "2026-10-27T13:04:11.396873+00:00",
+      "sampled_peak_working_set_bytes": 4902912,
+      "exit_code": 7,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 37956,
+      "creation_filetime_100ns": 134375798514004736,
+      "creation_time_unix": 1793106251.4004745,
+      "creation_time_utc": "2026-10-27T13:04:11.400475+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:04:11.498974+00:00",
+      "sampled_peak_working_set_bytes": 8085504,
+      "exit_code": 125,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 28520,
+      "creation_filetime_100ns": 134375798514628675,
+      "creation_time_unix": 1793106251.4628677,
+      "creation_time_utc": "2026-10-27T13:04:11.462868+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:04:11.498974+00:00",
+      "sampled_peak_working_set_bytes": 4898816,
+      "exit_code": 125,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 15620,
+      "creation_filetime_100ns": 134375798514162729,
+      "creation_time_unix": 1793106251.416273,
+      "creation_time_utc": "2026-10-27T13:04:11.416273+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:04:11.498974+00:00",
+      "sampled_peak_working_set_bytes": 13733888,
+      "exit_code": 7,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 7272,
+      "creation_filetime_100ns": 134375798514696509,
+      "creation_time_unix": 1793106251.4696503,
+      "creation_time_utc": "2026-10-27T13:04:11.469650+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T13:04:11.498974+00:00",
+      "sampled_peak_working_set_bytes": 11350016,
+      "exit_code": 125,
+      "confirmed_exited": true
+    }
+  ],
+  "unobserved_exited_before_open": 0,
+  "root_identity": {
+    "pid": 32028,
+    "creation_filetime_100ns": 134375798513883497,
+    "creation_time_unix": 1793106251.3883495,
+    "creation_time_utc": "2026-10-27T13:04:11.388350+00:00",
+    "role": "root",
+    "first_observed_utc": "2026-10-27T13:04:11.396873+00:00",
+    "sampled_peak_working_set_bytes": 0,
+    "exit_code": null
+  },
+  "resumed_utc": "2026-10-27T13:04:11.397787+00:00",
+  "finished_utc": "2026-10-27T13:04:11.904006+00:00"
+}

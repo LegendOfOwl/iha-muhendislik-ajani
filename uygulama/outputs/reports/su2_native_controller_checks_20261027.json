@@ -1,0 +1,58 @@
+{
+  "checked_utc": "2026-10-27T17:53:48.165817+00:00",
+  "passed": true,
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "tests": [
+    {
+      "test": "__main__.NativeControllerGuards.test_changed_limit_rejected_even_if_case_anchor_is_refreshed",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_contract_edit_rejected_by_original_external_anchor",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_current_runtime_and_compiler_bytes_are_rechecked",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_different_valid_compiler_manifest_rejected_before_native",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_different_valid_runtime_manifest_rejected_before_native",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_live_code_change_rejected_while_snapshot_remains_intact",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_unaccepted_or_missing_extraction_never_reaches_decision_gates",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_unintended_source_patch_rejected_before_native",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_valid_fixture_passes_real_contract_build_and_single_change_guards",
+      "passed": true
+    },
+    {
+      "test": "__main__.NativeControllerGuards.test_wrong_pristine_reference_rejected_before_native",
+      "passed": true
+    }
+  ],
+  "failure_details": [],
+  "test_file_sha256": "a8f429871a3c0184f9ce23e1256142577eaa7bdf37b15c54a76de8b2c669f640",
+  "controller_sha256": "0cccca074715bfece43f743e5f5ede6ce76091fd0a07ed7b048268ea91a18249",
+  "scope": "Temporary fake artifacts and real controller hash/source guards; native launcher is stubbed.",
+  "actual_CFD_runs": 0,
+  "actual_builds": 0,
+  "prior_check_reports_modified": false,
+  "physical_qualification_passed": false,
+  "LLM_improvement_demonstrated": false
+}

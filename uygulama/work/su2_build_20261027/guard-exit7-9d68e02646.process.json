@@ -1,0 +1,48 @@
+{
+  "label": "guard-exit7-9d68e02646",
+  "prepared_utc": "2026-10-27T13:04:11.275939+00:00",
+  "command": [
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+    "-c",
+    "raise SystemExit(7)"
+  ],
+  "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_20261027",
+  "environment_sha256": "b8eeb09c79a8e2f2293f5f860e31e504cc9f15c8040fc1444fdf5ddeeeb7df1e",
+  "runner_sha256": "9560c7ebace49031cced0bc2cf733268395b4c4fda20429d9f97554ada1b46e6",
+  "created_suspended": true,
+  "assigned_to_private_job": true,
+  "resumed": true,
+  "job_policy": "JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE; job handle is not inherited",
+  "resource_policy": {
+    "seconds": 10,
+    "max_tree_working_set_GiB": 3,
+    "min_system_available_GiB": 1,
+    "sampling_seconds": 0.1
+  },
+  "observed_processes": [
+    {
+      "pid": 21812,
+      "creation_filetime_100ns": 134375798512786618,
+      "creation_time_unix": 1793106251.2786617,
+      "creation_time_utc": "2026-10-27T13:04:11.278662+00:00",
+      "role": "root",
+      "first_observed_utc": "2026-10-27T13:04:11.282577+00:00",
+      "sampled_peak_working_set_bytes": 2818048,
+      "exit_code": 7,
+      "confirmed_exited": true
+    }
+  ],
+  "unobserved_exited_before_open": 0,
+  "root_identity": {
+    "pid": 21812,
+    "creation_filetime_100ns": 134375798512786618,
+    "creation_time_unix": 1793106251.2786617,
+    "creation_time_utc": "2026-10-27T13:04:11.278662+00:00",
+    "role": "root",
+    "first_observed_utc": "2026-10-27T13:04:11.282577+00:00",
+    "sampled_peak_working_set_bytes": 0,
+    "exit_code": null
+  },
+  "resumed_utc": "2026-10-27T13:04:11.282577+00:00",
+  "finished_utc": "2026-10-27T13:04:11.384280+00:00"
+}
