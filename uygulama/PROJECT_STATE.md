@@ -263,3 +263,18 @@ Kurulum/araç entegrasyonu ve son model araştırması/yetenek raporu görev kay
 
 - Sabit SU2 v8.5.0, Eigen ve MEL kaynakları indirildi; 4357 kaynak dosyası arşivlerle birebir doğrulandı. C++17/Haswell/OpenMP dört iş parçacığı derleyici denemesi geçti. İlk gerçek SU2 derlemesi 259. hedefte başlık arama yolu hatasıyla durdu; kaynak baytlarını koruyan ortak arama yolu düzeltmesi kaydedildi. İkinci deneme kullanılabilir RAM 1 GiB sınırının altındayken native süreci başlatmadan reddedildi. 70 yeni yazılım kontrolü geçti; önceki 14 süreç kontrolünün kanıtı ayrıca denetlendi. Yeni CFD çalıştırılmadı; pristine32 yeniden üretimi ve cap256 etki/maliyet sınaması bekliyor. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
 - Rapor outputs/reports/su2_kaynak_kontrolu_20261027.html. Kaynak/ağaç kimlikleri, eski başarısız derleme ve RAM reddi korundu. Yöntem limitleri method_design.json içinde native öncesi donduruldu; hiçbir yeni CFD sonucu yok. Sonraki derleme ortak ek include yoluyla ve kaynak baytları korunarak yapılmalı.
+
+
+## 27 Ekim: v0.16.0 yayın doğrulandı
+
+- Public main/tag 711ead87c3f86c64953941cb172500f453769667;16 sürüm/39 varlık. Yeni varlıkların sunucu SHA256/boyutu ve önceki15 sürüm/36 varlık/30 tag referansı doğrulandı. 6414 kaynak blobu, 14 restore kontrolü ve 3 gerçek ham yol denetlendi. Genel fizik/CFD/LLM kabulü değişmedi; makbuz github_yayini_v0.16.0.md.
+
+
+## 27 Ekim: kaynak derlemesi yeniden üretildi ve uzun çizgi sınandı
+
+- Önceki başarısız derleme ve RAM reddi korundu. Kaynak baytları değişmeden yalnız hata veren çeviri birimine include yolu eklendi; 258 doğrulanmış nesne korunarak kalan32 hedef81,063s içinde derlendi. Aynı290 etkin komut tarifiyle ayrı cap256 derlemesi761,485s tamamlandı. Kurulu resmî çözücü değiştirilmedi.
+- Aynı kaynak ağ/fine3999 seed/fizikle üç yeni200-adımlık native koşu; tamamında alan/geçmiş199 eşleşti. Resmî32/kaynak32 yeniden üretimi geçti; beş SI log10 RMS eğrisindeki en büyük fark0,00175396, sonCD farkı0. Bu yalnız dar sayısal yeniden üretim kabulüdür.
+- Yalnız MAX_LINELET_POINTS32→256: gerçek üyelik7200→34401; aynı eski sıralı-aşama RHS yoğunluk kare payı%53.896527→%99.979010. Yoğunluk kazancı-0.00938603log<0,3; SA kötüleşmesi-0.00099585log; toplamKrylov16000→16000 ve süre74.125→95.109s. Ortak etki kabulüfalse; bütün yoğunluk artığının kapsanması iyileşmeyi garanti etmedi.
+- Her iki kaynak kolunda flow+SA bütün200 adımda40 tavanda; Krylov≤1,5 kapısı burada ayırt edici değil, uzun çizgilerin aritmetik maliyetini temsil etmez. LinSolRes Givens tabanlı kestirimdir; bağımsız gerçek lineer artık diye sunulmadı. Tek süre çifti genel performans ölçümü değildir.
+- 40 yeni yazılım kontrolü geçti; eski70 tekrar sayılmadı. 738 eski/45 yeni ham hash denetlendi; gerçekİHA3girdisi v0.16 ile aynı. Rapor outputs/reports/su2_kaynak_karsilastirma_20261027.html.
+- Genel fizik/RAE2822/M6/VLM/İHA kabulüfalse, GCI null. Eski fine3999 rolü korunur; bu tanısal kol üç-ağ ailesine eklenmez. LLM uzmanlığı/iyileşmesi ölçülmedi. Sonraki yöntem adayı: sabit durumda gerçek iç lineer artığın pasif ölçümü ve kestirimden ayrılması; henüz çalıştırılmadı, yeni ön kayıt gerekir. Görev20261027-154600-18828f yalnız bu sınırlı deney/rapor paketi için kapandı.

@@ -1,0 +1,11 @@
+--- a/Common/include/geometry/CGeometry.hpp
++++ b/Common/include/geometry/CGeometry.hpp
+@@ -208,7 +208,7 @@
+   struct CLineletInfo {
+     /*!< \brief Detect isotropic mesh region. */
+     static passivedouble ALPHA_ISOTROPIC() { return 0.8; }
+-    enum : unsigned long { MAX_LINELET_POINTS = 32 }; /*!< \brief Maximum points per linelet. */
++    enum : unsigned long { MAX_LINELET_POINTS = 256 }; /*!< \brief Maximum points per linelet. */
+ 
+     std::vector<std::vector<unsigned long>> linelets; /*!< \brief Point indices for each linelet. */
+ 

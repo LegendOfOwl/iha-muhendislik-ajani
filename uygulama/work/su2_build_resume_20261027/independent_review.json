@@ -1,0 +1,293 @@
+{
+  "schema": "independent_linecap_review_v1",
+  "created_utc": "2026-10-27T19:00:30.794026+00:00",
+  "scope": "Read-only independent audit of existing frozen native runs. No solver or build launched, no frozen file changed. This is not an independent blinded prediction.",
+  "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+  "contract_sha256": "852169d743ef330adc92c5022ad9cf0d6f5703114f9b071cad75495c7a348968",
+  "anchor_and_frozen_live_code_hashes_verified": true,
+  "arms": {
+    "release32": {
+      "raw_files_verified": 15,
+      "all_200_history_rows_recomputed": true,
+      "seal_sha256": "9e0a4ff2b4ecee703198a11d6de2cf1c284d41bf3e7ce3160fd8c73afe03a586",
+      "payload_sha256": "72503b50ecf14497b8f693f02158e03c418552e45c7534235e7405e10ddb908e",
+      "exit_code": 0,
+      "field_history_iteration": 199,
+      "elapsed_seconds": 82.65599999995902,
+      "final_SI_RMS": {
+        "Rho": -9.761678858033427,
+        "RhoU": -7.635905185486548,
+        "RhoV": -8.599088435486548,
+        "RhoE": -5.5472937729396685,
+        "nu": -12.244438014906242
+      },
+      "final_CD": 0.002848056245,
+      "CD_last100_range": 1.3939999996340213e-09,
+      "native_arrays_all_finite": true,
+      "vtk_min_density": 0.9919816851615906,
+      "vtk_min_pressure": 0.7142700552940369,
+      "independent_mapping_method": "vtkStaticPointLocator nearest point plus full uniqueness check",
+      "max_mapping_distance_m": 6.509348286129906e-08,
+      "membership_nodes": 7200,
+      "membership_fraction": 0.1366509138529864,
+      "native_mask_exactly_matches_payload": true,
+      "fixed_old_Rho_squared_share_recomputed": 0.5389652682624415,
+      "linear_solver_observations": {
+        "Linear_Solver_Iterations": {
+          "minimum": 40.0,
+          "maximum": 40.0,
+          "at_40_count": 200,
+          "sum": 8000,
+          "reported_log10_residual_min": -0.9574241115,
+          "reported_log10_residual_max": -0.8572058271,
+          "reported_log10_residual_final": -0.922353669,
+          "reported_residual_ratio_final": 0.11957663588185054,
+          "at_or_below_configured_1e_minus3_count": 0
+        },
+        "LinSolIterTurb": {
+          "minimum": 40.0,
+          "maximum": 40.0,
+          "at_40_count": 200,
+          "sum": 8000,
+          "reported_log10_residual_min": -2.922603007,
+          "reported_log10_residual_max": -2.562130454,
+          "reported_log10_residual_final": -2.705025871,
+          "reported_residual_ratio_final": 0.001972305242039122,
+          "at_or_below_configured_1e_minus3_count": 0
+        }
+      }
+    },
+    "build32": {
+      "raw_files_verified": 15,
+      "all_200_history_rows_recomputed": true,
+      "seal_sha256": "a759e8eef96ca40b7e524c284a8b988233ec3323d073fbf96d80a9566ac1ebd9",
+      "payload_sha256": "c7fdd4e714aff4ab84f0661ea1b9c556def2c5c76f8b5531d95e5c293ac635f1",
+      "exit_code": 0,
+      "field_history_iteration": 199,
+      "elapsed_seconds": 74.125,
+      "final_SI_RMS": {
+        "Rho": -9.761658478033429,
+        "RhoU": -7.635916435486548,
+        "RhoV": -8.599174175486548,
+        "RhoE": -5.54826863293967,
+        "nu": -12.24445727490624
+      },
+      "final_CD": 0.002848056245,
+      "CD_last100_range": 1.3939999996340213e-09,
+      "native_arrays_all_finite": true,
+      "vtk_min_density": 0.9919816851615906,
+      "vtk_min_pressure": 0.7142700552940369,
+      "independent_mapping_method": "vtkStaticPointLocator nearest point plus full uniqueness check",
+      "max_mapping_distance_m": 6.509348286129906e-08,
+      "membership_nodes": 7200,
+      "membership_fraction": 0.1366509138529864,
+      "native_mask_exactly_matches_payload": true,
+      "fixed_old_Rho_squared_share_recomputed": 0.5389652682624415,
+      "linear_solver_observations": {
+        "Linear_Solver_Iterations": {
+          "minimum": 40.0,
+          "maximum": 40.0,
+          "at_40_count": 200,
+          "sum": 8000,
+          "reported_log10_residual_min": -0.9574240952,
+          "reported_log10_residual_max": -0.857205942,
+          "reported_log10_residual_final": -0.922598246,
+          "reported_residual_ratio_final": 0.11950931413901313,
+          "at_or_below_configured_1e_minus3_count": 0
+        },
+        "LinSolIterTurb": {
+          "minimum": 40.0,
+          "maximum": 40.0,
+          "at_40_count": 200,
+          "sum": 8000,
+          "reported_log10_residual_min": -2.922602495,
+          "reported_log10_residual_max": -2.562130744,
+          "reported_log10_residual_final": -2.697869215,
+          "reported_residual_ratio_final": 0.002005075752169683,
+          "at_or_below_configured_1e_minus3_count": 0
+        }
+      }
+    },
+    "build256": {
+      "raw_files_verified": 15,
+      "all_200_history_rows_recomputed": true,
+      "seal_sha256": "27b848de4e875b9e1a3fbacd35feb1a996b208e461d5ae9f46b3c7fc27d78dd9",
+      "payload_sha256": "a02582747ac069665ed30f8080a79a4b05cc24e4a543e37c022b8b99407474dd",
+      "exit_code": 0,
+      "field_history_iteration": 199,
+      "elapsed_seconds": 95.10899999993853,
+      "final_SI_RMS": {
+        "Rho": -9.752272448033427,
+        "RhoU": -7.635883845486548,
+        "RhoV": -9.605329545486548,
+        "RhoE": -5.825258382939668,
+        "nu": -12.245453124906243
+      },
+      "final_CD": 0.002848056217,
+      "CD_last100_range": 1.408000000011761e-09,
+      "native_arrays_all_finite": true,
+      "vtk_min_density": 0.9919817447662354,
+      "vtk_min_pressure": 0.7142700552940369,
+      "independent_mapping_method": "vtkStaticPointLocator nearest point plus full uniqueness check",
+      "max_mapping_distance_m": 6.509348286129906e-08,
+      "membership_nodes": 34401,
+      "membership_fraction": 0.6529066788134146,
+      "native_mask_exactly_matches_payload": true,
+      "fixed_old_Rho_squared_share_recomputed": 0.9997901025323731,
+      "linear_solver_observations": {
+        "Linear_Solver_Iterations": {
+          "minimum": 40.0,
+          "maximum": 40.0,
+          "at_40_count": 200,
+          "sum": 8000,
+          "reported_log10_residual_min": -2.574965554,
+          "reported_log10_residual_max": -2.143679721,
+          "reported_log10_residual_final": -2.574917083,
+          "reported_residual_ratio_final": 0.0026612331030989676,
+          "at_or_below_configured_1e_minus3_count": 0
+        },
+        "LinSolIterTurb": {
+          "minimum": 40.0,
+          "maximum": 40.0,
+          "at_40_count": 200,
+          "sum": 8000,
+          "reported_log10_residual_min": -2.933727509,
+          "reported_log10_residual_max": -2.561734418,
+          "reported_log10_residual_final": -2.730073032,
+          "reported_residual_ratio_final": 0.0018617740299583017,
+          "at_or_below_configured_1e_minus3_count": 0
+        }
+      }
+    }
+  },
+  "raw_file_record_count": 45,
+  "reproduction_recomputed_exact": true,
+  "reproduction_accepted": true,
+  "reproduction_metrics": {
+    "max_abs_RMS_log10_difference_by_component": {
+      "Rho": 4.4680000000241193e-05,
+      "RhoU": 1.5699999998730618e-05,
+      "RhoV": 0.0007872300000002497,
+      "RhoE": 0.0017539600000002764,
+      "nu": 4.2919999998503044e-05
+    },
+    "final_CD_absolute_difference": 0.0,
+    "reference_Krylov": 16000,
+    "build32_Krylov": 16000,
+    "combined_Krylov_relative_difference": 0.0
+  },
+  "source_change_review": {
+    "verified": true,
+    "only_change": "MAX_LINELET_POINTS",
+    "reference_cap": 32,
+    "candidate_cap": 256,
+    "pristine_source_sha256": "9da2580a4529285e9e1c52ddac9aa39f91b593ddcc822fb8e6a385db5b51a689",
+    "modified_source_sha256": "99bebcdc9abdd3df606591eda8be71217b47b0b9963c71cb6815d8a012515903",
+    "patch_sha256": "8c31eb9d126e6ca38ebaf86037bd0b3d8f50d3308b9f91a202bba904a060da35"
+  },
+  "effect_recomputed_exact": true,
+  "effect_accepted": false,
+  "effect_rejected_because": [
+    "density_gain"
+  ],
+  "independent_scalar_metrics": {
+    "density_log10_gain": -0.00938603000000171,
+    "SA_log10_worsening": -0.0009958500000024628,
+    "work_ratio": 1.0,
+    "observed_elapsed_ratio": 1.2830893760531337
+  },
+  "membership_node_gain": 27201,
+  "fixed_old_Rho_share_gain": 0.4608248342699316,
+  "source_evidence": [
+    {
+      "path": "tools/su2-build/v8.5.0/source/SU2_CFD/src/output/CFlowCompOutput.cpp",
+      "sha256": "bfdd613fda3f70c11d17f63ecc5e8982741087f13b3a77dc90fe1b523374f182",
+      "lines": [
+        446,
+        447
+      ],
+      "supports": "Flow history stores log10(GetResLinSolver()) and iteration count."
+    },
+    {
+      "path": "tools/su2-build/v8.5.0/source/SU2_CFD/src/output/CFlowOutput.cpp",
+      "sha256": "0cdf05a698729afc3fb55e7f400c743898709cdc225aba8c699eef8b7f971d88",
+      "lines": [
+        1286,
+        1287
+      ],
+      "supports": "SA history stores the analogous count and log10 residual."
+    },
+    {
+      "path": "tools/su2-build/v8.5.0/source/Common/src/linear_algebra/CSysSolve.cpp",
+      "sha256": "767ff544d658baffcadf3ed2fa9cd2b3a83c0f696ebecd4765704d368cf136b6",
+      "lines": [
+        468,
+        479,
+        490,
+        529,
+        573,
+        601,
+        616
+      ],
+      "supports": "FGMRES uses beta/norm0; beta is the reduced-system estimate; optional true-residual recalculation is under monitoring."
+    },
+    {
+      "path": "tools/su2-build/v8.5.0/source/Common/src/linear_algebra/CSysSolve.cpp",
+      "sha256": "767ff544d658baffcadf3ed2fa9cd2b3a83c0f696ebecd4765704d368cf136b6",
+      "lines": [
+        1427,
+        1428,
+        1429,
+        1504
+      ],
+      "supports": "Normal solve obtains configured cap/tolerance and disables screen monitoring."
+    },
+    {
+      "path": "tools/su2-build/v8.5.0/source/SU2_CFD/include/solvers/CFVMFlowSolverBase.inl",
+      "sha256": "b8e54f986ce075052e54586c6f12026c785262f96875426bb6e918ae374b3c46",
+      "lines": [
+        652,
+        655,
+        656
+      ],
+      "supports": "Flow implicit solve copies System iteration count/residual to output fields."
+    },
+    {
+      "path": "tools/su2-build/v8.5.0/source/SU2_CFD/include/solvers/CScalarSolver.inl",
+      "sha256": "cb394bab2ccdba970a59ccfa5fd81ae561e110e0a1ddcfd102270f0eb8426112",
+      "lines": [
+        575,
+        578,
+        579
+      ],
+      "supports": "SA implicit scalar solve copies the same System diagnostics."
+    },
+    {
+      "path": "tools/su2-build/v8.5.0/source/Common/src/geometry/CGeometry.cpp",
+      "sha256": "af479d996b6493cb2ac11c031b17f99511806ac94afd2d7ee05c5a4f6d54e79f",
+      "lines": [
+        4382,
+        4401,
+        4429,
+        4448,
+        4449,
+        4450
+      ],
+      "supports": "Cap is only one stopping condition; printed global average is truncated to unsigned long; colors are not line IDs."
+    }
+  ],
+  "limits": [
+    "Numerical pristine-release reproduction is accepted only for this registered 200-step 2D case and these limits; physical, M6 and LLM acceptance remain false.",
+    "All 200 flow and SA solves in each arm hit the configured40-step cap; equality of16000 recorded Krylov steps is not inner linear convergence.",
+    "With baseline already at200*(40+40)=16000, the <=1.5 Krylov-count cost gate is non-discriminating for a candidate using the same caps; it does not count per-iteration preconditioner work. Thresholds were not changed.",
+    "LinSolRes values are logged internal FGMRES beta/norm0 estimates; they are not independently recomputed true linear residuals. All observed ratios remain above configured0.001 in these runs.",
+    "Elapsed cost1.283089376 is one observed run pair, not a general timing benchmark.",
+    "The coverage gain uses the SAME frozen OLD explicit-stage Rho RHS, not the residual field of this new implicit solve; increased coverage did not deliver the required density gain.",
+    "The printed152 average is truncated, not an exact length of every line or proof of full-length256 lines.",
+    "The negative outcome rejects this specific32-to256 controlled change under its joint contract; it does not reject all line-preconditioner methods."
+  ],
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false,
+  "judgment": "Evidence and gates are internally consistent. Pristine reproduction passes; linelet-cap effect fails solely the required density gain despite substantially expanded membership and old-RHS coverage."
+}

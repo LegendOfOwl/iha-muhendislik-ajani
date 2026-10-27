@@ -1,0 +1,63 @@
+{
+  "label": "p32r",
+  "variant": "pristine32",
+  "cap": 32,
+  "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+  "source_tree_sha256": "9da2580a4529285e9e1c52ddac9aa39f91b593ddcc822fb8e6a385db5b51a689",
+  "pristine_archive_tree_sha256": "40fd271c28fddde1fb845231070a06159a3456fe3e946f0c0ed5f0d06d5cbcbc",
+  "dependency_tree_sha256": {
+    "eigen": "aa47956351140cdb175ef15130e007b4518b828eb7b231354351d84b78fc7a2b",
+    "mel": "742a680db02cce20e5b6d2a54f091361aa1ab5bc5d0fd0bea5598d0f44976166"
+  },
+  "compiler_manifest_sha256": "8c52f2718a58c4a29b529a26a13d221aef878e8662ab088f388e36864cc9d87d",
+  "runtime_manifest_sha256": "54c11cdfa5d0c906ca757df4d774772618f239b3c6889fdfe6b2077704f2ceb7",
+  "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "succeeded": true,
+  "contract_sha256": "85a78da6d9bac88b027db106ab867761dbd5b3e4c11e19ffe8f4acfdaf0f89be",
+  "phases": [
+    {
+      "label": "p32r-compile",
+      "prepared_utc": "2026-10-27T18:33:20.835043+00:00",
+      "ended_utc": "2026-10-27T18:34:41.894672+00:00",
+      "command": [
+        "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\ninja.exe",
+        "-C",
+        "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p32a\\build",
+        "-f",
+        "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\work\\su2_build_resume_20261027\\recovery.ninja",
+        "-j",
+        "1",
+        "SU2_CFD/src/SU2_CFD.exe"
+      ],
+      "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p32a\\source",
+      "build_started": true,
+      "assigned_to_private_job": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "runner_error": null,
+      "seconds": 81.06300000008196,
+      "budget_s": 1219.125,
+      "peak_process_tree_working_set_GiB": 0.749725341796875,
+      "minimum_system_available_GiB": 4.320770263671875,
+      "sample_count": 806,
+      "sampling_seconds": 0.1,
+      "observed_process_count": 80,
+      "job_termination_requested": false,
+      "requested_termination_exit_code": null,
+      "job_active_pids_before_final_close": [],
+      "all_observed_processes_confirmed_exited": true,
+      "cleanup_confirmed": true,
+      "cleanup_errors": [],
+      "succeeded": true,
+      "working_set_policy": "Sum of current working sets of all job-member processes sampled every0.1s; shared pages may count in multiple processes; transient peaks between samples are not guaranteed observed.",
+      "physical_qualification_passed": false
+    }
+  ],
+  "seconds": 81.06300000008196,
+  "cumulative_native_build_seconds": 661.938000000082,
+  "physical_qualification_passed": false,
+  "exe": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p32r\\build\\SU2_CFD\\src\\SU2_CFD.exe",
+  "exe_sha256": "024c912c7d80a9f32fd058590a5ecacf65ed0915d213773d6921275c0e3e641c",
+  "bytes": 14570998,
+  "actual_worktree_executable": "tools\\su2-build\\v8.5.0\\controls\\p32a\\build\\SU2_CFD\\src\\SU2_CFD.exe"
+}

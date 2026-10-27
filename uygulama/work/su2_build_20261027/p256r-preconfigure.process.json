@@ -1,0 +1,79 @@
+{
+  "label": "p256r-preconfigure",
+  "prepared_utc": "2026-10-27T18:45:01.217670+00:00",
+  "command": [
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p256r\\source\\preconfigure.py",
+    "--no-codi",
+    "--no-medi",
+    "--no-opdi",
+    "--no-mpp",
+    "--no-coolprop",
+    "--no-mel",
+    "--no-fado",
+    "--no-mlpcpp",
+    "--no-eigen"
+  ],
+  "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p256r\\source",
+  "environment_sha256": "23d99e90568a21d5150971211f53919ecf59cf0942c1792114c7e768aa250514",
+  "runner_sha256": "9560c7ebace49031cced0bc2cf733268395b4c4fda20429d9f97554ada1b46e6",
+  "created_suspended": true,
+  "assigned_to_private_job": true,
+  "resumed": true,
+  "job_policy": "JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE; job handle is not inherited",
+  "resource_policy": {
+    "seconds": 1711.344000000041,
+    "max_tree_working_set_GiB": 3.0,
+    "min_system_available_GiB": 1.0,
+    "sampling_seconds": 0.1
+  },
+  "observed_processes": [
+    {
+      "pid": 37248,
+      "creation_filetime_100ns": 134376003012221314,
+      "creation_time_unix": 1793126701.2221317,
+      "creation_time_utc": "2026-10-27T18:45:01.222132+00:00",
+      "role": "root",
+      "first_observed_utc": "2026-10-27T18:45:01.233878+00:00",
+      "sampled_peak_working_set_bytes": 4935680,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 12992,
+      "creation_filetime_100ns": 134376003012366954,
+      "creation_time_unix": 1793126701.2366962,
+      "creation_time_utc": "2026-10-27T18:45:01.236696+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T18:45:01.335788+00:00",
+      "sampled_peak_working_set_bytes": 8110080,
+      "exit_code": 0,
+      "confirmed_exited": true
+    },
+    {
+      "pid": 25732,
+      "creation_filetime_100ns": 134376003012479789,
+      "creation_time_unix": 1793126701.24798,
+      "creation_time_utc": "2026-10-27T18:45:01.247980+00:00",
+      "role": "descendant",
+      "first_observed_utc": "2026-10-27T18:45:01.335788+00:00",
+      "sampled_peak_working_set_bytes": 20443136,
+      "exit_code": 0,
+      "confirmed_exited": true
+    }
+  ],
+  "unobserved_exited_before_open": 0,
+  "root_identity": {
+    "pid": 37248,
+    "creation_filetime_100ns": 134376003012221314,
+    "creation_time_unix": 1793126701.2221317,
+    "creation_time_utc": "2026-10-27T18:45:01.222132+00:00",
+    "role": "root",
+    "first_observed_utc": "2026-10-27T18:45:01.233878+00:00",
+    "sampled_peak_working_set_bytes": 0,
+    "exit_code": null
+  },
+  "resumed_utc": "2026-10-27T18:45:01.234879+00:00",
+  "finished_utc": "2026-10-27T18:45:01.436586+00:00"
+}

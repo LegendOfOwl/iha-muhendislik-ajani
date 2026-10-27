@@ -1,0 +1,53 @@
+{
+  "label": "p256r-commands-after",
+  "prepared_utc": "2026-10-27T18:45:44.800986+00:00",
+  "command": [
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\.venv\\Scripts\\ninja.exe",
+    "-C",
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p256r\\build",
+    "-f",
+    "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p256r\\effective-recipe.ninja",
+    "-t",
+    "commands",
+    "SU2_CFD/src/SU2_CFD.exe"
+  ],
+  "cwd": "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2-build\\v8.5.0\\controls\\p256r\\source",
+  "environment_sha256": "23d99e90568a21d5150971211f53919ecf59cf0942c1792114c7e768aa250514",
+  "runner_sha256": "9560c7ebace49031cced0bc2cf733268395b4c4fda20429d9f97554ada1b46e6",
+  "created_suspended": true,
+  "assigned_to_private_job": true,
+  "resumed": true,
+  "job_policy": "JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE; job handle is not inherited",
+  "resource_policy": {
+    "seconds": 1667.75,
+    "max_tree_working_set_GiB": 3.0,
+    "min_system_available_GiB": 1.0,
+    "sampling_seconds": 0.1
+  },
+  "observed_processes": [
+    {
+      "pid": 36668,
+      "creation_filetime_100ns": 134376003448027721,
+      "creation_time_unix": 1793126744.8027725,
+      "creation_time_utc": "2026-10-27T18:45:44.802773+00:00",
+      "role": "root",
+      "first_observed_utc": "2026-10-27T18:45:44.809516+00:00",
+      "sampled_peak_working_set_bytes": 2715648,
+      "exit_code": 0,
+      "confirmed_exited": true
+    }
+  ],
+  "unobserved_exited_before_open": 0,
+  "root_identity": {
+    "pid": 36668,
+    "creation_filetime_100ns": 134376003448027721,
+    "creation_time_unix": 1793126744.8027725,
+    "creation_time_utc": "2026-10-27T18:45:44.802773+00:00",
+    "role": "root",
+    "first_observed_utc": "2026-10-27T18:45:44.809516+00:00",
+    "sampled_peak_working_set_bytes": 0,
+    "exit_code": null
+  },
+  "resumed_utc": "2026-10-27T18:45:44.809516+00:00",
+  "finished_utc": "2026-10-27T18:45:44.911186+00:00"
+}

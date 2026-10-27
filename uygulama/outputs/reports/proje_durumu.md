@@ -67,3 +67,5 @@ Kütlesi bilinmeyen bileşenler: yapı, motor_ve_pervane, enerji_sistemi, aviyon
 - 20261025-230529-b41cb0: Düz plaka yakınsaması: ön kayıtlı sabit CFL100/10 kontrolü ve kaynaklı neden araştırması — tamamlandı
 - 20261026-182125-8e3de6: Ön kayıtlı iç doğrusal tolerans kontrolü: aynı seed/ağda Krylov işi ve SI kalıntı farkı — tamamlandı
 - 20261026-191942-91103b: İnce kaynak ağda ön kayıtlı iç çözücü40/80 kontrolü ve bağımsız kaynak incelemesi — tamamlandı
+- 20261027-085415-c7c181: LINELET gerçek kapsamı ve bölgesel artıkla kaynaklı sayısal kontrol — tamamlandı
+- 20261027-154600-18828f: SU2 kaynak derlemesi ve uzun LINELET mekanizmasının kontrollü sınaması — tamamlandı

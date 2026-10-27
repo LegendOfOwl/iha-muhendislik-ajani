@@ -5,10 +5,10 @@ from collections import Counter
 import os,json,hashlib,zipfile,shutil,subprocess
 from build_export import ROOT,DEST,STATE,ASSETS,URL,digest,dump,excluded,is_bulk,secret_findings
 
-VERSION='v0.16.0'
+VERSION='v0.17.0'
 RUN=STATE/VERSION
 PLAN=RUN/'plan.json'
-BASE_HEAD='c4cbc871cb7c8dbfddd78782dcc71d67d0d8f821'
+BASE_HEAD='711ead87c3f86c64953941cb172500f453769667'
 def now():return datetime.now(timezone.utc).isoformat()
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 
@@ -34,7 +34,7 @@ def plan():
             if rel.startswith('work/publish/') and relative.suffix not in {'.py'}:reason='local_publication_state_assets_or_auth'
             if rel.startswith('work/publish/restore-fixtures/') or (len(relative.parts)>2 and relative.parts[:2]==('work','publish') and relative.parts[2].startswith('v0.')):reason='publication_fixture_or_self_output'
             if 'compiler_packages' in relative.parts or rel.endswith('.pkg.tar.zst'):reason='external_compiler_binary_package'
-            if rel.startswith('work/su2_build_20261027/') and path.suffix.lower() in {'.exe','.dll','.pdb','.o','.obj','.a','.lib','.zip','.gz','.tgz','.tar','.partial','.whl'}:reason='generated_external_build_binary_or_archive'
+            if rel.startswith(('work/su2_build_20261027/','work/su2_build_resume_20261027/')) and path.suffix.lower() in {'.exe','.dll','.pdb','.o','.obj','.a','.lib','.zip','.gz','.tgz','.tar','.partial','.whl'}:reason='generated_external_build_binary_or_archive'
             if path.is_symlink():reason='symbolic_link'
             if reason:omitted.append({'path':rel,'reason':reason});continue
             labels=secret_findings(path)

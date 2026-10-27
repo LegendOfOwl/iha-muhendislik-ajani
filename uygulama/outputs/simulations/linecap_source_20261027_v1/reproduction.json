@@ -1,0 +1,51 @@
+{
+  "gate": "pristine_reproduction",
+  "accepted": true,
+  "checks": {
+    "valid_contract": true,
+    "release_normalization": true,
+    "release_native_exit_and_matched_iteration": true,
+    "release_complete_finite_history": true,
+    "release_complete_stable_CD_window": true,
+    "release_field_validity_proven": true,
+    "release_positive_finite_elapsed": true,
+    "release_bijective_native_mapping": true,
+    "release_canonical_native_membership": true,
+    "release_input_identities_present": true,
+    "build32_normalization": true,
+    "build32_native_exit_and_matched_iteration": true,
+    "build32_complete_finite_history": true,
+    "build32_complete_stable_CD_window": true,
+    "build32_field_validity_proven": true,
+    "build32_positive_finite_elapsed": true,
+    "build32_bijective_native_mapping": true,
+    "build32_canonical_native_membership": true,
+    "build32_input_identities_present": true,
+    "shared_input_identities": true,
+    "registered_pristine_source": true,
+    "five_RMS_curves_reproduced": true,
+    "final_CD_reproduced": true,
+    "combined_Krylov_reproduced": true,
+    "exact_native_membership": true,
+    "build32_fingerprintable": true
+  },
+  "rejected_because": [],
+  "metrics": {
+    "max_abs_RMS_log10_difference_by_component": {
+      "Rho": 4.4680000000241193e-05,
+      "RhoU": 1.5699999998730618e-05,
+      "RhoV": 0.0007872300000002497,
+      "RhoE": 0.0017539600000002764,
+      "nu": 4.2919999998503044e-05
+    },
+    "final_CD_absolute_difference": 0.0,
+    "reference_Krylov": 16000,
+    "build32_Krylov": 16000,
+    "combined_Krylov_relative_difference": 0.0
+  },
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false,
+  "build32_run_fingerprint": "890833de2635d515f010663bce70fd9fa9daff856a0cf85ad2137d13645b4690",
+  "contract_fingerprint": "aa1a43f7fe9416bd40e86a15d6d0915b6347f3b4146fbdecdb3f14e0aca8dd15"
+}

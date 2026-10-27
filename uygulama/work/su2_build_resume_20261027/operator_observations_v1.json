@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-10-27T18:34:46.602399+00:00",
+  "observed_error": "Standalone cross-audit cache check raised KeyError because parent cache keys used Windows separators and audit keys used forward slashes.",
+  "subsequent_check": "All258 hashes matched after Path.as_posix canonicalization.",
+  "native_process": "Existing p32r-compile job continued; no duplicate native process was started.",
+  "behavioural_risk_inference": "Tool orchestration launched the dependent job before inspecting the supplemental check exit; independent in-driver source/cache/tool checks still ran.",
+  "correction": "Explicitly require zero return code for dependent checks and canonicalize evidence path keys before comparison.",
+  "physical_hypothesis": null,
+  "solver_output_changed_by_postcheck": false,
+  "new_prompt_improvement_claimed": false
+}

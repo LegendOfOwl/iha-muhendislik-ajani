@@ -1,0 +1,45 @@
+test_additional_flag_change_rejected (test_ninja_recipe.CommandTests.test_additional_flag_change_rejected) ... ok
+test_cache_log_disagreement_rejected (test_ninja_recipe.CommandTests.test_cache_log_disagreement_rejected) ... ok
+test_deceptive_output_and_missing_source_rejected (test_ninja_recipe.CommandTests.test_deceptive_output_and_missing_source_rejected) ... ok
+test_dry_run_cache_recompile_rejected (test_ninja_recipe.CommandTests.test_dry_run_cache_recompile_rejected) ... ok
+test_dry_run_has_only_missing_outputs (test_ninja_recipe.CommandTests.test_dry_run_has_only_missing_outputs) ... ok
+test_dry_run_missing_step_rejected (test_ninja_recipe.CommandTests.test_dry_run_missing_step_rejected) ... ok
+test_duplicate_output_rejected (test_ninja_recipe.CommandTests.test_duplicate_output_rejected) ... ok
+test_expected_delta_and_kind_counts (test_ninja_recipe.CommandTests.test_expected_delta_and_kind_counts) ... ok
+test_optimization_change_inside_traction_edge_rejected (test_ninja_recipe.CommandTests.test_optimization_change_inside_traction_edge_rejected) ... ok
+test_unclosed_quote_rejected (test_ninja_recipe.CommandTests.test_unclosed_quote_rejected) ... ok
+test_unrecognized_command_rejected (test_ninja_recipe.CommandTests.test_unrecognized_command_rejected) ... ok
+test_windows_parser_preserves_backslashes_and_spaces (test_ninja_recipe.CommandTests.test_windows_parser_preserves_backslashes_and_spaces) ... ok
+test_deceptive_source_path_rejected (test_ninja_recipe.RecipeTests.test_deceptive_source_path_rejected) ... ok
+test_deceptive_target_path_rejected (test_ninja_recipe.RecipeTests.test_deceptive_target_path_rejected) ... ok
+test_duplicate_args_and_edge_command_rejected (test_ninja_recipe.RecipeTests.test_duplicate_args_and_edge_command_rejected) ... ok
+test_duplicate_edge_rejected (test_ninja_recipe.RecipeTests.test_duplicate_edge_rejected) ... ok
+test_missing_edge_rejected (test_ninja_recipe.RecipeTests.test_missing_edge_rejected) ... ok
+test_no_reapplication_or_global_include (test_ninja_recipe.RecipeTests.test_no_reapplication_or_global_include) ... ok
+test_only_exact_edge_arg_changes_and_markers_keep_bytes (test_ninja_recipe.RecipeTests.test_only_exact_edge_arg_changes_and_markers_keep_bytes) ... ok
+test_variable_expansion_rejected (test_ninja_recipe.RecipeTests.test_variable_expansion_rejected) ... ok
+test_cap_manifest_mismatch_rejected (test_build_cap.CapBuildTests.test_cap_manifest_mismatch_rejected) ... ok
+test_common_recipe_accepts_exact_full_set_in_any_order (test_build_cap.CapBuildTests.test_common_recipe_accepts_exact_full_set_in_any_order) ... ok
+test_common_recipe_rejects_extra_command_or_flag (test_build_cap.CapBuildTests.test_common_recipe_rejects_extra_command_or_flag) ... ok
+test_fresh_commands_have_single_job_and_nine_offline_skips (test_build_cap.CapBuildTests.test_fresh_commands_have_single_job_and_nine_offline_skips) ... ok
+test_historical_options_and_empty_global_args (test_build_cap.CapBuildTests.test_historical_options_and_empty_global_args) ... ok
+test_only_cap_bytes_change (test_build_cap.CapBuildTests.test_only_cap_bytes_change) ... ok
+test_saved_reproduction_recomputed_and_exactly_bound (test_build_cap.CapBuildTests.test_saved_reproduction_recomputed_and_exactly_bound) ... ok
+test_truthy_stale_wrong_baseline_reproduction_rejected (test_build_cap.CapBuildTests.test_truthy_stale_wrong_baseline_reproduction_rejected) ... ok
+test_asset_order_and_count_are_observed_not_hardcoded (test_v017_remote_guards.AssetHistoryGuards.test_asset_order_and_count_are_observed_not_hardcoded) ... ok
+test_duplicate_asset_id_across_releases_rejected (test_v017_remote_guards.AssetHistoryGuards.test_duplicate_asset_id_across_releases_rejected) ... ok
+test_duplicate_asset_name_rejected (test_v017_remote_guards.AssetHistoryGuards.test_duplicate_asset_name_rejected) ... ok
+test_duplicate_release_tag_rejected (test_v017_remote_guards.AssetHistoryGuards.test_duplicate_release_tag_rejected) ... ok
+test_changed_old_raw_ref_rejected (test_v017_remote_guards.PriorTagGuards.test_changed_old_raw_ref_rejected) ... ok
+test_duplicate_raw_ref_rejected (test_v017_remote_guards.PriorTagGuards.test_duplicate_raw_ref_rejected) ... ok
+test_latest_only_object_preserves_old_peeled_commit (test_v017_remote_guards.PriorTagGuards.test_latest_only_object_preserves_old_peeled_commit) ... ok
+test_lightweight_tag_rejected (test_v017_remote_guards.PriorTagGuards.test_lightweight_tag_rejected) ... ok
+test_missing_old_peeled_ref_rejected (test_v017_remote_guards.PriorTagGuards.test_missing_old_peeled_ref_rejected) ... ok
+test_missing_old_raw_ref_rejected (test_v017_remote_guards.PriorTagGuards.test_missing_old_raw_ref_rejected) ... ok
+test_wrong_latest_object_tag_rejected (test_v017_remote_guards.PriorTagGuards.test_wrong_latest_object_tag_rejected) ... ok
+test_wrong_latest_peeled_head_rejected (test_v017_remote_guards.PriorTagGuards.test_wrong_latest_peeled_head_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.021s
+
+OK

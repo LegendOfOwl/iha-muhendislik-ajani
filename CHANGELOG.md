@@ -3,6 +3,10 @@
 v0.1.0–v0.10.0 geriye dönük içe aktarım; v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.
 
 
+## v0.17.0 — 27 Ekim 2026: SU2 kaynak derlemesi ve kontrollü karşılaştırma
+
+SU2 kaynak32 derlemesi, korunmuş başarısız denemeden 258 doğrulanmış nesneyi kullanarak kalan 32 hedefi 81.063 saniyede tamamladı. Üç yeni native CFD koşusu aynı kaynak ağ ve başlangıçla 200 adım çalıştı. Resmî release32–kaynak32 yeniden üretimi geçti: beş SI log10 RMS eğrisindeki en büyük fark 0.00175396, son CD mutlak farkı 0. Yalnız MAX_LINELET_POINTS=32→256 değiştirildi. Yoğunluk kazancı -0.00938603 log10, SA kötüleşmesi -0.00099585 log10, Krylov sayımı oranı 1.00000000, bu çiftte gözlenen süre oranı 1.28308938; ön kayıtlı ortak etki/maliyet kabulü geçmedi. 40 yeni yazılım kontrolü geçti; eski70 kontrol yeni sayılmadı. Krylov sayımı işlem maliyetinin vekilidir; daha uzun çizgilerin eşit aritmetik maliyeti olduğu veya tek çiftin evrensel hız kıyası olduğu iddia edilmez. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
+
 ## v0.16.0 — 27 Ekim 2026: kaynak derlemesi ve LINELET kontrolü
 
 Sabit SU2 v8.5.0, Eigen ve MEL kaynakları indirildi; 4357 kaynak dosyası arşivlerle birebir doğrulandı. C++17/Haswell/OpenMP dört iş parçacığı derleyici denemesi geçti. İlk gerçek SU2 derlemesi 259. hedefte başlık arama yolu hatasıyla durdu; kaynak baytlarını koruyan ortak arama yolu düzeltmesi kaydedildi. İkinci deneme kullanılabilir RAM 1 GiB sınırının altındayken native süreci başlatmadan reddedildi. 70 yeni yazılım kontrolü geçti; önceki 14 süreç kontrolünün kanıtı ayrıca denetlendi. Yeni CFD çalıştırılmadı; pristine32 yeniden üretimi ve cap256 etki/maliyet sınaması bekliyor. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.

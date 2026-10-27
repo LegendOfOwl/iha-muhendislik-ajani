@@ -1,0 +1,559 @@
+{
+  "created_utc": "2026-10-27T19:00:41.304588+00:00",
+  "scope": "Pinned source/native32 reproduction and one controlled cap32→256 diagnostic; not a mesh or physical qualification",
+  "summary_tr": "SU2 kaynak32 derlemesi, korunmuş başarısız denemeden 258 doğrulanmış nesneyi kullanarak kalan 32 hedefi 81.063 saniyede tamamladı. Üç yeni native CFD koşusu aynı kaynak ağ ve başlangıçla 200 adım çalıştı. Resmî release32–kaynak32 yeniden üretimi geçti: beş SI log10 RMS eğrisindeki en büyük fark 0.00175396, son CD mutlak farkı 0. Yalnız MAX_LINELET_POINTS=32→256 değiştirildi. Yoğunluk kazancı -0.00938603 log10, SA kötüleşmesi -0.00099585 log10, Krylov sayımı oranı 1.00000000, bu çiftte gözlenen süre oranı 1.28308938; ön kayıtlı ortak etki/maliyet kabulü geçmedi. 40 yeni yazılım kontrolü geçti; eski70 kontrol yeni sayılmadı. Krylov sayımı işlem maliyetinin vekilidir; daha uzun çizgilerin eşit aritmetik maliyeti olduğu veya tek çiftin evrensel hız kıyası olduğu iddia edilmez. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.",
+  "summary_en": "The pristine source32 build reused 258 authenticated objects from the preserved failed attempt and completed 32 remaining targets in 81.063 seconds. Three fresh native CFD arms each ran 200 iterations on the same mesh and seed. Release32/source32 numerical reproduction passed: the largest five-component SI log10 RMS curve difference was 0.00175396; final absolute CD difference was 0. Only MAX_LINELET_POINTS changed from32 to256. Density gain was -0.00938603 log10, SA worsening -0.00099585, Krylov-count ratio 1.00000000, and observed elapsed-time ratio 1.28308938; the preregistered joint effect/cost gate did not pass. All 40 new software checks passed; the prior70 checks were not counted again. Krylov counts are a work proxy, not equal floating-point cost for longer linelets; one elapsed-time pair is not a universal speed benchmark. General physical/RAE2822/M6/UAV qualification and LLM improvement remain unestablished.",
+  "new_native_CFD_runs": 3,
+  "native_contract_path": "outputs/simulations/linecap_source_20261027_v1/contract.json",
+  "native_contract_sha256": "852169d743ef330adc92c5022ad9cf0d6f5703114f9b071cad75495c7a348968",
+  "native_contract_anchor_sha256": "cc49c06bf31a6f6c1cd37e3aba6cf567afbbf7201c32787d04195a28c5e7e67e",
+  "method_design_sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44",
+  "reproduction_record_sha256": "048d5ddf4512fdcbe6cd3d8bed85cf9fef89df886ba7d85fb7a00e4025985f2a",
+  "effect_record_sha256": "107e0a4b872b783eeed423a340059ea1105d9b43c3dae298a77a93b67776e694",
+  "source_change_record_sha256": "36c4ad509ab861b87d5f84eb8c93921983c32fac0c2e0a4edff955d95e174338",
+  "source_and_recipe": {
+    "source_change": {
+      "verified": true,
+      "only_change": "MAX_LINELET_POINTS",
+      "reference_cap": 32,
+      "candidate_cap": 256,
+      "pristine_source_sha256": "9da2580a4529285e9e1c52ddac9aa39f91b593ddcc822fb8e6a385db5b51a689",
+      "modified_source_sha256": "99bebcdc9abdd3df606591eda8be71217b47b0b9963c71cb6815d8a012515903",
+      "patch_sha256": "8c31eb9d126e6ca38ebaf86037bd0b3d8f50d3308b9f91a202bba904a060da35"
+    },
+    "builds": {
+      "p32r": {
+        "succeeded": true,
+        "source_tree_sha256": "9da2580a4529285e9e1c52ddac9aa39f91b593ddcc822fb8e6a385db5b51a689",
+        "compiler_manifest_sha256": "8c52f2718a58c4a29b529a26a13d221aef878e8662ab088f388e36864cc9d87d",
+        "runtime_manifest_sha256": "54c11cdfa5d0c906ca757df4d774772618f239b3c6889fdfe6b2077704f2ceb7",
+        "exe_sha256": "024c912c7d80a9f32fd058590a5ecacf65ed0915d213773d6921275c0e3e641c",
+        "bytes": 14570998,
+        "seconds": 81.06300000008196,
+        "contract_sha256": "85a78da6d9bac88b027db106ab867761dbd5b3e4c11e19ffe8f4acfdaf0f89be",
+        "status_sha256": "af156c67d2f7b3c4d16ac96a8bce43ea5847b35101d8f4004d956e7d5ef29530",
+        "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8"
+      },
+      "p256r": {
+        "succeeded": true,
+        "source_tree_sha256": "99bebcdc9abdd3df606591eda8be71217b47b0b9963c71cb6815d8a012515903",
+        "compiler_manifest_sha256": "8c52f2718a58c4a29b529a26a13d221aef878e8662ab088f388e36864cc9d87d",
+        "runtime_manifest_sha256": "54c11cdfa5d0c906ca757df4d774772618f239b3c6889fdfe6b2077704f2ceb7",
+        "exe_sha256": "29f5150bf13e3bd5cc623a997fc3c9a57306a3fc69c0321566036129dbc4e00d",
+        "bytes": 14570998,
+        "seconds": 761.484999999986,
+        "contract_sha256": "743c8586133323933af8f418639541b59bbae2ab79ccad695ce96e3b9210aee0",
+        "status_sha256": "befb3884d108caf7085886e9c790e11c42a3fb22e19b9f4a112f39dd1259ebf4",
+        "source_patch_sha256": "8c31eb9d126e6ca38ebaf86037bd0b3d8f50d3308b9f91a202bba904a060da35",
+        "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8"
+      }
+    },
+    "recovery_seconds": 81.06300000008196,
+    "previous_failed_build_seconds": 580.875,
+    "cumulative_pristine_build_seconds": 661.938000000082,
+    "cached_objects_reused_and_reverified": 258,
+    "remaining_build_targets": 32,
+    "unchanged_effective_commands": 289,
+    "inspected_effective_commands": 290,
+    "common_cap_build_commands": 290,
+    "recipe_audit_path": "work/su2_build_resume_20261027/recipe_audit_v1/audit.json",
+    "recipe_audit_sha256": "6411cc82df23c9f81fd0cd7d38b37ca86e39c07e6dcfe5c29587fbdc49ce6482",
+    "old_failed_status_preserved": true,
+    "old_resource_refusal_preserved": true,
+    "operator_observation_path": "work/su2_build_resume_20261027/operator_observations_v1.json",
+    "operator_observation_sha256": "d50447e29e8c798d72db7773afcb8fbd8d190a2d4d5bf7a6580dff773974fdee",
+    "operator_observation": {
+      "recorded_utc": "2026-10-27T18:34:46.602399+00:00",
+      "observed_error": "Standalone cross-audit cache check raised KeyError because parent cache keys used Windows separators and audit keys used forward slashes.",
+      "subsequent_check": "All258 hashes matched after Path.as_posix canonicalization.",
+      "native_process": "Existing p32r-compile job continued; no duplicate native process was started.",
+      "behavioural_risk_inference": "Tool orchestration launched the dependent job before inspecting the supplemental check exit; independent in-driver source/cache/tool checks still ran.",
+      "correction": "Explicitly require zero return code for dependent checks and canonicalize evidence path keys before comparison.",
+      "physical_hypothesis": null,
+      "solver_output_changed_by_postcheck": false,
+      "new_prompt_improvement_claimed": false
+    },
+    "scope": "Declared tools/runtime/recipe and source bytes; not a complete OS/SDK image or independent clean-room build."
+  },
+  "pristine_reproduction": {
+    "gate": "pristine_reproduction",
+    "accepted": true,
+    "checks": {
+      "valid_contract": true,
+      "release_normalization": true,
+      "release_native_exit_and_matched_iteration": true,
+      "release_complete_finite_history": true,
+      "release_complete_stable_CD_window": true,
+      "release_field_validity_proven": true,
+      "release_positive_finite_elapsed": true,
+      "release_bijective_native_mapping": true,
+      "release_canonical_native_membership": true,
+      "release_input_identities_present": true,
+      "build32_normalization": true,
+      "build32_native_exit_and_matched_iteration": true,
+      "build32_complete_finite_history": true,
+      "build32_complete_stable_CD_window": true,
+      "build32_field_validity_proven": true,
+      "build32_positive_finite_elapsed": true,
+      "build32_bijective_native_mapping": true,
+      "build32_canonical_native_membership": true,
+      "build32_input_identities_present": true,
+      "shared_input_identities": true,
+      "registered_pristine_source": true,
+      "five_RMS_curves_reproduced": true,
+      "final_CD_reproduced": true,
+      "combined_Krylov_reproduced": true,
+      "exact_native_membership": true,
+      "build32_fingerprintable": true
+    },
+    "rejected_because": [],
+    "metrics": {
+      "max_abs_RMS_log10_difference_by_component": {
+        "Rho": 4.4680000000241193e-05,
+        "RhoU": 1.5699999998730618e-05,
+        "RhoV": 0.0007872300000002497,
+        "RhoE": 0.0017539600000002764,
+        "nu": 4.2919999998503044e-05
+      },
+      "final_CD_absolute_difference": 0.0,
+      "reference_Krylov": 16000,
+      "build32_Krylov": 16000,
+      "combined_Krylov_relative_difference": 0.0
+    },
+    "physical_qualification_passed": false,
+    "M6_qualification_passed": false,
+    "LLM_improvement_demonstrated": false,
+    "build32_run_fingerprint": "890833de2635d515f010663bce70fd9fa9daff856a0cf85ad2137d13645b4690",
+    "contract_fingerprint": "aa1a43f7fe9416bd40e86a15d6d0915b6347f3b4146fbdecdb3f14e0aca8dd15"
+  },
+  "cap_effect": {
+    "gate": "linelet_cap_effect",
+    "accepted": false,
+    "checks": {
+      "valid_contract": true,
+      "build32_normalization": true,
+      "build32_native_exit_and_matched_iteration": true,
+      "build32_complete_finite_history": true,
+      "build32_complete_stable_CD_window": true,
+      "build32_field_validity_proven": true,
+      "build32_positive_finite_elapsed": true,
+      "build32_bijective_native_mapping": true,
+      "build32_canonical_native_membership": true,
+      "build32_input_identities_present": true,
+      "build256_normalization": true,
+      "build256_native_exit_and_matched_iteration": true,
+      "build256_complete_finite_history": true,
+      "build256_complete_stable_CD_window": true,
+      "build256_field_validity_proven": true,
+      "build256_positive_finite_elapsed": true,
+      "build256_bijective_native_mapping": true,
+      "build256_canonical_native_membership": true,
+      "build256_input_identities_present": true,
+      "pristine_reproduction_passed_for_same_baseline": true,
+      "shared_input_identities": true,
+      "compiler_options_identity": true,
+      "runtime_dependencies_identity": true,
+      "only_registered_source_cap_change": true,
+      "density_gain": false,
+      "SA_worsening": true,
+      "combined_Krylov_cost": true,
+      "observed_elapsed_cost": true,
+      "same_fixed_old_RHS": true,
+      "native_membership_nodes_increased": true,
+      "fixed_RHS_Rho_share_increased": true
+    },
+    "rejected_because": [
+      "density_gain"
+    ],
+    "metrics": {
+      "density_log10_gain": -0.00938603000000171,
+      "SA_log10_worsening": -0.0009958500000024628,
+      "reference_Krylov": 16000,
+      "candidate_Krylov": 16000,
+      "work_ratio": 1.0,
+      "observed_elapsed_ratio": 1.2830893760531337,
+      "reference_membership_nodes": 7200,
+      "candidate_membership_nodes": 34401,
+      "fixed_old_RHS_Rho_squared_share_gain": 0.4608248342699316
+    },
+    "physical_qualification_passed": false,
+    "M6_qualification_passed": false,
+    "LLM_improvement_demonstrated": false
+  },
+  "linear_solver_observations": {
+    "release32": {
+      "rows": 200,
+      "iteration_limit": 40,
+      "flow_iterations": 8000,
+      "SA_iterations": 8000,
+      "combined_Krylov_count_proxy": 16000,
+      "flow_limit_hit_count": 200,
+      "SA_limit_hit_count": 200,
+      "final_LinSolRes_log10_raw": -0.922353669,
+      "final_LinSolResTurb_log10_raw": -2.705025871,
+      "new_posthoc_acceptance_gate": false
+    },
+    "build32": {
+      "rows": 200,
+      "iteration_limit": 40,
+      "flow_iterations": 8000,
+      "SA_iterations": 8000,
+      "combined_Krylov_count_proxy": 16000,
+      "flow_limit_hit_count": 200,
+      "SA_limit_hit_count": 200,
+      "final_LinSolRes_log10_raw": -0.922598246,
+      "final_LinSolResTurb_log10_raw": -2.697869215,
+      "new_posthoc_acceptance_gate": false
+    },
+    "build256": {
+      "rows": 200,
+      "iteration_limit": 40,
+      "flow_iterations": 8000,
+      "SA_iterations": 8000,
+      "combined_Krylov_count_proxy": 16000,
+      "flow_limit_hit_count": 200,
+      "SA_limit_hit_count": 200,
+      "final_LinSolRes_log10_raw": -2.574917083,
+      "final_LinSolResTurb_log10_raw": -2.730073032,
+      "new_posthoc_acceptance_gate": false
+    }
+  },
+  "linear_solver_residual_semantics": {
+    "reported_quantity": "log10(beta/norm0); beta updated from the Givens-rotated reduced right-hand side g[i+1]",
+    "normalization": "norm0 starts as ||b|| and is reset to the initial residual norm for relative tolerance",
+    "independently_recomputed_Ax_minus_b_claimed": false,
+    "source_recompute_scope": "The optional mat_vec(x)-b recomputation is inside monitoring && COMM_FULL and recomputeRes; it is not the returned beta/norm0 value.",
+    "source_path": "tools/su2-build/v8.5.0/controls/p32r/source/Common/src/linear_algebra/CSysSolve.cpp",
+    "source_sha256": "767ff544d658baffcadf3ed2fa9cd2b3a83c0f696ebecd4765704d368cf136b6",
+    "pinned_source_url": "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/src/linear_algebra/CSysSolve.cpp#L468-L616",
+    "source_lines": {
+      "norm0_and_initial_beta": [
+        468,
+        490
+      ],
+      "Givens_beta": [
+        564,
+        573
+      ],
+      "monitoring_optional_recompute": [
+        594,
+        613
+      ],
+      "returned_residual": [
+        616,
+        616
+      ]
+    }
+  },
+  "native_linelet_log_observations": {
+    "release32": {
+      "reported_average_points_per_linelet": 32.0,
+      "raw_line": "Computed linelet structure, 32 points in each line (average).",
+      "log_path": "outputs/simulations/linecap_source_20261027_v1/release32/solver.log",
+      "log_sha256": "4e839fbc253407d20c2e324af3399cab5b8843adc83c1c6e99190e68d3fad156",
+      "interpretation": "Native formatted average only; not individual line lengths, a full distribution or proof that every line reaches the cap.",
+      "new_posthoc_acceptance_gate": false
+    },
+    "build32": {
+      "reported_average_points_per_linelet": 32.0,
+      "raw_line": "Computed linelet structure, 32 points in each line (average).",
+      "log_path": "outputs/simulations/linecap_source_20261027_v1/build32/solver.log",
+      "log_sha256": "9bc4ed3dce59c5a5077cc9aa96e33e26c7df0b5c12de9989b1f38630aa2e0d3b",
+      "interpretation": "Native formatted average only; not individual line lengths, a full distribution or proof that every line reaches the cap.",
+      "new_posthoc_acceptance_gate": false
+    },
+    "build256": {
+      "reported_average_points_per_linelet": 152.0,
+      "raw_line": "Computed linelet structure, 152 points in each line (average).",
+      "log_path": "outputs/simulations/linecap_source_20261027_v1/build256/solver.log",
+      "log_sha256": "0a0c8d279475f4194c7baacdfc32b3328308000792249d0b8795c2832303b90a",
+      "interpretation": "Native formatted average only; not individual line lengths, a full distribution or proof that every line reaches the cap.",
+      "new_posthoc_acceptance_gate": false
+    }
+  },
+  "new_distinct_checks": 40,
+  "software_checks_report": "outputs/reports/su2_resume_checks_20261027.json",
+  "software_checks_sha256": "a07dc153389dcc46daf6ce8bbefafd5ee4316aecb055e5f0569b16da51ca09c6",
+  "old_output_integrity": {
+    "hash_records_verified": 738,
+    "unique_paths_verified": 738,
+    "seals": [
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/adaptive_toggle_v1/adaptive/prediction_frozen.json",
+        "sha256": "90a69605210b5d9f85bc413345fdfeee2825290c365eef5e80451551f23292a4",
+        "raw_hash_records": 18
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/coarse/prediction_frozen.json",
+        "sha256": "3a88d22b3329b95a142838bc47aff914ef6593a4c9648f626bd2480b4aef5bb5",
+        "raw_hash_records": 17
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/fine/prediction_frozen.json",
+        "sha256": "9255ba9a4aec875ea2d4fff727d559b7afe724ea92df27c428e20943dc8d5a05",
+        "raw_hash_records": 49
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/fine_nested/prediction_frozen.json",
+        "sha256": "ae2e36012b1cf2bda674f8aa644acdc7d6408fa952b019f3afa47fb03e2cc8f8",
+        "raw_hash_records": 27
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/fixed_cfl_pair_v1/cfl10/prediction_frozen.json",
+        "sha256": "f44c0a1d81359263f45abf12fbdad44648c637e56271888e85418e042bbeadfa",
+        "raw_hash_records": 18
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/fixed_cfl_pair_v1/cfl100/prediction_frozen.json",
+        "sha256": "fa41fdb7d8b12f9c9938432f9ddddf24e6722c35c18642cd141ae6042047866b",
+        "raw_hash_records": 18
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/ilu_pair/ilu/prediction_frozen.json",
+        "sha256": "c41f31ebc72c77dad5bf80fa0b9c3770840f1b585d3a7d43ddb76ae3fb5d8f05",
+        "raw_hash_records": 14
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/ilu_pair/lusgs/prediction_frozen.json",
+        "sha256": "d1e381ee28bbb3f5b15b982e316186ef8980e29195012b34cc0a8ef609dd95b3",
+        "raw_hash_records": 14
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/inner_cap_20261026_v1/cap40/prediction_frozen.json",
+        "sha256": "84e6b3c70ca99d81afba1d2119d47e95c9eeed468e7258d12ba2d45960febf4b",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/inner_cap_20261026_v1/cap80/prediction_frozen.json",
+        "sha256": "370631ee2934ba838383341048152b1fe652d197ade25c7540dc5e47f4eed383",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/linear_work_20261026_v1/reduced/prediction_frozen.json",
+        "sha256": "06cf29bebac30967b86ac7faedba171f2b11511f42942dd84534e52c430b15b9",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/linelet_20261026_v1/linelet/prediction_frozen.json",
+        "sha256": "b03b74f1068eb7a4d1849fd8d9e1dcf4db957110d7f1ad18c33553f90d46936b",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/medium/prediction_frozen.json",
+        "sha256": "9b099506c51dc3a9f7122ce129a06df1b69cd3084b9ec101f00ad3765a4f07e9",
+        "raw_hash_records": 81
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/mg_control_v1/mg2/prediction_frozen.json",
+        "sha256": "401a3456247f3afecc3d8cbce4b17d4337a4a6dd07b9eed99cc196c11f7e37b2",
+        "raw_hash_records": 14
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/mg_control_v1/smoke/prediction_frozen.json",
+        "sha256": "dcdfa63d6edc8d560fec7a2fce9b6d141e60e53f25b7d99fdd7cff172c155b04",
+        "raw_hash_records": 14
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/nested_smoke/prediction_frozen.json",
+        "sha256": "031d09addb55da2731e8fe0d9e17ec4af4a09e5f68ceb8748e60b61cc51f1f59",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/newton_control_v1/newton/prediction_frozen.json",
+        "sha256": "a7bddc5d0cd54de6176ccc210f8df7e5b73584d77ea02944559121164810f899",
+        "raw_hash_records": 19
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/newton_control_v1/quasi/prediction_frozen.json",
+        "sha256": "762f44e35f4a9910f80895db2ae8b96239fe2d7e15e81aaf1b56952de8e9ea9e",
+        "raw_hash_records": 19
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/newton_control_v1/seed/prediction_frozen.json",
+        "sha256": "1ce5c90fb7c0c642284ef3c5e932d024bcea5cc21ed97ff8b7d814b4def7d1c4",
+        "raw_hash_records": 14
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/newton_warm_control_v1/newton/prediction_frozen.json",
+        "sha256": "26481ecad651e059fba3f70e4f0230447de3bf34975016c816be82d6e27acb8d",
+        "raw_hash_records": 19
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/newton_warm_control_v1/quasi/prediction_frozen.json",
+        "sha256": "3b1cc50672c422ec66f527a9f37d45367cd19224e1dcfcacd94a8d6bd0f3f376",
+        "raw_hash_records": 19
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/reduced_family_20261026_v1/coarse/prediction_frozen.json",
+        "sha256": "ce17d0d30adbde77d4ebf930cc94fe50862ab9bc1b0ab00b04b1c5480f8f51c1",
+        "raw_hash_records": 16
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/reduced_family_20261026_v1/fine/prediction_frozen.json",
+        "sha256": "c2e46094b46bae96daca4dcfb6fc6e7c3d441d7eef79056c501d5c155b59ed31",
+        "raw_hash_records": 92
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/reduced_family_20261026_v1/medium/prediction_frozen.json",
+        "sha256": "c535dafd3d4ecc5d9fc354d719da9d5562c397840de2fd25626b3b10a1ba6eef",
+        "raw_hash_records": 92
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/residual_probe_20261026_v1/explicit/prediction_frozen.json",
+        "sha256": "d9ceb51058cc9f662f557fac833aea5ea632a8b6af1ed73107d1ec93e8ff3cbd",
+        "raw_hash_records": 16
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/smoke/prediction_frozen.json",
+        "sha256": "dd34d3f3c470b9dbb791f0f02015af752f04ef5d36f30d59bb990484441bfefd",
+        "raw_hash_records": 13
+      },
+      {
+        "path": "outputs/simulations/flatplate_SAneg_20261025_v1/warm_scaling_pair_v1/scaled/prediction_frozen.json",
+        "sha256": "60cf1e373007c4ad98439f2714fc4873b791c07dffa1c344dc171df8c40ffe67",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/flatplate_20261027_v1/linelet_coverage/native/prediction_frozen.json",
+        "sha256": "1198f76f372800e8136b871b4563e6fd73df13918d69f1883c5da795f4a05e85",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/flatplate_20261027_v1/prec_partition/auto4/prediction_frozen.json",
+        "sha256": "0802349b922ee9bcc5d715cbae7d625949a3ff2f59b7e40a4e541d3acd0b7b9d",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/flatplate_20261027_v1/prec_partition/single/prediction_frozen.json",
+        "sha256": "7d31c1c8f8a53fa43db74a873acfbfaf2eb0be107db46ee35e7e9c5fe99e2f4c",
+        "raw_hash_records": 15
+      }
+    ],
+    "all_matched": true
+  },
+  "new_output_integrity": {
+    "hash_records_verified": 45,
+    "unique_paths_verified": 45,
+    "seals": [
+      {
+        "path": "outputs/simulations/linecap_source_20261027_v1/release32/prediction_frozen.json",
+        "sha256": "9e0a4ff2b4ecee703198a11d6de2cf1c284d41bf3e7ce3160fd8c73afe03a586",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/linecap_source_20261027_v1/build32/prediction_frozen.json",
+        "sha256": "a759e8eef96ca40b7e524c284a8b988233ec3323d073fbf96d80a9566ac1ebd9",
+        "raw_hash_records": 15
+      },
+      {
+        "path": "outputs/simulations/linecap_source_20261027_v1/build256/prediction_frozen.json",
+        "sha256": "27b848de4e875b9e1a3fbacd35feb1a996b208e461d5ae9f46b3c7fc27d78dd9",
+        "raw_hash_records": 15
+      }
+    ],
+    "all_matched": true
+  },
+  "frozen_and_live_native_code_hash_records_verified": 26,
+  "arms": {
+    "release32": {
+      "payload_path": "outputs/simulations/linecap_source_20261027_v1/release32_payload.json",
+      "payload_sha256": "72503b50ecf14497b8f693f02158e03c418552e45c7534235e7405e10ddb908e",
+      "field_iteration": 199,
+      "elapsed_seconds": 82.65599999995902,
+      "final_SI_log10_RMS": {
+        "Rho": -9.761678858033427,
+        "RhoU": -7.635905185486548,
+        "RhoV": -8.599088435486548,
+        "RhoE": -5.5472937729396685,
+        "nu": -12.244438014906242
+      },
+      "final_CD": 0.002848056245,
+      "last100_CD_range": 1.3939999996340213e-09,
+      "native_membership_nodes": 7200,
+      "reported_average_points_per_linelet": 32.0,
+      "fixed_old_RHS_Rho_squared_share": 0.5389652682624415
+    },
+    "build32": {
+      "payload_path": "outputs/simulations/linecap_source_20261027_v1/build32_payload.json",
+      "payload_sha256": "c7fdd4e714aff4ab84f0661ea1b9c556def2c5c76f8b5531d95e5c293ac635f1",
+      "field_iteration": 199,
+      "elapsed_seconds": 74.125,
+      "final_SI_log10_RMS": {
+        "Rho": -9.761658478033429,
+        "RhoU": -7.635916435486548,
+        "RhoV": -8.599174175486548,
+        "RhoE": -5.54826863293967,
+        "nu": -12.24445727490624
+      },
+      "final_CD": 0.002848056245,
+      "last100_CD_range": 1.3939999996340213e-09,
+      "native_membership_nodes": 7200,
+      "reported_average_points_per_linelet": 32.0,
+      "fixed_old_RHS_Rho_squared_share": 0.5389652682624415
+    },
+    "build256": {
+      "payload_path": "outputs/simulations/linecap_source_20261027_v1/build256_payload.json",
+      "payload_sha256": "a02582747ac069665ed30f8080a79a4b05cc24e4a543e37c022b8b99407474dd",
+      "field_iteration": 199,
+      "elapsed_seconds": 95.10899999993853,
+      "final_SI_log10_RMS": {
+        "Rho": -9.752272448033427,
+        "RhoU": -7.635883845486548,
+        "RhoV": -9.605329545486548,
+        "RhoE": -5.825258382939668,
+        "nu": -12.245453124906243
+      },
+      "final_CD": 0.002848056217,
+      "last100_CD_range": 1.408000000011761e-09,
+      "native_membership_nodes": 34401,
+      "reported_average_points_per_linelet": 152.0,
+      "fixed_old_RHS_Rho_squared_share": 0.9997901025323731
+    }
+  },
+  "artifacts": {
+    "outputs/plots/su2_kaynak_karsilastirma_20261027_history.png": {
+      "sha256": "cc31c4a517dd34b3abefbca1a1db6c489a745392d7e42b0f251b992eedeca306",
+      "bytes": 382893
+    },
+    "outputs/plots/su2_kaynak_karsilastirma_20261027_history.pdf": {
+      "sha256": "715c75361dd87a61d4ae891b155d0ac437dad7eba59d9a17614f9394830fb827",
+      "bytes": 34478
+    },
+    "outputs/plots/su2_kaynak_karsilastirma_20261027_membership.png": {
+      "sha256": "9e9aa653a568a8d3ba3831bf5d5b8aaf3bb6c18b4be4afe75ab0d99a47979cc7",
+      "bytes": 198566
+    },
+    "outputs/plots/su2_kaynak_karsilastirma_20261027_membership.pdf": {
+      "sha256": "5114615c85323c4aec81a4da72f99f5b18bece00f3182533787823c26fd90677",
+      "bytes": 50973
+    },
+    "outputs/data/qualification/linecap_source_20261027_v1/all_nodes_membership.csv": {
+      "sha256": "8a71be2fa8a79d44347c8cf2b426418b6e98b616694ca6bdfbbfe72d04d7f173",
+      "bytes": 3524996
+    }
+  },
+  "spatial_view_scope": {
+    "build32": {
+      "all_nodes": 52689,
+      "zoom_y_max_m": 1.12,
+      "outside_zoom_nodes_preserved": 0,
+      "membership_nodes": 7200
+    },
+    "build256": {
+      "all_nodes": 52689,
+      "zoom_y_max_m": 1.12,
+      "outside_zoom_nodes_preserved": 0,
+      "membership_nodes": 34401
+    }
+  },
+  "all_owned_nodes_retained_in_CSV": 52689,
+  "fixed_RHS_scope": "Same previously authenticated sequential-stage RHS; not recomputed residual of any new implicit field and not mesh-error evidence.",
+  "old_fine3999_role_preserved": true,
+  "not_blind": true,
+  "thresholds_changed_after_results": false,
+  "GCI": null,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false
+}

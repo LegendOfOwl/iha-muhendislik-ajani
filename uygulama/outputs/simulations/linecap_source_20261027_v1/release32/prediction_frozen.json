@@ -1,0 +1,53 @@
+{
+  "frozen_utc": "2026-10-27T18:38:47.144656+00:00",
+  "not_blind": true,
+  "contract_sha256": "852169d743ef330adc92c5022ad9cf0d6f5703114f9b071cad75495c7a348968",
+  "mesh_sha256": "add8bd2f9b9e789dc8a98e8182dc2605003955bc9464cb71cda311e64baf3252",
+  "matched": {
+    "field_iteration": 199,
+    "terminal_history_iteration": 199,
+    "rms[Rho]": -12.42583086,
+    "rms[RhoU]": -12.84066666,
+    "rms[RhoV]": -13.80384991,
+    "rms[RhoE]": -13.29266472,
+    "rms[nu]": -17.32565696,
+    "CL": -0.0006404599202,
+    "CD": 0.002848056245,
+    "LinSolRes": -0.922353669,
+    "Linear_Solver_Iterations": 40.0,
+    "last100_samples": 100,
+    "CD_last100_range": 1.3939999996340213e-09
+  },
+  "native_status": {
+    "started_utc": "2026-10-27T18:37:24.472631+00:00",
+    "ended_utc": "2026-10-27T18:38:47.139610+00:00",
+    "exit_code": 0,
+    "seconds": 82.65599999995902,
+    "stop_reason": null,
+    "peak_working_set_GiB": 0.3051567077636719,
+    "budget_s": 240,
+    "command": [
+      "C:\\Users\\Urungu\\Documents\\Codex\\2026-10-18\\bu\\tools\\su2\\v8.5.0\\bin\\SU2_CFD.exe",
+      "case.cfg",
+      "-t",
+      "4"
+    ]
+  },
+  "files_sha256": {
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\case.cfg": "d6409acd54be7204778ed5b0c0e1a545fc61edb1948b0f0d945b59f762c7c0af",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\executable_before_native.json": "303d1221357690ec6f2fe1aa1599b50d058db9c04194f0b98d40cb5d86090905",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\flow.vtu": "23ef45ad879c7ee5aa68f5fb427afbbbdac6e0a38f8648cd53bfae6655c93ae1",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\flow_000199.vtu": "23ef45ad879c7ee5aa68f5fb427afbbbdac6e0a38f8648cd53bfae6655c93ae1",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\history.csv": "f1fe0366ccde0743ba986243fe173baf1d299b9c5c5db3422791c20e9c903cb0",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\restart_flow.dat": "507b7eea5d35d8fcd839f6478c5d90a31ab917eafde8446e380c290959700099",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\restart_flow_000199.dat": "507b7eea5d35d8fcd839f6478c5d90a31ab917eafde8446e380c290959700099",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\seed.dat": "8b7c53e07e23d9a53204b1dcb9478ec14a4b133f246cc79709839068a53706ee",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\solver.log": "4e839fbc253407d20c2e324af3399cab5b8843adc83c1c6e99190e68d3fad156",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\solver.process.json": "2ae90485b8f9217afed5b4c0df57187de37c550ee77856923adbbb81c9ab9073",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\solver.status.json": "369f85d2acc53e62434fc0e8eadc48941c3265e200b0d570b1a271473f5bf760",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\surface_flow.csv": "8ac08a5e1b133fbbad61213452dfd237f1edaa9a6131a2d3a2c5af6b6be561df",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\surface_flow.vtu": "b10ac61a2f90465ed7ffc6bffaea00f96d9ae05be39999ebd68f26c4cff2404c",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\surface_flow_000199.csv": "8ac08a5e1b133fbbad61213452dfd237f1edaa9a6131a2d3a2c5af6b6be561df",
+    "outputs\\simulations\\linecap_source_20261027_v1\\release32\\surface_flow_000199.vtu": "b10ac61a2f90465ed7ffc6bffaea00f96d9ae05be39999ebd68f26c4cff2404c"
+  }
+}

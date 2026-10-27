@@ -1,0 +1,88 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><title>SU2 kaynak karşılaştırması</title><style>body{font:16px/1.65 system-ui;max-width:1180px;margin:36px auto;padding:0 20px;color:#172733;background:#f5f8fb}h1,h2{line-height:1.25}table{border-collapse:collapse;background:white;display:block;overflow-x:auto}td,th{border:1px solid #ccd7df;padding:8px}code{overflow-wrap:anywhere}a{color:#006d91}img{max-width:100%;height:auto;background:white}</style><h1>SU2 kaynak derlemesi ve kontrollü karşılaştırma</h1>
+<p>27 Ekim2026 · Üç yeni native CFD koşusu · Genel fizik kabulü: <strong>false</strong>.</p>
+<p>SU2 kaynak32 derlemesi, korunmuş başarısız denemeden 258 doğrulanmış nesneyi kullanarak kalan 32 hedefi 81.063 saniyede tamamladı. Üç yeni native CFD koşusu aynı kaynak ağ ve başlangıçla 200 adım çalıştı. Resmî release32–kaynak32 yeniden üretimi geçti: beş SI log10 RMS eğrisindeki en büyük fark 0.00175396, son CD mutlak farkı 0. Yalnız MAX_LINELET_POINTS=32→256 değiştirildi. Yoğunluk kazancı -0.00938603 log10, SA kötüleşmesi -0.00099585 log10, Krylov sayımı oranı 1.00000000, bu çiftte gözlenen süre oranı 1.28308938; ön kayıtlı ortak etki/maliyet kabulü geçmedi. 40 yeni yazılım kontrolü geçti; eski70 kontrol yeni sayılmadı. Krylov sayımı işlem maliyetinin vekilidir; daha uzun çizgilerin eşit aritmetik maliyeti olduğu veya tek çiftin evrensel hız kıyası olduğu iddia edilmez. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.</p>
+<h2>Derlemede ne değişti?</h2>
+<p>Önceki <code>p32a</code> başarısız kaydı başarısız kaldı; <code>p32b</code> bellek korumasının native başlamadan verdiği ret de korundu. Yeni <code>p32r</code>, kaynak baytlarına dokunmadan yalnız sorunlu CFlowTractionInterface.cpp derleme birimine kayıtlı başlık arama argümanını ekledi. 290 etkin komutun 289 tanesi değişmedi; 258 nesnenin hash’i yeniden denetlendi ve kalan 32 hedef 81.063s sürdü. Önceki sürücü işlemleri dahil kayıtlı toplam derleme süresi 661.938s. Daha önce önerilen global cpp_args seçeneği bu kurtarma derlemesine taşınmadı. <code>p32r/source</code> gerçek derleme yolunun bayt eşdeğer arşividir; asıl derleme p32a çalışma ağacında yapılmış, EXE sonra p32r kaydına kopyalanmıştır.</p>
+<p>Kaynak256 yeni klasörde, nesne önbelleği taşınmadan derlendi. Aynı genişletilmiş derleyici/linker/archive/Python/Ninja manifesti, runtime DLL kimliği ve etkin komutlar doğrulandı; kaynakta yalnız <code>MAX_LINELET_POINTS=32→256</code> farkı var. Bu, tüm işletim sistemi/SDK ortamının veya bağımsız bir temiz oda derlemesinin eşdeğerliği değildir.</p>
+<h2>Kaynak32 resmî sonucu yeniden üretiyor mu?</h2>
+<table><tbody>
+<tr><th>SI log10 RMS bileşeni</th><th>Bütün200 adımda en büyük mutlak fark</th><th>Ön kayıtlı üst sınır</th></tr>
+<tr><td>Rho</td><td>4.468e-05</td><td>0.03</td></tr>
+<tr><td>RhoU</td><td>1.57e-05</td><td>0.03</td></tr>
+<tr><td>RhoV</td><td>0.00078723</td><td>0.03</td></tr>
+<tr><td>RhoE</td><td>0.00175396</td><td>0.03</td></tr>
+<tr><td>nu</td><td>4.292e-05</td><td>0.03</td></tr>
+</tbody></table>
+<p>Yeniden üretim <strong>true</strong>. Son |ΔCD|=0; toplam akış+SA Krylov sayımı 16000→16000; native boolean üyelik aynı. Bu sayısal ekran, farklı GNU/runtime derlemeleri arasında bu vaka için işlemsel eşdeğerlik kanıtıdır; fizik hata bandı değildir.</p>
+<h2>Tek kaynak değişikliğinin etkisi</h2>
+<table><tbody>
+<tr><th>Kayıt</th><th>Son SI yoğunluk log10 RMS</th><th>Son SI SA log10 RMS</th><th>CD</th><th>Son100 CD aralığı</th><th>Krylov sayımı</th><th>Süre,s</th><th>Native üye</th><th>Logdaki ortalama çizgi noktası</th><th>Aynı eski RHS yoğunluk kare payı</th></tr>
+<tr><td>Resmî release32</td><td>-9.761678858</td><td>-12.244438015</td><td>0.002848056245</td><td>1.394e-09</td><td>16000</td><td>82.656</td><td>7200</td><td>32</td><td>%53.896527</td></tr>
+<tr><td>Kaynak32</td><td>-9.761658478</td><td>-12.244457275</td><td>0.002848056245</td><td>1.394e-09</td><td>16000</td><td>74.125</td><td>7200</td><td>32</td><td>%53.896527</td></tr>
+<tr><td>Kaynak256</td><td>-9.752272448</td><td>-12.245453125</td><td>0.002848056217</td><td>1.408e-09</td><td>16000</td><td>95.109</td><td>34401</td><td>152</td><td>%99.979010</td></tr>
+</tbody></table>
+<p>Ortalama çizgi noktası yalnız native logun tam <code>Computed linelet structure, ... points in each line (average).</code> satırından okunur. Yazdırılmış ortalama, tek tek çizgi boylarının dağılımı veya her çizginin cap değerine ulaştığı anlamına gelmez; yeni kabul kapısı değildir.</p>
+<table><tbody>
+<tr><th>Ön kayıtlı kapı</th><th>Gerçek durum</th></tr>
+<tr><td><code>valid_contract</code></td><td>true</td></tr>
+<tr><td><code>build32_normalization</code></td><td>true</td></tr>
+<tr><td><code>build32_native_exit_and_matched_iteration</code></td><td>true</td></tr>
+<tr><td><code>build32_complete_finite_history</code></td><td>true</td></tr>
+<tr><td><code>build32_complete_stable_CD_window</code></td><td>true</td></tr>
+<tr><td><code>build32_field_validity_proven</code></td><td>true</td></tr>
+<tr><td><code>build32_positive_finite_elapsed</code></td><td>true</td></tr>
+<tr><td><code>build32_bijective_native_mapping</code></td><td>true</td></tr>
+<tr><td><code>build32_canonical_native_membership</code></td><td>true</td></tr>
+<tr><td><code>build32_input_identities_present</code></td><td>true</td></tr>
+<tr><td><code>build256_normalization</code></td><td>true</td></tr>
+<tr><td><code>build256_native_exit_and_matched_iteration</code></td><td>true</td></tr>
+<tr><td><code>build256_complete_finite_history</code></td><td>true</td></tr>
+<tr><td><code>build256_complete_stable_CD_window</code></td><td>true</td></tr>
+<tr><td><code>build256_field_validity_proven</code></td><td>true</td></tr>
+<tr><td><code>build256_positive_finite_elapsed</code></td><td>true</td></tr>
+<tr><td><code>build256_bijective_native_mapping</code></td><td>true</td></tr>
+<tr><td><code>build256_canonical_native_membership</code></td><td>true</td></tr>
+<tr><td><code>build256_input_identities_present</code></td><td>true</td></tr>
+<tr><td><code>pristine_reproduction_passed_for_same_baseline</code></td><td>true</td></tr>
+<tr><td><code>shared_input_identities</code></td><td>true</td></tr>
+<tr><td><code>compiler_options_identity</code></td><td>true</td></tr>
+<tr><td><code>runtime_dependencies_identity</code></td><td>true</td></tr>
+<tr><td><code>only_registered_source_cap_change</code></td><td>true</td></tr>
+<tr><td><code>density_gain</code></td><td>false</td></tr>
+<tr><td><code>SA_worsening</code></td><td>true</td></tr>
+<tr><td><code>combined_Krylov_cost</code></td><td>true</td></tr>
+<tr><td><code>observed_elapsed_cost</code></td><td>true</td></tr>
+<tr><td><code>same_fixed_old_RHS</code></td><td>true</td></tr>
+<tr><td><code>native_membership_nodes_increased</code></td><td>true</td></tr>
+<tr><td><code>fixed_RHS_Rho_share_increased</code></td><td>true</td></tr>
+</tbody></table>
+<p>Ortak kabul <strong>false</strong>. Yoğunluk kazancı -0.009386030 (hedef≥0.3); SA kötüleşmesi -0.000995850 (hedef≤0.1); Krylov sayımı oranı 1.000000000 (üst sınır 1.5); gözlenen süre oranı 1.283089376 (üst sınır 1.5). Eşikler değişmedi; bütün gerekli kapılar birlikte değerlendirildi. Krylov sayımı aritmetik işin yalnız vekilidir: çizgi boyu değişince bir iterasyonun maliyeti eşit kabul edilmez. Gerçek süre bu yüzden ayrı verildi; tek eş koşu çifti genel performans oranı değildir. Bu vakada kaynak32 sayımı 16000=200×(40+40) ile kayıtlı toplam tavanın tamamı olduğundan, aynı tavanlı aday için Krylov≤1,5 oran kapısı ayırt edici değildir; eşik değiştirilmedi ve gerçek süre ayrı değerlendirildi.</p>
+<h2>İç doğrusal çözümler: ek gözlem, yeni kabul eşiği yok</h2>
+<table><tbody>
+<tr><th>Kayıt</th><th>Akış / SA40-tavanına ulaşma</th><th>Son LinSolRes ham log10</th><th>Son LinSolResTurb ham log10</th></tr>
+<tr><td>Resmî release32</td><td>200/200 · 200/200</td><td>-0.922353669</td><td>-2.705025871</td></tr>
+<tr><td>Kaynak32</td><td>200/200 · 200/200</td><td>-0.922598246</td><td>-2.697869215</td></tr>
+<tr><td>Kaynak256</td><td>200/200 · 200/200</td><td>-2.574917083</td><td>-2.730073032</td></tr>
+</tbody></table>
+<p>Bu sütunlar CSV’den doğrudan okunan iç doğrusal çözücü artıklarıdır; yukarıdaki beş SI nonlinear RMS eğrisiyle aynı nicelik değildir. Bu FGMRES yolunda döndürülen değer <code>beta/norm0</code> olup beta, Givens döndürmeleri sonrası azaltılmış sistemin <code>g[i+1]</code> değerinden güncellenir. Dolayısıyla LinSolRes burada bağımsız olarak yeniden hesaplanmış <code>||Ax-b||</code> ölçümü diye sunulmaz. norm0 önce <code>||b||</code> olur; bağıl toleransta başlangıç artık normuna ayarlanır. Gerçek <code>mat_vec(x)-b</code> yeniden hesabı, kaynakta yalnız monitoring/COMM_FULL ve recomputeRes koşullu dalındadır; bu dal döndürülen <code>beta/norm0</code> değerinin yerine geçmez. <a href="https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/src/linear_algebra/CSysSolve.cpp#L468-L616">Sabit kaynak: CSysSolve.cpp468–616</a>. İterasyon sayılarının tavanı görmesi, tek başına hassasiyet veya fizik kabulü kanıtı değildir. Bu gözlem için sonuçtan sonra yeni geçme/kalma kapısı eklenmedi.</p>
+<p><img alt="Üç koşunun beş SI geçmişi ve CD" src="../plots/su2_kaynak_karsilastirma_20261027_history.png"></p>
+<h2>Çizgi kapsamının konumu</h2>
+<p>Boolean üyelik native Linelet alanının pozitifliğinden gelir; graph renkleri çizgiID değildir. Kapsanan pay, bütün kollarda aynı dondurulmuş eski sıralı akış/SA aşama RHS’sinin yoğunluk kare toplamıdır. Yeni implicit alanların yeniden hesaplanmış nonlinear artığı, nedensel hata haritası veya ağ hata bandı değildir.</p>
+<p><img alt="Tam alan ve yakın görünümde gerçek üyelik" src="../plots/su2_kaynak_karsilastirma_20261027_membership.png"></p>
+<p>Bütün <strong>52689 düğüm</strong>, dışarıda kalanlar dahil <a href="../data/qualification/linecap_source_20261027_v1/all_nodes_membership.csv">konum/üyelik CSV’sinde</a> korunur. Yakın görünüm yalnız eksen sınırını değiştirir; dışındaki düğümler silinmez.</p>
+<h2>Korunan kayıtlar ve sınırlar</h2>
+<p>İki eski düz plaka ailesinin 738 ham hash kaydı ve yeni üç kolun 45 kaydı eşleşti. Donmuş/canlı native kod, CASE sözleşme çapası, kaynak ağaçları, tek yama, derleyici/runtime ve EXE mühürleri yeniden denetlendi. 40 yeni kontrolün dağılımı: 28 derleme/yöntem ve 12 yayın koruması. Eski70 kontrol bu sayıya eklenmedi.</p>
+<p>Nesne-cache ek çapraz denetiminde Windows/posix yol ayracı nedeniyle KeyError görüldü; normalize edilmiş yeniden denetim geçti. Bu sırada tek mevcut derleme işi sürdü; ikinci native iş başlatılmadı. Davranış riski, bağımlı ek denetimin dönüş koduna bakmadan işi başlatmaktı; dosyadaki çıkarım ve düzeltme korunuyor. Bu bir süreç olayıdır, CFD’nin fiziksel hata nedeni veya LLM iyileşme kanıtı değildir.</p>
+<p>Eski fine3999 rolü ve üç-ağ ailesi korunur; bu üç200-adımlık mekanizma kolu onların yerine seçilmez. Ağ, uzak alan, deney ve bağımsız fizik kabulleri kapanmadı; GCI üretilmedi. Bu kaynak benchmarkı keyfiCAD→CFD/İHA hizmeti, stall/3B M6 yeterliliği veya uzman LLM kanıtı değildir.</p>
+<h2>Sonraki yöntem adayı</h2>
+<p>Yalnız çizgi kapsamını büyütmek, gerekli dış yoğunluk kazancını sağlamadı. Sonraki kontrollü tanı adayı, aynı sabit lineer sistemde gerçek b−Aδ normunu pasif olarak ölçüp Givens tabanlı kestirimden ayırmaktır. Böylece iç çözücünün hatası ile dış akış güncellemesinin etkisi ayrı sorgulanabilir; mevcut veriler tek başına neden kanıtlamaz. Bu ölçüm henüz yapılmadı. Kaynak denetimi, değişmeyen çözüm yolunun yeniden üretimi ve native öncesi yeni bütçe/kabul kaydı gerekir.</p>
+<p><a href="../../work/su2_build_resume_20261027/independent_review.json">Ayrı geçmişte mevcut çıktılar üzerinde yapılan bağımsız kod/VTK denetimi</a> ham mühürleri, bütün geçmiş satırlarını ve üç alanın düğüm eşleşmesini yeniden kontrol etti; yeni kör CFD tahmini değildir. Görsel kontrolde ilk yakın görünümün çıkıştaki yüksek çizgi üyeleri nedeniyle tam alanla aynı olduğu görüldü. İlk rapor/grafikler korundu; yeni yakın görünüm iki kolda da açıkça y=0–0,002m olarak çizildi. Alan/kuvvet/kararlar değişmedi; bütün düğümler CSV’de bulunur.</p>
+<ul>
+<li><a href="su2_kaynak_karsilastirma_20261027.json">Bütün sonuç ve dosya mühürleri</a></li>
+<li><a href="su2_resume_checks_20261027.json">Yeni40 yazılım kontrolü</a></li>
+<li><a href="su2_kaynak_kontrolu_20261027.html">Önceki kaynak hazırlığı</a></li>
+<li><a href="../simulations/linecap_source_20261027_v1/contract.json">Native sözleşme</a></li>
+<li><a href="../simulations/linecap_source_20261027_v1/source_change.json">Kaynak değişikliği</a></li>
+<li><a href="../simulations/linecap_source_20261027_v1/effect.json">Kayıtlı etki kararı</a></li>
+</ul>
+<p>Kaynak kimliği: <a href="https://github.com/su2code/SU2/tree/12eb826f049ef7f67df974dfcb44cf36ee07c0f8">sabit SU2 v8.5.0 commit</a>. Yeni üçüncü taraf bağımlılık kurulmadı; rapor mevcut matplotlib ve standart HTML araçlarıyla üretildi.</p></html>

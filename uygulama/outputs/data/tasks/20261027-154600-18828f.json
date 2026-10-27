@@ -3,17 +3,15 @@
   "request": "SU2 kaynak derlemesi ve uzun LINELET mekanizmasının kontrollü sınaması",
   "kind": "qualification",
   "created_utc": "2026-10-27T12:46:00.247109+00:00",
-  "status": "bekliyor",
-  "phase": "sınırlı derleme/hazırlık paketi kapandı; RAM ve pristine yeniden üretimi bekliyor",
+  "status": "tamamlandı",
+  "phase": "sınırlı üç-kol kaynak karşılaştırması raporlandı",
   "acceptance": [
     "Pinned source and dependencies, compiler/OpenMP/runtime manifest",
     "Pristine32 control before cap256; no compiler difference attributed to cap",
     "Preregister all numerical, spatial membership and cost gates; preserve failures",
     "No promotion into old three-grid family; general physical qualification remains false"
   ],
-  "blocked_by": [
-    "Successful pristine source build and release reproduction not established; last resource gate refused launch."
-  ],
+  "blocked_by": [],
   "evidence": [
     {
       "path": "outputs/reports/su2_build_preflight_20261027.json",
@@ -34,6 +32,42 @@
     {
       "path": "outputs\\reports\\su2_kaynak_kontrolu_20261027.html",
       "sha256": "1f3ee233d365ba597e999eb83288ce8a258e63313d82dafb713a05c9d7e57c30"
+    },
+    {
+      "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.json",
+      "sha256": "b58c744f90e40f92883f711d94c6d53d08997c94f5ce093ea3cbc8caa5f0d1e4"
+    },
+    {
+      "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.md",
+      "sha256": "ddb5e25152b96c793d467e5ff7686eb24f08cfe730a6a7354971a5bf0df8b212"
+    },
+    {
+      "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+      "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+    },
+    {
+      "path": "outputs/simulations/linecap_source_20261027_v1/reproduction.json",
+      "sha256": "048d5ddf4512fdcbe6cd3d8bed85cf9fef89df886ba7d85fb7a00e4025985f2a"
+    },
+    {
+      "path": "outputs/simulations/linecap_source_20261027_v1/effect.json",
+      "sha256": "107e0a4b872b783eeed423a340059ea1105d9b43c3dae298a77a93b67776e694"
+    },
+    {
+      "path": "outputs/simulations/linecap_source_20261027_v1/source_change.json",
+      "sha256": "36c4ad509ab861b87d5f84eb8c93921983c32fac0c2e0a4edff955d95e174338"
+    },
+    {
+      "path": "outputs/reports/su2_resume_checks_20261027.json",
+      "sha256": "a07dc153389dcc46daf6ce8bbefafd5ee4316aecb055e5f0569b16da51ca09c6"
+    },
+    {
+      "path": "work/su2_build_resume_20261027/report_v1_before_visual_review/manifest.json",
+      "sha256": "cb84e37f0c580f69b39b1c8b5470f9e48fbd36802806c815ad2cf84eb2fa8d58"
+    },
+    {
+      "path": "work/su2_build_resume_20261027/independent_review.json",
+      "sha256": "ef3510c1d2ef7431606d4324aa111fec5646e73a6e8d29455d972ab23bbcf902"
     }
   ],
   "input_sha256": {
@@ -77,5 +111,31 @@
   },
   "method_design_sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44",
   "physical_qualification_passed": false,
-  "editorial_updated_utc": "2026-10-27T18:01:56.330315+00:00"
+  "editorial_updated_utc": "2026-10-27T18:01:56.330315+00:00",
+  "recovery_contract": "tools\\su2-build\\v8.5.0\\controls\\p32r\\contract.json",
+  "recovery_contract_sha256": "85a78da6d9bac88b027db106ab867761dbd5b3e4c11e19ffe8f4acfdaf0f89be",
+  "pristine_reproduction": {
+    "path": "outputs\\simulations\\linecap_source_20261027_v1\\reproduction.json",
+    "sha256": "048d5ddf4512fdcbe6cd3d8bed85cf9fef89df886ba7d85fb7a00e4025985f2a",
+    "accepted": true
+  },
+  "native_comparison_contract": {
+    "path": "outputs\\simulations\\linecap_source_20261027_v1\\contract.json",
+    "sha256": "852169d743ef330adc92c5022ad9cf0d6f5703114f9b071cad75495c7a348968"
+  },
+  "finished_utc": "2026-10-27T19:07:05.055983+00:00",
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false,
+  "completion_scope": "Bounded experiment and report only; required physical gates remain open",
+  "cap_effect_accepted": false,
+  "new_native_runs": 3,
+  "general_qualification_open": [
+    "mesh",
+    "farfield",
+    "experiment",
+    "RAE2822",
+    "M6",
+    "UAV"
+  ],
+  "next_required_step": "Source-backed passive measurement of the true inner linear residual on a fixed-state diagnostic; preregister before native execution"
 }

@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-27T18:46:35.995234+00:00",
+  "tests_run": 40,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "groups": [
+    "test_ninja_recipe",
+    "test_build_cap",
+    "test_v017_remote_guards"
+  ],
+  "counts": {
+    "engineering_recipe_and_cap": 28,
+    "publication_guards": 12
+  },
+  "purpose": "Combined root-level imports, provenance and release helper integration; prior70 checks not rerun.",
+  "code_sha256": {
+    "work\\su2_build_resume_20261027\\ninja_recipe.py": "1dc1664a0057df6e1de97c86d3434cd3b938f51928f7535cd2e52b1b42ee251a",
+    "work\\su2_build_resume_20261027\\test_ninja_recipe.py": "eae6e61f889ec4d0ba99c1157dc430b54e19acee84fb90040ad38297a254172c",
+    "work\\su2_build_resume_20261027\\build_cap.py": "99cda7b592ae4aca1598e87cd385cf6546d0a1ef954f6de07618fe90a0715b5e",
+    "work\\su2_build_resume_20261027\\test_build_cap.py": "6e7f3455d2e3dfa92a4db37a7d9a8f95a01bbf8c243b12f1eec0b080ceef98b2",
+    "work\\publish\\verify_remote_v017.py": "c93d9f11fe6f25d6e0a9c59ece0ce4dfe08da2811b2c333d2528f38d48a401a8",
+    "work\\publish\\test_v017_remote_guards.py": "100016a3d2560a543fb2865618d848b6f3f6e7975773bed08d571e84a986c237"
+  },
+  "log_path": "work\\su2_build_resume_20261027\\component_checks.log",
+  "log_sha256": "9ec4efc1217c610f90ae5228a10f4eb0aba351b7bab5c23122b933751c335f84",
+  "CFD_runs_launched_by_tests": 0,
+  "physical_qualification_passed": false,
+  "LLM_improvement_demonstrated": false
+}

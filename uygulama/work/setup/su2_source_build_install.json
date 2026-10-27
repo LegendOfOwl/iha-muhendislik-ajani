@@ -1,12 +1,48 @@
 {
   "recorded_utc": "2026-10-27T13:23:26.293834+00:00",
-  "status": "light_build_tools_installed; compiler_preflight_passed; SU2source_not_built",
+  "status": "pristine_source_built_and_reproduced; cap256_control_completed",
   "packages": {
     "meson": "1.8.2",
     "ninja": "1.13.0",
     "psutil": "7.1.0"
   },
-  "reference": "outputs\\reports\\su2_build_preflight_20261027.json",
+  "reference": "outputs/reports/su2_kaynak_karsilastirma_20261027.json",
   "native_release_executable_replaced": false,
-  "physical_qualification_passed": false
+  "physical_qualification_passed": false,
+  "updated_utc": "2026-10-27T19:07:05.055983+00:00",
+  "report_sha256": "b58c744f90e40f92883f711d94c6d53d08997c94f5ce093ea3cbc8caa5f0d1e4",
+  "source_builds": {
+    "p32r": {
+      "succeeded": true,
+      "source_tree_sha256": "9da2580a4529285e9e1c52ddac9aa39f91b593ddcc822fb8e6a385db5b51a689",
+      "compiler_manifest_sha256": "8c52f2718a58c4a29b529a26a13d221aef878e8662ab088f388e36864cc9d87d",
+      "runtime_manifest_sha256": "54c11cdfa5d0c906ca757df4d774772618f239b3c6889fdfe6b2077704f2ceb7",
+      "exe_sha256": "024c912c7d80a9f32fd058590a5ecacf65ed0915d213773d6921275c0e3e641c",
+      "bytes": 14570998,
+      "seconds": 81.06300000008196,
+      "contract_sha256": "85a78da6d9bac88b027db106ab867761dbd5b3e4c11e19ffe8f4acfdaf0f89be",
+      "status_sha256": "af156c67d2f7b3c4d16ac96a8bce43ea5847b35101d8f4004d956e7d5ef29530",
+      "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8"
+    },
+    "p256r": {
+      "succeeded": true,
+      "source_tree_sha256": "99bebcdc9abdd3df606591eda8be71217b47b0b9963c71cb6815d8a012515903",
+      "compiler_manifest_sha256": "8c52f2718a58c4a29b529a26a13d221aef878e8662ab088f388e36864cc9d87d",
+      "runtime_manifest_sha256": "54c11cdfa5d0c906ca757df4d774772618f239b3c6889fdfe6b2077704f2ceb7",
+      "exe_sha256": "29f5150bf13e3bd5cc623a997fc3c9a57306a3fc69c0321566036129dbc4e00d",
+      "bytes": 14570998,
+      "seconds": 761.484999999986,
+      "contract_sha256": "743c8586133323933af8f418639541b59bbae2ab79ccad695ce96e3b9210aee0",
+      "status_sha256": "befb3884d108caf7085886e9c790e11c42a3fb22e19b9f4a112f39dd1259ebf4",
+      "source_patch_sha256": "8c31eb9d126e6ca38ebaf86037bd0b3d8f50d3308b9f91a202bba904a060da35",
+      "source_commit": "12eb826f049ef7f67df974dfcb44cf36ee07c0f8"
+    }
+  },
+  "pristine_reproduction_accepted": true,
+  "registered_cap_effect_accepted": false,
+  "default_solver_changed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false,
+  "scope": "Local source-build and one 2D numerical mechanism diagnostic; not a general CFD qualification"
 }

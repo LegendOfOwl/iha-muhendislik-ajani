@@ -2,7 +2,7 @@ from incremental_export import ROOT,DEST,RUN,VERSION,read,dump,digest,now,BASE_H
 from pathlib import Path
 import os,subprocess,json,zipfile
 REPO='LegendOfOwl/iha-muhendislik-ajani'
-TITLE='Kaynak derleme altyapısı ve karşılaştırma kontrolleri'
+TITLE='SU2 kaynak derlemesi ve kontrollü karşılaştırma'
 ENV=dict(os.environ,GH_CONFIG_DIR=str(ROOT/'tools/github-cli/auth'),GH_PROMPT_DISABLED='1',GIT_TERMINAL_PROMPT='0')
 n=int(ENV.get('GIT_CONFIG_COUNT','0'));ENV.update({f'GIT_CONFIG_KEY_{n}':'safe.directory',f'GIT_CONFIG_VALUE_{n}':str(DEST),'GIT_CONFIG_COUNT':str(n+1)})
 GH=read(ROOT/'work/publish/github_cli_install.json')['executable']
