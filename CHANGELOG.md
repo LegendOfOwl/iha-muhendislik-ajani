@@ -3,6 +3,10 @@
 v0.1.0–v0.10.0 geriye dönük içe aktarım; v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.
 
 
+## v0.18.0 — 28 Ekim 2026: Açık problemler, öncelikler ve derin araştırma
+
+28 Ekim2026:29 uzmanlık-alt başlığı, yinelenmeler birleştirilerek26 açık başlıkta önceliklendirildi (P0=7,P1=12,P2=6,P3=1). 39 farklı birincil kaynak adresi; 50 benzersiz yerel kanıt dosyasının SHA256 değeri yeniden kontrol edildi. En kritik sıra gerçek iç artık/dış yakınsama, bölgesel ağ, geometri eşdeğerliği, sistematik ağ/uzak alan ve deney kabulüdür. Gerçek İHA girdileri eksik; genel uçtan uca ajan ve görülmemiş görevlerde iyileşme kanıtı yok. Araştırmadan pasif b−Aδ ölçümü ve bağımsız wall-distance denetimi somut adaylar olarak çıktı; bunlar henüz uygulanmadı. Yeni CFD, kaynak derlemesi veya kurulum yapılmadı; mevcut fizik/RAE/M6/İHA/LLM kabulü değişmedi.
+
 ## v0.17.0 — 27 Ekim 2026: SU2 kaynak derlemesi ve kontrollü karşılaştırma
 
 SU2 kaynak32 derlemesi, korunmuş başarısız denemeden 258 doğrulanmış nesneyi kullanarak kalan 32 hedefi 81.063 saniyede tamamladı. Üç yeni native CFD koşusu aynı kaynak ağ ve başlangıçla 200 adım çalıştı. Resmî release32–kaynak32 yeniden üretimi geçti: beş SI log10 RMS eğrisindeki en büyük fark 0.00175396, son CD mutlak farkı 0. Yalnız MAX_LINELET_POINTS=32→256 değiştirildi. Yoğunluk kazancı -0.00938603 log10, SA kötüleşmesi -0.00099585 log10, Krylov sayımı oranı 1.00000000, bu çiftte gözlenen süre oranı 1.28308938; ön kayıtlı ortak etki/maliyet kabulü geçmedi. 40 yeni yazılım kontrolü geçti; eski70 kontrol yeni sayılmadı. Krylov sayımı işlem maliyetinin vekilidir; daha uzun çizgilerin eşit aritmetik maliyeti olduğu veya tek çiftin evrensel hız kıyası olduğu iddia edilmez. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.

@@ -69,3 +69,4 @@ Kütlesi bilinmeyen bileşenler: yapı, motor_ve_pervane, enerji_sistemi, aviyon
 - 20261026-191942-91103b: İnce kaynak ağda ön kayıtlı iç çözücü40/80 kontrolü ve bağımsız kaynak incelemesi — tamamlandı
 - 20261027-085415-c7c181: LINELET gerçek kapsamı ve bölgesel artıkla kaynaklı sayısal kontrol — tamamlandı
 - 20261027-154600-18828f: SU2 kaynak derlemesi ve uzun LINELET mekanizmasının kontrollü sınaması — tamamlandı
+- 20261027-221814-12f67c: Açık mühendislik problemleri: önem sırası ve kaynaklı derin araştırma — tamamlandı

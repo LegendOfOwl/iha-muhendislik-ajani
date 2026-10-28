@@ -1,0 +1,2866 @@
+{
+  "schema": "open_issue_deep_research_v1",
+  "created_utc": "2026-10-28T08:36:40.980566+00:00",
+  "research_date_local": "2026-10-28",
+  "timezone": "Europe/Istanbul",
+  "evidence_cutoff": "v0.17.0 / 27 October2026; literature consulted28 October2026",
+  "summary_tr": "28 Ekim2026:29 uzmanlık-alt başlığı, yinelenmeler birleştirilerek26 açık başlıkta önceliklendirildi (P0=7,P1=12,P2=6,P3=1). 39 farklı birincil kaynak adresi; 50 benzersiz yerel kanıt dosyasının SHA256 değeri yeniden kontrol edildi. En kritik sıra gerçek iç artık/dış yakınsama, bölgesel ağ, geometri eşdeğerliği, sistematik ağ/uzak alan ve deney kabulüdür. Gerçek İHA girdileri eksik; genel uçtan uca ajan ve görülmemiş görevlerde iyileşme kanıtı yok. Araştırmadan pasif b−Aδ ölçümü ve bağımsız wall-distance denetimi somut adaylar olarak çıktı; bunlar henüz uygulanmadı. Yeni CFD, kaynak derlemesi veya kurulum yapılmadı; mevcut fizik/RAE/M6/İHA/LLM kabulü değişmedi.",
+  "summary_en": "On28 October2026,29 specialist gaps were consolidated into26 prioritized open items (7P0,12P1,6P2,1P3), supported by39 distinct primary-source addresses and50 rehashed unique local evidence files. True inner residual/outer convergence, regional meshing, geometry equivalence, systematic-grid/farfield and experimental gates remain critical. Real UAV inputs, generic end-to-end autonomy and unseen-task improvement remain unestablished. Passive true-linear-residual instrumentation and independent wall-distance auditing are proposed, not executed. No new CFD, source build or installation was run; physical/M6/UAV qualification and LLM-improvement status did not change.",
+  "issue_count": 26,
+  "specialist_issue_count": 29,
+  "priority_counts": {
+    "P0": 7,
+    "P1": 12,
+    "P2": 6,
+    "P3": 1
+  },
+  "distinct_primary_source_addresses": 39,
+  "issues": [
+    {
+      "id": "U01",
+      "rank": 1,
+      "priority": "P0",
+      "domain": "CFD",
+      "kind": "acceptance_failed",
+      "title": "İnce ağın sayısal yakınsaması ve gerçek iç artık ölçümü",
+      "observed": "Düz plaka ailesinde ince rolün yoğunluk kapısı açık; RAE ve TMRsharp M6 da genel kabulü geçmedi. v17 üç tanı kolunda tüm200 flow/SA çözümü40 tavanda. LinSolRes, bağımsız b−Aδ normu değil.",
+      "impact": "İterasyon hatası sınırlanmadan ağ ve deney farkının ne kadarının fiziksel olduğu ayrılamaz.",
+      "next_test": "Assembled FGMRES çağrısında gerçek A,b,x0,δ,norm0 kimliğini kaydet; scratch vektörle mutlak/bağıl/bileşen gerçek artığını pasif ölç. Analitik matris kontrolleri ve değişmeyen kaynak32 yeniden üretiminden sonra aynı ilk-adım A,b ile kısa32/256 kıyası yap.",
+      "closure": "Ölçüm doğruluğu ve çözümü değiştirmediği ayrı geçmeli; sonra önceden seçilmiş fine ve bütün zorunlu dış kapılar aynı vaka/ailede geçmeli. Yeni ölçüm veya tek bileşen iyileşmesi fizik kabulü değildir.",
+      "specialist_issue_ids": [
+        "N01",
+        "N02",
+        "VM01"
+      ],
+      "source_ids": [
+        "NS01",
+        "NS04",
+        "NS06"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "NS01",
+          "title": "Pinned SU2v8.5.0 source: FGMRES, implicit update and Newton-Krylov",
+          "url": "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/src/linear_algebra/CSysSolve.cpp"
+        },
+        {
+          "id": "NS04",
+          "title": "Choosing the Forcing Terms in an Inexact Newton Method",
+          "url": "https://epubs.siam.org/doi/10.1137/0917003"
+        },
+        {
+          "id": "NS06",
+          "title": "Comparative study of inner-outer Krylov solvers for linear systems in structured and high-order unstructured CFD problems",
+          "url": "https://arxiv.org/html/2404.17870v1"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/cfd_ic_cozum_ve_uc_ag_20261026.md",
+          "sha256": "6076ac835f6a8e587def75609e696467d0d962d5212c91e38335419119444ca4"
+        },
+        {
+          "path": "outputs/reports/cfd_kalan_artik_20261026.md",
+          "sha256": "6092982e52a78383935a9812034cf93a3d27698cf177b0a14f2a5a299a5dd08c"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.json",
+          "sha256": "b58c744f90e40f92883f711d94c6d53d08997c94f5ce093ea3cbc8caa5f0d1e4"
+        },
+        {
+          "path": "work/su2_build_20261027/method_design.json",
+          "sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44"
+        },
+        {
+          "path": "work/su2_build_resume_20261027/independent_review.json",
+          "sha256": "ef3510c1d2ef7431606d4324aa111fec5646e73a6e8d29455d972ab23bbcf902"
+        }
+      ]
+    },
+    {
+      "id": "U02",
+      "rank": 2,
+      "priority": "P0",
+      "domain": "CFD",
+      "kind": "resolution_unverified",
+      "title": "Konuma göre BL/LE/TE/iz/uç çözünürlüğü ve bütün Cf eğrisi",
+      "observed": "y+ bazı kollarda geçti; RAE normal blok değişimi kuvvetleri yaklaşık%4 etkiledi. Düz plaka kabul penceresi Cf normu ile bütün447 noktanın normu farklı. M6 uç/iz ve katman geçişi birlikte kapanmadı.",
+      "impact": "Toplam hücre veya ilk y+ iyi olsa da gerekli akış gradyanı çözülmemiş olabilir.",
+      "next_test": "Gerçek normal/teğetsel aralık, son segment büyümesi, toplam katman ve hız/μt profillerini çıkar; yalnız bir bölgesel dağılım/geçişi değiştiren eş kontrol kur. LE dahil bütün kaynak noktalarını koru.",
+      "closure": "Yakınsamış eş çözümlerde ön kayıtlı profil/kuvvet duyarlılığı ve bölgesel mesh kapıları birlikte geçmeli; kötü noktalar puandan çıkarılmamalı.",
+      "specialist_issue_ids": [
+        "VM02",
+        "N05"
+      ],
+      "source_ids": [
+        "NS03",
+        "VS01"
+      ],
+      "depends_on": [
+        "U01"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "NS03",
+          "title": "SA Expected Results -2D Zero Pressure Gradient Flat Plate",
+          "url": "https://tmbwg.github.io/turbmodels/flatplate_sa.html"
+        },
+        {
+          "id": "VS01",
+          "title": "TMR y+ çalışması",
+          "url": "https://tmbwg.github.io/turbmodels/flatplate_val_ypluseffect.html"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/cfd_ic_cozum_ve_uc_ag_20261026.md",
+          "sha256": "6076ac835f6a8e587def75609e696467d0d962d5212c91e38335419119444ca4"
+        },
+        {
+          "path": "outputs/reports/cfd_kalan_artik_20261026.md",
+          "sha256": "6092982e52a78383935a9812034cf93a3d27698cf177b0a14f2a5a299a5dd08c"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.json",
+          "sha256": "b58c744f90e40f92883f711d94c6d53d08997c94f5ce093ea3cbc8caa5f0d1e4"
+        },
+        {
+          "path": "work/su2_build_20261027/method_design.json",
+          "sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44"
+        },
+        {
+          "path": "work/su2_build_resume_20261027/independent_review.json",
+          "sha256": "ef3510c1d2ef7431606d4324aa111fec5646e73a6e8d29455d972ab23bbcf902"
+        }
+      ]
+    },
+    {
+      "id": "U03",
+      "rank": 3,
+      "priority": "P0",
+      "domain": "Geometri",
+      "kind": "equivalence_unverified",
+      "title": "Kaynak CAD, mesh, VLM ve OAS temsil eşdeğerliği",
+      "observed": "Aynı parametreler farklı interpolasyonlar üretiyor. TMR M6 sınır-yüzeyi örneklerinin max uzaklığı yaklaşık9,78e−4 kök veter; bu tam Hausdorff değil. Önceki solid mesafe denetimi superseded.",
+      "impact": "Farklı geometriyi tek aday veya tek sistematik ağ ailesi saymak karşılaştırmayı bozabilir.",
+      "next_test": "Birim/eksen/TE/LE/twist eksenini ve hangi yüzeyin solid/camber/deforme yüzey olduğunu tanımla; iki yönlü boundary mesafesi, normal ve ara istasyon kontrolleriyle ortak aday kimliğine bağla.",
+      "closure": "İlan edilmiş hata bütçesi bütün zorunlu örneklerde geçmeli; kasıtlı ölçek/twist sapması reddedilmeli. Yeni geometri yeni temsil sürümü olmalı.",
+      "specialist_issue_ids": [
+        "VM03",
+        "CA02"
+      ],
+      "source_ids": [
+        "CS01",
+        "CS02",
+        "CS03",
+        "VS02"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS01",
+          "title": "OpenVSP API 3.55.0 resmi belgeleri",
+          "url": "https://openvsp.org/api_docs/latest/index.html"
+        },
+        {
+          "id": "CS02",
+          "title": "OpenAeroStruct 2.12: OpenVSP-generated Mesh Example",
+          "url": "https://mdolab-openaerostruct.readthedocs-hosted.com/en/latest/advanced_features/openvsp_mesh_example.html"
+        },
+        {
+          "id": "CS03",
+          "title": "OCCT BRepCheck_Analyzer referansı",
+          "url": "https://www.occt3d.com/dev/doc/refman/html/class_b_rep_check___analyzer.html"
+        },
+        {
+          "id": "VS02",
+          "title": "TMR vaka tanımı",
+          "url": "https://tmbwg.github.io/turbmodels/onerawingnumerics_val.html"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/complex_vlm_force_audit.json",
+          "sha256": "9749345e4f8b28f8ed6da2c431bd9810151f78391eb2003a153c483707661113"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/step_bore_measurements.json",
+          "sha256": "2163c75e8b95deda67d7df05e196cc1ff71e8d367e31eaffd0516d9d777d769f"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        },
+        {
+          "path": "work/geometry/parametric_wing.py",
+          "sha256": "e652e72539f36874d313fac7f437b02946ed533d0975f9ba0973a4764a49b025"
+        },
+        {
+          "path": "work/qualification/run_complex_vlm.py",
+          "sha256": "6392f99b060059ab2d48113eacafca42186d1d14211a31ad79d6deee4e6cd8be"
+        }
+      ]
+    },
+    {
+      "id": "U04",
+      "rank": 4,
+      "priority": "P0",
+      "domain": "CFD",
+      "kind": "acceptance_failed",
+      "title": "Üç yakınsamış sistematik ağ ve geçerli GCI",
+      "observed": "Birden fazla gerçek üç-ağ ailesi var; fakat gerekli iteratif/asimptotik şartlar birlikte sağlanmadı. Özellikle TMRsharp M6 üç ağı zaten üretildi, eksik olan üç başarılı çözüm. GCI null.",
+      "impact": "Sadece üç sonuç veya küçük orta–ince fark güvenilir ayrıklaştırma hata bandı vermez.",
+      "next_test": "Aynı geometri/dış sınır/fizikte yönsel inceltme oranlarını kaydet; her seviyeyi aynı QoI ve iterasyon kapılarıyla değerlendir. LE/şok tekilliklerini ayrı ele al.",
+      "closure": "Kayıtlı ağ ailesi için iteratif belirsizlik sınırlı ve gözlenen mertebe/asimptotik davranış uygun olmalı; uygunsuz nicelikte GCI açıklamalı null kalmalı.",
+      "specialist_issue_ids": [
+        "VM04"
+      ],
+      "source_ids": [
+        "VS04",
+        "PS01"
+      ],
+      "depends_on": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "VS04",
+          "title": "NPARC mekânsal yakınsama",
+          "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/spatconv.html"
+        },
+        {
+          "id": "PS01",
+          "title": "NASA NPARC CFD verification/validation overview",
+          "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/overview.html"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        }
+      ]
+    },
+    {
+      "id": "U05",
+      "rank": 5,
+      "priority": "P0",
+      "domain": "CFD",
+      "kind": "sensitivity_missing",
+      "title": "Uzak alan ve sınır etkisinin bağımsız ölçülmesi",
+      "observed": "RAE400c ağı hazırlanmış fakat kabul edilmiş çözümü yok; TMR M6 kaynak100c olması tek başına duyarlılık deneyi değil. Eski farklı dış alanlar salt mesh yakınsaması sayılmadı.",
+      "impact": "Dış sınır etkisi ağ ve model hatasıyla karışabilir.",
+      "next_test": "Kaynak gövde ve yakın ağı koruyup yalnız dış bölgeyi değiştiren eş çift çalıştır; aynı matched alan/geçmiş ve kuvvet pencerelerini kullan.",
+      "closure": "İki çözüm de kendi sayısal kapısını geçmeli ve ön kayıtlı QoI sınır duyarlılığı kapanmalı; alanı olmayan hazır ağın sonuçları null kalmalı.",
+      "specialist_issue_ids": [
+        "VM05"
+      ],
+      "source_ids": [
+        "VS04",
+        "PS01"
+      ],
+      "depends_on": [
+        "U01",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "VS04",
+          "title": "NPARC mekânsal yakınsama",
+          "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/spatconv.html"
+        },
+        {
+          "id": "PS01",
+          "title": "NASA NPARC CFD verification/validation overview",
+          "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/overview.html"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        }
+      ]
+    },
+    {
+      "id": "U06",
+      "rank": 6,
+      "priority": "P0",
+      "domain": "Doğrulama",
+      "kind": "acceptance_failed",
+      "title": "RAE2822/M6 deney kıyası ve fiziksel koşul eşlemesi",
+      "observed": "RAE v2 fine CpRMSE≈0,067>0,03; v3 genel kabulü false. Daha yeni TMRsharp M6 kaynak ailesinin hiçbir iteratif kapısı geçmedi. Eski blunt M6 iyileşmeleri ayrı vaka. Model/BC/ölçek ve Sutherland özdeşliği her kodda tam kanıtlanmış değil.",
+      "impact": "Denklemlerin çözülmesi, deneydeki geometri/akış/modelin doğru temsilini kendiliğinden göstermez.",
+      "next_test": "Sharp/blunt, root/MAC Reynolds, nominal/düzeltilmiş koşul, trip, SA varyantı, viskozite yasası ve Cp işaretini kaynak matrisiyle eşleştir. Sonra bütün deney noktaları/grupları ve bağımsız kuvvet zinciriyle değerlendir.",
+      "closure": "Vakaya önceden bağlanmış sayısal, geometri, deney ve kapsam kapıları birlikte geçmeli. Koşul/puan/eşik sonuç tutturmak için değiştirilmemeli.",
+      "specialist_issue_ids": [
+        "VM06"
+      ],
+      "source_ids": [
+        "VS02",
+        "VS05",
+        "NS03",
+        "PS01"
+      ],
+      "depends_on": [
+        "U01",
+        "U02",
+        "U03",
+        "U04",
+        "U05"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "VS02",
+          "title": "TMR vaka tanımı",
+          "url": "https://tmbwg.github.io/turbmodels/onerawingnumerics_val.html"
+        },
+        {
+          "id": "VS05",
+          "title": "WIND Study4",
+          "url": "https://www.grc.nasa.gov/www/wind/valid/raetaf/raetaf04/raetaf04.html"
+        },
+        {
+          "id": "NS03",
+          "title": "SA Expected Results -2D Zero Pressure Gradient Flat Plate",
+          "url": "https://tmbwg.github.io/turbmodels/flatplate_sa.html"
+        },
+        {
+          "id": "PS01",
+          "title": "NASA NPARC CFD verification/validation overview",
+          "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/overview.html"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        }
+      ]
+    },
+    {
+      "id": "U07",
+      "rank": 7,
+      "priority": "P0",
+      "domain": "Gerçek İHA",
+      "kind": "input_missing",
+      "title": "Gerçek görev, kütle ve kabul girdileri",
+      "observed": "Kalıcı gerçek İHA mission kaydında7 girdi null; altı bileşen kütlesi bilinmiyor;8 kavramsal adım bekliyor. Bunlar yazılım hatası değildir.",
+      "impact": "Gerçek uçağın güç/enerji/CG/trim veya uygunluğu hesaplanamaz. Bu eksik benchmark araştırmasını engellemez.",
+      "next_test": "Kullanıcı gereksinimlerini ve kaynaklı bileşen verilerini değer/aralık, SI birim, kaynak ve geçerlilikle kaydet; çelişki/eksik için kabul matrisi kur.",
+      "closure": "Bağlı hesaplar için kritik girdiler onaylı olmalı; bilinmeyenler sıfır olmamalı. Her aşama kendi kanıtıyla kapanmalı.",
+      "specialist_issue_ids": [
+        "CA01"
+      ],
+      "source_ids": [
+        "CS09",
+        "PS02"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS09",
+          "title": "ideas-um/openaerostruct-llm-agent",
+          "url": "https://github.com/ideas-um/openaerostruct-llm-agent"
+        },
+        {
+          "id": "PS02",
+          "title": "NASA-STD-7009B, 2024",
+          "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/data/project/conceptual_steps.json",
+          "sha256": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3"
+        },
+        {
+          "path": "outputs/data/project/mass_budget.json",
+          "sha256": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677"
+        },
+        {
+          "path": "outputs/data/project/mission.json",
+          "sha256": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+        }
+      ]
+    },
+    {
+      "id": "U08",
+      "rank": 8,
+      "priority": "P1",
+      "domain": "CFD",
+      "kind": "capability_unproven",
+      "title": "Keyfi kullanıcı CAD’inden kaliteli hacim ağı",
+      "observed": "Kaynak benchmark ve tanımlı profil/kanat aileleri için betikler var; keyfi yeni parçaya genel RANS ağı ve bütün bölgesel kontroller doğrulanmadı.",
+      "impact": "Hazır örneği çalıştırmak yeni kullanıcı geometrisine ait sonuç üretmez.",
+      "next_test": "Önce sınırlı bir yeni geometri ailesi seç; watertight CAD/duvar/sınır etiketleri, bölgesel mesh sözleşmesi, kalite retleri ve aynı geometriyle üç seviye üretimini sınayacak vaka kur.",
+      "closure": "Yeni geometri kendi kimliğiyle CAD→mesh→solver→kabul zincirini geçmeli; destek dışı geometri doğru biçimde reddedilmeli.",
+      "specialist_issue_ids": [
+        "CA04"
+      ],
+      "source_ids": [
+        "PS03",
+        "CS03",
+        "VS03"
+      ],
+      "depends_on": [
+        "U02",
+        "U03",
+        "U04"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "PS03",
+          "title": "CFD Vision2030 Study, NASA/CR-2014-218178",
+          "url": "https://ntrs.nasa.gov/api/citations/20140003093/downloads/20140003093.pdf"
+        },
+        {
+          "id": "CS03",
+          "title": "OCCT BRepCheck_Analyzer referansı",
+          "url": "https://www.occt3d.com/dev/doc/refman/html/class_b_rep_check___analyzer.html"
+        },
+        {
+          "id": "VS03",
+          "title": "Park vd.,2018, BölümVI ve Şekil11–13",
+          "url": "https://ntrs.nasa.gov/api/citations/20180006169/downloads/20180006169.pdf?attachment=true"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/workflow_readiness.json",
+          "sha256": "7301d19e4396cee07bb55db976a60d3f510b461ef632e1961501a88be7a4d3d9"
+        },
+        {
+          "path": "work/agent/project.py",
+          "sha256": "4dd3721d86048a7557a6e2dfaba9a302ed087c1bc6c62e6730071d7cb9709ad7"
+        },
+        {
+          "path": "work/agent/projects.py",
+          "sha256": "89498ca6e7ea50f4b96c16fc6ab81f556fbe5db17f440a9f363c93603fc31f26"
+        },
+        {
+          "path": "work/agent/projects_desk.ps1",
+          "sha256": "ae44bf3eb959cf7a1a6b1c7bd2c042b78836a80c31d0c2196bbc61ddc6ce07b5"
+        },
+        {
+          "path": "work/workflow/rank_candidates.py",
+          "sha256": "3ce04535cbb018265a1b43aef7a9141f498ab2142c2f281ccdde5bbb411e6b62"
+        }
+      ]
+    },
+    {
+      "id": "U09",
+      "rank": 9,
+      "priority": "P1",
+      "domain": "Gerçek İHA",
+      "kind": "capability_unproven",
+      "title": "Bütün uçak performansı, trim, kararlılık ve3B kapsam",
+      "observed": "2B profil, ayrı kanat VLM/OAS ve M6 testleri var; gerçek gövde/kuyruk/itki etkileşimi ile sürekli güç, enerji, CG ve trim birlikte doğrulanmadı.",
+      "impact": "Bir profil/kanat sonucu bütün uçağın görev gereksinimlerini kapatamaz.",
+      "next_test": "Aynı gerçek adayda bileşen kütleleri, güç/enerji modeli, CG/trim ve uygun aero/yapı yöntemini bağla; dahil edilmeyen parçaları ve model rejimini kaydet.",
+      "closure": "Gereksinimlerin her biri sağlandı/sağlanmadı/henüz değerlendirilemedi ve kanıt taşımalı; bileşen sonucu uçak sonucu diye aktarılmamalı.",
+      "specialist_issue_ids": [
+        "CA01",
+        "CA07"
+      ],
+      "source_ids": [
+        "CS09",
+        "CS13",
+        "PS02"
+      ],
+      "depends_on": [
+        "U07",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS09",
+          "title": "ideas-um/openaerostruct-llm-agent",
+          "url": "https://github.com/ideas-um/openaerostruct-llm-agent"
+        },
+        {
+          "id": "CS13",
+          "title": "OpenAeroStruct 2.12.0 resmi genel belgeleri",
+          "url": "https://mdolab-openaerostruct.readthedocs-hosted.com/en/latest/"
+        },
+        {
+          "id": "PS02",
+          "title": "NASA-STD-7009B, 2024",
+          "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/data/project/conceptual_steps.json",
+          "sha256": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3"
+        },
+        {
+          "path": "outputs/data/project/mass_budget.json",
+          "sha256": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677"
+        },
+        {
+          "path": "outputs/data/project/mission.json",
+          "sha256": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3"
+        },
+        {
+          "path": "outputs/reports/fem_results.json",
+          "sha256": "f9813c1eac0db5ade4c69bcfcebcdd21f4727794ecbd035c1aa244bc078e9f61"
+        },
+        {
+          "path": "outputs/reports/openaerostruct_examples.json",
+          "sha256": "340cdd2275ae2018f26513bcb50a4f9a6e7aad3799d7f21c11e21b922454f9f4"
+        },
+        {
+          "path": "work/setup/openaerostruct_install.json",
+          "sha256": "c5f389c75ae267814d04f5286a9b4757e2d0c1dee3c96973014afa9f12b27751"
+        }
+      ]
+    },
+    {
+      "id": "U10",
+      "rank": 10,
+      "priority": "P1",
+      "domain": "Ajan",
+      "kind": "capability_unproven",
+      "title": "Yeni projede araştırmadan sıralamaya uçtan uca ajan",
+      "observed": "full_generic_pipeline_verified=false. GUI/EXE ve görev kaydı çalışıyor; yeni ayrı CLI oturumu açılması, yeni projede bütün aşamaların özerk tamamlandığını kanıtlamıyor.",
+      "impact": "Kullanıcının istediği tek görevde araştırma→CAD→analiz→CFD→sıralama→rapor zinciri henüz gösterilmedi.",
+      "next_test": "Görülmemiş sınırlı bir proje, aday bütçesi ve kabul sözleşmesiyle gerçekten yeni oturum başlat; eksik veri, araç hatası ve destek dışı CAD dallarını da izle.",
+      "closure": "Aynı project/candidate/geometry/condition kimliği bütün aşamalarda eşleşmeli; final sıra yalnız bütün gerekli kapıları geçen adaylarla ve taranmayan alan açıklamasıyla oluşmalı.",
+      "specialist_issue_ids": [
+        "CA04"
+      ],
+      "source_ids": [
+        "CS10",
+        "CS12",
+        "CS09"
+      ],
+      "depends_on": [
+        "U03",
+        "U08",
+        "U11"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS10",
+          "title": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite",
+          "url": "https://arxiv.org/abs/2510.21652v2"
+        },
+        {
+          "id": "CS12",
+          "title": "From Reproduction to Replication: Evaluating Research Agents with Progressive Code Masking",
+          "url": "https://arxiv.org/abs/2506.19724"
+        },
+        {
+          "id": "CS09",
+          "title": "ideas-um/openaerostruct-llm-agent",
+          "url": "https://github.com/ideas-um/openaerostruct-llm-agent"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/workflow_readiness.json",
+          "sha256": "7301d19e4396cee07bb55db976a60d3f510b461ef632e1961501a88be7a4d3d9"
+        },
+        {
+          "path": "work/agent/project.py",
+          "sha256": "4dd3721d86048a7557a6e2dfaba9a302ed087c1bc6c62e6730071d7cb9709ad7"
+        },
+        {
+          "path": "work/agent/projects.py",
+          "sha256": "89498ca6e7ea50f4b96c16fc6ab81f556fbe5db17f440a9f363c93603fc31f26"
+        },
+        {
+          "path": "work/agent/projects_desk.ps1",
+          "sha256": "ae44bf3eb959cf7a1a6b1c7bd2c042b78836a80c31d0c2196bbc61ddc6ce07b5"
+        },
+        {
+          "path": "work/workflow/rank_candidates.py",
+          "sha256": "3ce04535cbb018265a1b43aef7a9141f498ab2142c2f281ccdde5bbb411e6b62"
+        }
+      ]
+    },
+    {
+      "id": "U11",
+      "rank": 11,
+      "priority": "P1",
+      "domain": "Ajan",
+      "kind": "behaviour_unvalidated",
+      "title": "Talimat/hafıza iyileşmesinin görülmemiş görevlerde ölçülmesi",
+      "observed": "Talimat sürümleri, yanlış-kabul korumaları ve kod karşı örnekleri var; aynı bütçe/araçlarla bağımsız önce/sonra görülmemiş mühendislik değerlendirmesi yok.",
+      "impact": "Kod kontrolü veya aynı benchmarkın tekrar düzeltilmesi uzman ajan davranışı kanıtı değildir.",
+      "next_test": "Yeni geometri/koşulları geliştirme vakalarından ayır; sabit araç/model/bütçede iki talimat sürümünü karşılaştır. Bağımsız sayısal/ölçü hakemi, tüm başarısızlıklar ve kaynak-cevap sızıntısı kaydı olsun.",
+      "closure": "Görev düzeyinde doğruluk, yanlış kabul, maliyet ve tekrarlar raporlanmalı; ortak diskteki rol ayrımı güvenli körlük diye sunulmamalı. Tek başarı genel oran değildir.",
+      "specialist_issue_ids": [
+        "CA03"
+      ],
+      "source_ids": [
+        "CS10",
+        "CS11",
+        "CS12"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS10",
+          "title": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite",
+          "url": "https://arxiv.org/abs/2510.21652v2"
+        },
+        {
+          "id": "CS11",
+          "title": "Search-Time Contamination in Deep Research Agents",
+          "url": "https://arxiv.org/abs/2606.05241v1"
+        },
+        {
+          "id": "CS12",
+          "title": "From Reproduction to Replication: Evaluating Research Agents with Progressive Code Masking",
+          "url": "https://arxiv.org/abs/2506.19724"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": ".agents/skills/iha-muhendislik/references/learning_loop.md",
+          "sha256": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef"
+        },
+        {
+          "path": "outputs/data/agent_learning/qualification_plan_v1.json",
+          "sha256": "23183d6e557f92184cf14259334cc825ad0b7a9a39f4b2e5e364283cdb7d56e9"
+        },
+        {
+          "path": "work/reliability/protocol_v1.json",
+          "sha256": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+        }
+      ]
+    },
+    {
+      "id": "U12",
+      "rank": 12,
+      "priority": "P1",
+      "domain": "Karar",
+      "kind": "uncertainty_missing",
+      "title": "Belirsizlik bütçesi ve savunulabilir aday sıralaması",
+      "observed": "Kanıt/koşul eşleştirmesi ve başarısız CFD’de kazananı engelleme çalışıyor. Kayıtlı adaylarda final_winner=null; sayısal/model/girdi belirsizliğiyle birleşik gerçek tasarım sıralaması yok.",
+      "impact": "İki küçük fark belirsizlik içindeyse tek kazananı savunmak mümkün olmayabilir.",
+      "next_test": "Önce tek QoI için girdi, geometri, iterasyon, mesh, BC/model ve deney belirsizliklerini ayrı kur; bağımlılıkları belirt. Sonra aynı sert kısıtlarda duyarlılık/robustlukla adayları kıyasla.",
+      "closure": "Belirsizlik kullanım amacına göre yeterli olmalı; eksik model hatası sıfır sayılmamalı. Sıralama ayrışmıyorsa sonuç eşdeğer/koşullu kalmalı.",
+      "specialist_issue_ids": [],
+      "source_ids": [
+        "PS01",
+        "PS02",
+        "PS03"
+      ],
+      "depends_on": [
+        "U04",
+        "U05",
+        "U06",
+        "U07"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "PS01",
+          "title": "NASA NPARC CFD verification/validation overview",
+          "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/overview.html"
+        },
+        {
+          "id": "PS02",
+          "title": "NASA-STD-7009B, 2024",
+          "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf"
+        },
+        {
+          "id": "PS03",
+          "title": "CFD Vision2030 Study, NASA/CR-2014-218178",
+          "url": "https://ntrs.nasa.gov/api/citations/20140003093/downloads/20140003093.pdf"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/candidate_comparison.json",
+          "sha256": "844c127f4d0f8ff92fd74f233a2b7945b972e72c896557926a10e0aae75041fd"
+        },
+        {
+          "path": "work/workflow/rank_candidates.py",
+          "sha256": "3ce04535cbb018265a1b43aef7a9141f498ab2142c2f281ccdde5bbb411e6b62"
+        }
+      ]
+    },
+    {
+      "id": "U13",
+      "rank": 13,
+      "priority": "P1",
+      "domain": "Aerodinamik",
+      "kind": "acceptance_failed",
+      "title": "Karmaşık kanatta VLM sürükleme panel kabulü",
+      "observed": "Yüzey CDi panel farkı yaklaşık%17–18,46 ile kayıtlı kapı açık. İz CDiw daha kararlı; iki nicelik farklı kestirimlerdir ve uygun sütunu seçerek eski kabul kapatılamaz.",
+      "impact": "CL’nin daha kararlı olması toplam sürükleme ve aday L/D sıralamasını doğrulamaz.",
+      "next_test": "Sref/bref/cref, analiz kümesi ve aynı kanat temsiliyle yüzey/iz kuvvetlerini ayrı izleyen panel/iz aileleri kur; kaynak tanımı ve bağımsız uygun referansı kaydet.",
+      "closure": "Başlangıçta seçilmiş nicelikler kendi kapılarını geçmeli; sürtünme/stall/ayrılma gibi model dışı fizik için VLM kabulü kullanılmamalı.",
+      "specialist_issue_ids": [
+        "CA05"
+      ],
+      "source_ids": [
+        "CS04",
+        "CS05"
+      ],
+      "depends_on": [
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS04",
+          "title": "OpenVSP resmi VSPAERO Verification and Validation Studies",
+          "url": "https://github.com/OpenVSP/OpenVSP/blob/main/examples/scripts/python_scripts/report.md"
+        },
+        {
+          "id": "CS05",
+          "title": "OpenVSP geliştiricisi Rob McDonald'ın CDi/CDiw tanım açıklaması",
+          "url": "https://groups.google.com/g/openvsp/c/7Bl7y1nGl1Q/m/J4QOlpNJBQAJ"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/complex_vlm_force_audit.json",
+          "sha256": "9749345e4f8b28f8ed6da2c431bd9810151f78391eb2003a153c483707661113"
+        },
+        {
+          "path": "work/qualification/run_complex_vlm.py",
+          "sha256": "6392f99b060059ab2d48113eacafca42186d1d14211a31ad79d6deee4e6cd8be"
+        }
+      ]
+    },
+    {
+      "id": "U14",
+      "rank": 14,
+      "priority": "P1",
+      "domain": "CAD",
+      "kind": "capability_unproven",
+      "title": "Yeni karmaşık CAD ailelerinde ölçü ve topoloji güvencesi",
+      "observed": "Tanımlı kanat/nervür ve3 NIST kaynak parçada ölçülü işlemler geçti. Bunlar her yeni loft/sweep/shell/çoklu delik veya kaynak çizimden yeniden kurma görevinin kabulü değildir.",
+      "impact": "Çalışan program ve geçerli katı, tasarım niyetinin veya bütün ölçülerin doğru olduğunu göstermeyebilir.",
+      "next_test": "Karmaşıklık basamaklı yeni kaynak parçalarda feature/parametre değişimi ve STEP geri okuması; eksen/merkez/bağlantı/topoloji/kalınlık kontrolleriyle negatif örnekler çalıştır.",
+      "closure": "Göreve özgü bütün ölçü/topoloji kuralları ve düzenleme sonrası aynı kurallar geçmeli. Hacim/bbox/probe tek başına tam şekil kanıtı olmamalı.",
+      "specialist_issue_ids": [
+        "CA06"
+      ],
+      "source_ids": [
+        "CS03",
+        "CS06"
+      ],
+      "depends_on": [
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS03",
+          "title": "OCCT BRepCheck_Analyzer referansı",
+          "url": "https://www.occt3d.com/dev/doc/refman/html/class_b_rep_check___analyzer.html"
+        },
+        {
+          "id": "CS06",
+          "title": "Text2CAD-Bench: A Benchmark for LLM-based Text-to-Parametric CAD Generation",
+          "url": "https://arxiv.org/html/2605.18430v1"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "PROJECT_STATE.md",
+          "sha256": "2275f6785af2825304c71bee04c97ad8ea1c7be443b7fd5f1e49d1d8a3e2dddc"
+        },
+        {
+          "path": "outputs/reports/engineering_extension_quality.json",
+          "sha256": "51d553a5ac677b05282c71c844011d3f2f902dd9b4307899331873f573417023"
+        },
+        {
+          "path": "outputs/reports/step_bore_measurements.json",
+          "sha256": "2163c75e8b95deda67d7df05e196cc1ff71e8d367e31eaffd0516d9d777d769f"
+        },
+        {
+          "path": "work/geometry/parametric_wing.py",
+          "sha256": "e652e72539f36874d313fac7f437b02946ed533d0975f9ba0973a4764a49b025"
+        }
+      ]
+    },
+    {
+      "id": "U15",
+      "rank": 15,
+      "priority": "P1",
+      "domain": "CAD",
+      "kind": "capability_unproven",
+      "title": "Ölçülü teknik resim, montaj ve üretime aktarım kapsamı",
+      "observed": "Kaynak PDF/CAD işlemleri ve bazı dışa aktarımlar var; keyfi montajda bağlantılar, çakışma, tam ölçü zinciri ve üretim toleranslarıyla genel teknik resim zinciri gösterilmedi.",
+      "impact": "Güzel3B görüntü imalat veya montaj uygunluğu yerine geçmez.",
+      "next_test": "Bir gerçek montaj ailesinde parça/eklem/çakışma kontrolleri ve gerekli ölçüleri taşıyan resim üret; CAD parametre değişince resmin güncellendiğini geri ölç.",
+      "closure": "Önceden tanımlanmış montaj/ölçü ve çıktı sözleşmesi geçmeli; resim bütün gerekli iç özellikleri ve birimleri göstermeli.",
+      "specialist_issue_ids": [
+        "CA08"
+      ],
+      "source_ids": [
+        "CS06",
+        "CS14"
+      ],
+      "depends_on": [
+        "U14"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS06",
+          "title": "Text2CAD-Bench: A Benchmark for LLM-based Text-to-Parametric CAD Generation",
+          "url": "https://arxiv.org/html/2605.18430v1"
+        },
+        {
+          "id": "CS14",
+          "title": "Autodesk Fusion Compute MCP: Public Beta",
+          "url": "https://www.autodesk.com/products/fusion-360/blog/fusion-compute-mcp/"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "PROJECT_STATE.md",
+          "sha256": "2275f6785af2825304c71bee04c97ad8ea1c7be443b7fd5f1e49d1d8a3e2dddc"
+        },
+        {
+          "path": "outputs/reports/fem_results.json",
+          "sha256": "f9813c1eac0db5ade4c69bcfcebcdd21f4727794ecbd035c1aa244bc078e9f61"
+        },
+        {
+          "path": "outputs/reports/step_bore_measurements.json",
+          "sha256": "2163c75e8b95deda67d7df05e196cc1ff71e8d367e31eaffd0516d9d777d769f"
+        },
+        {
+          "path": "work/geometry/parametric_wing.py",
+          "sha256": "e652e72539f36874d313fac7f437b02946ed533d0975f9ba0973a4764a49b025"
+        }
+      ]
+    },
+    {
+      "id": "U16",
+      "rank": 16,
+      "priority": "P1",
+      "domain": "Yapı",
+      "kind": "capability_unproven",
+      "title": "Gerçek kanada özel FEM ve aeroelastik optimizasyon",
+      "observed": "CAD→Gmsh→CalculiX örneği ve iki OAS kaynak optimizasyonu/türev kontrolü geçti. Gerçek İHA malzeme, yük, bağlantı/mesh, kompozit ve aeroelastik tasarımı doğrulanmadı.",
+      "impact": "Kaynak CRM malzemesi/yakıtı/yükleri gerçek kanada aktarılamaz; optimizatör başarı bayrağı dayanım kanıtı değildir.",
+      "next_test": "Göreve özgü yük/malzeme/sınır koşulu ve tasarım değişkenlerini kur; boyutlu denge, izinli sınırlar, bağlı yakınsama, mesh ve türev kontrolleriyle uygula.",
+      "closure": "Gerçek modelin bütün sert kısıtları ve bağımsız fizik kontrolleri geçmeli; VLM+kiriş sonucu detaylı yapı veya hacim CFD sayılmamalı.",
+      "specialist_issue_ids": [
+        "CA07"
+      ],
+      "source_ids": [
+        "CS08",
+        "CS09",
+        "CS13"
+      ],
+      "depends_on": [
+        "U07",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS08",
+          "title": "OpenMDAO Checking Total Derivatives",
+          "url": "https://openmdao.org/newdocs/versions/latest/features/core_features/working_with_derivatives/check_total_derivatives.html"
+        },
+        {
+          "id": "CS09",
+          "title": "ideas-um/openaerostruct-llm-agent",
+          "url": "https://github.com/ideas-um/openaerostruct-llm-agent"
+        },
+        {
+          "id": "CS13",
+          "title": "OpenAeroStruct 2.12.0 resmi genel belgeleri",
+          "url": "https://mdolab-openaerostruct.readthedocs-hosted.com/en/latest/"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/fem_results.json",
+          "sha256": "f9813c1eac0db5ade4c69bcfcebcdd21f4727794ecbd035c1aa244bc078e9f61"
+        },
+        {
+          "path": "outputs/reports/openaerostruct_examples.json",
+          "sha256": "340cdd2275ae2018f26513bcb50a4f9a6e7aad3799d7f21c11e21b922454f9f4"
+        },
+        {
+          "path": "work/setup/openaerostruct_install.json",
+          "sha256": "c5f389c75ae267814d04f5286a9b4757e2d0c1dee3c96973014afa9f12b27751"
+        }
+      ]
+    },
+    {
+      "id": "U17",
+      "rank": 17,
+      "priority": "P1",
+      "domain": "CFD",
+      "kind": "measurement_missing",
+      "title": "Güncel iç sistemle eşleşen artık konum haritası",
+      "observed": "%99,979 kapsam, yeni implicit alanın yeniden hesaplanan artığı değil aynı eski explicit-aşama RHS’sinin üyelik kesişimi. Anlamı düzeltildi; güncel b ve gerçek rL haritası henüz yok.",
+      "impact": "Eski kapsamanın artması bugünkü düzeltme yönünün doğru olduğunu göstermez.",
+      "next_test": "U01 çağrısının aynı b ve b−Aδ vektörlerini bütün sahip olunan düğümlerle çıkar; native norm yeniden toplamını doğrula ve flow/SA bölgelerini ayrı raporla.",
+      "closure": "Durum/iterasyon/normalizasyon/düğüm eşleşmesi ve yeniden toplam uyuşmalı; konum haritası nedensel hata veya mesh hata bandı diye adlandırılmamalı.",
+      "specialist_issue_ids": [
+        "N03"
+      ],
+      "source_ids": [
+        "NS01",
+        "NS05"
+      ],
+      "depends_on": [
+        "U01"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "NS01",
+          "title": "Pinned SU2v8.5.0 source: FGMRES, implicit update and Newton-Krylov",
+          "url": "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/src/linear_algebra/CSysSolve.cpp"
+        },
+        {
+          "id": "NS05",
+          "title": "A Residual Smoothing Strategy for Accelerating Newton Method Continuation",
+          "url": "https://arxiv.org/html/1805.03756v1"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/cfd_ic_cozum_ve_uc_ag_20261026.md",
+          "sha256": "6076ac835f6a8e587def75609e696467d0d962d5212c91e38335419119444ca4"
+        },
+        {
+          "path": "outputs/reports/cfd_kalan_artik_20261026.md",
+          "sha256": "6092982e52a78383935a9812034cf93a3d27698cf177b0a14f2a5a299a5dd08c"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.json",
+          "sha256": "b58c744f90e40f92883f711d94c6d53d08997c94f5ce093ea3cbc8caa5f0d1e4"
+        },
+        {
+          "path": "work/su2_build_20261027/method_design.json",
+          "sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44"
+        },
+        {
+          "path": "work/su2_build_resume_20261027/independent_review.json",
+          "sha256": "ef3510c1d2ef7431606d4324aa111fec5646e73a6e8d29455d972ab23bbcf902"
+        }
+      ]
+    },
+    {
+      "id": "U18",
+      "rank": 18,
+      "priority": "P1",
+      "domain": "Maliyet",
+      "kind": "measurement_limit",
+      "title": "Doygun Krylov sayımı ve tek çift süre ölçüsü",
+      "observed": "Üç v17kolunda16000 zaten200×(40+40) tavanıdır. Eşit sayım uzun çizgilerin eşit aritmetik maliyetini göstermez; gerçek süre74,125→95,109s tek gözlemdir.",
+      "impact": "Bir yöntemin gerçek doğruluk/maliyet kazancı yalnız bu vekilden çıkarılamaz.",
+      "next_test": "Yeni sözleşmede flow/SA ayrı, A×v ve preconditioner build/apply sayaçları, gerçek süre ve RAM ile gerçek hata azalımını birlikte izle.",
+      "closure": "Eski kapı/karar korunmalı; yeni ölçüt native öncesi yazılmalı. Tek çalıştırma çiftinden evrensel hız iddiası çıkarılmamalı.",
+      "specialist_issue_ids": [
+        "N04"
+      ],
+      "source_ids": [
+        "NS02",
+        "NS06"
+      ],
+      "depends_on": [
+        "U01"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "NS02",
+          "title": "SU2 Linear Solvers and Preconditioners",
+          "url": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/"
+        },
+        {
+          "id": "NS06",
+          "title": "Comparative study of inner-outer Krylov solvers for linear systems in structured and high-order unstructured CFD problems",
+          "url": "https://arxiv.org/html/2404.17870v1"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/cfd_ic_cozum_ve_uc_ag_20261026.md",
+          "sha256": "6076ac835f6a8e587def75609e696467d0d962d5212c91e38335419119444ca4"
+        },
+        {
+          "path": "outputs/reports/cfd_kalan_artik_20261026.md",
+          "sha256": "6092982e52a78383935a9812034cf93a3d27698cf177b0a14f2a5a299a5dd08c"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.json",
+          "sha256": "b58c744f90e40f92883f711d94c6d53d08997c94f5ce093ea3cbc8caa5f0d1e4"
+        },
+        {
+          "path": "work/su2_build_20261027/method_design.json",
+          "sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44"
+        },
+        {
+          "path": "work/su2_build_resume_20261027/independent_review.json",
+          "sha256": "ef3510c1d2ef7431606d4324aa111fec5646e73a6e8d29455d972ab23bbcf902"
+        }
+      ]
+    },
+    {
+      "id": "U19",
+      "rank": 19,
+      "priority": "P1",
+      "domain": "CFD",
+      "kind": "untested_hypothesis",
+      "title": "Duvar mesafesi hesabının bağımsız denetimi",
+      "observed": "Yerelde yanlış wall-distance kanıtı yok. NASA2018M6 çalışması anizotropik ağda böyle bir hata sınıfını göstermiş; bu yeni düşük maliyetli denetim adayı.",
+      "impact": "SA kaynakları için kullanılan geometrik mesafe yanlışsa mesh/y+ görseli sorunu gizleyebilir.",
+      "next_test": "Önce gerçek wall marker ve source kod yolunu incele. LE/TE/uç/kök/aft noktalarında native mesafeyi bağımsız global nokta–segment/üçgen/CAD-boundary hesabıyla kıyasla; uygun düz plaka yerlerinde analitik mesafeyi kullan.",
+      "closure": "Geometriye bağlı bağımsız mesafe uyuşuyorsa bu hipotezi kapat. Sapma varsa yerini/etkisini kaydet ve yalnız o hesabı değişen ayrı kontrollü test tasarla; yerel kök neden henüz yok.",
+      "specialist_issue_ids": [
+        "VM08"
+      ],
+      "source_ids": [
+        "VS03"
+      ],
+      "depends_on": [
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "VS03",
+          "title": "Park vd.,2018, BölümVI ve Şekil11–13",
+          "url": "https://ntrs.nasa.gov/api/citations/20180006169/downloads/20180006169.pdf?attachment=true"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        }
+      ]
+    },
+    {
+      "id": "U20",
+      "rank": 20,
+      "priority": "P2",
+      "domain": "CFD",
+      "kind": "prototype_only",
+      "title": "Hessian’dan tam anizotropik/adjoint ağ döngüsüne geçiş",
+      "observed": "Yerel türev/öncelik prototipinde maskeli ve yönü kararsız bölgeler var; üretim remesher, adjoint veya CL/CD hata bandı değil.",
+      "impact": "Bir renk haritası önerilen metrikte geçerli yeni ağ ve daha doğru QoI üretildiğini göstermez.",
+      "next_test": "Analitik metrikte CAD sınır ve eleman-metrik uyumunu sınayan küçük2B solve→metric→remesh→transfer→solve döngüsü kur; korunumluluk ve pozitiflik ölç.",
+      "closure": "Bütün döngü ve sabit ağ kıyası doğrulanmalı; maskeler saklanmalı. Adjointin denklemi ve türevleri ayrı kontrol edilmeli; yeni makale yerel kurulum sayılmamalı.",
+      "specialist_issue_ids": [
+        "VM09",
+        "N06"
+      ],
+      "source_ids": [
+        "VS03",
+        "VS09",
+        "VS10",
+        "NS05"
+      ],
+      "depends_on": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "VS03",
+          "title": "Park vd.,2018, BölümVI ve Şekil11–13",
+          "url": "https://ntrs.nasa.gov/api/citations/20180006169/downloads/20180006169.pdf?attachment=true"
+        },
+        {
+          "id": "VS09",
+          "title": "Balan vd.,2019",
+          "url": "https://ntrs.nasa.gov/citations/20200002636"
+        },
+        {
+          "id": "VS10",
+          "title": "Núñez-de la Rosa vd.,2026,ön baskı",
+          "url": "https://arxiv.org/html/2607.27580v1"
+        },
+        {
+          "id": "NS05",
+          "title": "A Residual Smoothing Strategy for Accelerating Newton Method Continuation",
+          "url": "https://arxiv.org/html/1805.03756v1"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/cfd_ic_cozum_ve_uc_ag_20261026.md",
+          "sha256": "6076ac835f6a8e587def75609e696467d0d962d5212c91e38335419119444ca4"
+        },
+        {
+          "path": "outputs/reports/cfd_kalan_artik_20261026.md",
+          "sha256": "6092982e52a78383935a9812034cf93a3d27698cf177b0a14f2a5a299a5dd08c"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.json",
+          "sha256": "b58c744f90e40f92883f711d94c6d53d08997c94f5ce093ea3cbc8caa5f0d1e4"
+        },
+        {
+          "path": "work/su2_build_20261027/method_design.json",
+          "sha256": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44"
+        },
+        {
+          "path": "work/su2_build_resume_20261027/independent_review.json",
+          "sha256": "ef3510c1d2ef7431606d4324aa111fec5646e73a6e8d29455d972ab23bbcf902"
+        }
+      ]
+    },
+    {
+      "id": "U21",
+      "rank": 21,
+      "priority": "P2",
+      "domain": "Entegrasyon",
+      "kind": "engine_untested",
+      "title": "Fusion motoru, hub ve lisans yetkisi",
+      "observed": "18EkimOAuth doğrulandı; motorun gerçek oturumu, yetki/hub, ölçülü model ve STEP geri ölçümü yapılmadı. Beta erişimi öğrenci masaüstü lisansından çıkarılamaz.",
+      "impact": "Kimlik doğrulama başarılı olsa da CAD işlemlerinin çalışacağı kanıtlanmış değil.",
+      "next_test": "Mevcut bağlantıyı güncel araç listesinde doğrula; sürüm/session/hub/entitlement kontrolünden sonra ölçülü basit parça ve parametre değişimi, STEP geri ölçümü yap.",
+      "closure": "Gerçek motor çıktısı ve ölçü kontrolleri geçmeli. Bulut/servis erişimi koşulları ayrıca kanıtlanmalı.",
+      "specialist_issue_ids": [
+        "CA09"
+      ],
+      "source_ids": [
+        "CS14"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS14",
+          "title": "Autodesk Fusion Compute MCP: Public Beta",
+          "url": "https://www.autodesk.com/products/fusion-360/blog/fusion-compute-mcp/"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/engineering_extension_quality.json",
+          "sha256": "51d553a5ac677b05282c71c844011d3f2f902dd9b4307899331873f573417023"
+        },
+        {
+          "path": "work/setup/fusion_mcp_install.json",
+          "sha256": "2b2e0d0df4bc683c719a2e374541b962bb72b72b3336d62aaeeda583f98b6407"
+        }
+      ]
+    },
+    {
+      "id": "U22",
+      "rank": 22,
+      "priority": "P2",
+      "domain": "Entegrasyon",
+      "kind": "bridge_missing",
+      "title": "OpenVSP Python→OAS köprüsü",
+      "observed": "AngelScript/native OpenVSP çalışıyor. Kurulu paket Python3.11, sayısal ortam3.12; OAS resmî VSP mesh örneğinin istediği Python API köprüsü kurulup doğrulanmadı.",
+      "impact": "Ayrı üretilmiş OAS yüzeyi native VSP3 adayına otomatik bağlanmış sayılamaz.",
+      "next_test": "Uyumlu ayrı API ortamı veya kontrollü dosya adaptörü seç; sürüm/birim/simetri/mesh ve referans alanı geri ölçerek tek aday üzerinde doğrula.",
+      "closure": "Köprü gerçek native geometriyi doğru istasyon/analiz yüzeyine taşımalı; yanlış sürüm/ölçek negatif kontrolü reddedilmeli.",
+      "specialist_issue_ids": [
+        "CA10"
+      ],
+      "source_ids": [
+        "CS01",
+        "CS02"
+      ],
+      "depends_on": [
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS01",
+          "title": "OpenVSP API 3.55.0 resmi belgeleri",
+          "url": "https://openvsp.org/api_docs/latest/index.html"
+        },
+        {
+          "id": "CS02",
+          "title": "OpenAeroStruct 2.12: OpenVSP-generated Mesh Example",
+          "url": "https://mdolab-openaerostruct.readthedocs-hosted.com/en/latest/advanced_features/openvsp_mesh_example.html"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "work/setup/openaerostruct_install.json",
+          "sha256": "c5f389c75ae267814d04f5286a9b4757e2d0c1dee3c96973014afa9f12b27751"
+        },
+        {
+          "path": "work/setup/openvsp_install.json",
+          "sha256": "e307bdf49b2974e10d8e97134bcdfaf2a5f437bcf516471d9b8efa96f7876e42"
+        },
+        {
+          "path": "work/setup/tool_config.json",
+          "sha256": "cfa0f4e28b650d8e6ba33603f5e32e6aa0513fea28b57e131bd83a5fd56c0a0f"
+        }
+      ]
+    },
+    {
+      "id": "U23",
+      "rank": 23,
+      "priority": "P2",
+      "domain": "Model",
+      "kind": "topology_failures",
+      "title": "Küçük CAD modellerinin geometri/topoloji güvenilirliği",
+      "observed": "Cadmonkeydata32 yeni altı basit parçada4/6 geçti; kaçık/çift delik gibi redler var. Başka kullanım denemesindeki5/6 farklı protokol; genel doğruluk oranı değil.",
+      "impact": "Modelin kod üretmesi veya görüntü benzerliği katı/ölçü/topoloji doğruluğunu garanti etmez.",
+      "next_test": "Loft/sweep/shell/çoklu boşluk gibi yeni ailelerde özgün değişmemiş çıktıyı sabit bütçe ve görev bazlı kernel/ölçü hakemiyle değerlendir.",
+      "closure": "Bütün zorunlu kontroller geçmeden taslak kabul edilmemeli; insan/Codex düzeltmesi küçük model başarısı sayılmamalı. Genel oran için bağımsız temsil edici test gerekir.",
+      "specialist_issue_ids": [
+        "CA11"
+      ],
+      "source_ids": [
+        "CS06",
+        "CS15",
+        "CS16"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS06",
+          "title": "Text2CAD-Bench: A Benchmark for LLM-based Text-to-Parametric CAD Generation",
+          "url": "https://arxiv.org/html/2605.18430v1"
+        },
+        {
+          "id": "CS15",
+          "title": "chandar-lab/CADmium",
+          "url": "https://github.com/chandar-lab/CADmium"
+        },
+        {
+          "id": "CS16",
+          "title": "CAD-Coder: Text-to-CAD Generation with Chain-of-Thought and Geometric Reward",
+          "url": "https://arxiv.org/abs/2505.19713v3"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/k_family_new_tasks.json",
+          "sha256": "71b309eb3b811e7382572be0cf08ca1bdd165cf3aa51606976a76fc92355d698"
+        },
+        {
+          "path": "outputs/reports/k_family_study.json",
+          "sha256": "304dec3bc45332ea1a5c913417a542b7cda0ed6766b664e608e1e105a2f327a9"
+        },
+        {
+          "path": "outputs/reports/model_usage_audit.json",
+          "sha256": "4a4c7534e3db14835d55e57df10c055886dc2b1e1b69cc65a3a1b3dce77b1806"
+        }
+      ]
+    },
+    {
+      "id": "U24",
+      "rank": 24,
+      "priority": "P2",
+      "domain": "Model",
+      "kind": "reference_runtime_unreproduced",
+      "title": "Zero-to-CAD özgün çalışma yolunun ayrıştırılması",
+      "observed": "2 milyar parametreli Zero-to-CAD modelinin yerel Q6/native köprü testleri geçerli katı üretmedi; özgünBF16/Transformers çalışma yolu yeniden üretilmedi.1m veri ölçeği,1m parametreli model demek değil.",
+      "impact": "Başarısızlık kesin olarak checkpoint kalitesine veya bütün aileye yüklenemez.",
+      "next_test": "Özgün modelcard sürümü, sekiz görünüş, processor/template/token bütçesi ve kod temizleme semantiğini yerel köprüyle fark tablosuna bağla; kaynak bütçesi uygunsa ayrı kontrollü referans denemesi tasarla.",
+      "closure": "Referans yol ile native yolun farkı gerçek çıktılarla ayrılmalı; ağır çalışma bütçeye sığmıyorsa doğrulanmadı olarak kalmalı. Tasarım kabulü ayrıca yapılmalı.",
+      "specialist_issue_ids": [
+        "CA12"
+      ],
+      "source_ids": [
+        "CS07",
+        "CS17"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS07",
+          "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
+          "url": "https://arxiv.org/html/2604.24479v1"
+        },
+        {
+          "id": "CS17",
+          "title": "ADSKAILab/Zero-To-CAD-Qwen3-VL-2B model card",
+          "url": "https://huggingface.co/ADSKAILab/Zero-To-CAD-Qwen3-VL-2B"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/reports/cad_model_benchmark.json",
+          "sha256": "af5716ec69d0019d36eb0813dd7927ea505b9b47d400d769c7a0c5c3cf22aa5a"
+        },
+        {
+          "path": "outputs/reports/zero_usage_audit.json",
+          "sha256": "672a6ebe36bf51387d0428bc875ea366fe170fefe3a32a5f02aa66f63cef4d5f"
+        }
+      ]
+    },
+    {
+      "id": "U25",
+      "rank": 25,
+      "priority": "P2",
+      "domain": "Ürün",
+      "kind": "portability_unproven",
+      "title": "EXE dağıtımı ve yeni ortamda gerçek görev kullanımı",
+      "observed": "EXE çalışır başlatıcı; kurulu Python/araçlar ve proje klasörleri yanında gerekir. Temiz makine solver kurulumu ve GUI’den görülmemiş uçtan uca görev doğrulanmadı.",
+      "impact": "Mevcut PC’de arayüzün açılması bağımsız taşınabilir uygulama ve görev başarı kanıtı değildir.",
+      "next_test": "İzole kullanıcı/VM ya da temiz kopyada yollar/bağımlılık/kimlik doğrulama/eksik araç hatası ve bir yeni projenin gerçek oturumunu sınayacak kurulum kabulü yap.",
+      "closure": "Gerekli bileşenler kaydedilmeli; eksik araç anlaşılır hata vermeli; başka proje girdisi kullanılmamalı ve kullanıcı çıktıyı tek projede izleyebilmeli.",
+      "specialist_issue_ids": [
+        "CA13"
+      ],
+      "source_ids": [
+        "CS10"
+      ],
+      "depends_on": [
+        "U10"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS10",
+          "title": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite",
+          "url": "https://arxiv.org/abs/2510.21652v2"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "work/agent/Launcher.cs",
+          "sha256": "1b7644185daae6249079bd8ad0b8ba50ba49ccc28e7e4be3cdb8fcb9e3e71c3c"
+        },
+        {
+          "path": "work/agent/project.py",
+          "sha256": "4dd3721d86048a7557a6e2dfaba9a302ed087c1bc6c62e6730071d7cb9709ad7"
+        },
+        {
+          "path": "work/agent/projects.py",
+          "sha256": "89498ca6e7ea50f4b96c16fc6ab81f556fbe5db17f440a9f363c93603fc31f26"
+        },
+        {
+          "path": "work/agent/projects_desk.ps1",
+          "sha256": "ae44bf3eb959cf7a1a6b1c7bd2c042b78836a80c31d0c2196bbc61ddc6ce07b5"
+        }
+      ]
+    },
+    {
+      "id": "U26",
+      "rank": 26,
+      "priority": "P3",
+      "domain": "Entegrasyon",
+      "kind": "optional_deferred",
+      "title": "İkinci yerel RANS çözücüsü / OpenFOAM kurulumu",
+      "observed": "SU2 ve dar laminer Elmer doğrulamaları mevcut. OpenFOAM için doğrulanmış yerel kurulum/aynı3BRANSvaka tekrarı yok; TMR CFL3D/FUN3D kıyasları ayrı mevcut kanıt.",
+      "impact": "Bağımsız yöntem farkı yararlı olabilir; yeni program kurmak tek başına doğruluğu artırmaz.",
+      "next_test": "Önce mevcut TMR referanslarıyla tam denklem/BC/model eşlemesini bitir. Sonra read-only ortam/RAM/WSL değerlendirmesi ve küçük eşdeğer vaka ile ikinci çözümü ele al.",
+      "closure": "Sürüm, SA varyantı, sıkıştırılabilirlik, geometri ve koşullar eşleşmeden fark çözücü hatası sayılmamalı. WSL/servis kurulumu ve kaynak bütçesi ayrıca ele alınmalı.",
+      "specialist_issue_ids": [
+        "CA14",
+        "VM07"
+      ],
+      "source_ids": [
+        "CS19",
+        "VS06",
+        "PS04"
+      ],
+      "depends_on": [
+        "U01",
+        "U06"
+      ],
+      "status": "open",
+      "proposal_executed": false,
+      "source_links": [
+        {
+          "id": "CS19",
+          "title": "OpenFOAM Foundation Windows documentation",
+          "url": "https://openfoam.org/download/windows/"
+        },
+        {
+          "id": "VS06",
+          "title": "TMR 2DZP",
+          "url": "https://tmbwg.github.io/turbmodels/flatplate.html"
+        },
+        {
+          "id": "PS04",
+          "title": "OpenFOAM Foundation Windows documentation",
+          "url": "https://openfoam.org/download/windows/"
+        }
+      ],
+      "local_evidence_links": [
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json",
+          "sha256": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a"
+        },
+        {
+          "path": "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json",
+          "sha256": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json",
+          "sha256": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+        },
+        {
+          "path": "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json",
+          "sha256": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2"
+        },
+        {
+          "path": "outputs/reports/engineering_extension_quality.json",
+          "sha256": "51d553a5ac677b05282c71c844011d3f2f902dd9b4307899331873f573417023"
+        },
+        {
+          "path": "outputs/reports/reduced_family_review_20261026.json",
+          "sha256": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655"
+        },
+        {
+          "path": "outputs/reports/su2_kaynak_karsilastirma_20261027.html",
+          "sha256": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787"
+        },
+        {
+          "path": "outputs/reports/workflow_readiness.json",
+          "sha256": "7301d19e4396cee07bb55db976a60d3f510b461ef632e1961501a88be7a4d3d9"
+        },
+        {
+          "path": "work/setup/tool_config.json",
+          "sha256": "cfa0f4e28b650d8e6ba33603f5e32e6aa0513fea28b57e131bd83a5fd56c0a0f"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "PS01",
+      "aliases": [
+        "PS01"
+      ],
+      "title": "NASA NPARC CFD verification/validation overview",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/overview.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "parent",
+          "original_record": {
+            "reading_depth": "HTML opened; verification, validation and intended-use distinction"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "PS02",
+      "aliases": [
+        "PS02"
+      ],
+      "title": "NASA-STD-7009B, 2024",
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "parent",
+          "original_record": {
+            "reading_depth": "Full PDF opened; consulted acceptance/credibility/problem-tracking sections, not claimed fully reproduced"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "PS03",
+      "aliases": [
+        "PS03"
+      ],
+      "title": "CFD Vision2030 Study, NASA/CR-2014-218178",
+      "url": "https://ntrs.nasa.gov/api/citations/20140003093/downloads/20140003093.pdf",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "parent",
+          "original_record": {
+            "reading_depth": "Full PDF opened; sections on workflow automation, geometry/grid and uncertainty; historical2014 diagnosis"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "PS04",
+      "aliases": [
+        "PS04",
+        "CS19",
+        "VS07"
+      ],
+      "title": "OpenFOAM Foundation Windows documentation",
+      "url": "https://openfoam.org/download/windows/",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "parent",
+          "original_record": {
+            "reading_depth": "Official current page opened; WSL2 route, no installation attempted"
+          }
+        },
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S19",
+            "title": "OpenFOAM Foundation Windows kurulum yolu",
+            "url": "https://openfoam.org/download/windows/",
+            "type": "official_documentation",
+            "opened": "2026-10-28",
+            "claim": "Windows 10/11 üzerinde Ubuntu OpenFOAM dağıtımının WSL ile çalıştırılması belgelenir.",
+            "applicability": "İkinci çözücü ekleme seçeneği ve kurulum kapsamı.",
+            "limit": "WSL/OS özelliği değişikliği bu araştırmada yapılmadı. Kurulum fizik kabulü değildir."
+          }
+        },
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V07",
+            "title": "OpenFOAM Foundation Windows yolu",
+            "url": "https://openfoam.org/download/windows/",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "NS01",
+      "aliases": [
+        "NS01"
+      ],
+      "title": "Pinned SU2v8.5.0 source: FGMRES, implicit update and Newton-Krylov",
+      "url": "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/src/linear_algebra/CSysSolve.cpp",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "numerics",
+          "original_record": {
+            "id": "S01",
+            "title": "Pinned SU2v8.5.0 source: FGMRES, implicit update and Newton-Krylov",
+            "kind": "official source code",
+            "publication_date": "v8.5.0; pinned commit12eb826f049ef7f67df974dfcb44cf36ee07c0f8",
+            "accessed_date": "2026-10-28",
+            "url": "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/src/linear_algebra/CSysSolve.cpp",
+            "additional_urls": [
+              "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/include/linear_algebra/CSysSolve.hpp",
+              "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/SU2_CFD/src/integration/CNewtonIntegration.cpp",
+              "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/SU2_CFD/include/solvers/CFVMFlowSolverBase.hpp",
+              "https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/SU2_CFD/include/solvers/CFVMFlowSolverBase.inl"
+            ],
+            "reading_depth": "Hashed local actually-built source read; pinned contents API separately opened for CSysSolve, CNewtonIntegration and both flow template files.",
+            "findings_tr": "FGMRES çıktısı azaltılmış sistem kestirimi. Standart primal monitoring kapalı; recomputeRes ayrıca varsayılan false. Gerçek uygulama iki geçişli CGS; fonksiyon adı eski. Akış implicit A pseudo-time eki taşır; δ sonradan yerel relaxation ile uygulanır. NK akış üzerinde ayrı tolerans-relaxation çizelgesi içerir.",
+            "limits": "Source semantics establish what must be measured, not a present causal error. Exact norm and update state must be tied to the native call.",
+            "local_fit": "Exact installed/compiled version and native Windows source path. No new package.",
+            "retrieval_discrepancy": "web raw renderer showed1607 lines with older MGS body; connector contents API showed58440 characters/1734 newline parts and CGS2, agreeing semantically with hashed local1733-line source. Use pinned local/API, not cached raw line presentation."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "NS02",
+      "aliases": [
+        "NS02"
+      ],
+      "title": "SU2 Linear Solvers and Preconditioners",
+      "url": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "numerics",
+          "original_record": {
+            "id": "S02",
+            "title": "SU2 Linear Solvers and Preconditioners",
+            "kind": "official documentation",
+            "publication_date": "undated v7-named guide",
+            "accessed_date": "2026-10-28",
+            "url": "https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/",
+            "reading_depth": "Full option and setup-advice page opened.",
+            "findings_tr": "CFL, iç tolerans, iterasyon ve preconditioner maliyeti birlikte düşünülür; tek evrensel ayar yok. FGMRES belleği iterasyonla büyür. LINELET duvar-normal çizgilerde tridiagonal, dışarıda Jacobi yaklaşımıdır. Dış residual yakınsamadan gevşek iç tolerans fizik kabulü değildir.",
+            "limits": "Documentation path is v7; each new option must be checked against pinned8.5.0 source/build. PaStiX support is not proof of a working Windows installation.",
+            "local_fit": "Guidance only; existing native options first, no external solver installation recommended."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "NS03",
+      "aliases": [
+        "NS03"
+      ],
+      "title": "SA Expected Results -2D Zero Pressure Gradient Flat Plate",
+      "url": "https://tmbwg.github.io/turbmodels/flatplate_sa.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "numerics",
+          "original_record": {
+            "id": "S03",
+            "title": "SA Expected Results -2D Zero Pressure Gradient Flat Plate",
+            "kind": "NASA Turbulence Modeling Resource primary benchmark",
+            "publication_date": "living reference page, no single publication date",
+            "accessed_date": "2026-10-28",
+            "url": "https://tmbwg.github.io/turbmodels/flatplate_sa.html",
+            "reading_depth": "Full page opened, including numerical formulations, convergence and leading-edge/outflow caveats.",
+            "findings_tr": "CFL3D/FUN3D sonuçları beş ağdaki sayısal referanslardır. Akı/UMUSCL ayrıntıları aynı değildir. Ön kenarda Cf tekilliği ve çıkış köşesi davranışı toplam sürükleme yakınsamasını zorlaştırır. Yazdırılan basamak sayısı elde edilen çözüm toleransı değildir.",
+            "limits": "Not a wind-tunnel measurement and not a universal cross-code residual threshold. Raw CFD references cannot establish physical validation.",
+            "local_fit": "Directly relevant frozen source flat-plate case; preserve actual local source conditions and all point differences."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "NS04",
+      "aliases": [
+        "NS04"
+      ],
+      "title": "Choosing the Forcing Terms in an Inexact Newton Method",
+      "url": "https://epubs.siam.org/doi/10.1137/0917003",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "numerics",
+          "original_record": {
+            "id": "S04",
+            "title": "Choosing the Forcing Terms in an Inexact Newton Method",
+            "authors": "Stanley C. Eisenstat; Homer F. Walker",
+            "kind": "original peer-reviewed paper",
+            "publication_date": "1996-01",
+            "accessed_date": "2026-10-28",
+            "url": "https://epubs.siam.org/doi/10.1137/0917003",
+            "additional_urls": [
+              "https://users.wpi.edu/~walker/Papers/forcing_terms%2CSISC_17%2C1996%2C16-32.pdf"
+            ],
+            "reading_depth": "Publisher abstract opened. Full author PDF open timed out; search extraction provided pages16-17, including forcing inequality and oversolving discussion. Do not claim full theorem/experiment review.",
+            "findings_tr": "İç doğrusal doğruluk dış nonlinear ilerlemeye göre seçilmelidir. Aşırı sıkı iç çözüm, nonlinear modelin güvenilir olmadığı bölgede gereksiz masraf üretebilir. Forcing koşulu gerçek F ve türev modeline bağlıdır.",
+            "limits": "Theorems require their hypotheses. Existing SU2 pseudo-time/approximate-Jacobian, segregated-SA configuration is not automatically the original algorithm.",
+            "local_fit": "Conditional algorithm design after N01; no claim that SU2 already implements EW by naming a tolerance parameter."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "NS05",
+      "aliases": [
+        "NS05"
+      ],
+      "title": "A Residual Smoothing Strategy for Accelerating Newton Method Continuation",
+      "url": "https://arxiv.org/html/1805.03756v1",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "numerics",
+          "original_record": {
+            "id": "S05",
+            "title": "A Residual Smoothing Strategy for Accelerating Newton Method Continuation",
+            "authors": "Dimitri J. Mavriplis",
+            "kind": "original arXiv paper",
+            "publication_date": "2018-05-09",
+            "version": "1805.03756v1",
+            "accessed_date": "2026-10-28",
+            "url": "https://arxiv.org/html/1805.03756v1",
+            "additional_urls": [
+              "https://arxiv.org/abs/1805.03756"
+            ],
+            "reading_depth": "Full HTML opened; formulation, coupled RANS scope and steady3D example examined.",
+            "findings_tr": "Pseudo-transient Newton sağ tarafına tutarlı smoothing katkısı önerilir; Newton Jacobian'ı değiştirilmez. Küçük ve büyük pseudo-time limitlerinde yöntem davranışı açıklanır. Yerel nonlinear engel tanısı için fikir sağlar.",
+            "limits": "Not equivalent to LINELET linear preconditioning or native NEWTON_KRYLOV toggle. Paper uses its own RANS framework and large3D cases; no local speed or correctness guarantee.",
+            "local_fit": "Requires a separately derived source prototype and root-consistency checks; deferred until N01-N02 evidence."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "NS06",
+      "aliases": [
+        "NS06"
+      ],
+      "title": "Comparative study of inner-outer Krylov solvers for linear systems in structured and high-order unstructured CFD problems",
+      "url": "https://arxiv.org/html/2404.17870v1",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "numerics",
+          "original_record": {
+            "id": "S06",
+            "title": "Comparative study of inner-outer Krylov solvers for linear systems in structured and high-order unstructured CFD problems",
+            "authors": "Mehdi Jadoui; Christophe Blondeau; Emeric Martin; Florent Renac; François-Xavier Roux",
+            "kind": "original journal paper / arXiv full text",
+            "publication_date": "2022-08-15 journal;2024-04-27 arXiv",
+            "version": "2404.17870v1",
+            "accessed_date": "2026-10-28",
+            "url": "https://arxiv.org/html/2404.17870v1",
+            "additional_urls": [
+              "https://doi.org/10.1016/j.compfluid.2022.105575"
+            ],
+            "reading_depth": "Full HTML opened; sections3.1,4.2.1,4.2.2,5 read for true/least-squares residual distinction, M6 and implementation caveats.",
+            "findings_tr": "Gerçek ve least-squares artığı ayrı izlenir. M6 adjoint örneğinde kestirim azalırken gerçek artığın durması ve ortogonalleştirme/preconditioning etkisi gösterilir. Bu, eksik ölçümümüz için güçlü gerekçedir.",
+            "limits": "Fully linearized turbulent adjoint systems in elsA/Aghora differ from local SU2 primal segregated flow/SA. Their nested/deflation speedups and diagnosis do not transfer. Local SU2 already has CGS twice.",
+            "local_fit": "Passive true-residual observation applies immediately in principle; larger algorithm changes are conditional and not installed."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "NS07",
+      "aliases": [
+        "NS07"
+      ],
+      "title": "Reliable and efficient steady CFD from surrogate predictions through Newton-Krylov correction",
+      "url": "https://arxiv.org/abs/2608.04400",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "numerics",
+          "original_record": {
+            "id": "S07",
+            "title": "Reliable and efficient steady CFD from surrogate predictions through Newton-Krylov correction",
+            "authors": "Mingcheng Lei; Weishao Tang; Yufei Zhang; Haixin Chen",
+            "kind": "arXiv preprint",
+            "publication_date": "2026-08-05",
+            "version": "2608.04400v1",
+            "accessed_date": "2026-10-28",
+            "url": "https://arxiv.org/abs/2608.04400",
+            "additional_urls": [
+              "https://arxiv.org/pdf/2608.04400v1"
+            ],
+            "reading_depth": "Abstract page and27-page PDF opened; methodological scope inspected. No independent reproduction or claim that all tables were audited.",
+            "findings_tr": "Surrogate tahmini son kabul yerine başlangıç olarak kullanıp Newton-Krylov ile sayısal düzeltme yapar. Güvenilirlik mimarisi açısından ilgili bir yeni çalışma; terminal solver denetimi hâlâ gerekli.",
+            "limits": "Training/data/model and its solver stack are not present or reproduced locally. Current seed already advanced; new surrogate does not resolve the missing inner-residual measurement.",
+            "local_fit": "Deferred research direction; no training, model download or projected speed guarantee."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "NS08",
+      "aliases": [
+        "NS08"
+      ],
+      "title": "LINELET segfaults, no LINELET regression tests -SU2 issue2877",
+      "url": "https://github.com/su2code/SU2/issues/2877",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "numerics",
+          "original_record": {
+            "id": "S08",
+            "title": "LINELET segfaults, no LINELET regression tests -SU2 issue2877",
+            "kind": "official upstream issue, reported risk rather than established local bug",
+            "publication_date": "2026-08-26",
+            "accessed_date": "2026-10-28",
+            "url": "https://github.com/su2code/SU2/issues/2877",
+            "reading_depth": "Issue description/status opened; no source fix or regression resolution was claimed.",
+            "findings_tr": "Bazı vakalarda segfault raporu ve LINELET regresyon eksikliği kaydedilmiş; açılan sayfa open. Yeni geometriye genişletmede dar native regresyon ihtiyacını destekler.",
+            "limits": "All three local arms exited0. This does not diagnose present stagnation, prove a crash here or establish that the upstream report affects the pinned path.",
+            "local_fit": "Retain successful local native evidence; add geometry-specific counterexamples before generalization, without unsupported bug-fix patch."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS01",
+      "aliases": [
+        "CS01"
+      ],
+      "title": "OpenVSP API 3.55.0 resmi belgeleri",
+      "url": "https://openvsp.org/api_docs/latest/index.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S01",
+            "title": "OpenVSP API 3.55.0 resmi belgeleri",
+            "url": "https://openvsp.org/api_docs/latest/index.html",
+            "type": "official_documentation",
+            "opened": "2026-10-28",
+            "claim": "C++/AngelScript otomasyonu ve Python API için derlemenin Python sürümüyle eşlik gereği.",
+            "applicability": "Mevcut AngelScript veya gelecekteki ayrı API adaptörü.",
+            "limit": "latest sayfası hareketlidir; yerel uygulama kurulu 3.55.0 ile sınanmalıdır."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS02",
+      "aliases": [
+        "CS02"
+      ],
+      "title": "OpenAeroStruct 2.12: OpenVSP-generated Mesh Example",
+      "url": "https://mdolab-openaerostruct.readthedocs-hosted.com/en/latest/advanced_features/openvsp_mesh_example.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S02",
+            "title": "OpenAeroStruct 2.12: OpenVSP-generated Mesh Example",
+            "url": "https://mdolab-openaerostruct.readthedocs-hosted.com/en/latest/advanced_features/openvsp_mesh_example.html",
+            "type": "official_documentation",
+            "opened": "2026-10-28",
+            "claim": "generate_vsp_surfaces OpenVSP Python API ister; dahil edilen yüzeyler açık seçilir, panel ayrıklığı VSP tessellation ayarına bağlıdır.",
+            "applicability": "Ortak VSP geometrisinden OAS VLM oluşturma.",
+            "limit": "Yerel Python köprüsü henüz çalıştırılmadı; yüzey eşdeğerliği kendiliğinden kanıtlanmaz."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS03",
+      "aliases": [
+        "CS03"
+      ],
+      "title": "OCCT BRepCheck_Analyzer referansı",
+      "url": "https://www.occt3d.com/dev/doc/refman/html/class_b_rep_check___analyzer.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S03",
+            "title": "OCCT BRepCheck_Analyzer referansı",
+            "url": "https://www.occt3d.com/dev/doc/refman/html/class_b_rep_check___analyzer.html",
+            "type": "official_documentation",
+            "opened": "2026-10-28",
+            "claim": "Şeklin alt topoloji, kenar, yüzey ve kapanış kriterlerini denetler; geometrik kontroller ve exact/diskret yöntemler ayrıdır.",
+            "applicability": "CAD kabul katmanının sağlık testi.",
+            "limit": "Açılan referans OCCT 8.0.1; yerel kernel API kullanımına aynen kopyalama yapılmadı. Tasarım gereksinimi veya DFM testi değildir."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS04",
+      "aliases": [
+        "CS04"
+      ],
+      "title": "OpenVSP resmi VSPAERO Verification and Validation Studies",
+      "url": "https://github.com/OpenVSP/OpenVSP/blob/main/examples/scripts/python_scripts/report.md",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S04",
+            "title": "OpenVSP resmi VSPAERO Verification and Validation Studies",
+            "url": "https://github.com/OpenVSP/OpenVSP/blob/main/examples/scripts/python_scripts/report.md",
+            "type": "upstream_repository_validation_examples",
+            "opened": "2026-10-28",
+            "claim": "Kaynak teorik/deneysel kanatlarla geometri, analiz girdileri ve sonuç kıyasını script üzerinden kurar.",
+            "applicability": "Yüzey/iz CDi teşhisinden önce sürümle eşli resmi örnek.",
+            "limit": "Upstream main hareketlidir; kaynak sonuçlar burada yeniden çalıştırılmadı."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS05",
+      "aliases": [
+        "CS05"
+      ],
+      "title": "OpenVSP geliştiricisi Rob McDonald'ın CDi/CDiw tanım açıklaması",
+      "url": "https://groups.google.com/g/openvsp/c/7Bl7y1nGl1Q/m/J4QOlpNJBQAJ",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S05",
+            "title": "OpenVSP geliştiricisi Rob McDonald'ın CDi/CDiw tanım açıklaması",
+            "url": "https://groups.google.com/g/openvsp/c/7Bl7y1nGl1Q/m/J4QOlpNJBQAJ",
+            "type": "primary_developer_statement",
+            "opened": "2026-10-28",
+            "claim": "CDi ve CDiw iki indüklenmiş sürükleme kestirimidir; CDtot = CDo + CDi, CDwtot = CDo + CDiw.",
+            "applicability": "Yerel kuvvet sütunlarını doğru yorumlamak.",
+            "limit": "2025 forum açıklaması tek başına kurulu sürümün sayısal doğruluk kanıtı değildir."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS06",
+      "aliases": [
+        "CS06"
+      ],
+      "title": "Text2CAD-Bench: A Benchmark for LLM-based Text-to-Parametric CAD Generation",
+      "url": "https://arxiv.org/html/2605.18430v1",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S06",
+            "title": "Text2CAD-Bench: A Benchmark for LLM-based Text-to-Parametric CAD Generation",
+            "url": "https://arxiv.org/html/2605.18430v1",
+            "type": "original_research_preprint",
+            "opened": "2026-10-28",
+            "claim": "600 örnek; karmaşıklık ve istem biçimi ayrımı; geçerli kod ve benzerlik ayrı. Loft/sweep/shell ve karmaşık topolojide zayıflama; resim hakemi iç ölçü/montajı tam göremez.",
+            "applicability": "Kademeli yeni CAD holdout seçimi ve çoklu kabul ölçütü.",
+            "limit": "CadQuery hedefli; montaj, sac, karmaşık parametrik aileler ve havacılık eksik. Buradaki metrikler doğrudan K/OpenSCAD üstünlüğü vermez; hakemli yayın durumu sayfadan doğrulanmadı."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS07",
+      "aliases": [
+        "CS07"
+      ],
+      "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
+      "url": "https://arxiv.org/html/2604.24479v1",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S07",
+            "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
+            "url": "https://arxiv.org/html/2604.24479v1",
+            "type": "original_research_preprint",
+            "opened": "2026-10-28",
+            "claim": "Kod çalışması, geometrik/topolojik sağlık ve dışa aktarım kontrolleri ayrı; geçerli katı tam DFM kurallarını içermez.",
+            "applicability": "Üretici ile geometri kabulünü ayırmak.",
+            "limit": "Sentetik veri ve kendi üretim/eğitim hattı; yerel Q6 başarısı veya uçak tasarımı kanıtı değildir."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS08",
+      "aliases": [
+        "CS08"
+      ],
+      "title": "OpenMDAO Checking Total Derivatives",
+      "url": "https://openmdao.org/newdocs/versions/latest/features/core_features/working_with_derivatives/check_total_derivatives.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S08",
+            "title": "OpenMDAO Checking Total Derivatives",
+            "url": "https://openmdao.org/newdocs/versions/latest/features/core_features/working_with_derivatives/check_total_derivatives.html",
+            "type": "official_documentation",
+            "opened": "2026-10-28",
+            "claim": "check_totals öncesi model yakınsamış olmalı; partial kontrolleri teşhise yardımcıdır; FD veya CS ile kıyas yapılabilir.",
+            "applicability": "Uyarlanmış OAS kısıt/amaç ve bağlantı türevlerini sınamak.",
+            "limit": "Türev kontrolü fiziksel model ve malzeme doğrulamasının yerini tutmaz; CS uyumluluğu ayrı gereklidir."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS09",
+      "aliases": [
+        "CS09"
+      ],
+      "title": "ideas-um/openaerostruct-llm-agent",
+      "url": "https://github.com/ideas-um/openaerostruct-llm-agent",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S09",
+            "title": "ideas-um/openaerostruct-llm-agent",
+            "url": "https://github.com/ideas-um/openaerostruct-llm-agent",
+            "type": "original_author_repository",
+            "opened": "2026-10-28",
+            "claim": "Görev sınıfı, amaç, değişken ve kısıt hazırlama, kod üretimi ve denetimi; Python 3.12 ile Gemini API veya Ollama ve host/Docker seçenekleri var.",
+            "applicability": "Şablondan önce açık görev sözleşmesi ve ayrı denetim rolü için yöntem örneği.",
+            "limit": "Yerel eski inceleme sabit 09336bd commitindeydi; güncel upstream README başarısı yerelde yeniden üretilmedi. Gevşetme önerileri kullanıcı sert kısıtlarını değiştirme yetkisi vermez."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS10",
+      "aliases": [
+        "CS10"
+      ],
+      "title": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite",
+      "url": "https://arxiv.org/abs/2510.21652v2",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S10",
+            "title": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite",
+            "url": "https://arxiv.org/abs/2510.21652v2",
+            "type": "original_research_ICLR2026",
+            "opened": "2026-10-28",
+            "claim": "Kontrollü tekrar üretilebilir araç/ortam, maliyet ve araç erişimi gibi karıştırıcıların eşliği gerekir.",
+            "applicability": "Yerel talimat önce/sonra değerlendirme tasarımı.",
+            "limit": "Bilimsel ajan genel sınaması; CAD/CFD yeterlilik skoru veya bizim ajanın ölçümü değildir."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS11",
+      "aliases": [
+        "CS11"
+      ],
+      "title": "Search-Time Contamination in Deep Research Agents",
+      "url": "https://arxiv.org/abs/2606.05241v1",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S11",
+            "title": "Search-Time Contamination in Deep Research Agents",
+            "url": "https://arxiv.org/abs/2606.05241v1",
+            "type": "original_research_preprint_under_review",
+            "opened": "2026-10-28",
+            "claim": "Web araması benchmark meta/veri/cevabını geri getirebilir; erişim izi ve kontrollü benchmark erişimi önemlidir.",
+            "applicability": "Kaynak geometri ve cevapların ayrı değerlendirme düzeni.",
+            "limit": "Ön baskı; yerel sisteme performans yüzdesi aktarılmadı, güvenlik yalıtımı sağlamaz."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS12",
+      "aliases": [
+        "CS12"
+      ],
+      "title": "From Reproduction to Replication: Evaluating Research Agents with Progressive Code Masking",
+      "url": "https://arxiv.org/abs/2506.19724",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S12",
+            "title": "From Reproduction to Replication: Evaluating Research Agents with Progressive Code Masking",
+            "url": "https://arxiv.org/abs/2506.19724",
+            "type": "original_research_preprint",
+            "opened": "2026-10-28",
+            "claim": "Hazır kod çalıştırma ile sıfırdan bilimsel işi kurma farklı zorluklar; tek deneme ve çoklu deneme başarısı ayrılmalı.",
+            "applicability": "Yerel örnek araç çalıştırmasını serbest uçtan uca ajan yetkinliğinden ayırmak.",
+            "limit": "ML deneyleri ağırlıklı; yerel CAD/CFD fizik kabullerini belirlemez."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS13",
+      "aliases": [
+        "CS13"
+      ],
+      "title": "OpenAeroStruct 2.12.0 resmi genel belgeleri",
+      "url": "https://mdolab-openaerostruct.readthedocs-hosted.com/en/latest/",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S13",
+            "title": "OpenAeroStruct 2.12.0 resmi genel belgeleri",
+            "url": "https://mdolab-openaerostruct.readthedocs-hosted.com/en/latest/",
+            "type": "official_documentation",
+            "opened": "2026-10-28",
+            "claim": "VLM ile düğüm başına 6 serbestlikli 3B uzaysal kiriş modelini OpenMDAO optimizasyonunda bağlar.",
+            "applicability": "Hızlı düşük mertebe aeroelastik ön tasarım.",
+            "limit": "Hacim CFD ve detaylı 3B kompozit, bağlantı veya burkulma kabulü değildir."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS14",
+      "aliases": [
+        "CS14"
+      ],
+      "title": "Autodesk Fusion Compute MCP: Public Beta",
+      "url": "https://www.autodesk.com/products/fusion-360/blog/fusion-compute-mcp/",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S14",
+            "title": "Autodesk Fusion Compute MCP: Public Beta",
+            "url": "https://www.autodesk.com/products/fusion-360/blog/fusion-compute-mcp/",
+            "type": "official_vendor_announcement_and_usage_documentation",
+            "opened": "2026-10-28",
+            "claim": "Bulut Fusion motoruna MCP erişimi, parametrik işlemler ve export; aktif Fusion lisansı ve Team hub gerekli. Geçici oturumda kalıcı çıktılar kaydedilmeli.",
+            "applicability": "Motor/STEP/parametrik düzenleme kabulünün ayrı sınanması.",
+            "limit": "15 Eylül 2026 beta yazısı; kuyruk ve oturum limitleri değişebilir. Öğrenci hesabının yerel hakkı doğrulanmadı; ürün demosu doğruluk garantisi değildir."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS15",
+      "aliases": [
+        "CS15"
+      ],
+      "title": "chandar-lab/CADmium",
+      "url": "https://github.com/chandar-lab/CADmium",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S15",
+            "title": "chandar-lab/CADmium",
+            "url": "https://github.com/chandar-lab/CADmium",
+            "type": "original_author_repository",
+            "opened": "2026-10-28",
+            "claim": "Metinli sıralı CAD için 1.5B/3B/7B/14B modeller; kaynak yol Python 3.11, Conda/pythonocc-core ve JSON temsili içerir.",
+            "applicability": "Küçük metinli CAD için ölçülü gelecekteki karşılaştırma adayı.",
+            "limit": "Kurulmadı/ölçülmedi; proje CadQuery hattına doğrudan takılabilir model değildir. Model/veri lisansları ayrı incelenmeli."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS16",
+      "aliases": [
+        "CS16"
+      ],
+      "title": "CAD-Coder: Text-to-CAD Generation with Chain-of-Thought and Geometric Reward",
+      "url": "https://arxiv.org/abs/2505.19713v3",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S16",
+            "title": "CAD-Coder: Text-to-CAD Generation with Chain-of-Thought and Geometric Reward",
+            "url": "https://arxiv.org/abs/2505.19713v3",
+            "type": "original_research_NeurIPS2025",
+            "opened": "2026-10-28",
+            "claim": "Metin → CadQuery programı; geometri ve format ödülünü birleştiren eğitim yaklaşımı.",
+            "applicability": "Mevcut CadQuery kabul hattıyla eşli yeni model araştırması.",
+            "limit": "Yayımlanmış sonuç yerel performans değildir; quantization, model boyutu, lisans ve kaynak runtime ayrıca denetlenmeli."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS17",
+      "aliases": [
+        "CS17"
+      ],
+      "title": "ADSKAILab/Zero-To-CAD-Qwen3-VL-2B model card",
+      "url": "https://huggingface.co/ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S17",
+            "title": "ADSKAILab/Zero-To-CAD-Qwen3-VL-2B model card",
+            "url": "https://huggingface.co/ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+            "type": "official_model_card",
+            "opened": "2026-10-28",
+            "claim": "8 temiz 256×256 görünüşten CadQuery; sentetik eğitim, 4096 token bağlam ve girdi sınırlamaları; Apache 2.0 etiketi.",
+            "applicability": "Yerel Q6 testinin doğru görev/girdiyle yorumlanması.",
+            "limit": "Özgün model yolu yerelde sınanmadı; başka görüntü düzenleri ve karmaşık montajlar doğrulanmış değildir."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "CS18",
+      "aliases": [
+        "CS18"
+      ],
+      "title": "CAD-Recode: Reverse Engineering CAD Code from Point Clouds ve özgün repo",
+      "url": "https://github.com/filaPro/cad-recode",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "cad_agent",
+          "original_record": {
+            "id": "S18",
+            "title": "CAD-Recode: Reverse Engineering CAD Code from Point Clouds ve özgün repo",
+            "url": "https://github.com/filaPro/cad-recode",
+            "paper_url": "https://arxiv.org/abs/2412.14042v2",
+            "type": "original_author_repository_and_ICCV2025_paper",
+            "opened": "2026-10-28",
+            "claim": "Nokta bulutundan CadQuery kodu, Qwen2-1.5B tabanlı; v1.5 inference örneği var.",
+            "applicability": "Hazır kaynak 3B tarama/nokta bulutu varsa tersine mühendislik araştırması.",
+            "limit": "Metinden serbest tasarım modeli değildir; yerel kurulum/ölçüm yok."
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS01",
+      "aliases": [
+        "VS01"
+      ],
+      "title": "TMR y+ çalışması",
+      "url": "https://tmbwg.github.io/turbmodels/flatplate_val_ypluseffect.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V01",
+            "title": "TMR y+ çalışması",
+            "url": "https://tmbwg.github.io/turbmodels/flatplate_val_ypluseffect.html",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS02",
+      "aliases": [
+        "VS02"
+      ],
+      "title": "TMR vaka tanımı",
+      "url": "https://tmbwg.github.io/turbmodels/onerawingnumerics_val.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V02",
+            "title": "TMR vaka tanımı",
+            "url": "https://tmbwg.github.io/turbmodels/onerawingnumerics_val.html",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS03",
+      "aliases": [
+        "VS03"
+      ],
+      "title": "Park vd.,2018, BölümVI ve Şekil11–13",
+      "url": "https://ntrs.nasa.gov/api/citations/20180006169/downloads/20180006169.pdf?attachment=true",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V03",
+            "title": "Park vd.,2018, BölümVI ve Şekil11–13",
+            "url": "https://ntrs.nasa.gov/api/citations/20180006169/downloads/20180006169.pdf?attachment=true",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS04",
+      "aliases": [
+        "VS04"
+      ],
+      "title": "NPARC mekânsal yakınsama",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/spatconv.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V04",
+            "title": "NPARC mekânsal yakınsama",
+            "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/spatconv.html",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS05",
+      "aliases": [
+        "VS05"
+      ],
+      "title": "WIND Study4",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/raetaf/raetaf04/raetaf04.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V05",
+            "title": "WIND Study4",
+            "url": "https://www.grc.nasa.gov/www/wind/valid/raetaf/raetaf04/raetaf04.html",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS06",
+      "aliases": [
+        "VS06"
+      ],
+      "title": "TMR 2DZP",
+      "url": "https://tmbwg.github.io/turbmodels/flatplate.html",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V06",
+            "title": "TMR 2DZP",
+            "url": "https://tmbwg.github.io/turbmodels/flatplate.html",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS08",
+      "aliases": [
+        "VS08"
+      ],
+      "title": "Morrison ve Hemsch,2007",
+      "url": "https://ntrs.nasa.gov/citations/20080002265",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V08",
+            "title": "Morrison ve Hemsch,2007",
+            "url": "https://ntrs.nasa.gov/citations/20080002265",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS09",
+      "aliases": [
+        "VS09"
+      ],
+      "title": "Balan vd.,2019",
+      "url": "https://ntrs.nasa.gov/citations/20200002636",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V09",
+            "title": "Balan vd.,2019",
+            "url": "https://ntrs.nasa.gov/citations/20200002636",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    },
+    {
+      "id": "VS10",
+      "aliases": [
+        "VS10"
+      ],
+      "title": "Núñez-de la Rosa vd.,2026,ön baskı",
+      "url": "https://arxiv.org/html/2607.27580v1",
+      "consulted_date": "2026-10-28",
+      "records": [
+        {
+          "module": "validation_mesh",
+          "original_record": {
+            "id": "V10",
+            "title": "Núñez-de la Rosa vd.,2026,ön baskı",
+            "url": "https://arxiv.org/html/2607.27580v1",
+            "accessed_date": "2026-10-28",
+            "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+            "source_class": "author paper or official documentation"
+          }
+        }
+      ],
+      "not_reproduced_locally": true
+    }
+  ],
+  "findings": [
+    {
+      "title": "İç artık: ölçülecek nicelik eksik",
+      "text": "Jadoui vd. M6 adjoint örneklerinde gerçek ve least-squares artıklarını ayrı izliyor. Bizim primal, ayrık flow/SA sistemimiz aynı sistem değil. Yerel veri, raporlanan iç akış oranının yaklaşık45kat iyileşmesini dış yoğunluk ilerlemesine bağlayamıyor; ilk öneri yeni çözücü değil bağımsız b−Aδ ölçümü.",
+      "source_ids": [
+        "NS06",
+        "NS01"
+      ]
+    },
+    {
+      "title": "Duvar mesafesi: ucuz ve ayrı bir kontrol adayı",
+      "text": "Park vd.2018, anizotropik M6 ağında yanlış mesafe varsayımının akışı etkileyebildiğini gösteriyor. Bu, SU2’mizde kanıtlanmış neden değil. Önce akış çalıştırmadan geometriye bağlı bağımsız mesafe karşılaştırması yapmak anlamlı.",
+      "source_ids": [
+        "VS03"
+      ]
+    },
+    {
+      "title": "Önceden var olan düzeltmeyi tekrar eklememek",
+      "text": "Derlenen v8.5.0 kaynağı zaten iki geçişli Classical Gram–Schmidt kullanıyor. Fonksiyon adından eski Modified Gram–Schmidt uygulaması varsaymak yanlış öneri üretebilirdi. Önbellekli web raw görünümü yerine hashli yerel kaynak ve pinned GitHub API teyidi kullanıldı.",
+      "source_ids": [
+        "NS01",
+        "NS06"
+      ]
+    },
+    {
+      "title": "CAD ve ajan: görünüş başarısı ile görev kabulü ayrı",
+      "text": "Text2CAD-Bench daha karmaşık işlem/topoloji değerlendirmesini; AstaBench araç ve bütçe denetimli ajan değerlendirmesini ele alıyor. Bizim için çıkarım, daha uzun talimattan önce görev bazlı ölçü/topoloji hakemi, ayrı yeni görevler ve aynı koşullu önce/sonra deneyidir.",
+      "source_ids": [
+        "CS06",
+        "CS10",
+        "CS11"
+      ]
+    },
+    {
+      "title": "Uyarlama ve yeni modeller: daha sonra, kanıtlı ihtiyaçla",
+      "text": "Hessian prototipi tam solve–remesh döngüsü değildir. Yeni immersed-boundary veya surrogate–Newton çalışmaları farklı altyapı gerektiriyor. Yakınsamaya yakın mevcut seed için yeni bir sinir ağı başlangıcı, terminal yakınsama sorununu kendiliğinden çözmez; bu yerel kapsam çıkarımıdır.",
+      "source_ids": [
+        "VS09",
+        "VS10",
+        "NS07"
+      ]
+    },
+    {
+      "title": "Kurulum sayısı başarı ölçütü değil",
+      "text": "NASA’nın tarihsel Vision2030 çalışması geometri/ağ ve belirsizlik yönetimini darboğaz olarak ele alıyor. Bizde öncelik aynı adayın kaynak–geometri–mesh–çözüm–kabul zincirini bağlamak. OpenFOAM farklı yöntem kıyası sunabilir; resmî Windows yolu WSL2 ve ayrıca kaynak bütçesi ister.",
+      "source_ids": [
+        "PS03",
+        "PS04"
+      ]
+    }
+  ],
+  "execution_sequence": [
+    {
+      "step": "A",
+      "title": "Ölçümü önce doğrula",
+      "issue_ids": "U01",
+      "method": "Küçük bilinen lineer sistemler, sıfır RHS ve zaten çözülmüş başlangıç; sonra pasif ölçüm patch’inin kaynak32 yeniden üretimi. Matris, b, δ ve fizik durumunun değişmediği kanıtlanmalı."
+    },
+    {
+      "step": "B",
+      "title": "Geometriyi paralel denetle",
+      "issue_ids": "U03,U19",
+      "method": "Gerçek wall marker ve kaynak yolu üzerinden nokta–segment/üçgen/sınır mesafesi. Yanlışlık yoksa hipotez kapanır; sonuç kötü diye mesafe değiştirilmez."
+    },
+    {
+      "step": "C",
+      "title": "Tek gerçek iç sistemde tanı",
+      "issue_ids": "U01,U17,U18",
+      "method": "Aynı ilk durum ve A,b kimlikleriyle32/256; gerçek artık, kestirim, δ ve uygulanan ΔU, yerel relaxation/CFL, operatör maliyetleri. Farklı A,b sabit-sistem kıyası sayılmaz."
+    },
+    {
+      "step": "D",
+      "title": "Sonuca göre tek mekanizma seç",
+      "issue_ids": "U01",
+      "method": "Gerçek iç artık yeterliyse dış güncelleme/bağlaşım araştırılır; yetersizse önkoşullandırıcı/operatör tutarlılığı incelenir. Gerçek/kestirim farkı yokken ortogonalleştirme eklenmez. Her kol önceden bütçelenir; otomatik tarama yok."
+    },
+    {
+      "step": "E",
+      "title": "Önce kaynak düz plaka ailesi",
+      "issue_ids": "U02,U04,U05",
+      "method": "Korunan fine rolüyle bütün sayısal kapılar; model/BC/viskozite eşleşmesi; bütün kaynak noktaları ve GCI uygunluğu. Bir tanı kolu eski üç-ağ ailesine sessizce eklenmez."
+    },
+    {
+      "step": "F",
+      "title": "RAE, ardından M6",
+      "issue_ids": "U06",
+      "method": "RAE’de aynı C1 temsil, normal/TE/iz ve ayrı uzak alan; M6’da TMRsharp sayısal aile ile eski blunt/deney geometrisi ayrımı. Her kapsam kendi koşul ve deney sözleşmesiyle kapanır."
+    },
+    {
+      "step": "G",
+      "title": "Görülmemiş yeni proje",
+      "issue_ids": "U08,U10,U11",
+      "method": "Aynı izlenebilir adayda yeni CAD/mesh/çözüm/karar zinciri; ayrı görevlerde sabit araç/model/bütçeyle davranış ölçümü. Geliştirmede görülen vaka yeni kör test sayılmaz."
+    },
+    {
+      "step": "H",
+      "title": "Gerçek İHA kararı",
+      "issue_ids": "U07,U09,U12,U16",
+      "method": "Kullanıcının güncel gereksinim/kütle girdileriyle güç, enerji, CG, trim, yapı ve görev uygunluğu. Kritik kabul açıkken nihai kazanan veya uygun uçak sonucu yok."
+    }
+  ],
+  "priority_is_expert_judgment_not_measured_risk_score": true,
+  "priority_vs_dependency": "Importance and execution order differ; missing real UAV data blocks that design, not independent benchmark research.",
+  "already_resolved_or_scope_qualified": [
+    "SU2 kaynak derlemesi ve bu200-adımlık vakada resmî/kaynak32 yeniden üretimi geçti; bunu bekleyen kurulum diye tekrar listelemedim.",
+    "Native OpenVSP/VSPAERO/XFOIL, tanımlı CAD/FEM ve Elmer laminer kanal çalışmaları kendi dar kapsamlarında mevcut; yeni araç gerekliliğiyle karıştırılmadı.",
+    "Proje merkezli GUI/EXE başlatıcı, girdi/birim ve yanlış-CFD-aktarımı/sıralama korumaları çalışıyor; genel uçtan uca başarı ayrıca açık.",
+    "Geçersiz prob maskesi, alan/geçmiş eşlemesi ve katı-içi mesafeyi yüzey mesafesi sanma gibi bilinen olaylarda düzeltme/kanıt var. Bunlar çözümsüz aynı hata olarak yeniden sayılmadı.",
+    "cap32→256 denemesinin kayıtlı dış yoğunluk etki kabulü başarısız kaldı. Sonuç bütün LINELET ailesinin işe yaramadığı veya bütün model hatasının bulunduğu anlamına gelmez."
+  ],
+  "deliberate_deferral": {
+    "ANSYS": "User deferred heavy installation/license stage; not the first solution to current accuracy gaps"
+  },
+  "evidence_integrity": {
+    "hash_records_rechecked": 61,
+    "unique_files_rechecked": 50,
+    "all_matched": true,
+    "files_sha256": {
+      "PROJECT_STATE.md": "2275f6785af2825304c71bee04c97ad8ea1c7be443b7fd5f1e49d1d8a3e2dddc",
+      "outputs/data/project/mission.json": "1a32b070b95ceddb167817f062b6e8a03807ffb2dd0e8f7f731d8245aba916f3",
+      "outputs/data/project/mass_budget.json": "4d0ed349d4fdb3e7ef12e394a1be6c3aaf3c39ba4721b5a868883baee1a23677",
+      "outputs/data/project/conceptual_steps.json": "c8cb473b0e7aaa9167bb62a8b1b09ae07127922f6513c55db59fbe8d02173cb3",
+      "outputs/reports/su2_kaynak_karsilastirma_20261027.json": "b58c744f90e40f92883f711d94c6d53d08997c94f5ce093ea3cbc8caa5f0d1e4",
+      "outputs/reports/reduced_family_review_20261026.json": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655",
+      "outputs/reports/m6_followup_index.json": "5517b8d2e3580d55b8d002dd4ae9b78348b7a8eda2c2c1a4165d6339de0ed369",
+      "outputs/reports/workflow_readiness.json": "7301d19e4396cee07bb55db976a60d3f510b461ef632e1961501a88be7a4d3d9",
+      "outputs/reports/complex_vlm_qualification.json": "48e95c3ac4afa593ca451dc0301ede9705c03841f579a81977d73cb35809b8ac",
+      "outputs/reports/parametric_cad_qualification.json": "526f1e5134c7b3a1b5f648a5ea4772c0a60224018b6dca60b7601ab489f9c655",
+      "outputs/reports/openaerostruct_examples.json": "340cdd2275ae2018f26513bcb50a4f9a6e7aad3799d7f21c11e21b922454f9f4",
+      "work/setup/fusion_mcp_install.json": "2b2e0d0df4bc683c719a2e374541b962bb72b72b3336d62aaeeda583f98b6407",
+      "work/setup/openvsp_install.json": "e307bdf49b2974e10d8e97134bcdfaf2a5f437bcf516471d9b8efa96f7876e42",
+      "work/su2_build_resume_20261027/independent_review.json": "ef3510c1d2ef7431606d4324aa111fec5646e73a6e8d29455d972ab23bbcf902",
+      "work/su2_build_20261027/method_design.json": "40c77158b6b20149cbc7c0ee0cd5287b262ecd8f8d7191b8173e634c95289e44",
+      "outputs/reports/cfd_kalan_artik_20261026.md": "6092982e52a78383935a9812034cf93a3d27698cf177b0a14f2a5a299a5dd08c",
+      "outputs/reports/cfd_ic_cozum_ve_uc_ag_20261026.md": "6076ac835f6a8e587def75609e696467d0d962d5212c91e38335419119444ca4",
+      "tools/su2-build/v8.5.0/controls/p32r/source/Common/src/linear_algebra/CSysSolve.cpp": "767ff544d658baffcadf3ed2fa9cd2b3a83c0f696ebecd4765704d368cf136b6",
+      "tools/su2-build/v8.5.0/controls/p32r/source/Common/include/linear_algebra/CSysSolve.hpp": "ddb7c757ca287628358e3b0be410de4369cc88230cb4bd18f1eeda31b772924e",
+      "tools/su2-build/v8.5.0/controls/p32r/source/SU2_CFD/src/integration/CNewtonIntegration.cpp": "ab34d0bdabf45b693708070f074bab707ec65562e9754be47306be2377dadf86",
+      "tools/su2-build/v8.5.0/controls/p32r/source/SU2_CFD/include/solvers/CFVMFlowSolverBase.hpp": "ff00be37735ec54fab8969bd1db716ace6a3bb4b8fc68745179ee0e4501d9f65",
+      "tools/su2-build/v8.5.0/controls/p32r/source/SU2_CFD/include/solvers/CFVMFlowSolverBase.inl": "b8e54f986ce075052e54586c6f12026c785262f96875426bb6e918ae374b3c46",
+      "work/geometry/parametric_wing.py": "e652e72539f36874d313fac7f437b02946ed533d0975f9ba0973a4764a49b025",
+      "work/qualification/run_complex_vlm.py": "6392f99b060059ab2d48113eacafca42186d1d14211a31ad79d6deee4e6cd8be",
+      "outputs/reports/complex_vlm_force_audit.json": "9749345e4f8b28f8ed6da2c431bd9810151f78391eb2003a153c483707661113",
+      "outputs/reports/step_bore_measurements.json": "2163c75e8b95deda67d7df05e196cc1ff71e8d367e31eaffd0516d9d777d769f",
+      "outputs/data/agent_learning/qualification_plan_v1.json": "23183d6e557f92184cf14259334cc825ad0b7a9a39f4b2e5e364283cdb7d56e9",
+      ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+      "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771",
+      "work/agent/project.py": "4dd3721d86048a7557a6e2dfaba9a302ed087c1bc6c62e6730071d7cb9709ad7",
+      "work/agent/projects.py": "89498ca6e7ea50f4b96c16fc6ab81f556fbe5db17f440a9f363c93603fc31f26",
+      "work/agent/projects_desk.ps1": "ae44bf3eb959cf7a1a6b1c7bd2c042b78836a80c31d0c2196bbc61ddc6ce07b5",
+      "work/workflow/rank_candidates.py": "3ce04535cbb018265a1b43aef7a9141f498ab2142c2f281ccdde5bbb411e6b62",
+      "outputs/reports/engineering_extension_quality.json": "51d553a5ac677b05282c71c844011d3f2f902dd9b4307899331873f573417023",
+      "outputs/reports/fem_results.json": "f9813c1eac0db5ade4c69bcfcebcdd21f4727794ecbd035c1aa244bc078e9f61",
+      "work/setup/openaerostruct_install.json": "c5f389c75ae267814d04f5286a9b4757e2d0c1dee3c96973014afa9f12b27751",
+      "work/setup/tool_config.json": "cfa0f4e28b650d8e6ba33603f5e32e6aa0513fea28b57e131bd83a5fd56c0a0f",
+      "outputs/reports/model_usage_audit.json": "4a4c7534e3db14835d55e57df10c055886dc2b1e1b69cc65a3a1b3dce77b1806",
+      "outputs/reports/k_family_new_tasks.json": "71b309eb3b811e7382572be0cf08ca1bdd165cf3aa51606976a76fc92355d698",
+      "outputs/reports/k_family_study.json": "304dec3bc45332ea1a5c913417a542b7cda0ed6766b664e608e1e105a2f327a9",
+      "outputs/reports/zero_usage_audit.json": "672a6ebe36bf51387d0428bc875ea366fe170fefe3a32a5f02aa66f63cef4d5f",
+      "outputs/reports/cad_model_benchmark.json": "af5716ec69d0019d36eb0813dd7927ea505b9b47d400d769c7a0c5c3cf22aa5a",
+      "work/agent/Launcher.cs": "1b7644185daae6249079bd8ad0b8ba50ba49ccc28e7e4be3cdb8fcb9e3e71c3c",
+      "outputs/reports/project_extension_quality.json": "cd563653eb9cc4889f62ee18dee5e8f1772d35353efe7c9bdcc332a6696e30cb",
+      "outputs/reports/su2_kaynak_karsilastirma_20261027.html": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787",
+      "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3",
+      "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2",
+      "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a",
+      "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb",
+      "outputs/reports/candidate_comparison.json": "844c127f4d0f8ff92fd74f233a2b7945b972e72c896557926a10e0aae75041fd"
+    },
+    "snapshot_before_research_state_update": true,
+    "mutable_baseline_snapshots": {
+      "PROJECT_STATE.md": {
+        "path": "work\\deep_research_20261027\\baseline_PROJECT_STATE.md",
+        "sha256": "2275f6785af2825304c71bee04c97ad8ea1c7be443b7fd5f1e49d1d8a3e2dddc"
+      }
+    }
+  },
+  "specialist_modules": {
+    "numerics.md": {
+      "sha256": "1413383cab7a37bf1829450a0a4343c5ace91d0c2aca43ebda4e331ec206e468",
+      "bytes": 22582
+    },
+    "numerics.json": {
+      "sha256": "bb5a0b2856c712aae8dcab19984ee30d4d17f1cfe577c6915b6bc65a1a626f10",
+      "bytes": 29368
+    },
+    "validation_mesh.md": {
+      "sha256": "3d9f3407ccf7827d94e65aae22a02dab8ab2ea50e0aed82f8934d46bc85de4a1",
+      "bytes": 17965
+    },
+    "validation_mesh.json": {
+      "sha256": "25a743a81526b21454b7e869d3f913ca6367df79e97467fd6f4dbf1c8ac811d4",
+      "bytes": 8672
+    },
+    "cad_agent.md": {
+      "sha256": "4c65ffb8891ca02ff7566f410bafd569f9b6551f9febd32ada088900fd4e65a5",
+      "bytes": 66636
+    },
+    "cad_agent.json": {
+      "sha256": "b4f8a14c150a85c30091d1c0e6fb7156fbb9c8d53f19dd7abe3cb42e39849f73",
+      "bytes": 53160
+    },
+    "issue_register.json": {
+      "sha256": "89d5bb7bcb21fae76df3d8c9726e39d832d7ca399cdacf2f5819f17ff256f393",
+      "bytes": 31110
+    }
+  },
+  "new_native_CFD_runs": 0,
+  "new_builds": 0,
+  "new_installations": 0,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false,
+  "thresholds_changed": false,
+  "research_not_a_blind_prediction": true,
+  "limitations": [
+    "This is an evidence inventory of the recorded project, not proof of finding every possible future failure.",
+    "Source reading depths and restricted abstracts are retained per source; no claim that every full text or reported experiment was reproduced.",
+    "Proposed test methods require a separate native preregistration; literature thresholds are not copied into the old acceptance contract."
+  ]
+}

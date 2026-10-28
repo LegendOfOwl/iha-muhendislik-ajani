@@ -22,3 +22,5 @@ Asıl dosyalar uygulamanın bağıl yolları korunarak `uygulama/` içinde sakla
 - [v0.16.0](v0.16.0/README.md)
 
 - [v0.17.0](v0.17.0/README.md)
+
+- [v0.18.0](v0.18.0/README.md)

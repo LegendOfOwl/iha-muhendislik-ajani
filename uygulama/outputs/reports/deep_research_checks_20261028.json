@@ -1,0 +1,88 @@
+{
+  "checked_utc": "2026-10-28T08:50:08.594594+00:00",
+  "passed": true,
+  "report_files_sha256": {
+    "outputs\\reports\\acik_sorunlar_ve_derin_arastirma_20261028.json": "76666c1f2a966edb61f23de4acbb794c05cd9dc53614e07dd34060abde007dae",
+    "outputs\\reports\\acik_sorunlar_ve_derin_arastirma_20261028.md": "24232015a26589b7636c1e06d9366556af690d6d332c5020252dc8602f6b3ec1",
+    "outputs\\reports\\acik_sorunlar_ve_derin_arastirma_20261028.html": "9206e051238d7e060e9403bde49a33407e9d06cd20300c9231967207a4b9ac8e"
+  },
+  "local_link_occurrences": 283,
+  "unique_local_links": 45,
+  "primary_source_addresses": 39,
+  "unique_external_link_addresses": 39,
+  "unique_local_evidence_hashes_rechecked": 50,
+  "all_specialist_module_hashes_matched": true,
+  "mutable_baseline_snapshots_used": {
+    "PROJECT_STATE.md": {
+      "path": "work\\deep_research_20261027\\baseline_PROJECT_STATE.md",
+      "sha256": "2275f6785af2825304c71bee04c97ad8ea1c7be443b7fd5f1e49d1d8a3e2dddc"
+    }
+  },
+  "check_code_sha256": {
+    "work/deep_research_20261027/check_report.py": "a7cff5762ed57103a0bfe676f991c423e8bb4b5e77b0c0b8ac3367fd58cdc218",
+    "work/deep_research_20261027/check_report_filters.js": "edd85d5415469eebe5c800b46add8cd1435d1450596944b3819d1ef0398d3137"
+  },
+  "functional_report_checks": {
+    "checks": [
+      {
+        "name": "initial_all",
+        "visible": 26,
+        "passed": true
+      },
+      {
+        "name": "priority_P0",
+        "visible": 7,
+        "passed": true
+      },
+      {
+        "name": "priority_P1",
+        "visible": 12,
+        "passed": true
+      },
+      {
+        "name": "priority_P2",
+        "visible": 6,
+        "passed": true
+      },
+      {
+        "name": "priority_P3",
+        "visible": 1,
+        "passed": true
+      },
+      {
+        "name": "project_domain",
+        "visible": 2,
+        "passed": true
+      },
+      {
+        "name": "combined_no_matches",
+        "visible": 0,
+        "passed": true
+      },
+      {
+        "name": "turkish_case_search",
+        "visible": 1,
+        "passed": true
+      },
+      {
+        "name": "visible_expand_collapse",
+        "passed": true
+      },
+      {
+        "name": "clear_filters",
+        "visible": 26,
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "scope": "Inert DOM functional check, not browser visual verification"
+  },
+  "publication_guard_checks": 28,
+  "new_native_CFD_runs": 0,
+  "new_builds": 0,
+  "browser_visual_verification": false,
+  "browser_limitation": "CUA file URL opening was blocked by browser protocol policy; no workaround or alternate browser surface attempted.",
+  "alternative": "Static HTML/local-link checks and report JavaScript executed against inert DOM fixtures only.",
+  "physical_qualification_passed": false,
+  "LLM_improvement_demonstrated": false
+}

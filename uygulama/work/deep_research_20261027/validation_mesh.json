@@ -1,0 +1,174 @@
+{
+  "schema": "mesh_validation_research_v1",
+  "research_date_local": "2026-10-28",
+  "compiled_from": "work/deep_research_20261027/validation_mesh.md",
+  "markdown_sha256": "3d9f3407ccf7827d94e65aae22a02dab8ab2ea50e0aed82f8934d46bc85de4a1",
+  "provenance": "Structured by parent from the completed specialist Markdown after specialist capacity interruption; no new claim of independent CFD or source reproduction.",
+  "problems": [
+    {
+      "id": "VM01",
+      "priority": "P0",
+      "problem": "Üç ağ ailesinin ince çözümü hâlâ yakınsamıyor",
+      "impact": "Yakınsamamış ince sonuçtan ağ hatası çıkarılamaz",
+      "next_test": "Gerçek iç artığın ölçümünü tamamla; sonra aynı geometri/ailede kayıtlı dış kapıyı geçir"
+    },
+    {
+      "id": "VM02",
+      "priority": "P0",
+      "problem": "BL normal çözünürlüğü ve LE/TE/iz geçişi",
+      "impact": "y+<1, bütün sınır tabakasının çözülmesi değildir",
+      "next_test": "Sabit kaynakta yalnız normal dağılım/geçiş değişen bir kontrol; δ99, hız ve μt profilleriyle ölç"
+    },
+    {
+      "id": "VM03",
+      "priority": "P0",
+      "problem": "Geometri temsili ve yüzey eşdeğerliği",
+      "impact": "Sayısal fark geometri değişiminden kaynaklanabilir",
+      "next_test": "Kaynak üretici ve bağımsız CAD'i ayrı kimliklerle tut; sınır-yüzeyi mesafesi ve teğet/normal farkını denetle"
+    },
+    {
+      "id": "VM04",
+      "priority": "P1",
+      "problem": "Üç yakınsamış sistematik ağ ve geçerli GCI yok",
+      "impact": "Küçük orta–ince fark tek başına hata bandı değildir",
+      "next_test": "Aynı kaynak/ağ ailesi, tutarlı yönsel oranlar, bütün seviyelerde yakınsama ve asimptotik davranış"
+    },
+    {
+      "id": "VM05",
+      "priority": "P1",
+      "problem": "Uzak alan duyarlılığı kapanmadı",
+      "impact": "Sınır etkisi ağ etkisine karışabilir",
+      "next_test": "Yakın bölgeyi koruyarak yalnız dış sınırın değiştiği ön kayıtlı çift"
+    },
+    {
+      "id": "VM06",
+      "priority": "P1",
+      "problem": "RAE/M6 deney kabulü geçmedi",
+      "impact": "Çözülen RANS problemi, deneydeki fizik ile tam aynı olmayabilir",
+      "next_test": "Önce sayısal kapılar, sonra koşul/trip/geometri/örnekleme belirsizliği ve bütün deney noktaları"
+    },
+    {
+      "id": "VM07",
+      "priority": "P1",
+      "problem": "Bağımsız çözücüyle eşdeğer denklem karşılaştırması eksik",
+      "impact": "Kendi postprocessor'ıyla uyum model doğrulaması değildir",
+      "next_test": "Önce TMR'nin mevcut CFL3D/FUN3D sonuçlarını tam model ve BC karşılığıyla yeniden kıyasla"
+    },
+    {
+      "id": "VM08",
+      "priority": "P1",
+      "problem": "Duvar mesafesi bağımsız denetimi yok",
+      "impact": "Anizotropik ağlarda SA kaynakları etkilenebilir",
+      "next_test": "Akış çalıştırmadan LE/TE/uç dahil gerçek nokta–yüzey mesafesini doğrula; hata varsa tek değişkenli çift"
+    },
+    {
+      "id": "VM09",
+      "priority": "P2",
+      "problem": "Tam anizotropik remeshing/adjoint zinciri kurulmadı",
+      "impact": "Hessian haritası üretim ağı veya kuvvet hata bandı değildir",
+      "next_test": "Önce analitik metrik/ağ-metriğe uyum; sonra küçük 2B kapalı solve→metric→remesh→transfer döngüsü"
+    }
+  ],
+  "local_evidence_sha256": {
+    "outputs/reports/su2_kaynak_karsilastirma_20261027.html": "42f6ab7607f9b1e3fc171c427f8cf5e2925d4069dde12241c9131318c8d37787",
+    "outputs/reports/reduced_family_review_20261026.json": "c1374b1bad37a1b9a4dcc88f3c1dd120d552db73f9214635be42084281f1d655",
+    "outputs/projects/proje-15cce2de02/reports/v3_test_batch_closed.json": "cc696cf91055a13407c210315f5778034630abc64600608be70151c4db6e7ed3",
+    "outputs/projects/proje-e9319baef1/reports/tmr_source_case_review_20261025.json": "06feda90b72cbe3e9d1170f9b5ba5b7f975abec9101117742d0aa9fdb6a154a2",
+    "outputs/projects/proje-15cce2de02/reports/prediction_v3_cgrid_interfacer4_summary.json": "1e8574cb31b0025f43e36993bda4ee61ecbfd85b47782e53681558192f2ecd5a",
+    "outputs/projects/proje-e9319baef1/reports/tmr_source_CAD_boundary_v2_20261025.json": "515a7c49cfa1576e7fdeb7afc8ee85602c4b8cdd9bfc1dc85324dce320187fdb"
+  },
+  "sources": [
+    {
+      "id": "V01",
+      "title": "TMR y+ çalışması",
+      "url": "https://tmbwg.github.io/turbmodels/flatplate_val_ypluseffect.html",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V02",
+      "title": "TMR vaka tanımı",
+      "url": "https://tmbwg.github.io/turbmodels/onerawingnumerics_val.html",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V03",
+      "title": "Park vd.,2018, BölümVI ve Şekil11–13",
+      "url": "https://ntrs.nasa.gov/api/citations/20180006169/downloads/20180006169.pdf?attachment=true",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V04",
+      "title": "NPARC mekânsal yakınsama",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/spatconv.html",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V05",
+      "title": "WIND Study4",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/raetaf/raetaf04/raetaf04.html",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V06",
+      "title": "TMR 2DZP",
+      "url": "https://tmbwg.github.io/turbmodels/flatplate.html",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V07",
+      "title": "OpenFOAM Foundation Windows yolu",
+      "url": "https://openfoam.org/download/windows/",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V08",
+      "title": "Morrison ve Hemsch,2007",
+      "url": "https://ntrs.nasa.gov/citations/20080002265",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V09",
+      "title": "Balan vd.,2019",
+      "url": "https://ntrs.nasa.gov/citations/20200002636",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    },
+    {
+      "id": "V10",
+      "title": "Núñez-de la Rosa vd.,2026,ön baskı",
+      "url": "https://arxiv.org/html/2607.27580v1",
+      "accessed_date": "2026-10-28",
+      "reading_scope": "Primary-source analysis retained in validation_mesh.md; not every method reproduced",
+      "source_class": "author paper or official documentation"
+    }
+  ],
+  "new_native_runs": 0,
+  "new_builds": 0,
+  "new_installations": 0,
+  "physical_qualification_passed": false,
+  "M6_qualification_passed": false,
+  "LLM_improvement_demonstrated": false,
+  "latest_case_roles": {
+    "TMR_flatplate": "reduced_family_review_20261026; source-cap arms are separate diagnostics",
+    "RAE2822": "v3 batch closure; v2 narrow screens remain historical",
+    "M6": "TMRsharp source three-grid case; old blunt source-grid results are separate"
+  },
+  "unexecuted_new_control": "Independent native-wall-distance versus global surface-distance audit; not a diagnosed local bug"
+}

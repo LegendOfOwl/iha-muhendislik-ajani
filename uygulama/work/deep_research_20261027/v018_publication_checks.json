@@ -1,0 +1,28 @@
+{
+  "schema": "v018_publication_guards_v1",
+  "created_utc": "2026-10-28T08:25:29.252375+00:00",
+  "tests_run": 28,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "seconds": 0.0015690999571233988,
+  "scope": "Pure v0.18 immutable-history and research-only-publication guards; no plan, document generation, commit, publication, native CFD or build was launched.",
+  "adapted_v017_history_guards": 12,
+  "new_research_scope_counterexamples": 16,
+  "new_native_CFD_runs": 0,
+  "new_builds": 0,
+  "code_sha256_before": {
+    "work/publish/verify_remote_v018.py": "62be0b9089a3aaf894cd70626476c6aafcbd697f30c87b80f529cf0e5bc754f7",
+    "work/publish/release_documents_v018.py": "d28415c6fc1fc48202bb65d476ebe512b27a3cbeb839c718e5cb046ca77da840",
+    "work/publish/test_v018_remote_guards.py": "b0b40687a455d3da920f56e929f02d7c2928b45ad7752a351dc518f1542bcc06",
+    "work/publish/test_v018_research_guards.py": "6786465afdc69ba45744b32a3314b87f95b4983c158a1ed77f043aeb10605b56"
+  },
+  "code_sha256_after": {
+    "work/publish/verify_remote_v018.py": "62be0b9089a3aaf894cd70626476c6aafcbd697f30c87b80f529cf0e5bc754f7",
+    "work/publish/release_documents_v018.py": "d28415c6fc1fc48202bb65d476ebe512b27a3cbeb839c718e5cb046ca77da840",
+    "work/publish/test_v018_remote_guards.py": "b0b40687a455d3da920f56e929f02d7c2928b45ad7752a351dc518f1542bcc06",
+    "work/publish/test_v018_research_guards.py": "6786465afdc69ba45744b32a3314b87f95b4983c158a1ed77f043aeb10605b56"
+  },
+  "raw_unittest_output": "test_asset_order_and_count_are_observed_not_hardcoded (test_v018_remote_guards.AssetHistoryGuards.test_asset_order_and_count_are_observed_not_hardcoded) ... ok\ntest_duplicate_asset_id_across_releases_rejected (test_v018_remote_guards.AssetHistoryGuards.test_duplicate_asset_id_across_releases_rejected) ... ok\ntest_duplicate_asset_name_rejected (test_v018_remote_guards.AssetHistoryGuards.test_duplicate_asset_name_rejected) ... ok\ntest_duplicate_release_tag_rejected (test_v018_remote_guards.AssetHistoryGuards.test_duplicate_release_tag_rejected) ... ok\ntest_changed_old_raw_ref_rejected (test_v018_remote_guards.PriorTagGuards.test_changed_old_raw_ref_rejected) ... ok\ntest_duplicate_raw_ref_rejected (test_v018_remote_guards.PriorTagGuards.test_duplicate_raw_ref_rejected) ... ok\ntest_latest_only_object_preserves_old_peeled_commit (test_v018_remote_guards.PriorTagGuards.test_latest_only_object_preserves_old_peeled_commit) ... ok\ntest_lightweight_tag_rejected (test_v018_remote_guards.PriorTagGuards.test_lightweight_tag_rejected) ... ok\ntest_missing_old_peeled_ref_rejected (test_v018_remote_guards.PriorTagGuards.test_missing_old_peeled_ref_rejected) ... ok\ntest_missing_old_raw_ref_rejected (test_v018_remote_guards.PriorTagGuards.test_missing_old_raw_ref_rejected) ... ok\ntest_wrong_latest_object_tag_rejected (test_v018_remote_guards.PriorTagGuards.test_wrong_latest_object_tag_rejected) ... ok\ntest_wrong_latest_peeled_head_rejected (test_v018_remote_guards.PriorTagGuards.test_wrong_latest_peeled_head_rejected) ... ok\ntest_complete_source_research_needs_no_csv (test_v018_research_guards.ResearchPayloadGuards.test_complete_source_research_needs_no_csv) ... ok\ntest_missing_any_research_module_is_not_silently_accepted (test_v018_research_guards.ResearchPayloadGuards.test_missing_any_research_module_is_not_silently_accepted) ... ok\ntest_missing_main_html_is_rejected (test_v018_research_guards.ResearchPayloadGuards.test_missing_main_html_is_rejected) ... ok\ntest_old_build_text_evidence_is_retained_without_new_build_claim (test_v018_research_guards.ResearchPayloadGuards.test_old_build_text_evidence_is_retained_without_new_build_claim) ... ok\ntest_research_relegated_to_an_archive_is_not_git_readable_payload (test_v018_research_guards.ResearchPayloadGuards.test_research_relegated_to_an_archive_is_not_git_readable_payload) ... ok\ntest_source_path_escape_is_rejected (test_v018_research_guards.ResearchPayloadGuards.test_source_path_escape_is_rejected) ... ok\ntest_tools_and_generated_build_binary_are_rejected (test_v018_research_guards.ResearchPayloadGuards.test_tools_and_generated_build_binary_are_rejected) ... ok\ntest_windows_separators_preserve_expected_source_identity (test_v018_research_guards.ResearchPayloadGuards.test_windows_separators_preserve_expected_source_identity) ... ok\ntest_any_positive_qualification_claim_is_rejected (test_v018_research_guards.ResearchTruthGuards.test_any_positive_qualification_claim_is_rejected) ... ok\ntest_boolean_false_is_not_a_measured_zero_work_count (test_v018_research_guards.ResearchTruthGuards.test_boolean_false_is_not_a_measured_zero_work_count) ... ok\ntest_both_languages_require_an_actual_nonempty_summary (test_v018_research_guards.ResearchTruthGuards.test_both_languages_require_an_actual_nonempty_summary) ... ok\ntest_missing_count_does_not_default_to_zero (test_v018_research_guards.ResearchTruthGuards.test_missing_count_does_not_default_to_zero) ... ok\ntest_missing_or_numeric_false_qualification_is_rejected (test_v018_research_guards.ResearchTruthGuards.test_missing_or_numeric_false_qualification_is_rejected) ... ok\ntest_old_build_count_cannot_be_relabelled_research (test_v018_research_guards.ResearchTruthGuards.test_old_build_count_cannot_be_relabelled_research) ... ok\ntest_old_three_run_success_cannot_be_relabelled_research (test_v018_research_guards.ResearchTruthGuards.test_old_three_run_success_cannot_be_relabelled_research) ... ok\ntest_valid_zero_work_summary_preserved_without_mutation (test_v018_research_guards.ResearchTruthGuards.test_valid_zero_work_summary_preserved_without_mutation) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 0.001s\n\nOK\n"
+}

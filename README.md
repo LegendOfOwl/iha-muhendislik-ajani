@@ -1,13 +1,13 @@
 # İHA mühendislik ajanı
 
-Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve kanıtlı rapor iş akışı. Güncel dağıtım **v0.17.0**. Üniversite düzeyindeki çalışmalar için geliştirilen ve sınanan bir araç bütünüdür; genel mühendislik/CFD yeterliliği tamamlanmış veya uçuşa hazır tasarım değildir.
+Windows üzerinde proje merkezli CAD, aerodinamik/CFD, yapısal ön analiz ve kanıtlı rapor iş akışı. Güncel dağıtım **v0.18.0**. Üniversite düzeyindeki çalışmalar için geliştirilen ve sınanan bir araç bütünüdür; genel mühendislik/CFD yeterliliği tamamlanmış veya uçuşa hazır tasarım değildir.
 
 
-## Güncel sürüm — 27 Ekim 2026
+## Güncel sürüm — 28 Ekim 2026
 
-[**v0.17.0 sonuçları: GitHub’da okunabilir rapor**](raporlar/v0.17.0/README.md) · [Release dosyaları](https://github.com/LegendOfOwl/iha-muhendislik-ajani/releases/tag/v0.17.0) · [Sürümleme politikası](SURUMLEME.md).
+[**v0.18.0 sonuçları: GitHub’da okunabilir rapor**](raporlar/v0.18.0/README.md) · [Release dosyaları](https://github.com/LegendOfOwl/iha-muhendislik-ajani/releases/tag/v0.18.0) · [Sürümleme politikası](SURUMLEME.md).
 
-SU2 kaynak32 derlemesi, korunmuş başarısız denemeden 258 doğrulanmış nesneyi kullanarak kalan 32 hedefi 81.063 saniyede tamamladı. Üç yeni native CFD koşusu aynı kaynak ağ ve başlangıçla 200 adım çalıştı. Resmî release32–kaynak32 yeniden üretimi geçti: beş SI log10 RMS eğrisindeki en büyük fark 0.00175396, son CD mutlak farkı 0. Yalnız MAX_LINELET_POINTS=32→256 değiştirildi. Yoğunluk kazancı -0.00938603 log10, SA kötüleşmesi -0.00099585 log10, Krylov sayımı oranı 1.00000000, bu çiftte gözlenen süre oranı 1.28308938; ön kayıtlı ortak etki/maliyet kabulü geçmedi. 40 yeni yazılım kontrolü geçti; eski70 kontrol yeni sayılmadı. Krylov sayımı işlem maliyetinin vekilidir; daha uzun çizgilerin eşit aritmetik maliyeti olduğu veya tek çiftin evrensel hız kıyası olduğu iddia edilmez. Genel fizik/RAE2822/M6/İHA kabulleri açık; LLM davranışında iyileşme ölçülmedi.
+28 Ekim2026:29 uzmanlık-alt başlığı, yinelenmeler birleştirilerek26 açık başlıkta önceliklendirildi (P0=7,P1=12,P2=6,P3=1). 39 farklı birincil kaynak adresi; 50 benzersiz yerel kanıt dosyasının SHA256 değeri yeniden kontrol edildi. En kritik sıra gerçek iç artık/dış yakınsama, bölgesel ağ, geometri eşdeğerliği, sistematik ağ/uzak alan ve deney kabulüdür. Gerçek İHA girdileri eksik; genel uçtan uca ajan ve görülmemiş görevlerde iyileşme kanıtı yok. Araştırmadan pasif b−Aδ ölçümü ve bağımsız wall-distance denetimi somut adaylar olarak çıktı; bunlar henüz uygulanmadı. Yeni CFD, kaynak derlemesi veya kurulum yapılmadı; mevcut fizik/RAE/M6/İHA/LLM kabulü değişmedi.
 
 Tam izlenen uygulama/kaynak ağacı otomatik **Source code (zip)** tag arşivinde; ayrı büyük analiz dosyaları sürümün `analiz-arsivi-*.zip` varlıklarından katalog ve geri yükleme aracıyla özgün yollarına getirilir. `KAYNAK_INDIRME.md` ve `SHA256SUMS.txt` indirme ve dosya mühürlerini açıklar. Kurulu araçlar, üretilen harici programlar ve üçüncü taraf kaynak arşivleri dağıtıma dahil edilmez; kaynak kimliği, mevcut yama/lisans manifestleri ve derleme kayıtları korunur. Önceki sürümlerin varlıkları değiştirilmez.
 
@@ -21,13 +21,13 @@ Tam izlenen uygulama/kaynak ağacı otomatik **Source code (zip)** tag arşivind
 | [analizler](analizler/) | CFD/FEM/model çalışma kayıtları, büyük alan arşivleri ve tam SHA256 kataloğu |
 | [testler](testler/) | Test kodları, kabul ölçütleri, başarısızlık ve doğrulama kayıtları |
 | [kurulum](kurulum/) | Ortam hazırlığı, mevcut yerel araçlara bağlanma ve arşiv geri yükleme |
-| [surumler](surumler/) | v0.1.0 → v0.17.0 sürüm ve kanıt notları ve dosya manifestleri |
+| [surumler](surumler/) | v0.1.0 → v0.18.0 sürüm ve kanıt notları ve dosya manifestleri |
 
 Hazır Windows ortamında [BASLAT.cmd](BASLAT.cmd), `uygulama/outputs/Muhendislik-Merkezi.exe` açar. EXE başlatıcıdır; Python ortamları ve haricî araçlar yanında gerekir. [Kurulum açıklaması](kurulum/README.md) önce okunmalıdır. Mevcut çalışma klasörünü değiştirmeden ona yerel junction'larla bağlanmak mümkündür.
 
 ## Sürüm geçmişinin anlamı
 
-Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyaları, tarihli çıktılar ve korunmuş başarısız denemelerden **geriye dönük gruplandırılarak** oluşturuldu. Eski tag'ler özgün tarihteki tam çalışan uygulama kopyası değildir. v0.1.0–v0.10.0 bu geriye dönük içe aktarımdır. **v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.** Tam güncel içerik için `main` veya `v0.17.0` kullanın. Git commit/yayın tarihleri bugün oluşturulan arşivin tarihidir; kaynak dosyaların gözlenen değiştirme tarihleri ayrıca katalogdadır.
+Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyaları, tarihli çıktılar ve korunmuş başarısız denemelerden **geriye dönük gruplandırılarak** oluşturuldu. Eski tag'ler özgün tarihteki tam çalışan uygulama kopyası değildir. v0.1.0–v0.10.0 bu geriye dönük içe aktarımdır. **v0.11.0 ve sonrası gerçek artımlı Git değişiklikleridir.** Tam güncel içerik için `main` veya `v0.18.0` kullanın. Git commit/yayın tarihleri bugün oluşturulan arşivin tarihidir; kaynak dosyaların gözlenen değiştirme tarihleri ayrıca katalogdadır.
 
 | Sürüm | Kanıt grubu |
 |---|---|
@@ -48,6 +48,7 @@ Bu projede önceden Git geçmişi yoktu. Sürümler, elde kalan kaynak dosyalar�
 | [v0.15.0](surumler/v0.15.0/README.md) | Gerçek LINELET kapsamı ve tek bölge LU-SGS kontrolü |
 | [v0.16.0](surumler/v0.16.0/README.md) | Kaynak derleme altyapısı ve karşılaştırma kontrolleri |
 | [v0.17.0](surumler/v0.17.0/README.md) | SU2 kaynak derlemesi ve kontrollü karşılaştırma |
+| [v0.18.0](surumler/v0.18.0/README.md) | Açık problemler, öncelikler ve derin araştırma |
 
 ## Dosyalar ve yeniden üretim
 
@@ -63,7 +64,7 @@ Bütün özgün proje dosyaları `uygulama/work` ve `uygulama/outputs` düzenind
 - RAE2822 ve ONERA M6 genel fizik kabulleri geçmedi. y+ veya kuvvet ekranının tek başına geçmesi bütün CFD doğrulamasını kapatmaz.
 - Gerçek İHA girdileri ile araç yeterlilik örnekleri ayrı tutulur. ANSYS ve OpenFOAM kurulmuş değildir; Fusion yalnız OAuth aşamasında doğrulanmıştır.
 
-[GitHub’da okunabilir güncel sonuçlar](raporlar/v0.17.0/README.md) · [Yerel HTML proje özeti](uygulama/outputs/Proje-Ozeti.html) · [Ajan dersleri](uygulama/outputs/reports/ajan_talimat_gelisimi_20261024.html) · [M6 sonuçları](raporlar/v0.11.0/README.md#onera-m6) · [Üçüncü taraf kaynakları](THIRD_PARTY_NOTICES.md)
+[GitHub’da okunabilir güncel sonuçlar](raporlar/v0.18.0/README.md) · [Yerel HTML proje özeti](uygulama/outputs/Proje-Ozeti.html) · [Ajan dersleri](uygulama/outputs/reports/ajan_talimat_gelisimi_20261024.html) · [M6 sonuçları](raporlar/v0.11.0/README.md#onera-m6) · [Üçüncü taraf kaynakları](THIRD_PARTY_NOTICES.md)
 
 Dosya/arşiv dağıtım sınırları için [GitHub büyük dosya belgeleri](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) ve [Releases belgeleri](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) esas alındı. Başarısız sonuçlar gizlenmedi; eşikler yayın için değiştirilmedi.
 
@@ -75,7 +76,7 @@ Proje sahibi hedefleri, kısıtları, araç tercihlerini ve ilerleme sırasını
 
 A Windows CAD/aerodynamic/CFD workflow with frozen evidence.
 
-The pristine source32 build reused 258 authenticated objects from the preserved failed attempt and completed 32 remaining targets in 81.063 seconds. Three fresh native CFD arms each ran 200 iterations on the same mesh and seed. Release32/source32 numerical reproduction passed: the largest five-component SI log10 RMS curve difference was 0.00175396; final absolute CD difference was 0. Only MAX_LINELET_POINTS changed from32 to256. Density gain was -0.00938603 log10, SA worsening -0.00099585, Krylov-count ratio 1.00000000, and observed elapsed-time ratio 1.28308938; the preregistered joint effect/cost gate did not pass. All 40 new software checks passed; the prior70 checks were not counted again. Krylov counts are a work proxy, not equal floating-point cost for longer linelets; one elapsed-time pair is not a universal speed benchmark. General physical/RAE2822/M6/UAV qualification and LLM improvement remain unestablished.
+On28 October2026,29 specialist gaps were consolidated into26 prioritized open items (7P0,12P1,6P2,1P3), supported by39 distinct primary-source addresses and50 rehashed unique local evidence files. True inner residual/outer convergence, regional meshing, geometry equivalence, systematic-grid/farfield and experimental gates remain critical. Real UAV inputs, generic end-to-end autonomy and unseen-task improvement remain unestablished. Passive true-linear-residual instrumentation and independent wall-distance auditing are proposed, not executed. No new CFD, source build or installation was run; physical/M6/UAV qualification and LLM-improvement status did not change.
 
 GitHub’s automatic Source code (zip) tag archive provides tracked sources; separate raw analysis assets use the catalogue and hash-checking restore tool. Downloaded third-party source archives and generated external programs are excluded; source identities, available patch/license manifests and build records are retained. Earlier release assets remain available. Tags through 0.10.0 are retrospective evidence groups; 0.11.0 onward are incremental releases. Code and reports were developed with substantial Codex assistance.
 

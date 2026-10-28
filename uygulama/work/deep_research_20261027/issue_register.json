@@ -1,0 +1,653 @@
+{
+  "issues": [
+    {
+      "id": "U01",
+      "rank": 1,
+      "priority": "P0",
+      "domain": "CFD",
+      "kind": "acceptance_failed",
+      "title": "İnce ağın sayısal yakınsaması ve gerçek iç artık ölçümü",
+      "observed": "Düz plaka ailesinde ince rolün yoğunluk kapısı açık; RAE ve TMRsharp M6 da genel kabulü geçmedi. v17 üç tanı kolunda tüm200 flow/SA çözümü40 tavanda. LinSolRes, bağımsız b−Aδ normu değil.",
+      "impact": "İterasyon hatası sınırlanmadan ağ ve deney farkının ne kadarının fiziksel olduğu ayrılamaz.",
+      "next_test": "Assembled FGMRES çağrısında gerçek A,b,x0,δ,norm0 kimliğini kaydet; scratch vektörle mutlak/bağıl/bileşen gerçek artığını pasif ölç. Analitik matris kontrolleri ve değişmeyen kaynak32 yeniden üretiminden sonra aynı ilk-adım A,b ile kısa32/256 kıyası yap.",
+      "closure": "Ölçüm doğruluğu ve çözümü değiştirmediği ayrı geçmeli; sonra önceden seçilmiş fine ve bütün zorunlu dış kapılar aynı vaka/ailede geçmeli. Yeni ölçüm veya tek bileşen iyileşmesi fizik kabulü değildir.",
+      "specialist_issue_ids": [
+        "N01",
+        "N02",
+        "VM01"
+      ],
+      "source_ids": [
+        "NS01",
+        "NS04",
+        "NS06"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U02",
+      "rank": 2,
+      "priority": "P0",
+      "domain": "CFD",
+      "kind": "resolution_unverified",
+      "title": "Konuma göre BL/LE/TE/iz/uç çözünürlüğü ve bütün Cf eğrisi",
+      "observed": "y+ bazı kollarda geçti; RAE normal blok değişimi kuvvetleri yaklaşık%4 etkiledi. Düz plaka kabul penceresi Cf normu ile bütün447 noktanın normu farklı. M6 uç/iz ve katman geçişi birlikte kapanmadı.",
+      "impact": "Toplam hücre veya ilk y+ iyi olsa da gerekli akış gradyanı çözülmemiş olabilir.",
+      "next_test": "Gerçek normal/teğetsel aralık, son segment büyümesi, toplam katman ve hız/μt profillerini çıkar; yalnız bir bölgesel dağılım/geçişi değiştiren eş kontrol kur. LE dahil bütün kaynak noktalarını koru.",
+      "closure": "Yakınsamış eş çözümlerde ön kayıtlı profil/kuvvet duyarlılığı ve bölgesel mesh kapıları birlikte geçmeli; kötü noktalar puandan çıkarılmamalı.",
+      "specialist_issue_ids": [
+        "VM02",
+        "N05"
+      ],
+      "source_ids": [
+        "NS03",
+        "VS01"
+      ],
+      "depends_on": [
+        "U01"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U03",
+      "rank": 3,
+      "priority": "P0",
+      "domain": "Geometri",
+      "kind": "equivalence_unverified",
+      "title": "Kaynak CAD, mesh, VLM ve OAS temsil eşdeğerliği",
+      "observed": "Aynı parametreler farklı interpolasyonlar üretiyor. TMR M6 sınır-yüzeyi örneklerinin max uzaklığı yaklaşık9,78e−4 kök veter; bu tam Hausdorff değil. Önceki solid mesafe denetimi superseded.",
+      "impact": "Farklı geometriyi tek aday veya tek sistematik ağ ailesi saymak karşılaştırmayı bozabilir.",
+      "next_test": "Birim/eksen/TE/LE/twist eksenini ve hangi yüzeyin solid/camber/deforme yüzey olduğunu tanımla; iki yönlü boundary mesafesi, normal ve ara istasyon kontrolleriyle ortak aday kimliğine bağla.",
+      "closure": "İlan edilmiş hata bütçesi bütün zorunlu örneklerde geçmeli; kasıtlı ölçek/twist sapması reddedilmeli. Yeni geometri yeni temsil sürümü olmalı.",
+      "specialist_issue_ids": [
+        "VM03",
+        "CA02"
+      ],
+      "source_ids": [
+        "CS01",
+        "CS02",
+        "CS03",
+        "VS02"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U04",
+      "rank": 4,
+      "priority": "P0",
+      "domain": "CFD",
+      "kind": "acceptance_failed",
+      "title": "Üç yakınsamış sistematik ağ ve geçerli GCI",
+      "observed": "Birden fazla gerçek üç-ağ ailesi var; fakat gerekli iteratif/asimptotik şartlar birlikte sağlanmadı. Özellikle TMRsharp M6 üç ağı zaten üretildi, eksik olan üç başarılı çözüm. GCI null.",
+      "impact": "Sadece üç sonuç veya küçük orta–ince fark güvenilir ayrıklaştırma hata bandı vermez.",
+      "next_test": "Aynı geometri/dış sınır/fizikte yönsel inceltme oranlarını kaydet; her seviyeyi aynı QoI ve iterasyon kapılarıyla değerlendir. LE/şok tekilliklerini ayrı ele al.",
+      "closure": "Kayıtlı ağ ailesi için iteratif belirsizlik sınırlı ve gözlenen mertebe/asimptotik davranış uygun olmalı; uygunsuz nicelikte GCI açıklamalı null kalmalı.",
+      "specialist_issue_ids": [
+        "VM04"
+      ],
+      "source_ids": [
+        "VS04",
+        "PS01"
+      ],
+      "depends_on": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U05",
+      "rank": 5,
+      "priority": "P0",
+      "domain": "CFD",
+      "kind": "sensitivity_missing",
+      "title": "Uzak alan ve sınır etkisinin bağımsız ölçülmesi",
+      "observed": "RAE400c ağı hazırlanmış fakat kabul edilmiş çözümü yok; TMR M6 kaynak100c olması tek başına duyarlılık deneyi değil. Eski farklı dış alanlar salt mesh yakınsaması sayılmadı.",
+      "impact": "Dış sınır etkisi ağ ve model hatasıyla karışabilir.",
+      "next_test": "Kaynak gövde ve yakın ağı koruyup yalnız dış bölgeyi değiştiren eş çift çalıştır; aynı matched alan/geçmiş ve kuvvet pencerelerini kullan.",
+      "closure": "İki çözüm de kendi sayısal kapısını geçmeli ve ön kayıtlı QoI sınır duyarlılığı kapanmalı; alanı olmayan hazır ağın sonuçları null kalmalı.",
+      "specialist_issue_ids": [
+        "VM05"
+      ],
+      "source_ids": [
+        "VS04",
+        "PS01"
+      ],
+      "depends_on": [
+        "U01",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U06",
+      "rank": 6,
+      "priority": "P0",
+      "domain": "Doğrulama",
+      "kind": "acceptance_failed",
+      "title": "RAE2822/M6 deney kıyası ve fiziksel koşul eşlemesi",
+      "observed": "RAE v2 fine CpRMSE≈0,067>0,03; v3 genel kabulü false. Daha yeni TMRsharp M6 kaynak ailesinin hiçbir iteratif kapısı geçmedi. Eski blunt M6 iyileşmeleri ayrı vaka. Model/BC/ölçek ve Sutherland özdeşliği her kodda tam kanıtlanmış değil.",
+      "impact": "Denklemlerin çözülmesi, deneydeki geometri/akış/modelin doğru temsilini kendiliğinden göstermez.",
+      "next_test": "Sharp/blunt, root/MAC Reynolds, nominal/düzeltilmiş koşul, trip, SA varyantı, viskozite yasası ve Cp işaretini kaynak matrisiyle eşleştir. Sonra bütün deney noktaları/grupları ve bağımsız kuvvet zinciriyle değerlendir.",
+      "closure": "Vakaya önceden bağlanmış sayısal, geometri, deney ve kapsam kapıları birlikte geçmeli. Koşul/puan/eşik sonuç tutturmak için değiştirilmemeli.",
+      "specialist_issue_ids": [
+        "VM06"
+      ],
+      "source_ids": [
+        "VS02",
+        "VS05",
+        "NS03",
+        "PS01"
+      ],
+      "depends_on": [
+        "U01",
+        "U02",
+        "U03",
+        "U04",
+        "U05"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U07",
+      "rank": 7,
+      "priority": "P0",
+      "domain": "Gerçek İHA",
+      "kind": "input_missing",
+      "title": "Gerçek görev, kütle ve kabul girdileri",
+      "observed": "Kalıcı gerçek İHA mission kaydında7 girdi null; altı bileşen kütlesi bilinmiyor;8 kavramsal adım bekliyor. Bunlar yazılım hatası değildir.",
+      "impact": "Gerçek uçağın güç/enerji/CG/trim veya uygunluğu hesaplanamaz. Bu eksik benchmark araştırmasını engellemez.",
+      "next_test": "Kullanıcı gereksinimlerini ve kaynaklı bileşen verilerini değer/aralık, SI birim, kaynak ve geçerlilikle kaydet; çelişki/eksik için kabul matrisi kur.",
+      "closure": "Bağlı hesaplar için kritik girdiler onaylı olmalı; bilinmeyenler sıfır olmamalı. Her aşama kendi kanıtıyla kapanmalı.",
+      "specialist_issue_ids": [
+        "CA01"
+      ],
+      "source_ids": [
+        "CS09",
+        "PS02"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U08",
+      "rank": 8,
+      "priority": "P1",
+      "domain": "CFD",
+      "kind": "capability_unproven",
+      "title": "Keyfi kullanıcı CAD’inden kaliteli hacim ağı",
+      "observed": "Kaynak benchmark ve tanımlı profil/kanat aileleri için betikler var; keyfi yeni parçaya genel RANS ağı ve bütün bölgesel kontroller doğrulanmadı.",
+      "impact": "Hazır örneği çalıştırmak yeni kullanıcı geometrisine ait sonuç üretmez.",
+      "next_test": "Önce sınırlı bir yeni geometri ailesi seç; watertight CAD/duvar/sınır etiketleri, bölgesel mesh sözleşmesi, kalite retleri ve aynı geometriyle üç seviye üretimini sınayacak vaka kur.",
+      "closure": "Yeni geometri kendi kimliğiyle CAD→mesh→solver→kabul zincirini geçmeli; destek dışı geometri doğru biçimde reddedilmeli.",
+      "specialist_issue_ids": [
+        "CA04"
+      ],
+      "source_ids": [
+        "PS03",
+        "CS03",
+        "VS03"
+      ],
+      "depends_on": [
+        "U02",
+        "U03",
+        "U04"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U09",
+      "rank": 9,
+      "priority": "P1",
+      "domain": "Gerçek İHA",
+      "kind": "capability_unproven",
+      "title": "Bütün uçak performansı, trim, kararlılık ve3B kapsam",
+      "observed": "2B profil, ayrı kanat VLM/OAS ve M6 testleri var; gerçek gövde/kuyruk/itki etkileşimi ile sürekli güç, enerji, CG ve trim birlikte doğrulanmadı.",
+      "impact": "Bir profil/kanat sonucu bütün uçağın görev gereksinimlerini kapatamaz.",
+      "next_test": "Aynı gerçek adayda bileşen kütleleri, güç/enerji modeli, CG/trim ve uygun aero/yapı yöntemini bağla; dahil edilmeyen parçaları ve model rejimini kaydet.",
+      "closure": "Gereksinimlerin her biri sağlandı/sağlanmadı/henüz değerlendirilemedi ve kanıt taşımalı; bileşen sonucu uçak sonucu diye aktarılmamalı.",
+      "specialist_issue_ids": [
+        "CA01",
+        "CA07"
+      ],
+      "source_ids": [
+        "CS09",
+        "CS13",
+        "PS02"
+      ],
+      "depends_on": [
+        "U07",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U10",
+      "rank": 10,
+      "priority": "P1",
+      "domain": "Ajan",
+      "kind": "capability_unproven",
+      "title": "Yeni projede araştırmadan sıralamaya uçtan uca ajan",
+      "observed": "full_generic_pipeline_verified=false. GUI/EXE ve görev kaydı çalışıyor; yeni ayrı CLI oturumu açılması, yeni projede bütün aşamaların özerk tamamlandığını kanıtlamıyor.",
+      "impact": "Kullanıcının istediği tek görevde araştırma→CAD→analiz→CFD→sıralama→rapor zinciri henüz gösterilmedi.",
+      "next_test": "Görülmemiş sınırlı bir proje, aday bütçesi ve kabul sözleşmesiyle gerçekten yeni oturum başlat; eksik veri, araç hatası ve destek dışı CAD dallarını da izle.",
+      "closure": "Aynı project/candidate/geometry/condition kimliği bütün aşamalarda eşleşmeli; final sıra yalnız bütün gerekli kapıları geçen adaylarla ve taranmayan alan açıklamasıyla oluşmalı.",
+      "specialist_issue_ids": [
+        "CA04"
+      ],
+      "source_ids": [
+        "CS10",
+        "CS12",
+        "CS09"
+      ],
+      "depends_on": [
+        "U03",
+        "U08",
+        "U11"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U11",
+      "rank": 11,
+      "priority": "P1",
+      "domain": "Ajan",
+      "kind": "behaviour_unvalidated",
+      "title": "Talimat/hafıza iyileşmesinin görülmemiş görevlerde ölçülmesi",
+      "observed": "Talimat sürümleri, yanlış-kabul korumaları ve kod karşı örnekleri var; aynı bütçe/araçlarla bağımsız önce/sonra görülmemiş mühendislik değerlendirmesi yok.",
+      "impact": "Kod kontrolü veya aynı benchmarkın tekrar düzeltilmesi uzman ajan davranışı kanıtı değildir.",
+      "next_test": "Yeni geometri/koşulları geliştirme vakalarından ayır; sabit araç/model/bütçede iki talimat sürümünü karşılaştır. Bağımsız sayısal/ölçü hakemi, tüm başarısızlıklar ve kaynak-cevap sızıntısı kaydı olsun.",
+      "closure": "Görev düzeyinde doğruluk, yanlış kabul, maliyet ve tekrarlar raporlanmalı; ortak diskteki rol ayrımı güvenli körlük diye sunulmamalı. Tek başarı genel oran değildir.",
+      "specialist_issue_ids": [
+        "CA03"
+      ],
+      "source_ids": [
+        "CS10",
+        "CS11",
+        "CS12"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U12",
+      "rank": 12,
+      "priority": "P1",
+      "domain": "Karar",
+      "kind": "uncertainty_missing",
+      "title": "Belirsizlik bütçesi ve savunulabilir aday sıralaması",
+      "observed": "Kanıt/koşul eşleştirmesi ve başarısız CFD’de kazananı engelleme çalışıyor. Kayıtlı adaylarda final_winner=null; sayısal/model/girdi belirsizliğiyle birleşik gerçek tasarım sıralaması yok.",
+      "impact": "İki küçük fark belirsizlik içindeyse tek kazananı savunmak mümkün olmayabilir.",
+      "next_test": "Önce tek QoI için girdi, geometri, iterasyon, mesh, BC/model ve deney belirsizliklerini ayrı kur; bağımlılıkları belirt. Sonra aynı sert kısıtlarda duyarlılık/robustlukla adayları kıyasla.",
+      "closure": "Belirsizlik kullanım amacına göre yeterli olmalı; eksik model hatası sıfır sayılmamalı. Sıralama ayrışmıyorsa sonuç eşdeğer/koşullu kalmalı.",
+      "specialist_issue_ids": [],
+      "source_ids": [
+        "PS01",
+        "PS02",
+        "PS03"
+      ],
+      "depends_on": [
+        "U04",
+        "U05",
+        "U06",
+        "U07"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U13",
+      "rank": 13,
+      "priority": "P1",
+      "domain": "Aerodinamik",
+      "kind": "acceptance_failed",
+      "title": "Karmaşık kanatta VLM sürükleme panel kabulü",
+      "observed": "Yüzey CDi panel farkı yaklaşık%17–18,46 ile kayıtlı kapı açık. İz CDiw daha kararlı; iki nicelik farklı kestirimlerdir ve uygun sütunu seçerek eski kabul kapatılamaz.",
+      "impact": "CL’nin daha kararlı olması toplam sürükleme ve aday L/D sıralamasını doğrulamaz.",
+      "next_test": "Sref/bref/cref, analiz kümesi ve aynı kanat temsiliyle yüzey/iz kuvvetlerini ayrı izleyen panel/iz aileleri kur; kaynak tanımı ve bağımsız uygun referansı kaydet.",
+      "closure": "Başlangıçta seçilmiş nicelikler kendi kapılarını geçmeli; sürtünme/stall/ayrılma gibi model dışı fizik için VLM kabulü kullanılmamalı.",
+      "specialist_issue_ids": [
+        "CA05"
+      ],
+      "source_ids": [
+        "CS04",
+        "CS05"
+      ],
+      "depends_on": [
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U14",
+      "rank": 14,
+      "priority": "P1",
+      "domain": "CAD",
+      "kind": "capability_unproven",
+      "title": "Yeni karmaşık CAD ailelerinde ölçü ve topoloji güvencesi",
+      "observed": "Tanımlı kanat/nervür ve3 NIST kaynak parçada ölçülü işlemler geçti. Bunlar her yeni loft/sweep/shell/çoklu delik veya kaynak çizimden yeniden kurma görevinin kabulü değildir.",
+      "impact": "Çalışan program ve geçerli katı, tasarım niyetinin veya bütün ölçülerin doğru olduğunu göstermeyebilir.",
+      "next_test": "Karmaşıklık basamaklı yeni kaynak parçalarda feature/parametre değişimi ve STEP geri okuması; eksen/merkez/bağlantı/topoloji/kalınlık kontrolleriyle negatif örnekler çalıştır.",
+      "closure": "Göreve özgü bütün ölçü/topoloji kuralları ve düzenleme sonrası aynı kurallar geçmeli. Hacim/bbox/probe tek başına tam şekil kanıtı olmamalı.",
+      "specialist_issue_ids": [
+        "CA06"
+      ],
+      "source_ids": [
+        "CS03",
+        "CS06"
+      ],
+      "depends_on": [
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U15",
+      "rank": 15,
+      "priority": "P1",
+      "domain": "CAD",
+      "kind": "capability_unproven",
+      "title": "Ölçülü teknik resim, montaj ve üretime aktarım kapsamı",
+      "observed": "Kaynak PDF/CAD işlemleri ve bazı dışa aktarımlar var; keyfi montajda bağlantılar, çakışma, tam ölçü zinciri ve üretim toleranslarıyla genel teknik resim zinciri gösterilmedi.",
+      "impact": "Güzel3B görüntü imalat veya montaj uygunluğu yerine geçmez.",
+      "next_test": "Bir gerçek montaj ailesinde parça/eklem/çakışma kontrolleri ve gerekli ölçüleri taşıyan resim üret; CAD parametre değişince resmin güncellendiğini geri ölç.",
+      "closure": "Önceden tanımlanmış montaj/ölçü ve çıktı sözleşmesi geçmeli; resim bütün gerekli iç özellikleri ve birimleri göstermeli.",
+      "specialist_issue_ids": [
+        "CA08"
+      ],
+      "source_ids": [
+        "CS06",
+        "CS14"
+      ],
+      "depends_on": [
+        "U14"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U16",
+      "rank": 16,
+      "priority": "P1",
+      "domain": "Yapı",
+      "kind": "capability_unproven",
+      "title": "Gerçek kanada özel FEM ve aeroelastik optimizasyon",
+      "observed": "CAD→Gmsh→CalculiX örneği ve iki OAS kaynak optimizasyonu/türev kontrolü geçti. Gerçek İHA malzeme, yük, bağlantı/mesh, kompozit ve aeroelastik tasarımı doğrulanmadı.",
+      "impact": "Kaynak CRM malzemesi/yakıtı/yükleri gerçek kanada aktarılamaz; optimizatör başarı bayrağı dayanım kanıtı değildir.",
+      "next_test": "Göreve özgü yük/malzeme/sınır koşulu ve tasarım değişkenlerini kur; boyutlu denge, izinli sınırlar, bağlı yakınsama, mesh ve türev kontrolleriyle uygula.",
+      "closure": "Gerçek modelin bütün sert kısıtları ve bağımsız fizik kontrolleri geçmeli; VLM+kiriş sonucu detaylı yapı veya hacim CFD sayılmamalı.",
+      "specialist_issue_ids": [
+        "CA07"
+      ],
+      "source_ids": [
+        "CS08",
+        "CS09",
+        "CS13"
+      ],
+      "depends_on": [
+        "U07",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U17",
+      "rank": 17,
+      "priority": "P1",
+      "domain": "CFD",
+      "kind": "measurement_missing",
+      "title": "Güncel iç sistemle eşleşen artık konum haritası",
+      "observed": "%99,979 kapsam, yeni implicit alanın yeniden hesaplanan artığı değil aynı eski explicit-aşama RHS’sinin üyelik kesişimi. Anlamı düzeltildi; güncel b ve gerçek rL haritası henüz yok.",
+      "impact": "Eski kapsamanın artması bugünkü düzeltme yönünün doğru olduğunu göstermez.",
+      "next_test": "U01 çağrısının aynı b ve b−Aδ vektörlerini bütün sahip olunan düğümlerle çıkar; native norm yeniden toplamını doğrula ve flow/SA bölgelerini ayrı raporla.",
+      "closure": "Durum/iterasyon/normalizasyon/düğüm eşleşmesi ve yeniden toplam uyuşmalı; konum haritası nedensel hata veya mesh hata bandı diye adlandırılmamalı.",
+      "specialist_issue_ids": [
+        "N03"
+      ],
+      "source_ids": [
+        "NS01",
+        "NS05"
+      ],
+      "depends_on": [
+        "U01"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U18",
+      "rank": 18,
+      "priority": "P1",
+      "domain": "Maliyet",
+      "kind": "measurement_limit",
+      "title": "Doygun Krylov sayımı ve tek çift süre ölçüsü",
+      "observed": "Üç v17kolunda16000 zaten200×(40+40) tavanıdır. Eşit sayım uzun çizgilerin eşit aritmetik maliyetini göstermez; gerçek süre74,125→95,109s tek gözlemdir.",
+      "impact": "Bir yöntemin gerçek doğruluk/maliyet kazancı yalnız bu vekilden çıkarılamaz.",
+      "next_test": "Yeni sözleşmede flow/SA ayrı, A×v ve preconditioner build/apply sayaçları, gerçek süre ve RAM ile gerçek hata azalımını birlikte izle.",
+      "closure": "Eski kapı/karar korunmalı; yeni ölçüt native öncesi yazılmalı. Tek çalıştırma çiftinden evrensel hız iddiası çıkarılmamalı.",
+      "specialist_issue_ids": [
+        "N04"
+      ],
+      "source_ids": [
+        "NS02",
+        "NS06"
+      ],
+      "depends_on": [
+        "U01"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U19",
+      "rank": 19,
+      "priority": "P1",
+      "domain": "CFD",
+      "kind": "untested_hypothesis",
+      "title": "Duvar mesafesi hesabının bağımsız denetimi",
+      "observed": "Yerelde yanlış wall-distance kanıtı yok. NASA2018M6 çalışması anizotropik ağda böyle bir hata sınıfını göstermiş; bu yeni düşük maliyetli denetim adayı.",
+      "impact": "SA kaynakları için kullanılan geometrik mesafe yanlışsa mesh/y+ görseli sorunu gizleyebilir.",
+      "next_test": "Önce gerçek wall marker ve source kod yolunu incele. LE/TE/uç/kök/aft noktalarında native mesafeyi bağımsız global nokta–segment/üçgen/CAD-boundary hesabıyla kıyasla; uygun düz plaka yerlerinde analitik mesafeyi kullan.",
+      "closure": "Geometriye bağlı bağımsız mesafe uyuşuyorsa bu hipotezi kapat. Sapma varsa yerini/etkisini kaydet ve yalnız o hesabı değişen ayrı kontrollü test tasarla; yerel kök neden henüz yok.",
+      "specialist_issue_ids": [
+        "VM08"
+      ],
+      "source_ids": [
+        "VS03"
+      ],
+      "depends_on": [
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U20",
+      "rank": 20,
+      "priority": "P2",
+      "domain": "CFD",
+      "kind": "prototype_only",
+      "title": "Hessian’dan tam anizotropik/adjoint ağ döngüsüne geçiş",
+      "observed": "Yerel türev/öncelik prototipinde maskeli ve yönü kararsız bölgeler var; üretim remesher, adjoint veya CL/CD hata bandı değil.",
+      "impact": "Bir renk haritası önerilen metrikte geçerli yeni ağ ve daha doğru QoI üretildiğini göstermez.",
+      "next_test": "Analitik metrikte CAD sınır ve eleman-metrik uyumunu sınayan küçük2B solve→metric→remesh→transfer→solve döngüsü kur; korunumluluk ve pozitiflik ölç.",
+      "closure": "Bütün döngü ve sabit ağ kıyası doğrulanmalı; maskeler saklanmalı. Adjointin denklemi ve türevleri ayrı kontrol edilmeli; yeni makale yerel kurulum sayılmamalı.",
+      "specialist_issue_ids": [
+        "VM09",
+        "N06"
+      ],
+      "source_ids": [
+        "VS03",
+        "VS09",
+        "VS10",
+        "NS05"
+      ],
+      "depends_on": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U21",
+      "rank": 21,
+      "priority": "P2",
+      "domain": "Entegrasyon",
+      "kind": "engine_untested",
+      "title": "Fusion motoru, hub ve lisans yetkisi",
+      "observed": "18EkimOAuth doğrulandı; motorun gerçek oturumu, yetki/hub, ölçülü model ve STEP geri ölçümü yapılmadı. Beta erişimi öğrenci masaüstü lisansından çıkarılamaz.",
+      "impact": "Kimlik doğrulama başarılı olsa da CAD işlemlerinin çalışacağı kanıtlanmış değil.",
+      "next_test": "Mevcut bağlantıyı güncel araç listesinde doğrula; sürüm/session/hub/entitlement kontrolünden sonra ölçülü basit parça ve parametre değişimi, STEP geri ölçümü yap.",
+      "closure": "Gerçek motor çıktısı ve ölçü kontrolleri geçmeli. Bulut/servis erişimi koşulları ayrıca kanıtlanmalı.",
+      "specialist_issue_ids": [
+        "CA09"
+      ],
+      "source_ids": [
+        "CS14"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U22",
+      "rank": 22,
+      "priority": "P2",
+      "domain": "Entegrasyon",
+      "kind": "bridge_missing",
+      "title": "OpenVSP Python→OAS köprüsü",
+      "observed": "AngelScript/native OpenVSP çalışıyor. Kurulu paket Python3.11, sayısal ortam3.12; OAS resmî VSP mesh örneğinin istediği Python API köprüsü kurulup doğrulanmadı.",
+      "impact": "Ayrı üretilmiş OAS yüzeyi native VSP3 adayına otomatik bağlanmış sayılamaz.",
+      "next_test": "Uyumlu ayrı API ortamı veya kontrollü dosya adaptörü seç; sürüm/birim/simetri/mesh ve referans alanı geri ölçerek tek aday üzerinde doğrula.",
+      "closure": "Köprü gerçek native geometriyi doğru istasyon/analiz yüzeyine taşımalı; yanlış sürüm/ölçek negatif kontrolü reddedilmeli.",
+      "specialist_issue_ids": [
+        "CA10"
+      ],
+      "source_ids": [
+        "CS01",
+        "CS02"
+      ],
+      "depends_on": [
+        "U03"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U23",
+      "rank": 23,
+      "priority": "P2",
+      "domain": "Model",
+      "kind": "topology_failures",
+      "title": "Küçük CAD modellerinin geometri/topoloji güvenilirliği",
+      "observed": "Cadmonkeydata32 yeni altı basit parçada4/6 geçti; kaçık/çift delik gibi redler var. Başka kullanım denemesindeki5/6 farklı protokol; genel doğruluk oranı değil.",
+      "impact": "Modelin kod üretmesi veya görüntü benzerliği katı/ölçü/topoloji doğruluğunu garanti etmez.",
+      "next_test": "Loft/sweep/shell/çoklu boşluk gibi yeni ailelerde özgün değişmemiş çıktıyı sabit bütçe ve görev bazlı kernel/ölçü hakemiyle değerlendir.",
+      "closure": "Bütün zorunlu kontroller geçmeden taslak kabul edilmemeli; insan/Codex düzeltmesi küçük model başarısı sayılmamalı. Genel oran için bağımsız temsil edici test gerekir.",
+      "specialist_issue_ids": [
+        "CA11"
+      ],
+      "source_ids": [
+        "CS06",
+        "CS15",
+        "CS16"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U24",
+      "rank": 24,
+      "priority": "P2",
+      "domain": "Model",
+      "kind": "reference_runtime_unreproduced",
+      "title": "Zero-to-CAD özgün çalışma yolunun ayrıştırılması",
+      "observed": "2 milyar parametreli Zero-to-CAD modelinin yerel Q6/native köprü testleri geçerli katı üretmedi; özgünBF16/Transformers çalışma yolu yeniden üretilmedi.1m veri ölçeği,1m parametreli model demek değil.",
+      "impact": "Başarısızlık kesin olarak checkpoint kalitesine veya bütün aileye yüklenemez.",
+      "next_test": "Özgün modelcard sürümü, sekiz görünüş, processor/template/token bütçesi ve kod temizleme semantiğini yerel köprüyle fark tablosuna bağla; kaynak bütçesi uygunsa ayrı kontrollü referans denemesi tasarla.",
+      "closure": "Referans yol ile native yolun farkı gerçek çıktılarla ayrılmalı; ağır çalışma bütçeye sığmıyorsa doğrulanmadı olarak kalmalı. Tasarım kabulü ayrıca yapılmalı.",
+      "specialist_issue_ids": [
+        "CA12"
+      ],
+      "source_ids": [
+        "CS07",
+        "CS17"
+      ],
+      "depends_on": [],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U25",
+      "rank": 25,
+      "priority": "P2",
+      "domain": "Ürün",
+      "kind": "portability_unproven",
+      "title": "EXE dağıtımı ve yeni ortamda gerçek görev kullanımı",
+      "observed": "EXE çalışır başlatıcı; kurulu Python/araçlar ve proje klasörleri yanında gerekir. Temiz makine solver kurulumu ve GUI’den görülmemiş uçtan uca görev doğrulanmadı.",
+      "impact": "Mevcut PC’de arayüzün açılması bağımsız taşınabilir uygulama ve görev başarı kanıtı değildir.",
+      "next_test": "İzole kullanıcı/VM ya da temiz kopyada yollar/bağımlılık/kimlik doğrulama/eksik araç hatası ve bir yeni projenin gerçek oturumunu sınayacak kurulum kabulü yap.",
+      "closure": "Gerekli bileşenler kaydedilmeli; eksik araç anlaşılır hata vermeli; başka proje girdisi kullanılmamalı ve kullanıcı çıktıyı tek projede izleyebilmeli.",
+      "specialist_issue_ids": [
+        "CA13"
+      ],
+      "source_ids": [
+        "CS10"
+      ],
+      "depends_on": [
+        "U10"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    },
+    {
+      "id": "U26",
+      "rank": 26,
+      "priority": "P3",
+      "domain": "Entegrasyon",
+      "kind": "optional_deferred",
+      "title": "İkinci yerel RANS çözücüsü / OpenFOAM kurulumu",
+      "observed": "SU2 ve dar laminer Elmer doğrulamaları mevcut. OpenFOAM için doğrulanmış yerel kurulum/aynı3BRANSvaka tekrarı yok; TMR CFL3D/FUN3D kıyasları ayrı mevcut kanıt.",
+      "impact": "Bağımsız yöntem farkı yararlı olabilir; yeni program kurmak tek başına doğruluğu artırmaz.",
+      "next_test": "Önce mevcut TMR referanslarıyla tam denklem/BC/model eşlemesini bitir. Sonra read-only ortam/RAM/WSL değerlendirmesi ve küçük eşdeğer vaka ile ikinci çözümü ele al.",
+      "closure": "Sürüm, SA varyantı, sıkıştırılabilirlik, geometri ve koşullar eşleşmeden fark çözücü hatası sayılmamalı. WSL/servis kurulumu ve kaynak bütçesi ayrıca ele alınmalı.",
+      "specialist_issue_ids": [
+        "CA14",
+        "VM07"
+      ],
+      "source_ids": [
+        "CS19",
+        "VS06",
+        "PS04"
+      ],
+      "depends_on": [
+        "U01",
+        "U06"
+      ],
+      "status": "open",
+      "proposal_executed": false
+    }
+  ],
+  "specialist_issues_mapped": 29,
+  "all_specialist_issues_mapped": true,
+  "priority_basis": "Consequences for valid engineering use, then enabling dependencies and information gain/cost; no invented numerical risk score."
+}

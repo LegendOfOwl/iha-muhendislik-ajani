@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-27T19:07:06.017430+00:00",
+  "timestamp": "2026-10-28T08:50:10.265644+00:00",
   "scope": "Mühendislik araçları ve iş akışı; gerçek İHA aşamaları aşağıda ayrı izlenir.",
   "aircraft_feasibility": "henüz değerlendirilemedi",
   "missing_mission_inputs": [
@@ -2752,6 +2752,127 @@
         "UAV"
       ],
       "next_required_step": "Source-backed passive measurement of the true inner linear residual on a fixed-state diagnostic; preregister before native execution"
+    },
+    {
+      "id": "20261027-221814-12f67c",
+      "request": "Açık mühendislik problemleri: önem sırası ve kaynaklı derin araştırma",
+      "kind": "research",
+      "created_utc": "2026-10-27T19:18:14.420133+00:00",
+      "status": "tamamlandı",
+      "phase": "araştırma/öncelik raporu tamamlandı; önerilen uygulamalar çalıştırılmadı",
+      "acceptance": [
+        "Every known open item has current local evidence; resolved historical failures are separated",
+        "Priority and execution dependency are distinguished; missing real-project inputs are explicit",
+        "Opened primary literature is linked with applicability, limitations and proposed discriminating tests",
+        "No claim that literature recommendations, new native tests or physical acceptance were completed",
+        "Detailed report, machine-readable issue/source register and GitHub version update"
+      ],
+      "blocked_by": [],
+      "evidence": [
+        {
+          "path": "outputs/reports/acik_sorunlar_ve_derin_arastirma_20261028.json",
+          "sha256": "76666c1f2a966edb61f23de4acbb794c05cd9dc53614e07dd34060abde007dae"
+        },
+        {
+          "path": "outputs/reports/acik_sorunlar_ve_derin_arastirma_20261028.md",
+          "sha256": "24232015a26589b7636c1e06d9366556af690d6d332c5020252dc8602f6b3ec1"
+        },
+        {
+          "path": "outputs/reports/acik_sorunlar_ve_derin_arastirma_20261028.html",
+          "sha256": "9206e051238d7e060e9403bde49a33407e9d06cd20300c9231967207a4b9ac8e"
+        },
+        {
+          "path": "outputs/reports/deep_research_checks_20261028.json",
+          "sha256": "da12c046e41ca07a906389ce26abe7132724c1bfcb826175477277cfa1589506"
+        },
+        {
+          "path": "work/deep_research_20261027/numerics.md",
+          "sha256": "1413383cab7a37bf1829450a0a4343c5ace91d0c2aca43ebda4e331ec206e468"
+        },
+        {
+          "path": "work/deep_research_20261027/numerics.json",
+          "sha256": "bb5a0b2856c712aae8dcab19984ee30d4d17f1cfe577c6915b6bc65a1a626f10"
+        },
+        {
+          "path": "work/deep_research_20261027/validation_mesh.md",
+          "sha256": "3d9f3407ccf7827d94e65aae22a02dab8ab2ea50e0aed82f8934d46bc85de4a1"
+        },
+        {
+          "path": "work/deep_research_20261027/validation_mesh.json",
+          "sha256": "25a743a81526b21454b7e869d3f913ca6367df79e97467fd6f4dbf1c8ac811d4"
+        },
+        {
+          "path": "work/deep_research_20261027/cad_agent.md",
+          "sha256": "4c65ffb8891ca02ff7566f410bafd569f9b6551f9febd32ada088900fd4e65a5"
+        },
+        {
+          "path": "work/deep_research_20261027/cad_agent.json",
+          "sha256": "b4f8a14c150a85c30091d1c0e6fb7156fbb9c8d53f19dd7abe3cb42e39849f73"
+        },
+        {
+          "path": "work/deep_research_20261027/issue_register.json",
+          "sha256": "89d5bb7bcb21fae76df3d8c9726e39d832d7ca399cdacf2f5819f17ff256f393"
+        }
+      ],
+      "input_sha256": {
+        "outputs\\data\\projects\\qualification.json": "e94a21c429458a36b9b25231559fcadd10c47063f0da71445ddf8ba998dbfb43"
+      },
+      "project_id": "qualification",
+      "project_manifest": "outputs\\data\\projects\\qualification.json",
+      "project_data_root": "outputs/data/qualification",
+      "project_output_root": "outputs",
+      "project_snapshot": {
+        "id": "qualification",
+        "name": "Araç doğrulama örnekleri",
+        "kind": "qualification",
+        "artifact_root": "outputs",
+        "data_root": "outputs/data/qualification",
+        "created_utc": "2026-10-19T07:06:12.206479+00:00",
+        "active_cad": null
+      },
+      "research_date_local": "2026-10-28",
+      "resumed_utc": "2026-10-28T08:11:12.765558+00:00",
+      "applied_lesson_ids": [
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L11",
+        "R02",
+        "R03"
+      ],
+      "agent_instruction_snapshot": {
+        "version": "2026-10-25.2",
+        "files": {
+          "AGENTS.md": "d7753c1608587dc38f1918ddf9afc90f29409b7a696513e10305341511b2b966",
+          ".agents/skills/iha-muhendislik/SKILL.md": "d9acd5c6418066de47a48fb384a85ffeeb6407085dbae58ce25ef583c6e1fb68",
+          ".agents/skills/iha-muhendislik/references/learning_loop.md": "31da69579d3edb14986786d00e00f374c067b2e1b8e6e4ca874c601f089897ef",
+          ".agents/skills/iha-muhendislik/references/operational_lessons.json": "e65dba487e79310ac1173d389dc10e059e65bff5b291e56ecd966da980999ce0",
+          "work/reliability/protocol_v1.json": "1492ce69600d936b24099fee64e2d400c05274165dcf8db28061c3b6bf8b4771"
+        },
+        "expert_qualification": "not_established",
+        "blind_analysis_safe": false,
+        "reliability_policy_version": "2026-10-25.1"
+      },
+      "physical_qualification_passed": false,
+      "LLM_improvement_demonstrated": false,
+      "new_native_CFD_runs": 0,
+      "new_installations": 0,
+      "finished_utc": "2026-10-28T08:38:54.751565+00:00",
+      "completion_scope": "Inventory and source-backed deep research only; all26 engineering issues remain open",
+      "issue_count": 26,
+      "source_addresses": 39,
+      "priority_counts": {
+        "P0": 7,
+        "P1": 12,
+        "P2": 6,
+        "P3": 1
+      },
+      "new_builds": 0,
+      "M6_qualification_passed": false,
+      "next_required_step": "Preregister passive true inner-linear residual measurement; prepare independent geometry/wall-distance audit in parallel"
     }
   ]
 }

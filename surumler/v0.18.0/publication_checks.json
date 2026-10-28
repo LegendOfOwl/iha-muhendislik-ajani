@@ -1,0 +1,77 @@
+{
+  "checked_utc": "2026-10-28T08:52:51.397560+00:00",
+  "version": "v0.18.0",
+  "passed": true,
+  "archives": [],
+  "restore_tests": [
+    {
+      "case": "valid",
+      "passed": true
+    },
+    {
+      "case": "verify-only",
+      "passed": true
+    },
+    {
+      "case": "archive-hash",
+      "passed": true
+    },
+    {
+      "case": "member-list",
+      "passed": true
+    },
+    {
+      "case": "traversal",
+      "passed": true
+    },
+    {
+      "case": "field-hash",
+      "passed": true
+    },
+    {
+      "case": "existing-changed",
+      "passed": true
+    },
+    {
+      "case": "missing-field",
+      "passed": true
+    },
+    {
+      "case": "reference-existing",
+      "passed": true
+    },
+    {
+      "case": "reference-changed",
+      "passed": true
+    },
+    {
+      "case": "shared-content",
+      "passed": true
+    },
+    {
+      "case": "shared-conflicting-hash",
+      "passed": true
+    },
+    {
+      "case": "duplicate-zip-member",
+      "passed": true
+    },
+    {
+      "case": "shared-unsafe-member",
+      "passed": true
+    }
+  ],
+  "actual_data_restore": {
+    "scope": "Source-only release: no new raw archive, so actual raw-data restore is not applicable",
+    "performed": false,
+    "restored_original_paths": 0,
+    "all_sha256_passed": null,
+    "reason": "All current-version payloads are tracked sources/research reports; no new native fields were produced"
+  },
+  "new_document_links_checked": 187,
+  "secret_scan_files": 6699,
+  "secret_scan_findings": [],
+  "physical_qualification": false,
+  "LLM_improvement_measured": false,
+  "clean_machine_solver_installation_tested": false
+}

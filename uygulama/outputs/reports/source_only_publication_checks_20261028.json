@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-28T08:43:25.520913+00:00",
+  "version": "v0.18.0",
+  "tests_run": 3,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Source-only publication branch; no native CFD, restore, build, network or publication launched",
+  "code_sha256": {
+    "work/publish/verify_incremental.py": "780a3800148e606fee0c829d475ad473023402d39dad7a0b0d6a2932321019f4",
+    "work/publish/test_source_only_release.py": "c65290ac9d8824d86ed748d20463d5a774cc747ec14be455dcc480c3a3a50056"
+  },
+  "raw_output": "test_missing_current_archive_is_rejected (__main__.SourceOnlyRelease.test_missing_current_archive_is_rejected) ... ok\ntest_old_raw_data_does_not_become_current_restore (__main__.SourceOnlyRelease.test_old_raw_data_does_not_become_current_restore) ... ok\ntest_source_only_is_not_fake_raw_success (__main__.SourceOnlyRelease.test_source_only_is_not_fake_raw_success) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n",
+  "new_native_CFD_runs": 0
+}

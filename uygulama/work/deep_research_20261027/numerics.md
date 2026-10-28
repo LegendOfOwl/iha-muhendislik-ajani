@@ -1,0 +1,103 @@
+# Sayısal CFD: açık problemler ve ayırt edici araştırma planı
+
+Araştırma tarihi: **28 Ekim 2026**. Son yerel deney: **27 Ekim, v0.17.0**. Bu çalışma mevcut dosyaları okuyarak ve birincil kaynakları açarak hazırlandı; yeni çözücü, derleme veya CFD çalıştırılmadı. Yeni fiziksel kabul üretilmedi. Klasör adındaki 27 Ekim, ana araştırma görevinin kimliğidir.
+
+## Temel sonuç
+
+En yararlı sonraki adım yeni bir ayar taraması değil, **aynı iç doğrusal sistemde gerçek `b−Aδ` artığının pasif ölçülmesi**. Uzun LINELET, raporlanan iç akış artığını belirgin azaltmasına rağmen dış yoğunluk artığını iyileştirmedi. Bu ayrım çözülmeden daha büyük Krylov uzayı, başka CFL veya daha uzun çizgi seçmek nedensel teşhis sağlamaz.
+
+Buradaki önem sırası, hem mevcut kabulü engelleyen etkiyi hem bir sonraki testi güvenilir kılacak bağımlılığı içerir. N01 ölçüm eksikliği olduğu için N02'nin önüne alınmıştır; N02 fiziksel kullanım için daha büyük sonuç taşır.
+
+## Güncel yerel kanıt: çözülmüş olanları yeniden açma
+
+[v0.17 raporu](../../outputs/reports/su2_kaynak_karsilastirma_20261027.md), [bağımsız yeniden denetim](../su2_build_resume_20261027/independent_review.json) ve [ön kayıt](../su2_build_20261027/method_design.json) birlikte okundu.
+
+| Nicelik | Resmî32 | Kaynak32 | Kaynak256 |
+|---|---:|---:|---:|
+| Başarılı native çıkış / ortak alan-geçmiş adımı | 0 / 199 | 0 / 199 | 0 / 199 |
+| Son SI yoğunluk log10 RMS | −9,761678858 | −9,761658478 | −9,752272448 |
+| Son raporlanan akış LinSolRes log10 | −0,922353669 | −0,922598246 | −2,574917083 |
+| Son raporlanan SA LinSolRes log10 | −2,705025871 | −2,697869215 | −2,730073032 |
+| Akış / SA tavan40 sayısı | 200/200 / 200/200 | 200/200 / 200/200 | 200/200 / 200/200 |
+| Toplam akış+SA Krylov sayımı | 16000 | 16000 | 16000 |
+| Son CD | 0,002848056245 | 0,002848056245 | 0,002848056217 |
+| Gözlenen süre, s | 82,656 | 74,125 | 95,109 |
+| Native çizgi üyesi / 52689 düğüm | 7200 | 7200 | 34401 |
+| Aynı **eski** aşama RHS'sindeki yoğunluk kare payı | %53,896527 | %53,896527 | %99,979010 |
+
+Üç kolda da raporlanan iç akış ve SA toleransı `1e−3` hiçbir adımda karşılanmadı. Ancak bu değer **bağımsız yeniden hesaplanan gerçek doğrusal artık değildir**; aşağıdaki ölçüm eksikliği bu yüzden önemlidir. Kaynak256 için son akış kestirimi yaklaşık 0,00266, Kaynak32 için 0,11951'dir. Aradaki iyileşme dış yoğunluk ilerlemesine dönüşmemiştir; bu gözlem kendi başına neden belirlemez.
+
+Artık büyüklükleri SI/ND arasında karıştırılmadı. Boyutsuz denklem artığı, SI log10 eşiğiyle doğrudan kıyaslanamaz. Eski kaynak üç-ağ ailesinin seçilmiş ince alanı3999 ve başarısız yoğunluk kapısı korunur; bu üç200-adımlık tanı kolu aile üyesi yapılmaz.
+
+Şunlar artık açık kurulum problemi değildir: SU2 kaynak derlemesi, aynı vaka için resmî32/kaynak32 yeniden üretimi, tek cap değişikliğinin doğrulanması, native üyelik ölçümü ve eski explicit aşama RHS ihraç normunun denetlenmesi. Başarısız **etki hipotezi** ise ayrı saklanır: yalnız cap32→256, kayıtlı en az0,3log dış yoğunluk kazancını sağlamadı. Kaynak derlemesini veya bütün LINELET ailesini başarısız ilan etmek bu sonuçtan çıkmaz.
+
+## Öncelikli problem → ayırt edici test tablosu
+
+Bu tabloda önerilen deneyler **çalıştırılmadı ve henüz onaylı bir native sözleşme değildir**. Kaynak/mesh/fizik/seed/eşik mühürleri, süre/RAM ve sonuçtan önce dondurulmuş ayrı kabul kaydı olmadan uygulanmaz. Mevcut fizik eşikleri aynen kalır.
+
+| Sıra ve problem | Doğrulanmış kanıt | Henüz doğrulanmamış hipotez | En küçük ayırt edici test | Durma / kabul ölçütü | Beklenen bilgi ve maliyet |
+|---|---|---|---|---|---|
+| **N01 — gerçek iç doğrusal artık ölçülmüyor** | Üç kolda flow/SA bütün adımlarda40 tavanda. FGMRES döndürdüğü `beta/norm0` ile izleniyor. Yerel kaynakta yeniden hesap dalı monitoring/COMM_FULL/recomputeRes koşullu; standart primal Solve monitoring'i kapalı başlatıyor. | Gerçek `||b−Aδ||` ile Givens tabanlı kestirim ayrışıyor olabilir; mevcut veriler bunun varlığını, büyüklüğünü veya nedenini göstermiyor. | Assembled FGMRES yolunda gerçek kullanılan A,b,x0,δ,norm0'ı tanımla; çözüm sonrası ayrı scratch vektörde `Aδ−b` ölç. İlk duman denemesinde yalnız önceden seçilmiş bir flow ve bir SA çağrısı. Mutlak, bağıl ve bileşen normlarını birlikte kaydet. | Ölçüm eklenen derlemenin kaynak32 yeniden üretimi geçmezse dur. A,b,δ veya çözüm durumunun ölçüm sırasında değişmediği gösterilemezse pasif ölçüm sayma. Önce analitik küçük matris/sıfır RHS/başlangıçta çözülmüş sistem kontrolleri. Gerçek-kestirim farkı için sonuç sonrası eşik seçme. | Yeni paket gerektirmeyen yerel C++ değişikliği; seçilen çağrı başına ek bir matris-vektör çarpımı ve scratch depolaması. İç çözücü başarısızlığı ile gösterge yanılmasını ayırır. [S01,S06] |
+| **N02 — ince kaynak ailede zorunlu dış yakınsama eksik** | Eski üç-ağ ailede coarse/medium iteratif kapıyı geçti, fine SI logρ≈−9,7154 ile geçmedi; fine max y+≈0,258 geçti. CD/Cf kararlılığı tek başına bütün denklemlerin kapanışı değil. Son cap256 dış yoğunluk kazancı −0,009386log. | İç doğrusal çözüm, yaklaşık Jacobian/pseudo-time terimi, uygulanan güncelleme veya sıralı flow/SA bağlaşımı ilerlemeyi sınırlıyor olabilir. Hiçbiri kesin neden değil. | N01'den sonra aynı ilk nonlinear durum ve **aynı A,b hash'i** ile32/256 tanısını karşılaştır. Çözülen δ ile gerçekten uygulanan ΔU, yerel under-relaxation ve CFL dağılımını kaydet. Ayrı güncelleme öncesi/sonrası flow/SA residual değerlendirmeleri için hangi durumun kullanıldığını belirt. | A veya b farklıysa bunu sabit sistem kıyası diye yorumlama. Pozitiflik/sonluluk ve alan eşleme başarısızsa dur. Ölçüm kabulü fizik kabulünü kapatmaz; eski aile kapısı false kalır. Yeni tek mekanizma kolunda önceden kayıtlı ortak etki/maliyet kapıları gerekir. | İlk adımda iki kısa kol yeterli bir tanı olabilir;200 veya4000 adım otomatik gerekmez. İç çözüm gerçekten iyileştiği hâlde ΔU/dış artık değişmiyorsa sonraki işi güncelleme/model kusuruna yönlendirir. [S01,S02,S04] |
+| **N03 — kullanılan artık haritası yeni iç sistemle aynı olay değil** | %99,979010, bütün kollara uygulanan **eski doğrulanmış sıralı explicit aşama RHS** üzerinde üyelik kesişimidir. Yeni implicit alanın nonlinear artığı değildir. Eski yoğunluk kare payının%99,626'sı aft BL bölgesindedir; bölgeler örtüşür. | Çizgi kapsaması artırılmış olsa da güncel çözümde baskın hata veya zayıf bağlaşım farklı yerde olabilir. Fazladan üyeliğin eski RHS'yi kapsaması bir düzeltme yönünün uygunluğunu garanti etmeyebilir. | N01 çağrısının aynı b'sini ve gerçek rL'sini konuma çıkar; tüm sahip olunan düğümleri koru. Yoğunluk/SA ayrı haritalar, duvar-normal ve akış yönü dağılımları. Eski RHS ile yeni b hash/durum farkını açık tut. | Norm yeniden toplamı native aynı çağrıyla eşleşmezse haritayı reddet. Graph renklerini lineID, üyeliği hata bandı, örtüşen bölgeleri toplanabilir bütçe yapma. Harita eşleşirse yalnız konum ölçümü kabul edilir. | Aynı pasif ölçümün çıktısı; ek CFD kampanyası gerektirmez. “Kapsam eksikliği” hipotezinin kalan kısmını daraltır. [S01,S05] |
+| **N04 — ortak tavan ve sayım maliyet kapısını doygunlaştırıyor** | Üç kolda16000=200×(40+40); aynı tavanlı karşılaştırmada Krylov≤1,5 kapısı ayırt edici değil. Uzun çizgi süresi74,125→95,109s; bu tek eş çift. Önceki40→80 ve PREC_THREADS denemeleri ortak kabulü geçmedi. | Gerekli doğrusal iş ve preconditioner kurulum/uygulama maliyeti toplam sayımla temsil edilmiyor; flow ve SA'nın ortak ayarı darboğazı gizliyor olabilir. | Önce mevcut tekil sayaçları flow/SA bazında ayrıştır; ek kaynak ölçümü gerekirse A×v, preconditioner build/apply ve güncelleme sürelerini ayrı say. N01 ile gerçek hata azaltımı başına kaynak maliyetini izle. | Eski kapıyı sonuçtan sonra değiştirme. Sonraki yeni sözleşmede doygun sayım yerine gerçek süre/RAM ve operatör sayımları birlikte, değişmeyen fizik doğruluğu ile kullanılır. Tek süre gözleminden genellenmiş hızlanma çıkarma. | Mevcut veriden ucuz ek rapor; profiling seçili kısa native çağrıda yapılabilir. Donanım gürültüsü veya uzun çizgi aritmetiği ile iterasyon sayısını ayırır. [S02,S06] |
+| **N05 — bütün plaka Cf doğruluğu pencere sonucundan daha zayıf** | Kayıtlı0,1–1,9m penceresinde Cf L2≈%0,20/%0,23; tüm447 kaynak noktasında≈%17,84/%9,62. En ön noktalar korunmuş. NASA TMR ön kenar tekilliği ve çıkış köşesine özgü davranış konusunda uyarıyor. | Başlangıç kenarı temsil/duvar sınırı/yerel çözünürlük ve kaynak kod farkları etkili olabilir; aft yakınsama artığıyla aynı neden olduğu bilinmiyor. | Mevcut tam nokta farklarını x/c ve yerel mesh/BC konumuna göre ayır. Kaynak koşul, referans alan, SA seçeneği ve viskozite yasasını tabloyla eşleştir; ardından gerekirse yalnız ön kenar sayısal temsil ailesini ayrı sürümde araştır. | Kötü noktaları kaldırma veya pencereyi büyütüp küçültme. Bütün noktalar ve eski puan saklanır. Kaynak veya fizik koşulu değişirse yeni vaka olarak kaydet. Fine yakınsamadan yeni GCI türetme. | Önce yeniden koşusuz dosya/kaynak denetimi; sadece kalmış uyuşmazlık ayrıntısına yönelik koşullu mesh deneyi. CFD kod kıyasını deney doğrulaması diye sunmaz. [S03] |
+| **N06 — ileri yöntemlerin bu kurulu primal/ayrı-SA akışına geçerliliği gösterilmedi** | Native NEWTON_KRYLOV daha önce gerçekten sınandı; kayıtlı iki on/off çiftinde ortak etkiyi geçmedi. Yerel CNewtonIntegration flow vektörünü kullanır; Mavriplis makalesindeki bağlı RANS kurulumuyla özdeş değil. | Sabit kötü forcing, globalization veya nonlinear yerel engeller etkili olabilir; “Newton çalışmadı” veya “tek ayar yeterli” sonucu çıkmaz. | N01–N02 ölçümleri neden gösterirse **bir** dal seç: doğrusal çözüm pahalıysa ön kayıtlı adaptif forcing; gerçek iç çözüm iyi ama nonlinear model kötü ise model kusuru/globalization; yerel pürüz baskınsa özgün smoothing formülasyonunu ayrı prototipte incele. | Sırf makale hızlanma raporladı diye native ayarı eşdeğer sayma. EW, smoothing veya nested deflation yerelde uygulanıp doğrulanmadıkça kurulu özellik sayılmaz. Yeni doğruluk eşiği ve fizik değişimiyle sonucu tutturma yok. | Daha yüksek uygulama maliyeti nedeniyle hemen kurulum/çalıştırma önerilmez. Önce ölçüm sonucu, sonra tek ayrılmış hipotez. [S04,S05,S06,S07] |
+
+## N01 için uygulama ayrıntısı: yalnız gösterge eklemek
+
+Ölçüm **gerçek FGMRES çağrısına geçirilen** b ve x üzerinde yapılmalı; sonradan yazılmış VTU `Residual_Density` veya başka aşamanın `LinSysRes` vektörü kullanılmamalı. A, sınır koşullarını ve pseudo-time ekini taşıyan aynı assembled operatör olmalı. `norm0`ın bağıl toleransta başlangıç artık normu olabildiği kaydedilmeli; yalnız `||b||` varsayılmamalı. `b=0` veya başlangıçta çözülmüş sistemde bağıl değer zorlanmadan mutlak norm ve nedenli null verilmelidir. [S01]
+
+Önerilen ölçümler: `||b−Aδ||₂`, bunun aynı `norm0` ile oranı, Givens tabanlı `beta/norm0`, her denklem için norm, iki ölçümün farkı; A/b/x0 kimliği, scalar türü, sahip olunan düğüm listesi ve nonlinear aşama. İlk smoke için native toplam solve süresini veya CFD sonucunu değiştiren geri besleme eklenmez. Matris/Jacobian'ı dışarı aktarmak zorunlu değildir; seçili çağrıda hash ve scratch normu daha hafiftir. Tam matris export/replay ancak veri boyutu önceden ölçülüp sınırlandırılırsa sonraki seçenektir.
+
+Mevcut `SetRecomputeResidual(true)` tek başına normal primal yolda yeterli değildir: standart çağrı monitoring'i kapatır. Var olan log başlığındaki “true” sözcüğü de bağımsız `Aδ−b` kaydı olduğunu kanıtlamaz. Yeni ölçümün dönüş değeri, CFL kararı, preconditioner, V/Z tabanı veya çözüm artışını değiştirmemesi gerekir. Matrix-free callback ek değerlendirmede akış durumunu geçici değiştirebileceği için ilk uygulama assembled yol ile sınırlanmalıdır. [S01]
+
+Yeni ölçümün doğrulaması iki ayrı kapı taşır: (1) küçük bilinen lineer sistemde doğru norm/normalizasyon, (2) aynı yerel source32 vakasında çözüm yolunu koruma. Bu araştırma yeni ölçüme geçme eşiği atamamıştır; sayısal toleranslar native öncesi ölçüm sözleşmesinde belirlenmelidir. Eski fizik ve mekanizma eşikleri değiştirilmez.
+
+## Araştırmadan yöntem seçimi
+
+**Eisenstat–Walker forcing:** İç lineer doğruluk her dış adımda aynı olmak zorunda değildir; özgün makale, nonlinear model ile gerçek F uyuşmadığında iç sistemi aşırı çözmenin boşa maliyet üretebileceğini gösterir. Bu, yerelde1e−6→1e−3 maliyet deneyinin neden makul olduğunu açıklar; her yeni durumda toleransı gevşetmeyi haklı çıkarmaz. Kullanılacak koşul `||F+Jδ||≤η||F||`dır. Pseudo-time/approximate Jacobian/ayrı-SA yolda native `LINEAR_SOLVER_ERROR`ı doğrudan η saymak için ilave eşleme gerekir. Yerel NK tolerance-relaxation çizelgesi özgün EW uygulanmış demek değildir. [S04,S01]
+
+**Gerçek artık ve Krylov ortogonalliği:** Jadoui ve arkadaşları, ONERA M6 dahil **adjoint** lineer sistemlerde least-squares artığı ile gerçek `b−Ax` artığının ayrışabildiğini açıkça izliyor. Bu araştırmanın bize doğrudan katkısı ölçüm ayrımıdır. BILU/nested/deflation başarısını SU2 primal akış/ayrı SA'ya taşımıyoruz. Üstelik yerelde gerçekten derlenen8.5.0 `ModGramSchmidt` fonksiyonu, eski adına rağmen **iki geçişli Classical Gram–Schmidt** içeriyor; “ikinci ortogonalleştirme ekle” önerisi sürümü görmezden gelmiş olur. Ortogonallik kaybı bizde kanıtlanmadı. [S06,S01]
+
+**Residual smoothing / nonlinear preconditioning:** Mavriplis2018, pseudo-transient Newton sağ tarafına tutarlı smoothing terimi ekler; mevcut Newton Jacobian'ını korur ve küçük/büyük pseudo-time limitlerini ele alır. Bu, sadece LINELET preconditioner açmak veya native NEWTON_KRYLOV=YES yapmakla aynı yöntem değildir. Önce güncel nonlinear residual ve uygulanan güncelleme ölçülmeli; ancak bu veriler yerel nonlinear engeli desteklerse ayrı formülasyon/prototip gerekçelenir. Makaledeki büyük3B RANS başarısı bizim2B kaynak vaka için kanıt sayılmaz. [S05]
+
+**Surrogate başlangıç + Newton düzeltmesi:** 5 Ağustos2026 preprinti, öğrenilmiş başlangıcı sayısal Newton–Krylov düzeltmesiyle birleştiriyor. Yaklaşım ilginç, fakat bizdeki ince restart zaten ileri çözümden geliyor; amaç terminal yakınsama engelini anlamak. Yeni eğitim/veri/model kurmak bu eksik ölçümün yerini tutmaz. Bu nedenle şu an düşük öncelikli araştırma adayı; makaledeki hız kazancı yerel beklenti veya garanti olarak kullanılmıyor. [S07]
+
+## Elenecek veya ertelenecek yollar
+
+Ana araştırmanın ağ/geometri koluyla birlikte yürütülebilecek düşük maliyetli bir kontrol de **native wall-distance ile kaynak sınır geometrisine uzaklığın kıyasıdır**. Bu, N01'den bağımsız yapılabilir. Düz plakanın yalnız gerçekten tanımlı no-slip kısmında analitik y karşılaştırması geçerlidir; duvarın bittiği yer, ön kenar köşesi ve farklı marker'larda en yakın geçerli segment/üçgen mesafesi kullanılmalıdır. Bu kontrol henüz yapılmadı ve mevcut yakınsama engelinin nedeni olduğu gösterilmedi. Ayrıntılı birincil kaynak kanıtı ana raporun mesh araştırma kolunda tutulur.
+
+- Cap256 başarısızlığından sonra512/1024 çizgi,100/160 Krylov, rastgele CFL/tolerans kombinasyonlarını taramak: R03'e ve mevcut ayırt edici bilgiye uygun değil.
+- Eski RHS kapsamının%99,98'e çıkmasını güncel nonlinear çözümün%99,98 doğruluğu veya hata kapanışı saymak.
+- Givens tabanlı LinSolRes düşüşünü gerçek lineer çözüm, sonra fiziksel doğruluk kabulüne çevirmek.
+- 40/40 tavanda kalan toplam Krylov oranını tek maliyet ölçütü yapmak; uzun çizgi başına eşit FLOP varsaymak.
+- Önceki başarısız Newton, CFL, ölçekleme veya PREC_THREADS denemesini yeni adla tekrarlamak; fizik veya deney katsayılarını oynatarak sonucu yaklaştırmak.
+- Kaynakta zaten var olan ikinci ortogonalleştirmeyi tekrar eklemek; fonksiyon adını uygulama sanmak.
+- PaStiX/PETSc/başka ağır çözücüye hemen geçmek. Bunlar ayrı port/kurulum/validasyon maliyeti getirir; yeni kaynaklar şu an bunun gerekli olduğunu göstermiyor. Native guide'daki deneysel destek, bu Windows derlemesinde kurulmuş/test edilmiş demek değil. [S02]
+- Yerel düşük artığı tek başına ağ bağımsızlığı, deney doğrulaması, M6 veya uçuşa uygunluk saymak. NASA'nın farklı kodların residual sayıları aynı birime/normalizasyona çevrilmeden eşik olarak kopyalanmaz. [S03]
+
+## Upstream güvenilirlik notu
+
+Resmî SU2 issue **#2877**,26 Ağustos2026'da bazı LINELET vakalarında segfault bildirimleri ve eksik regresyon testini kaydediyor; açılan sayfa hâlen open. Bu, **bizde crash görüldüğü** veya cap256 başarısızlığının bu bug'dan kaynaklandığı anlamına gelmez: üç yerel kol exit0. Diğer geometrilere genişlemeden önce dar native karşı örnek/regresyon gerekliliğini güçlendiren upstream riskidir. Dış geliştiriciye mesaj/issue gönderilmedi. [S08]
+
+## Kaynaklar ve okuma derinliği
+
+Her çekirdek kaynak için URL, tarih, kapsam, sonuç ve uygulanabilirlik `numerics.json`da kayıtlı. Kâğıtların tam metni rapora kopyalanmadı.
+
+- **S01 — sabit SU2 v8.5.0 kaynak demeti**, commit12eb826f049ef7f67df974dfcb44cf36ee07c0f8. [CSysSolve](https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/src/linear_algebra/CSysSolve.cpp), [CSysSolve.hpp](https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/Common/include/linear_algebra/CSysSolve.hpp), [flow implicit uygulaması](https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/SU2_CFD/include/solvers/CFVMFlowSolverBase.hpp), [under-relaxation](https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/SU2_CFD/include/solvers/CFVMFlowSolverBase.inl), [Newton–Krylov uygulaması](https://github.com/su2code/SU2/blob/12eb826f049ef7f67df974dfcb44cf36ee07c0f8/SU2_CFD/src/integration/CNewtonIntegration.cpp). Gerçek derlenen yerel dosyalar hash'leriyle okundu; önemli bölümler GitHub connector contents API'de ayrıca açıldı.
+- **S02 — SU2 Linear Solvers and Preconditioners**, [resmî rehber](https://su2code.github.io/docs_v7/Linear-Solvers-and-Preconditioners/). v7 isimli belge; seçeneklerin8.5.0 desteği kaynakla ayrıca süzülmeli. Rehber vaka bağımlı maliyeti ve bellek/CFL/linear tolerans ilişkisini açıklar.
+- **S03 — NASA TMR, SA Expected Results,2D Zero Pressure Gradient Flat Plate**, [kaynak sayfa](https://tmbwg.github.io/turbmodels/flatplate_sa.html). Tam sayfa okundu: iki kod/farklı UMUSCL, beş ağ, iterasyon ve ön kenar/çıkış sınırlamaları. Referans CFD, deney değil.
+- **S04 — Eisenstat & Walker,1996**, [Choosing the Forcing Terms in an Inexact Newton Method](https://epubs.siam.org/doi/10.1137/0917003), [yazar PDF'si](https://users.wpi.edu/~walker/Papers/forcing_terms%2CSISC_17%2C1996%2C16-32.pdf). Publisher abstract açıldı; yazar PDF tam açılışı zaman aşımına uğradı, arama sistemi sayfa16–17 metnini verdi. Tüm teorem/deneyleri okundu denmiyor.
+- **S05 — Mavriplis,9 Mayıs2018**, [arXiv1805.03756v1 tam HTML](https://arxiv.org/html/1805.03756v1). Formülasyon, RANS kapsamı ve steady3B örneği okundu; yeni algoritma kurulmadı.
+- **S06 — Jadoui vd.,2022 / arXiv27 Nisan2024**, [Comparative study of inner-outer Krylov solvers…](https://arxiv.org/html/2404.17870v1). Tam HTML'de özellikle3.1,4.2.1,4.2.2,5 okundu. Makale2022 yayınıdır; arXiv yükleme tarihini yeni sonuç tarihi sanmıyoruz.
+- **S07 — Lei vd.,5 Ağustos2026 preprinti**, [Reliable and efficient steady CFD from surrogate predictions through Newton–Krylov correction](https://arxiv.org/abs/2608.04400), [27 sayfalık PDF](https://arxiv.org/pdf/2608.04400v1). Abstract ve yöntem kapsamı incelendi; tüm sayısal tablolar bağımsız yeniden üretilmedi. Bu çalışma öncelikle başlangıç tahmini/solver düzeltme mimarisine aittir.
+- **S08 — resmî SU2 issue#2877**, [LINELET segfaults, no LINELET regression tests](https://github.com/su2code/SU2/issues/2877),26 Ağustos2026. Açık issue açıklaması okundu; başkasının crash raporu yerel neden kabul edilmedi.
+
+Ek taramada Kelley–Keyes pseudo-transient continuation ve Knoll–Keyes JFNK çalışmaları bulundu. Kelley–Keyes publisher özeti açıldı; bazı PDF/diğer publisher erişimleri timeout/403 verdi. Bu ek kayıtlar çekirdek sekiz kaynak yerine deney kanıtı diye kullanılmadı.
+
+### Kaynak alma uyuşmazlığı
+
+Web aracı pinned raw `CSysSolve.cpp` URL'sinde1607satırlık eski MGS görünümü döndürdü; gerçekten derlenen/hash'i doğrulanmış yerel kaynak1733satır ve CGS2 içeriyordu. GitHub contents API üzerinden aynı pinned dosya yeniden açıldı:58440karakter/1734newline-parçası ve iki `multiDot` ile CGS2 doğrulandı. Araştırma kararı gerçek yerel kaynak ve connector teyidine dayanır; web satır görünümü tek başına sürüm kanıtı kullanılmadı. Kaynak dosyalar değiştirilmedi. Yerel `CSysSolve.cpp` SHA256: `767ff544d658baffcadf3ed2fa9cd2b3a83c0f696ebecd4765704d368cf136b6`.
+
+**Sıradaki somut iş:** N01'in yalnız ölçüm sözleşmesini ve C++ patch taslağını hazırlamak; önce analytic/mutation kontrolleri, sonra değişmeyen source32 yeniden üretimi, ardından sabit ilk-adım A/b ile kısa tanı. Bu araştırma aşamasında bu işler gerçekleştirilmiş değildir.

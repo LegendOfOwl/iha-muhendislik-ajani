@@ -33,14 +33,20 @@ def restore_tests():
 
 def full_restore(catalog):
     # Actual new assets, not synthetic fields, in a new empty destination.
+    build=read(RUN/'build.json')
+    rows=[r for r in catalog['files'] if r['storage']=='release_asset' and r.get('release_tag')==VERSION]
+    if not build['archives']:
+        assert not rows,'Current raw rows exist without planned archives'
+        return {'scope':'Source-only release: no new raw archive, so actual raw-data restore is not applicable',
+                'performed':False,'restored_original_paths':0,'all_sha256_passed':None,
+                'reason':'All current-version payloads are tracked sources/research reports; no new native fields were produced'}
     target=RUN/('fresh_data_restore_'+digest(DEST/'analizler/dosya_katalogu.json')[:12]);assert not target.exists();target.mkdir()
-    cache=target/'arsiv-indirmeleri';cache.mkdir();build=read(RUN/'build.json')
+    cache=target/'arsiv-indirmeleri';cache.mkdir()
     for asset in build['archives']:shutil.copyfile(asset['local_path'],cache/asset['name'])
     m=module();m.ROOT=target;m.restore(catalog,version=VERSION);m.restore(catalog,version=VERSION,verify_only=True)
-    rows=[r for r in catalog['files'] if r['storage']=='release_asset' and r.get('release_tag')==VERSION]
     assert all(digest(target/r['repository_path'])==r['sha256'] for r in rows)
     return {'scope':'Actual new release raw-data restore in empty directory on this Windows machine; not VM/clean solver installation or new CFD run',
-        'restored_original_paths':len(rows),'all_sha256_passed':True}
+        'performed':True,'restored_original_paths':len(rows),'all_sha256_passed':True}
 
 def verify_blobs(catalog,ref,env=None):
     rows=[r for r in catalog['files'] if r['storage']=='git'];p=subprocess.Popen(['git','-C',str(DEST),'cat-file','--batch'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,env=env)

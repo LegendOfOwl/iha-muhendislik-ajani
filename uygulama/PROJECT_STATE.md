@@ -278,3 +278,19 @@ Kurulum/araç entegrasyonu ve son model araştırması/yetenek raporu görev kay
 - Her iki kaynak kolunda flow+SA bütün200 adımda40 tavanda; Krylov≤1,5 kapısı burada ayırt edici değil, uzun çizgilerin aritmetik maliyetini temsil etmez. LinSolRes Givens tabanlı kestirimdir; bağımsız gerçek lineer artık diye sunulmadı. Tek süre çifti genel performans ölçümü değildir.
 - 40 yeni yazılım kontrolü geçti; eski70 tekrar sayılmadı. 738 eski/45 yeni ham hash denetlendi; gerçekİHA3girdisi v0.16 ile aynı. Rapor outputs/reports/su2_kaynak_karsilastirma_20261027.html.
 - Genel fizik/RAE2822/M6/VLM/İHA kabulüfalse, GCI null. Eski fine3999 rolü korunur; bu tanısal kol üç-ağ ailesine eklenmez. LLM uzmanlığı/iyileşmesi ölçülmedi. Sonraki yöntem adayı: sabit durumda gerçek iç lineer artığın pasif ölçümü ve kestirimden ayrılması; henüz çalıştırılmadı, yeni ön kayıt gerekir. Görev20261027-154600-18828f yalnız bu sınırlı deney/rapor paketi için kapandı.
+
+
+## 27 Ekim: v0.17.0 yayın doğrulandı
+
+- Public main/tag 87c932868b14407f2892e957f3e68d02a0a8b270; 17 sürüm/42 varlık. Yeni varlıkların sunucu SHA256/boyutu ve önceki 16 sürüm/39 varlık/32 tag referansı doğrulandı. 6539 kaynak blobu, 14 restore kontrolü ve 22 gerçek ham yol denetlendi. Genel fizik/CFD/LLM kabulü değişmedi; makbuz github_yayini_v0.17.0.md.
+
+
+## 28 Ekim: açık sorunlar ve derin araştırma
+
+- Görev20261027-221814-12f67c yalnız kaynaklı araştırma/öncelik çıktısı olarak kapandı;26mühendislik başlığı açık kalır. 29alt bulgu26başlıkta birleştirildi:7P0/12P1/6P2/1P3.39farklıbirincilkaynak adresi,61hash kaydı/50benzersizyereldosya denetlendi. Ana rapor outputs/reports/acik_sorunlar_ve_derin_arastirma_20261028.html; yapılandırılmış JSON aynı adla. Sayısal/mesh/CAD-ajan alt araştırmaları work/deep_research_20261027 altında;klasör tarihi görev başlangıcıdır.
+- İlk iş U01: assembledFGMRES gerçek b−Aδ ölçümü; küçükmatris/sıfırRHS/pasiflik kontrolü ve değişmeyen kaynak32 yeniden üretimi olmadan native teşhis iddiası yok. Aynı ilk durum/A,b ve uygulananΔU ayrımı gerekir. U19 kaynak geometri/marker’a bağlı bağımsız wall-distance audit paralel düşükmaliyetli aday;yerelde hata kanıtlanmadı. SU2gerçekkaynak zaten CGS2 kullanıyor; ikinciortogonalleştirme kopyası önerilmedi. Önbellekliraw görünümü ile yerelkaynak uyuşmazlığı pinnedGitHubcontentsAPI ile çözüldü.
+- EnyeniM6,25EkimTMRsharp kaynakaile:üçağ zatenüretildi ama üçü de iteratif kabulü geçmedi. Eski blunt/y+iyileşmesi buna taşınmaz. RAEv3 ve düzplakafine kabulleri açık;GCI null. Kaynak geometri/deney/türbülans/BC/viskozite, regionalmesh, uzakalan ve belirsizlik ayrıca kapanmalı.
+- GerçekİHA7girdi/6bileşenkütlesi ve8kavramsaladım bekliyor;benchmarkile doldurulmadı. GenelCAD→CFD→sıralama,yeni proje uçtanucaözerklik,görülmemişgörevdeLLMiyileşmesi,karmaşıkVLM,Fusionmotor/VSPPythonköprüsü ve gerçekkanatFEM/OAS ayrı açık. ANSYSbilinçliertelenmiş,OpenFOAMikinciyerelRANS seçeneği doğrulanmadı; yeni program sayısı doğruluk ölçütü değil.
+- YeniCFD/derleme/kurulum0;fizik/RAE/M6/İHA/LLM kabulü değişmedi.28yayınkoruması ve10raporfiltre senaryosu geçti;CFDtesti sayılmadı. TarayıcıfileURL politikası otomatik görselkontrolü engelledi;alternatifyüzey/geçitdenenmedi,statik45yerelbağlantı ve inertsanalDOMfiltre kontrolü yapıldı. Araştırma öncesi PROJECT_STATE kopyası baseline_PROJECT_STATE.md ile korundu.
+
+- v0.18 kaynak-only yayınında yeni ham veri yok: gerçek restore kontrolü uygulanmıyor/performed=false ve0yol olarak kaydedilir; yapılmış başarı sayılmaz. Mevcut ham satıra karşılık arşiv yoksa ret sürer. Yeni3yayın-kenar kontrolü geçti; CFD testi değildir.
